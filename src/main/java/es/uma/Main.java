@@ -99,7 +99,7 @@ public class Main {
             List<String> systemStringAttributes = new ArrayList<>();
 
             String systemName = system.substring(0, system.indexOf("/"));
-            output.append("| " + systemName + " | Numeric | StringEquals similarity | StringLv similarity |\n");
+            output.append("| " + systemName + " | Numeric | StringEquals | StringLv |\n");
             output.append("|---|---|---|---|\n");
 
             // Within instances
@@ -137,7 +137,7 @@ public class Main {
         double experimentsStringEqualSimilarity = Similarity.calculateStringEquals(experimentsStringAttributes);
         double experimentsStringLvSimilarity = Similarity.calculateStringLv(experimentsStringAttributes);
 
-        output.append("| ALL Experiments | Numeric | StringEquals similarity | StringLv similarity |\n");
+        output.append("| ALL Experiments | Numeric | StringEquals | StringLv |\n");
         output.append("|---|---|---|---|\n");
         output.append(String.format("| ALL Systems | %.4f | %.4f | %.4f |\n\n", 
             experimentsNumericSimilarity, experimentsStringEqualSimilarity, experimentsStringLvSimilarity));
@@ -166,7 +166,7 @@ public class Main {
                 List<String> categoryFiles = genMap.get(gen);
                 List<Double> genNumericAttributes = new ArrayList<>();
                 List<String> genStringAttributes = new ArrayList<>();
-                output.append("| " + gen + " | Numeric | StringEquals similarity | StringLv similarity |\n");
+                output.append("| " + gen + " | Numeric | StringEquals  | StringLv  |\n");
                 output.append("|---|---|---|---|\n");
 
                 // Category
@@ -216,7 +216,7 @@ public class Main {
             experimentsNumericAttributes.addAll(systemNumericAttributes);
             experimentsStringAttributes.addAll(systemStringAttributes);
 
-            output.append("| ALL Generations | Numeric | StringEquals similarity | StringLv similarity |\n");
+            output.append("| ALL Generations | Numeric | StringEquals | StringLv |\n");
             output.append("|---|---|---|---|\n");
             output.append(String.format("| ALL Generations | %.4f | %.4f | %.4f |\n\n", 
                 systemNumericSimilarity, systemStringSimilarity, systemStringLvSimilarity));
@@ -228,7 +228,7 @@ public class Main {
         // double experimentsStringLvSimilarity = Similarity.calculateStringLv(experimentsStringAttributes);
 
         // output.append("# ALL Systems\n\n");
-        // output.append("| ALL Systems | Numeric | StringEquals similarity | StringLv similarity |\n");
+        // output.append("| ALL Systems | Numeric | StringEquals | StringLv |\n");
         // output.append("|---|---|---|---|\n");
         // output.append(String.format("| ALL Systems | %.4f | %.4f | %.4f |\n\n", 
         //     experimentsNumericSimilarity, experimentsStringSimilarity, experimentsStringLvSimilarity));
@@ -244,9 +244,9 @@ public class Main {
         System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
         
         String simpleoutput = calculateSimpleSimilarities(simplePaths);
-        Utils.saveFile(simpleoutput, "./", "simpleSimilarity.md", false);
+        Utils.saveFile(simpleoutput, "./", "simpleDifference.md", false);
         
         String cotoutput = calculateCoTSimilarities(cotPaths);
-        Utils.saveFile(cotoutput, "./", "cotSimilarity.md", false);
+        Utils.saveFile(cotoutput, "./", "cotDifference.md", false);
     }
 }

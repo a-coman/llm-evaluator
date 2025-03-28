@@ -65,7 +65,7 @@ public class Utils {
     }
 
     public static void main(String[] args) {
-        String path = "src/main/resources/dataset/Simple/VehicleRental/21-03-2025--16-07-51 (with use check)/gen1/output.soil";
+        String path = "src/main/resources/dataset/Simple/VideoClub/20-03-2025--01-03-18 (without use checks)/gen1/output.soil";
         String instance = readFile(path);
         List<Double> numericAttributes = getNumericAttributes(instance);
         List<String> stringAttributes = getStringAttributes(instance);
