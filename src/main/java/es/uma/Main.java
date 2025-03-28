@@ -205,6 +205,14 @@ public class Main {
             experimentsMetrics.addStrings(systemMetrics.getStringAttributes());
         }
 
+        // System.out.println("Calculating across ALL Systems...");
+        // SimilarityResult experimentsResult = experimentsMetrics.calculate();
+
+        // output.append("# ALL Systems\n\n");
+        // output.append("| ALL Systems | Numeric | StringEquals | StringLv |\n");
+        // output.append("|---|---|---|---|\n");
+        // output.append(experimentsResult.toMarkdownRow("ALL Systems"));
+
         return output.toString().trim();
     }
 
