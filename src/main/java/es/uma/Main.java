@@ -90,13 +90,11 @@ public class Main {
 
     private static String calculateSimpleSimilarities(Map<String, Map<String, List<String>>> simplePaths) {
         StringBuilder output = new StringBuilder();
-        List<Double> experimentsNumericAttributes = new ArrayList<>();
-        List<String> experimentsStringAttributes = new ArrayList<>();
+        SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
         for (String system : simplePaths.keySet()) {
             Map<String, List<String>> genMap = simplePaths.get(system);
-            List<Double> systemNumericAttributes = new ArrayList<>();
-            List<String> systemStringAttributes = new ArrayList<>();
+            SimilarityMetrics systemMetrics = new SimilarityMetrics();
 
             String systemName = system.substring(0, system.indexOf("/"));
             output.append("| " + systemName + " | Numeric | StringEquals | StringLv |\n");
@@ -108,55 +106,47 @@ public class Main {
                 String instance = Utils.readFile(filePath);
                 List<Double> numericAttributes = Utils.getNumericAttributes(instance);
                 List<String> stringAttributes = Utils.getStringAttributes(instance);
-                systemNumericAttributes.addAll(numericAttributes);
-                systemStringAttributes.addAll(stringAttributes);
-                System.out.println("Calculating within " + system + "/" + gen + "...");
-                double numericSimilarity = Similarity.calculateNumeric(numericAttributes);
-                double stringEqualsSimilarity = Similarity.calculateStringEquals(stringAttributes);
-                double stringLvSimilarity = Similarity.calculateStringLv(stringAttributes);
 
-                output.append(String.format("| %s | %.4f | %.4f | %.4f |\n", 
-                    gen, numericSimilarity, stringEqualsSimilarity, stringLvSimilarity));
+                SimilarityMetrics genMetrics = new SimilarityMetrics();
+                genMetrics.addNumeric(numericAttributes);
+                genMetrics.addStrings(stringAttributes);
+                systemMetrics.addNumeric(numericAttributes);
+                systemMetrics.addStrings(stringAttributes);
+
+                System.out.println("Calculating within " + system + "/" + gen + "...");
+                SimilarityResult result = genMetrics.calculate();
+                output.append(result.toMarkdownRow(gen)).append("\n");
+
             }
 
             // Across instances
             System.out.println("Calculating across " + system + "...");
-            double systemNumericSimilarity = Similarity.calculateNumeric(systemNumericAttributes);
-            double systemStringEqualSimilarity = Similarity.calculateStringEquals(systemStringAttributes);
-            double systemStringLvSimilarity = Similarity.calculateStringLv(systemStringAttributes);
+            SimilarityResult systemResult = systemMetrics.calculate();
+            output.append(systemResult.toMarkdownRow("ALL Gen")).append("\n\n");
 
-            output.append(String.format("| ALL Gen | %.4f | %.4f | %.4f |\n\n", 
-                systemNumericSimilarity, systemStringEqualSimilarity, systemStringLvSimilarity));
-            
-            experimentsNumericAttributes.addAll(systemNumericAttributes);
-            experimentsStringAttributes.addAll(systemStringAttributes);
+            experimentsMetrics.addNumeric(systemMetrics.getNumericAttributes());
+            experimentsMetrics.addStrings(systemMetrics.getStringAttributes());
         }
 
         System.out.println("Calculating across ALL Experiments...");
-        double experimentsNumericSimilarity = Similarity.calculateNumeric(experimentsNumericAttributes);
-        double experimentsStringEqualSimilarity = Similarity.calculateStringEquals(experimentsStringAttributes);
-        double experimentsStringLvSimilarity = Similarity.calculateStringLv(experimentsStringAttributes);
+        SimilarityResult experimentsResult = experimentsMetrics.calculate();
 
         output.append("| ALL Experiments | Numeric | StringEquals | StringLv |\n");
         output.append("|---|---|---|---|\n");
-        output.append(String.format("| ALL Systems | %.4f | %.4f | %.4f |\n\n", 
-            experimentsNumericSimilarity, experimentsStringEqualSimilarity, experimentsStringLvSimilarity));
-        
+        output.append(experimentsResult.toMarkdownRow("ALL Systems")).append("\n\n");
+
         return output.toString().trim();
     }
 
-    
     private static String calculateCoTSimilarities(Map<String, Map<String, List<String>>> cotPaths) {
         StringBuilder output = new StringBuilder();
-        List<Double> experimentsNumericAttributes = new ArrayList<>();
-        List<String> experimentsStringAttributes = new ArrayList<>();
+        SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
-        output.append("# System\n\n"); 
-        // System
+        output.append("# System\n\n");
+        
         for (String system : cotPaths.keySet()) {
             Map<String, List<String>> genMap = cotPaths.get(system);
-            List<Double> systemNumericAttributes = new ArrayList<>();
-            List<String> systemStringAttributes = new ArrayList<>();
+            SimilarityMetrics systemMetrics = new SimilarityMetrics();
 
             String systemName = system.substring(0, system.indexOf("/"));
             output.append("## " + systemName + "\n\n");
@@ -164,9 +154,9 @@ public class Main {
             // Generation
             for (String gen : genMap.keySet()) {
                 List<String> categoryFiles = genMap.get(gen);
-                List<Double> genNumericAttributes = new ArrayList<>();
-                List<String> genStringAttributes = new ArrayList<>();
-                output.append("| " + gen + " | Numeric | StringEquals  | StringLv  |\n");
+                SimilarityMetrics genMetrics = new SimilarityMetrics();
+                
+                output.append("| " + gen + " | Numeric | StringEquals | StringLv |\n");
                 output.append("|---|---|---|---|\n");
 
                 // Category
@@ -176,66 +166,47 @@ public class Main {
 
                     List<Double> numericAttributes = Utils.getNumericAttributes(instance);
                     List<String> stringAttributes = Utils.getStringAttributes(instance);
-                    
+
+                    SimilarityMetrics categoryMetrics = new SimilarityMetrics();
+                    categoryMetrics.addNumeric(numericAttributes);
+                    categoryMetrics.addStrings(stringAttributes);
+                    genMetrics.addNumeric(numericAttributes);
+                    genMetrics.addStrings(stringAttributes);
+                    systemMetrics.addNumeric(numericAttributes);
+                    systemMetrics.addStrings(stringAttributes);
+                    experimentsMetrics.addNumeric(numericAttributes);
+                    experimentsMetrics.addStrings(stringAttributes);
+
                     System.out.println("Calculating within " + system + "/" + gen + "/" + category + "...");
-                    double numericSimilarity = Similarity.calculateNumeric(numericAttributes);
-                    double stringEqualsSimilarity = Similarity.calculateStringEquals(stringAttributes);
-                    double stringLvSimilarity = Similarity.calculateStringLv(stringAttributes);
-                    
-                    output.append(String.format("| %s | %.4f | %.4f | %.4f |\n", 
-                        category, numericSimilarity, stringEqualsSimilarity, stringLvSimilarity));
-                    
-                    genNumericAttributes.addAll(numericAttributes);
-                    genStringAttributes.addAll(stringAttributes);
-                    systemNumericAttributes.addAll(numericAttributes);
-                    systemStringAttributes.addAll(stringAttributes);
-                    experimentsNumericAttributes.addAll(numericAttributes);
-                    experimentsStringAttributes.addAll(stringAttributes);
+                    SimilarityResult categoryResult = categoryMetrics.calculate();
+                    output.append(categoryResult.toMarkdownRow(category)).append("\n");
+
                 }
 
                 // Calculate within-generation similarities
                 System.out.println("Calculating across " + system + "/" + gen + "...");
-                double genNumericSimilarity = Similarity.calculateNumeric(genNumericAttributes);
-                double genStringEqualSimilarity = Similarity.calculateStringEquals(genStringAttributes);
-                double genStringLvSimilarity = Similarity.calculateStringLv(genStringAttributes);
+                SimilarityResult genResult = genMetrics.calculate();
+                output.append(genResult.toMarkdownRow("ALL Categories")).append("\n\n");
 
-                systemNumericAttributes.addAll(genNumericAttributes);
-                systemStringAttributes.addAll(genStringAttributes);
-                experimentsNumericAttributes.addAll(genNumericAttributes);
-                experimentsStringAttributes.addAll(genStringAttributes);
-
-                output.append(String.format("| ALL Categories | %.4f | %.4f | %.4f |\n\n", 
-                    genNumericSimilarity, genStringEqualSimilarity, genStringLvSimilarity));
+                systemMetrics.addNumeric(genMetrics.getNumericAttributes());
+                systemMetrics.addStrings(genMetrics.getStringAttributes());
+                experimentsMetrics.addNumeric(genMetrics.getNumericAttributes());
+                experimentsMetrics.addStrings(genMetrics.getStringAttributes());
             }
 
             System.out.println("Calculating across " + system + "...");
-            double systemNumericSimilarity = Similarity.calculateNumeric(systemNumericAttributes);
-            double systemStringSimilarity = Similarity.calculateStringEquals(systemStringAttributes);
-            double systemStringLvSimilarity = Similarity.calculateStringLv(systemStringAttributes);
-
-            experimentsNumericAttributes.addAll(systemNumericAttributes);
-            experimentsStringAttributes.addAll(systemStringAttributes);
+            SimilarityResult systemResult = systemMetrics.calculate();
 
             output.append("| ALL Generations | Numeric | StringEquals | StringLv |\n");
             output.append("|---|---|---|---|\n");
-            output.append(String.format("| ALL Generations | %.4f | %.4f | %.4f |\n\n", 
-                systemNumericSimilarity, systemStringSimilarity, systemStringLvSimilarity));
+            output.append(systemResult.toMarkdownRow("ALL Generations")).append("\n\n");
+
+            experimentsMetrics.addNumeric(systemMetrics.getNumericAttributes());
+            experimentsMetrics.addStrings(systemMetrics.getStringAttributes());
         }
-
-        // System.out.println("Calculating across ALL Systems...");
-        // double experimentsNumericSimilarity = Similarity.calculateNumeric(experimentsNumericAttributes);
-        // double experimentsStringSimilarity = Similarity.calculateStringEquals(experimentsStringAttributes);
-        // double experimentsStringLvSimilarity = Similarity.calculateStringLv(experimentsStringAttributes);
-
-        // output.append("# ALL Systems\n\n");
-        // output.append("| ALL Systems | Numeric | StringEquals | StringLv |\n");
-        // output.append("|---|---|---|---|\n");
-        // output.append(String.format("| ALL Systems | %.4f | %.4f | %.4f |\n\n", 
-        //     experimentsNumericSimilarity, experimentsStringSimilarity, experimentsStringLvSimilarity));
 
         return output.toString().trim();
     }
-    
 
     public static void main(String[] args) {
         Map<String, Map<String, List<String>>> simplePaths = new Main().getPaths("Simple");
