@@ -1,6 +1,6 @@
-# System
+# CoT
 
-## Statemachine
+## Statemachine/25-03-2025--13-49-01
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -60,67 +60,67 @@
 |---|---|---|---|
 | ALL Generations | 0.9172 | 0.9977 | 0.8410 |
 
-## AddressBook
+## AddressBook/25-03-2025--10-38-22
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.8966 |
-| invalid | 0.0000 | 0.9943 | 0.8865 |
-| edge | 0.0000 | 0.9933 | 0.8865 |
-| complex | 0.0000 | 0.9954 | 0.8952 |
-| baseline | 0.0000 | 0.9954 | 0.8926 |
-| ALL Categories | 0.0000 | 0.9983 | 0.8978 |
+| boundary | NaN | 1.0000 | 0.8966 |
+| invalid | NaN | 0.9943 | 0.8865 |
+| edge | NaN | 0.9933 | 0.8865 |
+| complex | NaN | 0.9954 | 0.8952 |
+| baseline | NaN | 0.9954 | 0.8926 |
+| ALL Categories | NaN | 0.9983 | 0.8978 |
 
 | gen2 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.9011 |
-| invalid | 0.0000 | 0.9899 | 0.8913 |
-| edge | 0.0000 | 0.9970 | 0.8860 |
-| complex | 0.0000 | 0.9974 | 0.9055 |
-| baseline | 0.0000 | 0.9954 | 0.8983 |
-| ALL Categories | 0.0000 | 0.9987 | 0.9006 |
+| boundary | NaN | 1.0000 | 0.9011 |
+| invalid | NaN | 0.9899 | 0.8913 |
+| edge | NaN | 0.9970 | 0.8860 |
+| complex | NaN | 0.9974 | 0.9055 |
+| baseline | NaN | 0.9954 | 0.8983 |
+| ALL Categories | NaN | 0.9987 | 0.9006 |
 
 | gen3 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.9064 |
-| invalid | 0.0000 | 1.0000 | 0.8805 |
-| edge | 0.0000 | 0.9962 | 0.8943 |
-| complex | 0.0000 | 0.9974 | 0.8956 |
-| baseline | 0.0000 | 0.9954 | 0.8883 |
-| ALL Categories | 0.0000 | 0.9989 | 0.8993 |
+| boundary | NaN | 1.0000 | 0.9064 |
+| invalid | NaN | 1.0000 | 0.8805 |
+| edge | NaN | 0.9962 | 0.8943 |
+| complex | NaN | 0.9974 | 0.8956 |
+| baseline | NaN | 0.9954 | 0.8883 |
+| ALL Categories | NaN | 0.9989 | 0.8993 |
 
 | gen4 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.8964 |
-| invalid | 0.0000 | 0.9981 | 0.8964 |
-| edge | 0.0000 | 0.9933 | 0.8959 |
-| complex | 0.0000 | 0.9974 | 0.8949 |
-| baseline | 0.0000 | 0.9954 | 0.9062 |
-| ALL Categories | 0.0000 | 0.9986 | 0.9031 |
+| boundary | NaN | 1.0000 | 0.8964 |
+| invalid | NaN | 0.9981 | 0.8964 |
+| edge | NaN | 0.9933 | 0.8959 |
+| complex | NaN | 0.9974 | 0.8949 |
+| baseline | NaN | 0.9954 | 0.9062 |
+| ALL Categories | NaN | 0.9986 | 0.9031 |
 
 | gen5 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.8837 |
-| invalid | 0.0000 | 0.9974 | 0.8767 |
-| edge | 0.0000 | 0.9966 | 0.8904 |
-| complex | 0.0000 | 0.9974 | 0.9000 |
-| baseline | 0.0000 | 0.9954 | 0.8970 |
-| ALL Categories | 0.0000 | 0.9995 | 0.8976 |
+| boundary | NaN | 1.0000 | 0.8837 |
+| invalid | NaN | 0.9974 | 0.8767 |
+| edge | NaN | 0.9966 | 0.8904 |
+| complex | NaN | 0.9974 | 0.9000 |
+| baseline | NaN | 0.9954 | 0.8970 |
+| ALL Categories | NaN | 0.9995 | 0.8976 |
 
 | gen6 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| boundary | 0.0000 | 1.0000 | 0.8993 |
-| invalid | 0.0000 | 0.9977 | 0.8885 |
-| edge | 0.0000 | 0.9943 | 0.8894 |
-| complex | 0.0000 | 0.9974 | 0.8964 |
-| baseline | 0.0000 | 0.9954 | 0.8833 |
-| ALL Categories | 0.0000 | 0.9991 | 0.8977 |
+| boundary | NaN | 1.0000 | 0.8993 |
+| invalid | NaN | 0.9977 | 0.8885 |
+| edge | NaN | 0.9943 | 0.8894 |
+| complex | NaN | 0.9974 | 0.8964 |
+| baseline | NaN | 0.9954 | 0.8833 |
+| ALL Categories | NaN | 0.9991 | 0.8977 |
 
 | ALL Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
-| ALL Generations | 0.0000 | 0.9989 | 0.9008 |
+| ALL Generations | NaN | 0.9989 | 0.9008 |
 
-## HotelManagement
+## HotelManagement/25-03-2025--11-38-06
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -180,7 +180,7 @@
 |---|---|---|---|
 | ALL Generations | 0.9758 | 0.9958 | 0.8308 |
 
-## Bank
+## Bank/24-03-2025--21-13-02
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -240,7 +240,7 @@
 |---|---|---|---|
 | ALL Generations | 0.9820 | 0.9976 | 0.9242 |
 
-## MyExpenses
+## MyExpenses/25-03-2025--13-12-54
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -300,7 +300,7 @@
 |---|---|---|---|
 | ALL Generations | 0.9743 | 0.9927 | 0.8898 |
 
-## VehicleRental
+## VehicleRental/25-03-2025--14-02-01
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -360,7 +360,7 @@
 |---|---|---|---|
 | ALL Generations | 0.9857 | 0.9979 | 0.8927 |
 
-## VideoClub
+## VideoClub/25-03-2025--14-18-14
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -420,12 +420,12 @@
 |---|---|---|---|
 | ALL Generations | 0.9560 | 0.9971 | 0.8397 |
 
-## PickupNet
+## PickupNet/25-03-2025--13-32-07
 
 | gen1 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | boundary | 1.0000 | 1.0000 | 0.8847 |
-| invalid | 0.0000 | 1.0000 | 0.9188 |
+| invalid | 1.0000 | 1.0000 | 0.9188 |
 | edge | 1.0000 | 1.0000 | 0.9527 |
 | complex | 1.0000 | 1.0000 | 0.8665 |
 | baseline | 1.0000 | 1.0000 | 0.8793 |
@@ -470,8 +470,8 @@
 | gen6 | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | boundary | 1.0000 | 1.0000 | 0.8790 |
-| invalid | 0.0000 | 1.0000 | 0.8619 |
-| edge | 0.0000 | 1.0000 | 0.8946 |
+| invalid | NaN | 1.0000 | 0.8619 |
+| edge | NaN | 1.0000 | 0.8946 |
 | complex | 1.0000 | 1.0000 | 0.8736 |
 | baseline | 1.0000 | 1.0000 | 0.8637 |
 | ALL Categories | 1.0000 | 1.0000 | 0.8937 |

@@ -5,6 +5,10 @@ import java.util.List;
 public class Similarity {
 
     public static double calculateNumeric(List<Double> numericAttributes) {
+        if (numericAttributes == null || numericAttributes.isEmpty()) {
+            return Double.NaN;
+        }
+        
         double sum = 0;
         double iterations = 0; // (n * (n - 1)) / 2.0;
         for (int i = 0; i < numericAttributes.size(); i++) {
@@ -17,10 +21,14 @@ public class Similarity {
                 }
             }
         }
-        return iterations == 0 ? 0.0 : sum / iterations; 
+        return iterations == 0 ? 1.0 : sum / iterations; 
     }
 
     private static double calculateString(List<String> stringAttributes, String type) {
+        if (stringAttributes == null || stringAttributes.isEmpty()) {
+            return Double.NaN;
+        }
+
         double sum = 0;
         double iterations = 0;
         for (int i = 0; i < stringAttributes.size(); i++) {
@@ -44,7 +52,7 @@ public class Similarity {
             }
         }
                
-        return stringAttributes.size() == 0 ? 0.0 : sum / iterations;
+        return iterations == 0 ? 1.0 : sum / iterations;
     }
 
     public static double calculateStringEquals(List<String> stringAttributes) {
@@ -56,7 +64,7 @@ public class Similarity {
     }
 
     public static void main(String[] args) {
-        System.out.println("Numeric: " + calculateNumeric(List.of(60.0,18.0,18.0,72.0,84.0,14.0,14.0)));
+        System.out.println("Numeric: " + calculateNumeric(List.of()));
         System.out.println("Equals: " + calculateStringEquals(List.of("cat", "dog", "per")));
         System.out.println("LV: " + calculateStringLv(List.of("Carlos", "Silva", "February 15, 2024", "February 22, 2024", "February 15, 2024", "February 22, 2024", "Rental of traditional Carnaval costumes.", "Exclusive breakfast with a view of Copacabana Beach.")));
     }

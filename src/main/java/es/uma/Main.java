@@ -92,12 +92,13 @@ public class Main {
         StringBuilder output = new StringBuilder();
         SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
+        output.append("# Simple\n\n");
         for (String system : simplePaths.keySet()) {
+            output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
             SimilarityMetrics systemMetrics = new SimilarityMetrics();
 
-            String systemName = system.substring(0, system.indexOf("/"));
-            output.append("| " + systemName + " | Numeric | StringEquals | StringLv |\n");
+            output.append("| Generations | Numeric | StringEquals | StringLv |\n");
             output.append("|---|---|---|---|\n");
 
             // Within instances
@@ -131,6 +132,7 @@ public class Main {
         System.out.println("Calculating across ALL Experiments...");
         SimilarityResult experimentsResult = experimentsMetrics.calculate();
 
+        output.append("## ALL Experiments\n\n");
         output.append("| ALL Experiments | Numeric | StringEquals | StringLv |\n");
         output.append("|---|---|---|---|\n");
         output.append(experimentsResult.toMarkdownRow("ALL Systems")).append("\n\n");
@@ -142,14 +144,13 @@ public class Main {
         StringBuilder output = new StringBuilder();
         SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
-        output.append("# System\n\n");
+        output.append("# CoT\n\n");
         
         for (String system : cotPaths.keySet()) {
             Map<String, List<String>> genMap = cotPaths.get(system);
             SimilarityMetrics systemMetrics = new SimilarityMetrics();
 
-            String systemName = system.substring(0, system.indexOf("/"));
-            output.append("## " + systemName + "\n\n");
+            output.append("## " + system + "\n\n");
 
             // Generation
             for (String gen : genMap.keySet()) {
@@ -208,7 +209,7 @@ public class Main {
         // System.out.println("Calculating across ALL Systems...");
         // SimilarityResult experimentsResult = experimentsMetrics.calculate();
 
-        // output.append("# ALL Systems\n\n");
+        // output.append("## ALL Experments\n\n");
         // output.append("| ALL Systems | Numeric | StringEquals | StringLv |\n");
         // output.append("|---|---|---|---|\n");
         // output.append(experimentsResult.toMarkdownRow("ALL Systems"));

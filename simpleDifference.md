@@ -1,4 +1,8 @@
-| VideoClub | Numeric | StringEquals | StringLv |
+# Simple
+
+## VideoClub/20-03-2025--01-03-18 (without use checks)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.8444 | 1.0000 | 0.7610 |
 | gen2 | 0.8333 | 1.0000 | 0.7908 |
@@ -32,7 +36,9 @@
 | gen30 | 1.0000 | 1.0000 | 0.8088 |
 | ALL Gen | 0.9417 | 0.9999 | 0.8348 |
 
-| VehicleRental | Numeric | StringEquals | StringLv |
+## VehicleRental/20-03-2025--12-52-28 (without use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 1.0000 | 1.0000 | 0.9093 |
 | gen2 | 1.0000 | 1.0000 | 0.9176 |
@@ -66,11 +72,13 @@
 | gen30 | 1.0000 | 1.0000 | 0.9219 |
 | ALL Gen | 0.9972 | 0.9999 | 0.9019 |
 
-| Statemachine | Numeric | StringEquals | StringLv |
+## Statemachine/22-03-2025--18-08-16 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 1.0000 | 1.0000 | 0.7762 |
 | gen2 | 1.0000 | 1.0000 | 0.7908 |
-| gen3 | 0.0000 | 1.0000 | 0.6974 |
+| gen3 | 1.0000 | 1.0000 | 0.6974 |
 | gen4 | 1.0000 | 1.0000 | 0.8024 |
 | gen5 | 1.0000 | 1.0000 | 0.6850 |
 | gen6 | 1.0000 | 1.0000 | 0.7898 |
@@ -100,7 +108,9 @@
 | gen30 | 1.0000 | 1.0000 | 0.6715 |
 | ALL Gen | 0.9639 | 0.9997 | 0.8372 |
 
-| Bank | Numeric | StringEquals | StringLv |
+## Bank/19-03-2025--18-47-54 (without use checks)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 1.0000 | 1.0000 | 0.9192 |
 | gen2 | 1.0000 | 1.0000 | 0.9188 |
@@ -134,41 +144,45 @@
 | gen30 | 1.0000 | 1.0000 | 0.9231 |
 | ALL Gen | 0.9918 | 0.9994 | 0.9170 |
 
-| AddressBook | Numeric | StringEquals | StringLv |
-|---|---|---|---|
-| gen1 | 0.0000 | 0.9962 | 0.8901 |
-| gen2 | 0.0000 | 0.9933 | 0.8749 |
-| gen3 | 0.0000 | 0.9947 | 0.8960 |
-| gen4 | 0.0000 | 0.9947 | 0.8881 |
-| gen5 | 0.0000 | 0.9947 | 0.8851 |
-| gen6 | 0.0000 | 0.9947 | 0.8793 |
-| gen7 | 0.0000 | 0.9947 | 0.8846 |
-| gen8 | 0.0000 | 0.9947 | 0.8861 |
-| gen9 | 0.0000 | 0.9947 | 0.8778 |
-| gen10 | 0.0000 | 0.9947 | 0.9013 |
-| gen11 | 0.0000 | 0.9947 | 0.8901 |
-| gen12 | 0.0000 | 0.9947 | 0.8767 |
-| gen13 | 0.0000 | 0.9947 | 0.8827 |
-| gen14 | 0.0000 | 0.9947 | 0.8968 |
-| gen15 | 0.0000 | 0.9947 | 0.8821 |
-| gen16 | 0.0000 | 0.9947 | 0.8819 |
-| gen17 | 0.0000 | 0.9947 | 0.8841 |
-| gen18 | 0.0000 | 0.9947 | 0.8845 |
-| gen19 | 0.0000 | 0.9947 | 0.8803 |
-| gen20 | 0.0000 | 0.9947 | 0.8759 |
-| gen21 | 0.0000 | 0.9947 | 0.8825 |
-| gen22 | 0.0000 | 0.9947 | 0.8845 |
-| gen23 | 0.0000 | 0.9947 | 0.8839 |
-| gen24 | 0.0000 | 0.9947 | 0.8852 |
-| gen25 | 0.0000 | 0.9947 | 0.8806 |
-| gen26 | 0.0000 | 0.9947 | 0.8773 |
-| gen27 | 0.0000 | 0.9947 | 0.8907 |
-| gen28 | 0.0000 | 0.9947 | 0.8885 |
-| gen29 | 0.0000 | 0.9947 | 0.8729 |
-| gen30 | 0.0000 | 0.9947 | 0.8892 |
-| ALL Gen | 0.0000 | 0.9991 | 0.8953 |
+## AddressBook/21-03-2025--17-36-43 (with use check)
 
-| VehicleRental | Numeric | StringEquals | StringLv |
+| Generations | Numeric | StringEquals | StringLv |
+|---|---|---|---|
+| gen1 | NaN | 0.9962 | 0.8901 |
+| gen2 | NaN | 0.9933 | 0.8749 |
+| gen3 | NaN | 0.9947 | 0.8960 |
+| gen4 | NaN | 0.9947 | 0.8881 |
+| gen5 | NaN | 0.9947 | 0.8851 |
+| gen6 | NaN | 0.9947 | 0.8793 |
+| gen7 | NaN | 0.9947 | 0.8846 |
+| gen8 | NaN | 0.9947 | 0.8861 |
+| gen9 | NaN | 0.9947 | 0.8778 |
+| gen10 | NaN | 0.9947 | 0.9013 |
+| gen11 | NaN | 0.9947 | 0.8901 |
+| gen12 | NaN | 0.9947 | 0.8767 |
+| gen13 | NaN | 0.9947 | 0.8827 |
+| gen14 | NaN | 0.9947 | 0.8968 |
+| gen15 | NaN | 0.9947 | 0.8821 |
+| gen16 | NaN | 0.9947 | 0.8819 |
+| gen17 | NaN | 0.9947 | 0.8841 |
+| gen18 | NaN | 0.9947 | 0.8845 |
+| gen19 | NaN | 0.9947 | 0.8803 |
+| gen20 | NaN | 0.9947 | 0.8759 |
+| gen21 | NaN | 0.9947 | 0.8825 |
+| gen22 | NaN | 0.9947 | 0.8845 |
+| gen23 | NaN | 0.9947 | 0.8839 |
+| gen24 | NaN | 0.9947 | 0.8852 |
+| gen25 | NaN | 0.9947 | 0.8806 |
+| gen26 | NaN | 0.9947 | 0.8773 |
+| gen27 | NaN | 0.9947 | 0.8907 |
+| gen28 | NaN | 0.9947 | 0.8885 |
+| gen29 | NaN | 0.9947 | 0.8729 |
+| gen30 | NaN | 0.9947 | 0.8892 |
+| ALL Gen | NaN | 0.9991 | 0.8953 |
+
+## VehicleRental/21-03-2025--16-07-51 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.9957 | 1.0000 | 0.8541 |
 | gen2 | 0.9848 | 1.0000 | 0.8444 |
@@ -202,14 +216,16 @@
 | gen30 | 1.0000 | 1.0000 | 0.8242 |
 | ALL Gen | 0.9944 | 0.9999 | 0.8719 |
 
-| PickupNet | Numeric | StringEquals | StringLv |
+## PickupNet/21-03-2025--15-53-43 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 1.0000 | 1.0000 | 0.8484 |
 | gen2 | 1.0000 | 1.0000 | 0.8363 |
 | gen3 | 1.0000 | 1.0000 | 0.8518 |
 | gen4 | 1.0000 | 1.0000 | 0.8569 |
 | gen5 | 1.0000 | 1.0000 | 0.8938 |
-| gen6 | 0.0000 | 1.0000 | 0.8734 |
+| gen6 | 1.0000 | 1.0000 | 0.8734 |
 | gen7 | 1.0000 | 1.0000 | 0.8677 |
 | gen8 | 1.0000 | 1.0000 | 0.8619 |
 | gen9 | 1.0000 | 1.0000 | 0.8447 |
@@ -232,11 +248,13 @@
 | gen26 | 1.0000 | 1.0000 | 0.8409 |
 | gen27 | 1.0000 | 1.0000 | 0.8751 |
 | gen28 | 1.0000 | 1.0000 | 0.8559 |
-| gen29 | 0.0000 | 1.0000 | 0.8711 |
+| gen29 | 1.0000 | 1.0000 | 0.8711 |
 | gen30 | 1.0000 | 1.0000 | 0.8705 |
 | ALL Gen | 0.9922 | 1.0000 | 0.8634 |
 
-| MyExpenses | Numeric | StringEquals | StringLv |
+## MyExpenses/22-03-2025--17-12-34 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.9286 | 1.0000 | 0.8961 |
 | gen2 | 1.0000 | 1.0000 | 0.9306 |
@@ -270,7 +288,9 @@
 | gen30 | 1.0000 | 1.0000 | 0.8666 |
 | ALL Gen | 0.9604 | 0.9992 | 0.8939 |
 
-| VideoClub | Numeric | StringEquals | StringLv |
+## VideoClub/21-03-2025--16-37-44 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.7636 | 1.0000 | 0.7691 |
 | gen2 | 0.8333 | 1.0000 | 0.8306 |
@@ -304,7 +324,9 @@
 | gen30 | 1.0000 | 1.0000 | 0.8167 |
 | ALL Gen | 0.9521 | 1.0000 | 0.8277 |
 
-| HotelManagement | Numeric | StringEquals | StringLv |
+## HotelManagement/22-03-2025--18-31-34 (with use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.9632 | 0.9667 | 0.8056 |
 | gen2 | 0.9487 | 0.9286 | 0.7633 |
@@ -338,7 +360,9 @@
 | gen30 | 0.9333 | 0.9286 | 0.7789 |
 | ALL Gen | 0.9744 | 0.9979 | 0.8045 |
 
-| PickupNet | Numeric | StringEquals | StringLv |
+## PickupNet/20-03-2025--14-37-21 (without use check)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 1.0000 | 1.0000 | 0.8345 |
 | gen2 | 1.0000 | 1.0000 | 0.8718 |
@@ -355,7 +379,7 @@
 | gen13 | 1.0000 | 1.0000 | 0.8876 |
 | gen14 | 1.0000 | 1.0000 | 0.8700 |
 | gen15 | 1.0000 | 1.0000 | 0.8716 |
-| gen16 | 0.0000 | 1.0000 | 0.8753 |
+| gen16 | 1.0000 | 1.0000 | 0.8753 |
 | gen17 | 1.0000 | 1.0000 | 0.8880 |
 | gen18 | 1.0000 | 1.0000 | 0.8925 |
 | gen19 | 1.0000 | 1.0000 | 0.8776 |
@@ -372,7 +396,9 @@
 | gen30 | 1.0000 | 1.0000 | 0.8824 |
 | ALL Gen | 0.9865 | 0.9998 | 0.8717 |
 
-| Bank | Numeric | StringEquals | StringLv |
+## Bank/21-03-2025--15-41-00 (with use checks)
+
+| Generations | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | gen1 | 0.9778 | 1.0000 | 0.9364 |
 | gen2 | 1.0000 | 1.0000 | 0.9370 |
@@ -405,6 +431,8 @@
 | gen29 | 1.0000 | 1.0000 | 0.9103 |
 | gen30 | 1.0000 | 1.0000 | 0.9148 |
 | ALL Gen | 0.9884 | 0.9997 | 0.9247 |
+
+## ALL Experiments
 
 | ALL Experiments | Numeric | StringEquals | StringLv |
 |---|---|---|---|
