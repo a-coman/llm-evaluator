@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Main {
 
-    public Map<String, Map<String, List<String>>> getPaths(String type) {
+    private Map<String, Map<String, List<String>>> getPaths(String type) {
         Map<String, Map<String, List<String>>> simplePaths = new HashMap<>();
         Map<String, Map<String, List<String>>> cotPaths = new HashMap<>();
         String datasetRoot = "./src/main/resources/dataset";
@@ -63,7 +63,7 @@ public class Main {
                             if (genDir.isDirectory() && genDir.getName().startsWith("gen")) {
                                 List<String> categoryFiles = new ArrayList<>();
                                 for (File file : genDir.listFiles()) {
-                                    if (file.getName().endsWith(".soil") && !file.getName().contains("output")) {
+                                    if (file.getName().endsWith(".soil") && !file.getName().contains("output") && !file.getName().contains("temp")) {
                                         categoryFiles.add(file.getAbsolutePath());
                                     }
                                 }
@@ -88,49 +88,19 @@ public class Main {
         }
     }
 
-    private static int calculateNumericSimilarity(List<Double> numericAttributes) {
-        int sum = 0;
-        int it = 0;
-        for (int i = 0; i < numericAttributes.size(); i++) {
-            for (int j = 0; j < numericAttributes.size(); j++) {
-                if (numericAttributes.get(i) <= numericAttributes.get(j)) {
-                    it += 1;
-                    if (numericAttributes.get(i).equals(numericAttributes.get(j))) {
-                        sum += 1;
-                    }
-                }
-            }
-        }
-        return it == 0 ? 0 : sum / it;
-    }
-
-    private static int calculateEqualsStringSimilarity(List<String> stringAttributes) {
-        int sum = 0;
-        for (int i = 0; i < stringAttributes.size() / 2; i++)
-            for (int j = stringAttributes.size() / 2; j < stringAttributes.size(); j++)
-                sum += stringAttributes.get(i).equals(stringAttributes.get(j)) ? 1 : 0;
-        return stringAttributes.size() == 0 ? 0 : sum / stringAttributes.size();
-    }
-
-    private static int calculateLvStringSimilarity(List<String> stringAttributes) {
-        int sum = 0;
-        for (int i = 0; i < stringAttributes.size() / 2; i++)
-            for (int j = stringAttributes.size() / 2; j < stringAttributes.size(); j++)
-                sum += Lv.computeLvDistance(stringAttributes.get(i), stringAttributes.get(j));
-        return stringAttributes.size() == 0 ? 0 : sum / stringAttributes.size();
-    }
-
     private static String calculateSimpleSimilarities(Map<String, Map<String, List<String>>> simplePaths) {
-        StringBuffer results = new StringBuffer();
+        StringBuffer output = new StringBuffer();
+        List<Double> experimentsNumericAttributes = new ArrayList<>();
+        List<String> experimentsStringAttributes = new ArrayList<>();
 
         for (String system : simplePaths.keySet()) {
             Map<String, List<String>> genMap = simplePaths.get(system);
-            List<Double> allNumericAttributes = new ArrayList<>();
-            List<String> allStringAttributes = new ArrayList<>();
+            List<Double> systemNumericAttributes = new ArrayList<>();
+            List<String> systemStringAttributes = new ArrayList<>();
 
             String systemName = system.substring(0, system.indexOf("/"));
-            results.append("| " + systemName + " | Numeric | StringEquals similarity | StringLv similarity |\n");
-            results.append("|---|---|---|---|\n");
+            output.append("| " + systemName + " | Numeric | StringEquals similarity | StringLv similarity |\n");
+            output.append("|---|---|---|---|\n");
 
             // Within instances
             for (String gen : genMap.keySet()) {
@@ -138,37 +108,48 @@ public class Main {
                 String instance = Utils.readFile(filePath);
                 List<Double> numericAttributes = Utils.getNumericAttributes(instance);
                 List<String> stringAttributes = Utils.getStringAttributes(instance);
-                allNumericAttributes.addAll(numericAttributes);
-                allStringAttributes.addAll(stringAttributes);
-                int numericSimilarity = calculateNumericSimilarity(numericAttributes);
-                int stringEqualsSimilarity = calculateEqualsStringSimilarity(stringAttributes);
-                int stringLvSimilarity = calculateLvStringSimilarity(stringAttributes);
-                System.out.println("Within " + system + "/" + gen + " Numeric similarity: " + numericSimilarity);
-                System.out.println("Within " + system + "/" + gen + " StringEq. similarity: " + stringEqualsSimilarity);
-                System.out.println("Within " + system + "/" + gen + " StringLv. similarity: " + stringLvSimilarity);
+                systemNumericAttributes.addAll(numericAttributes);
+                systemStringAttributes.addAll(stringAttributes);
+                System.out.println("Calculating within " + system + "/" + gen + "...");
+                double numericSimilarity = Similarity.calculateNumeric(numericAttributes);
+                double stringEqualsSimilarity = Similarity.calculateStringEquals(stringAttributes);
+                double stringLvSimilarity = Similarity.calculateStringLv(stringAttributes);
 
-                results.append("| " + gen + " | " + numericSimilarity + " | " + stringEqualsSimilarity + " |" + stringLvSimilarity + " |\n");
+                output.append(String.format("| %s | %.4f | %.4f | %.4f |\n", 
+                    gen, numericSimilarity, stringEqualsSimilarity, stringLvSimilarity));
             }
 
             // Across instances
-            int allNumericSimilarity = calculateNumericSimilarity(allNumericAttributes);
-            int allStringSimilarity = calculateEqualsStringSimilarity(allStringAttributes);
-            int allStringLvSimilarity = calculateLvStringSimilarity(allStringAttributes);
-            System.out.println("Across " + system + " Numeric similarity: " + allNumericSimilarity);
-            System.out.println("Across " + system + " StringEq. similarity: " + allStringSimilarity);
-            System.out.println("Across " + system + " StringLv. similarity: " + allStringLvSimilarity);
+            System.out.println("Calculating across " + system + "...");
+            double systemNumericSimilarity = Similarity.calculateNumeric(systemNumericAttributes);
+            double systemStringEqualSimilarity = Similarity.calculateStringEquals(systemStringAttributes);
+            double systemStringLvSimilarity = Similarity.calculateStringLv(systemStringAttributes);
 
-            results.append("| ALL | " + allNumericSimilarity + " | " + allStringSimilarity + " |" + allStringLvSimilarity + " |\n\n");
+            output.append(String.format("| ALL Gen | %.4f | %.4f | %.4f |\n\n", 
+                systemNumericSimilarity, systemStringEqualSimilarity, systemStringLvSimilarity));
             
+            experimentsNumericAttributes.addAll(systemNumericAttributes);
+            experimentsStringAttributes.addAll(systemStringAttributes);
         }
 
-        return results.toString().trim();
+        System.out.println("Calculating across ALL Experiments...");
+        double experimentsNumericSimilarity = Similarity.calculateNumeric(experimentsNumericAttributes);
+        double experimentsStringEqualSimilarity = Similarity.calculateStringEquals(experimentsStringAttributes);
+        double experimentsStringLvSimilarity = Similarity.calculateStringLv(experimentsStringAttributes);
+
+        output.append("| ALL Experiments | Numeric | StringEquals similarity | StringLv similarity |\n");
+        output.append("|---|---|---|---|\n");
+        output.append(String.format("| ALL Systems | %.4f | %.4f | %.4f |\n\n", 
+            experimentsNumericSimilarity, experimentsStringEqualSimilarity, experimentsStringLvSimilarity));
+        
+        return output.toString().trim();
     }
 
-    /*
+    
     private static String calculateCoTSimilarities(Map<String, Map<String, List<String>>> cotPaths) {
-        StringBuffer results = new StringBuffer();
+        StringBuffer output = new StringBuffer();
 
+        // System
         for (String system : cotPaths.keySet()) {
             Map<String, List<String>> genMap = cotPaths.get(system);
             Map<String, List<Double>> categoryToNumericAttributes = new HashMap<>();
@@ -177,15 +158,15 @@ public class Main {
             List<String> allStringAttributes = new ArrayList<>();
 
             String systemName = system.substring(0, system.indexOf("/"));
-            results.append("## " + systemName + "\n\n");
+            output.append("## " + systemName + "\n\n");
 
-            // Within instances
+            // Generation
             for (String gen : genMap.keySet()) {
                 List<String> categoryFiles = genMap.get(gen);
                 List<Double> genNumericAttributes = new ArrayList<>();
                 List<String> genStringAttributes = new ArrayList<>();
 
-                // Collect attributes for all files in this generation
+                // Category
                 for (String filePath : categoryFiles) {
                     String instance = Utils.readFile(filePath);
                     List<Double> numericAttributes = Utils.getNumericAttributes(instance);
@@ -201,55 +182,55 @@ public class Main {
                 }
 
                 // Calculate within-generation similarities
-                int numericSimilarity = calculateNumericSimilarity(genNumericAttributes);
-                int stringEqualsSimilarity = calculateEqualsStringSimilarity(genStringAttributes);
-                int stringLvSimilarity = calculateLvStringSimilarity(genStringAttributes);
+                double numericSimilarity = Similarity.calculateNumeric(genNumericAttributes);
+                double stringEqualsSimilarity = Similarity.calculateStringEquals(genStringAttributes);
+                double stringLvSimilarity = Similarity.calculateStringLv(genStringAttributes);
                 System.out.println("Within " + system + "/" + gen + " Numeric similarity: " + numericSimilarity);
                 System.out.println("Within " + system + "/" + gen + " StringEq. similarity: " + stringEqualsSimilarity);
                 System.out.println("Within " + system + "/" + gen + " StringLv. similarity: " + stringLvSimilarity);
 
-                results.append("| " + gen + " | Numeric | StringEq | StringLv |\n");
-                results.append("|---|---|---|---|\n");
-                results.append("| ALL | " + numericSimilarity + " | " + stringEqualsSimilarity + " | " + stringLvSimilarity + " |\n\n");
+                output.append("| " + gen + " | Numeric | StringEq | StringLv |\n");
+                output.append("|---|---|---|---|\n");
+                output.append("| ALL | " + numericSimilarity + " | " + stringEqualsSimilarity + " | " + stringLvSimilarity + " |\n\n");
             }
 
             // Across instances by category
-            results.append("### Across Categories\n\n");
+            output.append("### Across Categories\n\n");
             for (String category : categoryToNumericAttributes.keySet()) {
                 List<Double> numericAttributes = categoryToNumericAttributes.get(category);
                 List<String> stringAttributes = categoryToStringAttributes.get(category);
-                int numericSimilarity = calculateNumericSimilarity(numericAttributes);
-                int stringEqualsSimilarity = calculateEqualsStringSimilarity(stringAttributes);
-                int stringLvSimilarity = calculateLvStringSimilarity(stringAttributes);
+                double numericSimilarity = Similarity.calculateNumeric(numericAttributes);
+                double stringEqualsSimilarity = Similarity.calculateStringEquals(stringAttributes);
+                double stringLvSimilarity = Similarity.calculateStringLv(stringAttributes);
                 System.out.println("Across " + system + " " + category + " Numeric similarity: " + numericSimilarity);
                 System.out.println("Across " + system + " " + category + " StringEq. similarity: " + stringEqualsSimilarity);
                 System.out.println("Across " + system + " " + category + " StringLv. similarity: " + stringLvSimilarity);
 
-                results.append("| " + category + " | " + numericSimilarity + " | " + stringEqualsSimilarity + " | " + stringLvSimilarity + " |\n");
+                output.append("| " + category + " | " + numericSimilarity + " | " + stringEqualsSimilarity + " | " + stringLvSimilarity + " |\n");
             }
 
             // Overall across all instances
-            int allNumericSimilarity = calculateNumericSimilarity(allNumericAttributes);
-            int allStringSimilarity = calculateEqualsStringSimilarity(allStringAttributes);
-            int allStringLvSimilarity = calculateLvStringSimilarity(allStringAttributes);
+            double allNumericSimilarity = Similarity.calculateNumeric(allNumericAttributes);
+            double allStringSimilarity = Similarity.calculateStringEquals(allStringAttributes);
+            double allStringLvSimilarity = Similarity.calculateStringLv(allStringAttributes);
             System.out.println("Across " + system + " ALL Numeric similarity: " + allNumericSimilarity);
             System.out.println("Across " + system + " ALL StringEq. similarity: " + allStringSimilarity);
             System.out.println("Across " + system + " ALL StringLv. similarity: " + allStringLvSimilarity);
 
-            results.append("| ALL | " + allNumericSimilarity + " | " + allStringSimilarity + " | " + allStringLvSimilarity + " |\n\n");
+            output.append("| ALL | " + allNumericSimilarity + " | " + allStringSimilarity + " | " + allStringLvSimilarity + " |\n\n");
         }
 
-        return results.toString().trim();
+        return output.toString().trim();
     }
-    */
+    
 
     public static void main(String[] args) {
         Map<String, Map<String, List<String>>> simplePaths = new Main().getPaths("Simple");
         Map<String, Map<String, List<String>>> cotPaths = new Main().getPaths("CoT");
-        System.out.println(simplePaths.keySet());
-        String simpleResults = calculateSimpleSimilarities(simplePaths);
-        Utils.saveFile(simpleResults, "./", "simpleResults.md", false);
-        //String cotResults = calculateCoTSimilarities(cotPaths);
-        //Utils.saveFile(cotResults, "./", "cotResults.md", false);
+        System.out.println(cotPaths);
+        // String simpleoutput = calculateSimpleSimilarities(simplePaths);
+        // Utils.saveFile(simpleoutput, "./", "simpleOutput.md", false);
+         String cotoutput = calculateCoTSimilarities(cotPaths);
+        // Utils.saveFile(cotoutput, "./", "cotoutput.md", false);
     }
 }
