@@ -89,7 +89,7 @@ public class Main {
     }
 
     private static String calculateSimpleSimilarities(Map<String, Map<String, List<String>>> simplePaths) {
-        StringBuffer output = new StringBuffer();
+        StringBuilder output = new StringBuilder();
         List<Double> experimentsNumericAttributes = new ArrayList<>();
         List<String> experimentsStringAttributes = new ArrayList<>();
 
@@ -147,7 +147,7 @@ public class Main {
 
     
     private static String calculateCoTSimilarities(Map<String, Map<String, List<String>>> cotPaths) {
-        StringBuffer output = new StringBuffer();
+        StringBuilder output = new StringBuilder();
         List<Double> experimentsNumericAttributes = new ArrayList<>();
         List<String> experimentsStringAttributes = new ArrayList<>();
 
