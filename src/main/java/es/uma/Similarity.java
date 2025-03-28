@@ -35,8 +35,8 @@ public class Similarity {
                         sum += !a.equals(b) ? 1.0 : 0.0;        
                         break;
                     case "lv":
-                        int lv = Lv.computeLvDistance(a, b);
-                        sum += lv / Math.max(a.length(), b.length());
+                        double lv = Lv.computeLvDistance(a, b);
+                        sum += lv / (double) Math.max(a.length(), b.length());
                         break;
                     default:
                         throw new RuntimeException("Invalid type: " + type);
@@ -58,6 +58,6 @@ public class Similarity {
     public static void main(String[] args) {
         System.out.println("Numeric: " + calculateNumeric(List.of(60.0,18.0,18.0,72.0,84.0,14.0,14.0)));
         System.out.println("Equals: " + calculateStringEquals(List.of("cat", "dog", "per")));
-        System.out.println("LV: " + calculateStringLv(List.of("cat", "dog", "per")));
+        System.out.println("LV: " + calculateStringLv(List.of("Carlos", "Silva", "February 15, 2024", "February 22, 2024", "February 15, 2024", "February 22, 2024", "Rental of traditional Carnaval costumes.", "Exclusive breakfast with a view of Copacabana Beach.")));
     }
 }
