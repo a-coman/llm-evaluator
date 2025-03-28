@@ -1,9 +1,24 @@
 package es.uma;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Main {
+
+    private static final String interpretationText = """
+            **Table values interpretation:**
+
+            - **NaN** indicates the absence of attributes of that type.
+            - **1.0** means that the attributes are completely **different**. 
+            *(If there is only one attribute, it also returns 1.0)*
+            - **0.0** means the attributes are entirely **identical**.
+            """;
 
     private Map<String, Map<String, List<String>>> getPaths(String type) {
         Map<String, Map<String, List<String>>> simplePaths = new HashMap<>();
@@ -93,6 +108,7 @@ public class Main {
         SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
         output.append("# Simple\n\n");
+        output.append(interpretationText).append("\n");
         for (String system : simplePaths.keySet()) {
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
@@ -145,6 +161,7 @@ public class Main {
         SimilarityMetrics experimentsMetrics = new SimilarityMetrics();
 
         output.append("# CoT\n\n");
+        output.append(interpretationText).append("\n");
         
         for (String system : cotPaths.keySet()) {
             Map<String, List<String>> genMap = cotPaths.get(system);
