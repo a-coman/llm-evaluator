@@ -1,14 +1,23 @@
 package es.uma;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Similarity {
+
+    private double calculateStdDev(List<Double> values, double mean) {
+        double sum = 0;
+        for (double value : values) {
+            sum += (value - mean) * (value - mean);
+        }
+        return Math.sqrt(sum / values.size());
+    }
 
     public static double calculateNumeric(List<Double> numericAttributes) {
         if (numericAttributes == null || numericAttributes.isEmpty()) {
             return Double.NaN;
         }
-        
+        List<Double> values = new ArrayList<>();
         double sum = 0;
         double iterations = 0; // (n * (n - 1)) / 2.0;
         for (int i = 0; i < numericAttributes.size(); i++) {
@@ -18,9 +27,13 @@ public class Similarity {
                 double d2 = numericAttributes.get(j);
                 if (d1 != d2) {
                     sum += 1.0;
+                    values.add(1.0);
+                } else {
+                    values.add(0.0);
                 }
             }
         }
+
         return iterations == 0 ? 1.0 : sum / iterations; 
     }
 
