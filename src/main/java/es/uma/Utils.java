@@ -54,18 +54,18 @@ public class Utils {
     }
 
     public static List<Double> getNumericAttributes(String instance) {
-        String pattern = "!\\s*\\w+\\.\\s*\\w+\\s*:=\\s*(\\d+(?:\\.\\d+)?)";
+        String pattern = "!(?:\\s*set)?\\s*\\w+(?:\\.\\w+)*\\s*:=\\s*(\\d+(?:\\.\\d+)?)";
         List<String> matches = match(instance, pattern);
         return matches.stream().map(Double::parseDouble).collect(Collectors.toList());
     }
 
     public static List<String> getStringAttributes(String instance) {
-        String pattern = "!\\s*\\w+\\.\\s*\\w+\\s*:=\\s*'([^']*)'";
+        String pattern = "!(?:\\s*set)?\\s*\\w+(?:\\.\\w+)*\\s*:=\\s*'([^']*)'";
         return match(instance, pattern);
     }
 
     public static void main(String[] args) {
-        String path = "src/main/resources/dataset/CoT/HotelManagement/25-03-2025--11-38-06/gen3/invalid.soil";
+        String path = "src/main/resources/dataset/CoT/Football/02-04-2025--19-03-28/gen5/invalid.soil";
         String instance = readFile(path);
         List<Double> numericAttributes = getNumericAttributes(instance);
         List<String> stringAttributes = getStringAttributes(instance);

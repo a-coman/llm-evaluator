@@ -11,6 +11,8 @@ import java.util.TreeMap;
 
 public class Main {
 
+    private static Map<String, SimilarityMetrics> acrossMetricsMap = new HashMap<>(); // key: system name
+
     private static final String interpretationText = """
             **Table values interpretation:**
 
@@ -50,7 +52,7 @@ public class Main {
             if (systemDir.isDirectory()) {
                 for (File timestampDir : systemDir.listFiles()) {
                     if (timestampDir.isDirectory()) {
-                        String systemKey = systemDir.getName() + "/" + timestampDir.getName();
+                        String systemKey = systemDir.getName();
                         Map<String, List<String>> genMap = new TreeMap<>(new GenComparator());
                         for (File genDir : timestampDir.listFiles()) {
                             if (genDir.isDirectory() && genDir.getName().startsWith("gen")) {
@@ -72,7 +74,7 @@ public class Main {
             if (systemDir.isDirectory()) {
                 for (File timestampDir : systemDir.listFiles()) {
                     if (timestampDir.isDirectory()) {
-                        String systemKey = systemDir.getName() + "/" + timestampDir.getName();
+                        String systemKey = systemDir.getName();
                         Map<String, List<String>> genMap = new TreeMap<>(new GenComparator());
                         for (File genDir : timestampDir.listFiles()) {
                             if (genDir.isDirectory() && genDir.getName().startsWith("gen")) {
@@ -110,6 +112,7 @@ public class Main {
         output.append("# Simple\n\n");
         output.append(interpretationText).append("\n");
         for (String system : simplePaths.keySet()) {
+            acrossMetricsMap.put(system, new SimilarityMetrics());
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
             SimilarityMetrics systemMetrics = new SimilarityMetrics();
@@ -135,7 +138,7 @@ public class Main {
                 output.append(result.toMarkdownRow(gen)).append("\n");
 
             }
-
+            
             // Across instances
             System.out.println("Calculating across " + system + "...");
             SimilarityResult systemResult = systemMetrics.calculate();
@@ -143,6 +146,8 @@ public class Main {
 
             experimentsMetrics.addNumeric(systemMetrics.getNumericAttributes());
             experimentsMetrics.addStrings(systemMetrics.getStringAttributes());
+
+            acrossMetricsMap.get(system).aggregate(systemMetrics);
         }
 
         System.out.println("Calculating across ALL Experiments...");
@@ -221,6 +226,8 @@ public class Main {
 
             experimentsMetrics.addNumeric(systemMetrics.getNumericAttributes());
             experimentsMetrics.addStrings(systemMetrics.getStringAttributes());
+
+            acrossMetricsMap.get(system).aggregate(systemMetrics);
         }
 
         // System.out.println("Calculating across ALL Systems...");
@@ -230,6 +237,23 @@ public class Main {
         // output.append("| ALL Systems | Numeric | StringEquals | StringLv |\n");
         // output.append("|---|---|---|---|\n");
         // output.append(experimentsResult.toMarkdownRow("ALL Systems"));
+
+        return output.toString().trim();
+    }
+
+    private static String calculateCombined() {
+        StringBuilder output = new StringBuilder();
+
+        // Across systems
+        output.append("# Across Systems\n");
+        output.append(interpretationText).append("\n");
+        for (String system : acrossMetricsMap.keySet()) {
+            SimilarityMetrics systemMetrics = acrossMetricsMap.get(system);
+            output.append("## " + system + "\n");
+            output.append("|  Across Systems | Numeric | StringEquals | StringLv |\n");
+            output.append("|---|---|---|---|\n");
+            output.append(systemMetrics.calculate().toMarkdownRow("ALL Generations")).append("\n");
+        }
 
         return output.toString().trim();
     }
@@ -245,5 +269,8 @@ public class Main {
         
         String cotoutput = calculateCoTSimilarities(cotPaths);
         Utils.saveFile(cotoutput, "./", "cotDifference.md", false);
+
+        String combinedOutput = calculateCombined();
+        Utils.saveFile(combinedOutput, "./", "combinedDifference.md", false);
     }
 }

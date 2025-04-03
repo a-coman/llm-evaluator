@@ -5,14 +5,6 @@ import java.util.List;
 
 public class Similarity {
 
-    private double calculateStdDev(List<Double> values, double mean) {
-        double sum = 0;
-        for (double value : values) {
-            sum += (value - mean) * (value - mean);
-        }
-        return Math.sqrt(sum / values.size());
-    }
-
     public static double calculateNumeric(List<Double> numericAttributes) {
         if (numericAttributes == null || numericAttributes.isEmpty()) {
             return Double.NaN;

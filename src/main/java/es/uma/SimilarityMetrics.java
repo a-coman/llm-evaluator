@@ -40,4 +40,9 @@ public class SimilarityMetrics {
     public List<String> getStringAttributes() {
         return new ArrayList<>(stringAttributes);
     }
+
+    public void aggregate(SimilarityMetrics other) {
+        numericAttributes.addAll(other.numericAttributes);
+        stringAttributes.addAll(other.stringAttributes);
+    }
 }
