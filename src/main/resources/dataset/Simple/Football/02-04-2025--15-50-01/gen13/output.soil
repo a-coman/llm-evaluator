@@ -1,0 +1,164 @@
+!new Club('club25')
+!club25.name := 'Lions FC'
+!club25.homeGround := 'Lion Den Stadium'
+!club25.chairman := 'Gregory Long'
+
+!new Club('club26')
+!club26.name := 'Tigers FC'
+!club26.homeGround := 'Tiger Arena'
+!club26.chairman := 'Monica Ellis'
+
+!new Team('team25')
+!team25.name := 'Lion Pride'
+!insert (club25, team25) into ClubTeam
+
+!new Team('team26')
+!team26.name := 'Tiger Roar'
+!insert (club26, team26) into ClubTeam
+
+!new Player('player37')
+!player37.name := 'Noah Wright'
+!player37.age := 29
+!player37.bestFoot := #LEFT
+!player37.phoneNumber := '789-101-1122'
+!insert (team25, player37) into TeamPlayer
+
+!new Player('player38')
+!player38.name := 'Amelia Scott'
+!player38.age := 27
+!player38.bestFoot := #RIGHT
+!player38.phoneNumber := '890-112-2233'
+!insert (team25, player38) into TeamPlayer
+
+!new Player('player39')
+!player39.name := 'Lucas Brown'
+!player39.age := 32
+!player39.bestFoot := #BOTH
+!player39.phoneNumber := '901-123-3344'
+!insert (team26, player39) into TeamPlayer
+
+!new Position('position37')
+!position37.positionName := #DEFENDER
+!insert (player37, position37) into PlayerPositions
+
+!new Position('position38')
+!position38.positionName := #MIDFIELDER
+!insert (player38, position38) into PlayerPositions
+
+!new Position('position39')
+!position39.positionName := #FORWARD
+!insert (player39, position39) into PlayerPositions
+
+!new TrainingSession('training25')
+!training25.date := '2023-12-05'
+!training25.location := 'Lion Roar Grounds'
+!training25.purpose := 'Agility and Speed'
+!insert (team25, training25) into TeamTraining
+
+!new TrainingSession('training26')
+!training26.date := '2023-12-06'
+!training26.location := 'Tiger Tracks'
+!training26.purpose := 'Passing Accuracy'
+!insert (team26, training26) into TeamTraining
+
+!new TrainingNotes('trainingNotes25')
+!trainingNotes25.note := 'Enhanced agility with ladder drills'
+!trainingNotes25.date := '2023-12-05'
+!insert (training25, trainingNotes25) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes26')
+!trainingNotes26.note := 'Focused on precision and distance in passing'
+!trainingNotes26.date := '2023-12-06'
+!insert (training26, trainingNotes26) into TrainingTrainingNotes
+
+!new TrainingObjective('objective37')
+!objective37.areaToImprove := 'Agility'
+!objective37.startDate := '2023-10-01'
+!objective37.endDate := '2023-12-01'
+!objective37.success := true
+!insert (objective37, player37) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective38')
+!objective38.areaToImprove := 'Playmaking'
+!objective38.startDate := '2023-08-15'
+!objective38.endDate := '2023-11-15'
+!objective38.success := false
+!insert (objective38, player38) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective39')
+!objective39.areaToImprove := 'Shooting'
+!objective39.startDate := '2023-09-10'
+!objective39.endDate := '2023-11-10'
+!objective39.success := true
+!insert (objective39, player39) into TrainingObjectivePlayer
+
+!new Competition('competition13')
+!competition13.name := 'National Challenge Cup'
+!competition13.type := 'Finals'
+
+!new Match('match13')
+!match13.date := '2023-12-22'
+!match13.homeAway := false
+!insert (competition13, match13) into CompetitionMatch
+!insert (team25, match13) into VisitorMatch
+!insert (team26, match13) into LocalMatch
+
+!new MatchReport('report13')
+!report13.duration := 90
+!report13.scoreVisitor := 3
+!report13.scoreLocal := 2
+!insert (match13, report13) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer37')
+!matchPlayer37.booked := true
+!matchPlayer37.goals := 1
+!matchPlayer37.rating := 8
+!insert (player37, matchPlayer37) into PlayerMatch
+!insert (match13, matchPlayer37) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer39')
+!matchPlayer39.booked := false
+!matchPlayer39.goals := 1
+!matchPlayer39.rating := 9
+!insert (player39, matchPlayer39) into PlayerMatch
+!insert (match13, matchPlayer39) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition37')
+!matchPlayerPosition37.positionName := #DEFENDER
+!matchPlayerPosition37.number := 3
+!insert (matchPlayer37, matchPlayerPosition37) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition39')
+!matchPlayerPosition39.positionName := #FORWARD
+!matchPlayerPosition39.number := 9
+!insert (matchPlayer39, matchPlayerPosition39) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event47')
+!event47.eventType := #GOAL
+!event47.time := 15
+!insert (match13, event47) into MatchMatchEvent
+
+!new MatchEvent('event48')
+!event48.eventType := #GOAL
+!event48.time := 28
+!insert (match13, event48) into MatchMatchEvent
+
+!new MatchEvent('event49')
+!event49.eventType := #GOAL
+!event49.time := 42
+!insert (match13, event49) into MatchMatchEvent
+
+!new MatchEvent('event50')
+!event50.eventType := #GOAL
+!event50.time := 68
+!insert (match13, event50) into MatchMatchEvent
+
+!new MatchEvent('event51')
+!event51.eventType := #GOAL
+!event51.time := 84
+!insert (match13, event51) into MatchMatchEvent
+
+!new MatchNote('matchNote13')
+!matchNote13.note := 'Exciting final with Lions FC triumphing over Tigers FC'
+!matchNote13.date := '2023-12-22'
+!insert (match13, matchNote13) into MatchMatchNote

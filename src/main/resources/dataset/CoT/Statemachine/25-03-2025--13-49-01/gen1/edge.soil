@@ -1,0 +1,67 @@
+!new StateMachine('regionalTimewarp')
+!regionalTimewarp.name := 'regionalTimewarp'
+
+!new State('atlantic')
+!atlantic.name := 'atlantic'
+
+!new State('europeCentral')
+!europeCentral.name := 'europeCentral'
+
+!new State('eastAsia')
+!eastAsia.name := 'eastAsia'
+
+!new State('reset')
+!reset.name := 'reset'
+
+!new Transition('toEuropeCentral')
+!toEuropeCentral.name := 'toEuropeCentral'
+
+!new Transition('toEastAsia')
+!toEastAsia.name := 'toEastAsia'
+
+!new Transition('toReset')
+!toReset.name := 'toReset'
+
+!new Transition('toAtlantic')
+!toAtlantic.name := 'toAtlantic'
+
+!new TimeEvent('timeEventToEuropeCentral')
+!timeEventToEuropeCentral.time := 1
+
+!new TimeEvent('timeEventToEastAsia')
+!timeEventToEastAsia.time := 99999
+
+!new TimeEvent('timeEventToReset')
+!timeEventToReset.time := 24
+
+!new TimeEvent('timeEventToAtlantic')
+!timeEventToAtlantic.time := 60
+
+!insert (regionalTimewarp, atlantic) into StateMachineContainsStates
+!insert (regionalTimewarp, europeCentral) into StateMachineContainsStates
+!insert (regionalTimewarp, eastAsia) into StateMachineContainsStates
+!insert (regionalTimewarp, reset) into StateMachineContainsStates
+
+!insert (regionalTimewarp, atlantic) into StateMachineStartsStates
+
+!insert (regionalTimewarp, toEuropeCentral) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toEastAsia) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toReset) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toAtlantic) into StateMachineContainsTransitions
+
+!insert (toEuropeCentral, timeEventToEuropeCentral) into TransitionContainsEvents
+!insert (toEastAsia, timeEventToEastAsia) into TransitionContainsEvents
+!insert (toReset, timeEventToReset) into TransitionContainsEvents
+!insert (toAtlantic, timeEventToAtlantic) into TransitionContainsEvents
+
+!insert (atlantic, toEuropeCentral) into StateTransition
+!insert (toEuropeCentral, europeCentral) into TransitionState
+
+!insert (europeCentral, toEastAsia) into StateTransition
+!insert (toEastAsia, eastAsia) into TransitionState
+
+!insert (eastAsia, toReset) into StateTransition
+!insert (toReset, reset) into TransitionState
+
+!insert (reset, toAtlantic) into StateTransition
+!insert (toAtlantic, atlantic) into TransitionState

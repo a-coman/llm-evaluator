@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_4')
+
+!new Person('Mei_Ling')
+!Mei_Ling.name := 'Mei Ling'
+!Mei_Ling.phone := '+86-10-5555-6666'
+!Mei_Ling.website := 'meilingspace.cn'
+!Mei_Ling.email := 'mei.ling@creativelabs.cn'
+!Mei_Ling.title := 'CEO'
+
+!new Address('Address_10')
+!Address_10.city := 'Beijing'
+!Address_10.houseNr := '88'
+!Address_10.street := 'Wangfujing Street'
+!insert (Mei_Ling, Address_10) into ContactContainsAddress
+
+!new Note('Note_10')
+!Note_10.author := 'Mei Ling'
+!Note_10.time := Date('2023-10-08')
+!Note_10.type := #EMAIL
+!Note_10.comment := 'Sent strategic partnership proposal to local tech hubs.'
+!insert (Mei_Ling, Note_10) into ContactContainsNote
+
+!new Company('DigiArt_cro')
+!DigiArt_cro.name := 'DigiArt c.r.o.'
+!DigiArt_cro.phone := '+420-2-1234-5678'
+!DigiArt_cro.website := 'digiart.cat'
+!DigiArt_cro.email := 'gallery@digiart.cat'
+!DigiArt_cro.industry := 'Digital Arts'
+
+!new Address('Address_11')
+!Address_11.city := 'Prague'
+!Address_11.houseNr := '29'
+!Address_11.street := 'Karlova Street'
+!insert (DigiArt_cro, Address_11) into ContactContainsAddress
+
+!new Note('Note_11')
+!Note_11.author := 'Tomáš Havel'
+!Note_11.time := Date('2023-11-05')
+!Note_11.type := #MEETING
+!Note_11.comment := 'Collaboration with European artists for digital art gallery.'
+!insert (DigiArt_cro, Note_11) into ContactContainsNote
+
+!new Person('Elena_Rossi')
+!Elena_Rossi.name := 'Elena Rossi'
+!Elena_Rossi.phone := '+39-06-555-1112'
+!Elena_Rossi.website := 'elenarossiinnovation.it'
+!Elena_Rossi.email := 'elena@innovates.it'
+!Elena_Rossi.title := 'Product Manager'
+
+!new Address('Address_12')
+!Address_12.city := 'Rome'
+!Address_12.houseNr := '45'
+!Address_12.street := 'Via Appia Nuova'
+!insert (Elena_Rossi, Address_12) into ContactContainsAddress
+
+!new Note('Note_12')
+!Note_12.author := 'Elena Rossi'
+!Note_12.time := Date('2023-12-03')
+!Note_12.type := #CALL
+!Note_12.comment := 'Resolved technical issues with current design software.'
+!insert (Elena_Rossi, Note_12) into ContactContainsNote
+
+!new Relationship('Relationship_8')
+!Relationship_8.type := #COWORKER
+!insert (Elena_Rossi, Relationship_8) into ContactToRelationship
+!insert (Relationship_8, Mei_Ling) into RelationshipToContact
+
+!new Relationship('Relationship_9')
+!Relationship_9.type := #SUBDIVISION
+!insert (Elena_Rossi, Relationship_9) into ContactToRelationship
+!insert (Relationship_9, DigiArt_cro) into RelationshipToContact
+
+!insert (AddressBook_4, Mei_Ling) into AddressBookMadeOfContact
+!insert (AddressBook_4, DigiArt_cro) into AddressBookMadeOfContact
+!insert (AddressBook_4, Elena_Rossi) into AddressBookMadeOfContact

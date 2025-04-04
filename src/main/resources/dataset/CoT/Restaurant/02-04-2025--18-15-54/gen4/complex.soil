@@ -1,0 +1,263 @@
+!new Restaurant('restaurant26')
+!restaurant26.name := 'Cultural Tapestry Bistro'
+
+!new Owner('owner58')
+!owner58.name := 'Mei Lin'
+!owner58.percentageShares := 55
+
+!new Owner('owner59')
+!owner59.name := 'Rajiv Patel'
+!owner59.percentageShares := 45
+
+!insert (restaurant26, owner58) into RestaurantOwner
+!insert (restaurant26, owner59) into RestaurantOwner
+
+!new RegularCustomer('customer18')
+!customer18.name := 'Isabella Ricci'
+!customer18.prefferedLanguage := #English  -- Using #English as placeholder for Italian
+
+!new RegularCustomer('customer19')
+!customer19.name := 'Karim Faheem'
+!customer19.prefferedLanguage := #English  -- Using #English as placeholder for Arabic
+
+!new HeadWaiter('headWaiter23')
+!headWaiter23.name := 'Sarah Thompson'
+!headWaiter23.dateOfBirth := Date('1965-06-02')
+!headWaiter23.phoneNumber := '+44 755 667 1010'
+
+!new Waiter('waiter50')
+!waiter50.name := 'Oliver Green'
+!waiter50.dateOfBirth := Date('1991-02-12')
+!waiter50.phoneNumber := '+44 755 667 2221'
+
+!new Waiter('waiter51')
+!waiter51.name := 'Nisha Kapoor'
+!waiter51.dateOfBirth := Date('1989-04-05')
+!waiter51.phoneNumber := '+44 755 667 3331'
+
+!new Waiter('waiter52')
+!waiter52.name := 'Lukas Vidal'
+!waiter52.dateOfBirth := Date('1986-07-11')
+!waiter52.phoneNumber := '+44 755 667 4442'
+
+!insert (headWaiter23, waiter50) into HeadWaiterWaiter
+!insert (headWaiter23, waiter51) into HeadWaiterWaiter
+!insert (headWaiter23, waiter52) into HeadWaiterWaiter
+
+!new Manager('manager10')
+!manager10.name := 'Fiona McAllister'
+!manager10.dateOfBirth := Date('1978-12-05')
+!manager10.phoneNumber := '+44 755 667 5005'
+
+!new Chef('chef34')
+!chef34.name := 'Hiroshi Tanaka'
+!chef34.dateOfBirth := Date('1980-08-30')
+!chef34.phoneNumber := '+44 755 667 6123'
+
+!new Cook('cook42')
+!cook42.name := 'Hugo Moreno'
+!cook42.dateOfBirth := Date('1994-11-19')
+!cook42.phoneNumber := '+44 755 667 7345'
+!cook42.yearsOfExperience := 4
+
+!new Cook('cook43')
+!cook43.name := 'Sienna Wu'
+!cook43.dateOfBirth := Date('1982-01-22')
+!cook43.phoneNumber := '+44 755 667 8541'
+!cook43.yearsOfExperience := 11
+
+!insert (chef34, cook42) into ChefCook
+!insert (chef34, cook43) into ChefCook
+
+!new BusDriver('busdriver22')
+!busdriver22.name := 'Adeel Khan'
+!busdriver22.dateOfBirth := Date('1972-03-10')
+!busdriver22.phoneNumber := '+44 755 667 9112'
+
+!new Table('table58')
+!table58.number := 10
+!table58.description := 'Cozy booth by the mural'
+!table58.capacity := 4
+
+!new Table('table59')
+!table59.number := 11
+!table59.description := 'Outdoor terrace, scenic'
+!table59.capacity := 6
+
+!new Table('table60')
+!table60.number := 12
+!table60.description := 'Private room, Art Deco style'
+!table60.capacity := 15  -- Adjusting capacity to meet reservation demands
+
+!new Individual('individualReservation19')
+!individualReservation19.time := Time('21:00')
+!individualReservation19.date := Date('2023-09-30')
+!individualReservation19.numberPeople := 2
+!individualReservation19.name := 'Isabella Ricci'
+!individualReservation19.phoneNumber := '+39 555 2345'
+!individualReservation19.number := 98765
+!individualReservation19.seating := #Inside  -- Using #Inside as placeholder for Terrace
+!individualReservation19.smoking := #NonSmoking
+
+!insert (restaurant26, individualReservation19) into RestaurantReservation
+!insert (individualReservation19, table59) into ReservationTable
+!insert (individualReservation19, waiter51) into ReservationWaiter
+
+!insert (individualReservation19, customer18) into ReservationCustomer
+
+!new Banquet('banquet23')
+!banquet23.date := Date('2023-10-06')
+!banquet23.time := Time('15:00')
+!banquet23.numberPeople := 15
+!banquet23.name := 'Art Lovers Circle'
+!banquet23.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for PayPal
+!banquet23.busService := false
+
+!insert (restaurant26, banquet23) into RestaurantReservation
+!insert (banquet23, table60) into ReservationTable
+!insert (banquet23, busdriver22) into BanquetBusDriver  -- Correct association with the banquet
+
+!insert (banquet23, waiter52) into ReservationWaiter
+!insert (banquet23, waiter50) into ReservationWaiter
+
+!new ItemOrder('itemOrder36')
+!itemOrder36.time := Time('21:15')
+!insert (individualReservation19, itemOrder36) into ReservationItemOrdered
+
+!new MenuItem('menuItem41')
+!menuItem41.description := 'Pasta Primavera'
+!menuItem41.prepTime := 20.0
+!menuItem41.classification := #Main
+
+!insert (itemOrder36, menuItem41) into ItemOrderMenuItem
+!insert (menuItem41, chef34) into MenuItemChef
+
+!new MenuItem('menuItem42')
+!menuItem42.description := 'Chocolate Fondue'
+!menuItem42.prepTime := 15.0
+!menuItem42.classification := #Dessert
+
+!new ItemOrder('itemOrder37')
+!itemOrder37.time := Time('21:30')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation19, itemOrder37) into ReservationItemOrdered
+!insert (itemOrder37, menuItem42) into ItemOrderMenuItem
+!insert (menuItem42, chef34) into MenuItemChef
+
+!new ItemOrder('itemOrder38')
+!itemOrder38.time := Time('15:30')
+!insert (banquet23, itemOrder38) into ReservationItemOrdered
+
+!new MenuItem('menuItem43')
+!menuItem43.description := 'Falafel Wrap'
+!menuItem43.prepTime := 25.0
+!menuItem43.classification := #Main
+
+!insert (itemOrder38, menuItem43) into ItemOrderMenuItem
+!insert (menuItem43, chef34) into MenuItemChef
+
+!new MenuItem('menuItem44')
+!menuItem44.description := 'Mediterranean Paella'
+!menuItem44.prepTime := 35.0
+!menuItem44.classification := #Main
+
+!new ItemOrder('itemOrder39')
+!itemOrder39.time := Time('15:45')  -- Separate ItemOrder for the second menu item
+!insert (banquet23, itemOrder39) into ReservationItemOrdered
+!insert (itemOrder39, menuItem44) into ItemOrderMenuItem
+!insert (menuItem44, chef34) into MenuItemChef
+
+!new FoodItem('foodItem77')
+!foodItem77.number := 12001
+!foodItem77.description := 'Penne'
+!foodItem77.purchaseFlag := true
+!foodItem77.unit := #Pound  -- Using #Pound as placeholder for Boxes
+
+!new FoodItem('foodItem78')
+!foodItem78.number := 12002
+!foodItem78.description := 'Zucchini'
+!foodItem78.purchaseFlag := true
+!foodItem78.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem79')
+!foodItem79.number := 12003
+!foodItem79.description := 'Bell Pepper'
+!foodItem79.purchaseFlag := true
+!foodItem79.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!insert (menuItem41, foodItem77) into MenuItemFoodItem
+!insert (menuItem41, foodItem78) into MenuItemFoodItem
+!insert (menuItem41, foodItem79) into MenuItemFoodItem
+
+!new FoodItem('foodItem80')
+!foodItem80.number := 12004
+!foodItem80.description := 'Dark Chocolate'
+!foodItem80.purchaseFlag := true
+!foodItem80.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem81')
+!foodItem81.number := 12005
+!foodItem81.description := 'Strawberries'
+!foodItem81.purchaseFlag := true
+!foodItem81.unit := #Pound  -- Using #Pound as placeholder for Boxes
+
+!new FoodItem('foodItem82')
+!foodItem82.number := 12006
+!foodItem82.description := 'Bananas'
+!foodItem82.purchaseFlag := true
+!foodItem82.unit := #Ounce  -- Using #Ounce as placeholder for Bunches
+
+!insert (menuItem42, foodItem80) into MenuItemFoodItem
+!insert (menuItem42, foodItem81) into MenuItemFoodItem
+!insert (menuItem42, foodItem82) into MenuItemFoodItem
+
+!new FoodItem('foodItem83')
+!foodItem83.number := 12007
+!foodItem83.description := 'Falafel'
+!foodItem83.purchaseFlag := true
+!foodItem83.unit := #Dozen  -- Using #Dozen as placeholder for Pieces
+
+!new FoodItem('foodItem84')
+!foodItem84.number := 12008
+!foodItem84.description := 'Pita Bread'
+!foodItem84.purchaseFlag := true
+!foodItem84.unit := #Ounce  -- Using #Ounce as placeholder as no pack literal is defined
+
+!new FoodItem('foodItem85')
+!foodItem85.number := 12009
+!foodItem85.description := 'Tahini'
+!foodItem85.purchaseFlag := true
+!foodItem85.unit := #Ounce  -- Using #Ounce as placeholder for Jars
+
+!insert (menuItem43, foodItem83) into MenuItemFoodItem
+!insert (menuItem43, foodItem84) into MenuItemFoodItem
+!insert (menuItem43, foodItem85) into MenuItemFoodItem
+
+!new FoodItem('foodItem86')
+!foodItem86.number := 12010
+!foodItem86.description := 'Rice'
+!foodItem86.purchaseFlag := true
+!foodItem86.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem87')
+!foodItem87.number := 12011
+!foodItem87.description := 'Seafood Mix'
+!foodItem87.purchaseFlag := true
+!foodItem87.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem88')
+!foodItem88.number := 12012
+!foodItem88.description := 'Saffron'
+!foodItem88.purchaseFlag := true
+!foodItem88.unit := #Gram
+
+!insert (menuItem44, foodItem86) into MenuItemFoodItem
+!insert (menuItem44, foodItem87) into MenuItemFoodItem
+!insert (menuItem44, foodItem88) into MenuItemFoodItem
+
+!new Allergen('allergen34')
+!allergen34.type := #Lactose  -- Using #Lactose as placeholder for Gluten
+
+!new Allergen('allergen35')
+!allergen35.type := #Lactose  -- Using #Lactose as placeholder for Nuts
+
+!insert (foodItem80, allergen34) into FoodItemAllergen

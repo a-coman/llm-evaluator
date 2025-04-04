@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine12')
+!stateMachine12.name := 'inspectionMachine'
+
+!new State('state30')
+!state30.name := 'scheduled'
+
+!new State('state31')
+!state31.name := 'inProgress'
+
+!new State('state32')
+!state32.name := 'completed'
+
+!new Transition('transition26')
+!transition26.name := 'scheduleToInProgress'
+
+!new Transition('transition27')
+!transition27.name := 'inProgressToComplete'
+
+!new TimeEvent('event26')
+!event26.time := 15
+
+!new TimeEvent('event27')
+!event27.time := 30
+
+!insert (stateMachine12, state30) into StateMachineContainsStates
+!insert (stateMachine12, state31) into StateMachineContainsStates
+!insert (stateMachine12, state32) into StateMachineContainsStates
+
+!insert (stateMachine12, transition26) into StateMachineContainsTransitions
+!insert (stateMachine12, transition27) into StateMachineContainsTransitions
+
+!insert (transition26, event26) into TransitionContainsEvents
+!insert (transition27, event27) into TransitionContainsEvents
+
+!insert (state30, transition26) into StateTransition
+!insert (state31, transition27) into StateTransition
+
+!insert (transition26, state31) into TransitionState
+!insert (transition27, state32) into TransitionState
+
+!insert (stateMachine12, state30) into StateMachineStartsStates

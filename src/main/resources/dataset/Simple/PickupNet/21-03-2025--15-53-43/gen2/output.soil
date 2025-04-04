@@ -1,0 +1,54 @@
+!new Driver('driver3')
+!driver3.id := 'D003'
+!driver3.name := 'Eve Williams'
+
+!new Shipment('shipment4')
+!shipment4.id := 'S004'
+!shipment4.status := #UNDERWAY
+
+!new Shipment('shipment5')
+!shipment5.id := 'S005'
+!shipment5.status := #NEW
+
+!new Address('address5')
+!address5.text := '654 Willow Drive'
+
+!new Address('address6')
+!address6.text := '987 Walnut Street'
+
+!new GeoLocation('geoLocation5')
+!geoLocation5.latitude := 51.5074
+!geoLocation5.longitude := -0.1278
+
+!new GeoLocation('geoLocation6')
+!geoLocation6.latitude := 48.8566
+!geoLocation6.longitude := 2.3522
+
+!new Customer('customer3')
+!customer3.id := 'C003'
+!customer3.name := 'Fiona Clark'
+!customer3.twitterUserName := '@fiona_clark'
+
+!new Station('station2')
+
+!insert (driver3, shipment4) into DriverShipment
+!insert (driver3, shipment5) into DriverShipment
+
+!insert (shipment4, address5) into ShipmentContainsPickUpAddress
+!insert (shipment4, address6) into ShipmentContainsDeliveryAddress
+
+!insert (shipment5, address6) into ShipmentContainsPickUpAddress
+!insert (shipment5, address5) into ShipmentContainsDeliveryAddress
+
+!insert (address5, geoLocation5) into AddressContainsGeoLocation
+!insert (address6, geoLocation6) into AddressContainsGeoLocation
+
+!insert (customer3, shipment4) into CustomerConsistsOfShipment
+!insert (customer3, shipment5) into CustomerConsistsOfShipment
+
+!insert (station2, customer3) into StationContainsCustomer
+
+!insert (station2, shipment4) into StationShipment
+!insert (station2, shipment5) into StationShipment
+
+!insert (station2, driver3) into StationContainsDriver

@@ -1,0 +1,52 @@
+!new Client('ivanPopovic')
+!ivanPopovic.clientId := 201
+!ivanPopovic.isSuspended := false
+
+!new Client('anaKovacevic')
+!anaKovacevic.clientId := 202
+!anaKovacevic.isSuspended := false
+
+!new Client('johnSmith')
+!johnSmith.clientId := 203
+!johnSmith.isSuspended := true
+
+!new Rental('rentalIvan')
+!rentalIvan.date := Date('2023-10-01')
+
+!new Rental('rentalAna')
+!rentalAna.date := Date('2023-10-02')
+
+!new Movie('movieAdriaticHeist')
+!movieAdriaticHeist.title := 'The Adriatic Heist'
+!movieAdriaticHeist.availableCopies := 7
+!movieAdriaticHeist.genre := #Action
+
+!new Movie('movieNightsInSplit')
+!movieNightsInSplit.title := 'Nights in Split'
+!movieNightsInSplit.availableCopies := 4
+!movieNightsInSplit.genre := #Comedy
+
+!new Series('seriesDalmatianDays')
+!seriesDalmatianDays.title := 'Dalmatian Days'
+!seriesDalmatianDays.availableCopies := 1
+!seriesDalmatianDays.episode := 10
+
+!new Actor('actorGoranVisnjic')
+!actorGoranVisnjic.name := 'Goran Visnjic'
+
+!new Actor('actorMillaJovovich')
+!actorMillaJovovich.name := 'Milla Jovovich'
+
+!new Actor('actorEllaMorales')
+!actorEllaMorales.name := 'Ella Morales'
+
+!insert (ivanPopovic, rentalIvan) into ClientRental
+!insert (anaKovacevic, rentalAna) into ClientRental
+
+!insert (rentalIvan, movieAdriaticHeist) into RentalCassette
+!insert (rentalAna, movieNightsInSplit) into RentalCassette
+!insert (rentalAna, seriesDalmatianDays) into RentalCassette
+
+!insert (movieAdriaticHeist, actorGoranVisnjic) into CassetteActor
+!insert (movieNightsInSplit, actorMillaJovovich) into CassetteActor
+!insert (seriesDalmatianDays, actorEllaMorales) into CassetteActor

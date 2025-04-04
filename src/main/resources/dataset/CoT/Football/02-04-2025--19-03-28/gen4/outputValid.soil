@@ -1,0 +1,722 @@
+!new Club('club28')
+!club28.name := 'Central Stars FC'
+!club28.homeGround := 'Star Field'
+!club28.chairman := 'Margaret Faulkner'
+
+!new Team('teamAD')
+!teamAD.name := 'Stars Juniors'
+
+!insert (club28, teamAD) into ClubTeam
+
+!new Player('player29')
+!player29.name := 'Konstantinos Georgiou'
+!player29.age := 29
+!player29.bestFoot := #BOTH
+!player29.phoneNumber := '+302109876543'
+
+!insert (teamAD, player29) into TeamPlayer
+
+!new Position('position41')
+!position41.positionName := #MIDFIELDER
+
+!new Position('position42')
+!position42.positionName := #FORWARD
+
+!insert (player29, position41) into PlayerPositions
+!insert (player29, position42) into PlayerPositions
+
+!new PlayerNotes('playerNote20')
+!playerNote20.note := 'Creative playmaker, excellent vision on the field.'
+!playerNote20.date := '2023-01-10'
+
+!new PlayerNotes('playerNote21')
+!playerNote21.note := 'Needs improvement on physical endurance.'
+!playerNote21.date := '2023-05-05'
+
+!insert (player29, playerNote20) into PlayerPlayerNotes
+!insert (player29, playerNote21) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective29')
+!trainingObjective29.areaToImprove := 'Tactical awareness'
+!trainingObjective29.startDate := '2023-02-01'
+!trainingObjective29.endDate := '2023-03-01'
+!trainingObjective29.success := true
+
+!new TrainingObjective('trainingObjective30')
+!trainingObjective30.areaToImprove := 'Dribbling under pressure'
+!trainingObjective30.startDate := '2023-03-02'
+!trainingObjective30.endDate := '2023-04-02'
+!trainingObjective30.success := false
+
+!insert (trainingObjective29, player29) into TrainingObjectivePlayer
+!insert (trainingObjective30, player29) into TrainingObjectivePlayer
+
+!new Competition('competition14')
+!competition14.name := 'Regional Friendship Cup'
+!competition14.type := 'Friendly'
+
+!new Match('match14')
+!match14.date := '2023-08-14'
+!match14.homeAway := false
+
+!insert (competition14, match14) into CompetitionMatch
+
+!new Team('teamAE')
+!teamAE.name := 'Northern Pirates'
+
+!new Club('club29')
+!club29.name := 'Northern Club'
+!club29.homeGround := 'Northern Stadium'
+!club29.chairman := 'John Smith'
+
+!insert (club29, teamAE) into ClubTeam
+
+!new Player('player30')
+!player30.name := 'Victor Sanchez'
+!player30.age := 28
+!player30.bestFoot := #RIGHT
+!player30.phoneNumber := '+341234567890'
+
+!insert (teamAE, player30) into TeamPlayer
+
+!new Position('position43')
+!position43.positionName := #DEFENDER
+
+!insert (player30, position43) into PlayerPositions
+
+!new TrainingObjective('trainingObjective31')
+!trainingObjective31.areaToImprove := 'Positional Awareness'
+!trainingObjective31.startDate := '2023-07-01'
+!trainingObjective31.endDate := '2023-08-01'
+!trainingObjective31.success := false
+
+!insert (trainingObjective31, player30) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession26')
+!trainingSession26.date := '2023-08-10'
+!trainingSession26.location := 'Northern Stadium Practice Area'
+!trainingSession26.purpose := 'Defensive coordination session'
+
+!insert (teamAE, trainingSession26) into TeamTraining
+
+!new TrainingNotes('trainingNote27')
+!trainingNote27.note := 'Working on player positioning in defensive scenarios.'
+!trainingNote27.date := '2023-08-10'
+
+!insert (trainingSession26, trainingNote27) into TrainingTrainingNotes
+
+!insert (teamAE, match14) into LocalMatch
+!insert (teamAD, match14) into VisitorMatch
+
+!new MatchReport('matchReport14')
+!matchReport14.duration := 90
+!matchReport14.scoreVisitor := 0
+!matchReport14.scoreLocal := 0
+
+!insert (match14, matchReport14) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer20')
+!matchPlayer20.booked := true
+!matchPlayer20.goals := 0
+!matchPlayer20.rating := 6
+
+!insert (player29, matchPlayer20) into PlayerMatch
+!insert (match14, matchPlayer20) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition21')
+!matchPlayerPosition21.positionName := #MIDFIELDER
+!matchPlayerPosition21.number := 10
+
+!insert (matchPlayer20, matchPlayerPosition21) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession25')
+!trainingSession25.date := '2023-08-12'
+!trainingSession25.location := 'Star Field Annex'
+!trainingSession25.purpose := 'Strategic planning for upcoming matches'
+
+!insert (teamAD, trainingSession25) into TeamTraining
+
+!new TrainingNotes('trainingNote26')
+!trainingNote26.note := 'Detailed analysis of opponents strategy.'
+!trainingNote26.date := '2023-08-12'
+
+!insert (trainingSession25, trainingNote26) into TrainingTrainingNotes
+
+!new Club('club31')
+!club31.name := 'Cape Town Eagles'
+!club31.homeGround := 'Cape Town Stadium'
+!club31.chairman := 'Thandiwe Ntuli'
+
+!new Team('teamAH')
+!teamAH.name := 'Cape Town Falcons'
+
+!insert (club31, teamAH) into ClubTeam
+
+!new Player('player35')
+!player35.name := 'Mbulelo Khumalo'
+!player35.age := 24
+!player35.bestFoot := #RIGHT
+!player35.phoneNumber := '+27-21-1234567'
+
+!insert (teamAH, player35) into TeamPlayer
+
+!new Player('player36')
+!player36.name := 'Thando Mokoena'
+!player36.age := 26
+!player36.bestFoot := #LEFT
+!player36.phoneNumber := '+27-21-7654321'
+
+!insert (teamAH, player36) into TeamPlayer
+
+!new Position('position50')
+!position50.positionName := #FORWARD
+
+!new Position('position51')
+!position51.positionName := #MIDFIELDER
+
+!insert (player35, position50) into PlayerPositions
+!insert (player36, position51) into PlayerPositions
+
+!new Competition('competition16')
+!competition16.name := 'African Nations League'
+!competition16.type := 'National Tournament'
+
+!new Match('match16')
+!match16.date := '2023-07-18'
+!match16.homeAway := false
+
+!insert (competition16, match16) into CompetitionMatch
+
+!insert (teamAH, match16) into VisitorMatch
+
+!new Team('teamAI')
+!teamAI.name := 'Lagos Lions'
+
+!new Club('club32')
+!club32.name := 'Lagos Football Club'
+!club32.homeGround := 'Lagos National Stadium'
+!club32.chairman := 'Olusegun Adebayo'
+
+!insert (club32, teamAI) into ClubTeam
+
+!insert (teamAI, match16) into LocalMatch
+
+!new MatchReport('matchReport16')
+!matchReport16.duration := 120
+!matchReport16.scoreVisitor := 3
+!matchReport16.scoreLocal := 3
+
+!insert (match16, matchReport16) into MatchMatchReport
+
+!new MatchEvent('matchEvent59')
+!matchEvent59.eventType := #GOAL
+!matchEvent59.time := 12
+
+!new MatchEvent('matchEvent60')
+!matchEvent60.eventType := #GOAL
+!matchEvent60.time := 25
+
+!new MatchEvent('matchEvent61')
+!matchEvent61.eventType := #GOAL
+!matchEvent61.time := 47
+
+!new MatchEvent('matchEvent62')
+!matchEvent62.eventType := #FOUL
+!matchEvent62.time := 60
+
+!new MatchEvent('matchEvent63')
+!matchEvent63.eventType := #GOAL
+!matchEvent63.time := 90
+
+!new MatchEvent('matchEvent64')
+!matchEvent64.eventType := #GOAL
+!matchEvent64.time := 105
+
+!new MatchEvent('matchEvent65')
+!matchEvent65.eventType := #GOAL
+!matchEvent65.time := 115
+
+!insert (match16, matchEvent59) into MatchMatchEvent
+!insert (match16, matchEvent60) into MatchMatchEvent
+!insert (match16, matchEvent61) into MatchMatchEvent
+!insert (match16, matchEvent62) into MatchMatchEvent
+!insert (match16, matchEvent63) into MatchMatchEvent
+!insert (match16, matchEvent64) into MatchMatchEvent
+!insert (match16, matchEvent65) into MatchMatchEvent
+
+!new MatchNote('matchNote12')
+!matchNote12.note := 'Exciting match that extended to extra time with dramatic goals.'
+!matchNote12.date := '2023-07-18'
+
+!insert (match16, matchNote12) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer22')
+!matchPlayer22.booked := true
+!matchPlayer22.goals := 1
+!matchPlayer22.rating := 8
+
+!insert (player35, matchPlayer22) into PlayerMatch
+!insert (match16, matchPlayer22) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition23')
+!matchPlayerPosition23.positionName := #FORWARD
+!matchPlayerPosition23.number := 7
+
+!insert (matchPlayer22, matchPlayerPosition23) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer23')
+!matchPlayer23.booked := false
+!matchPlayer23.goals := 1
+!matchPlayer23.rating := 9
+
+!insert (player36, matchPlayer23) into PlayerMatch
+!insert (match16, matchPlayer23) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition24')
+!matchPlayerPosition24.positionName := #MIDFIELDER
+!matchPlayerPosition24.number := 6
+
+!insert (matchPlayer23, matchPlayerPosition24) into MatchPlayerMatchPlayerPosition
+
+!new Player('player33')
+!player33.name := 'Oluwaseun Adeyemi'
+!player33.age := 29
+!player33.bestFoot := #BOTH
+!player33.phoneNumber := '+234-1-987123'
+
+!new Player('player34')
+!player34.name := 'Nia Amara'
+!player34.age := 22
+!player34.bestFoot := #RIGHT
+!player34.phoneNumber := '+234-1-654321'
+
+!insert (teamAI, player33) into TeamPlayer
+!insert (teamAI, player34) into TeamPlayer
+
+!new Position('position47')
+!position47.positionName := #FORWARD
+
+!new Position('position48')
+!position48.positionName := #MIDFIELDER
+
+!new Position('position49')
+!position49.positionName := #DEFENDER
+
+!insert (player33, position47) into PlayerPositions
+!insert (player33, position48) into PlayerPositions
+!insert (player34, position49) into PlayerPositions
+
+!new PlayerNotes('playerNote23')
+!playerNote23.note := 'Known for strategic play and leadership.'
+!playerNote23.date := '2023-06-15'
+
+!insert (player33, playerNote23) into PlayerPlayerNotes
+
+!new PlayerNotes('playerNote24')
+!playerNote24.note := 'Strong defensive skills with agility on the field.'
+!playerNote24.date := '2023-06-20'
+
+!insert (player34, playerNote24) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective36')
+!trainingObjective36.areaToImprove := 'Passing Accuracy'
+!trainingObjective36.startDate := '2023-05-10'
+!trainingObjective36.endDate := '2023-08-10'
+!trainingObjective36.success := true
+
+!insert (trainingObjective36, player33) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective37')
+!trainingObjective37.areaToImprove := 'Tactical Awareness'
+!trainingObjective37.startDate := '2023-07-01'
+!trainingObjective37.endDate := '2023-09-01'
+!trainingObjective37.success := false
+
+!insert (trainingObjective37, player34) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession28')
+!trainingSession28.date := '2023-06-01'
+!trainingSession28.location := 'Lagos Sports Complex'
+!trainingSession28.purpose := 'Team Coordination'
+
+!insert (teamAI, trainingSession28) into TeamTraining
+
+!insert (teamAH, trainingSession28) into TeamTraining
+
+!new TrainingNotes('trainingNote30')
+!trainingNote30.note := 'Focused on developing team chemistry and intricate passing drills.'
+!trainingNote30.date := '2023-06-01'
+
+!insert (trainingSession28, trainingNote30) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend11')
+!failedAttend11.reason := 'Travel Delay'
+
+!insert (trainingSession28, failedAttend11) into TrainingFailded
+!insert (failedAttend11, player34) into FailedPlayer
+
+!new Club('club39')
+!club39.name := 'Paris Saint-Germain F.C.'
+!club39.homeGround := 'Parc des Princes'
+!club39.chairman := 'Nasser Al-Khelaifi'
+
+!new Club('club40')
+!club40.name := 'FC Bayern Munich'
+!club40.homeGround := 'Allianz Arena'
+!club40.chairman := 'Herbert Hainer'
+
+!new Team('teamAQ')
+!teamAQ.name := 'PSG First Team'
+
+!new Team('teamAR')
+!teamAR.name := 'Bayern Munich First Team'
+
+!insert (club39, teamAQ) into ClubTeam
+!insert (club40, teamAR) into ClubTeam
+
+!new Competition('competition20')
+!competition20.name := 'UEFA Champions League'
+!competition20.type := 'International Club Tournament'
+
+!new Match('match20')
+!match20.date := '2024-02-20'
+!match20.homeAway := false
+
+!insert (competition20, match20) into CompetitionMatch
+
+!insert (teamAR, match20) into LocalMatch
+!insert (teamAQ, match20) into VisitorMatch
+
+!new MatchReport('matchReport20')
+!matchReport20.duration := 95
+!matchReport20.scoreVisitor := 2
+!matchReport20.scoreLocal := 2
+
+!insert (match20, matchReport20) into MatchMatchReport
+
+!new MatchEvent('matchEvent78')
+!matchEvent78.eventType := #GOAL
+!matchEvent78.time := 12
+
+!new MatchEvent('matchEvent79')
+!matchEvent79.eventType := #GOAL
+!matchEvent79.time := 34
+
+!new MatchEvent('matchEvent80')
+!matchEvent80.eventType := #GOAL
+!matchEvent80.time := 56
+
+!new MatchEvent('matchEvent81')
+!matchEvent81.eventType := #GOAL
+!matchEvent81.time := 72
+
+!new MatchEvent('matchEvent82')
+!matchEvent82.eventType := #FOUL
+!matchEvent82.time := 89
+
+!insert (match20, matchEvent78) into MatchMatchEvent
+!insert (match20, matchEvent79) into MatchMatchEvent
+!insert (match20, matchEvent80) into MatchMatchEvent
+!insert (match20, matchEvent81) into MatchMatchEvent
+!insert (match20, matchEvent82) into MatchMatchEvent
+
+!new MatchNote('matchNote15')
+!matchNote15.note := 'The match featured brilliant individual performances and tactical masterclass from both managers.'
+!matchNote15.date := '2024-02-20'
+
+!insert (match20, matchNote15) into MatchMatchNote
+
+!new Player('player43')
+!player43.name := 'Kylian Mbappé'
+!player43.age := 24
+!player43.bestFoot := #RIGHT
+!player43.phoneNumber := '+33 6012345678'
+
+!new Player('player44')
+!player44.name := 'Joshua Kimmich'
+!player44.age := 29
+!player44.bestFoot := #BOTH
+!player44.phoneNumber := '+49 1712345678'
+
+!insert (teamAQ, player43) into TeamPlayer
+!insert (teamAR, player44) into TeamPlayer
+
+!new Position('position62')
+!position62.positionName := #FORWARD
+
+!new Position('position63')
+!position63.positionName := #MIDFIELDER
+
+!insert (player43, position62) into PlayerPositions
+!insert (player44, position63) into PlayerPositions
+
+!new MatchPlayer('matchPlayer27')
+!matchPlayer27.booked := false
+!matchPlayer27.goals := 1
+!matchPlayer27.rating := 8
+
+!insert (player43, matchPlayer27) into PlayerMatch
+!insert (match20, matchPlayer27) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition28')
+!matchPlayerPosition28.positionName := #FORWARD
+!matchPlayerPosition28.number := 7
+
+!insert (matchPlayer27, matchPlayerPosition28) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer28')
+!matchPlayer28.booked := true
+!matchPlayer28.goals := 0
+!matchPlayer28.rating := 7
+
+!insert (player44, matchPlayer28) into PlayerMatch
+!insert (match20, matchPlayer28) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition29')
+!matchPlayerPosition29.positionName := #MIDFIELDER
+!matchPlayerPosition29.number := 6
+
+!insert (matchPlayer28, matchPlayerPosition29) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession34')
+!trainingSession34.date := '2024-02-18'
+!trainingSession34.location := 'Camp des Loges'
+!trainingSession34.purpose := 'Preparatory Defensive Formations'
+
+!insert (teamAQ, trainingSession34) into TeamTraining
+
+!new TrainingNotes('trainingNote35')
+!trainingNote35.note := 'Focused on drills simulating high-pressure situations.'
+!trainingNote35.date := '2024-02-17'
+
+!insert (trainingSession34, trainingNote35) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend14')
+!failedAttend14.reason := 'Injury - Sprain - Mbappé'
+
+!insert (trainingSession34, failedAttend14) into TrainingFailded
+!insert (failedAttend14, player43) into FailedPlayer
+
+!new TrainingSession('trainingSession35')
+!trainingSession35.date := '2024-02-15'
+!trainingSession35.location := 'Bayern Training Grounds'
+!trainingSession35.purpose := 'Tactical Analysis and Recovery'
+
+!insert (teamAR, trainingSession35) into TeamTraining
+
+!new TrainingNotes('trainingNote36')
+!trainingNote36.note := 'Strategies focused on fast recovery and adaptability.'
+!trainingNote36.date := '2024-02-14'
+
+!insert (trainingSession35, trainingNote36) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjective46')
+!trainingObjective46.areaToImprove := 'Agility and Recovery Speed'
+!trainingObjective46.startDate := '2024-01-01'
+!trainingObjective46.endDate := '2024-02-29'
+!trainingObjective46.success := true
+
+!insert (trainingObjective46, player44) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective47')
+!trainingObjective47.areaToImprove := 'Dribbling Control'
+!trainingObjective47.startDate := '2024-02-01'
+!trainingObjective47.endDate := '2024-03-01'
+!trainingObjective47.success := true
+
+!insert (trainingObjective47, player43) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote30')
+!playerNote30.note := 'Demonstrates exceptional pace and tactical versatility in offensive roles.'
+!playerNote30.date := '2024-02-15'
+
+!new PlayerNotes('playerNote31')
+!playerNote31.note := 'Known for his leadership on the pitch and crucial interceptions.'
+!playerNote31.date := '2024-02-16'
+
+!insert (player43, playerNote30) into PlayerPlayerNotes
+!insert (player44, playerNote31) into PlayerPlayerNotes
+
+!new Club('club47')
+!set club47.name := 'Desert Scorpions FC'
+!set club47.homeGround := 'Sandstorm Arena'
+!set club47.chairman := 'Mr. Khalid Alam'
+
+!new Team('teamAY')
+!set teamAY.name := 'Scorpion Stingers'
+
+!new Team('teamAZ')
+!set teamAZ.name := 'Pyramid Warriors'
+
+!insert (club47, teamAY) into ClubTeam
+!insert (club47, teamAZ) into ClubTeam
+
+!new Player('player54')
+!set player54.name := 'Rami El-Sayed'
+!set player54.age := 28
+!set player54.bestFoot := #LEFT
+!set player54.phoneNumber := '+442020202020'
+
+!insert (teamAZ, player54) into TeamPlayer
+
+!new Position('position78')
+!set position78.positionName := #DEFENDER
+
+!insert (player54, position78) into PlayerPositions
+
+!new TrainingObjective('trainingObjective57')
+!set trainingObjective57.areaToImprove := 'Tactical Awareness'
+!set trainingObjective57.startDate := '2023-03-01'
+!set trainingObjective57.endDate := '2023-05-01'
+!set trainingObjective57.success := true
+
+!insert (trainingObjective57, player54) into TrainingObjectivePlayer
+
+!new Competition('competition24')
+!set competition24.name := 'Desert Cup Finals'
+!set competition24.type := 'Single Elimination'
+
+!new TrainingSession('trainingSession42')
+!set trainingSession42.date := '2023-05-15'
+!set trainingSession42.location := 'Desert Training Camp'
+!set trainingSession42.purpose := 'Mental Fortitude Enhancement'
+
+!new TrainingNotes('trainingNote43')
+!set trainingNote43.note := 'Emphasize staying calm under pressure'
+!set trainingNote43.date := '2023-05-15'
+
+!new TrainingNotes('trainingNote44')
+!set trainingNote44.note := 'Stress management techniques for high-stakes situations'
+!set trainingNote44.date := '2023-05-15'
+
+!insert (trainingSession42, trainingNote43) into TrainingTrainingNotes
+!insert (trainingSession42, trainingNote44) into TrainingTrainingNotes
+
+!insert (teamAY, trainingSession42) into TeamTraining
+!insert (teamAZ, trainingSession42) into TeamTraining
+
+!new Player('player53')
+!set player53.name := 'Lina Nassar'
+!set player53.age := 22
+!set player53.bestFoot := #RIGHT
+!set player53.phoneNumber := '+441112223333'
+
+!insert (teamAY, player53) into TeamPlayer
+
+!new PlayerNotes('playerNote37')
+!set playerNote37.note := 'Showed exceptional resilience in match situations'
+!set playerNote37.date := '2023-04-30'
+
+!insert (player53, playerNote37) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective55')
+!set trainingObjective55.areaToImprove := 'Long-range shots'
+!set trainingObjective55.startDate := '2023-04-01'
+!set trainingObjective55.endDate := '2023-05-01'
+!set trainingObjective55.success := true
+
+!new TrainingObjective('trainingObjective56')
+!set trainingObjective56.areaToImprove := 'Quick decision-making'
+!set trainingObjective56.startDate := '2023-04-15'
+!set trainingObjective56.endDate := '2023-05-15'
+!set trainingObjective56.success := true
+
+!insert (trainingObjective55, player53) into TrainingObjectivePlayer
+!insert (trainingObjective56, player53) into TrainingObjectivePlayer
+
+!new Position('position76')
+!set position76.positionName := #MIDFIELDER
+
+!new Position('position77')
+!set position77.positionName := #FORWARD
+
+!insert (player53, position76) into PlayerPositions
+!insert (player53, position77) into PlayerPositions
+
+!new Match('match24')
+!set match24.date := '2023-06-20'
+!set match24.homeAway := false
+
+!insert (competition24, match24) into CompetitionMatch
+
+!insert (teamAZ, match24) into LocalMatch
+!insert (teamAY, match24) into VisitorMatch
+
+!new MatchReport('matchReport24')
+!set matchReport24.duration := 90
+!set matchReport24.scoreVisitor := 7
+!set matchReport24.scoreLocal := 1
+
+!insert (match24, matchReport24) into MatchMatchReport
+
+!new MatchEvent('matchEvent94')
+!set matchEvent94.eventType := #GOAL
+!set matchEvent94.time := 7
+
+!new MatchEvent('matchEvent95')
+!set matchEvent95.eventType := #GOAL
+!set matchEvent95.time := 18
+
+!new MatchEvent('matchEvent96')
+!set matchEvent96.eventType := #GOAL
+!set matchEvent96.time := 24
+
+!new MatchEvent('matchEvent97')
+!set matchEvent97.eventType := #FOUL
+!set matchEvent97.time := 30
+
+!new MatchEvent('matchEvent98')
+!set matchEvent98.eventType := #GOAL
+!set matchEvent98.time := 41
+
+!new MatchEvent('matchEvent99')
+!set matchEvent99.eventType := #GOAL
+!set matchEvent99.time := 50
+
+!new MatchEvent('matchEvent100')
+!set matchEvent100.eventType := #SUBSTITUTION
+!set matchEvent100.time := 60
+
+!new MatchEvent('matchEvent101')
+!set matchEvent101.eventType := #GOAL
+!set matchEvent101.time := 70
+
+!new MatchEvent('matchEvent102')
+!set matchEvent102.eventType := #GOAL
+!set matchEvent102.time := 83
+
+!new MatchEvent('matchEvent103')
+!set matchEvent103.eventType := #GOAL
+!set matchEvent103.time := 85
+
+!insert (match24, matchEvent94) into MatchMatchEvent
+!insert (match24, matchEvent95) into MatchMatchEvent
+!insert (match24, matchEvent96) into MatchMatchEvent
+!insert (match24, matchEvent97) into MatchMatchEvent
+!insert (match24, matchEvent98) into MatchMatchEvent
+!insert (match24, matchEvent99) into MatchMatchEvent
+!insert (match24, matchEvent100) into MatchMatchEvent
+!insert (match24, matchEvent101) into MatchMatchEvent
+!insert (match24, matchEvent102) into MatchMatchEvent
+!insert (match24, matchEvent103) into MatchMatchEvent
+
+!new MatchNote('matchNote18')
+!set matchNote18.note := 'Dominant performance by the visiting team in a high-intensity showdown'
+!set matchNote18.date := '2023-06-20'
+
+!insert (match24, matchNote18) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer33')
+!set matchPlayer33.booked := false
+!set matchPlayer33.goals := 3
+!set matchPlayer33.rating := 9
+
+!insert (player53, matchPlayer33) into PlayerMatch
+!insert (match24, matchPlayer33) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition34')
+!set matchPlayerPosition34.positionName := #FORWARD
+!set matchPlayerPosition34.number := 10
+
+!insert (matchPlayer33, matchPlayerPosition34) into MatchPlayerMatchPlayerPosition
+

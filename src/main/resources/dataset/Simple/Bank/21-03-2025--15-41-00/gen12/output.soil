@@ -1,0 +1,51 @@
+!new Bank('bank13')
+!bank13.country := 'Singapore'
+!bank13.name := 'DBS Bank'
+!bank13.bic := 'DBSSSGSG'
+
+!new Account('account34')
+!account34.iban := 'SG12345678901234567890'
+!account34.balance := 5200
+
+!new Account('account35')
+!account35.iban := 'SG09876543210987654321'
+!account35.balance := 300
+
+!new Account('account36')
+!account36.iban := 'SG11122233344455566677'
+!account36.balance := 7500
+
+!new Person('person38')
+!person38.firstName := 'Wei'
+!person38.lastName := 'Tan'
+!person38.age := 27
+
+!new Person('person39')
+!person39.firstName := 'Li'
+!person39.lastName := 'Huang'
+!person39.age := 22
+
+!new Person('person40')
+!person40.firstName := 'Siti'
+!person40.lastName := 'Abdul'
+!person40.age := 35
+
+-- Associations
+!insert (bank13, account34) into AccountOfBanks
+!insert (bank13, account35) into AccountOfBanks
+!insert (bank13, account36) into AccountOfBanks
+
+!insert (person38, account34) into Ownership
+!insert (person39, account34) into Ownership
+
+!insert (person39, account35) into Ownership
+!insert (person40, account35) into Ownership
+
+!insert (person40, account36) into Ownership
+!insert (person38, account36) into Ownership
+
+!insert (person38, account35) into Use
+!insert (person39, account36) into Use
+
+!insert (person40, account34) into Use
+!insert (person39, account34) into Use

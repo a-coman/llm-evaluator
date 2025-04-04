@@ -1,0 +1,173 @@
+!new Club('club30')
+!club30.name := 'Mountain Eagles FC'
+!club30.homeGround := "Eagle's Nest Arena"
+!club30.chairman := 'Ms. Diana Peak'
+
+!new Team('teamAF')
+!teamAF.name := 'Eagle Defenders'
+
+!new Team('teamAG')
+!teamAG.name := 'Summit Strikers'
+
+!insert (club30, teamAF) into ClubTeam
+!insert (club30, teamAG) into ClubTeam
+
+!new Competition('competition15')
+!competition15.name := 'Highland Challenge'
+!competition15.type := 'Round Robin'
+
+!new TrainingSession('trainingSession27')
+!trainingSession27.date := '2023-09-20'
+!trainingSession27.location := "Eagle's Nest - Practice Field"
+!trainingSession27.purpose := 'Skill Development Workshop'
+
+!new TrainingNotes('trainingNote28')
+!trainingNote28.note := 'Improvement of strategic play'
+!trainingNote28.date := '2023-09-20'
+
+!new TrainingNotes('trainingNote29')
+!trainingNote29.note := 'Special focus on defensive drills in low-pressure situations'
+!trainingNote29.date := '2023-09-20'
+
+!insert (trainingSession27, trainingNote28) into TrainingTrainingNotes
+!insert (trainingSession27, trainingNote29) into TrainingTrainingNotes
+
+!insert (teamAF, trainingSession27) into TeamTraining
+
+!new Player('player31')
+!player31.name := 'Amy Swift'
+!player31.age := 27
+!player31.bestFoot := #RIGHT
+!player31.phoneNumber := '+442345678901'
+
+!insert (teamAF, player31) into TeamPlayer
+
+!new Player('player32')
+!player32.name := 'Jack Mountain'
+!player32.age := 24
+!player32.bestFoot := #LEFT
+!player32.phoneNumber := '+442367890123'
+
+!insert (teamAG, player32) into TeamPlayer
+
+!new PlayerNotes('playerNote22')
+!playerNote22.note := 'Excellent versatility and creative thinking'
+!playerNote22.date := '2023-08-15'
+
+!insert (player31, playerNote22) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective32')
+!trainingObjective32.areaToImprove := 'Free kicks'
+!trainingObjective32.startDate := '2023-08-01'
+!trainingObjective32.endDate := '2023-08-31'
+!trainingObjective32.success := true
+
+!new TrainingObjective('trainingObjective33')
+!trainingObjective33.areaToImprove := 'Corner control'
+!trainingObjective33.startDate := '2023-09-01'
+!trainingObjective33.endDate := '2023-10-01'
+!trainingObjective33.success := true
+
+!new TrainingObjective('trainingObjective34')
+!trainingObjective34.areaToImprove := 'Passing accuracy under pressure'
+!trainingObjective34.startDate := '2023-08-15'
+!trainingObjective34.endDate := '2023-09-15'
+!trainingObjective34.success := true
+
+!insert (trainingObjective32, player31) into TrainingObjectivePlayer
+!insert (trainingObjective33, player31) into TrainingObjectivePlayer
+!insert (trainingObjective34, player31) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective35')
+!trainingObjective35.areaToImprove := 'Speed and Agility'
+!trainingObjective35.startDate := '2023-06-01'
+!trainingObjective35.endDate := '2023-07-01'
+!trainingObjective35.success := true
+
+!insert (trainingObjective35, player32) into TrainingObjectivePlayer
+
+!new Position('position44')
+!position44.positionName := #MIDFIELDER
+
+!new Position('position45')
+!position45.positionName := #FORWARD
+
+!new Position('position46')
+!position46.positionName := #DEFENDER
+
+!insert (player31, position44) into PlayerPositions
+!insert (player31, position45) into PlayerPositions
+
+!insert (player32, position46) into PlayerPositions
+
+!new Match('match15')
+!match15.date := '2023-10-18'
+!match15.homeAway := false
+
+!insert (competition15, match15) into CompetitionMatch
+
+!insert (teamAG, match15) into VisitorMatch
+!insert (teamAF, match15) into LocalMatch
+
+!new MatchReport('matchReport15')
+!matchReport15.duration := 90
+!matchReport15.scoreVisitor := 0
+!matchReport15.scoreLocal := 0
+
+!insert (match15, matchReport15) into MatchMatchReport
+
+!new MatchEvent('matchEvent52')
+!matchEvent52.eventType := #FOUL
+!matchEvent52.time := 10
+
+!new MatchEvent('matchEvent53')
+!matchEvent53.eventType := #FOUL
+!matchEvent53.time := 25
+
+!new MatchEvent('matchEvent54')
+!matchEvent54.eventType := #FOUL
+!matchEvent54.time := 35
+
+!new MatchEvent('matchEvent55')
+!matchEvent55.eventType := #FOUL
+!matchEvent55.time := 45
+
+!new MatchEvent('matchEvent56')
+!matchEvent56.eventType := #FOUL
+!matchEvent56.time := 60
+
+!new MatchEvent('matchEvent57')
+!matchEvent57.eventType := #FOUL
+!matchEvent57.time := 75
+
+!new MatchEvent('matchEvent58')
+!matchEvent58.eventType := #FOUL
+!matchEvent58.time := 80
+
+!insert (match15, matchEvent52) into MatchMatchEvent
+!insert (match15, matchEvent53) into MatchMatchEvent
+!insert (match15, matchEvent54) into MatchMatchEvent
+!insert (match15, matchEvent55) into MatchMatchEvent
+!insert (match15, matchEvent56) into MatchMatchEvent
+!insert (match15, matchEvent57) into MatchMatchEvent
+!insert (match15, matchEvent58) into MatchMatchEvent
+
+!new MatchNote('matchNote11')
+!matchNote11.note := 'Tightly contested match with high tactical discipline'
+!matchNote11.date := '2023-10-18'
+
+!insert (match15, matchNote11) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer21')
+!matchPlayer21.booked := true
+!matchPlayer21.goals := 0
+!matchPlayer21.rating := 7
+
+!insert (player31, matchPlayer21) into PlayerMatch
+!insert (match15, matchPlayer21) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition22')
+!matchPlayerPosition22.positionName := #MIDFIELDER
+!matchPlayerPosition22.number := 6
+
+!insert (matchPlayer21, matchPlayerPosition22) into MatchPlayerMatchPlayerPosition

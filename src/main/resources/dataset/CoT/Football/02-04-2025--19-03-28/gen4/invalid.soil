@@ -1,0 +1,147 @@
+!new Club('club35')
+!club35.name := 'Athens Olympians'
+!club35.homeGround := 'Olympian Arena'
+!club35.chairman := 'Nikos Papadopoulos'
+
+!new Club('club36')
+!club36.name := 'Barcelona Pirates'
+!club36.homeGround := 'Pirate Cove Stadium'
+!club36.chairman := 'Carla Martinez'
+
+!new Club('club37')
+!club37.name := 'Naples Scorpions'
+!club37.homeGround := 'Scorpion Pit'
+!club37.chairman := 'Giovanni Russo'
+
+!new Team('teamAL')
+!teamAL.name := 'Athens Titans'
+
+!new Team('teamAM')
+!teamAM.name := 'Barcelona Buccaneers'
+
+!new Team('teamAN')
+!teamAN.name := 'Naples Stingers'
+
+!insert (club35, teamAL) into ClubTeam
+!insert (club36, teamAM) into ClubTeam
+!insert (club37, teamAN) into ClubTeam
+
+!new Player('player39')
+!player39.name := 'Dimitrios Georgiou'
+!player39.age := 27
+!player39.bestFoot := #LEFT
+!player39.phoneNumber := '+302101234567'
+
+!insert (teamAL, player39) into TeamPlayer
+
+!new Player('player40')
+!player40.name := 'Miguel Santos'
+!player40.age := 23
+!player40.bestFoot := #BOTH
+!player40.phoneNumber := '+34791765432'
+
+!insert (teamAM, player40) into TeamPlayer
+
+!new Position('position56')
+!position56.positionName := #GOALKEEPER
+
+!new Position('position57')
+!position57.positionName := #FORWARD
+
+!new Position('position58')
+!position58.positionName := #DEFENDER
+
+!insert (player39, position56) into PlayerPositions
+!insert (player40, position57) into PlayerPositions
+!insert (player40, position58) into PlayerPositions
+
+!new Competition('competition18')
+!competition18.name := 'Mediterranean Championship'
+!competition18.type := 'League'
+
+!new Match('match18')
+!match18.date := '2023-08-14'
+!match18.homeAway := false
+
+!insert (competition18, match18) into CompetitionMatch
+
+!insert (teamAM, match18) into LocalMatch
+!insert (teamAM, match18) into VisitorMatch
+
+!new MatchReport('matchReport18')
+!matchReport18.duration := 90
+!matchReport18.scoreVisitor := 3
+!matchReport18.scoreLocal := 3
+
+!insert (match18, matchReport18) into MatchMatchReport
+
+!new MatchEvent('matchEvent66')
+!matchEvent66.eventType := #FOUL
+!matchEvent66.time := 10
+
+!new MatchEvent('matchEvent67')
+!matchEvent67.eventType := #FOUL
+!matchEvent67.time := 55
+
+!insert (match18, matchEvent66) into MatchMatchEvent
+!insert (match18, matchEvent67) into MatchMatchEvent
+
+!new MatchNote('matchNote13')
+!matchNote13.note := 'Historic rematch awaited with great anticipation, crowd erupted with excitement.'
+!matchNote13.date := '2023-08-15'
+
+!insert (match18, matchNote13) into MatchMatchNote
+
+!new TrainingSession('trainingSession31')
+!trainingSession31.date := '2023-06-20'
+!trainingSession31.location := 'Olympian Arena Training Grounds'
+!trainingSession31.purpose := 'Advance team strategic development'
+
+!insert (teamAL, trainingSession31) into TeamTraining
+
+!new TrainingSession('trainingSession32')
+!trainingSession32.date := '2023-06-25'
+!trainingSession32.location := 'Pirate Cove Practice Facility'
+!trainingSession32.purpose := 'Foster adaptable play styles across roles'
+
+!insert (teamAM, trainingSession32) into TeamTraining
+
+!new TrainingNotes('trainingNote32')
+!trainingNote32.note := 'Encourage cross-position competency.'
+!trainingNote32.date := '2023-06-26'
+
+!insert (trainingSession32, trainingNote32) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend12')
+!failedAttend12.reason := 'Injury recuperation'
+
+!insert (trainingSession31, failedAttend12) into TrainingFailded
+!insert (failedAttend12, player39) into FailedPlayer
+
+!new TrainingObjective('trainingObjective42')
+!trainingObjective42.areaToImprove := 'Cross-field vision'
+!trainingObjective42.startDate := '2023-04-01'
+!trainingObjective42.endDate := '2023-09-01'
+!trainingObjective42.success := true
+
+!insert (trainingObjective42, player40) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote28')
+!playerNote28.note := 'Scheduled for return post recovery; monitor fitness levels closely.'
+!playerNote28.date := '2023-05-15'
+
+!insert (player39, playerNote28) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer25')
+!matchPlayer25.booked := false
+!matchPlayer25.goals := 2
+!matchPlayer25.rating := 8
+
+!insert (player40, matchPlayer25) into PlayerMatch
+!insert (match18, matchPlayer25) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition26')
+!matchPlayerPosition26.positionName := #FORWARD
+!matchPlayerPosition26.number := 9
+
+!insert (matchPlayer25, matchPlayerPosition26) into MatchPlayerMatchPlayerPosition

@@ -1,0 +1,454 @@
+!new Driver('driver42')
+!driver42.id := 'DRV012'
+!driver42.name := 'Elena Popov'
+
+!new Driver('driver43')
+!driver43.id := 'DRV013'
+!driver43.name := 'Samir Hassan'
+
+!new Shipment('shipment43')
+!shipment43.id := 'SHIP010'
+!shipment43.status := #NEW
+
+!new Address('pickupAddress43')
+!pickupAddress43.text := 'Stroget 35, Malmö, Sweden'
+
+!new GeoLocation('pickupGeoLocation43')
+!pickupGeoLocation43.latitude := 55.6050
+!pickupGeoLocation43.longitude := 13.0038
+
+!new Address('deliveryAddress43')
+!deliveryAddress43.text := 'Piazza del Duomo, Milan, Italy'
+
+!new GeoLocation('deliveryGeoLocation43')
+!deliveryGeoLocation43.latitude := 45.4642
+!deliveryGeoLocation43.longitude := 9.1900
+
+!new Station('station30')
+
+!new Customer('customer43')
+!customer43.id := 'CUST010'
+!customer43.name := 'Giovanni Bellini'
+!customer43.twitterUserName := '@giovanniart'
+
+!new Customer('customer44')
+!customer44.id := 'CUST011'
+!customer44.name := 'Amina Ngugi'
+!customer44.twitterUserName := '@aminan'
+
+!insert (driver42, shipment43) into DriverShipment
+
+!insert (shipment43, pickupAddress43) into ShipmentContainsPickUpAddress
+
+!insert (shipment43, deliveryAddress43) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress43, pickupGeoLocation43) into AddressContainsGeoLocation
+
+!insert (deliveryAddress43, deliveryGeoLocation43) into AddressContainsGeoLocation
+
+!insert (customer43, shipment43) into CustomerConsistsOfShipment
+
+!insert (station30, customer43) into StationContainsCustomer
+
+!insert (station30, customer44) into StationContainsCustomer
+
+!insert (station30, shipment43) into StationShipment
+
+!insert (station30, driver42) into StationContainsDriver
+
+!insert (station30, driver43) into StationContainsDriver
+
+!new Driver('driver44')
+!driver44.id := 'DL008'
+!driver44.name := 'Carlos Mendes'
+
+!new Shipment('shipment44')
+!shipment44.id := 'SH1122'
+!shipment44.status := #NEW
+
+!new Shipment('shipment45')
+!shipment45.id := 'SH2233'
+!shipment45.status := #DELIVERED
+
+!new Address('pickupAddress44')
+!pickupAddress44.text := 'EV Parts Manufacturing Hub, Sao Paulo, Brazil'
+
+!new GeoLocation('pickupGeoLocation44')
+!pickupGeoLocation44.latitude := -23.5505
+!pickupGeoLocation44.longitude := -46.6333
+
+!new Address('deliveryAddress44')
+!deliveryAddress44.text := 'Amazon Research Facility, Manaus, Brazil'
+
+!new GeoLocation('deliveryGeoLocation44')
+!deliveryGeoLocation44.latitude := -3.1190
+!deliveryGeoLocation44.longitude := -60.0217
+
+!new Address('pickupAddress45')
+!pickupAddress45.text := 'EcoTech Distributors, Rio de Janeiro, Brazil'
+
+!new GeoLocation('pickupGeoLocation45')
+!pickupGeoLocation45.latitude := -22.9068
+!pickupGeoLocation45.longitude := -43.1729
+
+!new Address('deliveryAddress45')
+!deliveryAddress45.text := 'University of Amazonas, Manaus, Brazil'
+
+!new GeoLocation('deliveryGeoLocation45')
+!deliveryGeoLocation45.latitude := -3.1019
+!deliveryGeoLocation45.longitude := -60.0250
+
+!new Station('station31')
+
+!new Customer('customer45')
+!customer45.id := 'CST5566'
+!customer45.name := 'Manaus Innovation Hub'
+!customer45.twitterUserName := '@ManausInnovate'
+
+!insert (driver44, shipment44) into DriverShipment
+
+!insert (shipment44, pickupAddress44) into ShipmentContainsPickUpAddress
+
+!insert (shipment44, deliveryAddress44) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress44, pickupGeoLocation44) into AddressContainsGeoLocation
+
+!insert (deliveryAddress44, deliveryGeoLocation44) into AddressContainsGeoLocation
+
+!insert (shipment45, pickupAddress45) into ShipmentContainsPickUpAddress
+
+!insert (shipment45, deliveryAddress45) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress45, pickupGeoLocation45) into AddressContainsGeoLocation
+
+!insert (deliveryAddress45, deliveryGeoLocation45) into AddressContainsGeoLocation
+
+!insert (customer45, shipment44) into CustomerConsistsOfShipment
+
+!insert (customer45, shipment45) into CustomerConsistsOfShipment
+
+!insert (station31, customer45) into StationContainsCustomer
+
+!insert (station31, shipment44) into StationShipment
+
+!insert (station31, shipment45) into StationShipment
+
+!insert (station31, driver44) into StationContainsDriver
+
+!new Driver('driver47')
+!driver47.id := 'D007'
+!driver47.name := 'Fatima Al-Abbas'
+
+!new Shipment('shipment48')
+!shipment48.id := 'SHP008'
+!shipment48.status := #UNDERWAY
+
+!new Address('pickupAddress48')
+!pickupAddress48.text := 'MicroHealth, 55 Virology Lane, Seattle, WA'
+
+!new GeoLocation('pickupGeoLocation48')
+!pickupGeoLocation48.latitude := 47.6062
+!pickupGeoLocation48.longitude := -122.3321
+
+!new Address('deliveryAddress48')
+!deliveryAddress48.text := 'St. Mercy Hospital, 500 Health Ave, Portland, OR'
+
+!new GeoLocation('deliveryGeoLocation48')
+!deliveryGeoLocation48.latitude := 45.5051
+!deliveryGeoLocation48.longitude := -122.6750
+
+!new Station('station34')
+
+!new Customer('customer48')
+!customer48.id := 'CUST008'
+!customer48.name := 'Northwest Health Alliance'
+!customer48.twitterUserName := '@NWHealthAlliance'
+
+!new Customer('customer49')
+!customer49.id := 'CUST009'
+!customer49.name := 'Portland Medical Trust'
+!customer49.twitterUserName := '@PortlandMedTrust'
+
+!insert (driver47, shipment48) into DriverShipment
+
+!insert (shipment48, pickupAddress48) into ShipmentContainsPickUpAddress
+
+!insert (shipment48, deliveryAddress48) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress48, pickupGeoLocation48) into AddressContainsGeoLocation
+
+!insert (deliveryAddress48, deliveryGeoLocation48) into AddressContainsGeoLocation
+
+!insert (customer48, shipment48) into CustomerConsistsOfShipment
+
+!insert (station34, customer48) into StationContainsCustomer
+
+!insert (station34, customer49) into StationContainsCustomer
+
+!insert (station34, shipment48) into StationShipment
+
+!insert (station34, driver47) into StationContainsDriver
+
+!new Driver('driver51')
+!driver51.id := 'DRV6014'
+!driver51.name := 'Lucas Oliveira'
+
+!new Driver('driver52')
+!driver52.id := 'DRV6015'
+!driver52.name := 'Mariana Ribeiro'
+
+!new Shipment('shipment53')
+!shipment53.id := 'SHP18011'
+!shipment53.status := #DELIVERED
+
+!new Shipment('shipment54')
+!shipment54.id := 'SHP18012'
+!shipment54.status := #ASSIGNED
+
+!new Address('pickupAddress53')
+!pickupAddress53.text := 'Mercadão São Paulo, Rua da Cantareira 306, São Paulo, SP 01024-000, Brazil'
+
+!new GeoLocation('pickupGeoLocation53')
+!pickupGeoLocation53.latitude := -23.5419
+!pickupGeoLocation53.longitude := -46.6288
+
+!new Address('deliveryAddress53')
+!deliveryAddress53.text := 'Avenida Paulista, São Paulo, SP 01311-200, Brazil'
+
+!new GeoLocation('deliveryGeoLocation53')
+!deliveryGeoLocation53.latitude := -23.5612
+!deliveryGeoLocation53.longitude := -46.6560
+
+!new Address('pickupAddress54')
+!pickupAddress54.text := 'Vila Madalena, São Paulo, SP 05434-020, Brazil'
+
+!new GeoLocation('pickupGeoLocation54')
+!pickupGeoLocation54.latitude := -23.5544
+!pickupGeoLocation54.longitude := -46.6908
+
+!new Address('deliveryAddress54')
+!deliveryAddress54.text := 'Ibirapuera Park, São Paulo, SP 04094-050, Brazil'
+
+!new GeoLocation('deliveryGeoLocation54')
+!deliveryGeoLocation54.latitude := -23.5874
+!deliveryGeoLocation54.longitude := -46.6572
+
+!new Station('station37')
+
+!new Station('station38')
+
+!new Customer('customer53')
+!customer53.id := 'CUST1005'
+!customer53.name := 'Bianca Silva'
+!customer53.twitterUserName := '@biancasilva'
+
+!new Customer('customer54')
+!customer54.id := 'CUST1006'
+!customer54.name := 'Pedro Almeida'
+!customer54.twitterUserName := '@pedroalmeidaBR'
+
+!insert (driver51, shipment53) into DriverShipment
+
+!insert (driver52, shipment54) into DriverShipment
+
+!insert (shipment53, pickupAddress53) into ShipmentContainsPickUpAddress
+
+!insert (shipment53, deliveryAddress53) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress53, pickupGeoLocation53) into AddressContainsGeoLocation
+
+!insert (deliveryAddress53, deliveryGeoLocation53) into AddressContainsGeoLocation
+
+!insert (shipment54, pickupAddress54) into ShipmentContainsPickUpAddress
+
+!insert (shipment54, deliveryAddress54) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress54, pickupGeoLocation54) into AddressContainsGeoLocation
+
+!insert (deliveryAddress54, deliveryGeoLocation54) into AddressContainsGeoLocation
+
+!insert (customer53, shipment53) into CustomerConsistsOfShipment
+
+!insert (customer54, shipment54) into CustomerConsistsOfShipment
+
+!insert (station37, customer53) into StationContainsCustomer
+
+!insert (station38, customer54) into StationContainsCustomer
+
+!insert (station37, shipment53) into StationShipment
+
+!insert (station38, shipment54) into StationShipment
+
+!insert (station37, driver51) into StationContainsDriver
+
+!insert (station38, driver52) into StationContainsDriver
+
+!new Driver('driver53')
+!driver53.id := 'D-501'
+!driver53.name := 'Elena Petrova'
+
+!new Driver('driver54')
+!driver54.id := 'D-502'
+!driver54.name := 'George Müller'
+
+!new Driver('driver55')
+!driver55.id := 'D-503'
+!driver55.name := 'Liam Murphy'
+
+!new Customer('customer55')
+!customer55.id := 'C-501'
+!customer55.name := 'Anya Ivanova'
+!customer55.twitterUserName := '@anyaCargo'
+
+!new Customer('customer56')
+!customer56.id := 'C-502'
+!customer56.name := 'Seán O\'Sullivan'
+!customer56.twitterUserName := '@sean_irishgoods'
+
+!new Customer('customer57')
+!customer57.id := 'C-503'
+!customer57.name := 'Viktor Novak'
+!customer57.twitterUserName := '@viktor_trades'
+
+!new Shipment('shipment55')
+!shipment55.id := 'S-6001'
+!shipment55.status := #UNDERWAY
+
+!new Address('pickupAddress55')
+!pickupAddress55.text := 'Nevsky Prospect, Saint Petersburg, Russia'
+
+!new GeoLocation('pickupGeoLocation55')
+!pickupGeoLocation55.latitude := 59.9343
+!pickupGeoLocation55.longitude := 30.3351
+
+!new Address('deliveryAddress55')
+!deliveryAddress55.text := 'Stureplan, Stockholm, Sweden'
+
+!new GeoLocation('deliveryGeoLocation55')
+!deliveryGeoLocation55.latitude := 59.3293
+!deliveryGeoLocation55.longitude := 18.0686
+
+!new Shipment('shipment56')
+!shipment56.id := 'S-6002'
+!shipment56.status := #ASSIGNED
+
+!new Address('pickupAddress56')
+!pickupAddress56.text := 'O\'Connell Street, Dublin, Ireland'
+
+!new GeoLocation('pickupGeoLocation56')
+!pickupGeoLocation56.latitude := 53.3498
+!pickupGeoLocation56.longitude := -6.2603
+
+!new Address('deliveryAddress56')
+!deliveryAddress56.text := 'Prater, Vienna, Austria'
+
+!new GeoLocation('deliveryGeoLocation56')
+!deliveryGeoLocation56.latitude := 48.2082
+!deliveryGeoLocation56.longitude := 16.3738
+
+!new Shipment('shipment57')
+!shipment57.id := 'S-6003'
+!shipment57.status := #DELIVERED
+
+!new Address('pickupAddress57')
+!pickupAddress57.text := 'Plaza Mayor, Madrid, Spain'
+
+!new GeoLocation('pickupGeoLocation57')
+!pickupGeoLocation57.latitude := 40.4168
+!pickupGeoLocation57.longitude := -3.7038
+
+!new Address('deliveryAddress57')
+!deliveryAddress57.text := 'Potsdamer Platz, Berlin, Germany'
+
+!new GeoLocation('deliveryGeoLocation57')
+!deliveryGeoLocation57.latitude := 52.5200
+!deliveryGeoLocation57.longitude := 13.4050
+
+!new Shipment('shipment58')
+!shipment58.id := 'S-6004'
+!shipment58.status := #NEW
+
+!new Address('pickupAddress58')
+!pickupAddress58.text := 'Old Town, Tallinn, Estonia'
+
+!new GeoLocation('pickupGeoLocation58')
+!pickupGeoLocation58.latitude := 59.4370
+!pickupGeoLocation58.longitude := 24.7536
+
+!new Address('deliveryAddress58')
+!deliveryAddress58.text := 'Central Station, Copenhagen, Denmark'
+
+!new GeoLocation('deliveryGeoLocation58')
+!deliveryGeoLocation58.latitude := 55.6761
+!deliveryGeoLocation58.longitude := 12.5683
+
+!new Station('station39')
+
+!new Station('station40')
+
+!insert (driver53, shipment55) into DriverShipment
+
+!insert (driver55, shipment56) into DriverShipment
+
+!insert (driver54, shipment57) into DriverShipment
+
+!insert (shipment55, pickupAddress55) into ShipmentContainsPickUpAddress
+
+!insert (shipment55, deliveryAddress55) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress55, pickupGeoLocation55) into AddressContainsGeoLocation
+
+!insert (deliveryAddress55, deliveryGeoLocation55) into AddressContainsGeoLocation
+
+!insert (shipment56, pickupAddress56) into ShipmentContainsPickUpAddress
+
+!insert (shipment56, deliveryAddress56) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress56, pickupGeoLocation56) into AddressContainsGeoLocation
+
+!insert (deliveryAddress56, deliveryGeoLocation56) into AddressContainsGeoLocation
+
+!insert (shipment57, pickupAddress57) into ShipmentContainsPickUpAddress
+
+!insert (shipment57, deliveryAddress57) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress57, pickupGeoLocation57) into AddressContainsGeoLocation
+
+!insert (deliveryAddress57, deliveryGeoLocation57) into AddressContainsGeoLocation
+
+!insert (shipment58, pickupAddress58) into ShipmentContainsPickUpAddress
+
+!insert (shipment58, deliveryAddress58) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress58, pickupGeoLocation58) into AddressContainsGeoLocation
+
+!insert (deliveryAddress58, deliveryGeoLocation58) into AddressContainsGeoLocation
+
+!insert (customer55, shipment55) into CustomerConsistsOfShipment
+
+!insert (customer56, shipment56) into CustomerConsistsOfShipment
+
+!insert (customer57, shipment57) into CustomerConsistsOfShipment
+
+!insert (customer57, shipment58) into CustomerConsistsOfShipment
+
+!insert (station39, customer55) into StationContainsCustomer
+
+!insert (station39, customer57) into StationContainsCustomer
+
+!insert (station40, customer56) into StationContainsCustomer
+
+!insert (station39, shipment55) into StationShipment
+
+!insert (station40, shipment56) into StationShipment
+
+!insert (station40, shipment57) into StationShipment
+
+!insert (station39, shipment58) into StationShipment
+
+!insert (station39, driver53) into StationContainsDriver
+
+!insert (station40, driver54) into StationContainsDriver
+
+!insert (station40, driver55) into StationContainsDriver
+

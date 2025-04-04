@@ -1,0 +1,255 @@
+!new Restaurant('restaurant12')
+!restaurant12.name := 'Euphoria Palace'
+
+!new Owner('owner27')
+!owner27.name := 'Aisha Bello'
+!owner27.percentageShares := 40
+
+!new Owner('owner28')
+!owner28.name := 'Miguel Pereira'
+!owner28.percentageShares := 60
+
+!insert (restaurant12, owner27) into RestaurantOwner
+!insert (restaurant12, owner28) into RestaurantOwner
+
+!new RegularCustomer('customer6')
+!customer6.name := 'Arjun Mehta'
+!customer6.prefferedLanguage := #English  -- #Hindi not defined
+
+!new RegularCustomer('customer7')
+!customer7.name := 'Sophie Baker'
+!customer7.prefferedLanguage := #English
+
+!new HeadWaiter('headWaiter11')
+!headWaiter11.name := 'Francois Lavoie'
+!headWaiter11.dateOfBirth := Date('1972-07-04')
+!headWaiter11.phoneNumber := '+1 604 333 2100'
+
+!new Waiter('waiter21')
+!waiter21.name := 'Ling Wei'
+!waiter21.dateOfBirth := Date('1995-02-17')
+!waiter21.phoneNumber := '+1 604 555 4192'
+
+!new Waiter('waiter22')
+!waiter22.name := 'Maria Brovkin'
+!waiter22.dateOfBirth := Date('1987-10-30')
+!waiter22.phoneNumber := '+1 604 555 7430'
+
+!new Waiter('waiter23')
+!waiter23.name := 'Koharu Tanaka'
+!waiter23.dateOfBirth := Date('1991-03-03')
+!waiter23.phoneNumber := '+1 604 555 2354'
+
+!insert (headWaiter11, waiter21) into HeadWaiterWaiter
+!insert (headWaiter11, waiter22) into HeadWaiterWaiter
+!insert (headWaiter11, waiter23) into HeadWaiterWaiter
+
+!new Manager('manager5')
+!manager5.name := 'Samuel Yeboah'
+!manager5.dateOfBirth := Date('1966-11-25')
+!manager5.phoneNumber := '+1 604 777 5421'
+
+!new Chef('chef17')
+!chef17.name := 'Athena Petrova'
+!chef17.dateOfBirth := Date('1981-03-23')
+!chef17.phoneNumber := '+1 604 555 8765'
+
+!new Cook('cook19')
+!cook19.name := 'Pierre Lafont'
+!cook19.dateOfBirth := Date('1990-12-12')
+!cook19.phoneNumber := '+1 604 555 1123'
+!cook19.yearsOfExperience := 6
+
+!new Cook('cook20')
+!cook20.name := 'Olga Ivanova'
+!cook20.dateOfBirth := Date('1984-05-15')
+!cook20.phoneNumber := '+1 604 555 2234'
+!cook20.yearsOfExperience := 9
+
+!insert (chef17, cook19) into ChefCook
+!insert (chef17, cook20) into ChefCook
+
+!new BusDriver('busdriver11')
+!busdriver11.name := 'Tomislav Zoric'
+!busdriver11.dateOfBirth := Date('1975-08-14')
+!busdriver11.phoneNumber := '+1 604 555 3498'
+
+!new Table('table27')
+!table27.number := 4
+!table27.description := 'Private booth, corner'
+!table27.capacity := 2
+
+!new Table('table28')
+!table28.number := 5
+!table28.description := 'Open air, veranda'
+!table28.capacity := 4
+
+!new Table('table29')
+!table29.number := 6
+!table29.description := 'Large booth, by bar'
+!table29.capacity := 12  -- Adjusted to support both reservations
+
+!new Individual('individualReservation8')
+!individualReservation8.time := Time('20:30')
+!individualReservation8.date := Date('2023-11-15')
+!individualReservation8.numberPeople := 3
+!individualReservation8.name := 'Sophie Baker'
+!individualReservation8.phoneNumber := '+1 778 333 6677'
+!individualReservation8.number := 54321
+!individualReservation8.seating := #Inside  -- Using #Inside as placeholder for Booth
+!individualReservation8.smoking := #Smoking
+
+!insert (restaurant12, individualReservation8) into RestaurantReservation
+!insert (individualReservation8, table29) into ReservationTable
+!insert (individualReservation8, waiter21) into ReservationWaiter
+
+!insert (individualReservation8, customer7) into ReservationCustomer
+
+!new Banquet('banquet10')
+!banquet10.date := Date('2023-11-19')
+!banquet10.time := Time('17:30')
+!banquet10.numberPeople := 12
+!banquet10.groupName := 'Global Art Gala'
+!banquet10.paymentMethod := #Cash
+!banquet10.busService := false
+
+!insert (restaurant12, banquet10) into RestaurantReservation
+!insert (banquet10, table28) into ReservationTable
+
+!insert (banquet10, waiter23) into ReservationWaiter
+!insert (banquet10, waiter22) into ReservationWaiter
+
+!new ItemOrder('itemOrder13')
+!itemOrder13.time := Time('20:45')
+!insert (individualReservation8, itemOrder13) into ReservationItemOrdered
+
+!new MenuItem('menuItem17')
+!menuItem17.description := 'Gourmet Tacos'
+!menuItem17.prepTime := 20.0
+!menuItem17.classification := #Main
+
+!insert (itemOrder13, menuItem17) into ItemOrderMenuItem
+!insert (menuItem17, chef17) into MenuItemChef
+
+!new MenuItem('menuItem18')
+!menuItem18.description := 'Spinach Cannelloni'
+!menuItem18.prepTime := 35.0
+!menuItem18.classification := #Main
+
+!new ItemOrder('itemOrder15')
+!itemOrder15.time := Time('20:50')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation8, itemOrder15) into ReservationItemOrdered
+!insert (itemOrder15, menuItem18) into ItemOrderMenuItem
+!insert (menuItem18, chef17) into MenuItemChef
+
+!new MenuItem('menuItem19')
+!menuItem19.description := 'Moroccan Tagine'
+!menuItem19.prepTime := 45.0
+!menuItem19.classification := #Main
+
+!new ItemOrder('itemOrder14')
+!itemOrder14.time := Time('18:00')
+!insert (banquet10, itemOrder14) into ReservationItemOrdered
+!insert (itemOrder14, menuItem19) into ItemOrderMenuItem
+!insert (menuItem19, chef17) into MenuItemChef
+
+!new MenuItem('menuItem20')
+!menuItem20.description := 'Portuguese Peri Peri Chicken'
+!menuItem20.prepTime := 30.0
+!menuItem20.classification := #Main
+
+!new ItemOrder('itemOrder16')
+!itemOrder16.time := Time('18:05')  -- Separate ItemOrder for the second menu item
+!insert (banquet10, itemOrder16) into ReservationItemOrdered
+!insert (itemOrder16, menuItem20) into ItemOrderMenuItem
+!insert (menuItem20, chef17) into MenuItemChef
+
+!new FoodItem('foodItem30')
+!foodItem30.number := 7001
+!foodItem30.description := 'Beef'
+!foodItem30.purchaseFlag := false
+!foodItem30.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem31')
+!foodItem31.number := 7002
+!foodItem31.description := 'Tortillas'
+!foodItem31.purchaseFlag := true
+!foodItem31.unit := #Dozen  -- Using #Dozen as placeholder for Packs
+
+!new FoodItem('foodItem32')
+!foodItem32.number := 7003
+!foodItem32.description := 'Avocado'
+!foodItem32.purchaseFlag := true
+!foodItem32.unit := #Dozen  -- Conforming unit to an available option
+
+!insert (menuItem17, foodItem30) into MenuItemFoodItem
+!insert (menuItem17, foodItem31) into MenuItemFoodItem
+!insert (menuItem17, foodItem32) into MenuItemFoodItem
+
+!new FoodItem('foodItem33')
+!foodItem33.number := 7004
+!foodItem33.description := 'Spinach'
+!foodItem33.purchaseFlag := true
+!foodItem33.unit := #Ounce  -- Using #Ounce as placeholder for Kilograms
+
+!new FoodItem('foodItem34')
+!foodItem34.number := 7005
+!foodItem34.description := 'Ricotta Cheese'
+!foodItem34.purchaseFlag := true
+!foodItem34.unit := #Gram
+
+!new FoodItem('foodItem35')
+!foodItem35.number := 7006
+!foodItem35.description := 'Tomato Sauce'
+!foodItem35.purchaseFlag := true
+!foodItem35.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem18, foodItem33) into MenuItemFoodItem
+!insert (menuItem18, foodItem34) into MenuItemFoodItem
+!insert (menuItem18, foodItem35) into MenuItemFoodItem
+
+!new FoodItem('foodItem36')
+!foodItem36.number := 7007
+!foodItem36.description := 'Lamb'
+!foodItem36.purchaseFlag := false
+!foodItem36.unit := #Gram
+
+!new FoodItem('foodItem37')
+!foodItem37.number := 7008
+!foodItem37.description := 'Apricots'
+!foodItem37.purchaseFlag := true
+!foodItem37.unit := #Pound  -- Correcting unit to an available placeholder
+
+!new FoodItem('foodItem38')
+!foodItem38.number := 7009
+!foodItem38.description := 'Almonds'
+!foodItem38.purchaseFlag := true
+!foodItem38.unit := #Gram
+
+!insert (menuItem19, foodItem36) into MenuItemFoodItem
+!insert (menuItem19, foodItem37) into MenuItemFoodItem
+!insert (menuItem19, foodItem38) into MenuItemFoodItem
+
+!new FoodItem('foodItem39')
+!foodItem39.number := 7010
+!foodItem39.description := 'Chicken'
+!foodItem39.purchaseFlag := false
+!foodItem39.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem40')
+!foodItem40.number := 7011
+!foodItem40.description := 'Peri Peri Sauce'
+!foodItem40.purchaseFlag := true
+!foodItem40.unit := #Ounce  -- Using #Ounce as available placeholder
+
+!insert (menuItem20, foodItem39) into MenuItemFoodItem
+!insert (menuItem20, foodItem40) into MenuItemFoodItem
+
+!new Allergen('allergen17')
+!allergen17.type := #Lactose
+
+!new Allergen('allergen18')
+!allergen18.type := #Gluten
+
+!insert (foodItem34, allergen17) into FoodItemAllergen
+!insert (foodItem31, allergen18) into FoodItemAllergen

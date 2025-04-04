@@ -1,0 +1,94 @@
+!new Customer('customer30')
+!customer30.firstName := 'Pierre'
+!customer30.lastName := 'Dubois'
+
+!new Booking('booking30')
+!booking30.bookingId := 6006
+!booking30.startDate := 'April 1, 2025'
+!booking30.endDate := 'April 10, 2025'
+!booking30.canceled := false
+!booking30.confirmed := true
+
+!new RoomReservation('roomreservation47')
+!roomreservation47.checkInDate := 'April 1, 2025'
+!roomreservation47.checkOutDate := 'April 5, 2025'
+
+!new RoomReservation('roomreservation48')
+!roomreservation48.checkInDate := 'April 5, 2025'
+!roomreservation48.checkOutDate := 'April 8, 2025'
+
+!new RoomReservation('roomreservation49')
+!roomreservation49.checkInDate := 'April 8, 2025'
+!roomreservation49.checkOutDate := 'April 10, 2025'
+
+!new Room('room55')
+!room55.roomNumber := 801
+!room55.numBeds := 1  -- Adjusted for positive number of beds invariant
+!room55.pricePerNight := 250
+!room55.occupied := true
+!room55.blocked := false
+
+!new Room('room56')
+!room56.roomNumber := 802
+!room56.numBeds := 3
+!room56.pricePerNight := 400
+!room56.occupied := true
+!room56.blocked := false
+
+!new Room('room57')
+!room57.roomNumber := 803
+!room57.numBeds := 3
+!room57.pricePerNight := 400
+!room57.occupied := true
+!room57.blocked := false
+
+!new RoomExtra('roomextra71')
+!roomextra71.price := 150
+!roomextra71.description := 'French Gourmet welcome package'
+
+!new RoomExtra('roomextra72')
+!roomextra72.price := 100
+!roomextra72.description := 'German Beer and Snacks package'
+
+!new RoomExtra('roomextra73')
+!roomextra73.price := 200
+!roomextra73.description := 'Traditional Japanese Tea Ceremony'
+
+!new Bill('bill54')
+!bill54.billId := 10013
+!bill54.price := 1450
+
+!new Bill('bill55')
+!bill55.billId := 10014
+!bill55.price := 1150
+
+!new Bill('bill56')
+!bill56.billId := 10015
+!bill56.price := 1050
+
+!new FreeRoomTypesDTO('freeroomtypesdto30')
+!freeroomtypesdto30.roomTypeDescription := 'Standard Double'
+!freeroomtypesdto30.numBeds := 2
+!freeroomtypesdto30.pricePerNight := 150
+!freeroomtypesdto30.numFreeRooms := 8
+
+!insert (booking30, customer30) into BookingCustomer
+!insert (booking30, roomreservation47) into BookingRoomReservation
+!insert (booking30, roomreservation48) into BookingRoomReservation
+!insert (booking30, roomreservation49) into BookingRoomReservation
+
+!insert (roomreservation47, room55) into RoomReservationRoom
+!insert (roomreservation48, room56) into RoomReservationRoom
+!insert (roomreservation49, room57) into RoomReservationRoom
+
+!insert (roomreservation47, roomextra71) into RoomReservationExtras
+!insert (roomreservation48, roomextra72) into RoomReservationExtras
+!insert (roomreservation49, roomextra73) into RoomReservationExtras
+
+!insert (bill54, roomreservation47) into BillRoomReservation
+!insert (bill55, roomreservation48) into BillRoomReservation
+!insert (bill56, roomreservation49) into BillRoomReservation
+
+!insert (booking30, bill54) into BookingBill
+!insert (booking30, bill55) into BookingBill
+!insert (booking30, bill56) into BookingBill

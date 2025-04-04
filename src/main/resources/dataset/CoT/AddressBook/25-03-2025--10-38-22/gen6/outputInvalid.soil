@@ -1,0 +1,81 @@
+!new AddressBook('International_Humanitarian_Outreach')
+
+!new Person('Maria_Suarez')
+!Maria_Suarez.name := 'Maria Suarez'
+!Maria_Suarez.phone := '+52-55-5555-1010'
+!Maria_Suarez.website := 'www.mariasuarezreliefwork.com'
+!Maria_Suarez.email := 'maria.suarez@globalrelief.org'
+!Maria_Suarez.title := 'Field Coordinator'
+
+!new Address('Address_Maria_Suarez')
+!Address_Maria_Suarez.city := 'Mexico City'
+!Address_Maria_Suarez.houseNr := '292'
+!Address_Maria_Suarez.street := 'Paseo de la Reforma'
+!insert (Maria_Suarez, Address_Maria_Suarez) into ContactContainsAddress
+
+!new Note('Note_Maria_Suarez')
+!Note_Maria_Suarez.author := 'Maria Suarez'
+!Note_Maria_Suarez.time := Date('2023-08-12 15:00')
+!Note_Maria_Suarez.type := #MEETING
+!Note_Maria_Suarez.comment := 'Strategic planning meeting for upcoming disaster relief operations in Central America.'
+!insert (Maria_Suarez, Note_Maria_Suarez) into ContactContainsNote
+
+!new Company('Hope_Alliance')
+!Hope_Alliance.name := 'Hope Alliance'
+!Hope_Alliance.phone := '+1-703-555-0202'
+!Hope_Alliance.website := 'www.hopealliance.org'
+!Hope_Alliance.email := 'contact@hopealliance.org'
+!Hope_Alliance.industry := 'Humanitarian Aid'
+
+!new Address('Address_Hope_Alliance')
+!Address_Hope_Alliance.city := 'Washington, D.C.'
+!Address_Hope_Alliance.houseNr := '1620'
+!Address_Hope_Alliance.street := 'Constitution Ave'
+!insert (Hope_Alliance, Address_Hope_Alliance) into ContactContainsAddress
+
+!new Note('Note_Hope_Alliance')
+!Note_Hope_Alliance.author := 'David Nguyen'
+!Note_Hope_Alliance.time := Date('2023-09-01 09:00')
+!Note_Hope_Alliance.type := #CALL
+!Note_Hope_Alliance.comment := 'Coordination call with regional partners for emergency supplies distribution.'
+!insert (Hope_Alliance, Note_Hope_Alliance) into ContactContainsNote
+
+!new Company('Global_Healthcare_Services')
+!Global_Healthcare_Services.name := 'Global Healthcare Services'
+!Global_Healthcare_Services.phone := '+49-30-555-0333'
+!Global_Healthcare_Services.website := 'www.globalhealth.org'
+!Global_Healthcare_Services.email := 'admin@globalhealth.org'
+!Global_Healthcare_Services.industry := 'Medical Support'
+
+!new Address('Address_Global_Healthcare_Services')
+!Address_Global_Healthcare_Services.city := 'Berlin'
+!Address_Global_Healthcare_Services.houseNr := '77'
+!Address_Global_Healthcare_Services.street := 'Unter den Linden'
+!insert (Global_Healthcare_Services, Address_Global_Healthcare_Services) into ContactContainsAddress
+
+!new Note('Note_Global_Healthcare_Services')
+!Note_Global_Healthcare_Services.author := 'Hans Schmidt'
+!Note_Global_Healthcare_Services.time := Date('2023-10-10 11:30')
+!Note_Global_Healthcare_Services.type := #EMAIL
+!Note_Global_Healthcare_Services.comment := 'Updated project list for mobile clinics deployment in Southeast Asia.'
+!insert (Global_Healthcare_Services, Note_Global_Healthcare_Services) into ContactContainsNote
+
+!new Relationship('Relationship_Hope_to_Global_Healthcare')
+!Relationship_Hope_to_Global_Healthcare.type := #SUBDIVISION
+!insert (Hope_Alliance, Relationship_Hope_to_Global_Healthcare) into ContactToRelationship
+!insert (Relationship_Hope_to_Global_Healthcare, Global_Healthcare_Services) into RelationshipToContact
+
+!new Relationship('Relationship_Global_Healthcare_to_Maria')
+!Relationship_Global_Healthcare_to_Maria.type := #EMPLOYEE
+!insert (Global_Healthcare_Services, Relationship_Global_Healthcare_to_Maria) into ContactToRelationship
+!insert (Relationship_Global_Healthcare_to_Maria, Maria_Suarez) into RelationshipToContact
+
+!new Relationship('Relationship_Maria_to_Hope')
+!Relationship_Maria_to_Hope.type := #EMPLOYEE
+!insert (Maria_Suarez, Relationship_Maria_to_Hope) into ContactToRelationship
+!insert (Relationship_Maria_to_Hope, Hope_Alliance) into RelationshipToContact
+
+!insert (International_Humanitarian_Outreach, Maria_Suarez) into AddressBookMadeOfContact
+!insert (International_Humanitarian_Outreach, Hope_Alliance) into AddressBookMadeOfContact
+!insert (International_Humanitarian_Outreach, Global_Healthcare_Services) into AddressBookMadeOfContact
+

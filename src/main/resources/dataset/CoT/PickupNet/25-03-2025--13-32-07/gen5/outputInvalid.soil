@@ -1,0 +1,94 @@
+!new Driver('driver45')
+!driver45.id := 'DRV5012'
+!driver45.name := 'Ahmed Youssef'
+
+!new Driver('driver46')
+!driver46.id := 'DRV5013'
+!driver46.name := 'Fatima Hassan'
+
+!new Shipment('shipment46')
+!shipment46.id := 'SHP15009'
+!shipment46.status := #ASSIGNED
+
+!new Shipment('shipment47')
+!shipment47.id := 'SHP15010'
+!shipment47.status := #UNDERWAY
+
+!new Address('pickupAddress46')
+!pickupAddress46.text := 'Khan el-Khalili, Al-Azhar St, Cairo Governorate, Egypt'
+
+!new GeoLocation('pickupGeoLocation46')
+!pickupGeoLocation46.latitude := 30.0478
+!pickupGeoLocation46.longitude := 31.2625
+
+!new Address('deliveryAddress46')
+!deliveryAddress46.text := 'Giza Necropolis, Giza Governorate, Egypt'
+
+!new GeoLocation('deliveryGeoLocation46')
+!deliveryGeoLocation46.latitude := 29.9773
+!deliveryGeoLocation46.longitude := 31.1325
+
+!new Address('pickupAddress47')
+!pickupAddress47.text := 'Coptic Cairo, Misr Al Qadima, Cairo Governorate, Egypt'
+
+!new GeoLocation('pickupGeoLocation47')
+!pickupGeoLocation47.latitude := 30.0061
+!pickupGeoLocation47.longitude := 31.2317
+
+!new Address('deliveryAddress47')
+!deliveryAddress47.text := 'The Egyptian Museum, Tahrir Square, Cairo Governorate, Egypt'
+
+!new GeoLocation('deliveryGeoLocation47')
+!deliveryGeoLocation47.latitude := 30.0478
+!deliveryGeoLocation47.longitude := 31.2336
+
+!new Station('station32')
+
+!new Station('station33')
+
+!new Customer('customer46')
+!customer46.id := 'CUST902'
+!customer46.name := 'Leila Mustafa'
+!customer46.twitterUserName := '@leilacraft'
+
+!new Customer('customer47')
+!customer47.id := 'CUST903'
+!customer47.name := 'Khaled El-Sayed'
+!customer47.twitterUserName := '@khaledtravels'
+
+!insert (driver45, shipment46) into DriverShipment
+
+!insert (driver46, shipment47) into DriverShipment
+
+!insert (shipment46, pickupAddress46) into ShipmentContainsPickUpAddress
+
+!insert (shipment46, deliveryAddress46) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress46, pickupGeoLocation46) into AddressContainsGeoLocation
+
+!insert (deliveryAddress46, deliveryGeoLocation46) into AddressContainsGeoLocation
+
+!insert (shipment47, pickupAddress47) into ShipmentContainsPickUpAddress
+
+!insert (shipment47, deliveryAddress47) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress47, pickupGeoLocation47) into AddressContainsGeoLocation
+
+!insert (deliveryAddress47, deliveryGeoLocation47) into AddressContainsGeoLocation
+
+!insert (customer46, shipment46) into CustomerConsistsOfShipment
+
+!insert (customer47, shipment47) into CustomerConsistsOfShipment
+
+!insert (station32, customer46) into StationContainsCustomer
+
+!insert (station33, customer47) into StationContainsCustomer
+
+!insert (station32, shipment46) into StationShipment
+
+!insert (station33, shipment47) into StationShipment
+
+!insert (station32, driver45) into StationContainsDriver
+
+!insert (station33, driver46) into StationContainsDriver
+

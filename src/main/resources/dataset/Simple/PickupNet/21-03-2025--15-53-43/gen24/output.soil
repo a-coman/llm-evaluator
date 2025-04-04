@@ -1,0 +1,53 @@
+!new Driver('driver25')
+!driver25.id := 'D025'
+!driver25.name := 'Lucas Scott'
+
+!new Shipment('shipment43')
+!shipment43.id := 'S043'
+!shipment43.status := #ASSIGNED
+
+!new Shipment('shipment44')
+!shipment44.id := 'S044'
+!shipment44.status := #DELIVERED
+
+!new Address('address49')
+!address49.text := '2626 Grove Street'
+
+!new Address('address50')
+!address50.text := '2727 Willow Lane'
+
+!new GeoLocation('geoLocation49')
+!geoLocation49.latitude := 55.6761
+!geoLocation49.longitude := 12.5683
+
+!new GeoLocation('geoLocation50')
+!geoLocation50.latitude := 47.6062
+!geoLocation50.longitude := -122.3321
+
+!new Customer('customer25')
+!customer25.id := 'C025'
+!customer25.name := 'Chloe Davis'
+!customer25.twitterUserName := '@chloe_davis'
+
+!new Station('station24')
+
+!insert (driver25, shipment43) into DriverShipment
+
+!insert (shipment43, address49) into ShipmentContainsPickUpAddress
+!insert (shipment43, address50) into ShipmentContainsDeliveryAddress
+
+!insert (shipment44, address50) into ShipmentContainsPickUpAddress
+!insert (shipment44, address49) into ShipmentContainsDeliveryAddress
+
+!insert (address49, geoLocation49) into AddressContainsGeoLocation
+!insert (address50, geoLocation50) into AddressContainsGeoLocation
+
+!insert (customer25, shipment43) into CustomerConsistsOfShipment
+!insert (customer25, shipment44) into CustomerConsistsOfShipment
+
+!insert (station24, customer25) into StationContainsCustomer
+
+!insert (station24, shipment43) into StationShipment
+!insert (station24, shipment44) into StationShipment
+
+!insert (station24, driver25) into StationContainsDriver

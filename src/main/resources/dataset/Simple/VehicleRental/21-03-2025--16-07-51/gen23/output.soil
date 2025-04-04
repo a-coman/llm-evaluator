@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice25')
+!rentalOffice25.name := 'Capitol Rentals'
+!rentalOffice25.number := 125
+!rentalOffice25.address := '789 Constitution Ave, Washington, DC'
+
+!new Truck('truck14')
+!truck14.id := 24
+!truck14.registrationState := #CA
+!truck14.licensePlateNumber := 'DC4545'
+!truck14.vehicleTypeCode := #TRUCK24
+!truck14.registrationLastMaintenanceDate := Date('2023-01-18')
+!truck14.expirationDate := Date('2024-01-18')
+!truck14.odometerReading := 25000
+!truck14.gasTankCapacity := 160.0
+!truck14.workingRadio := true
+!truck14.mileage := 14
+
+!new Individual('individualCustomer13')
+!individualCustomer13.name := 'George Smith'
+!individualCustomer13.address := '1600 Pennsylvania Ave, Washington, DC'
+!individualCustomer13.poorRisk := false
+!individualCustomer13.homePhone := '555-9900'
+!individualCustomer13.driverLicenseState := #CA
+!individualCustomer13.driverLicenseNumber := 3344556
+!individualCustomer13.driverLicenseExpirationDate := Date('2025-10-10')
+
+!new RentalAgreement('rentalAgreement24')
+!rentalAgreement24.number := 524
+!rentalAgreement24.rentalDate := Date('2023-11-30')
+!rentalAgreement24.anticipatedDuration := 10
+!rentalAgreement24.depositPaid := 275.0
+!rentalAgreement24.quotedDailyRate := 38.0
+!rentalAgreement24.quotedRatePerMile := 0.2
+
+!insert (rentalOffice25, truck14) into RentalOfficeVehicle
+!insert (rentalOffice25, rentalAgreement24) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice25, rentalAgreement24) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement24, truck14) into RentalAgreementVehicle
+!insert (rentalAgreement24, individualCustomer13) into RentalAgreementCustomer

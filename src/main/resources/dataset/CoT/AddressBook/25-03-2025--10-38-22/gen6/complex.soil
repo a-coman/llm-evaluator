@@ -1,0 +1,106 @@
+!new AddressBook('Nexus_International_Network')
+
+!new Person('Youssef_El_Khoury')
+!Youssef_El_Khoury.name := 'Youssef El Khoury'
+!Youssef_El_Khoury.phone := '+212-537-655-839'
+!Youssef_El_Khoury.website := 'youssefelkhoury-solutions.ma'
+!Youssef_El_Khoury.email := 'youssef.elkhoury@nexusnetwork.ma'
+!Youssef_El_Khoury.title := 'Business Development Director'
+
+!new Address('Address_Youssef_El_Khoury')
+!Address_Youssef_El_Khoury.city := 'Rabat'
+!Address_Youssef_El_Khoury.houseNr := '12'
+!Address_Youssef_El_Khoury.street := 'Avenue Mohammed V'
+!insert (Youssef_El_Khoury, Address_Youssef_El_Khoury) into ContactContainsAddress
+
+!new Note('Note_Youssef_El_Khoury')
+!Note_Youssef_El_Khoury.author := 'Youssef El Khoury'
+!Note_Youssef_El_Khoury.time := Date('2023-09-03')
+!Note_Youssef_El_Khoury.type := #MEETING
+!Note_Youssef_El_Khoury.comment := 'Led workshop on expanding telecommunications infrastructure in North Africa.'
+!insert (Youssef_El_Khoury, Note_Youssef_El_Khoury) into ContactContainsNote
+
+!new Company('Alpine_IT_Solutions')
+!Alpine_IT_Solutions.name := 'Alpine IT Solutions'
+!Alpine_IT_Solutions.phone := '+43-1-3456-789'
+!Alpine_IT_Solutions.website := 'alpineitsolutions.at'
+!Alpine_IT_Solutions.email := 'service@alpineitsolutions.at'
+!Alpine_IT_Solutions.industry := 'Cloud Computing'
+
+!new Address('Address_Alpine_IT_Solutions')
+!Address_Alpine_IT_Solutions.city := 'Vienna'
+!Address_Alpine_IT_Solutions.houseNr := '9'
+!Address_Alpine_IT_Solutions.street := 'Kärntnerring'
+!insert (Alpine_IT_Solutions, Address_Alpine_IT_Solutions) into ContactContainsAddress
+
+!new Note('Note_Alpine_IT_Solutions')
+!Note_Alpine_IT_Solutions.author := 'CTO'
+!Note_Alpine_IT_Solutions.time := Date('2023-08-10')
+!Note_Alpine_IT_Solutions.type := #EMAIL
+!Note_Alpine_IT_Solutions.comment := 'Provided a new rollout of secure cloud platforms for European SMEs.'
+!insert (Alpine_IT_Solutions, Note_Alpine_IT_Solutions) into ContactContainsNote
+
+!new Person('Svetlana_Ivanova')
+!Svetlana_Ivanova.name := 'Svetlana Ivanova'
+!Svetlana_Ivanova.phone := '+7-495-123-2468'
+!Svetlana_Ivanova.website := 'svetlanaivanova-connect.ru'
+!Svetlana_Ivanova.email := 'svetlana.ivanova@nexusnetwork.ru'
+!Svetlana_Ivanova.title := 'Head of Innovation'
+
+!new Address('Address_Svetlana_Ivanova')
+!Address_Svetlana_Ivanova.city := 'Moscow'
+!Address_Svetlana_Ivanova.houseNr := '32'
+!Address_Svetlana_Ivanova.street := 'Tverskaya Street'
+!insert (Svetlana_Ivanova, Address_Svetlana_Ivanova) into ContactContainsAddress
+
+!new Note('Note_Svetlana_Ivanova')
+!Note_Svetlana_Ivanova.author := 'Svetlana Ivanova'
+!Note_Svetlana_Ivanova.time := Date('2023-07-22')
+!Note_Svetlana_Ivanova.type := #CALL
+!Note_Svetlana_Ivanova.comment := 'Discussed the integration of AI-driven solutions in logistics systems.'
+!insert (Svetlana_Ivanova, Note_Svetlana_Ivanova) into ContactContainsNote
+
+!new Company('Serengeti_Renewable_Development')
+!Serengeti_Renewable_Development.name := 'Serengeti Renewable Development'
+!Serengeti_Renewable_Development.phone := '+255-22-1234-5678'
+!Serengeti_Renewable_Development.website := 'serengetirenewable-tz.com'
+!Serengeti_Renewable_Development.email := 'info@serengetirenewable-tz.com'
+!Serengeti_Renewable_Development.industry := 'Renewable Energy'
+
+!new Address('Address_Serengeti_Renewable_Development')
+!Address_Serengeti_Renewable_Development.city := 'Dar es Salaam'
+!Address_Serengeti_Renewable_Development.houseNr := '57'
+!Address_Serengeti_Renewable_Development.street := 'Uhuru Street'
+!insert (Serengeti_Renewable_Development, Address_Serengeti_Renewable_Development) into ContactContainsAddress
+
+!new Note('Note_Serengeti_Renewable_Development')
+!Note_Serengeti_Renewable_Development.author := 'Operations Manager'
+!Note_Serengeti_Renewable_Development.time := Date('2023-05-17')
+!Note_Serengeti_Renewable_Development.type := #MEETING
+!Note_Serengeti_Renewable_Development.comment := 'Explored solar energy expansion projects in East Africa.'
+!insert (Serengeti_Renewable_Development, Note_Serengeti_Renewable_Development) into ContactContainsNote
+
+!new Relationship('Relationship_Youssef_to_Alpine_IT')
+!Relationship_Youssef_to_Alpine_IT.type := #COWORKER
+!insert (Youssef_El_Khoury, Relationship_Youssef_to_Alpine_IT) into ContactToRelationship
+!insert (Relationship_Youssef_to_Alpine_IT, Alpine_IT_Solutions) into RelationshipToContact
+
+!new Relationship('Relationship_Svetlana_to_Youssef')
+!Relationship_Svetlana_to_Youssef.type := #COWORKER
+!insert (Svetlana_Ivanova, Relationship_Svetlana_to_Youssef) into ContactToRelationship
+!insert (Relationship_Svetlana_to_Youssef, Youssef_El_Khoury) into RelationshipToContact
+
+!new Relationship('Relationship_Youssef_to_Serengeti_Renewable')
+!Relationship_Youssef_to_Serengeti_Renewable.type := #BOSS
+!insert (Youssef_El_Khoury, Relationship_Youssef_to_Serengeti_Renewable) into ContactToRelationship
+!insert (Relationship_Youssef_to_Serengeti_Renewable, Serengeti_Renewable_Development) into RelationshipToContact
+
+!new Relationship('Relationship_Svetlana_to_Serengeti_Renewable')
+!Relationship_Svetlana_to_Serengeti_Renewable.type := #COWORKER
+!insert (Svetlana_Ivanova, Relationship_Svetlana_to_Serengeti_Renewable) into ContactToRelationship
+!insert (Relationship_Svetlana_to_Serengeti_Renewable, Serengeti_Renewable_Development) into RelationshipToContact
+
+!insert (Nexus_International_Network, Youssef_El_Khoury) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Alpine_IT_Solutions) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Svetlana_Ivanova) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Serengeti_Renewable_Development) into AddressBookMadeOfContact

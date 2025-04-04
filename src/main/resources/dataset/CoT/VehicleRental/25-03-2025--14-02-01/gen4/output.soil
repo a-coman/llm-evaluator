@@ -1,0 +1,350 @@
+!new RentalOffice('rentalOffice13')
+!rentalOffice13.name := 'Rapid Response Rentals'
+!rentalOffice13.number := 309
+!rentalOffice13.address := '789 Quick St, Miami, FL'
+
+!new Truck('truck11')
+!truck11.id := 25
+!truck11.registrationState := #FL
+!truck11.licensePlateNumber := 'EMRG001'
+!truck11.vehicleTypeCode := #TRUCK
+!truck11.registrationLastMaintenanceDate := Date('2023-10-05')
+!truck11.expirationDate := Date('2024-03-01')
+!truck11.odometerReading := 0
+!truck11.gasTankCapacity := 0
+!truck11.workingRadio := true
+!truck11.mileage := 0
+
+!new RentalAgreement('rentalAgreement20')
+!rentalAgreement20.number := 4020
+!rentalAgreement20.rentalDate := Date('2023-10-20')
+!rentalAgreement20.anticipatedDuration := 14
+!rentalAgreement20.depositPaid := 1000.00
+!rentalAgreement20.quotedDailyRate := 100.00
+!rentalAgreement20.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement21')
+!rentalAgreement21.number := 4021
+!rentalAgreement21.rentalDate := Date('2023-10-21')
+!rentalAgreement21.anticipatedDuration := 3
+!rentalAgreement21.depositPaid := 500.00
+!rentalAgreement21.quotedDailyRate := 120.00
+!rentalAgreement21.quotedRatePerMile := 0.30
+
+!new Individual('individualCustomer9')
+!individualCustomer9.name := 'Maria Gonzalez'
+!individualCustomer9.address := '123 Bayside Ln, Miami, FL'
+!individualCustomer9.poorRisk := true
+!individualCustomer9.homePhone := '305-555-0111'
+!individualCustomer9.driverLicenseState := #FL
+!individualCustomer9.driverLicenseNumber := 876543
+!individualCustomer9.driverLicenseExpirationDate := Date('2026-02-11')
+
+!new Company('company11')
+!company11.name := 'Event Services Inc.'
+!company11.address := '456 Fest St, Miami, FL'
+!company11.poorRisk := false
+!company11.idNumber := 909
+
+!insert (rentalOffice13, truck11) into RentalOfficeVehicle
+
+!insert (rentalOffice13, rentalAgreement20) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice13, rentalAgreement20) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement20, truck11) into RentalAgreementVehicle
+!insert (rentalAgreement20, individualCustomer9) into RentalAgreementCustomer
+
+!insert (rentalOffice13, rentalAgreement21) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice13, rentalAgreement21) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement21, truck11) into RentalAgreementVehicle
+!insert (rentalAgreement21, company11) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice16')
+!rentalOffice16.name := 'DesertDune Rentals'
+!rentalOffice16.number := 404
+!rentalOffice16.address := '158 Cactus Road, Phoenix, AZ, 85001'
+
+!new Vehicle('vehicle17')
+!vehicle17.id := 30
+!vehicle17.registrationState := #DE
+!vehicle17.licensePlateNumber := 'AZ4590CVC'
+!vehicle17.vehicleTypeCode := #TRUCK10
+!vehicle17.registrationLastMaintenanceDate := Date('2023-04-18')
+!vehicle17.expirationDate := Date('2024-04-17')
+
+!new Truck('truck14')
+!truck14.id := 31
+!truck14.registrationState := #DE
+!truck14.licensePlateNumber := 'AZ5512TOW'
+!truck14.vehicleTypeCode := #TRUCK
+!truck14.registrationLastMaintenanceDate := Date('2023-08-20')
+!truck14.expirationDate := Date('2024-03-05')
+!truck14.odometerReading := 230000
+!truck14.gasTankCapacity := 45.0
+!truck14.workingRadio := true
+!truck14.mileage := 12
+
+!new Individual('individualCustomer11')
+!individualCustomer11.name := 'Rachel Lim'
+!individualCustomer11.address := '321 West Palm Lane, Scottsdale, AZ, 85251'
+!individualCustomer11.poorRisk := false
+!individualCustomer11.homePhone := '480-678-4321'
+!individualCustomer11.driverLicenseState := #AZ
+!individualCustomer11.driverLicenseNumber := 4321981
+!individualCustomer11.driverLicenseExpirationDate := Date('2028-01-14')
+
+!new Company('company13')
+!company13.name := 'Cacti Event Planning'
+!company13.address := '456 Event Drive, Tucson, AZ, 85701'
+!company13.poorRisk := false
+!company13.idNumber := 404012
+
+!new RentalAgreement('rentalAgreement24')
+!rentalAgreement24.number := 3007
+!rentalAgreement24.rentalDate := Date('2023-11-05')
+!rentalAgreement24.anticipatedDuration := 10
+!rentalAgreement24.depositPaid := 200.00
+!rentalAgreement24.quotedDailyRate := 55.00
+!rentalAgreement24.quotedRatePerMile := 0.18
+
+!new RentalAgreement('rentalAgreement25')
+!rentalAgreement25.number := 3008
+!rentalAgreement25.rentalDate := Date('2023-12-15')
+!rentalAgreement25.anticipatedDuration := 7
+!rentalAgreement25.depositPaid := 300.00
+!rentalAgreement25.quotedDailyRate := 95.00
+!rentalAgreement25.quotedRatePerMile := 0.45
+
+!insert (rentalOffice16, vehicle17) into RentalOfficeVehicle
+!insert (rentalOffice16, truck14) into RentalOfficeVehicle
+
+!insert (rentalOffice16, rentalAgreement24) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice16, rentalAgreement24) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement24, vehicle17) into RentalAgreementVehicle
+!insert (rentalAgreement24, individualCustomer11) into RentalAgreementCustomer
+
+!insert (rentalOffice16, rentalAgreement25) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice16, rentalAgreement25) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement25, truck14) into RentalAgreementVehicle
+!insert (rentalAgreement25, company13) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice19')
+!rentalOffice19.name := 'Rainforest Rentals'
+!rentalOffice19.number := 44
+!rentalOffice19.address := '101 Jungle Drive, Hilo, HI, 96720'
+
+!new Truck('truck17')
+!truck17.id := 37
+!truck17.registrationState := #AK
+!truck17.licensePlateNumber := 'TRK-ALOHA'
+!truck17.vehicleTypeCode := #TRUCK
+!truck17.registrationLastMaintenanceDate := Date('2023-07-10')
+!truck17.expirationDate := Date('2024-07-10')
+!truck17.odometerReading := 250000
+!truck17.gasTankCapacity := 0.0
+!truck17.workingRadio := false
+!truck17.mileage := 2
+
+!new RentalAgreement('rentalAgreement31')
+!rentalAgreement31.number := 5000
+!rentalAgreement31.rentalDate := Date('2025-01-01')
+!rentalAgreement31.anticipatedDuration := 1095
+!rentalAgreement31.depositPaid := 300.00
+!rentalAgreement31.quotedDailyRate := 40.00
+!rentalAgreement31.quotedRatePerMile := 0.50
+
+!new Company('company16')
+!company16.name := 'Island Transport Solutions'
+!company16.address := '808 Shoreline Drive, Honolulu, HI, 96801'
+!company16.poorRisk := false
+!company16.idNumber := 2025
+
+!insert (rentalOffice19, truck17) into RentalOfficeVehicle
+
+!insert (rentalOffice19, rentalAgreement31) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice19, rentalAgreement31) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement31, truck17) into RentalAgreementVehicle
+!insert (rentalAgreement31, company16) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice21')
+!rentalOffice21.name := 'Bayside Haulers LLC'
+!rentalOffice21.number := 43
+!rentalOffice21.address := '789 Maritime Blvd, Newport, RI 02840'
+
+!new Truck('truck19')
+!truck19.id := 40
+!truck19.registrationState := #DE
+!truck19.licensePlateNumber := 'BHLRI567'
+!truck19.vehicleTypeCode := #TRUCK
+!truck19.registrationLastMaintenanceDate := Date('2023-02-28')
+!truck19.expirationDate := Date('2026-02-28')
+!truck19.odometerReading := 1500
+!truck19.gasTankCapacity := 80.0
+!truck19.workingRadio := true
+!truck19.mileage := 12
+
+!new Vehicle('vehicle22')
+!vehicle22.id := 41
+!vehicle22.registrationState := #DE
+!vehicle22.licensePlateNumber := 'BHLRI568'
+!vehicle22.vehicleTypeCode := #OPEN_TRAILER
+!vehicle22.registrationLastMaintenanceDate := Date('2023-06-01')
+!vehicle22.expirationDate := Date('2025-06-01')
+
+!new Truck('truck20')
+!truck20.id := 42
+!truck20.registrationState := #DE
+!truck20.licensePlateNumber := 'BHLRI569'
+!truck20.vehicleTypeCode := #TRUCK
+!truck20.registrationLastMaintenanceDate := Date('2023-09-15')
+!truck20.expirationDate := Date('2025-09-15')
+!truck20.odometerReading := 0
+!truck20.gasTankCapacity := 100.0
+!truck20.workingRadio := false
+!truck20.mileage := 11
+
+!new RentalAgreement('rentalAgreement34')
+!rentalAgreement34.number := 3005
+!rentalAgreement34.rentalDate := Date('2023-12-20')
+!rentalAgreement34.anticipatedDuration := 7
+!rentalAgreement34.depositPaid := 250.00
+!rentalAgreement34.quotedDailyRate := 120.00
+!rentalAgreement34.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement35')
+!rentalAgreement35.number := 3006
+!rentalAgreement35.rentalDate := Date('2023-12-23')
+!rentalAgreement35.anticipatedDuration := 0
+!rentalAgreement35.depositPaid := 0.00
+!rentalAgreement35.quotedDailyRate := 0.00
+!rentalAgreement35.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer15')
+!individualCustomer15.name := 'Avery Smith'
+!individualCustomer15.address := '456 Ocean Drive, Newport, RI 02840'
+!individualCustomer15.poorRisk := false
+!individualCustomer15.homePhone := '(401) 555-1010'
+!individualCustomer15.driverLicenseState := #DE
+!individualCustomer15.driverLicenseNumber := 300
+!individualCustomer15.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company18')
+!company18.name := 'Coastal Logistics Corp.'
+!company18.address := '333 Seaside Lane, Providence, RI 02903'
+!company18.poorRisk := false
+!company18.idNumber := 456789
+
+!insert (rentalOffice21, truck19) into RentalOfficeVehicle
+!insert (rentalOffice21, vehicle22) into RentalOfficeVehicle
+!insert (rentalOffice21, truck20) into RentalOfficeVehicle
+
+!insert (rentalOffice21, rentalAgreement34) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice21, rentalAgreement34) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement34, truck19) into RentalAgreementVehicle
+!insert (rentalAgreement34, individualCustomer15) into RentalAgreementCustomer
+
+!insert (rentalOffice21, rentalAgreement35) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice21, rentalAgreement35) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement35, vehicle22) into RentalAgreementVehicle
+!insert (rentalAgreement35, company18) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice23')
+!rentalOffice23.name := 'New England Fleet Rentals'
+!rentalOffice23.number := 502
+!rentalOffice23.address := '200 Beacon St, Boston, MA, 02116'
+
+!new Truck('truck22')
+!truck22.id := 44
+!truck22.registrationState := #CO
+!truck22.licensePlateNumber := 'BOS1987'
+!truck22.vehicleTypeCode := #TRUCK
+!truck22.registrationLastMaintenanceDate := Date('2023-07-14')
+!truck22.expirationDate := Date('2024-07-13')
+!truck22.odometerReading := 58000
+!truck22.gasTankCapacity := 32.0
+!truck22.workingRadio := false
+!truck22.mileage := 11
+
+!new Vehicle('vehicle23')
+!vehicle23.id := 45
+!vehicle23.registrationState := #CO
+!vehicle23.licensePlateNumber := 'MAFL459'
+!vehicle23.vehicleTypeCode := #OPEN_TRAILER
+!vehicle23.registrationLastMaintenanceDate := Date('2023-06-10')
+!vehicle23.expirationDate := Date('2024-06-09')
+
+!new Vehicle('vehicle24')
+!vehicle24.id := 46
+!vehicle24.registrationState := #CO
+!vehicle24.licensePlateNumber := 'MAVAN345'
+!vehicle24.vehicleTypeCode := #TRUCK10
+!vehicle24.registrationLastMaintenanceDate := Date('2023-05-20')
+!vehicle24.expirationDate := Date('2024-05-19')
+
+!new Individual('individualCustomer17')
+!individualCustomer17.name := 'Sarah Palmer'
+!individualCustomer17.address := '789 Commonwealth Ave, Boston, MA, 02215'
+!individualCustomer17.poorRisk := true
+!individualCustomer17.homePhone := '617-555-0467'
+!individualCustomer17.driverLicenseState := #CO
+!individualCustomer17.driverLicenseNumber := 2398456
+!individualCustomer17.driverLicenseExpirationDate := Date('2027-03-23')
+
+!new Company('company20')
+!company20.name := 'Boston Build Solutions, Inc.'
+!company20.address := '645 Industrial Rd, Cambridge, MA, 02138'
+!company20.poorRisk := false
+!company20.idNumber := 215846372
+
+!new RentalAgreement('rentalAgreement37')
+!rentalAgreement37.number := 40876
+!rentalAgreement37.rentalDate := Date('2023-11-01')
+!rentalAgreement37.anticipatedDuration := 3
+!rentalAgreement37.depositPaid := 400.00
+!rentalAgreement37.quotedDailyRate := 90.00
+!rentalAgreement37.quotedRatePerMile := 0.50
+
+!new RentalAgreement('rentalAgreement38')
+!rentalAgreement38.number := 40877
+!rentalAgreement38.rentalDate := Date('2023-11-03')
+!rentalAgreement38.anticipatedDuration := 10
+!rentalAgreement38.depositPaid := 350.00
+!rentalAgreement38.quotedDailyRate := 70.00
+!rentalAgreement38.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement39')
+!rentalAgreement39.number := 40878
+!rentalAgreement39.rentalDate := Date('2023-11-04')
+!rentalAgreement39.anticipatedDuration := 2
+!rentalAgreement39.depositPaid := 100.00
+!rentalAgreement39.quotedDailyRate := 60.00
+!rentalAgreement39.quotedRatePerMile := 0.20
+
+!insert (rentalOffice23, truck22) into RentalOfficeVehicle
+!insert (rentalOffice23, vehicle23) into RentalOfficeVehicle
+!insert (rentalOffice23, vehicle24) into RentalOfficeVehicle
+
+!insert (rentalOffice23, rentalAgreement37) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement37) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement37, truck22) into RentalAgreementVehicle
+!insert (rentalAgreement37, company20) into RentalAgreementCustomer
+
+!insert (rentalOffice23, rentalAgreement38) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement38) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement38, vehicle23) into RentalAgreementVehicle
+!insert (rentalAgreement38, company20) into RentalAgreementCustomer
+
+!insert (rentalOffice23, rentalAgreement39) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement39) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement39, vehicle24) into RentalAgreementVehicle
+!insert (rentalAgreement39, individualCustomer17) into RentalAgreementCustomer
+

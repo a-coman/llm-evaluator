@@ -1,0 +1,737 @@
+!new Restaurant('restaurant10')
+!restaurant10.name := 'Mediterranean Memories Bistro'
+
+!new Owner('owner22')
+!owner22.name := 'Sophia Xenides'
+!owner22.percentageShares := 40
+
+!new Owner('owner23')
+!owner23.name := 'Kostas Pappas'
+!owner23.percentageShares := 30
+
+!new Owner('owner24')
+!owner24.name := 'Eleni Petrou'
+!owner24.percentageShares := 30
+
+!insert (restaurant10, owner22) into RestaurantOwner
+!insert (restaurant10, owner23) into RestaurantOwner
+!insert (restaurant10, owner24) into RestaurantOwner
+
+!new Table('table24')
+!table24.number := 5
+!table24.description := 'Sunlit Terrace Long Table'
+!table24.capacity := 20
+
+!new Banquet('banquet8')
+!banquet8.date := Date('2023-12-24')
+!banquet8.time := Time('13:00')
+!banquet8.numberPeople := 20
+!banquet8.name := 'Papadakis Family Reunion'
+!banquet8.phoneNumber := '+30 210 9876543'
+!banquet8.number := 20231224
+!banquet8.groupName := 'Papadakis Family'
+!banquet8.paymentMethod := #Cash
+!banquet8.busService := true
+
+!insert (restaurant10, banquet8) into RestaurantReservation
+!insert (banquet8, table24) into ReservationTable
+
+!new ItemOrder('itemOrder10')
+!itemOrder10.time := Time('13:15')
+!insert (banquet8, itemOrder10) into ReservationItemOrdered
+
+!new MenuItem('menuItem14')
+!menuItem14.description := 'Grilled Octopus'
+!menuItem14.prepTime := 25.0
+!menuItem14.classification := #Main
+
+!insert (itemOrder10, menuItem14) into ItemOrderMenuItem
+!insert (menuItem14, chef14) into MenuItemChef
+
+!new ItemOrder('itemOrder11')
+!itemOrder11.time := Time('13:16')  -- A separate order for the second item
+!insert (banquet8, itemOrder11) into ReservationItemOrdered
+
+!new MenuItem('menuItem15')
+!menuItem15.description := 'Spanakopita'
+!menuItem15.prepTime := 15.0
+!menuItem15.classification := #Apetizer
+
+!insert (itemOrder11, menuItem15) into ItemOrderMenuItem
+
+!new Chef('chef14')
+!chef14.name := 'Maria Eleftheriou'
+
+!new Chef('chef15')
+!chef15.name := 'Nikos Souvlakis'
+
+!insert (menuItem14, chef14) into MenuItemChef
+!insert (menuItem15, chef15) into MenuItemChef
+
+!new Cook('cook16')
+!cook16.name := 'Thanos Marinakis'
+!cook16.dateOfBirth := Date('1980-07-12')
+!cook16.yearsOfExperience := 15
+
+!new Cook('cook17')
+!cook17.name := 'Demo Cook for Souvlakis'
+!cook17.dateOfBirth := Date('1985-01-01')  -- Placeholder date of birth
+!cook17.yearsOfExperience := 5  -- Placeholder years of experience
+
+!insert (chef14, cook16) into ChefCook
+!insert (chef15, cook17) into ChefCook
+
+!new FoodItem('foodItem24')
+!foodItem24.number := 501
+!foodItem24.description := 'Octopus'
+!foodItem24.purchaseFlag := true
+!foodItem24.unit := #Pound  -- Using #Pound as placeholder
+
+!new Allergen('allergen13')
+!allergen13.type := #Seafood
+
+!insert (foodItem24, allergen13) into FoodItemAllergen
+
+!new FoodItem('foodItem25')
+!foodItem25.number := 502
+!foodItem25.description := 'Feta Cheese'
+!foodItem25.purchaseFlag := true
+!foodItem25.unit := #Dozen  -- Using #Dozen as placeholder for Blocks
+
+!new Allergen('allergen14')
+!allergen14.type := #Lactose
+
+!insert (foodItem25, allergen14) into FoodItemAllergen
+
+!new FoodItem('foodItem26')
+!foodItem26.number := 503
+!foodItem26.description := 'Phyllo Dough'
+!foodItem26.purchaseFlag := true
+!foodItem26.unit := #Sheet
+
+!new Allergen('allergen15')
+!allergen15.type := #Gluten
+
+!insert (foodItem26, allergen15) into FoodItemAllergen
+
+!new HeadWaiter('headWaiter9')
+!headWaiter9.name := 'Giorgos Laskaris'
+!headWaiter9.dateOfBirth := Date('1978-10-05')
+!headWaiter9.phoneNumber := '+30 694 1234567'
+
+!new Waiter('waiter17')
+!waiter17.name := 'Mario Spiros'
+!waiter17.dateOfBirth := Date('1985-12-14')
+!waiter17.phoneNumber := '+30 697 8901234'
+
+!new Waiter('waiter18')
+!waiter18.name := 'Eleni Vasilikou'
+!waiter18.dateOfBirth := Date('1992-04-03')
+!waiter18.phoneNumber := '+30 695 1237890'
+
+!insert (headWaiter9, waiter17) into HeadWaiterWaiter
+!insert (headWaiter9, waiter18) into HeadWaiterWaiter
+!insert (banquet8, waiter17) into ReservationWaiter
+!insert (banquet8, waiter18) into ReservationWaiter
+
+!new BusDriver('busdriver9')
+!busdriver9.name := 'Andreas Kostopoulos'
+!busdriver9.dateOfBirth := Date('1965-05-19')
+!busdriver9.phoneNumber := '+30 699 5678901'
+
+!insert (banquet8, busdriver9) into BanquetBusDriver
+
+!new Restaurant('restaurant11')
+!restaurant11.name := 'Casa de Tapas'
+
+!new Owner('owner25')
+!owner25.name := 'Juan Torres'
+!owner25.percentageShares := 60
+
+!new Owner('owner26')
+!owner26.name := 'Carmen Ruiz'
+!owner26.percentageShares := 40
+
+!insert (restaurant11, owner25) into RestaurantOwner
+!insert (restaurant11, owner26) into RestaurantOwner
+
+!new Table('table25')
+!table25.number := 3  -- Using an ordinal form
+!table25.description := 'Small private booth with limited view.'
+!table25.capacity := 2
+
+!new Table('table26')
+!table26.number := 4  -- Using an ordinal form
+!table26.description := 'Communal table for larger group gatherings.'
+!table26.capacity := 10
+
+!new Individual('individualReservation7')
+!individualReservation7.time := Time('20:00')
+!individualReservation7.date := Date('2023-10-17')
+!individualReservation7.numberPeople := 1
+!individualReservation7.name := 'Rashid Khan'
+!individualReservation7.phoneNumber := '555-3210'
+!individualReservation7.number := 5003
+!individualReservation7.seating := #Inside
+!individualReservation7.smoking := #NonSmoking
+
+!insert (restaurant11, individualReservation7) into RestaurantReservation
+!insert (individualReservation7, table25) into ReservationTable
+
+!new RegularCustomer('customer5')
+!customer5.name := 'Rashid Khan'
+!customer5.prefferedLanguage := #English
+
+!insert (individualReservation7, customer5) into ReservationCustomer
+
+!new Waiter('waiter19')
+!waiter19.name := 'Ana López'
+!waiter19.dateOfBirth := Date('1994-01-10')
+!waiter19.phoneNumber := '555-4687'
+
+!insert (individualReservation7, waiter19) into ReservationWaiter
+
+!new ItemOrder('itemOrder12')
+!itemOrder12.time := Time('20:10')
+!insert (individualReservation7, itemOrder12) into ReservationItemOrdered
+
+!new MenuItem('menuItem16')
+!menuItem16.description := 'Patatas Bravas'
+!menuItem16.prepTime := 12.0
+!menuItem16.classification := #Apetizer
+
+!insert (itemOrder12, menuItem16) into ItemOrderMenuItem
+
+!new Chef('chef16')
+!chef16.name := 'Luis Martín'
+!chef16.dateOfBirth := Date('1987-11-20')
+!chef16.phoneNumber := '555-4578'
+
+!insert (menuItem16, chef16) into MenuItemChef
+
+!new Cook('cook18')
+!cook18.name := 'Manuel Fernández'
+!cook18.dateOfBirth := Date('1979-04-18')
+!cook18.phoneNumber := '555-4245'
+!cook18.yearsOfExperience := 15
+
+!insert (chef16, cook18) into ChefCook
+
+!new Banquet('banquet9')
+!banquet9.date := Date('2023-10-17')
+!banquet9.time := Time('21:30')
+!banquet9.numberPeople := 9
+!banquet9.groupName := 'Salsa Night Crew'
+!banquet9.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Digital Wallet
+!banquet9.busService := true
+
+!insert (restaurant11, banquet9) into RestaurantReservation
+!insert (banquet9, table26) into ReservationTable
+
+!insert (banquet9, waiter19) into ReservationWaiter
+
+!new Waiter('waiter20')
+!waiter20.name := 'Carlos Ramos'
+!waiter20.dateOfBirth := Date('1986-12-25')
+!waiter20.phoneNumber := '555-3729'
+
+!insert (banquet9, waiter20) into ReservationWaiter
+
+!new HeadWaiter('headWaiter10')
+!headWaiter10.name := 'Marta González'
+!headWaiter10.dateOfBirth := Date('1980-09-06')
+!headWaiter10.phoneNumber := '555-3896'
+
+!insert (headWaiter10, waiter19) into HeadWaiterWaiter
+!insert (headWaiter10, waiter20) into HeadWaiterWaiter
+
+!new BusDriver('busdriver10')
+!busdriver10.name := 'Alejandro Peña'
+!busdriver10.dateOfBirth := Date('1983-07-14')
+!busdriver10.phoneNumber := '555-3975'
+
+!insert (banquet9, busdriver10) into BanquetBusDriver
+
+!new FoodItem('foodItem27')
+!foodItem27.number := 6001
+!foodItem27.description := 'Potatoes'
+!foodItem27.purchaseFlag := true
+!foodItem27.unit := #Pound  -- Using #Pound as placeholder for Kg
+
+!new FoodItem('foodItem28')
+!foodItem28.number := 6002
+!foodItem28.description := 'Aioli Sauce'
+!foodItem28.purchaseFlag := false
+!foodItem28.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!new Allergen('allergen16')
+!allergen16.type := #Lactose  -- Using #Lactose as placeholder for Eggs
+
+!insert (foodItem28, allergen16) into FoodItemAllergen
+
+!new FoodItem('foodItem29')
+!foodItem29.number := 6003
+!foodItem29.description := 'Tomato Sauce'
+!foodItem29.purchaseFlag := true
+!foodItem29.unit := #Ounce
+
+!insert (menuItem16, foodItem27) into MenuItemFoodItem
+!insert (menuItem16, foodItem28) into MenuItemFoodItem
+!insert (menuItem16, foodItem29) into MenuItemFoodItem
+
+!new DietaryRequirement('dietary5')
+!dietary5.diet := #Vegan  -- Using #Vegan as placeholder for Vegetarian
+
+!new Manager('manager4')
+!manager4.name := 'Pablo Santacruz'
+!manager4.dateOfBirth := Date('1973-05-03')
+!manager4.phoneNumber := '555-5587'
+
+!new Restaurant('restaurant15')
+!restaurant15.name := 'Taste of Diversity'
+
+!new Owner('owner32')
+!owner32.name := 'Aisha Mbatha'
+!owner32.percentageShares := 40
+
+!new Owner('owner33')
+!owner33.name := 'Dimitri Ivanov'
+!owner33.percentageShares := 35
+
+!new Owner('owner34')
+!owner34.name := 'Ling Wei'
+!owner34.percentageShares := 25
+
+!insert (restaurant15, owner32) into RestaurantOwner
+!insert (restaurant15, owner33) into RestaurantOwner
+!insert (restaurant15, owner34) into RestaurantOwner
+
+!new Table('table32')
+!table32.number := 301
+!table32.description := 'Main Hall Table with Panoramic View'
+!table32.capacity := 10
+
+!new Table('table33')
+!table33.number := 302
+!table33.description := 'Intimate Booth'
+!table33.capacity := 3
+
+!new Table('table34')
+!table34.number := 303
+!table34.description := 'Family Section Table'
+!table34.capacity := 6
+
+!new Table('table35')
+!table35.number := 304
+!table35.description := 'Outdoor Patio Table'
+!table35.capacity := 12
+
+!new RegularCustomer('customer8')
+!customer8.name := 'Jamal Abdi'
+!customer8.prefferedLanguage := #English  -- Using #English as placeholder for Swahili
+
+!new Chef('chef21')
+!chef21.name := 'Michela Conti'
+
+!new Cook('cook25')
+!cook25.name := 'Gabriel Romero'
+!cook25.dateOfBirth := Date('1989-02-15')  -- Dummy date of birth
+!cook25.yearsOfExperience := 6
+
+!new Cook('cook26')
+!cook26.name := 'Amina Al-Khalili'
+!cook26.dateOfBirth := Date('1992-07-11')  -- Dummy date of birth
+!cook26.yearsOfExperience := 4
+
+!insert (chef21, cook25) into ChefCook
+!insert (chef21, cook26) into ChefCook
+
+!new Individual('individualReservation9')
+!individualReservation9.time := Time('19:00')
+!individualReservation9.date := Date('2024-03-30')
+!individualReservation9.numberPeople := 1
+!individualReservation9.name := 'Oliver Green'
+!individualReservation9.phoneNumber := '+49 30 800 1234'
+!individualReservation9.number := 20240330
+!individualReservation9.seating := #Inside  -- Placeholder adapting for Outdoor, as no specific literal is defined
+!individualReservation9.smoking := #Smoking
+
+!insert (restaurant15, individualReservation9) into RestaurantReservation
+!insert (individualReservation9, table35) into ReservationTable
+
+!new HeadWaiter('headWaiter14')
+!headWaiter14.name := 'Salim Khan'
+!headWaiter14.dateOfBirth := Date('1979-05-09')  -- Dummy date of birth
+!headWaiter14.phoneNumber := '+49 30 1234 5678'  -- Dummy phone number
+
+!new Waiter('waiter29')
+!waiter29.name := 'Jasmine Rami'
+!waiter29.dateOfBirth := Date('1990-06-21')  -- Dummy date of birth
+!waiter29.phoneNumber := '+49 30 2345 6789'  -- Dummy phone number
+
+!new Waiter('waiter30')
+!waiter30.name := 'Tarek El-Tayeb'
+!waiter30.dateOfBirth := Date('1985-10-12')  -- Dummy date of birth
+!waiter30.phoneNumber := '+49 30 3456 7890'  -- Dummy phone number
+
+!new Waiter('waiter31')
+!waiter31.name := 'Sofia Novak'
+!waiter31.dateOfBirth := Date('1993-01-18')  -- Dummy date of birth
+!waiter31.phoneNumber := '+49 30 4567 8901'  -- Dummy phone number
+
+!insert (headWaiter14, waiter29) into HeadWaiterWaiter
+!insert (headWaiter14, waiter30) into HeadWaiterWaiter
+!insert (headWaiter14, waiter31) into HeadWaiterWaiter
+!insert (individualReservation9, waiter29) into ReservationWaiter
+
+!new ItemOrder('itemOrder19')
+!itemOrder19.time := Time('19:15')
+!insert (individualReservation9, itemOrder19) into ReservationItemOrdered
+
+!new MenuItem('menuItem24')
+!menuItem24.description := 'Pacific Rim Sushi'
+!menuItem24.prepTime := 20.0
+!menuItem24.classification := #Main
+
+!insert (itemOrder19, menuItem24) into ItemOrderMenuItem
+!insert (menuItem24, chef21) into MenuItemChef
+
+!new MenuItem('menuItem25')
+!menuItem25.description := 'Korean BBQ Short Ribs'
+!menuItem25.prepTime := 25.0
+!menuItem25.classification := #Main
+
+!new ItemOrder('itemOrder20')
+!itemOrder20.time := Time('19:30')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation9, itemOrder20) into ReservationItemOrdered
+!insert (itemOrder20, menuItem25) into ItemOrderMenuItem
+!insert (menuItem25, chef21) into MenuItemChef
+
+!new FoodItem('foodItem44')
+!foodItem44.number := 501
+!foodItem44.description := 'Sushi-Grade Tuna'
+!foodItem44.purchaseFlag := true
+!foodItem44.unit := #Pound  -- Using #Pound as placeholder for kg
+
+!insert (menuItem24, foodItem44) into MenuItemFoodItem
+
+!new FoodItem('foodItem45')
+!foodItem45.number := 502
+!foodItem45.description := 'Beef Short Ribs'
+!foodItem45.purchaseFlag := false
+!foodItem45.unit := #Pound  -- Using #Pound as placeholder for kg
+
+!insert (menuItem25, foodItem45) into MenuItemFoodItem
+
+!new Banquet('banquet13')
+!banquet13.date := Date('2024-03-30')
+!banquet13.time := Time('20:30')
+!banquet13.numberPeople := 120
+!banquet13.name := 'Cultural Exchange Department'
+!banquet13.phoneNumber := '+81 3 1234 5678'
+!banquet13.number := 20240330
+!banquet13.paymentMethod := #CreditCard  -- Placeholder for Wire Transfer
+!banquet13.busService := true
+
+!insert (restaurant15, banquet13) into RestaurantReservation
+
+!insert (banquet13, table32) into ReservationTable
+!insert (banquet13, table33) into ReservationTable
+!insert (banquet13, table34) into ReservationTable
+!insert (banquet13, table35) into ReservationTable
+!insert (banquet13, waiter30) into ReservationWaiter
+!insert (banquet13, waiter31) into ReservationWaiter
+
+!new BusDriver('busdriver13')
+!busdriver13.name := 'Yuri Petrov'
+!busdriver13.dateOfBirth := Date('1970-02-10')  -- Dummy date of birth
+!busdriver13.phoneNumber := '+49 30 5678 1234'  -- Dummy phone number
+
+!new BusDriver('busdriver14')
+!busdriver14.name := 'Lëa N\'Dour'
+!busdriver14.dateOfBirth := Date('1975-04-19')  -- Dummy date of birth
+!busdriver14.phoneNumber := '+49 30 6789 2345'  -- Dummy phone number
+
+!new BusDriver('busdriver15')
+!busdriver15.name := 'Thomas Svensson'
+!busdriver15.dateOfBirth := Date('1982-09-15')  -- Dummy date of birth
+!busdriver15.phoneNumber := '+49 30 7890 3456'  -- Dummy phone number
+
+!insert (banquet13, busdriver13) into BanquetBusDriver
+!insert (banquet13, busdriver14) into BanquetBusDriver
+!insert (banquet13, busdriver15) into BanquetBusDriver
+
+!new DietaryRequirement('dietary6')
+!dietary6.diet := #Vegan  -- Using #Vegan as placeholder for Kosher
+
+!insert (customer8, dietary6) into CustomerDietary
+
+!new Allergen('allergen21')
+!allergen21.type := #Lactose  -- Using #Lactose as placeholder for Fish
+
+!new Allergen('allergen22')
+!allergen22.type := #Lactose  -- Using #Lactose as placeholder for Sesame
+
+!insert (foodItem44, allergen21) into FoodItemAllergen
+
+!new Restaurant('restaurant19')
+!restaurant19.name := 'Skald\'s Hall'
+
+!new Owner('owner42')
+!owner42.name := 'Ingrid Svendsen'
+!owner42.percentageShares := 70
+
+!new Owner('owner43')
+!owner43.name := 'Erik Johansson'
+!owner43.percentageShares := 30
+
+!insert (restaurant19, owner42) into RestaurantOwner
+!insert (restaurant19, owner43) into RestaurantOwner
+
+!new RegularCustomer('customer11')
+!customer11.name := 'Leif Andersson'
+!customer11.prefferedLanguage := #English  -- Using #English as placeholder for Swedish
+
+!new RegularCustomer('customer12')
+!customer12.name := 'Bjorn Bergen'
+!customer12.prefferedLanguage := #English  -- Using #English as placeholder for Norwegian
+
+!new HeadWaiter('headWaiter18')
+!headWaiter18.name := 'Lovisa Nilsen'
+!headWaiter18.dateOfBirth := Date('1976-09-19')
+!headWaiter18.phoneNumber := '+47 755 667 233'
+
+!new Waiter('waiter38')
+!waiter38.name := 'Sanna Olsson'
+!waiter38.dateOfBirth := Date('1988-03-22')
+!waiter38.phoneNumber := '+47 755 667 211'
+
+!new Waiter('waiter39')
+!waiter39.name := 'Elias Hansen'
+!waiter39.dateOfBirth := Date('1992-11-09')
+!waiter39.phoneNumber := '+47 755 667 199'
+
+!insert (headWaiter18, waiter38) into HeadWaiterWaiter
+!insert (headWaiter18, waiter39) into HeadWaiterWaiter
+
+!new Manager('manager7')
+!manager7.name := 'Johanna Berg'
+!manager7.dateOfBirth := Date('1980-05-10')
+!manager7.phoneNumber := '+47 755 667 100'
+
+!new Chef('chef26')
+!chef26.name := 'Knut Eriksen'
+!chef26.dateOfBirth := Date('1975-07-15')
+!chef26.phoneNumber := '+47 755 667 123'
+
+!new Cook('cook32')
+!cook32.name := 'Magnus Lars'
+!cook32.dateOfBirth := Date('1985-08-08')
+!cook32.phoneNumber := '+47 755 667 345'
+!cook32.yearsOfExperience := 7
+
+!new Cook('cook33')
+!cook33.name := 'Anette Strom'
+!cook33.dateOfBirth := Date('1987-12-01')
+!cook33.phoneNumber := '+47 755 667 456'
+!cook33.yearsOfExperience := 10
+
+!insert (chef26, cook32) into ChefCook
+!insert (chef26, cook33) into ChefCook
+
+!new BusDriver('busdriver18')
+!busdriver18.name := 'Jens Olesen'
+!busdriver18.dateOfBirth := Date('1970-01-29')
+!busdriver18.phoneNumber := '+47 755 667 789'
+
+!new Table('table43')
+!table43.number := 7
+!table43.description := 'Fireplace nook, intimate'
+!table43.capacity := 2
+
+!new Table('table44')
+!table44.number := 8
+!table44.description := 'Heritage tapestry, spacious'
+!table44.capacity := 6
+
+!new Table('table45')
+!table45.number := 9
+!table45.description := 'Grand hall, banquet style'
+!table45.capacity := 22  -- Adjust this to ensure the banquet reservation tables' total capacity matches or exceeds the people reserved.
+
+!new Individual('individualReservation13')
+!individualReservation13.time := Time('19:45')
+!individualReservation13.date := Date('2023-10-25')
+!individualReservation13.numberPeople := 1
+!individualReservation13.name := 'Leif Andersson'
+!individualReservation13.phoneNumber := '+46 555 6789'
+!individualReservation13.number := 67890
+!individualReservation13.seating := #Inside  -- Using #Inside as placeholder for Fireplace Nook
+!individualReservation13.smoking := #NonSmoking
+
+!insert (restaurant19, individualReservation13) into RestaurantReservation
+!insert (individualReservation13, table43) into ReservationTable
+!insert (individualReservation13, waiter38) into ReservationWaiter
+
+!insert (individualReservation13, customer11) into ReservationCustomer
+
+!new Banquet('banquet16')
+!banquet16.date := Date('2023-10-28')
+!banquet16.time := Time('16:30')
+!banquet16.numberPeople := 20
+!banquet16.name := 'Nordic Heritage Celebration'
+!banquet16.paymentMethod := #CreditCard  -- Using placeholder for Bank Transfer
+!banquet16.busService := true
+
+!insert (restaurant19, banquet16) into RestaurantReservation
+!insert (banquet16, table44) into ReservationTable
+!insert (banquet16, table45) into ReservationTable
+
+!insert (banquet16, waiter39) into ReservationWaiter
+!insert (banquet16, waiter38) into ReservationWaiter
+
+!insert (banquet16, busdriver18) into BanquetBusDriver
+
+!new ItemOrder('itemOrder26')
+!itemOrder26.time := Time('20:00')
+!insert (individualReservation13, itemOrder26) into ReservationItemOrdered
+
+!new MenuItem('menuItem31')
+!menuItem31.description := 'Nordic Smorrebrod'
+!menuItem31.prepTime := 15.0
+!menuItem31.classification := #Apetizer
+
+!insert (itemOrder26, menuItem31) into ItemOrderMenuItem
+!insert (menuItem31, chef26) into MenuItemChef
+
+!new MenuItem('menuItem32')
+!menuItem32.description := 'Reindeer Stew'
+!menuItem32.prepTime := 40.0
+!menuItem32.classification := #Main
+
+!new ItemOrder('itemOrder27')
+!itemOrder27.time := Time('20:15')
+!insert (individualReservation13, itemOrder27) into ReservationItemOrdered
+!insert (itemOrder27, menuItem32) into ItemOrderMenuItem
+!insert (menuItem32, chef26) into MenuItemChef
+
+!new ItemOrder('itemOrder28')
+!itemOrder28.time := Time('17:00')
+!insert (banquet16, itemOrder28) into ReservationItemOrdered
+
+!new MenuItem('menuItem33')
+!menuItem33.description := 'Swedish Meatballs'
+!menuItem33.prepTime := 25.0
+!menuItem33.classification := #Main
+
+!insert (itemOrder28, menuItem33) into ItemOrderMenuItem
+!insert (menuItem33, chef26) into MenuItemChef
+
+!new MenuItem('menuItem34')
+!menuItem34.description := 'Norwegian Salmon'
+!menuItem34.prepTime := 30.0
+!menuItem34.classification := #Main
+
+!new ItemOrder('itemOrder29')
+!itemOrder29.time := Time('17:15')
+!insert (banquet16, itemOrder29) into ReservationItemOrdered
+!insert (itemOrder29, menuItem34) into ItemOrderMenuItem
+!insert (menuItem34, chef26) into MenuItemChef
+
+!new FoodItem('foodItem54')
+!foodItem54.number := 10001
+!foodItem54.description := 'Rye Bread'
+!foodItem54.purchaseFlag := true
+!foodItem54.unit := #Pound  -- Using #Pound as placeholder for Loaves
+
+!new FoodItem('foodItem55')
+!foodItem55.number := 10002
+!foodItem55.description := 'Cured Meats'
+!foodItem55.purchaseFlag := true
+!foodItem55.unit := #Gram
+
+!new FoodItem('foodItem56')
+!foodItem56.number := 10003
+!foodItem56.description := 'Pickled Herring'
+!foodItem56.purchaseFlag := true
+!foodItem56.unit := #Ounce  -- Using #Ounce as placeholder for Jars
+
+!insert (menuItem31, foodItem54) into MenuItemFoodItem
+!insert (menuItem31, foodItem55) into MenuItemFoodItem
+!insert (menuItem31, foodItem56) into MenuItemFoodItem
+
+!new FoodItem('foodItem57')
+!foodItem57.number := 10004
+!foodItem57.description := 'Reindeer Meat'
+!foodItem57.purchaseFlag := false
+!foodItem57.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem58')
+!foodItem58.number := 10005
+!foodItem58.description := 'Carrots'
+!foodItem58.purchaseFlag := true
+!foodItem58.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem59')
+!foodItem59.number := 10006
+!foodItem59.description := 'Potatoes'
+!foodItem59.purchaseFlag := true
+!foodItem59.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!insert (menuItem32, foodItem57) into MenuItemFoodItem
+!insert (menuItem32, foodItem58) into MenuItemFoodItem
+!insert (menuItem32, foodItem59) into MenuItemFoodItem
+
+!new FoodItem('foodItem60')
+!foodItem60.number := 10007
+!foodItem60.description := 'Minced Meat'
+!foodItem60.purchaseFlag := true
+!foodItem60.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem61')
+!foodItem61.number := 10008
+!foodItem61.description := 'Lingonberry'
+!foodItem61.purchaseFlag := true
+!foodItem61.unit := #Ounce  -- Using #Ounce as placeholder for Jars
+
+!new FoodItem('foodItem62')
+!foodItem62.number := 10009
+!foodItem62.description := 'Cream'
+!foodItem62.purchaseFlag := true
+!foodItem62.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem33, foodItem60) into MenuItemFoodItem
+!insert (menuItem33, foodItem61) into MenuItemFoodItem
+!insert (menuItem33, foodItem62) into MenuItemFoodItem
+
+!new FoodItem('foodItem63')
+!foodItem63.number := 10010
+!foodItem63.description := 'Salmon'
+!foodItem63.purchaseFlag := false
+!foodItem63.unit := #Gram
+
+!new FoodItem('foodItem64')
+!foodItem64.number := 10011
+!foodItem64.description := 'Dill'
+!foodItem64.purchaseFlag := true
+!foodItem64.unit := #Dozen  -- Using #Dozen as placeholder for Bunches
+
+!new FoodItem('foodItem65')
+!foodItem65.number := 10012
+!foodItem65.description := 'Lemon'
+!foodItem65.purchaseFlag := true
+!foodItem65.unit := #Pound  -- Using #Pound as placeholder
+
+!insert (menuItem34, foodItem63) into MenuItemFoodItem
+!insert (menuItem34, foodItem64) into MenuItemFoodItem
+!insert (menuItem34, foodItem65) into MenuItemFoodItem
+
+!new Allergen('allergen27')
+!allergen27.type := #Lactose  -- Using #Lactose as placeholder for Fish
+
+!new Allergen('allergen28')
+!allergen28.type := #Lactose
+
+!insert (foodItem63, allergen27) into FoodItemAllergen
+!insert (foodItem62, allergen28) into FoodItemAllergen
+

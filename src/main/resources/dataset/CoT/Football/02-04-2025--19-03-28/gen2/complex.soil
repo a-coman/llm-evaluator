@@ -1,0 +1,181 @@
+!new Club('club13')
+!club13.name := 'Manchester United FC'
+!club13.homeGround := 'Old Trafford'
+!club13.chairman := 'Joel Glazer'
+
+!new Club('club14')
+!club14.name := 'Liverpool FC'
+!club14.homeGround := 'Anfield'
+!club14.chairman := 'Tom Werner'
+
+!new Team('teamN')
+!teamN.name := 'Manchester United Senior Team'
+
+!new Team('teamO')
+!teamO.name := 'Liverpool Senior Team'
+
+!insert (club13, teamN) into ClubTeam
+!insert (club14, teamO) into ClubTeam
+
+!new Competition('competition7')
+!competition7.name := 'English Premier League'
+!competition7.type := 'Top Tier League'
+
+!new Match('match7')
+!match7.date := '2023-11-05'
+!match7.homeAway := false
+
+!insert (competition7, match7) into CompetitionMatch
+
+!insert (teamO, match7) into LocalMatch
+!insert (teamN, match7) into VisitorMatch
+
+!new Player('player13')
+!player13.name := 'Marcus Rashford'
+!player13.age := 26
+!player13.bestFoot := #RIGHT
+!player13.phoneNumber := '+44 7709123456'
+
+!new Player('player14')
+!player14.name := 'Mohamed Salah'
+!player14.age := 31
+!player14.bestFoot := #LEFT
+!player14.phoneNumber := '+44 7712345678'
+
+!insert (teamN, player13) into TeamPlayer
+!insert (teamO, player14) into TeamPlayer
+
+!new Position('position17')
+!position17.positionName := #FORWARD
+
+!new Position('position19')
+!position19.positionName := #MIDFIELDER
+
+!insert (player13, position17) into PlayerPositions
+!insert (player14, position19) into PlayerPositions
+
+!new MatchReport('matchReport7')
+!matchReport7.duration := 90
+!matchReport7.scoreVisitor := 3
+!matchReport7.scoreLocal := 3
+
+!insert (match7, matchReport7) into MatchMatchReport
+
+!new MatchEvent('matchEvent20')
+!matchEvent20.eventType := #GOAL
+!matchEvent20.time := 15
+
+!new MatchEvent('matchEvent21')
+!matchEvent21.eventType := #GOAL
+!matchEvent21.time := 27
+
+!new MatchEvent('matchEvent22')
+!matchEvent22.eventType := #GOAL
+!matchEvent22.time := 47
+
+!new MatchEvent('matchEvent23')
+!matchEvent23.eventType := #GOAL
+!matchEvent23.time := 75
+
+!new MatchEvent('matchEvent24')
+!matchEvent24.eventType := #GOAL
+!matchEvent24.time := 89
+
+!insert (match7, matchEvent20) into MatchMatchEvent
+!insert (match7, matchEvent21) into MatchMatchEvent
+!insert (match7, matchEvent22) into MatchMatchEvent
+!insert (match7, matchEvent23) into MatchMatchEvent
+!insert (match7, matchEvent24) into MatchMatchEvent
+
+!new MatchNote('matchNote5')
+!matchNote5.note := 'An exhilarating match with outstanding offensive displays from both teams.'
+!matchNote5.date := '2023-11-05'
+
+!insert (match7, matchNote5) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer10')
+!matchPlayer10.booked := false
+!matchPlayer10.goals := 2
+!matchPlayer10.rating := 9
+
+!insert (player13, matchPlayer10) into PlayerMatch
+!insert (match7, matchPlayer10) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition10')
+!matchPlayerPosition10.positionName := #FORWARD
+!matchPlayerPosition10.number := 10
+
+!insert (matchPlayer10, matchPlayerPosition10) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer11')
+!matchPlayer11.booked := false
+!matchPlayer11.goals := 1
+!matchPlayer11.rating := 8
+
+!insert (player14, matchPlayer11) into PlayerMatch
+!insert (match7, matchPlayer11) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition12')
+!matchPlayerPosition12.positionName := #MIDFIELDER
+!matchPlayerPosition12.number := 11
+
+!insert (matchPlayer11, matchPlayerPosition12) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession12')
+!trainingSession12.date := '2023-11-03'
+!trainingSession12.location := 'Carrington Training Centre'
+!trainingSession12.purpose := 'Tactical Review of Opponent Strategies'
+
+!insert (teamN, trainingSession12) into TeamTraining
+
+!new TrainingNotes('trainingNote14')
+!trainingNote14.note := 'Emphasis on weaknesses in opponent defense identified through video analysis.'
+!trainingNote14.date := '2023-11-03'
+
+!insert (trainingSession12, trainingNote14) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend6')
+!failedAttend6.reason := 'Illness - Rashford'
+
+!insert (trainingSession12, failedAttend6) into TrainingFailded
+!insert (failedAttend6, player13) into FailedPlayer
+
+!new TrainingObjective('trainingObjective13')
+!trainingObjective13.areaToImprove := 'Penalty accuracy'
+!trainingObjective13.startDate := '2023-10-01'
+!trainingObjective13.endDate := '2023-11-30'
+!trainingObjective13.success := true
+
+!insert (trainingObjective13, player14) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective14')
+!trainingObjective14.areaToImprove := 'Endurance'
+!trainingObjective14.startDate := '2023-10-01'
+!trainingObjective14.endDate := '2023-12-31'
+!trainingObjective14.success := false
+
+!insert (trainingObjective14, player13) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession13')
+!trainingSession13.date := '2023-11-04'
+!trainingSession13.location := 'Melwood Training Ground'
+!trainingSession13.purpose := 'Match Preparation'
+
+!insert (teamO, trainingSession13) into TeamTraining
+
+!new TrainingNotes('trainingNote15')
+!trainingNote15.note := 'Full focus on set-piece strategies.'
+!trainingNote15.date := '2023-11-04'
+
+!insert (trainingSession13, trainingNote15) into TrainingTrainingNotes
+
+!new PlayerNotes('playerNote10')
+!playerNote10.note := 'Demonstrated tactical awareness and resilience in attack.'
+!playerNote10.date := '2023-10-31'
+
+!new PlayerNotes('playerNote11')
+!playerNote11.note := 'Consistently poses a threat to defenders with his speed and precision.'
+!playerNote11.date := '2023-10-28'
+
+!insert (player13, playerNote10) into PlayerPlayerNotes
+!insert (player14, playerNote11) into PlayerPlayerNotes

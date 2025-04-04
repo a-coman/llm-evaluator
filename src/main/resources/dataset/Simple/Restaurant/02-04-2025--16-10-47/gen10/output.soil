@@ -1,0 +1,104 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant10')
+!restaurant10.name := 'Urban Munchies'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner19')
+!owner19.name := 'Lucas Almeida'
+!owner19.percentageShares := 40
+
+!new Owner('owner20')
+!owner20.name := 'Emma Davis'
+!owner20.percentageShares := 60
+
+-- Establish RestaurantOwner association
+!insert (restaurant10, owner19) into RestaurantOwner
+!insert (restaurant10, owner20) into RestaurantOwner
+
+-- Creating an assortment of tables
+!new Table('table19')
+!table19.number := 1001
+!table19.description := 'Industrial Look'
+!table19.capacity := 4
+
+!new Table('table20')
+!table20.number := 1002
+!table20.description := 'Ambient Booth'
+!table20.capacity := 4
+
+-- Setting up staff
+!new HeadWaiter('headwaiter10')
+!headwaiter10.name := 'Jordan Park'
+!headwaiter10.dateOfBirth := Date('1985-12-03')
+!headwaiter10.phoneNumber := '555-8765'
+
+!new Waiter('waiter14')
+!waiter14.name := 'Alice Kim'
+!waiter14.dateOfBirth := Date('1993-04-17')
+!waiter14.phoneNumber := '555-2345'
+!waiter14.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter10, waiter14) into HeadWaiterWaiter
+
+-- Establishing a Banquet Reservation for a charity event
+!new Banquet('reservation10')
+!reservation10.time := Time('18:30')
+!reservation10.date := Date('2024-06-15')
+!reservation10.numberPeople := 8
+!reservation10.name := 'Charity Fundraiser'
+!reservation10.phoneNumber := '555-4455'
+!reservation10.number := 208
+!reservation10.groupName := 'Hope Initiative'
+!reservation10.paymentMethod := #CreditCard
+!reservation10.busService := true
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant10, reservation10) into RestaurantReservation
+!insert (reservation10, waiter14) into ReservationWaiter
+!insert (reservation10, table19) into ReservationTable
+!insert (reservation10, table20) into ReservationTable
+
+-- Creating a BusDriver for the charity event
+!new BusDriver('busdriver4')
+!busdriver4.name := 'Jack Ryan'
+!busdriver4.dateOfBirth := Date('1992-07-02')
+!busdriver4.phoneNumber := '555-7865'
+!busdriver4.driverLicenseNr := 'DL123456'
+
+-- Establish BanquetBusDriver association
+!insert (reservation10, busdriver4) into BanquetBusDriver
+
+-- Adding a MenuItem for dinner
+!new MenuItem('menuItem10')
+!menuItem10.description := 'Roasted Vegetable Platter'
+!menuItem10.prepTime := 15.0
+!menuItem10.classification := #Apetizer
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef10')
+!chef10.name := 'Gino D’Acampo'
+!chef10.dateOfBirth := Date('1976-07-17')
+!chef10.phoneNumber := '555-1212'
+
+!insert (menuItem10, chef10) into MenuItemChef
+
+-- Creating Cook under the new Chef
+!new Cook('cook10')
+!cook10.name := 'Giada De Laurentiis'
+!cook10.dateOfBirth := Date('1970-08-22')
+!cook10.phoneNumber := '555-3434'
+!cook10.yearsOfExperience := 28
+
+-- Establishing association between Chef and Cook
+!insert (chef10, cook10) into ChefCook
+
+-- Creating an ItemOrder for the event
+!new ItemOrder('order10')
+!order10.time := Time('19:00')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order10, menuItem10) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation10, order10) into ReservationItemOrdered

@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice7')
+!rentalOffice7.name := 'Beachside Rentals'
+!rentalOffice7.number := 202
+!rentalOffice7.address := '321 Ocean Avenue, Miami, FL, 33139'
+
+!new Vehicle('vehicle6')
+!vehicle6.id := 11
+!vehicle6.registrationState := #FL
+!vehicle6.licensePlateNumber := 'FL7896MOT'
+!vehicle6.vehicleTypeCode := #OPEN_TRAILER
+!vehicle6.registrationLastMaintenanceDate := Date('2023-06-12')
+!vehicle6.expirationDate := Date('2024-06-12')
+
+!new Truck('truck6')
+!truck6.id := 12
+!truck6.registrationState := #FL
+!truck6.licensePlateNumber := 'FL3421BOX'
+!truck6.vehicleTypeCode := #TRUCK
+!truck6.registrationLastMaintenanceDate := Date('2023-05-05')
+!truck6.expirationDate := Date('2023-12-15')
+!truck6.odometerReading := 255000
+!truck6.gasTankCapacity := 60.0
+!truck6.workingRadio := false
+!truck6.mileage := 10
+
+!new Individual('individualCustomer5')
+!individualCustomer5.name := 'Maria Garcia'
+!individualCustomer5.address := '101 Cypress Street, Orlando, FL, 32801'
+!individualCustomer5.poorRisk := false
+!individualCustomer5.homePhone := '305-987-6543'
+!individualCustomer5.driverLicenseState := #FL
+!individualCustomer5.driverLicenseNumber := 6543210
+!individualCustomer5.driverLicenseExpirationDate := Date('2025-09-12')
+
+!new Company('company5')
+!company5.name := 'Sunshine Logistics'
+!company5.address := '789 Coastline Boulevard, Fort Lauderdale, FL, 33301'
+!company5.poorRisk := false
+!company5.idNumber := 202345
+
+!new RentalAgreement('rentalAgreement9')
+!rentalAgreement9.number := 3003
+!rentalAgreement9.rentalDate := Date('2023-10-05')
+!rentalAgreement9.anticipatedDuration := 3
+!rentalAgreement9.depositPaid := 100.00
+!rentalAgreement9.quotedDailyRate := 25.00
+!rentalAgreement9.quotedRatePerMile := 0.15
+
+!new RentalAgreement('rentalAgreement10')
+!rentalAgreement10.number := 3004
+!rentalAgreement10.rentalDate := Date('2023-11-01')
+!rentalAgreement10.anticipatedDuration := 30
+!rentalAgreement10.depositPaid := 750.00
+!rentalAgreement10.quotedDailyRate := 120.00
+!rentalAgreement10.quotedRatePerMile := 0.35
+
+!insert (rentalOffice7, vehicle6) into RentalOfficeVehicle
+!insert (rentalOffice7, truck6) into RentalOfficeVehicle
+
+!insert (rentalOffice7, rentalAgreement9) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice7, rentalAgreement9) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement9, vehicle6) into RentalAgreementVehicle
+!insert (rentalAgreement9, individualCustomer5) into RentalAgreementCustomer
+
+!insert (rentalOffice7, rentalAgreement10) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice7, rentalAgreement10) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement10, truck6) into RentalAgreementVehicle
+!insert (rentalAgreement10, company5) into RentalAgreementCustomer

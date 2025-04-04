@@ -1,0 +1,51 @@
+!new Bank('bank20')
+!bank20.country := 'Turkey'
+!bank20.name := 'Garanti BBVA'
+!bank20.bic := 'TGBATRIS'
+
+!new Account('account55')
+!account55.iban := 'TR330006100519786457841326'
+!account55.balance := 5500
+
+!new Account('account56')
+!account56.iban := 'TR330006100519786457841327'
+!account56.balance := 1200
+
+!new Account('account57')
+!account57.iban := 'TR330006100519786457841328'
+!account57.balance := 4000
+
+!new Person('person59')
+!person59.firstName := 'Elif'
+!person59.lastName := 'Yilmaz'
+!person59.age := 34
+
+!new Person('person60')
+!person60.firstName := 'Murat'
+!person60.lastName := 'Ozturk'
+!person60.age := 48
+
+!new Person('person61')
+!person61.firstName := 'Selin'
+!person61.lastName := 'Demir'
+!person61.age := 28
+
+-- Associations
+!insert (bank20, account55) into AccountOfBanks
+!insert (bank20, account56) into AccountOfBanks
+!insert (bank20, account57) into AccountOfBanks
+
+!insert (person59, account55) into Ownership
+!insert (person60, account55) into Ownership
+
+!insert (person60, account56) into Ownership
+!insert (person61, account56) into Ownership
+
+!insert (person61, account57) into Ownership
+!insert (person59, account57) into Ownership
+
+!insert (person59, account56) into Use
+!insert (person60, account57) into Use
+
+!insert (person61, account55) into Use
+!insert (person60, account55) into Use

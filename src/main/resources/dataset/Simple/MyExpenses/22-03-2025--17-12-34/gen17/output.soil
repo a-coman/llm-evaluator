@@ -1,0 +1,33 @@
+!new Expense('expense19')
+!expense19.amount := 1500.0
+!expense19.startDate := Date('2024-07-01')
+!expense19.endDate := Date('2024-07-31')
+
+!new Currency('currency17')
+!currency17.name := 'New Zealand Dollar'
+!currency17.abbreviation := 'NZD'
+
+!new Bill('bill32')
+!bill32.amount := 1200.0
+!bill32.category := 'Vacation'
+!bill32.date := Date('2024-07-10')
+!bill32.paymentMethod := #CREDIT_CARD
+!bill32.status := #VALIDATED
+
+!new Bill('bill33')
+!bill33.amount := 300.0
+!bill33.category := 'Entertainment'
+!bill33.date := Date('2024-07-20')
+!bill33.paymentMethod := #CASH
+!bill33.status := #DRAFT
+
+!insert (expense19, bill32) into ExpenseContainsBills
+!insert (expense19, bill33) into ExpenseContainsBills
+
+!insert (bill32, currency17) into BillCurrency
+!insert (bill33, currency17) into BillCurrency
+
+!new Comment('comment19')
+!comment19.text := 'July vacation and entertainment expenses'
+
+!insert (expense19, comment19) into ExpenseComment

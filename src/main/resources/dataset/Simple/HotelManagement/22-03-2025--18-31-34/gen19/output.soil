@@ -1,0 +1,55 @@
+!new Booking('booking20')
+!booking20.startDate := '2025-01-10'
+!booking20.endDate := '2025-01-15'
+!booking20.canceled := false
+!booking20.bookingId := 119
+!booking20.confirmed := true
+
+!new Bill('bill20')
+!bill20.price := 1300.00
+!bill20.billId := 219
+
+!new FreeRoomTypesDTO('roomType20')
+!roomType20.roomTypeDescription := 'Contemporary Suite'
+!roomType20.numBeds := 3
+!roomType20.pricePerNight := 350.00
+!roomType20.numFreeRooms := 2
+
+!new Customer('customer20')
+!customer20.firstName := 'Quentin'
+!customer20.lastName := 'Xavier'
+
+!new RoomReservation('reservation20')
+!reservation20.checkInDate := '2025-01-10'
+!reservation20.checkOutDate := '2025-01-15'
+
+!new RoomExtra('extra20')
+!extra20.price := 150.00
+!extra20.description := 'Private Chef Dinner'
+
+!new Room('room31')
+!room31.numBeds := 3
+!room31.pricePerNight := 340.00
+!room31.occupied := true
+!room31.blocked := false
+!room31.roomNumber := 131
+
+!new Room('room32')
+!room32.numBeds := 3
+!room32.pricePerNight := 360.00
+!room32.occupied := false
+!room32.blocked := false
+!room32.roomNumber := 132
+
+!insert (booking20, bill20) into BookingBill
+
+!insert (booking20, customer20) into BookingCustomer
+
+!insert (booking20, reservation20) into BookingRoomReservation
+
+!insert (reservation20, extra20) into RoomReservationExtras
+
+!insert (reservation20, room31) into RoomReservationRoom
+!insert (reservation20, room32) into RoomReservationRoom
+
+!insert (bill20, reservation20) into BillRoomReservation

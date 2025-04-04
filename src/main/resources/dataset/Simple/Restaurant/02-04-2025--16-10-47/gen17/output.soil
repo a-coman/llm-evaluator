@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant17')
+!restaurant17.name := 'Gastronomic Retreat'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner33')
+!owner33.name := 'James Harris'
+!owner33.percentageShares := 55
+
+!new Owner('owner34')
+!owner34.name := 'Mia Campbell'
+!owner34.percentageShares := 45
+
+-- Establish RestaurantOwner association
+!insert (restaurant17, owner33) into RestaurantOwner
+!insert (restaurant17, owner34) into RestaurantOwner
+
+-- Creating eclectic tables
+!new Table('table33')
+!table33.number := 1701
+!table33.description := 'Candlelit Haven'
+!table33.capacity := 4
+
+!new Table('table34')
+!table34.number := 1702
+!table34.description := 'Artisan Corner'
+!table34.capacity := 6
+
+-- Establishing staff for a refined dining experience
+!new HeadWaiter('headwaiter17')
+!headwaiter17.name := 'Emma Chen'
+!headwaiter17.dateOfBirth := Date('1982-07-21')
+!headwaiter17.phoneNumber := '555-4444'
+
+!new Waiter('waiter21')
+!waiter21.name := 'Liam O\'Neil'
+!waiter21.dateOfBirth := Date('1993-03-10')
+!waiter21.phoneNumber := '555-5555'
+!waiter21.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter17, waiter21) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a special dinner
+!new Individual('reservation17')
+!reservation17.time := Time('18:30')
+!reservation17.date := Date('2024-12-24')
+!reservation17.numberPeople := 4
+!reservation17.name := 'Christmas Eve Dinner'
+!reservation17.phoneNumber := '555-6666'
+!reservation17.number := 215
+!reservation17.seating := #Inside
+!reservation17.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant17, reservation17) into RestaurantReservation
+!insert (reservation17, waiter21) into ReservationWaiter
+!insert (reservation17, table33) into ReservationTable
+!insert (reservation17, table34) into ReservationTable
+
+-- Adding a festive MenuItem for the holiday dinner
+!new MenuItem('menuItem17')
+!menuItem17.description := 'Roast Turkey with Cranberry Sauce'
+!menuItem17.prepTime := 45.0
+!menuItem17.classification := #Main
+
+-- Associating MenuItem with an expert Chef
+!new Chef('chef17')
+!chef17.name := 'Thomas Keller'
+!chef17.dateOfBirth := Date('1955-10-14')
+!chef17.phoneNumber := '555-7777'
+
+!insert (menuItem17, chef17) into MenuItemChef
+
+-- Creating Cook under the Chef's supervision
+!new Cook('cook17')
+!cook17.name := 'Ina Garten'
+!cook17.dateOfBirth := Date('1948-02-02')
+!cook17.phoneNumber := '555-8888'
+!cook17.yearsOfExperience := 30
+
+-- Establishing association between Chef and Cook
+!insert (chef17, cook17) into ChefCook
+
+-- Creating an ItemOrder for the holiday dinner
+!new ItemOrder('order17')
+!order17.time := Time('19:00')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order17, menuItem17) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation17, order17) into ReservationItemOrdered

@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant6')
+!restaurant6.name := 'Coastal Catch'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner11')
+!owner11.name := 'Nina Patel'
+!owner11.percentageShares := 55
+
+!new Owner('owner12')
+!owner12.name := 'Omar Khan'
+!owner12.percentageShares := 45
+
+-- Establish RestaurantOwner association
+!insert (restaurant6, owner11) into RestaurantOwner
+!insert (restaurant6, owner12) into RestaurantOwner
+
+-- Creating Tables offering unique atmospheres
+!new Table('table11')
+!table11.number := 601
+!table11.description := 'Seaside Nook'
+!table11.capacity := 3
+
+!new Table('table12')
+!table12.number := 602
+!table12.description := 'Skyline Loft'
+!table12.capacity := 5
+
+-- Creating a mixture of Workers for efficient service
+!new HeadWaiter('headwaiter6')
+!headwaiter6.name := 'Dylan Thomas'
+!headwaiter6.dateOfBirth := Date('1975-03-11')
+!headwaiter6.phoneNumber := '555-2462'
+
+!new Waiter('waiter9')
+!waiter9.name := 'Lara Croft'
+!waiter9.dateOfBirth := Date('1992-11-19')
+!waiter9.phoneNumber := '555-5738'
+!waiter9.spokenLanguage := #Italian
+
+-- Establish association between HeadWaiter and Waiter
+!insert (headwaiter6, waiter9) into HeadWaiterWaiter
+
+-- Creating a unique Banquet Reservation
+!new Banquet('reservation6')
+!reservation6.time := Time('17:00')
+!reservation6.date := Date('2024-02-14')
+!reservation6.numberPeople := 8
+!reservation6.name := 'Valentine Special'
+!reservation6.phoneNumber := '555-3100'
+!reservation6.number := 204
+!reservation6.groupName := 'Couples Retreat'
+!reservation6.paymentMethod := #CreditCard
+!reservation6.busService := false
+
+-- Establish associations for Banquet Reservation
+!insert (restaurant6, reservation6) into RestaurantReservation
+!insert (reservation6, waiter9) into ReservationWaiter
+!insert (reservation6, table11) into ReservationTable
+!insert (reservation6, table12) into ReservationTable
+
+-- Create a MenuItem inspired by coastal dishes
+!new MenuItem('menuItem6')
+!menuItem6.description := 'Grilled Salmon with Lemon Butter'
+!menuItem6.prepTime := 25.0
+!menuItem6.classification := #Main
+
+-- Assign MenuItem to a renowned Chef
+!new Chef('chef6')
+!chef6.name := 'Rachel Ray'
+!chef6.dateOfBirth := Date('1973-08-25')
+!chef6.phoneNumber := '555-6521'
+
+!insert (menuItem6, chef6) into MenuItemChef
+
+-- Create a Cook with specialized skills
+!new Cook('cook6')
+!cook6.name := 'Bobby Flay'
+!cook6.dateOfBirth := Date('1964-12-10')
+!cook6.phoneNumber := '555-7894'
+!cook6.yearsOfExperience := 30
+
+-- Establish association between Chef and Cook
+!insert (chef6, cook6) into ChefCook
+
+-- Create an ItemOrder for the Banquet
+!new ItemOrder('order6')
+!order6.time := Time('17:30')
+
+-- Establish ItemOrderMenuItem association
+!insert (order6, menuItem6) into ItemOrderMenuItem
+
+-- Associate the ItemOrder with the Banquet Reservation
+!insert (reservation6, order6) into ReservationItemOrdered

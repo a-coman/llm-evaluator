@@ -1,0 +1,38 @@
+!new Bank('bank32')
+!bank32.country := 'Kenya'
+!bank32.name := 'Savannah Banking Corporation'
+!bank32.bic := 'SBCOKNNAXXX'
+
+!new Account('account75')
+!account75.iban := 'KE8888888888888888'
+!account75.balance := 1
+
+!new Account('account76')
+!account76.iban := 'KE9999999999999999'
+!account76.balance := 250000
+
+!new Person('person104')
+!person104.firstName := 'Achieng'
+!person104.lastName := 'Odhiambo'
+!person104.age := 19
+
+!new Person('person105')
+!person105.firstName := 'Kiprono'
+!person105.lastName := 'Kibet'
+!person105.age := 55
+
+!new Person('person106')
+!person106.firstName := 'Isingoma'
+!person106.lastName := 'Mukasa'
+!person106.age := 70
+
+!insert (person104, account75) into Ownership
+!insert (person105, account75) into Ownership
+!insert (person106, account76) into Ownership
+
+!insert (person104, account75) into Use
+!insert (person106, account75) into Use
+!insert (person105, account76) into Use
+
+!insert (bank32, account75) into AccountOfBanks
+!insert (bank32, account76) into AccountOfBanks

@@ -1,0 +1,71 @@
+!new AddressBook('addressBook15')
+
+!new Company('techInnovationsInc')
+!techInnovationsInc.name := 'Tech Innovations Inc'
+!techInnovationsInc.phone := '123-456-7890'
+!techInnovationsInc.website := 'www.techinnovations.com'
+!techInnovationsInc.email := 'info@techinnovations.com'
+!techInnovationsInc.industry := 'Software Development'
+
+!new Person('lucasTurner')
+!lucasTurner.name := 'Lucas Turner'
+!lucasTurner.phone := '555-123-4567'
+!lucasTurner.website := 'www.lucasturnerdev.com'
+!lucasTurner.email := 'lucas.turner@techinnovations.com'
+!lucasTurner.title := 'Lead Software Engineer'
+
+!new Note('developmentSprintNote')
+!developmentSprintNote.author := 'Lucas Turner'
+!developmentSprintNote.time := Date('2024-11-01')
+!developmentSprintNote.type := #MEETING
+!developmentSprintNote.comment := 'Led sprint planning meeting for software development team'
+
+!new Address('lucasAddress')
+!lucasAddress.city := 'San Francisco'
+!lucasAddress.houseNr := '456'
+!lucasAddress.street := 'Silicon Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, techInnovationsInc) into RelationshipToContact
+!insert (lucasTurner, employeeRelationship) into ContactToRelationship
+!insert (lucasTurner, lucasAddress) into ContactContainsAddress
+!insert (lucasTurner, developmentSprintNote) into ContactContainsNote
+
+!new Person('emmaBrooks')
+!emmaBrooks.name := 'Emma Brooks'
+!emmaBrooks.phone := '987-654-3210'
+!emmaBrooks.website := 'www.emmabrookstesting.com'
+!emmaBrooks.email := 'emma.brooks@example.com'
+!emmaBrooks.title := 'Quality Assurance Specialist'
+
+!new Note('qaReviewNote')
+!qaReviewNote.author := 'Emma Brooks'
+!qaReviewNote.time := Date('2024-11-10')
+!qaReviewNote.type := #CALL
+!qaReviewNote.comment := 'Reviewed software testing procedures with QA team'
+
+!new Address('emmaAddress')
+!emmaAddress.city := 'New York'
+!emmaAddress.houseNr := '789'
+!emmaAddress.street := 'Testing Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, lucasTurner) into RelationshipToContact
+!insert (emmaBrooks, subdivisionRelationship) into ContactToRelationship
+!insert (emmaBrooks, emmaAddress) into ContactContainsAddress
+!insert (emmaBrooks, qaReviewNote) into ContactContainsNote
+
+!new Address('techInnovationsAddress')
+!techInnovationsAddress.city := 'Los Angeles'
+!techInnovationsAddress.houseNr := '321'
+!techInnovationsAddress.street := 'Innovation Blvd'
+
+!insert (techInnovationsInc, techInnovationsAddress) into ContactContainsAddress
+
+!insert (addressBook15, techInnovationsInc) into AddressBookMadeOfContact
+!insert (addressBook15, lucasTurner) into AddressBookMadeOfContact
+!insert (addressBook15, emmaBrooks) into AddressBookMadeOfContact

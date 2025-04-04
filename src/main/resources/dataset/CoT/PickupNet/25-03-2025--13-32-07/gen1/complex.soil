@@ -1,0 +1,89 @@
+!new Driver('driver5')
+!driver5.id := 'D-001'
+!driver5.name := 'Emma Johnson'
+
+!new Driver('driver6')
+!driver6.id := 'D-002'
+!driver6.name := 'Lucas Garcia'
+
+!new Customer('customer5')
+!customer5.id := 'C-001'
+!customer5.name := 'Olivia Chan'
+!customer5.twitterUserName := '@oliviaC_global'
+
+!new Customer('customer6')
+!customer6.id := 'C-002'
+!customer6.name := 'Rajesh Patel'
+!customer6.twitterUserName := '@rajpatel_ekart'
+
+!new Shipment('shipment5')
+!shipment5.id := 'S-1001'
+!shipment5.status := #NEW
+
+!new Address('pickupAddress5')
+!pickupAddress5.text := '123 Market St, San Francisco, CA, USA'
+
+!new GeoLocation('pickupGeoLocation5')
+!pickupGeoLocation5.latitude := 37.7749
+!pickupGeoLocation5.longitude := -122.4194
+
+!new Address('deliveryAddress5')
+!deliveryAddress5.text := '456 Queen St W, Toronto, ON, Canada'
+
+!new GeoLocation('deliveryGeoLocation5')
+!deliveryGeoLocation5.latitude := 43.6510
+!deliveryGeoLocation5.longitude := -79.3470
+
+!new Shipment('shipment6')
+!shipment6.id := 'S-1002'
+!shipment6.status := #ASSIGNED
+
+!new Address('pickupAddress6')
+!pickupAddress6.text := '789 Park Ave, New York, NY, USA'
+
+!new GeoLocation('pickupGeoLocation6')
+!pickupGeoLocation6.latitude := 40.7128
+!pickupGeoLocation6.longitude := -74.0060
+
+!new Address('deliveryAddress6')
+!deliveryAddress6.text := '65 Oxford Cir, Birmingham, UK'
+
+!new GeoLocation('deliveryGeoLocation6')
+!deliveryGeoLocation6.latitude := 52.4862
+!deliveryGeoLocation6.longitude := -1.8904
+
+!new Station('station5')
+
+!insert (shipment5, pickupAddress5) into ShipmentContainsPickUpAddress
+
+!insert (shipment5, deliveryAddress5) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress5, pickupGeoLocation5) into AddressContainsGeoLocation
+
+!insert (deliveryAddress5, deliveryGeoLocation5) into AddressContainsGeoLocation
+
+!insert (shipment6, pickupAddress6) into ShipmentContainsPickUpAddress
+
+!insert (shipment6, deliveryAddress6) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress6, pickupGeoLocation6) into AddressContainsGeoLocation
+
+!insert (deliveryAddress6, deliveryGeoLocation6) into AddressContainsGeoLocation
+
+!insert (customer5, shipment5) into CustomerConsistsOfShipment
+
+!insert (customer6, shipment6) into CustomerConsistsOfShipment
+
+!insert (driver5, shipment6) into DriverShipment
+
+!insert (station5, shipment5) into StationShipment
+
+!insert (station5, shipment6) into StationShipment
+
+!insert (station5, driver5) into StationContainsDriver
+
+!insert (station5, driver6) into StationContainsDriver
+
+!insert (station5, customer5) into StationContainsCustomer
+
+!insert (station5, customer6) into StationContainsCustomer

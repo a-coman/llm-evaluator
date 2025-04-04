@@ -1,0 +1,44 @@
+!new Driver('driver6')
+!driver6.id := 'D006'
+!driver6.name := 'Liam Harris'
+
+!new Shipment('shipment10')
+!shipment10.id := 'S010'
+!shipment10.status := #ASSIGNED
+
+!new Address('address11')
+!address11.text := '555 River Road'
+
+!new Address('address12')
+!address12.text := '666 Lake View Street'
+
+!new GeoLocation('geoLocation11')
+!geoLocation11.latitude := 41.8781
+!geoLocation11.longitude := -87.6298
+
+!new GeoLocation('geoLocation12')
+!geoLocation12.latitude := 34.6937
+!geoLocation12.longitude := 135.5022
+
+!new Customer('customer6')
+!customer6.id := 'C006'
+!customer6.name := 'Mona Evans'
+!customer6.twitterUserName := '@mona_evans'
+
+!new Station('station5')
+
+!insert (driver6, shipment10) into DriverShipment
+
+!insert (shipment10, address11) into ShipmentContainsPickUpAddress
+!insert (shipment10, address12) into ShipmentContainsDeliveryAddress
+
+!insert (address11, geoLocation11) into AddressContainsGeoLocation
+!insert (address12, geoLocation12) into AddressContainsGeoLocation
+
+!insert (customer6, shipment10) into CustomerConsistsOfShipment
+
+!insert (station5, customer6) into StationContainsCustomer
+
+!insert (station5, shipment10) into StationShipment
+
+!insert (station5, driver6) into StationContainsDriver

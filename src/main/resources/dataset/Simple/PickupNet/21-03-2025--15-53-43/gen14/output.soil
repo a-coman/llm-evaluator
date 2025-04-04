@@ -1,0 +1,44 @@
+!new Driver('driver15')
+!driver15.id := 'D015'
+!driver15.name := 'Zara Cooper'
+
+!new Shipment('shipment25')
+!shipment25.id := 'S025'
+!shipment25.status := #DELIVERED
+
+!new Address('address29')
+!address29.text := '5555 Rainbow Bridge Lane'
+
+!new Address('address30')
+!address30.text := '6666 Sunset Court'
+
+!new GeoLocation('geoLocation29')
+!geoLocation29.latitude := 49.2827
+!geoLocation29.longitude := -123.1207
+
+!new GeoLocation('geoLocation30')
+!geoLocation30.latitude := 35.6895
+!geoLocation30.longitude := 139.6917
+
+!new Customer('customer15')
+!customer15.id := 'C015'
+!customer15.name := 'Nolan Turner'
+!customer15.twitterUserName := '@nolan_turner'
+
+!new Station('station14')
+
+!insert (driver15, shipment25) into DriverShipment
+
+!insert (shipment25, address29) into ShipmentContainsPickUpAddress
+!insert (shipment25, address30) into ShipmentContainsDeliveryAddress
+
+!insert (address29, geoLocation29) into AddressContainsGeoLocation
+!insert (address30, geoLocation30) into AddressContainsGeoLocation
+
+!insert (customer15, shipment25) into CustomerConsistsOfShipment
+
+!insert (station14, customer15) into StationContainsCustomer
+
+!insert (station14, shipment25) into StationShipment
+
+!insert (station14, driver15) into StationContainsDriver

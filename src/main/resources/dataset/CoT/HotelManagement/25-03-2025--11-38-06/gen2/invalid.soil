@@ -1,0 +1,63 @@
+!new Customer('customer9')
+!customer9.firstName := 'Hiroshi'
+!customer9.lastName := 'Yamamoto'
+
+!new Booking('booking9')
+!booking9.bookingId := 31009
+!booking9.startDate := 'March 25, 2024'
+!booking9.endDate := 'April 1, 2024'
+!booking9.canceled := false
+!booking9.confirmed := true
+
+!new RoomReservation('roomreservation15')
+!roomreservation15.checkInDate := 'March 25, 2024'
+!roomreservation15.checkOutDate := 'April 1, 2024'
+
+!new Room('room19')
+!room19.roomNumber := 501
+!room19.numBeds := 2
+!room19.pricePerNight := 50000
+!room19.occupied := true
+!room19.blocked := false
+
+!new RoomExtra('roomextra21')
+!roomextra21.price := 5000
+!roomextra21.description := 'An authentic Japanese tea ceremony experience.'
+
+!new RoomExtra('roomextra22')
+!roomextra22.price := 20000
+!roomextra22.description := 'A private Geisha performance showcasing traditional arts.'
+
+!new Bill('bill16')
+!bill16.billId := 310091
+!bill16.price := 350000
+
+!new Bill('bill17')
+!bill17.billId := 310092
+!bill17.price := 25000
+
+!new Bill('bill18')
+!bill18.billId := 310093
+!bill18.price := 50000
+
+!new Bill('bill19')
+!bill19.billId := 310094
+!bill19.price := 10000
+
+!insert (booking9, customer9) into BookingCustomer
+!insert (booking9, roomreservation15) into BookingRoomReservation
+
+!insert (roomreservation15, room19) into RoomReservationRoom
+
+!insert (roomreservation15, roomextra21) into RoomReservationExtras
+!insert (roomreservation15, roomextra22) into RoomReservationExtras
+
+!insert (bill16, roomreservation15) into BillRoomReservation
+!insert (bill17, roomreservation15) into BillRoomReservation
+!insert (bill18, roomreservation15) into BillRoomReservation
+!insert (bill19, roomreservation15) into BillRoomReservation
+
+!insert (booking9, bill16) into BookingBill
+!insert (booking9, bill17) into BookingBill
+!insert (booking9, bill18) into BookingBill
+!insert (booking9, bill19) into BookingBill

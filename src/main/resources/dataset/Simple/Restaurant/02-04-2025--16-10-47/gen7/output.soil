@@ -1,0 +1,102 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant7')
+!restaurant7.name := 'Downtown Diner'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner13')
+!owner13.name := 'Sophia Turner'
+!owner13.percentageShares := 70
+
+!new Owner('owner14')
+!owner14.name := 'Maxwell Reed'
+!owner14.percentageShares := 30
+
+-- Establish RestaurantOwner association
+!insert (restaurant7, owner13) into RestaurantOwner
+!insert (restaurant7, owner14) into RestaurantOwner
+
+-- Creating a variety of Tables
+!new Table('table13')
+!table13.number := 701
+!table13.description := 'Window Spot'
+!table13.capacity := 4
+
+!new Table('table14')
+!table14.number := 702
+!table14.description := 'Quiet Corner'
+!table14.capacity := 6
+
+-- Creating a team of workers
+!new HeadWaiter('headwaiter7')
+!headwaiter7.name := 'Eric Johnson'
+!headwaiter7.dateOfBirth := Date('1973-06-01')
+!headwaiter7.phoneNumber := '555-1111'
+
+!new Waiter('waiter10')
+!waiter10.name := 'Mia Brown'
+!waiter10.dateOfBirth := Date('1994-09-12')
+!waiter10.phoneNumber := '555-2222'
+!waiter10.spokenLanguage := #Spanish
+
+!new Waiter('waiter11')
+!waiter11.name := 'Jack White'
+!waiter11.dateOfBirth := Date('1991-11-26')
+!waiter11.phoneNumber := '555-3333'
+!waiter11.spokenLanguage := #English
+
+-- Establishing associations between HeadWaiter and Waiters
+!insert (headwaiter7, waiter10) into HeadWaiterWaiter
+!insert (headwaiter7, waiter11) into HeadWaiterWaiter
+
+-- Creating a new Banquet Reservation for a business meeting
+!new Banquet('reservation7')
+!reservation7.time := Time('12:00')
+!reservation7.date := Date('2024-03-05')
+!reservation7.numberPeople := 9
+!reservation7.name := 'Business Meeting'
+!reservation7.phoneNumber := '555-4444'
+!reservation7.number := 205
+!reservation7.groupName := 'Corporate Clientele'
+!reservation7.paymentMethod := #Cash
+!reservation7.busService := false
+
+-- Establishing associations for Banquet
+!insert (restaurant7, reservation7) into RestaurantReservation
+!insert (reservation7, waiter10) into ReservationWaiter
+!insert (reservation7, waiter11) into ReservationWaiter
+!insert (reservation7, table13) into ReservationTable
+!insert (reservation7, table14) into ReservationTable
+
+-- Adding a unique MenuItem for the business meeting
+!new MenuItem('menuItem7')
+!menuItem7.description := 'Steak & Wine'
+!menuItem7.prepTime := 30.0
+!menuItem7.classification := #Main
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef7')
+!chef7.name := 'Heston Blumenthal'
+!chef7.dateOfBirth := Date('1966-05-27')
+!chef7.phoneNumber := '555-5555'
+
+!insert (menuItem7, chef7) into MenuItemChef
+
+-- Creating Cook under the supervision of Chef
+!new Cook('cook7')
+!cook7.name := 'Nigel Slater'
+!cook7.dateOfBirth := Date('1958-04-09')
+!cook7.phoneNumber := '555-6666'
+!cook7.yearsOfExperience := 22
+
+-- Establishing association between Chef and Cook
+!insert (chef7, cook7) into ChefCook
+
+-- Creating ItemOrder for the business meeting
+!new ItemOrder('order7')
+!order7.time := Time('12:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order7, menuItem7) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation7, order7) into ReservationItemOrdered

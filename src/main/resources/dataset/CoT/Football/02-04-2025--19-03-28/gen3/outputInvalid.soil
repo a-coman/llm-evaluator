@@ -1,0 +1,137 @@
+!new Club('club23')
+!club23.name := 'Tokyo Samurais'
+!club23.homeGround := 'Samurai Dome'
+!club23.chairman := 'Hiroshi Tanaka'
+
+!new Club('club24')
+!club24.name := 'Berlin Eagles'
+!club24.homeGround := 'Eagle Nest Stadium'
+!club24.chairman := 'Greta Kaufmann'
+
+!new Club('club25')
+!club25.name := 'Cape Town Strikers'
+!club25.homeGround := 'Striker Field'
+!club25.chairman := 'Mpho Mathabane'
+
+!new Team('teamY')
+!teamY.name := 'Tokyo Juniors'
+
+!new Team('teamZ')
+!teamZ.name := 'Berlin Thunder'
+
+!new Team('teamAA')
+!teamAA.name := 'Cape Lions'
+
+!insert (club23, teamY) into ClubTeam
+!insert (club24, teamZ) into ClubTeam
+!insert (club25, teamAA) into ClubTeam
+
+!new Player('player25')
+!player25.name := 'Akira Yamamoto'
+!player25.age := 18
+!player25.bestFoot := #LEFT
+!player25.phoneNumber := '+819011223344'
+
+!insert (teamY, player25) into TeamPlayer
+
+!new Player('player26')
+!player26.name := 'Franz Müller'
+!player26.age := 19
+!player26.bestFoot := #RIGHT
+!player26.phoneNumber := '+493012345678'
+
+!insert (teamZ, player26) into TeamPlayer
+
+!new Position('position36')
+!position36.positionName := #FORWARD
+
+!new Position('position37')
+!position37.positionName := #DEFENDER
+
+!new Position('position38')
+!position38.positionName := #MIDFIELDER
+
+!insert (player25, position36) into PlayerPositions
+!insert (player26, position37) into PlayerPositions
+!insert (player26, position38) into PlayerPositions
+
+!new Competition('competition12')
+!competition12.name := 'Under-20 World Cup'
+!competition12.type := 'Tournament'
+
+!new Match('match12')
+!match12.date := '2023-07-18'
+!match12.homeAway := true
+
+!insert (competition12, match12) into CompetitionMatch
+
+!insert (teamY, match12) into LocalMatch
+!insert (teamY, match12) into VisitorMatch
+
+!new MatchReport('matchReport12')
+!matchReport12.duration := 120
+!matchReport12.scoreVisitor := 2
+!matchReport12.scoreLocal := 2
+
+!insert (match12, matchReport12) into MatchMatchReport
+
+!new MatchNote('matchNote9')
+!matchNote9.note := 'A highly competitive match that went into extra time with no clear winner.'
+!matchNote9.date := '2023-07-19'
+
+!insert (match12, matchNote9) into MatchMatchNote
+
+!new TrainingSession('trainingSession21')
+!trainingSession21.date := '2023-06-30'
+!trainingSession21.location := 'Samurai Dome Training Camp'
+!trainingSession21.purpose := 'Enhancing attackers precision and power'
+
+!insert (teamY, trainingSession21) into TeamTraining
+
+!new TrainingNotes('trainingNote23')
+!trainingNote23.note := 'Encourage more aggressive offensive play styles.'
+!trainingNote23.date := '2023-07-01'
+
+!insert (trainingSession21, trainingNote23) into TrainingTrainingNotes
+
+!new TrainingSession('trainingSession22')
+!trainingSession22.date := '2023-07-03'
+!trainingSession22.location := 'Eagle Nest Practice Grounds'
+!trainingSession22.purpose := 'Improving coordination and tactical defense'
+
+!insert (teamZ, trainingSession22) into TeamTraining
+
+!new TrainingFailedToAttend('failedAttend9')
+!failedAttend9.reason := 'Academic exams'
+
+!insert (trainingSession21, failedAttend9) into TrainingFailded
+!insert (failedAttend9, player25) into FailedPlayer
+
+!new TrainingObjective('trainingObjective26')
+!trainingObjective26.areaToImprove := 'Field Vision'
+!trainingObjective26.startDate := '2023-03-01'
+!trainingObjective26.endDate := '2023-08-01'
+!trainingObjective26.success := false
+
+!insert (trainingObjective26, player26) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote17')
+!playerNote17.note := 'Impressive tactical awareness needs further honing.'
+!playerNote17.date := '2023-04-15'
+
+!insert (player26, playerNote17) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer17')
+!matchPlayer17.booked := false
+!matchPlayer17.goals := 1
+!matchPlayer17.rating := 9
+
+!insert (player26, matchPlayer17) into PlayerMatch
+!insert (match12, matchPlayer17) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition18')
+!matchPlayerPosition18.positionName := #MIDFIELDER
+!matchPlayerPosition18.number := 5
+
+!insert (matchPlayer17, matchPlayerPosition18) into MatchPlayerMatchPlayerPosition
+

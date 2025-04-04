@@ -1,0 +1,71 @@
+!new AddressBook('addressBook25')
+
+!new Company('smartHomeInnovators')
+!smartHomeInnovators.name := 'Smart Home Innovators'
+!smartHomeInnovators.phone := '222-555-9090'
+!smartHomeInnovators.website := 'www.smarthomeinnovators.com'
+!smartHomeInnovators.email := 'support@smarthomeinnovators.com'
+!smartHomeInnovators.industry := 'Smart Home Technology'
+
+!new Person('emmaWatson')
+!emmaWatson.name := 'Emma Watson'
+!emmaWatson.phone := '123-456-7899'
+!emmaWatson.website := 'www.emmawatsondesigns.com'
+!emmaWatson.email := 'emma.watson@smarthomeinnovators.com'
+!emmaWatson.title := 'Product Designer'
+
+!new Note('productLaunchMeetingNote')
+!productLaunchMeetingNote.author := 'Emma Watson'
+!productLaunchMeetingNote.time := Date('2025-09-15')
+!productLaunchMeetingNote.type := #MEETING
+!productLaunchMeetingNote.comment := 'Coordinated product launch meeting for new smart home device'
+
+!new Address('emmaAddress')
+!emmaAddress.city := 'Los Angeles'
+!emmaAddress.houseNr := '101'
+!emmaAddress.street := 'Creative Blvd'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, smartHomeInnovators) into RelationshipToContact
+!insert (emmaWatson, employeeRelationship) into ContactToRelationship
+!insert (emmaWatson, emmaAddress) into ContactContainsAddress
+!insert (emmaWatson, productLaunchMeetingNote) into ContactContainsNote
+
+!new Person('liamJohnson')
+!liamJohnson.name := 'Liam Johnson'
+!liamJohnson.phone := '987-654-3211'
+!liamJohnson.website := 'www.liamjohnsontech.com'
+!liamJohnson.email := 'liam.johnson@example.com'
+!liamJohnson.title := 'Technical Lead'
+
+!new Note('techIntegrationNote')
+!techIntegrationNote.author := 'Liam Johnson'
+!techIntegrationNote.time := Date('2025-09-22')
+!techIntegrationNote.type := #CALL
+!techIntegrationNote.comment := 'Discussed technical integration challenges with engineering team'
+
+!new Address('liamAddress')
+!liamAddress.city := 'Chicago'
+!liamAddress.houseNr := '907'
+!liamAddress.street := 'Innovation Rd'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, emmaWatson) into RelationshipToContact
+!insert (liamJohnson, subdivisionRelationship) into ContactToRelationship
+!insert (liamJohnson, liamAddress) into ContactContainsAddress
+!insert (liamJohnson, techIntegrationNote) into ContactContainsNote
+
+!new Address('smartHomeAddress')
+!smartHomeAddress.city := 'Austin'
+!smartHomeAddress.houseNr := '505'
+!smartHomeAddress.street := 'Tech Park'
+
+!insert (smartHomeInnovators, smartHomeAddress) into ContactContainsAddress
+
+!insert (addressBook25, smartHomeInnovators) into AddressBookMadeOfContact
+!insert (addressBook25, emmaWatson) into AddressBookMadeOfContact
+!insert (addressBook25, liamJohnson) into AddressBookMadeOfContact

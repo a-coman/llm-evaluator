@@ -1,0 +1,226 @@
+!new Club('club49')
+!set club49.name := 'Tokyo Thunder'
+!set club49.homeGround := 'Meiji Jingu Stadium'
+!set club49.chairman := 'Satoshi Yamamoto'
+
+!new Team('teamBA')
+!set teamBA.name := 'Tokyo Typhoons'
+
+!insert (club49, teamBA) into ClubTeam
+
+!new Player('player57')
+!set player57.name := 'Hiroshi Tanaka'
+!set player57.age := 27
+!set player57.bestFoot := #RIGHT
+!set player57.phoneNumber := '+81312345678'
+
+!new Player('player58')
+!set player58.name := 'Kenji Ito'
+!set player58.age := 25
+!set player58.bestFoot := #LEFT
+!set player58.phoneNumber := '+81387654321'
+
+!insert (teamBA, player57) into TeamPlayer
+!insert (teamBA, player58) into TeamPlayer
+
+!new Position('position81')
+!set position81.positionName := #FORWARD
+
+!new Position('position82')
+!set position82.positionName := #MIDFIELDER
+
+!insert (player57, position81) into PlayerPositions
+!insert (player58, position82) into PlayerPositions
+
+!new TrainingObjective('trainingObjective61')
+!set trainingObjective61.areaToImprove := 'Endurance'
+!set trainingObjective61.startDate := '2023-05-01'
+!set trainingObjective61.endDate := '2023-08-01'
+!set trainingObjective61.success := true
+
+!insert (trainingObjective61, player57) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession44')
+!set trainingSession44.date := '2023-08-15'
+!set trainingSession44.location := 'Tokyo Training Facility'
+!set trainingSession44.purpose := 'Advanced Tactical Drills'
+
+!new TrainingNotes('trainingNote47')
+!set trainingNote47.note := 'Executed complex drills focusing on decision-making under pressure.'
+!set trainingNote47.date := '2023-08-15'
+
+!insert (trainingSession44, trainingNote47) into TrainingTrainingNotes
+
+!insert (teamBA, trainingSession44) into TeamTraining
+
+!new Competition('competition25')
+!set competition25.name := 'Asia Pacific Cup'
+!set competition25.type := 'Continental Championship'
+
+!new Match('match25')
+!set match25.date := '2023-09-01'
+!set match25.homeAway := true
+
+!insert (competition25, match25) into CompetitionMatch
+
+!insert (teamBA, match25) into LocalMatch
+
+!new Team('teamBB')
+!set teamBB.name := 'Shanghai Sharks'
+
+!new Club('club50')
+!set club50.name := 'Shanghai Stars'
+!set club50.homeGround := 'Shanghai Stadium'
+!set club50.chairman := 'Li Wei'
+
+!insert (club50, teamBB) into ClubTeam
+
+!insert (teamBB, match25) into VisitorMatch
+
+!new MatchReport('matchReport25')
+!set matchReport25.duration := 90
+!set matchReport25.scoreVisitor := 1
+!set matchReport25.scoreLocal := 3
+
+!insert (match25, matchReport25) into MatchMatchReport
+
+!new MatchEvent('matchEvent104')
+!set matchEvent104.eventType := #GOAL
+!set matchEvent104.time := 15
+
+!new MatchEvent('matchEvent105')
+!set matchEvent105.eventType := #GOAL
+!set matchEvent105.time := 35
+
+!new MatchEvent('matchEvent106')
+!set matchEvent106.eventType := #FOUL
+!set matchEvent106.time := 50
+
+!new MatchEvent('matchEvent107')
+!set matchEvent107.eventType := #GOAL
+!set matchEvent107.time := 70
+
+!new MatchEvent('matchEvent108')
+!set matchEvent108.eventType := #GOAL
+!set matchEvent108.time := 80
+
+!new MatchEvent('matchEvent109')
+!set matchEvent109.eventType := #FOUL
+!set matchEvent109.time := 88
+
+!insert (match25, matchEvent104) into MatchMatchEvent
+!insert (match25, matchEvent105) into MatchMatchEvent
+!insert (match25, matchEvent106) into MatchMatchEvent
+!insert (match25, matchEvent107) into MatchMatchEvent
+!insert (match25, matchEvent108) into MatchMatchEvent
+!insert (match25, matchEvent109) into MatchMatchEvent
+
+!new MatchNote('matchNote19')
+!set matchNote19.note := 'A commanding victory highlighted by strategic pressing and ball control.'
+!set matchNote19.date := '2023-09-01'
+
+!insert (match25, matchNote19) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer34')
+!set matchPlayer34.booked := false
+!set matchPlayer34.goals := 2
+!set matchPlayer34.rating := 9
+
+!insert (player57, matchPlayer34) into PlayerMatch
+!insert (match25, matchPlayer34) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition35')
+!set matchPlayerPosition35.positionName := #FORWARD
+!set matchPlayerPosition35.number := 9
+
+!insert (matchPlayer34, matchPlayerPosition35) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer35')
+!set matchPlayer35.booked := true
+!set matchPlayer35.goals := 1
+!set matchPlayer35.rating := 8
+
+!insert (player58, matchPlayer35) into PlayerMatch
+!insert (match25, matchPlayer35) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition36')
+!set matchPlayerPosition36.positionName := #MIDFIELDER
+!set matchPlayerPosition36.number := 8
+
+!insert (matchPlayer35, matchPlayerPosition36) into MatchPlayerMatchPlayerPosition
+
+!new Player('player55')
+!set player55.name := 'Lin Chen'
+!set player55.age := 24
+!set player55.bestFoot := #RIGHT
+!set player55.phoneNumber := '+86-21-123456'
+
+!new Player('player56')
+!set player56.name := 'Mei Zhang'
+!set player56.age := 26
+!set player56.bestFoot := #LEFT
+!set player56.phoneNumber := '+86-21-654321'
+
+!insert (teamBB, player55) into TeamPlayer
+!insert (teamBB, player56) into TeamPlayer
+
+!new Position('position79')
+!set position79.positionName := #MIDFIELDER
+
+!new Position('position80')
+!set position80.positionName := #DEFENDER
+
+!insert (player55, position79) into PlayerPositions
+!insert (player56, position80) into PlayerPositions
+
+!new PlayerNotes('playerNote38')
+!set playerNote38.note := 'Agile playmaker with a vision for assists.'
+!set playerNote38.date := '2023-08-15'
+
+!insert (player55, playerNote38) into PlayerPlayerNotes
+
+!new PlayerNotes('playerNote39')
+!set playerNote39.note := 'Solid and reliable in cutting off attacks.'
+!set playerNote39.date := '2023-08-05'
+
+!insert (player56, playerNote39) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective58')
+!set trainingObjective58.areaToImprove := 'Tactical Awareness'
+!set trainingObjective58.startDate := '2023-07-01'
+!set trainingObjective58.endDate := '2023-09-01'
+!set trainingObjective58.success := true
+
+!insert (trainingObjective58, player55) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective60')
+!set trainingObjective60.areaToImprove := 'Positioning'
+!set trainingObjective60.startDate := '2023-06-01'
+!set trainingObjective60.endDate := '2023-08-01'
+!set trainingObjective60.success := true
+
+!insert (trainingObjective60, player56) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession43')
+!set trainingSession43.date := '2023-07-20'
+!set trainingSession43.location := 'Shanghai Sports Center'
+!set trainingSession43.purpose := 'Team Synergy and Set Pieces'
+
+!insert (teamBB, trainingSession43) into TeamTraining
+
+!new TrainingNotes('trainingNote45')
+!set trainingNote45.note := 'Focused on enhancing teamwork and mastering set pieces.'
+!set trainingNote45.date := '2023-07-20'
+
+!new TrainingNotes('trainingNote46')
+!set trainingNote46.note := 'Incorporation of video analysis for performance improvement.'
+!set trainingNote46.date := '2023-07-20'
+
+!insert (trainingSession43, trainingNote45) into TrainingTrainingNotes
+!insert (trainingSession43, trainingNote46) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend17')
+!set failedAttend17.reason := 'Personal Reasons'
+
+!insert (trainingSession43, failedAttend17) into TrainingFailded
+!insert (failedAttend17, player55) into FailedPlayer

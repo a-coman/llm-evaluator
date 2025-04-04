@@ -1,0 +1,227 @@
+!new Club('club17')
+!club17.name := 'Coastal Falcons FC'
+!club17.homeGround := 'Seaside Stadium'
+!club17.chairman := 'Mr. Harold Seabright'
+
+!new Team('teamR')
+!teamR.name := 'Falcons United'
+
+!new Team('teamS')
+!teamS.name := 'Seaside Thunder'
+
+!insert (club17, teamR) into ClubTeam
+!insert (club17, teamS) into ClubTeam
+
+!new Competition('competition9')
+!competition9.name := 'Inter-Coastal Cup'
+!competition9.type := 'Knockout'
+
+!new TrainingSession('trainingSession16')
+!trainingSession16.date := '2023-10-12'
+!trainingSession16.location := 'Falcon Field'
+!trainingSession16.purpose := 'Mid-season Fitness Assessment'
+
+!new TrainingNotes('trainingNote17')
+!trainingNote17.note := 'Focus on endurance improvement'
+!trainingNote17.date := '2023-10-12'
+
+!new TrainingNotes('trainingNote18')
+!trainingNote18.note := 'Review defensive strategies due to low attendance'
+!trainingNote18.date := '2023-10-12'
+
+!insert (trainingSession16, trainingNote17) into TrainingTrainingNotes
+!insert (trainingSession16, trainingNote18) into TrainingTrainingNotes
+
+!insert (teamR, trainingSession16) into TeamTraining
+
+!new TrainingFailedToAttend('failedAttend8')
+!failedAttend8.reason := 'Severe weather conditions impeded transport'
+
+!insert (trainingSession16, failedAttend8) into TrainingFailded
+
+!new Player('player17')
+!player17.name := 'John Storm'
+!player17.age := 24
+!player17.bestFoot := #BOTH
+!player17.phoneNumber := '+441234567890'
+
+!insert (teamR, player17) into TeamPlayer
+
+!new Player('player18')
+!player18.name := 'Alex Rivers'
+!player18.age := 25
+!player18.bestFoot := #LEFT
+!player18.phoneNumber := '+449876543210'
+
+!insert (teamS, player18) into TeamPlayer
+
+!new Position('position26')
+!position26.positionName := #GOALKEEPER
+
+!new Position('position27')
+!position27.positionName := #DEFENDER
+
+!new Position('position28')
+!position28.positionName := #MIDFIELDER
+
+!insert (player17, position26) into PlayerPositions
+!insert (player17, position27) into PlayerPositions
+!insert (player17, position28) into PlayerPositions
+
+!insert (player18, position26) into PlayerPositions
+!insert (player18, position27) into PlayerPositions
+
+!new PlayerNotes('playerNote13')
+!playerNote13.note := 'Remarkable tactical adaptability'
+!playerNote13.date := '2023-09-30'
+
+!insert (player17, playerNote13) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective16')
+!trainingObjective16.areaToImprove := 'Long passes'
+!trainingObjective16.startDate := '2023-09-01'
+!trainingObjective16.endDate := '2023-09-30'
+!trainingObjective16.success := true
+
+!new TrainingObjective('trainingObjective17')
+!trainingObjective17.areaToImprove := 'Footwork dribbles'
+!trainingObjective17.startDate := '2023-09-15'
+!trainingObjective17.endDate := '2023-10-15'
+!trainingObjective17.success := true
+
+!new TrainingObjective('trainingObjective18')
+!trainingObjective18.areaToImprove := 'Defensive coverage'
+!trainingObjective18.startDate := '2023-09-01'
+!trainingObjective18.endDate := '2023-09-30'
+!trainingObjective18.success := true
+
+!insert (trainingObjective16, player17) into TrainingObjectivePlayer
+!insert (trainingObjective17, player17) into TrainingObjectivePlayer
+!insert (trainingObjective18, player17) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective19')
+!trainingObjective19.areaToImprove := 'Agility'
+!trainingObjective19.startDate := '2023-08-01'
+!trainingObjective19.endDate := '2023-09-30'
+!trainingObjective19.success := false
+
+!insert (trainingObjective19, player18) into TrainingObjectivePlayer
+
+!new Match('match9')
+!match9.date := '2023-11-01'
+!match9.homeAway := true
+
+!insert (competition9, match9) into CompetitionMatch
+
+!new Club('club18')
+!club18.name := 'Oceanic Club'
+!club18.homeGround := 'Oceanic Stadium'
+!club18.chairman := 'Mr. Sea Breeze'
+
+!new Team('teamT')
+!teamT.name := 'Oceanic Warriors'
+
+!insert (club18, teamT) into ClubTeam
+
+!insert (teamR, match9) into LocalMatch
+!insert (teamT, match9) into VisitorMatch
+
+!new MatchReport('matchReport9')
+!matchReport9.duration := 90
+!matchReport9.scoreVisitor := 8
+!matchReport9.scoreLocal := 5
+
+!insert (match9, matchReport9) into MatchMatchReport
+
+!new MatchEvent('matchEvent26')
+!matchEvent26.eventType := #GOAL
+!matchEvent26.time := 5
+
+!new MatchEvent('matchEvent27')
+!matchEvent27.eventType := #GOAL
+!matchEvent27.time := 20
+
+!new MatchEvent('matchEvent28')
+!matchEvent28.eventType := #FOUL
+!matchEvent28.time := 25
+
+!new MatchEvent('matchEvent29')
+!matchEvent29.eventType := #GOAL
+!matchEvent29.time := 30
+
+!new MatchEvent('matchEvent30')
+!matchEvent30.eventType := #GOAL
+!matchEvent30.time := 35
+
+!new MatchEvent('matchEvent31')
+!matchEvent31.eventType := #GOAL
+!matchEvent31.time := 40
+
+!new MatchEvent('matchEvent32')
+!matchEvent32.eventType := #GOAL
+!matchEvent32.time := 50
+
+!new MatchEvent('matchEvent33')
+!matchEvent33.eventType := #GOAL
+!matchEvent33.time := 55
+
+!new MatchEvent('matchEvent34')
+!matchEvent34.eventType := #GOAL
+!matchEvent34.time := 60
+
+!new MatchEvent('matchEvent35')
+!matchEvent35.eventType := #GOAL
+!matchEvent35.time := 65
+
+!new MatchEvent('matchEvent36')
+!matchEvent36.eventType := #GOAL
+!matchEvent36.time := 70
+
+!new MatchEvent('matchEvent37')
+!matchEvent37.eventType := #FOUL
+!matchEvent37.time := 75
+
+!new MatchEvent('matchEvent38')
+!matchEvent38.eventType := #GOAL
+!matchEvent38.time := 80
+
+!new MatchEvent('matchEvent39')
+!matchEvent39.eventType := #GOAL
+!matchEvent39.time := 85
+
+!insert (match9, matchEvent26) into MatchMatchEvent
+!insert (match9, matchEvent27) into MatchMatchEvent
+!insert (match9, matchEvent28) into MatchMatchEvent
+!insert (match9, matchEvent29) into MatchMatchEvent
+!insert (match9, matchEvent30) into MatchMatchEvent
+!insert (match9, matchEvent31) into MatchMatchEvent
+!insert (match9, matchEvent32) into MatchMatchEvent
+!insert (match9, matchEvent33) into MatchMatchEvent
+!insert (match9, matchEvent34) into MatchMatchEvent
+!insert (match9, matchEvent35) into MatchMatchEvent
+!insert (match9, matchEvent36) into MatchMatchEvent
+!insert (match9, matchEvent37) into MatchMatchEvent
+!insert (match9, matchEvent38) into MatchMatchEvent
+!insert (match9, matchEvent39) into MatchMatchEvent
+
+!new MatchNote('matchNote7')
+!matchNote7.note := 'Spectacular offensive showdown with unpredictable weather challenges'
+!matchNote7.date := '2023-11-01'
+
+!insert (match9, matchNote7) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer13')
+!matchPlayer13.booked := false
+!matchPlayer13.goals := 2
+!matchPlayer13.rating := 8
+
+!insert (player17, matchPlayer13) into PlayerMatch
+!insert (match9, matchPlayer13) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition14')
+!matchPlayerPosition14.positionName := #FORWARD
+!matchPlayerPosition14.number := 9
+
+!insert (matchPlayer13, matchPlayerPosition14) into MatchPlayerMatchPlayerPosition
+
+!insert (failedAttend8, player17) into FailedPlayer

@@ -1,0 +1,32 @@
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Expense('zeroExpense')
+!zeroExpense.amount := 0.00
+!zeroExpense.startDate := Date('2023-02-01')
+!zeroExpense.endDate := Date('2023-02-28')
+
+!new Bill('conferenceFees')
+!conferenceFees.amount := 0.00
+!conferenceFees.category := 'Conference Fees'
+!conferenceFees.date := Date('2023-02-15')
+!conferenceFees.paymentMethod := #CHECK
+!conferenceFees.status := #REFUNDED
+
+!insert (conferenceFees, swissFranc) into BillCurrency
+
+!insert (zeroExpense, conferenceFees) into ExpenseContainsBills
+
+!new Comment('commentCancelledRegistration')
+!commentCancelledRegistration.text := 'Cancelled conference registration due to travel restrictions'
+
+!new Comment('commentRefundProcessed')
+!commentRefundProcessed.text := 'Refund processed successfully; no financial liabilities incurred'
+
+!new Comment('commentFinancialAdjustments')
+!commentFinancialAdjustments.text := 'Ensured seamless financial adjustments for better audit transparency'
+
+!insert (zeroExpense, commentCancelledRegistration) into ExpenseComment
+!insert (zeroExpense, commentRefundProcessed) into ExpenseComment
+!insert (zeroExpense, commentFinancialAdjustments) into ExpenseComment

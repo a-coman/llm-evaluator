@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_5')
+
+!new Person('Fatima_Jafari')
+!Fatima_Jafari.name := 'Fatima Jafari'
+!Fatima_Jafari.phone := '+212-5-522-3344'
+!Fatima_Jafari.website := 'fatimajcommunity.org'
+!Fatima_Jafari.email := 'fatima.jafari@communityhope.ma'
+!Fatima_Jafari.title := 'Community Leader'
+
+!new Address('Address_13')
+!Address_13.city := 'Casablanca'
+!Address_13.houseNr := '15'
+!Address_13.street := 'Boulevard Anfa'
+!insert (Fatima_Jafari, Address_13) into ContactContainsAddress
+
+!new Note('Note_13')
+!Note_13.author := 'Fatima Jafari'
+!Note_13.time := Date('2024-01-12')
+!Note_13.type := #MEETING
+!Note_13.comment := 'Organized a workshop to support local artisans.'
+!insert (Fatima_Jafari, Note_13) into ContactContainsNote
+
+!new Company('Regional_Development_Trust')
+!Regional_Development_Trust.name := 'Regional Development Trust'
+!Regional_Development_Trust.phone := '+27-11-945-0210'
+!Regional_Development_Trust.website := 'www.rdtrust.co.za'
+!Regional_Development_Trust.email := 'contact@rdtrust.co.za'
+!Regional_Development_Trust.industry := 'Social Development'
+
+!new Address('Address_14')
+!Address_14.city := 'Johannesburg'
+!Address_14.houseNr := '1001'
+!Address_14.street := 'Nelson Mandela Boulevard'
+!insert (Regional_Development_Trust, Address_14) into ContactContainsAddress
+
+!new Note('Note_14')
+!Note_14.author := 'Thabo Ndlovu'
+!Note_14.time := Date('2024-02-20')
+!Note_14.type := #EMAIL
+!Note_14.comment := 'Detailed grant application protocol for community services.'
+!insert (Regional_Development_Trust, Note_14) into ContactContainsNote
+
+!new Person('Lars_Kristoffersen')
+!Lars_Kristoffersen.name := 'Lars Kristoffersen'
+!Lars_Kristoffersen.phone := '+47-21-555-6789'
+!Lars_Kristoffersen.website := 'larsevents.no'
+!Lars_Kristoffersen.email := 'lars.k@eventplanner.no'
+!Lars_Kristoffersen.title := 'Event Coordinator'
+
+!new Address('Address_15')
+!Address_15.city := 'Oslo'
+!Address_15.houseNr := '3'
+!Address_15.street := 'Karl Johans Gate'
+!insert (Lars_Kristoffersen, Address_15) into ContactContainsAddress
+
+!new Note('Note_15')
+!Note_15.author := 'Lars Kristoffersen'
+!Note_15.time := Date('2024-03-10')
+!Note_15.type := #CALL
+!Note_15.comment := 'Planned cultural exchange event involving local communities.'
+!insert (Lars_Kristoffersen, Note_15) into ContactContainsNote
+
+!new Relationship('Relationship_10')
+!Relationship_10.type := #BOSS
+!insert (Lars_Kristoffersen, Relationship_10) into ContactToRelationship
+!insert (Relationship_10, Fatima_Jafari) into RelationshipToContact
+
+!new Relationship('Relationship_11')
+!Relationship_11.type := #COWORKER
+!insert (Lars_Kristoffersen, Relationship_11) into ContactToRelationship
+!insert (Relationship_11, Regional_Development_Trust) into RelationshipToContact
+
+!insert (AddressBook_5, Fatima_Jafari) into AddressBookMadeOfContact
+!insert (AddressBook_5, Regional_Development_Trust) into AddressBookMadeOfContact
+!insert (AddressBook_5, Lars_Kristoffersen) into AddressBookMadeOfContact

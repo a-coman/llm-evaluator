@@ -1,0 +1,159 @@
+!new Club('club45')
+!club45.name := 'Falcons United'
+!club45.homeGround := 'Falcon Nest'
+!club45.chairman := 'Steven Moore'
+
+!new Club('club46')
+!club46.name := 'Grizzlies FC'
+!club46.homeGround := 'Grizzly Grounds'
+!club46.chairman := 'Laura Carter'
+
+!new Team('team45')
+!team45.name := 'Falcon Flyers'
+!insert (club45, team45) into ClubTeam
+
+!new Team('team46')
+!team46.name := 'Grizzly Bears'
+!insert (club46, team46) into ClubTeam
+
+!new Player('player67')
+!player67.name := 'Jack Hunter'
+!player67.age := 28
+!player67.bestFoot := #BOTH
+!player67.phoneNumber := '123-456-7890'
+!insert (team45, player67) into TeamPlayer
+
+!new Player('player68')
+!player68.name := 'Emma Kline'
+!player68.age := 24
+!player68.bestFoot := #LEFT
+!player68.phoneNumber := '234-567-8901'
+!insert (team45, player68) into TeamPlayer
+
+!new Player('player69')
+!player69.name := 'Max Walters'
+!player69.age := 29
+!player69.bestFoot := #RIGHT
+!player69.phoneNumber := '345-678-9012'
+!insert (team46, player69) into TeamPlayer
+
+!new Position('position67')
+!position67.positionName := #FORWARD
+!insert (player67, position67) into PlayerPositions
+
+!new Position('position68')
+!position68.positionName := #MIDFIELDER
+!insert (player68, position68) into PlayerPositions
+
+!new Position('position69')
+!position69.positionName := #DEFENDER
+!insert (player69, position69) into PlayerPositions
+
+!new TrainingSession('training45')
+!training45.date := '2024-09-05'
+!training45.location := 'Falcon Heights'
+!training45.purpose := 'Team Building and Coordination'
+!insert (team45, training45) into TeamTraining
+
+!new TrainingSession('training46')
+!training46.date := '2024-09-06'
+!training46.location := 'Grizzly Arena'
+!training46.purpose := 'Strength and Endurance'
+!insert (team46, training46) into TeamTraining
+
+!new TrainingNotes('trainingNotes45')
+!trainingNotes45.note := 'Improved team dynamics through small-sided games'
+!trainingNotes45.date := '2024-09-05'
+!insert (training45, trainingNotes45) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes46')
+!trainingNotes46.note := 'Focused on building physical strength and stamina'
+!trainingNotes46.date := '2024-09-06'
+!insert (training46, trainingNotes46) into TrainingTrainingNotes
+
+!new TrainingObjective('objective67')
+!objective67.areaToImprove := 'Attack Coordination'
+!objective67.startDate := '2024-06-10'
+!objective67.endDate := '2024-09-10'
+!objective67.success := true
+!insert (objective67, player67) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective68')
+!objective68.areaToImprove := 'Vision and Passing'
+!objective68.startDate := '2024-07-15'
+!objective68.endDate := '2024-10-15'
+!objective68.success := false
+!insert (objective68, player68) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective69')
+!objective69.areaToImprove := 'Defensive Resilience'
+!objective69.startDate := '2024-08-01'
+!objective69.endDate := '2024-11-01'
+!objective69.success := true
+!insert (objective69, player69) into TrainingObjectivePlayer
+
+!new Competition('competition23')
+!competition23.name := 'Mountain Cup'
+!competition23.type := 'Finals'
+
+!new Match('match23')
+!match23.date := '2024-10-10'
+!match23.homeAway := false
+!insert (competition23, match23) into CompetitionMatch
+!insert (team45, match23) into VisitorMatch
+!insert (team46, match23) into LocalMatch
+
+!new MatchReport('report23')
+!report23.duration := 90
+!report23.scoreVisitor := 1
+!report23.scoreLocal := 3
+!insert (match23, report23) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer67')
+!matchPlayer67.booked := true
+!matchPlayer67.goals := 1
+!matchPlayer67.rating := 8
+!insert (player67, matchPlayer67) into PlayerMatch
+!insert (match23, matchPlayer67) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer69')
+!matchPlayer69.booked := false
+!matchPlayer69.goals := 0
+!matchPlayer69.rating := 9
+!insert (player69, matchPlayer69) into PlayerMatch
+!insert (match23, matchPlayer69) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition67')
+!matchPlayerPosition67.positionName := #FORWARD
+!matchPlayerPosition67.number := 9
+!insert (matchPlayer67, matchPlayerPosition67) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition69')
+!matchPlayerPosition69.positionName := #DEFENDER
+!matchPlayerPosition69.number := 4
+!insert (matchPlayer69, matchPlayerPosition69) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event87')
+!event87.eventType := #GOAL
+!event87.time := 18
+!insert (match23, event87) into MatchMatchEvent
+
+!new MatchEvent('event88')
+!event88.eventType := #GOAL
+!event88.time := 35
+!insert (match23, event88) into MatchMatchEvent
+
+!new MatchEvent('event89')
+!event89.eventType := #GOAL
+!event89.time := 58
+!insert (match23, event89) into MatchMatchEvent
+
+!new MatchEvent('event90')
+!event90.eventType := #GOAL
+!event90.time := 78
+!insert (match23, event90) into MatchMatchEvent
+
+!new MatchNote('matchNote23')
+!matchNote23.note := 'Grizzly Bears dominated with superior defensive and offensive plays'
+!matchNote23.date := '2024-10-10'
+!insert (match23, matchNote23) into MatchMatchNote

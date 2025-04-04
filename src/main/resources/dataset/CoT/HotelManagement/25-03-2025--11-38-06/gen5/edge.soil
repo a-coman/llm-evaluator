@@ -1,0 +1,78 @@
+!new Customer('customer27')
+!customer27.firstName := 'Amina'
+!customer27.lastName := 'Jones'
+
+!new Booking('booking27')
+!booking27.bookingId := 5005
+!booking27.startDate := 'January 5, 2025'
+!booking27.endDate := 'January 10, 2025'
+!booking27.canceled := false
+!booking27.confirmed := true
+
+!new RoomReservation('roomreservation43')
+!roomreservation43.checkInDate := 'January 5, 2025'
+!roomreservation43.checkOutDate := 'January 10, 2025'
+
+!new RoomReservation('roomreservation44')
+!roomreservation44.checkInDate := 'January 5, 2025'
+!roomreservation44.checkOutDate := 'January 10, 2025'
+
+!new Room('room50')
+!room50.roomNumber := 101
+!room50.numBeds := 1
+!room50.pricePerNight := 0
+!room50.occupied := true
+!room50.blocked := false
+
+!new Room('room51')
+!room51.roomNumber := 102
+!room51.numBeds := 1
+!room51.pricePerNight := 0
+!room51.occupied := true
+!room51.blocked := false
+
+!new Room('room52')
+!room52.roomNumber := 200
+!room52.numBeds := 1  -- Adjusted for positive number of beds invariant
+!room52.pricePerNight := 0
+!room52.occupied := true
+!room52.blocked := false
+
+!new RoomExtra('roomextra61')
+!roomextra61.price := 0
+!roomextra61.description := 'Complimentary Breakfast'
+
+!new RoomExtra('roomextra62')
+!roomextra62.price := 0
+!roomextra62.description := 'Donation-driven Event Setup'
+
+!new Bill('bill49')
+!bill49.billId := 9011
+!bill49.price := 0
+
+!new Bill('bill50')
+!bill50.billId := 9012
+!bill50.price := 0
+
+!new FreeRoomTypesDTO('freeroomtypesdto27')
+!freeroomtypesdto27.roomTypeDescription := 'Family Suite'
+!freeroomtypesdto27.numBeds := 3
+!freeroomtypesdto27.pricePerNight := 400
+!freeroomtypesdto27.numFreeRooms := 4
+
+!insert (booking27, customer27) into BookingCustomer
+!insert (booking27, roomreservation43) into BookingRoomReservation
+!insert (booking27, roomreservation44) into BookingRoomReservation
+
+!insert (roomreservation43, room50) into RoomReservationRoom
+!insert (roomreservation43, room51) into RoomReservationRoom
+!insert (roomreservation44, room52) into RoomReservationRoom
+
+!insert (roomreservation43, roomextra61) into RoomReservationExtras
+!insert (roomreservation44, roomextra62) into RoomReservationExtras
+
+!insert (bill49, roomreservation43) into BillRoomReservation
+!insert (bill50, roomreservation44) into BillRoomReservation
+
+!insert (booking27, bill49) into BookingBill
+!insert (booking27, bill50) into BookingBill

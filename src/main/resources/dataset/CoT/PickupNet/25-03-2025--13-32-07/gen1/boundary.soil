@@ -1,0 +1,46 @@
+!new Driver('driver3')
+!driver3.id := 'DRV0001'
+!driver3.name := 'Isabela Fernandez'
+
+!new Shipment('shipment3')
+!shipment3.id := 'SHIP001'
+!shipment3.status := #DELIVERED
+
+!new Address('pickupAddress3')
+!pickupAddress3.text := '123 Orchard Avenue, Wellington, New Zealand'
+
+!new GeoLocation('pickupGeoLocation3')
+!pickupGeoLocation3.latitude := -41.28664
+!pickupGeoLocation3.longitude := 174.77557
+
+!new Address('deliveryAddress3')
+!deliveryAddress3.text := '456 Maple Street, Toronto, Canada'
+
+!new GeoLocation('deliveryGeoLocation3')
+!deliveryGeoLocation3.latitude := 43.65107
+!deliveryGeoLocation3.longitude := -79.347015
+
+!new Station('station3')
+
+!new Customer('customer3')
+!customer3.id := 'CUST001'
+!customer3.name := 'Sophia Liang'
+!customer3.twitterUserName := '@sophiaL'
+
+!insert (driver3, shipment3) into DriverShipment
+
+!insert (shipment3, pickupAddress3) into ShipmentContainsPickUpAddress
+
+!insert (shipment3, deliveryAddress3) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress3, pickupGeoLocation3) into AddressContainsGeoLocation
+
+!insert (deliveryAddress3, deliveryGeoLocation3) into AddressContainsGeoLocation
+
+!insert (customer3, shipment3) into CustomerConsistsOfShipment
+
+!insert (station3, customer3) into StationContainsCustomer
+
+!insert (station3, shipment3) into StationShipment
+
+!insert (station3, driver3) into StationContainsDriver

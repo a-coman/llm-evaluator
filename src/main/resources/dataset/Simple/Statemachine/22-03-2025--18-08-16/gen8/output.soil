@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine9')
+!stateMachine9.name := 'productionMachine'
+
+!new State('state21')
+!state21.name := 'draft'
+
+!new State('state22')
+!state22.name := 'review'
+
+!new State('state23')
+!state23.name := 'approved'
+
+!new Transition('transition17')
+!transition17.name := 'draftToReview'
+
+!new Transition('transition18')
+!transition18.name := 'reviewToApproved'
+
+!new Transition('transition19')
+!transition19.name := 'approvedToDraft'
+
+!new TimeEvent('event17')
+!event17.time := 120
+
+!new TimeEvent('event18')
+!event18.time := 130
+
+!new TimeEvent('event19')
+!event19.time := 140
+
+!insert (stateMachine9, state21) into StateMachineContainsStates
+!insert (stateMachine9, state22) into StateMachineContainsStates
+!insert (stateMachine9, state23) into StateMachineContainsStates
+
+!insert (stateMachine9, transition17) into StateMachineContainsTransitions
+!insert (stateMachine9, transition18) into StateMachineContainsTransitions
+!insert (stateMachine9, transition19) into StateMachineContainsTransitions
+
+!insert (transition17, event17) into TransitionContainsEvents
+!insert (transition18, event18) into TransitionContainsEvents
+!insert (transition19, event19) into TransitionContainsEvents
+
+!insert (state21, transition17) into StateTransition
+!insert (state22, transition18) into StateTransition
+!insert (state23, transition19) into StateTransition
+
+!insert (transition17, state22) into TransitionState
+!insert (transition18, state23) into TransitionState
+!insert (transition19, state21) into TransitionState
+
+!insert (stateMachine9, state21) into StateMachineStartsStates

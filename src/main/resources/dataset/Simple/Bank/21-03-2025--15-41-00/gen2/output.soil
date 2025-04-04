@@ -1,0 +1,48 @@
+!new Bank('bank3')
+!bank3.country := 'Canada'
+!bank3.name := 'Royal Bank of Canada'
+!bank3.bic := 'ROYCCAT2'
+
+!new Account('account6')
+!account6.iban := 'CA123456789012'
+!account6.balance := 2000
+
+!new Account('account7')
+!account7.iban := 'CA987654321098'
+!account7.balance := 3000
+
+!new Person('person6')
+!person6.firstName := 'Alice'
+!person6.lastName := 'Wong'
+!person6.age := 40
+
+!new Person('person7')
+!person7.firstName := 'Bob'
+!person7.lastName := 'Johnson'
+!person7.age := 29
+
+!new Person('person8')
+!person8.firstName := 'Carl'
+!person8.lastName := 'Nguyen'
+!person8.age := 25
+
+!new Person('person9')
+!person9.firstName := 'Sara'
+!person9.lastName := 'Lee'
+!person9.age := 50
+
+-- Associations
+!insert (bank3, account6) into AccountOfBanks
+!insert (bank3, account7) into AccountOfBanks
+
+!insert (person6, account6) into Ownership
+!insert (person7, account6) into Ownership
+
+!insert (person8, account7) into Ownership
+!insert (person9, account7) into Ownership
+
+!insert (person6, account7) into Use
+!insert (person7, account7) into Use
+
+!insert (person8, account6) into Use
+!insert (person9, account6) into Use

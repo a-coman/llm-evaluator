@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant27')
+!restaurant27.name := 'Urban Spice'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner53')
+!owner53.name := 'Eva Johnson'
+!owner53.percentageShares := 60
+
+!new Owner('owner54')
+!owner54.name := 'Nathan Cole'
+!owner54.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant27, owner53) into RestaurantOwner
+!insert (restaurant27, owner54) into RestaurantOwner
+
+-- Creating tables with an eclectic design
+!new Table('table53')
+!table53.number := 2701
+!table53.description := 'Art Nouveau Table'
+!table53.capacity := 4
+
+!new Table('table54')
+!table54.number := 2702
+!table54.description := 'Industrial Chic'
+!table54.capacity := 6
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter27')
+!headwaiter27.name := 'Lucas Martinez'
+!headwaiter27.dateOfBirth := Date('1979-04-12')
+!headwaiter27.phoneNumber := '555-1818'
+
+!new Waiter('waiter31')
+!waiter31.name := 'Samantha Jones'
+!waiter31.dateOfBirth := Date('1993-11-02')
+!waiter31.phoneNumber := '555-7272'
+!waiter31.spokenLanguage := #Italian
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter27, waiter31) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a culinary workshop
+!new Banquet('reservation27')
+!reservation27.time := Time('14:00')
+!reservation27.date := Date('2024-11-15')
+!reservation27.numberPeople := 8
+!reservation27.name := 'Culinary Workshop'
+!reservation27.phoneNumber := '555-3939'
+!reservation27.number := 225
+!reservation27.groupName := 'Gourmet Enthusiasts'
+!reservation27.paymentMethod := #CreditCard
+!reservation27.busService := true
+
+-- Establishing associations for the Banquet Reservation
+!insert (restaurant27, reservation27) into RestaurantReservation
+!insert (reservation27, waiter31) into ReservationWaiter
+!insert (reservation27, table53) into ReservationTable
+!insert (reservation27, table54) into ReservationTable
+
+-- Adding a workshop MenuItem
+!new MenuItem('menuItem27')
+!menuItem27.description := 'Interactive Sushi Making'
+!menuItem27.prepTime := 30.0
+!menuItem27.classification := #Main
+
+-- Associating MenuItem with a Master Chef
+!new Chef('chef27')
+!chef27.name := 'Hiroshi Tanaka'
+!chef27.dateOfBirth := Date('1975-07-21')
+!chef27.phoneNumber := '555-4646'
+
+!insert (menuItem27, chef27) into MenuItemChef
+
+-- Creating Cook with expertise in sushi
+!new Cook('cook27')
+!cook27.name := 'Yuki Nakamura'
+!cook27.dateOfBirth := Date('1984-12-19')
+!cook27.phoneNumber := '555-6768'
+!cook27.yearsOfExperience := 14
+
+-- Establishing association between Chef and Cook
+!insert (chef27, cook27) into ChefCook
+
+-- Creating an ItemOrder for the culinary workshop
+!new ItemOrder('order27')
+!order27.time := Time('14:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order27, menuItem27) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation27, order27) into ReservationItemOrdered

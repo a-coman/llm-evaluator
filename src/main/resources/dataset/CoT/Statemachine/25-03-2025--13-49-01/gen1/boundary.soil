@@ -1,0 +1,42 @@
+!new State('sleep')
+!sleep.name := 'sleep'
+
+!new State('active')
+!active.name := 'active'
+
+!new State('shutdown')
+!shutdown.name := 'shutdown'
+
+!new StateMachine('powerManagement')
+!powerManagement.name := 'powerManagement'
+
+!new Transition('wakeTransition')
+!wakeTransition.name := 'wakeTransition'
+
+!new Transition('shutdownTransition')
+!shutdownTransition.name := 'shutdownTransition'
+
+!new TimeEvent('timeEvent1')
+!timeEvent1.time := 1
+
+!insert (powerManagement, sleep) into StateMachineContainsStates
+!insert (powerManagement, active) into StateMachineContainsStates
+!insert (powerManagement, shutdown) into StateMachineContainsStates
+
+!insert (powerManagement, sleep) into StateMachineStartsStates
+
+!insert (powerManagement, wakeTransition) into StateMachineContainsTransitions
+!insert (powerManagement, shutdownTransition) into StateMachineContainsTransitions
+
+!insert (shutdownTransition, timeEvent1) into TransitionContainsEvents
+
+!insert (sleep, wakeTransition) into StateTransition
+!insert (sleep, shutdownTransition) into StateTransition
+
+!insert (wakeTransition, active) into TransitionState
+!insert (shutdownTransition, shutdown) into TransitionState
+
+!new TimeEvent('timeEvent2')
+!timeEvent2.time := 1
+
+!insert (wakeTransition, timeEvent2) into TransitionContainsEvents

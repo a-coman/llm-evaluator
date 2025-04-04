@@ -1,0 +1,255 @@
+!new Expense('tokyoBusinessConference')
+!tokyoBusinessConference.amount := 1450.00
+!tokyoBusinessConference.startDate := Date('2023-09-10')
+!tokyoBusinessConference.endDate := Date('2023-09-14')
+
+!new Bill('conferenceRegistration')
+!conferenceRegistration.amount := 750.00
+!conferenceRegistration.category := 'Professional Development'
+!conferenceRegistration.date := Date('2023-08-15')
+!conferenceRegistration.paymentMethod := #CREDIT_CARD
+!conferenceRegistration.status := #VERIFIED
+
+!new Bill('airlineTicketToTokyo')
+!airlineTicketToTokyo.amount := 500.00
+!airlineTicketToTokyo.category := 'Travel'
+!airlineTicketToTokyo.date := Date('2023-08-30')
+!airlineTicketToTokyo.paymentMethod := #CASH
+!airlineTicketToTokyo.status := #PENDING
+
+!new Bill('tokyoHotelStay')
+!tokyoHotelStay.amount := 200.00
+!tokyoHotelStay.category := 'Lodging'
+!tokyoHotelStay.date := Date('2023-09-12')
+!tokyoHotelStay.paymentMethod := #CHECK
+!tokyoHotelStay.status := #VALIDATED
+
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!insert (conferenceRegistration, japaneseYen) into BillCurrency
+!insert (airlineTicketToTokyo, japaneseYen) into BillCurrency
+!insert (tokyoHotelStay, japaneseYen) into BillCurrency
+
+!insert (tokyoBusinessConference, conferenceRegistration) into ExpenseContainsBills
+!insert (tokyoBusinessConference, airlineTicketToTokyo) into ExpenseContainsBills
+!insert (tokyoBusinessConference, tokyoHotelStay) into ExpenseContainsBills
+
+!new Comment('commentConference')
+!commentConference.text := 'The conference was a valuable experience for meeting industry leaders and learning new trends.'
+
+!new Comment('commentTransport')
+!commentTransport.text := 'Despite the high costs, exploring public transport options provided significant savings and convenience.'
+
+!insert (tokyoBusinessConference, commentConference) into ExpenseComment
+!insert (tokyoBusinessConference, commentTransport) into ExpenseComment
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Expense('europeanBusinessTripExpense')
+!europeanBusinessTripExpense.amount := 1250.00
+!europeanBusinessTripExpense.startDate := Date('2023-08-01')
+!europeanBusinessTripExpense.endDate := Date('2023-08-15')
+
+!new Bill('hotelAccommodationParis')
+!hotelAccommodationParis.amount := 600.00
+!hotelAccommodationParis.category := 'Accommodation'
+!hotelAccommodationParis.date := Date('2023-08-03')
+!hotelAccommodationParis.paymentMethod := #CREDIT_CARD
+!hotelAccommodationParis.status := #VALIDATED
+
+!new Bill('trainTicketToZurich')
+!trainTicketToZurich.amount := 150.00
+!trainTicketToZurich.category := 'Transportation'
+!trainTicketToZurich.date := Date('2023-08-05')
+!trainTicketToZurich.paymentMethod := #CASH
+!trainTicketToZurich.status := #VERIFIED
+
+!new Bill('businessDinnerZurich')
+!businessDinnerZurich.amount := 200.00
+!businessDinnerZurich.category := 'Meals'
+!businessDinnerZurich.date := Date('2023-08-07')
+!businessDinnerZurich.paymentMethod := #CREDIT_CARD
+!businessDinnerZurich.status := #PENDING
+
+!new Bill('conferenceEntryFee')
+!conferenceEntryFee.amount := 300.00
+!conferenceEntryFee.category := 'Conference'
+!conferenceEntryFee.date := Date('2023-08-09')
+!conferenceEntryFee.paymentMethod := #CHECK
+!conferenceEntryFee.status := #VERIFIED
+
+!insert (hotelAccommodationParis, euro) into BillCurrency
+!insert (trainTicketToZurich, euro) into BillCurrency
+!insert (businessDinnerZurich, swissFranc) into BillCurrency
+!insert (conferenceEntryFee, euro) into BillCurrency
+
+!insert (europeanBusinessTripExpense, hotelAccommodationParis) into ExpenseContainsBills
+!insert (europeanBusinessTripExpense, trainTicketToZurich) into ExpenseContainsBills
+!insert (europeanBusinessTripExpense, businessDinnerZurich) into ExpenseContainsBills
+!insert (europeanBusinessTripExpense, conferenceEntryFee) into ExpenseContainsBills
+
+!new Comment('commentHotel')
+!commentHotel.text := 'Hotel bill includes all amenities, satisfying experience. Will book the same for future visits.'
+
+!new Comment('commentDinner')
+!commentDinner.text := 'Pending the business dinner bill receipt confirmation, awaiting the venue\'s email.'
+
+!new Comment('commentTransport')
+!commentTransport.text := 'Explored alternative transport options, achieved cost efficiency with the train.'
+
+!insert (europeanBusinessTripExpense, commentHotel) into ExpenseComment
+!insert (europeanBusinessTripExpense, commentDinner) into ExpenseComment
+!insert (europeanBusinessTripExpense, commentTransport) into ExpenseComment
+
+!new Expense('homeOfficeSetup')
+!homeOfficeSetup.amount := 20000.00
+!homeOfficeSetup.startDate := Date('2023-09-05')
+!homeOfficeSetup.endDate := Date('2023-09-05')
+
+!new Bill('officeFurniture')
+!officeFurniture.amount := 10000.00
+!officeFurniture.category := 'Office Furniture'
+!officeFurniture.date := Date('2023-09-05')
+!officeFurniture.paymentMethod := #CASH
+!officeFurniture.status := #DRAFT
+
+!new Bill('computerAccessories')
+!computerAccessories.amount := 5000.00
+!computerAccessories.category := 'Computer Accessories'
+!computerAccessories.date := Date('2023-09-05')
+!computerAccessories.paymentMethod := #CHECK
+!computerAccessories.status := #PENDING
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!insert (officeFurniture, indianRupee) into BillCurrency
+!insert (computerAccessories, indianRupee) into BillCurrency
+
+!insert (homeOfficeSetup, officeFurniture) into ExpenseContainsBills
+!insert (homeOfficeSetup, computerAccessories) into ExpenseContainsBills
+
+!new Comment('commentErgonomicFurniture')
+!commentErgonomicFurniture.text := 'Investing in ergonomic furniture to boost productivity.'
+
+!new Comment('commentRAM')
+!commentRAM.text := 'Purchased additional RAM for smoother design workflow.'
+
+!insert (homeOfficeSetup, commentErgonomicFurniture) into ExpenseComment
+!insert (homeOfficeSetup, commentRAM) into ExpenseComment
+
+!new Expense('highValueCorporateExpense')
+!highValueCorporateExpense.amount := 1000000.00
+!highValueCorporateExpense.startDate := Date('2023-01-01')
+!highValueCorporateExpense.endDate := Date('2023-01-15')
+
+!new Bill('corporateInvestmentBill')
+!corporateInvestmentBill.amount := 1000000.00
+!corporateInvestmentBill.category := 'Corporate Investment'
+!corporateInvestmentBill.date := Date('2023-01-01')
+!corporateInvestmentBill.paymentMethod := #CHECK
+!corporateInvestmentBill.status := #VERIFIED
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!insert (corporateInvestmentBill, britishPound) into BillCurrency
+
+!insert (highValueCorporateExpense, corporateInvestmentBill) into ExpenseContainsBills
+
+!new Comment('commentFinancialStrategy')
+!commentFinancialStrategy.text := 'Annual Financial Strategy Payment'
+
+!new Comment('commentVerifiedAccountant')
+!commentVerifiedAccountant.text := 'Verified by Senior Accountant'
+
+!insert (highValueCorporateExpense, commentFinancialStrategy) into ExpenseComment
+!insert (highValueCorporateExpense, commentVerifiedAccountant) into ExpenseComment
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Bill('monthlyHostelRent')
+!monthlyHostelRent.amount := 350.00
+!monthlyHostelRent.category := 'Monthly Hostel Rent'
+!monthlyHostelRent.date := Date('2023-05-01')
+!monthlyHostelRent.paymentMethod := #CASH
+!monthlyHostelRent.status := #PENDING
+
+!new Bill('textbooks')
+!textbooks.amount := 60.00
+!textbooks.category := 'Textbooks'
+!textbooks.date := Date('2023-05-01')
+!textbooks.paymentMethod := #CREDIT_CARD
+!textbooks.status := #DRAFT
+
+!new Bill('cafeteriaMeals')
+!cafeteriaMeals.amount := 25.00
+!cafeteriaMeals.category := 'Cafeteria Meals'
+!cafeteriaMeals.date := Date('2023-05-01')
+!cafeteriaMeals.paymentMethod := #CASH
+!cafeteriaMeals.status := #VALIDATED
+
+!new Bill('localTransport')
+!localTransport.amount := 15.00
+!localTransport.category := 'Local Transport'
+!localTransport.date := Date('2023-05-01')
+!localTransport.paymentMethod := #CREDIT_CARD
+!localTransport.status := #VALIDATED
+
+!new Bill('scholarshipGrant')
+!scholarshipGrant.amount := 0.00
+!scholarshipGrant.category := 'Scholarship Grant'
+!scholarshipGrant.date := Date('2023-05-01')
+!scholarshipGrant.paymentMethod := #CREDIT_CARD
+!scholarshipGrant.status := #VALIDATED
+
+!insert (monthlyHostelRent, euro) into BillCurrency
+!insert (textbooks, britishPound) into BillCurrency
+!insert (cafeteriaMeals, britishPound) into BillCurrency
+!insert (localTransport, swissFranc) into BillCurrency
+!insert (scholarshipGrant, euro) into BillCurrency
+
+!new Comment('commentHostelReceipt')
+!commentHostelReceipt.text := 'Pending verification of hostel receipts.'
+
+!new Comment('commentTextbooks')
+!commentTextbooks.text := 'Draft expenses for newly rented textbooks.'
+
+!new Comment('commentMeals')
+!commentMeals.text := 'Validated meal expenses for on-campus dining.'
+
+!new Expense('studentExchangeProgramExpense')
+!studentExchangeProgramExpense.amount := 450.00
+!studentExchangeProgramExpense.startDate := Date('2023-05-01')
+!studentExchangeProgramExpense.endDate := Date('2023-11-30')
+
+!insert (studentExchangeProgramExpense, monthlyHostelRent) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, textbooks) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, cafeteriaMeals) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, localTransport) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, scholarshipGrant) into ExpenseContainsBills
+
+!insert (studentExchangeProgramExpense, commentHostelReceipt) into ExpenseComment
+!insert (studentExchangeProgramExpense, commentTextbooks) into ExpenseComment
+!insert (studentExchangeProgramExpense, commentMeals) into ExpenseComment
+

@@ -1,0 +1,47 @@
+!new Booking('booking22')
+!booking22.startDate := '2025-03-05'
+!booking22.endDate := '2025-03-12'
+!booking22.canceled := true
+!booking22.bookingId := 121
+!booking22.confirmed := false
+
+!new Bill('bill22')
+!bill22.price := 0.00
+!bill22.billId := 221
+
+!new FreeRoomTypesDTO('roomType22')
+!roomType22.roomTypeDescription := 'Studio Loft'
+!roomType22.numBeds := 1
+!roomType22.pricePerNight := 80.00
+!roomType22.numFreeRooms := 4
+
+!new Customer('customer22')
+!customer22.firstName := 'Steve'
+!customer22.lastName := 'Zimmerman'
+
+!new RoomReservation('reservation22')
+!reservation22.checkInDate := '2025-03-05'
+!reservation22.checkOutDate := '2025-03-12'
+
+!new RoomExtra('extra22')
+!extra22.price := 10.00
+!extra22.description := 'Access to Gym Facilities'
+
+!new Room('room34')
+!room34.numBeds := 1
+!room34.pricePerNight := 75.00
+!room34.occupied := false
+!room34.blocked := false
+!room34.roomNumber := 134
+
+!insert (booking22, bill22) into BookingBill
+
+!insert (booking22, customer22) into BookingCustomer
+
+!insert (booking22, reservation22) into BookingRoomReservation
+
+!insert (reservation22, extra22) into RoomReservationExtras
+
+!insert (reservation22, room34) into RoomReservationRoom
+
+!insert (bill22, reservation22) into BillRoomReservation

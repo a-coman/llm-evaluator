@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice16')
+!rentalOffice16.name := 'Forest Rentals'
+!rentalOffice16.number := 116
+!rentalOffice16.address := '123 Woodland Dr, Portland, OR'
+
+!new Vehicle('coveredTrailer3')
+!coveredTrailer3.id := 15
+!coveredTrailer3.registrationState := #CA
+!coveredTrailer3.licensePlateNumber := 'OR5555'
+!coveredTrailer3.vehicleTypeCode := #COVERED_TRAILER
+!coveredTrailer3.registrationLastMaintenanceDate := Date('2023-05-05')
+!coveredTrailer3.expirationDate := Date('2024-05-05')
+
+!new Company('companyCustomer7')
+!companyCustomer7.name := 'Trail Blazers Co.'
+!companyCustomer7.address := '456 Forest Lane, Portland, OR'
+!companyCustomer7.poorRisk := false
+!companyCustomer7.idNumber := 8007
+
+!new RentalAgreement('rentalAgreement15')
+!rentalAgreement15.number := 515
+!rentalAgreement15.rentalDate := Date('2023-11-15')
+!rentalAgreement15.anticipatedDuration := 7
+!rentalAgreement15.depositPaid := 200.0
+!rentalAgreement15.quotedDailyRate := 35.0
+!rentalAgreement15.quotedRatePerMile := 0.2
+
+!insert (rentalOffice16, coveredTrailer3) into RentalOfficeVehicle
+!insert (rentalOffice16, rentalAgreement15) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice16, rentalAgreement15) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement15, coveredTrailer3) into RentalAgreementVehicle
+!insert (rentalAgreement15, companyCustomer7) into RentalAgreementCustomer

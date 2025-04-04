@@ -1,0 +1,54 @@
+!new Client('priyaSharma')
+!priyaSharma.clientId := 301
+!priyaSharma.isSuspended := false
+
+!new Client('arjunNair')
+!arjunNair.clientId := 302
+!arjunNair.isSuspended := true
+
+!new Rental('rentalPriya')
+!rentalPriya.date := Date('2023-11-05')
+
+!new Rental('rentalArjun')
+!rentalArjun.date := Date('2023-10-25')
+
+!new Movie('movieDanceOfTheTigers')
+!movieDanceOfTheTigers.title := 'Dance of the Tigers'
+!movieDanceOfTheTigers.availableCopies := 8
+!movieDanceOfTheTigers.genre := #Action
+
+!new Movie('movieChaiAndChatter')
+!movieChaiAndChatter.title := 'Chai & Chatter'
+!movieChaiAndChatter.availableCopies := 6
+!movieChaiAndChatter.genre := #Comedy
+
+!new Series('seriesSpiceRoutes')
+!seriesSpiceRoutes.title := 'Spice Routes'
+!seriesSpiceRoutes.availableCopies := 3
+!seriesSpiceRoutes.episode := 7
+
+!new Actor('actorAmitabhBachchan')
+!actorAmitabhBachchan.name := 'Amitabh Bachchan'
+
+!new Actor('actorDeepikaPadukone')
+!actorDeepikaPadukone.name := 'Deepika Padukone'
+
+!new Actor('actorRanveerSingh')
+!actorRanveerSingh.name := 'Ranveer Singh'
+
+!new Actor('actorPriyankaChopra')
+!actorPriyankaChopra.name := 'Priyanka Chopra'
+
+!insert (priyaSharma, rentalPriya) into ClientRental
+!insert (arjunNair, rentalArjun) into ClientRental
+
+!insert (rentalPriya, movieDanceOfTheTigers) into RentalCassette
+!insert (rentalPriya, seriesSpiceRoutes) into RentalCassette
+
+!insert (rentalArjun, movieChaiAndChatter) into RentalCassette
+
+!insert (movieDanceOfTheTigers, actorAmitabhBachchan) into CassetteActor
+!insert (movieDanceOfTheTigers, actorDeepikaPadukone) into CassetteActor
+!insert (movieChaiAndChatter, actorRanveerSingh) into CassetteActor
+!insert (movieChaiAndChatter, actorPriyankaChopra) into CassetteActor
+!insert (seriesSpiceRoutes, actorDeepikaPadukone) into CassetteActor

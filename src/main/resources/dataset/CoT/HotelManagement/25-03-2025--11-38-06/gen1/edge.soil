@@ -1,0 +1,94 @@
+!new Customer('customer5')
+!customer5.firstName := 'Hiroshi'
+!customer5.lastName := 'Nakamura'
+
+!new Booking('booking5')
+!booking5.bookingId := 1001
+!booking5.startDate := 'March 1, 2024'
+!booking5.endDate := 'September 1, 2024'
+!booking5.canceled := false
+!booking5.confirmed := true
+
+!new RoomReservation('roomreservation6')
+!roomreservation6.checkInDate := 'March 1, 2024'
+!roomreservation6.checkOutDate := 'May 1, 2024'
+
+!new RoomReservation('roomreservation7')
+!roomreservation7.checkInDate := 'May 1, 2024'
+!roomreservation7.checkOutDate := 'July 1, 2024'
+
+!new RoomReservation('roomreservation8')
+!roomreservation8.checkInDate := 'July 1, 2024'
+!roomreservation8.checkOutDate := 'September 1, 2024'
+
+!new Room('room10')
+!room10.roomNumber := 101
+!room10.numBeds := 2
+!room10.pricePerNight := 250.00
+!room10.occupied := true
+!room10.blocked := false
+
+!new Room('room11')
+!room11.roomNumber := 202
+!room11.numBeds := 2
+!room11.pricePerNight := 150.00
+!room11.occupied := true
+!room11.blocked := false
+
+!new Room('room12')
+!room12.roomNumber := 303
+!room12.numBeds := 3
+!room12.pricePerNight := 300.00
+!room12.occupied := true
+!room12.blocked := false
+
+!new RoomExtra('roomextra10')
+!roomextra10.price := 30.00
+!roomextra10.description := 'Daily breakfast package'
+
+!new RoomExtra('roomextra11')
+!roomextra11.price := 50.00
+!roomextra11.description := 'Evening lounge access'
+
+!new RoomExtra('roomextra12')
+!roomextra12.price := 100.00
+!roomextra12.description := 'Private car service'
+
+!new Bill('bill7')
+!bill7.billId := 3001
+!bill7.price := 15200.00
+
+!new Bill('bill8')
+!bill8.billId := 3002
+!bill8.price := 9200.00
+
+!new Bill('bill9')
+!bill9.billId := 3003
+!bill9.price := 18600.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto5')
+!freeroomtypesdto5.roomTypeDescription := 'Budget Single'
+!freeroomtypesdto5.numBeds := 1
+!freeroomtypesdto5.pricePerNight := 70.00
+!freeroomtypesdto5.numFreeRooms := 15
+
+!insert (booking5, customer5) into BookingCustomer
+!insert (booking5, roomreservation6) into BookingRoomReservation
+!insert (booking5, roomreservation7) into BookingRoomReservation
+!insert (booking5, roomreservation8) into BookingRoomReservation
+
+!insert (roomreservation6, room10) into RoomReservationRoom
+!insert (roomreservation7, room11) into RoomReservationRoom
+!insert (roomreservation8, room12) into RoomReservationRoom
+
+!insert (roomreservation6, roomextra10) into RoomReservationExtras
+!insert (roomreservation7, roomextra11) into RoomReservationExtras
+!insert (roomreservation8, roomextra12) into RoomReservationExtras
+
+!insert (bill7, roomreservation6) into BillRoomReservation
+!insert (bill8, roomreservation7) into BillRoomReservation
+!insert (bill9, roomreservation8) into BillRoomReservation
+
+!insert (booking5, bill7) into BookingBill
+!insert (booking5, bill8) into BookingBill
+!insert (booking5, bill9) into BookingBill

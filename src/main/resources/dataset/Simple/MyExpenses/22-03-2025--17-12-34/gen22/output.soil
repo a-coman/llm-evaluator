@@ -1,0 +1,33 @@
+!new Expense('expense24')
+!expense24.amount := 300.0
+!expense24.startDate := Date('2024-12-01')
+!expense24.endDate := Date('2024-12-31')
+
+!new Currency('currency22')
+!currency22.name := 'Argentine Peso'
+!currency22.abbreviation := 'ARS'
+
+!new Bill('bill42')
+!bill42.amount := 150.0
+!bill42.category := 'Fitness Classes'
+!bill42.date := Date('2024-12-10')
+!bill42.paymentMethod := #CASH
+!bill42.status := #REFUNDED
+
+!new Bill('bill43')
+!bill43.amount := 150.0
+!bill43.category := 'Holiday Decorations'
+!bill43.date := Date('2024-12-15')
+!bill43.paymentMethod := #CREDIT_CARD
+!bill43.status := #PENDING
+
+!insert (expense24, bill42) into ExpenseContainsBills
+!insert (expense24, bill43) into ExpenseContainsBills
+
+!insert (bill42, currency22) into BillCurrency
+!insert (bill43, currency22) into BillCurrency
+
+!new Comment('comment24')
+!comment24.text := 'December expenses for fitness and holiday decorations'
+
+!insert (expense24, comment24) into ExpenseComment

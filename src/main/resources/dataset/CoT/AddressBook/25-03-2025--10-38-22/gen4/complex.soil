@@ -1,0 +1,106 @@
+!new AddressBook('Innovatech_Global_Network')
+
+!new Person('Chen_Mingyu')
+!Chen_Mingyu.name := 'Chen Mingyu'
+!Chen_Mingyu.phone := '+86-21-5558-7845'
+!Chen_Mingyu.website := 'mingyu-innovations.cn'
+!Chen_Mingyu.email := 'chen.mingyu@innovatech.cn'
+!Chen_Mingyu.title := 'Chief Technology Officer'
+
+!new Address('Address_Chen_Mingyu')
+!Address_Chen_Mingyu.city := 'Shanghai'
+!Address_Chen_Mingyu.houseNr := '128'
+!Address_Chen_Mingyu.street := 'Nanjing Road'
+!insert (Chen_Mingyu, Address_Chen_Mingyu) into ContactContainsAddress
+
+!new Note('Note_Chen_Mingyu')
+!Note_Chen_Mingyu.author := 'Chen Mingyu'
+!Note_Chen_Mingyu.time := Date('2023-07-14')
+!Note_Chen_Mingyu.type := #EMAIL
+!Note_Chen_Mingyu.comment := 'Presented the latest AI technology development strategy to European partners.'
+!insert (Chen_Mingyu, Note_Chen_Mingyu) into ContactContainsNote
+
+!new Company('Green_Energy_Solutions')
+!Green_Energy_Solutions.name := 'Green Energy Solutions'
+!Green_Energy_Solutions.phone := '+49-30-4356-7890'
+!Green_Energy_Solutions.website := 'greenenergysolutions.de'
+!Green_Energy_Solutions.email := 'info@greenenergysolutions.de'
+!Green_Energy_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_Green_Energy_Solutions')
+!Address_Green_Energy_Solutions.city := 'Berlin'
+!Address_Green_Energy_Solutions.houseNr := '34'
+!Address_Green_Energy_Solutions.street := 'Unter den Linden'
+!insert (Green_Energy_Solutions, Address_Green_Energy_Solutions) into ContactContainsAddress
+
+!new Note('Note_Green_Energy_Solutions')
+!Note_Green_Energy_Solutions.author := 'CEO'
+!Note_Green_Energy_Solutions.time := Date('2023-08-22')
+!Note_Green_Energy_Solutions.type := #MEETING
+!Note_Green_Energy_Solutions.comment := 'Negotiated joint venture terms for solar panel technology exchange.'
+!insert (Green_Energy_Solutions, Note_Green_Energy_Solutions) into ContactContainsNote
+
+!new Person('Priya_Ramesh')
+!Priya_Ramesh.name := 'Priya Ramesh'
+!Priya_Ramesh.phone := '+91-22-6734-7650'
+!Priya_Ramesh.website := 'priyaramesh-consulting.in'
+!Priya_Ramesh.email := 'priya.ramesh@innovatech.in'
+!Priya_Ramesh.title := 'Strategic Business Consultant'
+
+!new Address('Address_Priya_Ramesh')
+!Address_Priya_Ramesh.city := 'Mumbai'
+!Address_Priya_Ramesh.houseNr := '563'
+!Address_Priya_Ramesh.street := 'Marine Drive'
+!insert (Priya_Ramesh, Address_Priya_Ramesh) into ContactContainsAddress
+
+!new Note('Note_Priya_Ramesh')
+!Note_Priya_Ramesh.author := 'Priya Ramesh'
+!Note_Priya_Ramesh.time := Date('2023-09-16')
+!Note_Priya_Ramesh.type := #CALL
+!Note_Priya_Ramesh.comment := 'Held strategic meeting on market entry strategy for the Southeast Asian market.'
+!insert (Priya_Ramesh, Note_Priya_Ramesh) into ContactContainsNote
+
+!new Company('Arctic_Tech_Research')
+!Arctic_Tech_Research.name := 'Arctic Tech Research'
+!Arctic_Tech_Research.phone := '+47-23-656-9832'
+!Arctic_Tech_Research.website := 'arctictechresearch.no'
+!Arctic_Tech_Research.email := 'enquiries@arctictechresearch.no'
+!Arctic_Tech_Research.industry := 'Environmental Research'
+
+!new Address('Address_Arctic_Tech_Research')
+!Address_Arctic_Tech_Research.city := 'Oslo'
+!Address_Arctic_Tech_Research.houseNr := '15'
+!Address_Arctic_Tech_Research.street := 'Karl Johans gate'
+!insert (Arctic_Tech_Research, Address_Arctic_Tech_Research) into ContactContainsAddress
+
+!new Note('Note_Arctic_Tech_Research')
+!Note_Arctic_Tech_Research.author := 'Lead Researcher'
+!Note_Arctic_Tech_Research.time := Date('2023-10-02')
+!Note_Arctic_Tech_Research.type := #EMAIL
+!Note_Arctic_Tech_Research.comment := 'Coordinated international symposium on polar climate change impacts.'
+!insert (Arctic_Tech_Research, Note_Arctic_Tech_Research) into ContactContainsNote
+
+!new Relationship('Relationship_Chen_to_Green_Energy')
+!Relationship_Chen_to_Green_Energy.type := #BOSS
+!insert (Chen_Mingyu, Relationship_Chen_to_Green_Energy) into ContactToRelationship
+!insert (Relationship_Chen_to_Green_Energy, Green_Energy_Solutions) into RelationshipToContact
+
+!new Relationship('Relationship_Priya_to_Chen')
+!Relationship_Priya_to_Chen.type := #COWORKER
+!insert (Priya_Ramesh, Relationship_Priya_to_Chen) into ContactToRelationship
+!insert (Relationship_Priya_to_Chen, Chen_Mingyu) into RelationshipToContact
+
+!new Relationship('Relationship_Green_Energy_to_Arctic_Tech')
+!Relationship_Green_Energy_to_Arctic_Tech.type := #SUBDIVISION
+!insert (Green_Energy_Solutions, Relationship_Green_Energy_to_Arctic_Tech) into ContactToRelationship
+!insert (Relationship_Green_Energy_to_Arctic_Tech, Arctic_Tech_Research) into RelationshipToContact
+
+!new Relationship('Relationship_Priya_to_Arctic_Tech')
+!Relationship_Priya_to_Arctic_Tech.type := #COWORKER
+!insert (Priya_Ramesh, Relationship_Priya_to_Arctic_Tech) into ContactToRelationship
+!insert (Relationship_Priya_to_Arctic_Tech, Arctic_Tech_Research) into RelationshipToContact
+
+!insert (Innovatech_Global_Network, Chen_Mingyu) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Green_Energy_Solutions) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Priya_Ramesh) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Arctic_Tech_Research) into AddressBookMadeOfContact

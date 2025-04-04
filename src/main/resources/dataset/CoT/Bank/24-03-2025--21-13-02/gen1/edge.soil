@@ -1,0 +1,33 @@
+!new Bank('bank4')
+!bank4.country := 'Aland Islands'
+!bank4.name := 'Nordic Light Bank'
+!bank4.bic := 'NLBIALFIXXX'
+
+!new Account('account7')
+!account7.iban := 'AX1234567890123456'
+!account7.balance := 0
+
+!new Account('account8')
+!account8.iban := 'AX9876543210987654'
+!account8.balance := 0
+
+!new Person('person9')
+!person9.firstName := 'Guðmundur'
+!person9.lastName := 'Jónsson'
+!person9.age := 120
+
+!new Person('person10')
+!person10.firstName := 'María'
+!person10.lastName := 'Gonzalez'
+!person10.age := 127
+
+!insert (person9, account7) into Ownership
+!insert (person9, account8) into Ownership
+!insert (person10, account8) into Ownership
+
+!insert (person9, account7) into Use
+!insert (person10, account7) into Use
+!insert (person10, account8) into Use
+
+!insert (bank4, account7) into AccountOfBanks
+!insert (bank4, account8) into AccountOfBanks

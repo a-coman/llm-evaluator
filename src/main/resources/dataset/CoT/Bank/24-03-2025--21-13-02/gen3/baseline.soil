@@ -1,0 +1,50 @@
+!new Bank('bank12')
+!bank12.country := 'Kenya'
+!bank12.name := 'Equity Bank Kenya'
+!bank12.bic := 'EQBLKENAXXX'
+
+!new Bank('bank13')
+!bank13.country := 'Mexico'
+!bank13.name := 'Banco Nacional de México'
+!bank13.bic := 'BNMXMXMMXXX'
+
+!new Account('account25')
+!account25.iban := 'KE00123456789012345678'
+!account25.balance := 300
+
+!new Account('account26')
+!account26.iban := 'MX36901234567891234567'
+!account26.balance := 12000
+
+!new Person('person33')
+!person33.firstName := 'Amina'
+!person33.lastName := 'Mwangi'
+!person33.age := 36
+
+!new Person('person34')
+!person34.firstName := 'Carlos'
+!person34.lastName := 'González'
+!person34.age := 28
+
+!new Person('person35')
+!person35.firstName := 'Lily'
+!person35.lastName := 'Otieno'
+!person35.age := 23
+
+!new Person('person36')
+!person36.firstName := 'Martín'
+!person36.lastName := 'Perez'
+!person36.age := 40
+
+!insert (person33, account25) into Ownership
+!insert (person34, account26) into Ownership
+!insert (person36, account26) into Ownership
+
+!insert (person33, account25) into Use
+!insert (person35, account25) into Use
+!insert (person34, account26) into Use
+!insert (person35, account26) into Use
+!insert (person36, account26) into Use
+
+!insert (bank12, account25) into AccountOfBanks
+!insert (bank13, account26) into AccountOfBanks

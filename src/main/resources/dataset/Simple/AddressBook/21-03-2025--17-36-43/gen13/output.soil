@@ -1,0 +1,71 @@
+!new AddressBook('addressBook13')
+
+!new Company('adventureTravelCo')
+!adventureTravelCo.name := 'Adventure Travel Co'
+!adventureTravelCo.phone := '555-233-4455'
+!adventureTravelCo.website := 'www.adventuretravelco.com'
+!adventureTravelCo.email := 'info@adventuretravel.com'
+!adventureTravelCo.industry := 'Travel and Tourism'
+
+!new Person('avaNelson')
+!avaNelson.name := 'Ava Nelson'
+!avaNelson.phone := '444-555-1234'
+!avaNelson.website := 'www.avanelsontours.com'
+!avaNelson.email := 'ava.nelson@adventuretravel.com'
+!avaNelson.title := 'Tour Manager'
+
+!new Note('clientTourNote')
+!clientTourNote.author := 'Ava Nelson'
+!clientTourNote.time := Date('2024-09-10')
+!clientTourNote.type := #CALL
+!clientTourNote.comment := 'Discussed itinerary with clients for upcoming adventure tour'
+
+!new Address('avaAddress')
+!avaAddress.city := 'Denver'
+!avaAddress.houseNr := '657'
+!avaAddress.street := 'Tourist Trail'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, adventureTravelCo) into RelationshipToContact
+!insert (avaNelson, bossRelationship) into ContactToRelationship
+!insert (avaNelson, avaAddress) into ContactContainsAddress
+!insert (avaNelson, clientTourNote) into ContactContainsNote
+
+!new Person('jackSullivan')
+!jackSullivan.name := 'Jack Sullivan'
+!jackSullivan.phone := '333-666-7890'
+!jackSullivan.website := 'www.jacksullivanadventures.com'
+!jackSullivan.email := 'jack.sullivan@example.com'
+!jackSullivan.title := 'Adventure Guide'
+
+!new Note('routePlanningNote')
+!routePlanningNote.author := 'Jack Sullivan'
+!routePlanningNote.time := Date('2024-09-15')
+!routePlanningNote.type := #EMAIL
+!routePlanningNote.comment := 'Planned new routes for mountain expeditions and updated team'
+
+!new Address('jackAddress')
+!jackAddress.city := 'Salt Lake City'
+!jackAddress.houseNr := '534'
+!jackAddress.street := 'Explorer Lane'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, avaNelson) into RelationshipToContact
+!insert (jackSullivan, coworkerRelationship) into ContactToRelationship
+!insert (jackSullivan, jackAddress) into ContactContainsAddress
+!insert (jackSullivan, routePlanningNote) into ContactContainsNote
+
+!new Address('adventureTravelAddress')
+!adventureTravelAddress.city := 'Seattle'
+!adventureTravelAddress.houseNr := '777'
+!adventureTravelAddress.street := 'Expedition Blvd'
+
+!insert (adventureTravelCo, adventureTravelAddress) into ContactContainsAddress
+
+!insert (addressBook13, adventureTravelCo) into AddressBookMadeOfContact
+!insert (addressBook13, avaNelson) into AddressBookMadeOfContact
+!insert (addressBook13, jackSullivan) into AddressBookMadeOfContact

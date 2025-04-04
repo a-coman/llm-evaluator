@@ -1,0 +1,144 @@
+!new Club('club59')
+!club59.name := 'Falcons FC'
+!club59.homeGround := 'Falcon Field'
+!club59.chairman := 'Laura Thompson'
+
+!new Club('club60')
+!club60.name := 'Lynx FC'
+!club60.homeGround := 'Lynx Lair'
+!club60.chairman := 'Simon Turner'
+
+!new Team('team59')
+!team59.name := 'Falcon Flyers'
+!insert (club59, team59) into ClubTeam
+
+!new Team('team60')
+!team60.name := 'Lynx Leap'
+!insert (club60, team60) into ClubTeam
+
+!new Player('player88')
+!player88.name := 'Emma Walsh'
+!player88.age := 29
+!player88.bestFoot := #RIGHT
+!player88.phoneNumber := '321-654-9870'
+!insert (team59, player88) into TeamPlayer
+
+!new Player('player89')
+!player89.name := 'Aiden Griffin'
+!player89.age := 27
+!player89.bestFoot := #LEFT
+!player89.phoneNumber := '213-546-8790'
+!insert (team59, player89) into TeamPlayer
+
+!new Player('player90')
+!player90.name := 'Lucas Hayes'
+!player90.age := 30
+!player90.bestFoot := #BOTH
+!player90.phoneNumber := '178-953-6420'
+!insert (team60, player90) into TeamPlayer
+
+!new Position('position88')
+!position88.positionName := #FORWARD
+!insert (player88, position88) into PlayerPositions
+
+!new Position('position89')
+!position89.positionName := #DEFENDER
+!insert (player89, position89) into PlayerPositions
+
+!new Position('position90')
+!position90.positionName := #MIDFIELDER
+!insert (player90, position90) into PlayerPositions
+
+!new TrainingSession('training59')
+!training59.date := '2025-06-01'
+!training59.location := 'Falcon Nest'
+!training59.purpose := 'Coordinated Offensives'
+!insert (team59, training59) into TeamTraining
+
+!new TrainingSession('training60')
+!training60.date := '2025-06-02'
+!training60.location := 'Lynx Ground'
+!training60.purpose := 'Defensive Drills'
+!insert (team60, training60) into TeamTraining
+
+!new TrainingNotes('trainingNotes59')
+!trainingNotes59.note := 'Worked on synchronizing offensive plays to break defenses'
+!trainingNotes59.date := '2025-06-01'
+!insert (training59, trainingNotes59) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes60')
+!trainingNotes60.note := 'Concentrated on defensive rigidity and counter-tactics'
+!trainingNotes60.date := '2025-06-02'
+!insert (training60, trainingNotes60) into TrainingTrainingNotes
+
+!new TrainingObjective('objective88')
+!objective88.areaToImprove := 'Attacking Dynamics'
+!objective88.startDate := '2025-03-01'
+!objective88.endDate := '2025-06-01'
+!objective88.success := true
+!insert (objective88, player88) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective89')
+!objective89.areaToImprove := 'Defensive Positional Play'
+!objective89.startDate := '2025-03-10'
+!objective89.endDate := '2025-06-10'
+!objective89.success := false
+!insert (objective89, player89) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective90')
+!objective90.areaToImprove := 'Tactical Vision'
+!objective90.startDate := '2025-02-15'
+!objective90.endDate := '2025-05-15'
+!objective90.success := true
+!insert (objective90, player90) into TrainingObjectivePlayer
+
+!new Competition('competition30')
+!competition30.name := 'Skyline Cup'
+!competition30.type := 'Final'
+
+!new Match('match30')
+!match30.date := '2025-07-10'
+!match30.homeAway := false
+!insert (competition30, match30) into CompetitionMatch
+!insert (team59, match30) into VisitorMatch
+!insert (team60, match30) into LocalMatch
+
+!new MatchReport('report30')
+!report30.duration := 90
+!report30.scoreVisitor := 0
+!report30.scoreLocal := 1
+!insert (match30, report30) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer88')
+!matchPlayer88.booked := true
+!matchPlayer88.goals := 0
+!matchPlayer88.rating := 6
+!insert (player88, matchPlayer88) into PlayerMatch
+!insert (match30, matchPlayer88) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer90')
+!matchPlayer90.booked := false
+!matchPlayer90.goals := 1
+!matchPlayer90.rating := 9
+!insert (player90, matchPlayer90) into PlayerMatch
+!insert (match30, matchPlayer90) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition88')
+!matchPlayerPosition88.positionName := #FORWARD
+!matchPlayerPosition88.number := 11
+!insert (matchPlayer88, matchPlayerPosition88) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition90')
+!matchPlayerPosition90.positionName := #MIDFIELDER
+!matchPlayerPosition90.number := 8
+!insert (matchPlayer90, matchPlayerPosition90) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event116')
+!event116.eventType := #GOAL
+!event116.time := 62
+!insert (match30, event116) into MatchMatchEvent
+
+!new MatchNote('matchNote30')
+!matchNote30.note := 'Lynx Leap secured victory through tactical mastery'
+!matchNote30.date := '2025-07-10'
+!insert (match30, matchNote30) into MatchMatchNote

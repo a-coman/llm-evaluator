@@ -1,0 +1,53 @@
+!new Driver('driver24')
+!driver24.id := 'D024'
+!driver24.name := 'Emma Gonzalez'
+
+!new Shipment('shipment41')
+!shipment41.id := 'S041'
+!shipment41.status := #NEW
+
+!new Shipment('shipment42')
+!shipment42.id := 'S042'
+!shipment42.status := #UNDERWAY
+
+!new Address('address47')
+!address47.text := '2424 Oak Terrace'
+
+!new Address('address48')
+!address48.text := '2525 Cedar Avenue'
+
+!new GeoLocation('geoLocation47')
+!geoLocation47.latitude := 51.5074
+!geoLocation47.longitude := -0.1278
+
+!new GeoLocation('geoLocation48')
+!geoLocation48.latitude := 48.8566
+!geoLocation48.longitude := 2.3522
+
+!new Customer('customer24')
+!customer24.id := 'C024'
+!customer24.name := 'Liam Morales'
+!customer24.twitterUserName := '@liam_morales'
+
+!new Station('station23')
+
+!insert (driver24, shipment42) into DriverShipment
+
+!insert (shipment41, address47) into ShipmentContainsPickUpAddress
+!insert (shipment41, address48) into ShipmentContainsDeliveryAddress
+
+!insert (shipment42, address48) into ShipmentContainsPickUpAddress
+!insert (shipment42, address47) into ShipmentContainsDeliveryAddress
+
+!insert (address47, geoLocation47) into AddressContainsGeoLocation
+!insert (address48, geoLocation48) into AddressContainsGeoLocation
+
+!insert (customer24, shipment41) into CustomerConsistsOfShipment
+!insert (customer24, shipment42) into CustomerConsistsOfShipment
+
+!insert (station23, customer24) into StationContainsCustomer
+
+!insert (station23, shipment41) into StationShipment
+!insert (station23, shipment42) into StationShipment
+
+!insert (station23, driver24) into StationContainsDriver

@@ -1,0 +1,67 @@
+!new StateMachine('roboticVacuumControl')
+!roboticVacuumControl.name := 'roboticVacuumControl'
+
+!new State('idleMode')
+!idleMode.name := 'idleMode'
+
+!new State('cleanMode')
+!cleanMode.name := 'cleanMode'
+
+!new State('returnToDock')
+!returnToDock.name := 'returnToDock'
+
+!new State('charging')
+!charging.name := 'charging'
+
+!new Transition('startCleaning')
+!startCleaning.name := 'startCleaning'
+
+!new Transition('finishCleaning')
+!finishCleaning.name := 'finishCleaning'
+
+!new Transition('lowBatteryToDock')
+!lowBatteryToDock.name := 'lowBatteryToDock'
+
+!new Transition('fullyCharged')
+!fullyCharged.name := 'fullyCharged'
+
+!new TimeEvent('timeEventStartCleaning')
+!timeEventStartCleaning.time := 5
+
+!new TimeEvent('timeEventFinishCleaning')
+!timeEventFinishCleaning.time := 120
+
+!new TimeEvent('timeEventLowBatteryToDock')
+!timeEventLowBatteryToDock.time := 10
+
+!new TimeEvent('timeEventFullyCharged')
+!timeEventFullyCharged.time := 240
+
+!insert (roboticVacuumControl, idleMode) into StateMachineContainsStates
+!insert (roboticVacuumControl, cleanMode) into StateMachineContainsStates
+!insert (roboticVacuumControl, returnToDock) into StateMachineContainsStates
+!insert (roboticVacuumControl, charging) into StateMachineContainsStates
+
+!insert (roboticVacuumControl, idleMode) into StateMachineStartsStates
+
+!insert (roboticVacuumControl, startCleaning) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, finishCleaning) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, lowBatteryToDock) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, fullyCharged) into StateMachineContainsTransitions
+
+!insert (startCleaning, timeEventStartCleaning) into TransitionContainsEvents
+!insert (finishCleaning, timeEventFinishCleaning) into TransitionContainsEvents
+!insert (lowBatteryToDock, timeEventLowBatteryToDock) into TransitionContainsEvents
+!insert (fullyCharged, timeEventFullyCharged) into TransitionContainsEvents
+
+!insert (idleMode, startCleaning) into StateTransition
+!insert (startCleaning, cleanMode) into TransitionState
+
+!insert (cleanMode, finishCleaning) into StateTransition
+!insert (finishCleaning, returnToDock) into TransitionState
+
+!insert (cleanMode, lowBatteryToDock) into StateTransition
+!insert (lowBatteryToDock, returnToDock) into TransitionState
+
+!insert (charging, fullyCharged) into StateTransition
+!insert (fullyCharged, idleMode) into TransitionState

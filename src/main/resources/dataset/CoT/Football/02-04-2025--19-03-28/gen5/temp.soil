@@ -1,0 +1,163 @@
+!new Club('club56')
+!set club56.name := 'Ajax Amsterdam'
+!set club56.homeGround := 'Johan Cruyff Arena'
+!set club56.chairman := 'Frank Eikelboom'
+
+!new Club('club57')
+!set club57.name := 'PSV Eindhoven'
+!set club57.homeGround := 'Philips Stadion'
+!set club57.chairman := 'Jan Albers'
+
+!new Team('teamBH')
+!set teamBH.name := 'Ajax Main Squad'
+
+!new Team('teamBI')
+!set teamBI.name := 'PSV Main Squad'
+
+!insert (club56, teamBH) into ClubTeam
+!insert (club57, teamBI) into ClubTeam
+
+!new Competition('competition28')
+!set competition28.name := 'Eredivisie'
+!set competition28.type := 'Dutch National League'
+
+!new Match('match28')
+!set match28.date := '2024-03-01'
+!set match28.homeAway := true
+
+!insert (competition28, match28) into CompetitionMatch
+
+!insert (teamBH, match28) into LocalMatch
+!insert (teamBI, match28) into VisitorMatch
+
+!new MatchReport('matchReport28')
+!set matchReport28.duration := 92
+!set matchReport28.scoreVisitor := 1
+!set matchReport28.scoreLocal := 3
+
+!insert (match28, matchReport28) into MatchMatchReport
+
+!new Player('player63')
+!set player63.name := 'Dusan Tadic'
+!set player63.age := 35
+!set player63.bestFoot := #LEFT
+!set player63.phoneNumber := '+31 6123456789'
+
+!new Player('player64')
+!set player64.name := 'Cody Gakpo'
+!set player64.age := 24
+!set player64.bestFoot := #RIGHT
+!set player64.phoneNumber := '+31 6145678901'
+
+!insert (teamBH, player63) into TeamPlayer
+!insert (teamBI, player64) into TeamPlayer
+
+!new Position('position89')
+!set position89.positionName := #ATTACKING_MIDFIELDER
+
+!new Position('position90')
+!set position90.positionName := #WING
+
+!insert (player63, position89) into PlayerPositions
+!insert (player64, position90) into PlayerPositions
+
+!new MatchEvent('matchEvent118')
+!set matchEvent118.eventType := #GOAL
+!set matchEvent118.time := 17
+
+!new MatchEvent('matchEvent119')
+!set matchEvent119.eventType := #GOAL
+!set matchEvent119.time := 48
+
+!new MatchEvent('matchEvent120')
+!set matchEvent120.eventType := #GOAL
+!set matchEvent120.time := 81
+
+!new MatchEvent('matchEvent121')
+!set matchEvent121.eventType := #GOAL
+!set matchEvent121.time := 88
+
+!insert (match28, matchEvent118) into MatchMatchEvent
+!insert (match28, matchEvent119) into MatchMatchEvent
+!insert (match28, matchEvent120) into MatchMatchEvent
+!insert (match28, matchEvent121) into MatchMatchEvent
+
+!new MatchPlayer('matchPlayer38')
+!set matchPlayer38.booked := true
+!set matchPlayer38.goals := 2
+!set matchPlayer38.rating := 8
+
+!insert (player63, matchPlayer38) into PlayerMatch
+!insert (match28, matchPlayer38) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition39')
+!set matchPlayerPosition39.positionName := #ATTACKING_MIDFIELDER
+!set matchPlayerPosition39.number := 10
+
+!insert (matchPlayer38, matchPlayerPosition39) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer39')
+!set matchPlayer39.booked := false
+!set matchPlayer39.goals := 1
+!set matchPlayer39.rating := 7
+
+!insert (player64, matchPlayer39) into PlayerMatch
+!insert (match28, matchPlayer39) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition40')
+!set matchPlayerPosition40.positionName := #WING
+!set matchPlayerPosition40.number := 11
+
+!insert (matchPlayer39, matchPlayerPosition40) into MatchPlayerMatchPlayerPosition
+
+!new MatchNote('matchNote22')
+!set matchNote22.note := 'Ajax displayed superior tactical acumen, capitalizing on key opportunities.'
+!set matchNote22.date := '2024-03-01'
+
+!insert (match28, matchNote22) into MatchMatchNote
+
+!new TrainingSession('trainingSession49')
+!set trainingSession49.date := '2024-02-27'
+!set trainingSession49.location := 'De Toekomst'
+!set trainingSession49.purpose := 'Tactical Drills and Set Pieces'
+
+!insert (teamBH, trainingSession49) into TeamTraining
+
+!new TrainingNotes('trainingNote52')
+!set trainingNote52.note := 'Included an intensive review of defensive scenarios.'
+!set trainingNote52.date := '2024-02-26'
+
+!insert (trainingSession49, trainingNote52) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend19')
+!set failedAttend19.reason := 'Personal Leave - Tadic'
+
+!insert (trainingSession49, failedAttend19) into TrainingFailded
+!insert (failedAttend19, player63) into FailedPlayer
+
+!new TrainingObjective('trainingObjective66')
+!set trainingObjective66.areaToImprove := 'Crossing Accuracy'
+!set trainingObjective66.startDate := '2024-02-10'
+!set trainingObjective66.endDate := '2024-03-30'
+!set trainingObjective66.success := false
+
+!insert (trainingObjective66, player64) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective67')
+!set trainingObjective67.areaToImprove := 'Leadership Skills'
+!set trainingObjective67.startDate := '2024-02-01'
+!set trainingObjective67.endDate := '2024-03-01'
+!set trainingObjective67.success := true
+
+!insert (trainingObjective67, player63) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote42')
+!set playerNote42.note := 'Despite being booked, led the team with precise passes and leadership on the field.'
+!set playerNote42.date := '2024-02-28'
+
+!new PlayerNotes('playerNote43')
+!set playerNote43.note := 'Notable speed and control on the wing, though needs to improve crossing accuracy.'
+!set playerNote43.date := '2024-03-01'
+
+!insert (player63, playerNote42) into PlayerPlayerNotes
+!insert (player64, playerNote43) into PlayerPlayerNotes

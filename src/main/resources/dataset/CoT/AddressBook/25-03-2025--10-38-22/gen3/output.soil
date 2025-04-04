@@ -1,0 +1,441 @@
+!new AddressBook('AddressBook_3')
+
+!new Person('Amina_Hassan')
+!Amina_Hassan.name := 'Amina Hassan'
+!Amina_Hassan.phone := '+1-202-555-0144'
+!Amina_Hassan.website := 'ahassanresearch.org'
+!Amina_Hassan.email := 'amina.hassan@university.edu'
+!Amina_Hassan.title := 'Professor of Environmental Science'
+
+!new Address('Address_7')
+!Address_7.city := 'Washington D.C.'
+!Address_7.houseNr := '1600'
+!Address_7.street := 'Constitution Avenue'
+!insert (Amina_Hassan, Address_7) into ContactContainsAddress
+
+!new Note('Note_7')
+!Note_7.author := 'Amina Hassan'
+!Note_7.time := Date('2023-07-10')
+!Note_7.type := #CALL
+!Note_7.comment := 'Discussed funding opportunities with the department head.'
+!insert (Amina_Hassan, Note_7) into ContactContainsNote
+
+!new Company('GreenTech_Solutions')
+!GreenTech_Solutions.name := 'GreenTech Solutions'
+!GreenTech_Solutions.phone := '+31-20-555-7890'
+!GreenTech_Solutions.website := 'www.greentechsolutions.nl'
+!GreenTech_Solutions.email := 'contact@greentechsolutions.nl'
+!GreenTech_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_8')
+!Address_8.city := 'Amsterdam'
+!Address_8.houseNr := '508'
+!Address_8.street := 'Keizersgracht'
+!insert (GreenTech_Solutions, Address_8) into ContactContainsAddress
+
+!new Note('Note_8')
+!Note_8.author := 'Eleanor Fields'
+!Note_8.time := Date('2023-08-15')
+!Note_8.type := #MEETING
+!Note_8.comment := 'Strategy meeting to enhance solar panel efficiency.'
+!insert (GreenTech_Solutions, Note_8) into ContactContainsNote
+
+!new Person('Ravi_Patel')
+!Ravi_Patel.name := 'Ravi Patel'
+!Ravi_Patel.phone := '+91-98-7654-3210'
+!Ravi_Patel.website := 'ravipatelfinance.com'
+!Ravi_Patel.email := 'ravi@finadvisors.in'
+!Ravi_Patel.title := 'Financial Consultant'
+
+!new Address('Address_9')
+!Address_9.city := 'Mumbai'
+!Address_9.houseNr := '101'
+!Address_9.street := 'Marine Drive'
+!insert (Ravi_Patel, Address_9) into ContactContainsAddress
+
+!new Note('Note_9')
+!Note_9.author := 'Ravi Patel'
+!Note_9.time := Date('2023-09-25')
+!Note_9.type := #EMAIL
+!Note_9.comment := 'Sent investment strategy proposal to potential clients.'
+!insert (Ravi_Patel, Note_9) into ContactContainsNote
+
+!new Relationship('Relationship_6')
+!Relationship_6.type := #COWORKER
+!insert (Ravi_Patel, Relationship_6) into ContactToRelationship
+!insert (Relationship_6, Amina_Hassan) into RelationshipToContact
+
+!new Relationship('Relationship_7')
+!Relationship_7.type := #COWORKER
+!insert (Ravi_Patel, Relationship_7) into ContactToRelationship
+!insert (Relationship_7, GreenTech_Solutions) into RelationshipToContact
+
+!insert (AddressBook_3, Amina_Hassan) into AddressBookMadeOfContact
+!insert (AddressBook_3, GreenTech_Solutions) into AddressBookMadeOfContact
+!insert (AddressBook_3, Ravi_Patel) into AddressBookMadeOfContact
+
+!new AddressBook('AddressBook_3')
+
+!new Company('GreenLeaf_Publishing_House')
+!GreenLeaf_Publishing_House.name := 'GreenLeaf Publishing House'
+!GreenLeaf_Publishing_House.phone := '+91-22-4091-1560'
+!GreenLeaf_Publishing_House.website := 'www.greenleafindia.com'
+!GreenLeaf_Publishing_House.email := 'contact@greenleafindia.com'
+!GreenLeaf_Publishing_House.industry := 'Publishing'
+
+!new Address('Address_1')
+!Address_1.city := 'Mumbai'
+!Address_1.houseNr := '88'
+!Address_1.street := 'Marine Drive'
+!insert (GreenLeaf_Publishing_House, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'Kavita Sharma'
+!Note_1.time := Date('2023-07-10')
+!Note_1.type := #CALL
+!Note_1.comment := 'Discuss book launch event details.'
+!insert (GreenLeaf_Publishing_House, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #SUBDIVISION
+!insert (GreenLeaf_Publishing_House, Relationship_1) into ContactToRelationship
+
+!new Person('Professor_Erik_Svalberg')
+!Professor_Erik_Svalberg.name := 'Professor Erik Svalberg'
+!Professor_Erik_Svalberg.phone := '+46-8-5592-8450'
+!Professor_Erik_Svalberg.website := 'www.eriksvalbergresearch.se'
+!Professor_Erik_Svalberg.email := 'erik.svalberg@uniuppsala.se'
+!Professor_Erik_Svalberg.title := 'Professor of Linguistics'
+
+!new Address('Address_2')
+!Address_2.city := 'Uppsala'
+!Address_2.houseNr := '17'
+!Address_2.street := 'Stora Torget'
+!insert (Professor_Erik_Svalberg, Address_2) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Johan Lindgren'
+!Note_2.time := Date('2023-06-20')
+!Note_2.type := #EMAIL
+!Note_2.comment := 'Received feedback on linguistic research paper.'
+!insert (Professor_Erik_Svalberg, Note_2) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #COWORKER
+!insert (Professor_Erik_Svalberg, Relationship_2) into ContactToRelationship
+
+!new Person('Dr_Fatima_Abbas')
+!Dr_Fatima_Abbas.name := 'Dr. Fatima Abbas'
+!Dr_Fatima_Abbas.phone := '+966-12-6600-4789'
+!Dr_Fatima_Abbas.website := 'www.fatimaabbasedu.org'
+!Dr_Fatima_Abbas.email := 'fatima.abbas@kinguniversities.sa'
+!Dr_Fatima_Abbas.title := 'Research Fellow'
+
+!new Address('Address_3')
+!Address_3.city := 'Riyadh'
+!Address_3.houseNr := '230'
+!Address_3.street := 'Olaya Street'
+!insert (Dr_Fatima_Abbas, Address_3) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Ahmed Al-Mousa'
+!Note_3.time := Date('2023-09-12')
+!Note_3.type := #MEETING
+!Note_3.comment := 'Collaboration on artificial intelligence project.'
+!insert (Dr_Fatima_Abbas, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_3')
+!Relationship_3.type := #COWORKER
+!insert (Dr_Fatima_Abbas, Relationship_3) into ContactToRelationship
+!insert (Relationship_3, Professor_Erik_Svalberg) into RelationshipToContact
+
+!insert (Relationship_2, Dr_Fatima_Abbas) into RelationshipToContact
+!insert (Relationship_1, Professor_Erik_Svalberg) into RelationshipToContact
+
+!insert (AddressBook_3, GreenLeaf_Publishing_House) into AddressBookMadeOfContact
+!insert (AddressBook_3, Professor_Erik_Svalberg) into AddressBookMadeOfContact
+!insert (AddressBook_3, Dr_Fatima_Abbas) into AddressBookMadeOfContact
+
+!new AddressBook('European_Creative_Arts_Directory')
+
+!new Person('Sophie_Duval')
+!Sophie_Duval.name := 'Sophie Duval'
+!Sophie_Duval.phone := '+33-1-2345-6789'
+!Sophie_Duval.website := 'www.sophieduvalartist.com'
+!Sophie_Duval.email := 'contact@sophieduvaldesign.com'
+!Sophie_Duval.title := 'Graphic Designer'
+
+!new Address('Address_Sophie_Duval')
+!Address_Sophie_Duval.city := 'Paris'
+!Address_Sophie_Duval.houseNr := '101'
+!Address_Sophie_Duval.street := 'Rue de Rivoli'
+!insert (Sophie_Duval, Address_Sophie_Duval) into ContactContainsAddress
+
+!new Company('Barcelona_Art_Guild')
+!Barcelona_Art_Guild.name := 'Barcelona Art Guild'
+!Barcelona_Art_Guild.phone := '+34-93-123-4567'
+!Barcelona_Art_Guild.website := 'www.barcelonaartguild.es'
+!Barcelona_Art_Guild.email := 'info@barcelonaartguild.es'
+!Barcelona_Art_Guild.industry := 'Visual Arts'
+
+!new Address('Address_Barcelona_Art_Guild')
+!Address_Barcelona_Art_Guild.city := 'Barcelona'
+!Address_Barcelona_Art_Guild.houseNr := '250'
+!Address_Barcelona_Art_Guild.street := 'Carrer de Mallorca'
+!insert (Barcelona_Art_Guild, Address_Barcelona_Art_Guild) into ContactContainsAddress
+
+!new Note('Note_Barcelona_Art_Guild')
+!Note_Barcelona_Art_Guild.author := 'Carlos Ramirez'
+!Note_Barcelona_Art_Guild.time := Date('2023-09-14 10:00')
+!Note_Barcelona_Art_Guild.type := #MEETING
+!Note_Barcelona_Art_Guild.comment := 'Organized an exhibition featuring European artists.'
+!insert (Barcelona_Art_Guild, Note_Barcelona_Art_Guild) into ContactContainsNote
+
+!new Relationship('Relationship_Sophie_to_Barcelona_Art_Guild')
+!Relationship_Sophie_to_Barcelona_Art_Guild.type := #COWORKER
+!insert (Sophie_Duval, Relationship_Sophie_to_Barcelona_Art_Guild) into ContactToRelationship
+!insert (Relationship_Sophie_to_Barcelona_Art_Guild, Barcelona_Art_Guild) into RelationshipToContact
+
+!new Company('Amsterdam_Arts_Academy')
+!Amsterdam_Arts_Academy.name := 'Amsterdam Arts Academy'
+!Amsterdam_Arts_Academy.phone := '+31-20-123-4567'
+!Amsterdam_Arts_Academy.website := 'www.amsterdamartsacademy.nl'
+!Amsterdam_Arts_Academy.email := 'admin@amsterdamartsacademy.nl'
+!Amsterdam_Arts_Academy.industry := 'Arts Education'
+
+!new Address('Address_Amsterdam_Arts_Academy')
+!Address_Amsterdam_Arts_Academy.city := 'Amsterdam'
+!Address_Amsterdam_Arts_Academy.houseNr := '456'
+!Address_Amsterdam_Arts_Academy.street := 'Keizersgracht'
+!insert (Amsterdam_Arts_Academy, Address_Amsterdam_Arts_Academy) into ContactContainsAddress
+
+!new Note('Note_Amsterdam_Arts_Academy')
+!Note_Amsterdam_Arts_Academy.author := 'Marieke de Vries'
+!Note_Amsterdam_Arts_Academy.time := Date('2023-09-25 13:30')
+!Note_Amsterdam_Arts_Academy.type := #EMAIL
+!Note_Amsterdam_Arts_Academy.comment := 'Sent out invitations for upcoming workshops to participating artists.'
+!insert (Amsterdam_Arts_Academy, Note_Amsterdam_Arts_Academy) into ContactContainsNote
+
+!new Relationship('Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy')
+!Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy.type := #SUBDIVISION
+!insert (Barcelona_Art_Guild, Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy) into ContactToRelationship
+!insert (Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy, Amsterdam_Arts_Academy) into RelationshipToContact
+
+!new Relationship('Relationship_Amsterdam_Arts_Academy_to_Sophie')
+!Relationship_Amsterdam_Arts_Academy_to_Sophie.type := #BOSS
+!insert (Amsterdam_Arts_Academy, Relationship_Amsterdam_Arts_Academy_to_Sophie) into ContactToRelationship
+!insert (Relationship_Amsterdam_Arts_Academy_to_Sophie, Sophie_Duval) into RelationshipToContact
+
+!insert (European_Creative_Arts_Directory, Sophie_Duval) into AddressBookMadeOfContact
+!insert (European_Creative_Arts_Directory, Barcelona_Art_Guild) into AddressBookMadeOfContact
+!insert (European_Creative_Arts_Directory, Amsterdam_Arts_Academy) into AddressBookMadeOfContact
+
+!new AddressBook('Oceanic_Ventures_Connections')
+
+!new Person('Aisha_Al_Zein')
+!Aisha_Al_Zein.name := 'Aisha Al Zein'
+!Aisha_Al_Zein.phone := '+971-4-355-9876'
+!Aisha_Al_Zein.website := 'aishaalzeinconsults.ae'
+!Aisha_Al_Zein.email := 'aisha.alzein@oceanicventures.ae'
+!Aisha_Al_Zein.title := 'Chief Financial Officer'
+
+!new Address('Address_Aisha_Al_Zein')
+!Address_Aisha_Al_Zein.city := 'Dubai'
+!Address_Aisha_Al_Zein.houseNr := '45'
+!Address_Aisha_Al_Zein.street := 'Sheikh Zayed Road'
+!insert (Aisha_Al_Zein, Address_Aisha_Al_Zein) into ContactContainsAddress
+
+!new Note('Note_Aisha_Al_Zein')
+!Note_Aisha_Al_Zein.author := 'Aisha Al Zein'
+!Note_Aisha_Al_Zein.time := Date('2023-06-18')
+!Note_Aisha_Al_Zein.type := #EMAIL
+!Note_Aisha_Al_Zein.comment := 'Sent quarterly financial reports to executive team.'
+!insert (Aisha_Al_Zein, Note_Aisha_Al_Zein) into ContactContainsNote
+
+!new Company('Amazonas_Eco_Tours')
+!Amazonas_Eco_Tours.name := 'Amazonas Eco Tours'
+!Amazonas_Eco_Tours.phone := '+55-92-3312-4789'
+!Amazonas_Eco_Tours.website := 'amazonasecotours.brazil'
+!Amazonas_Eco_Tours.email := 'booking@amazonasecotours.brazil'
+!Amazonas_Eco_Tours.industry := 'Tourism and Eco Travel'
+
+!new Address('Address_Amazonas_Eco_Tours')
+!Address_Amazonas_Eco_Tours.city := 'Manaus'
+!Address_Amazonas_Eco_Tours.houseNr := '81'
+!Address_Amazonas_Eco_Tours.street := 'Avenida Eduardo Ribeiro'
+!insert (Amazonas_Eco_Tours, Address_Amazonas_Eco_Tours) into ContactContainsAddress
+
+!new Note('Note_Amazonas_Eco_Tours')
+!Note_Amazonas_Eco_Tours.author := 'Operations Manager'
+!Note_Amazonas_Eco_Tours.time := Date('2023-09-25')
+!Note_Amazonas_Eco_Tours.type := #MEETING
+!Note_Amazonas_Eco_Tours.comment := 'Planning itinerary setups for eco-friendly tourism packages.'
+!insert (Amazonas_Eco_Tours, Note_Amazonas_Eco_Tours) into ContactContainsNote
+
+!new Person('Liam_O_Connor')
+!Liam_O_Connor.name := 'Liam O\'Connor'
+!Liam_O_Connor.phone := '+353-1-555-9908'
+!Liam_O_Connor.website := 'liamoconnorsolutions.ie'
+!Liam_O_Connor.email := 'liam.oconnor@oceanicventures.ie'
+!Liam_O_Connor.title := 'Sustainability Advisor'
+
+!new Address('Address_Liam_O_Connor')
+!Address_Liam_O_Connor.city := 'Dublin'
+!Address_Liam_O_Connor.houseNr := '12'
+!Address_Liam_O_Connor.street := 'St Stephen\'s Green'
+!insert (Liam_O_Connor, Address_Liam_O_Connor) into ContactContainsAddress
+
+!new Note('Note_Liam_O_Connor')
+!Note_Liam_O_Connor.author := 'Liam O\'Connor'
+!Note_Liam_O_Connor.time := Date('2023-10-12')
+!Note_Liam_O_Connor.type := #CALL
+!Note_Liam_O_Connor.comment := 'Consultation call with environmental NGOs about sustainable practices.'
+!insert (Liam_O_Connor, Note_Liam_O_Connor) into ContactContainsNote
+
+!new Company('Pacifica_Marine_Innovations')
+!Pacifica_Marine_Innovations.name := 'Pacifica Marine Innovations'
+!Pacifica_Marine_Innovations.phone := '+61-2-8897-6534'
+!Pacifica_Marine_Innovations.website := 'pacificamarine.com.au'
+!Pacifica_Marine_Innovations.email := 'innovations@pacificamarine.com.au'
+!Pacifica_Marine_Innovations.industry := 'Marine Biotechnology'
+
+!new Address('Address_Pacifica_Marine_Innovations')
+!Address_Pacifica_Marine_Innovations.city := 'Sydney'
+!Address_Pacifica_Marine_Innovations.houseNr := '223'
+!Address_Pacifica_Marine_Innovations.street := 'Darling Harbour'
+!insert (Pacifica_Marine_Innovations, Address_Pacifica_Marine_Innovations) into ContactContainsAddress
+
+!new Note('Note_Pacifica_Marine_Innovations')
+!Note_Pacifica_Marine_Innovations.author := 'Chief Scientist'
+!Note_Pacifica_Marine_Innovations.time := Date('2023-08-05')
+!Note_Pacifica_Marine_Innovations.type := #MEETING
+!Note_Pacifica_Marine_Innovations.comment := 'Discussed collaboration on marine preservation technology.'
+!insert (Pacifica_Marine_Innovations, Note_Pacifica_Marine_Innovations) into ContactContainsNote
+
+!new Relationship('Relationship_Aisha_to_Liam')
+!Relationship_Aisha_to_Liam.type := #EMPLOYEE
+!insert (Aisha_Al_Zein, Relationship_Aisha_to_Liam) into ContactToRelationship
+!insert (Relationship_Aisha_to_Liam, Liam_O_Connor) into RelationshipToContact
+
+!new Relationship('Relationship_Liam_to_Amazonas')
+!Relationship_Liam_to_Amazonas.type := #COWORKER
+!insert (Liam_O_Connor, Relationship_Liam_to_Amazonas) into ContactToRelationship
+!insert (Relationship_Liam_to_Amazonas, Amazonas_Eco_Tours) into RelationshipToContact
+
+!new Relationship('Relationship_Aisha_to_Pacifica')
+!Relationship_Aisha_to_Pacifica.type := #BOSS
+!insert (Aisha_Al_Zein, Relationship_Aisha_to_Pacifica) into ContactToRelationship
+!insert (Relationship_Aisha_to_Pacifica, Pacifica_Marine_Innovations) into RelationshipToContact
+
+!insert (Oceanic_Ventures_Connections, Aisha_Al_Zein) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Amazonas_Eco_Tours) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Liam_O_Connor) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Pacifica_Marine_Innovations) into AddressBookMadeOfContact
+
+!new AddressBook('Education_Exchange_Program')
+
+!new Company('Oxford_International_University')
+!Oxford_International_University.name := 'Oxford International University'
+!Oxford_International_University.phone := '+44 1865 270000'
+!Oxford_International_University.website := 'www.oxfordintuni.edu'
+!Oxford_International_University.email := 'contact@oxfordintuni.edu'
+!Oxford_International_University.industry := 'Higher Education'
+
+!new Address('Address_Oxford')
+!Address_Oxford.city := 'Oxford'
+!Address_Oxford.houseNr := '1'
+!Address_Oxford.street := 'High Street'
+!insert (Oxford_International_University, Address_Oxford) into ContactContainsAddress
+
+!new Address('Address_Dubai')
+!Address_Dubai.city := 'Dubai'
+!Address_Dubai.houseNr := '45'
+!Address_Dubai.street := 'Education City'
+!insert (Oxford_International_University, Address_Dubai) into ContactContainsAddress
+
+!new Note('Note_1_Oxford_International_University')
+!Note_1_Oxford_International_University.author := 'Dr. Emily Watson'
+!Note_1_Oxford_International_University.time := Date('2023-07-12')
+!Note_1_Oxford_International_University.type := #EMAIL
+!Note_1_Oxford_International_University.comment := 'Discuss collaborations for international student exchange.'
+!insert (Oxford_International_University, Note_1_Oxford_International_University) into ContactContainsNote
+
+!new Note('Note_2_Oxford_International_University')
+!Note_2_Oxford_International_University.author := 'Ali Hussain'
+!Note_2_Oxford_International_University.time := Date('2023-09-05')
+!Note_2_Oxford_International_University.type := #CALL
+!Note_2_Oxford_International_University.comment := 'Details of the scholarship program for the new academic year.'
+!insert (Oxford_International_University, Note_2_Oxford_International_University) into ContactContainsNote
+
+!new Company('Shanghai_High_School_of_Arts')
+!Shanghai_High_School_of_Arts.name := 'Shanghai High School of Arts'
+!Shanghai_High_School_of_Arts.phone := '+86 21 6789 1011'
+!Shanghai_High_School_of_Arts.website := 'www.shanghaiarts.edu.cn'
+!Shanghai_High_School_of_Arts.email := 'info@shanghaiarts.edu.cn'
+!Shanghai_High_School_of_Arts.industry := 'Secondary Education'
+
+!new Address('Address_Shanghai')
+!Address_Shanghai.city := 'Shanghai'
+!Address_Shanghai.houseNr := '128'
+!Address_Shanghai.street := 'Future Avenue'
+!insert (Shanghai_High_School_of_Arts, Address_Shanghai) into ContactContainsAddress
+
+!new Note('Note_Shanghai_High_School_of_Arts')
+!Note_Shanghai_High_School_of_Arts.author := 'Liu Chen'
+!Note_Shanghai_High_School_of_Arts.time := Date('2023-08-10')
+!Note_Shanghai_High_School_of_Arts.type := #MEETING
+!Note_Shanghai_High_School_of_Arts.comment := 'Organizing a joint cultural festival with Oxford International University.'
+!insert (Shanghai_High_School_of_Arts, Note_Shanghai_High_School_of_Arts) into ContactContainsNote
+
+!new Person('Federico_Gillespie')
+!Federico_Gillespie.name := 'Federico Gillespie'
+!Federico_Gillespie.phone := '+54 11 2345 6789'
+!Federico_Gillespie.website := 'www.federicogillespie.com'
+!Federico_Gillespie.email := 'federico.gillespie@oxfordintuni.edu'
+!Federico_Gillespie.title := 'Coordinator of International Partnerships'
+
+!new Address('Address_Buenos_Aires')
+!Address_Buenos_Aires.city := 'Buenos Aires'
+!Address_Buenos_Aires.houseNr := '230'
+!Address_Buenos_Aires.street := 'Knowledge Lane'
+!insert (Federico_Gillespie, Address_Buenos_Aires) into ContactContainsAddress
+
+!new Address('Address_Oxford_Coordinator')
+!Address_Oxford_Coordinator.city := 'Oxford'
+!Address_Oxford_Coordinator.houseNr := '2'
+!Address_Oxford_Coordinator.street := 'Scholar\'s Ct'
+!insert (Federico_Gillespie, Address_Oxford_Coordinator) into ContactContainsAddress
+
+!new Note('Note_1_Federico_Gillespie')
+!Note_1_Federico_Gillespie.author := 'Federico Gillespie'
+!Note_1_Federico_Gillespie.time := Date('2023-08-20')
+!Note_1_Federico_Gillespie.type := #EMAIL
+!Note_1_Federico_Gillespie.comment := 'Proposal for curriculum alignment between partner institutions.'
+!insert (Federico_Gillespie, Note_1_Federico_Gillespie) into ContactContainsNote
+
+!new Note('Note_2_Federico_Gillespie')
+!Note_2_Federico_Gillespie.author := 'Liu Chen'
+!Note_2_Federico_Gillespie.time := Date('2023-09-15')
+!Note_2_Federico_Gillespie.type := #MEETING
+!Note_2_Federico_Gillespie.comment := 'Competency framework for exchange students discussed.'
+!insert (Federico_Gillespie, Note_2_Federico_Gillespie) into ContactContainsNote
+
+!new Relationship('Relationship_Oxford_to_Shanghai')
+!Relationship_Oxford_to_Shanghai.type := #SUBDIVISION
+!insert (Oxford_International_University, Relationship_Oxford_to_Shanghai) into ContactToRelationship
+!insert (Relationship_Oxford_to_Shanghai, Shanghai_High_School_of_Arts) into RelationshipToContact
+
+!new Relationship('Relationship_Oxford_to_Federico')
+!Relationship_Oxford_to_Federico.type := #EMPLOYEE
+!insert (Oxford_International_University, Relationship_Oxford_to_Federico) into ContactToRelationship
+!insert (Relationship_Oxford_to_Federico, Federico_Gillespie) into RelationshipToContact
+
+!new Relationship('Relationship_Shanghai_to_Federico')
+!Relationship_Shanghai_to_Federico.type := #COWORKER
+!insert (Shanghai_High_School_of_Arts, Relationship_Shanghai_to_Federico) into ContactToRelationship
+!insert (Relationship_Shanghai_to_Federico, Federico_Gillespie) into RelationshipToContact
+
+!insert (Education_Exchange_Program, Oxford_International_University) into AddressBookMadeOfContact
+!insert (Education_Exchange_Program, Shanghai_High_School_of_Arts) into AddressBookMadeOfContact
+!insert (Education_Exchange_Program, Federico_Gillespie) into AddressBookMadeOfContact
+

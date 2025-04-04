@@ -1,0 +1,82 @@
+!new StateMachine('brewBotProcess')
+!brewBotProcess.name := 'brewBotProcess'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('heatWater')
+!heatWater.name := 'heatWater'
+
+!new State('brewCoffee')
+!brewCoffee.name := 'brewCoffee'
+
+!new State('dispense')
+!dispense.name := 'dispense'
+
+!new State('cleanUp')
+!cleanUp.name := 'cleanUp'
+
+!new Transition('startBrewing')
+!startBrewing.name := 'startBrewing'
+
+!new Transition('startBrewing_process')
+!startBrewing_process.name := 'startBrewing_process'
+
+!new Transition('finishBrewing')
+!finishBrewing.name := 'finishBrewing'
+
+!new Transition('completeTask')
+!completeTask.name := 'completeTask'
+
+!new Transition('reset')
+!reset.name := 'reset'
+
+!new TimeEvent('waitForUserInput')
+!waitForUserInput.time := 5
+
+!new TimeEvent('waterHeatingDelay')
+!waterHeatingDelay.time := 120
+
+!new TimeEvent('brewingDuration')
+!brewingDuration.time := 180
+
+!new TimeEvent('dispensingTime')
+!dispensingTime.time := 30
+
+!new TimeEvent('cleanupTime')
+!cleanupTime.time := 15
+
+!insert (brewBotProcess, idle) into StateMachineContainsStates
+!insert (brewBotProcess, heatWater) into StateMachineContainsStates
+!insert (brewBotProcess, brewCoffee) into StateMachineContainsStates
+!insert (brewBotProcess, dispense) into StateMachineContainsStates
+!insert (brewBotProcess, cleanUp) into StateMachineContainsStates
+
+!insert (brewBotProcess, idle) into StateMachineStartsStates
+
+!insert (brewBotProcess, startBrewing) into StateMachineContainsTransitions
+!insert (brewBotProcess, startBrewing_process) into StateMachineContainsTransitions
+!insert (brewBotProcess, finishBrewing) into StateMachineContainsTransitions
+!insert (brewBotProcess, completeTask) into StateMachineContainsTransitions
+!insert (brewBotProcess, reset) into StateMachineContainsTransitions
+
+!insert (startBrewing, waitForUserInput) into TransitionContainsEvents
+!insert (startBrewing_process, waterHeatingDelay) into TransitionContainsEvents
+!insert (finishBrewing, brewingDuration) into TransitionContainsEvents
+!insert (completeTask, dispensingTime) into TransitionContainsEvents
+!insert (reset, cleanupTime) into TransitionContainsEvents
+
+!insert (idle, startBrewing) into StateTransition
+!insert (startBrewing, heatWater) into TransitionState
+
+!insert (heatWater, startBrewing_process) into StateTransition
+!insert (startBrewing_process, brewCoffee) into TransitionState
+
+!insert (brewCoffee, finishBrewing) into StateTransition
+!insert (finishBrewing, dispense) into TransitionState
+
+!insert (dispense, completeTask) into StateTransition
+!insert (completeTask, cleanUp) into TransitionState
+
+!insert (cleanUp, reset) into StateTransition
+!insert (reset, idle) into TransitionState

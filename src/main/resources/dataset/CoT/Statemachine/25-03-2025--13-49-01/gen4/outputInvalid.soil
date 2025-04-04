@@ -1,0 +1,73 @@
+!new StateMachine('railroadSignalSystem')
+!railroadSignalSystem.name := 'railroadSignalSystem'
+
+!new State('greenLight')
+!greenLight.name := 'greenLight'
+
+!new State('yellowLight')
+!yellowLight.name := 'yellowLight'
+
+!new State('redLight')
+!redLight.name := 'redLight'
+
+!new Transition('fromGreenToYellow')
+!fromGreenToYellow.name := 'fromGreenToYellow'
+
+!new Transition('fromYellowToRed')
+!fromYellowToRed.name := 'fromYellowToRed'
+
+!new Transition('fromRedToGreen')
+!fromRedToGreen.name := 'fromRedToGreen'
+
+!new Transition('emergencyStopGreen')
+!emergencyStopGreen.name := 'emergencyStop'
+
+!new Transition('emergencyStopYellow')
+!emergencyStopYellow.name := 'emergencyStop'
+
+!new TimeEvent('timeEventFromGreenToYellow')
+!timeEventFromGreenToYellow.time := 60
+
+!new TimeEvent('timeEventFromYellowToRed')
+!timeEventFromYellowToRed.time := 5
+
+!new TimeEvent('timeEventFromRedToGreen')
+!timeEventFromRedToGreen.time := 1 -- Changed from -1 to positive to comply with constraints
+
+!new TimeEvent('timeEventEmergencyStopGreen')
+!timeEventEmergencyStopGreen.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!new TimeEvent('timeEventEmergencyStopYellow')
+!timeEventEmergencyStopYellow.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!insert (railroadSignalSystem, greenLight) into StateMachineContainsStates
+!insert (railroadSignalSystem, yellowLight) into StateMachineContainsStates
+!insert (railroadSignalSystem, redLight) into StateMachineContainsStates
+
+!insert (railroadSignalSystem, fromGreenToYellow) into StateMachineContainsTransitions
+!insert (railroadSignalSystem, fromYellowToRed) into StateMachineContainsTransitions
+!insert (railroadSignalSystem, fromRedToGreen) into StateMachineContainsTransitions
+!insert (railroadSignalSystem, emergencyStopGreen) into StateMachineContainsTransitions
+!insert (railroadSignalSystem, emergencyStopYellow) into StateMachineContainsTransitions
+
+!insert (fromGreenToYellow, timeEventFromGreenToYellow) into TransitionContainsEvents
+!insert (fromYellowToRed, timeEventFromYellowToRed) into TransitionContainsEvents
+!insert (fromRedToGreen, timeEventFromRedToGreen) into TransitionContainsEvents
+!insert (emergencyStopGreen, timeEventEmergencyStopGreen) into TransitionContainsEvents
+!insert (emergencyStopYellow, timeEventEmergencyStopYellow) into TransitionContainsEvents
+
+!insert (greenLight, fromGreenToYellow) into StateTransition
+!insert (fromGreenToYellow, yellowLight) into TransitionState
+
+!insert (yellowLight, fromYellowToRed) into StateTransition
+!insert (fromYellowToRed, redLight) into TransitionState
+
+!insert (redLight, fromRedToGreen) into StateTransition
+!insert (fromRedToGreen, greenLight) into TransitionState
+
+!insert (greenLight, emergencyStopGreen) into StateTransition
+!insert (emergencyStopGreen, redLight) into TransitionState
+
+!insert (yellowLight, emergencyStopYellow) into StateTransition
+!insert (emergencyStopYellow, redLight) into TransitionState
+

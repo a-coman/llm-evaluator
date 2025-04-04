@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice26')
+!rentalOffice26.name := 'Midwest Rentals'
+!rentalOffice26.number := 126
+!rentalOffice26.address := '345 Plains Rd, Omaha, NE'
+
+!new Truck('truck15')
+!truck15.id := 25
+!truck15.registrationState := #CO
+!truck15.licensePlateNumber := 'NE5656'
+!truck15.vehicleTypeCode := #TRUCK
+!truck15.registrationLastMaintenanceDate := Date('2023-04-10')
+!truck15.expirationDate := Date('2024-04-10')
+!truck15.odometerReading := 14000
+!truck15.gasTankCapacity := 190.0
+!truck15.workingRadio := false
+!truck15.mileage := 20
+
+!new Company('companyCustomer12')
+!companyCustomer12.name := 'Heartland Deliveries'
+!companyCustomer12.address := '888 Cornfield Ln, Omaha, NE'
+!companyCustomer12.poorRisk := false
+!companyCustomer12.idNumber := 13012
+
+!new RentalAgreement('rentalAgreement25')
+!rentalAgreement25.number := 525
+!rentalAgreement25.rentalDate := Date('2023-12-12')
+!rentalAgreement25.anticipatedDuration := 5
+!rentalAgreement25.depositPaid := 150.0
+!rentalAgreement25.quotedDailyRate := 35.0
+!rentalAgreement25.quotedRatePerMile := 0.25
+
+!insert (rentalOffice26, truck15) into RentalOfficeVehicle
+!insert (rentalOffice26, rentalAgreement25) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice26, rentalAgreement25) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement25, truck15) into RentalAgreementVehicle
+!insert (rentalAgreement25, companyCustomer12) into RentalAgreementCustomer

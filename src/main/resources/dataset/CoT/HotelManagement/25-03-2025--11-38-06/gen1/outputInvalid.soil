@@ -1,0 +1,60 @@
+!new Customer('customer4')
+!customer4.firstName := 'Marta'
+!customer4.lastName := 'González'
+
+!new Booking('booking4')
+!booking4.bookingId := 2023101501
+!booking4.startDate := 'July 20, 2024'
+!booking4.endDate := 'July 27, 2024'
+!booking4.canceled := false
+!booking4.confirmed := true
+
+!new RoomReservation('roomreservation5')
+!roomreservation5.checkInDate := 'July 20, 2024'
+!roomreservation5.checkOutDate := 'July 27, 2024'
+
+!new Room('room7')
+!room7.roomNumber := 101
+!room7.numBeds := 1
+!room7.pricePerNight := 300.00
+!room7.occupied := true
+!room7.blocked := false
+
+!new Room('room8')
+!room8.roomNumber := 102
+!room8.numBeds := 3
+!room8.pricePerNight := 450.00
+!room8.occupied := false
+!room8.blocked := false
+
+!new Room('room9')
+!room9.roomNumber := 103
+!room9.numBeds := 2
+!room9.pricePerNight := 500.00
+!room9.occupied := false
+!room9.blocked := true
+
+!new RoomExtra('roomextra8')
+!roomextra8.price := 50.00
+!roomextra8.description := 'A bottle of premium Spanish cava to welcome guests.'
+
+!new RoomExtra('roomextra9')
+!roomextra9.price := 100.00
+!roomextra9.description := 'Exclusive dinner with sea view, including a three-course meal.'
+
+!new Bill('bill6')
+!bill6.billId := 2023101501
+!bill6.price := 2850.00
+
+!insert (booking4, customer4) into BookingCustomer
+!insert (booking4, roomreservation5) into BookingRoomReservation
+!insert (booking4, bill6) into BookingBill
+
+!insert (roomreservation5, room7) into RoomReservationRoom
+!insert (roomreservation5, room8) into RoomReservationRoom
+!insert (roomreservation5, room9) into RoomReservationRoom
+!insert (roomreservation5, roomextra8) into RoomReservationExtras
+!insert (roomreservation5, roomextra9) into RoomReservationExtras
+
+!insert (bill6, roomreservation5) into BillRoomReservation
+

@@ -1,0 +1,52 @@
+!new Bank('bank17')
+!bank17.country := 'India'
+!bank17.name := 'State Bank of India'
+!bank17.bic := 'SBININBBXXX'
+
+!new Account('account34')
+!account34.iban := 'IN30109876543210987654'
+!account34.balance := 8000
+
+!new Account('account35')
+!account35.iban := 'IN50234567890123456789'
+!account35.balance := 450
+
+!new Account('account36')
+!account36.iban := 'IN70987654321098765432'
+!account36.balance := 1500
+
+!new Person('person47')
+!person47.firstName := 'Priya'
+!person47.lastName := 'Sharma'
+!person47.age := 33
+
+!new Person('person48')
+!person48.firstName := 'Rajiv'
+!person48.lastName := 'Nair'
+!person48.age := 50
+
+!new Person('person49')
+!person49.firstName := 'Alok'
+!person49.lastName := 'Bhatt'
+!person49.age := 21
+
+!new Person('person50')
+!person50.firstName := 'Kavita'
+!person50.lastName := 'Verma'
+!person50.age := 45
+
+!insert (person47, account34) into Ownership
+!insert (person49, account34) into Ownership
+!insert (person48, account35) into Ownership
+!insert (person50, account36) into Ownership
+
+!insert (person47, account34) into Use
+!insert (person47, account36) into Use
+!insert (person48, account35) into Use
+!insert (person49, account34) into Use
+!insert (person50, account35) into Use
+!insert (person50, account36) into Use
+
+!insert (bank17, account34) into AccountOfBanks
+!insert (bank17, account35) into AccountOfBanks
+!insert (bank17, account36) into AccountOfBanks

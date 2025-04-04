@@ -1,0 +1,299 @@
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Expense('scienceFairProjectExpenses')
+!scienceFairProjectExpenses.amount := 600.00
+!scienceFairProjectExpenses.startDate := Date('2023-03-01')
+!scienceFairProjectExpenses.endDate := Date('2023-03-15')
+
+!new Bill('materialsAndSupplies')
+!materialsAndSupplies.amount := 250.00
+!materialsAndSupplies.category := 'Supplies'
+!materialsAndSupplies.date := Date('2023-02-20')
+!materialsAndSupplies.paymentMethod := #CREDIT_CARD
+!materialsAndSupplies.status := #VERIFIED
+
+!new Bill('printingAndPosters')
+!printingAndPosters.amount := 100.00
+!printingAndPosters.category := 'Stationery'
+!printingAndPosters.date := Date('2023-02-25')
+!printingAndPosters.paymentMethod := #CASH
+!printingAndPosters.status := #VERIFIED
+
+!new Bill('entryFee')
+!entryFee.amount := 50.00
+!entryFee.category := 'Event'
+!entryFee.date := Date('2023-03-01')
+!entryFee.paymentMethod := #CHECK
+!entryFee.status := #VALIDATED
+
+!new Bill('refreshmentsForPresenters')
+!refreshmentsForPresenters.amount := 200.00
+!refreshmentsForPresenters.category := 'Food'
+!refreshmentsForPresenters.date := Date('2023-03-10')
+!refreshmentsForPresenters.paymentMethod := #CREDIT_CARD
+!refreshmentsForPresenters.status := #PENDING
+
+!insert (materialsAndSupplies, australianDollar) into BillCurrency
+!insert (printingAndPosters, australianDollar) into BillCurrency
+!insert (entryFee, australianDollar) into BillCurrency
+!insert (refreshmentsForPresenters, australianDollar) into BillCurrency
+
+!insert (scienceFairProjectExpenses, materialsAndSupplies) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, printingAndPosters) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, entryFee) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, refreshmentsForPresenters) into ExpenseContainsBills
+
+!new Comment('commentEcoFriendlyMaterials')
+!commentEcoFriendlyMaterials.text := 'Managed to get all required materials within budget with an emphasis on sustainability.'
+
+!new Comment('commentPosters')
+!commentPosters.text := 'The design and print quality of the posters drew in a lot of attention from attendees.'
+
+!new Comment('commentFeedback')
+!commentFeedback.text := 'The project presentation was well-received, with positive feedback on both content and delivery.'
+
+!insert (scienceFairProjectExpenses, commentEcoFriendlyMaterials) into ExpenseComment
+!insert (scienceFairProjectExpenses, commentPosters) into ExpenseComment
+!insert (scienceFairProjectExpenses, commentFeedback) into ExpenseComment
+
+!new Currency('mexicanPeso')
+!mexicanPeso.name := 'Mexican Peso'
+!mexicanPeso.abbreviation := 'MXN'
+
+!new Expense('homeRenovationProjectExpense')
+!homeRenovationProjectExpense.amount := 250000.00
+!homeRenovationProjectExpense.startDate := Date('2023-03-01')
+!homeRenovationProjectExpense.endDate := Date('2023-03-31')
+
+!new Bill('constructionMaterials')
+!constructionMaterials.amount := 100000.00
+!constructionMaterials.category := 'Construction'
+!constructionMaterials.date := Date('2023-03-05')
+!constructionMaterials.paymentMethod := #CHECK
+!constructionMaterials.status := #VERIFIED
+
+!new Bill('interiorDesignServices')
+!interiorDesignServices.amount := 50000.00
+!interiorDesignServices.category := 'Design'
+!interiorDesignServices.date := Date('2023-03-10')
+!interiorDesignServices.paymentMethod := #CREDIT_CARD
+!interiorDesignServices.status := #VALIDATED
+
+!new Bill('furniturePurchase')
+!furniturePurchase.amount := 60000.00
+!furniturePurchase.category := 'Furnishing'
+!furniturePurchase.date := Date('2023-03-15')
+!furniturePurchase.paymentMethod := #CASH
+!furniturePurchase.status := #VERIFIED
+
+!new Bill('landscapingGardenSetup')
+!landscapingGardenSetup.amount := 40000.00
+!landscapingGardenSetup.category := 'Landscaping'
+!landscapingGardenSetup.date := Date('2023-03-25')
+!landscapingGardenSetup.paymentMethod := #CREDIT_CARD
+!landscapingGardenSetup.status := #VERIFIED
+
+!insert (constructionMaterials, mexicanPeso) into BillCurrency
+!insert (interiorDesignServices, mexicanPeso) into BillCurrency
+!insert (furniturePurchase, mexicanPeso) into BillCurrency
+!insert (landscapingGardenSetup, mexicanPeso) into BillCurrency
+
+!insert (homeRenovationProjectExpense, constructionMaterials) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, interiorDesignServices) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, furniturePurchase) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, landscapingGardenSetup) into ExpenseContainsBills
+
+!new Comment('commentConstructionPhase')
+!commentConstructionPhase.text := 'Construction phase progressed smoothly, materials were top quality.'
+
+!new Comment('commentDesignServices')
+!commentDesignServices.text := 'Design services added a modern touch, very satisfied with the aesthetics.'
+
+!new Comment('commentFurnitureDelivery')
+!commentFurnitureDelivery.text := 'Furniture delivery was timely, fits perfectly with the new interiors.'
+
+!new Comment('commentLandscapingTransformation')
+!commentLandscapingTransformation.text := 'Landscaping transformed the exterior, received numerous compliments from neighbors.'
+
+!insert (homeRenovationProjectExpense, commentConstructionPhase) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentDesignServices) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentFurnitureDelivery) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentLandscapingTransformation) into ExpenseComment
+
+!new Currency('chineseYuan')
+!chineseYuan.name := 'Chinese Yuan'
+!chineseYuan.abbreviation := 'CNY'
+
+!new Expense('programmingCourseExpense')
+!programmingCourseExpense.amount := 3000.00
+!programmingCourseExpense.startDate := Date('2023-02-01')
+!programmingCourseExpense.endDate := Date('2023-02-10')
+
+!new Bill('courseFee')
+!courseFee.amount := 2000.00
+!courseFee.category := 'Course Fee'
+!courseFee.date := Date('2023-02-01')
+!courseFee.paymentMethod := #CASH
+!courseFee.status := #DRAFT
+
+!new Bill('studyMaterials')
+!studyMaterials.amount := 700.00
+!studyMaterials.category := 'Study Materials'
+!studyMaterials.date := Date('2023-02-05')
+!studyMaterials.paymentMethod := #CHECK
+!studyMaterials.status := #PENDING
+
+!new Bill('transportation')
+!transportation.amount := 300.00
+!transportation.category := 'Transportation'
+!transportation.date := Date('2023-02-09')
+!transportation.paymentMethod := #CREDIT_CARD
+!transportation.status := #VALIDATED
+
+!insert (courseFee, chineseYuan) into BillCurrency
+!insert (studyMaterials, chineseYuan) into BillCurrency
+!insert (transportation, chineseYuan) into BillCurrency
+
+!insert (programmingCourseExpense, courseFee) into ExpenseContainsBills
+!insert (programmingCourseExpense, studyMaterials) into ExpenseContainsBills
+!insert (programmingCourseExpense, transportation) into ExpenseContainsBills
+
+!new Comment('commentEnthusiasm')
+!commentEnthusiasm.text := 'Enthusiastic about learning the new programming languages.'
+
+!new Comment('commentStudyMaterials')
+!commentStudyMaterials.text := 'Unexpected cost of additional study materials ensured deeper understanding.'
+
+!insert (programmingCourseExpense, commentEnthusiasm) into ExpenseComment
+!insert (programmingCourseExpense, commentStudyMaterials) into ExpenseComment
+
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Expense('decemberExpense')
+!decemberExpense.amount := 250.75
+!decemberExpense.startDate := Date('2023-12-01')
+!decemberExpense.endDate := Date('2023-12-31')
+
+!new Bill('entertainmentEvent')
+!entertainmentEvent.amount := 75.25
+!entertainmentEvent.category := 'Entertainment'
+!entertainmentEvent.date := Date('2023-12-10')
+!entertainmentEvent.paymentMethod := #CASH
+!entertainmentEvent.status := #DRAFT
+
+!new Bill('holidayGifts')
+!holidayGifts.amount := 175.50
+!holidayGifts.category := 'Gifts'
+!holidayGifts.date := Date('2023-12-20')
+!holidayGifts.paymentMethod := #CREDIT_CARD
+!holidayGifts.status := #VALIDATED
+
+!insert (entertainmentEvent, australianDollar) into BillCurrency
+!insert (holidayGifts, australianDollar) into BillCurrency
+
+!insert (decemberExpense, entertainmentEvent) into ExpenseContainsBills
+!insert (decemberExpense, holidayGifts) into ExpenseContainsBills
+
+!new Comment('commentEntertainmentGiftsPlanning')
+!commentEntertainmentGiftsPlanning.text := 'December entertainment and gift planning'
+
+!new Comment('commentClubMembershipGifts')
+!commentClubMembershipGifts.text := 'Expenses include annual club membership and gift purchases'
+
+!new Comment('commentYearEndBudget')
+!commentYearEndBudget.text := 'Monitored year-end budget constraints'
+
+!insert (decemberExpense, commentEntertainmentGiftsPlanning) into ExpenseComment
+!insert (decemberExpense, commentClubMembershipGifts) into ExpenseComment
+!insert (decemberExpense, commentYearEndBudget) into ExpenseComment
+
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!new Bill('conferenceVenueRental')
+!conferenceVenueRental.amount := 250000.00
+!conferenceVenueRental.category := 'Conference Venue Rental'
+!conferenceVenueRental.date := Date('2023-10-15')
+!conferenceVenueRental.paymentMethod := #CHECK
+!conferenceVenueRental.status := #PENDING
+
+!new Bill('speakerHonorariums')
+!speakerHonorariums.amount := 5000.00
+!speakerHonorariums.category := 'Speaker Honorariums'
+!speakerHonorariums.date := Date('2023-10-15')
+!speakerHonorariums.paymentMethod := #CASH
+!speakerHonorariums.status := #VALIDATED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 1200.00
+!cateringServices.category := 'Catering Services'
+!cateringServices.date := Date('2023-10-15')
+!cateringServices.paymentMethod := #CHECK
+!cateringServices.status := #VERIFIED
+
+!new Bill('administrativeSupplies')
+!administrativeSupplies.amount := 750.00
+!administrativeSupplies.category := 'Administrative Supplies'
+!administrativeSupplies.date := Date('2023-10-15')
+!administrativeSupplies.paymentMethod := #CASH
+!administrativeSupplies.status := #VALIDATED
+
+!new Bill('travelGrants')
+!travelGrants.amount := 950.00
+!travelGrants.category := 'Travel Grants for International Scholars'
+!travelGrants.date := Date('2023-10-15')
+!travelGrants.paymentMethod := #CHECK
+!travelGrants.status := #PENDING
+
+!insert (conferenceVenueRental, japaneseYen) into BillCurrency
+!insert (speakerHonorariums, britishPound) into BillCurrency
+!insert (cateringServices, britishPound) into BillCurrency
+!insert (administrativeSupplies, canadianDollar) into BillCurrency
+!insert (travelGrants, canadianDollar) into BillCurrency
+
+!new Expense('academicResearchConferenceExpenses')
+-- Correct total amount reflects only the sum of the bill amounts
+!academicResearchConferenceExpenses.amount := 257900.00
+!academicResearchConferenceExpenses.startDate := Date('2023-10-15')
+!academicResearchConferenceExpenses.endDate := Date('2023-10-17')
+
+!insert (academicResearchConferenceExpenses, conferenceVenueRental) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, speakerHonorariums) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, cateringServices) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, administrativeSupplies) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, travelGrants) into ExpenseContainsBills
+
+!new Comment('commentVenueRental')
+!commentVenueRental.text := 'Venue rental costs pending final confirmation and adjustment based on attendance.'
+
+!new Comment('commentSpeakerPayments')
+!commentSpeakerPayments.text := 'All speaker payments verified and processed successfully.'
+
+!new Comment('commentCateringAudit')
+!commentCateringAudit.text := 'Catering efficiently reconciled within budget, set for official audit.'
+
+!new Comment('commentAdminSupplies')
+!commentAdminSupplies.text := 'Administrative supply expenses validated, enabling smooth conference management.'
+
+!new Comment('commentTravelGrants')
+!commentTravelGrants.text := 'Pending verification of travel grants, subject to scholar documentation.'
+
+!insert (academicResearchConferenceExpenses, commentVenueRental) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentSpeakerPayments) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentCateringAudit) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentAdminSupplies) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentTravelGrants) into ExpenseComment
+

@@ -1,0 +1,71 @@
+!new AddressBook('addressBook20')
+
+!new Company('urbanCycleFitness')
+!urbanCycleFitness.name := 'Urban Cycle Fitness'
+!urbanCycleFitness.phone := '777-888-2222'
+!urbanCycleFitness.website := 'www.urbancyclefitness.com'
+!urbanCycleFitness.email := 'info@urbancyclefitness.com'
+!urbanCycleFitness.industry := 'Health & Fitness'
+
+!new Person('noraAdams')
+!noraAdams.name := 'Nora Adams'
+!noraAdams.phone := '888-999-1111'
+!noraAdams.website := 'www.noraadamsfitness.com'
+!noraAdams.email := 'nora.adams@urbancyclefitness.com'
+!noraAdams.title := 'Head Instructor'
+
+!new Note('classScheduleNote')
+!classScheduleNote.author := 'Nora Adams'
+!classScheduleNote.time := Date('2025-04-05')
+!classScheduleNote.type := #MEETING
+!classScheduleNote.comment := 'Scheduled new cycling classes for the upcoming quarter'
+
+!new Address('noraAddress')
+!noraAddress.city := 'San Diego'
+!noraAddress.houseNr := '500'
+!noraAddress.street := 'Fitness Lane'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, urbanCycleFitness) into RelationshipToContact
+!insert (noraAdams, employeeRelationship) into ContactToRelationship
+!insert (noraAdams, noraAddress) into ContactContainsAddress
+!insert (noraAdams, classScheduleNote) into ContactContainsNote
+
+!new Person('jakeTurner')
+!jakeTurner.name := 'Jake Turner'
+!jakeTurner.phone := '555-666-7777'
+!jakeTurner.website := 'www.jaketurnerfitness.com'
+!jakeTurner.email := 'jake.turner@example.com'
+!jakeTurner.title := 'Personal Trainer'
+
+!new Note('fitnessAssessmentNote')
+!fitnessAssessmentNote.author := 'Jake Turner'
+!fitnessAssessmentNote.time := Date('2025-04-15')
+!fitnessAssessmentNote.type := #CALL
+!fitnessAssessmentNote.comment := 'Conducted fitness assessments for new clients'
+
+!new Address('jakeAddress')
+!jakeAddress.city := 'Phoenix'
+!jakeAddress.houseNr := '602'
+!jakeAddress.street := 'Strength Street'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, noraAdams) into RelationshipToContact
+!insert (jakeTurner, subdivisionRelationship) into ContactToRelationship
+!insert (jakeTurner, jakeAddress) into ContactContainsAddress
+!insert (jakeTurner, fitnessAssessmentNote) into ContactContainsNote
+
+!new Address('urbanCycleFitnessAddress')
+!urbanCycleFitnessAddress.city := 'Austin'
+!urbanCycleFitnessAddress.houseNr := '101'
+!urbanCycleFitnessAddress.street := 'Cycle Avenue'
+
+!insert (urbanCycleFitness, urbanCycleFitnessAddress) into ContactContainsAddress
+
+!insert (addressBook20, urbanCycleFitness) into AddressBookMadeOfContact
+!insert (addressBook20, noraAdams) into AddressBookMadeOfContact
+!insert (addressBook20, jakeTurner) into AddressBookMadeOfContact

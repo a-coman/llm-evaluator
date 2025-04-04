@@ -1,0 +1,33 @@
+!new Expense('expense26')
+!expense26.amount := 1050.0
+!expense26.startDate := Date('2025-02-01')
+!expense26.endDate := Date('2025-02-28')
+
+!new Currency('currency24')
+!currency24.name := 'Philippine Peso'
+!currency24.abbreviation := 'PHP'
+
+!new Bill('bill46')
+!bill46.amount := 600.0
+!bill46.category := 'Car Repair'
+!bill46.date := Date('2025-02-14')
+!bill46.paymentMethod := #CREDIT_CARD
+!bill46.status := #PENDING
+
+!new Bill('bill47')
+!bill47.amount := 450.0
+!bill47.category := 'House Cleaning'
+!bill47.date := Date('2025-02-18')
+!bill47.paymentMethod := #CHECK
+!bill47.status := #VERIFIED
+
+!insert (expense26, bill46) into ExpenseContainsBills
+!insert (expense26, bill47) into ExpenseContainsBills
+
+!insert (bill46, currency24) into BillCurrency
+!insert (bill47, currency24) into BillCurrency
+
+!new Comment('comment26')
+!comment26.text := 'February expenses for car repair and house cleaning'
+
+!insert (expense26, comment26) into ExpenseComment

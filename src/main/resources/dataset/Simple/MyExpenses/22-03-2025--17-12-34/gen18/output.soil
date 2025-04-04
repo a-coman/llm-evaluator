@@ -1,0 +1,33 @@
+!new Expense('expense20')
+!expense20.amount := 560.0
+!expense20.startDate := Date('2024-08-01')
+!expense20.endDate := Date('2024-08-31')
+
+!new Currency('currency18')
+!currency18.name := 'Norwegian Krone'
+!currency18.abbreviation := 'NOK'
+
+!new Bill('bill34')
+!bill34.amount := 60.0
+!bill34.category := 'Streaming Services'
+!bill34.date := Date('2024-08-05')
+!bill34.paymentMethod := #CREDIT_CARD
+!bill34.status := #PENDING
+
+!new Bill('bill35')
+!bill35.amount := 500.0
+!bill35.category := 'Dining Out'
+!bill35.date := Date('2024-08-15')
+!bill35.paymentMethod := #CASH
+!bill35.status := #VERIFIED
+
+!insert (expense20, bill34) into ExpenseContainsBills
+!insert (expense20, bill35) into ExpenseContainsBills
+
+!insert (bill34, currency18) into BillCurrency
+!insert (bill35, currency18) into BillCurrency
+
+!new Comment('comment20')
+!comment20.text := 'August expenses for streaming and dining out'
+
+!insert (expense20, comment20) into ExpenseComment

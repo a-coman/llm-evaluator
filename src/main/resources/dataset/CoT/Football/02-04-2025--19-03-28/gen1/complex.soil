@@ -1,0 +1,166 @@
+!new Club('club4')
+!club4.name := 'FC Barcelona'
+!club4.homeGround := 'Camp Nou'
+!club4.chairman := 'Joan Laporta'
+
+!new Club('club5')
+!club5.name := 'Real Madrid C.F.'
+!club5.homeGround := 'Santiago Bernabéu Stadium'
+!club5.chairman := 'Florentino Pérez'
+
+!new Team('teamE')
+!teamE.name := 'Barcelona A-Team'
+
+!new Team('teamF')
+!teamF.name := 'Real Madrid A-Team'
+
+!insert (club4, teamE) into ClubTeam
+!insert (club5, teamF) into ClubTeam
+
+!new Competition('competition3')
+!competition3.name := 'La Liga'
+!competition3.type := 'Domestic League'
+
+!new Match('match3')
+!match3.date := '2023-10-29'
+!match3.homeAway := true
+
+!insert (competition3, match3) into CompetitionMatch
+
+!insert (teamE, match3) into LocalMatch
+!insert (teamF, match3) into VisitorMatch
+
+!new Player('player5')
+!player5.name := 'Lionel Messi'
+!player5.age := 36
+!player5.bestFoot := #LEFT
+!player5.phoneNumber := '+34 912345678'
+
+!new Player('player6')
+!player6.name := 'Karim Benzema'
+!player6.age := 35
+!player6.bestFoot := #RIGHT
+!player6.phoneNumber := '+34 987654321'
+
+!insert (teamE, player5) into TeamPlayer
+!insert (teamF, player6) into TeamPlayer
+
+!new Position('position6')
+!position6.positionName := #FORWARD
+
+!new Position('position7')
+!position7.positionName := #FORWARD
+
+!insert (player5, position6) into PlayerPositions
+!insert (player6, position7) into PlayerPositions
+
+!new MatchReport('matchReport3')
+!matchReport3.duration := 94
+!matchReport3.scoreVisitor := 2
+!matchReport3.scoreLocal := 1
+
+!insert (match3, matchReport3) into MatchMatchReport
+
+!new MatchEvent('matchEvent6')
+!matchEvent6.eventType := #GOAL
+!matchEvent6.time := 23
+
+!new MatchEvent('matchEvent8')
+!matchEvent8.eventType := #GOAL
+!matchEvent8.time := 45
+
+!insert (match3, matchEvent6) into MatchMatchEvent
+!insert (match3, matchEvent8) into MatchMatchEvent
+
+!new MatchNote('matchNote2')
+!matchNote2.note := 'The match saw an intense first half with equal control from both teams.'
+!matchNote2.date := '2023-10-29'
+
+!insert (match3, matchNote2) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer4')
+!matchPlayer4.booked := false
+!matchPlayer4.goals := 1
+!matchPlayer4.rating := 9
+
+!insert (player5, matchPlayer4) into PlayerMatch
+!insert (match3, matchPlayer4) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition4')
+!matchPlayerPosition4.positionName := #FORWARD
+!matchPlayerPosition4.number := 10
+
+!insert (matchPlayer4, matchPlayerPosition4) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer5')
+!matchPlayer5.booked := true
+!matchPlayer5.goals := 1
+!matchPlayer5.rating := 8
+
+!insert (player6, matchPlayer5) into PlayerMatch
+!insert (match3, matchPlayer5) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition5')
+!matchPlayerPosition5.positionName := #FORWARD
+!matchPlayerPosition5.number := 9
+
+!insert (matchPlayer5, matchPlayerPosition5) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession4')
+!trainingSession4.date := '2023-10-27'
+!trainingSession4.location := 'Barcelona Training Ground'
+!trainingSession4.purpose := 'Tactical Training for Upcoming Match'
+
+!insert (teamE, trainingSession4) into TeamTraining
+
+!new TrainingNotes('trainingNote6')
+!trainingNote6.note := 'Focused on defensive strategies and quick counter-attacks.'
+!trainingNote6.date := '2023-10-27'
+
+!insert (trainingSession4, trainingNote6) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend2')
+!failedAttend2.reason := 'Family Emergency - Messi'
+
+!insert (trainingSession4, failedAttend2) into TrainingFailded
+!insert (failedAttend2, player5) into FailedPlayer
+
+!new TrainingObjective('trainingObjective6')
+!trainingObjective6.areaToImprove := 'Long-range shooting accuracy'
+!trainingObjective6.startDate := '2023-10-01'
+!trainingObjective6.endDate := '2023-11-30'
+!trainingObjective6.success := false
+
+!insert (trainingObjective6, player5) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote3')
+!playerNote3.note := 'Has shown excellent skill and versatility even beyond optimal years.'
+!playerNote3.date := '2023-10-20'
+
+!new PlayerNotes('playerNote4')
+!playerNote4.note := 'Key player in maintaining attacking momentum.'
+!playerNote4.date := '2023-10-21'
+
+!insert (player5, playerNote3) into PlayerPlayerNotes
+!insert (player6, playerNote4) into PlayerPlayerNotes
+
+!new TrainingSession('trainingSession5')
+!trainingSession5.date := '2023-10-27'
+!trainingSession5.location := 'Real Madrid Training Ground'
+!trainingSession5.purpose := 'Set-piece Tactics'
+
+!insert (teamF, trainingSession5) into TeamTraining
+
+!new TrainingNotes('trainingNote7')
+!trainingNote7.note := 'Enhancing precision in set-pieces.'
+!trainingNote7.date := '2023-10-27'
+
+!insert (trainingSession5, trainingNote7) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjective7')
+!trainingObjective7.areaToImprove := 'Precision in finishing'
+!trainingObjective7.startDate := '2023-10-01'
+!trainingObjective7.endDate := '2023-11-15'
+!trainingObjective7.success := true
+
+!insert (trainingObjective7, player6) into TrainingObjectivePlayer

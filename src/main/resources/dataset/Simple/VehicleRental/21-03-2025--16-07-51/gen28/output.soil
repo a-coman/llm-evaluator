@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice30')
+!rentalOffice30.name := 'Harbor Rentals'
+!rentalOffice30.number := 130
+!rentalOffice30.address := '103 Seaport Blvd, Seattle, WA'
+
+!new Truck('truck17')
+!truck17.id := 29
+!truck17.registrationState := #CA
+!truck17.licensePlateNumber := 'WA9090'
+!truck17.vehicleTypeCode := #TRUCK24
+!truck17.registrationLastMaintenanceDate := Date('2023-05-15')
+!truck17.expirationDate := Date('2024-05-15')
+!truck17.odometerReading := 26000
+!truck17.gasTankCapacity := 180.0
+!truck17.workingRadio := false
+!truck17.mileage := 22
+
+!new Company('companyCustomer14')
+!companyCustomer14.name := 'Puget Logistics'
+!companyCustomer14.address := '456 Dock St, Seattle, WA'
+!companyCustomer14.poorRisk := true
+!companyCustomer14.idNumber := 15014
+
+!new RentalAgreement('rentalAgreement29')
+!rentalAgreement29.number := 529
+!rentalAgreement29.rentalDate := Date('2023-11-20')
+!rentalAgreement29.anticipatedDuration := 14
+!rentalAgreement29.depositPaid := 350.0
+!rentalAgreement29.quotedDailyRate := 60.0
+!rentalAgreement29.quotedRatePerMile := 0.4
+
+!insert (rentalOffice30, truck17) into RentalOfficeVehicle
+!insert (rentalOffice30, rentalAgreement29) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement29) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement29, truck17) into RentalAgreementVehicle
+!insert (rentalAgreement29, companyCustomer14) into RentalAgreementCustomer

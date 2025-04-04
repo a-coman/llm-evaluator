@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant22')
+!restaurant22.name := 'The Garden Grille'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner43')
+!owner43.name := 'Olivia Bennett'
+!owner43.percentageShares := 50
+
+!new Owner('owner44')
+!owner44.name := 'Mason Green'
+!owner44.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant22, owner43) into RestaurantOwner
+!insert (restaurant22, owner44) into RestaurantOwner
+
+-- Creating tables with a naturalistic theme
+!new Table('table43')
+!table43.number := 2201
+!table43.description := 'Floral Balcony'
+!table43.capacity := 4
+
+!new Table('table44')
+!table44.number := 2202
+!table44.description := 'Herb Haven'
+!table44.capacity := 6
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter22')
+!headwaiter22.name := 'Chloe Sanderson'
+!headwaiter22.dateOfBirth := Date('1985-09-09')
+!headwaiter22.phoneNumber := '555-4545'
+
+!new Waiter('waiter26')
+!waiter26.name := 'Ethan Gardner'
+!waiter26.dateOfBirth := Date('1992-12-21')
+!waiter26.phoneNumber := '555-6767'
+!waiter26.spokenLanguage := #Italian
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter22, waiter26) into HeadWaiterWaiter
+
+-- Creating a Group Reservation for a gardening club luncheon
+!new Banquet('reservation22')
+!reservation22.time := Time('13:00')
+!reservation22.date := Date('2024-06-30')
+!reservation22.numberPeople := 10
+!reservation22.name := 'Green Thumbs Gathering'
+!reservation22.phoneNumber := '555-5858'
+!reservation22.number := 220
+!reservation22.groupName := 'Sunny Gardeners Club'
+!reservation22.paymentMethod := #Cash
+!reservation22.busService := false
+
+-- Establishing associations for the Group Reservation
+!insert (restaurant22, reservation22) into RestaurantReservation
+!insert (reservation22, waiter26) into ReservationWaiter
+!insert (reservation22, table43) into ReservationTable
+!insert (reservation22, table44) into ReservationTable
+
+-- Adding a garden-inspired MenuItem
+!new MenuItem('menuItem22')
+!menuItem22.description := 'Rosemary Roast Chicken'
+!menuItem22.prepTime := 30.0
+!menuItem22.classification := #Main
+
+-- Associating MenuItem with a seasoned Chef
+!new Chef('chef22')
+!chef22.name := 'Marco Conti'
+!chef22.dateOfBirth := Date('1973-04-22')
+!chef22.phoneNumber := '555-7878'
+
+!insert (menuItem22, chef22) into MenuItemChef
+
+-- Creating Cook working alongside the Chef
+!new Cook('cook22')
+!cook22.name := 'Lina Vargas'
+!cook22.dateOfBirth := Date('1988-11-03')
+!cook22.phoneNumber := '555-2121'
+!cook22.yearsOfExperience := 12
+
+-- Establishing association between Chef and Cook
+!insert (chef22, cook22) into ChefCook
+
+-- Creating an ItemOrder for the luncheon
+!new ItemOrder('order22')
+!order22.time := Time('13:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order22, menuItem22) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Group Reservation
+!insert (reservation22, order22) into ReservationItemOrdered

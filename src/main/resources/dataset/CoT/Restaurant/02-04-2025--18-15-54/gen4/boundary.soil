@@ -1,0 +1,145 @@
+!new Restaurant('restaurant14')
+!restaurant14.name := 'Green Harvest Outdoor Dining'
+
+!new Owner('owner30')
+!owner30.name := 'Jamie Thorne'
+!owner30.percentageShares := 60
+
+!new Owner('owner31')
+!owner31.name := 'Priya Patel'
+!owner31.percentageShares := 40
+
+!insert (restaurant14, owner30) into RestaurantOwner
+!insert (restaurant14, owner31) into RestaurantOwner
+
+!new Table('table31')
+!table31.number := 6
+!table31.description := 'Outdoor Vineyard Table'
+!table31.capacity := 40
+
+!new Banquet('banquet12')
+!banquet12.date := Date('2023-11-15')
+!banquet12.time := Time('16:00')
+!banquet12.numberPeople := 40
+!banquet12.name := 'Eco-Friendly Corporate Retreat'
+!banquet12.phoneNumber := '+1 555-0011'
+!banquet12.number := 20231115
+!banquet12.groupName := 'Sustainable Finance Group'
+!banquet12.paymentMethod := #Cash  -- Using #Cash as a placeholder for Direct Bank Transfer
+!banquet12.busService := true
+
+!insert (restaurant14, banquet12) into RestaurantReservation
+!insert (banquet12, table31) into ReservationTable
+
+!new ItemOrder('itemOrder18.1')
+!itemOrder18.1.time := Time('16:20')
+!insert (banquet12, itemOrder18.1) into ReservationItemOrdered
+
+!new MenuItem('menuItem22')
+!menuItem22.description := 'Grilled Farm Vegetables'
+!menuItem22.prepTime := 30.0
+!menuItem22.classification := #Main
+
+!insert (itemOrder18.1, menuItem22) into ItemOrderMenuItem
+
+!new ItemOrder('itemOrder18.2')
+!itemOrder18.2.time := Time('16:25')
+!insert (banquet12, itemOrder18.2) into ReservationItemOrdered
+
+!new MenuItem('menuItem23')
+!menuItem23.description := 'Local Cheese Platter'
+!menuItem23.prepTime := 10.0
+!menuItem23.classification := #Apetizer
+
+!insert (itemOrder18.2, menuItem23) into ItemOrderMenuItem
+
+!new Chef('chef19')
+!chef19.name := 'Alice Green'
+
+!new Chef('chef20')
+!chef20.name := 'John Meadows'
+
+!insert (menuItem22, chef19) into MenuItemChef
+!insert (menuItem23, chef20) into MenuItemChef
+
+!new Cook('cook22')
+!cook22.name := 'Ryan Fields'
+!cook22.dateOfBirth := Date('1990-09-17')
+!cook22.yearsOfExperience := 5
+
+!new Cook('cook23')
+!cook23.name := 'Lily Morgan'
+!cook23.dateOfBirth := Date('1985-01-05')
+!cook23.yearsOfExperience := 10
+
+!insert (chef19, cook22) into ChefCook
+!insert (chef19, cook23) into ChefCook
+
+!new Cook('cook24')
+!cook24.name := 'Chris Owen'
+!cook24.dateOfBirth := Date('1989-08-23')
+!cook24.yearsOfExperience := 7
+
+!insert (chef20, cook24) into ChefCook
+
+!new FoodItem('foodItem41')
+!foodItem41.number := 8001
+!foodItem41.description := 'Zucchini'
+!foodItem41.purchaseFlag := false
+!foodItem41.unit := #Pound  -- Using #Pound as a placeholder
+
+!new FoodItem('foodItem42')
+!foodItem42.number := 8002
+!foodItem42.description := 'Local Artisan Cheese'
+!foodItem42.purchaseFlag := true
+!foodItem42.unit := #Pound  -- Using #Pound as a placeholder
+
+!new Allergen('allergen19')
+!allergen19.type := #Lactose
+
+!insert (foodItem42, allergen19) into FoodItemAllergen
+
+!new FoodItem('foodItem43')
+!foodItem43.number := 8003
+!foodItem43.description := 'Bread'
+!foodItem43.purchaseFlag := true
+!foodItem43.unit := #Pound  -- Using #Pound as a placeholder
+
+!new Allergen('allergen20')
+!allergen20.type := #Gluten
+
+!insert (foodItem43, allergen20) into FoodItemAllergen
+
+!new HeadWaiter('headWaiter13')
+!headWaiter13.name := 'Fiona Lewis'
+!headWaiter13.dateOfBirth := Date('1988-07-20')
+!headWaiter13.phoneNumber := '+1 555-2233'
+
+!new Waiter('waiter26')
+!waiter26.name := 'Jordan Summers'
+!waiter26.dateOfBirth := Date('1995-05-01')
+!waiter26.phoneNumber := '+1 555-3344'
+
+!new Waiter('waiter27')
+!waiter27.name := 'Samantha Vaughn'
+!waiter27.dateOfBirth := Date('1991-03-23')
+!waiter27.phoneNumber := '+1 555-4455'
+
+!new Waiter('waiter28')
+!waiter28.name := 'Ethan Walton'
+!waiter28.dateOfBirth := Date('1986-10-11')
+!waiter28.phoneNumber := '+1 555-5566'
+
+!insert (headWaiter13, waiter26) into HeadWaiterWaiter
+!insert (headWaiter13, waiter27) into HeadWaiterWaiter
+!insert (headWaiter13, waiter28) into HeadWaiterWaiter
+!insert (banquet12, waiter26) into ReservationWaiter
+!insert (banquet12, waiter27) into ReservationWaiter
+!insert (banquet12, waiter28) into ReservationWaiter
+
+!new BusDriver('busdriver12')
+!busdriver12.name := 'Mike Carson'
+!busdriver12.dateOfBirth := Date('1972-02-09')
+!busdriver12.phoneNumber := '+1 555-6677'
+
+!insert (banquet12, busdriver12) into BanquetBusDriver

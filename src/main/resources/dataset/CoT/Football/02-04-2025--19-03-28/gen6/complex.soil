@@ -1,0 +1,177 @@
+!new Club('club60')
+!set club60.name := 'Santos FC'
+!set club60.homeGround := 'Vila Belmiro'
+!set club60.chairman := 'Andrés Rueda'
+
+!new Club('club61')
+!set club61.name := 'Flamengo'
+!set club61.homeGround := 'Maracanã'
+!set club61.chairman := 'Rodolfo Landim'
+
+!new Team('teamBL')
+!set teamBL.name := 'Santos Senior Team'
+
+!new Team('teamBM')
+!set teamBM.name := 'Flamengo First Team'
+
+!insert (club60, teamBL) into ClubTeam
+!insert (club61, teamBM) into ClubTeam
+
+!new Competition('competition30')
+!set competition30.name := 'Copa Libertadores'
+!set competition30.type := 'International Club Competition'
+
+!new Match('match30')
+!set match30.date := '2024-04-25'
+!set match30.homeAway := false
+
+!insert (competition30, match30) into CompetitionMatch
+
+!insert (teamBM, match30) into LocalMatch
+!insert (teamBL, match30) into VisitorMatch
+
+!new MatchReport('matchReport30')
+!set matchReport30.duration := 90
+!set matchReport30.scoreVisitor := 1
+!set matchReport30.scoreLocal := 2
+
+!insert (match30, matchReport30) into MatchMatchReport
+
+!new Player('player67')
+!set player67.name := 'Neymar Jr.'
+!set player67.age := 32
+!set player67.bestFoot := #RIGHT
+!set player67.phoneNumber := '+55 21987654321'
+
+!new Player('player68')
+!set player68.name := 'Gabriel Barbosa'
+!set player68.age := 27
+!set player68.bestFoot := #LEFT
+!set player68.phoneNumber := '+55 21876543210'
+
+!insert (teamBL, player67) into TeamPlayer
+!insert (teamBM, player68) into TeamPlayer
+
+!new Position('position95')
+!set position95.positionName := #FORWARD
+
+!insert (player67, position95) into PlayerPositions
+
+!new Position('position96')
+!set position96.positionName := #FORWARD
+
+!insert (player68, position96) into PlayerPositions
+
+!new TrainingObjective('trainingObjective72')
+!set trainingObjective72.areaToImprove := 'Dribbling Precision'
+!set trainingObjective72.startDate := '2024-03-01'
+!set trainingObjective72.endDate := '2024-04-15'
+!set trainingObjective72.success := true
+
+!insert (trainingObjective72, player67) into TrainingObjectivePlayer
+
+!new MatchEvent('matchEvent132')
+!set matchEvent132.eventType := #GOAL
+!set matchEvent132.time := 22
+
+!new MatchEvent('matchEvent133')
+!set matchEvent133.eventType := #GOAL
+!set matchEvent133.time := 45
+
+!new MatchEvent('matchEvent134')
+!set matchEvent134.eventType := #FOUL
+!set matchEvent134.time := 60
+
+!new MatchEvent('matchEvent135')
+!set matchEvent135.eventType := #GOAL
+!set matchEvent135.time := 70
+
+!insert (match30, matchEvent132) into MatchMatchEvent
+!insert (match30, matchEvent133) into MatchMatchEvent
+!insert (match30, matchEvent134) into MatchMatchEvent
+!insert (match30, matchEvent135) into MatchMatchEvent
+
+!new MatchPlayer('matchPlayer41')
+!set matchPlayer41.booked := false
+!set matchPlayer41.goals := 1
+!set matchPlayer41.rating := 9
+
+!insert (player67, matchPlayer41) into PlayerMatch
+!insert (match30, matchPlayer41) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition42')
+!set matchPlayerPosition42.positionName := #FORWARD
+!set matchPlayerPosition42.number := 10
+
+!insert (matchPlayer41, matchPlayerPosition42) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer42')
+!set matchPlayer42.booked := true
+!set matchPlayer42.goals := 2
+!set matchPlayer42.rating := 8
+
+!insert (player68, matchPlayer42) into PlayerMatch
+!insert (match30, matchPlayer42) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition43')
+!set matchPlayerPosition43.positionName := #FORWARD
+!set matchPlayerPosition43.number := 9
+
+!insert (matchPlayer42, matchPlayerPosition43) into MatchPlayerMatchPlayerPosition
+
+!new MatchNote('matchNote24')
+!set matchNote24.note := 'The clash was marked by intense competitive spirit and outstanding performances from forwards.'
+!set matchNote24.date := '2024-04-25'
+
+!insert (match30, matchNote24) into MatchMatchNote
+
+!new TrainingSession('trainingSession52')
+!set trainingSession52.date := '2024-04-23'
+!set trainingSession52.location := 'CT Meninos Da Vila'
+!set trainingSession52.purpose := 'Final Tactical Adjustments Before Match'
+
+!insert (teamBL, trainingSession52) into TeamTraining
+
+!new TrainingSession('trainingSession53')
+!set trainingSession53.date := '2024-04-20'
+!set trainingSession53.location := 'Gávea Training Center'
+!set trainingSession53.purpose := 'Strategic Planning for Key Matches'
+
+!insert (teamBM, trainingSession53) into TeamTraining
+
+!new TrainingNotes('trainingNote56')
+!set trainingNote56.note := 'Worked on team cohesion and counter-attacking drills.'
+!set trainingNote56.date := '2024-04-22'
+
+!insert (trainingSession52, trainingNote56) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNote57')
+!set trainingNote57.note := 'Focused on strategic plays and defensive maneuvers to handle opponent pressure.'
+!set trainingNote57.date := '2024-04-19'
+
+!insert (trainingSession53, trainingNote57) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend20')
+!set failedAttend20.reason := 'Minor Injury Treatment - Neymar Jr.'
+
+!insert (trainingSession52, failedAttend20) into TrainingFailded
+!insert (failedAttend20, player67) into FailedPlayer
+
+!new TrainingObjective('trainingObjective71')
+!set trainingObjective71.areaToImprove := 'Finishing Technique'
+!set trainingObjective71.startDate := '2024-04-01'
+!set trainingObjective71.endDate := '2024-05-30'
+!set trainingObjective71.success := true
+
+!insert (trainingObjective71, player68) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote45')
+!set playerNote45.note := 'Showed exceptional dribbling and scoring ability despite minor setbacks.'
+!set playerNote45.date := '2024-04-20'
+
+!new PlayerNotes('playerNote46')
+!set playerNote46.note := 'Proved an offensive powerhouse with consistent performance throughout the match.'
+!set playerNote46.date := '2024-04-26'
+
+!insert (player67, playerNote45) into PlayerPlayerNotes
+!insert (player68, playerNote46) into PlayerPlayerNotes

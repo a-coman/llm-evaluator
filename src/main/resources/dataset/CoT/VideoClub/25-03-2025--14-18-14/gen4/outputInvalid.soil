@@ -1,0 +1,53 @@
+!new Client('liamOConnor')
+!liamOConnor.clientId := 740
+!liamOConnor.isSuspended := false
+
+!new Client('jasmineMing')
+!jasmineMing.clientId := 741
+!jasmineMing.isSuspended := false
+
+!new Rental('rentalAdventureLands')
+!rentalAdventureLands.date := Date('2023-07-22')
+
+!new Rental('rentalDesertMirage')
+!rentalDesertMirage.date := Date('2023-08-05')
+
+!new Series('cassetteWalkaboutWonders')
+!cassetteWalkaboutWonders.title := 'Walkabout Wonders'
+!cassetteWalkaboutWonders.availableCopies := 8
+!cassetteWalkaboutWonders.episode := 10
+
+!new Movie('cassetteOutbackSafariAdventures')
+!cassetteOutbackSafariAdventures.title := 'Outback Safari Adventures'
+!cassetteOutbackSafariAdventures.availableCopies := 1
+!cassetteOutbackSafariAdventures.genre := #Action
+
+!new Movie('cassetteWildFrontierCowboys')
+!cassetteWildFrontierCowboys.title := 'Wild Frontier: Cowboys'
+!cassetteWildFrontierCowboys.availableCopies := 2
+!cassetteWildFrontierCowboys.genre := #Action
+
+!new Actor('actorDavidGulpilil')
+!actorDavidGulpilil.name := 'David Gulpilil'
+
+!new Actor('actorHughJackman')
+!actorHughJackman.name := 'Hugh Jackman'
+
+!new Actor('actorSamElliott')
+!actorSamElliott.name := 'Sam Elliott'
+
+!insert (liamOConnor, rentalAdventureLands) into ClientRental
+!insert (jasmineMing, rentalDesertMirage) into ClientRental
+
+!insert (rentalAdventureLands, cassetteWalkaboutWonders) into RentalCassette
+!insert (rentalAdventureLands, cassetteOutbackSafariAdventures) into RentalCassette
+!insert (rentalAdventureLands, cassetteWildFrontierCowboys) into RentalCassette
+
+!insert (rentalDesertMirage, cassetteOutbackSafariAdventures) into RentalCassette
+
+!insert (cassetteWalkaboutWonders, actorDavidGulpilil) into CassetteActor
+
+!insert (cassetteOutbackSafariAdventures, actorHughJackman) into CassetteActor
+
+!insert (cassetteWildFrontierCowboys, actorSamElliott) into CassetteActor
+

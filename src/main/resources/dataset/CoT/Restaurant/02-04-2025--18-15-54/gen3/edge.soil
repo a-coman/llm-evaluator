@@ -1,0 +1,186 @@
+!new Restaurant('restaurant15')
+!restaurant15.name := 'Taste of Diversity'
+
+!new Owner('owner32')
+!owner32.name := 'Aisha Mbatha'
+!owner32.percentageShares := 40
+
+!new Owner('owner33')
+!owner33.name := 'Dimitri Ivanov'
+!owner33.percentageShares := 35
+
+!new Owner('owner34')
+!owner34.name := 'Ling Wei'
+!owner34.percentageShares := 25
+
+!insert (restaurant15, owner32) into RestaurantOwner
+!insert (restaurant15, owner33) into RestaurantOwner
+!insert (restaurant15, owner34) into RestaurantOwner
+
+!new Table('table32')
+!table32.number := 301
+!table32.description := 'Main Hall Table with Panoramic View'
+!table32.capacity := 10
+
+!new Table('table33')
+!table33.number := 302
+!table33.description := 'Intimate Booth'
+!table33.capacity := 3
+
+!new Table('table34')
+!table34.number := 303
+!table34.description := 'Family Section Table'
+!table34.capacity := 6
+
+!new Table('table35')
+!table35.number := 304
+!table35.description := 'Outdoor Patio Table'
+!table35.capacity := 12
+
+!new RegularCustomer('customer8')
+!customer8.name := 'Jamal Abdi'
+!customer8.prefferedLanguage := #English  -- Using #English as placeholder for Swahili
+
+!new Chef('chef21')
+!chef21.name := 'Michela Conti'
+
+!new Cook('cook25')
+!cook25.name := 'Gabriel Romero'
+!cook25.dateOfBirth := Date('1989-02-15')  -- Dummy date of birth
+!cook25.yearsOfExperience := 6
+
+!new Cook('cook26')
+!cook26.name := 'Amina Al-Khalili'
+!cook26.dateOfBirth := Date('1992-07-11')  -- Dummy date of birth
+!cook26.yearsOfExperience := 4
+
+!insert (chef21, cook25) into ChefCook
+!insert (chef21, cook26) into ChefCook
+
+!new Individual('individualReservation9')
+!individualReservation9.time := Time('19:00')
+!individualReservation9.date := Date('2024-03-30')
+!individualReservation9.numberPeople := 1
+!individualReservation9.name := 'Oliver Green'
+!individualReservation9.phoneNumber := '+49 30 800 1234'
+!individualReservation9.number := 20240330
+!individualReservation9.seating := #Inside  -- Placeholder adapting for Outdoor, as no specific literal is defined
+!individualReservation9.smoking := #Smoking
+
+!insert (restaurant15, individualReservation9) into RestaurantReservation
+!insert (individualReservation9, table35) into ReservationTable
+
+!new HeadWaiter('headWaiter14')
+!headWaiter14.name := 'Salim Khan'
+!headWaiter14.dateOfBirth := Date('1979-05-09')  -- Dummy date of birth
+!headWaiter14.phoneNumber := '+49 30 1234 5678'  -- Dummy phone number
+
+!new Waiter('waiter29')
+!waiter29.name := 'Jasmine Rami'
+!waiter29.dateOfBirth := Date('1990-06-21')  -- Dummy date of birth
+!waiter29.phoneNumber := '+49 30 2345 6789'  -- Dummy phone number
+
+!new Waiter('waiter30')
+!waiter30.name := 'Tarek El-Tayeb'
+!waiter30.dateOfBirth := Date('1985-10-12')  -- Dummy date of birth
+!waiter30.phoneNumber := '+49 30 3456 7890'  -- Dummy phone number
+
+!new Waiter('waiter31')
+!waiter31.name := 'Sofia Novak'
+!waiter31.dateOfBirth := Date('1993-01-18')  -- Dummy date of birth
+!waiter31.phoneNumber := '+49 30 4567 8901'  -- Dummy phone number
+
+!insert (headWaiter14, waiter29) into HeadWaiterWaiter
+!insert (headWaiter14, waiter30) into HeadWaiterWaiter
+!insert (headWaiter14, waiter31) into HeadWaiterWaiter
+!insert (individualReservation9, waiter29) into ReservationWaiter
+
+!new ItemOrder('itemOrder19')
+!itemOrder19.time := Time('19:15')
+!insert (individualReservation9, itemOrder19) into ReservationItemOrdered
+
+!new MenuItem('menuItem24')
+!menuItem24.description := 'Pacific Rim Sushi'
+!menuItem24.prepTime := 20.0
+!menuItem24.classification := #Main
+
+!insert (itemOrder19, menuItem24) into ItemOrderMenuItem
+!insert (menuItem24, chef21) into MenuItemChef
+
+!new MenuItem('menuItem25')
+!menuItem25.description := 'Korean BBQ Short Ribs'
+!menuItem25.prepTime := 25.0
+!menuItem25.classification := #Main
+
+!new ItemOrder('itemOrder20')
+!itemOrder20.time := Time('19:30')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation9, itemOrder20) into ReservationItemOrdered
+!insert (itemOrder20, menuItem25) into ItemOrderMenuItem
+!insert (menuItem25, chef21) into MenuItemChef
+
+!new FoodItem('foodItem44')
+!foodItem44.number := 501
+!foodItem44.description := 'Sushi-Grade Tuna'
+!foodItem44.purchaseFlag := true
+!foodItem44.unit := #Pound  -- Using #Pound as placeholder for kg
+
+!insert (menuItem24, foodItem44) into MenuItemFoodItem
+
+!new FoodItem('foodItem45')
+!foodItem45.number := 502
+!foodItem45.description := 'Beef Short Ribs'
+!foodItem45.purchaseFlag := false
+!foodItem45.unit := #Pound  -- Using #Pound as placeholder for kg
+
+!insert (menuItem25, foodItem45) into MenuItemFoodItem
+
+!new Banquet('banquet13')
+!banquet13.date := Date('2024-03-30')
+!banquet13.time := Time('20:30')
+!banquet13.numberPeople := 120
+!banquet13.name := 'Cultural Exchange Department'
+!banquet13.phoneNumber := '+81 3 1234 5678'
+!banquet13.number := 20240330
+!banquet13.paymentMethod := #CreditCard  -- Placeholder for Wire Transfer
+!banquet13.busService := true
+
+!insert (restaurant15, banquet13) into RestaurantReservation
+
+!insert (banquet13, table32) into ReservationTable
+!insert (banquet13, table33) into ReservationTable
+!insert (banquet13, table34) into ReservationTable
+!insert (banquet13, table35) into ReservationTable
+!insert (banquet13, waiter30) into ReservationWaiter
+!insert (banquet13, waiter31) into ReservationWaiter
+
+!new BusDriver('busdriver13')
+!busdriver13.name := 'Yuri Petrov'
+!busdriver13.dateOfBirth := Date('1970-02-10')  -- Dummy date of birth
+!busdriver13.phoneNumber := '+49 30 5678 1234'  -- Dummy phone number
+
+!new BusDriver('busdriver14')
+!busdriver14.name := 'Lëa N\'Dour'
+!busdriver14.dateOfBirth := Date('1975-04-19')  -- Dummy date of birth
+!busdriver14.phoneNumber := '+49 30 6789 2345'  -- Dummy phone number
+
+!new BusDriver('busdriver15')
+!busdriver15.name := 'Thomas Svensson'
+!busdriver15.dateOfBirth := Date('1982-09-15')  -- Dummy date of birth
+!busdriver15.phoneNumber := '+49 30 7890 3456'  -- Dummy phone number
+
+!insert (banquet13, busdriver13) into BanquetBusDriver
+!insert (banquet13, busdriver14) into BanquetBusDriver
+!insert (banquet13, busdriver15) into BanquetBusDriver
+
+!new DietaryRequirement('dietary6')
+!dietary6.diet := #Vegan  -- Using #Vegan as placeholder for Kosher
+
+!insert (customer8, dietary6) into CustomerDietary
+
+!new Allergen('allergen21')
+!allergen21.type := #Lactose  -- Using #Lactose as placeholder for Fish
+
+!new Allergen('allergen22')
+!allergen22.type := #Lactose  -- Using #Lactose as placeholder for Sesame
+
+!insert (foodItem44, allergen21) into FoodItemAllergen

@@ -1,0 +1,172 @@
+!new Client('client101')
+!client101.clientId := 101
+!client101.isSuspended := false
+
+!new Client('client102')
+!client102.clientId := 102
+!client102.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-15')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-10-01')
+
+!new Movie('movie1')
+!movie1.title := 'High-Speed Chase'
+!movie1.availableCopies := 3
+!movie1.genre := #Action
+
+!new Series('series1')
+!series1.title := 'The Laughter House'
+!series1.availableCopies := 2
+!series1.episode := 1
+
+!new Actor('actor1')
+!actor1.name := 'John Fast'
+
+!new Actor('actor2')
+!actor2.name := 'Comica Joy'
+
+!insert (client101, rental1) into ClientRental
+!insert (client102, rental2) into ClientRental
+
+!insert (rental1, movie1) into RentalCassette
+!insert (rental2, series1) into RentalCassette
+
+!insert (movie1, actor1) into CassetteActor
+!insert (series1, actor2) into CassetteActor
+
+!new Client('clientBoundary1')
+!clientBoundary1.clientId := 1
+!clientBoundary1.isSuspended := false
+
+!new Client('clientBoundary2')
+!clientBoundary2.clientId := 2147483647
+!clientBoundary2.isSuspended := true
+
+!new Rental('rentalBoundary1')
+!rentalBoundary1.date := Date('2023-01-01')
+
+!new Movie('movieBoundary1')
+!movieBoundary1.title := 'Fast Affair'
+!movieBoundary1.availableCopies := 0
+!movieBoundary1.genre := #Action
+
+!new Series('seriesBoundary1')
+!seriesBoundary1.title := 'TechVenture Ep.1'
+!seriesBoundary1.availableCopies := 1
+!seriesBoundary1.episode := 1
+
+!new Movie('movieBoundary2')
+!movieBoundary2.title := 'The Comedy Show'
+!movieBoundary2.availableCopies := 9999
+!movieBoundary2.genre := #Comedy
+
+!new Actor('actorBoundary1')
+!actorBoundary1.name := 'John Doe'
+
+!new Actor('actorBoundary2')
+!actorBoundary2.name := 'Jane Smith'
+
+!insert (clientBoundary1, rentalBoundary1) into ClientRental
+
+!insert (rentalBoundary1, movieBoundary1) into RentalCassette
+!insert (rentalBoundary1, seriesBoundary1) into RentalCassette
+
+!insert (movieBoundary1, actorBoundary1) into CassetteActor
+!insert (seriesBoundary1, actorBoundary2) into CassetteActor
+
+!insert (movieBoundary2, actorBoundary1) into CassetteActor
+!insert (movieBoundary2, actorBoundary2) into CassetteActor
+
+!new Client('martaLopez')
+!martaLopez.clientId := 101
+!martaLopez.isSuspended := false
+
+!new Client('giorgioDiLuca')
+!giorgioDiLuca.clientId := 102
+!giorgioDiLuca.isSuspended := true
+
+!new Rental('rentalMarta')
+!rentalMarta.date := Date('2023-09-15')
+
+!new Rental('rentalGiorgio')
+!rentalGiorgio.date := Date('2023-09-12')
+
+!new Movie('movieLaViaLactea')
+!movieLaViaLactea.title := 'La Vía Láctea'
+!movieLaViaLactea.availableCopies := 5
+!movieLaViaLactea.genre := #Comedy
+
+!new Movie('movieDesperadoAction')
+!movieDesperadoAction.title := 'Desperado in Action'
+!movieDesperadoAction.availableCopies := 3
+!movieDesperadoAction.genre := #Action
+
+!new Series('seriesBCChronicles')
+!seriesBCChronicles.title := 'Barcelona Chronicles'
+!seriesBCChronicles.availableCopies := 2
+!seriesBCChronicles.episode := 4
+
+!new Actor('actorJavierBardem')
+!actorJavierBardem.name := 'Javier Bardem'
+
+!new Actor('actorPenelopeCruz')
+!actorPenelopeCruz.name := 'Penelope Cruz'
+
+!new Actor('actorChloeZhang')
+!actorChloeZhang.name := 'Chloe Zhang'
+
+!insert (martaLopez, rentalMarta) into ClientRental
+!insert (giorgioDiLuca, rentalGiorgio) into ClientRental
+
+!insert (rentalMarta, movieLaViaLactea) into RentalCassette
+!insert (rentalMarta, seriesBCChronicles) into RentalCassette
+!insert (rentalGiorgio, movieDesperadoAction) into RentalCassette
+
+!insert (movieLaViaLactea, actorJavierBardem) into CassetteActor
+!insert (movieLaViaLactea, actorPenelopeCruz) into CassetteActor
+!insert (movieDesperadoAction, actorJavierBardem) into CassetteActor
+!insert (seriesBCChronicles, actorChloeZhang) into CassetteActor
+
+!new Client('clientEdge1')
+!clientEdge1.clientId := 1
+!clientEdge1.isSuspended := false
+
+!new Rental('rentalEdge1')
+!rentalEdge1.date := Date('2023-09-20')
+
+!new Rental('rentalEdge2')
+!rentalEdge2.date := Date('2023-09-21')
+
+!new Movie('cassetteOnlyCopy')
+!cassetteOnlyCopy.title := 'The Only Copy'
+!cassetteOnlyCopy.availableCopies := 1
+!cassetteOnlyCopy.genre := #Action
+
+!new Series('cassetteSingleEpisode')
+!cassetteSingleEpisode.title := 'Single Episode Saga'
+!cassetteSingleEpisode.availableCopies := 0
+!cassetteSingleEpisode.episode := 1
+
+!new Actor('actorJohnSmith')
+!actorJohnSmith.name := 'John Smith'
+
+!new Actor('actorJaneDoe')
+!actorJaneDoe.name := 'Jane Doe'
+
+!new Actor('actorCarlosMendes')
+!actorCarlosMendes.name := 'Carlos Mendes'
+
+!insert (clientEdge1, rentalEdge1) into ClientRental
+!insert (clientEdge1, rentalEdge2) into ClientRental
+
+!insert (rentalEdge1, cassetteOnlyCopy) into RentalCassette
+!insert (rentalEdge1, cassetteSingleEpisode) into RentalCassette
+!insert (rentalEdge2, cassetteOnlyCopy) into RentalCassette
+
+!insert (cassetteOnlyCopy, actorJohnSmith) into CassetteActor
+!insert (cassetteOnlyCopy, actorJaneDoe) into CassetteActor
+!insert (cassetteSingleEpisode, actorCarlosMendes) into CassetteActor
+

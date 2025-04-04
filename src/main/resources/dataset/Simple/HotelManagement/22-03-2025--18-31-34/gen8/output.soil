@@ -1,0 +1,55 @@
+!new Booking('booking9')
+!booking9.startDate := '2024-02-14'
+!booking9.endDate := '2024-02-20'
+!booking9.canceled := false
+!booking9.bookingId := 108
+!booking9.confirmed := true
+
+!new Bill('bill9')
+!bill9.price := 800.00
+!bill9.billId := 208
+
+!new FreeRoomTypesDTO('roomType9')
+!roomType9.roomTypeDescription := 'Honeymoon Suite'
+!roomType9.numBeds := 1
+!roomType9.pricePerNight := 250.00
+!roomType9.numFreeRooms := 2
+
+!new Customer('customer9')
+!customer9.firstName := 'Isabella'
+!customer9.lastName := 'Johnson'
+
+!new RoomReservation('reservation9')
+!reservation9.checkInDate := '2024-02-14'
+!reservation9.checkOutDate := '2024-02-20'
+
+!new RoomExtra('extra9')
+!extra9.price := 120.00
+!extra9.description := 'Couple Massage Package'
+
+!new Room('room14')
+!room14.numBeds := 1
+!room14.pricePerNight := 240.00
+!room14.occupied := true
+!room14.blocked := false
+!room14.roomNumber := 114
+
+!new Room('room15')
+!room15.numBeds := 1
+!room15.pricePerNight := 250.00
+!room15.occupied := false
+!room15.blocked := false
+!room15.roomNumber := 115
+
+!insert (booking9, bill9) into BookingBill
+
+!insert (booking9, customer9) into BookingCustomer
+
+!insert (booking9, reservation9) into BookingRoomReservation
+
+!insert (reservation9, extra9) into RoomReservationExtras
+
+!insert (reservation9, room14) into RoomReservationRoom
+!insert (reservation9, room15) into RoomReservationRoom
+
+!insert (bill9, reservation9) into BillRoomReservation

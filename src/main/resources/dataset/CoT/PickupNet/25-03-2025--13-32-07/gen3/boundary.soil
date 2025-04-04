@@ -1,0 +1,91 @@
+!new Driver('driver17')
+!driver17.id := 'DRV004'
+!driver17.name := 'Chloe Zhang'
+
+!new Driver('driver18')
+!driver18.id := 'DRV005'
+!driver18.name := 'Anwar Saeed'
+
+!new Shipment('shipment14')
+!shipment14.id := 'SHIP003'
+!shipment14.status := #NEW
+
+!new Shipment('shipment15')
+!shipment15.id := 'SHIP004'
+!shipment15.status := #ASSIGNED
+
+!new Address('pickupAddress14')
+!pickupAddress14.text := 'Boulevarden 23, Copenhagen, Denmark'
+
+!new GeoLocation('pickupGeoLocation14')
+!pickupGeoLocation14.latitude := 55.6761
+!pickupGeoLocation14.longitude := 12.5683
+
+!new Address('deliveryAddress14')
+!deliveryAddress14.text := '123 Sakura Lane, Kyoto, Japan'
+
+!new GeoLocation('deliveryGeoLocation14')
+!deliveryGeoLocation14.latitude := 35.0116
+!deliveryGeoLocation14.longitude := 135.7681
+
+!new Address('pickupAddress15')
+!pickupAddress15.text := '789 Des Voeux Road, Hong Kong'
+
+!new GeoLocation('pickupGeoLocation15')
+!pickupGeoLocation15.latitude := 22.3193
+!pickupGeoLocation15.longitude := 114.1694
+
+!new Address('deliveryAddress15')
+!deliveryAddress15.text := '1600 Amphitheatre Parkway, Mountain View, USA'
+
+!new GeoLocation('deliveryGeoLocation15')
+!deliveryGeoLocation15.latitude := 37.422
+!deliveryGeoLocation15.longitude := -122.084
+
+!new Station('station12')
+
+!new Station('station13')
+
+!new Customer('customer16')
+!customer16.id := 'CUST003'
+!customer16.name := 'Lars Svensson'
+!customer16.twitterUserName := '@larsven'
+
+!new Customer('customer17')
+!customer17.id := 'CUST004'
+!customer17.name := 'Mina Kim'
+!customer17.twitterUserName := '@minak'
+
+!insert (shipment14, pickupAddress14) into ShipmentContainsPickUpAddress
+
+!insert (shipment14, deliveryAddress14) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress14, pickupGeoLocation14) into AddressContainsGeoLocation
+
+!insert (deliveryAddress14, deliveryGeoLocation14) into AddressContainsGeoLocation
+
+!insert (shipment15, pickupAddress15) into ShipmentContainsPickUpAddress
+
+!insert (shipment15, deliveryAddress15) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress15, pickupGeoLocation15) into AddressContainsGeoLocation
+
+!insert (deliveryAddress15, deliveryGeoLocation15) into AddressContainsGeoLocation
+
+!insert (customer16, shipment14) into CustomerConsistsOfShipment
+
+!insert (customer17, shipment15) into CustomerConsistsOfShipment
+
+!insert (station12, customer16) into StationContainsCustomer
+
+!insert (station13, customer17) into StationContainsCustomer
+
+!insert (station12, shipment14) into StationShipment
+
+!insert (station13, shipment15) into StationShipment
+
+!insert (station12, driver17) into StationContainsDriver
+
+!insert (station13, driver18) into StationContainsDriver
+
+!insert (driver18, shipment15) into DriverShipment

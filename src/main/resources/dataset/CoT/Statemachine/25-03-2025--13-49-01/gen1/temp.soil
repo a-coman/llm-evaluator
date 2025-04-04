@@ -1,0 +1,52 @@
+!new StateMachine('homeSecuritySM')
+!homeSecuritySM.name := 'homeSecuritySM'
+
+!new State('armed')
+!armed.name := 'armed'
+
+!new State('disarmed')
+!disarmed.name := 'disarmed'
+
+!new State('triggered')
+!triggered.name := 'triggered'
+
+!new Transition('armToDisarm')
+!armToDisarm.name := 'armToDisarm'
+
+!new Transition('disarmToTrigger')
+!disarmToTrigger.name := 'disarmToTrigger'
+
+!new Transition('triggerToArm')
+!triggerToArm.name := 'triggerToArm'
+
+!new TimeEvent('timeEventArmToDisarm')
+!timeEventArmToDisarm.time := 30
+
+-- The following line includes a negative time, which violates the TimeIsPositive constraint.
+-- Therefore, this time event will be corrected to be positive to comply with constraints.
+!new TimeEvent('timeEventDisarmToTrigger')
+!timeEventDisarmToTrigger.time := 15 -- corrected to be positive
+
+!new TimeEvent('timeEventTriggerToArm')
+!timeEventTriggerToArm.time := 5
+
+!insert (homeSecuritySM, armed) into StateMachineContainsStates
+!insert (homeSecuritySM, disarmed) into StateMachineContainsStates
+!insert (homeSecuritySM, triggered) into StateMachineContainsStates
+
+!insert (homeSecuritySM, armToDisarm) into StateMachineContainsTransitions
+!insert (homeSecuritySM, disarmToTrigger) into StateMachineContainsTransitions
+!insert (homeSecuritySM, triggerToArm) into StateMachineContainsTransitions
+
+!insert (armToDisarm, timeEventArmToDisarm) into TransitionContainsEvents
+!insert (disarmToTrigger, timeEventDisarmToTrigger) into TransitionContainsEvents
+!insert (triggerToArm, timeEventTriggerToArm) into TransitionContainsEvents
+
+!insert (armed, armToDisarm) into StateTransition
+!insert (armToDisarm, disarmed) into TransitionState
+
+!insert (disarmed, disarmToTrigger) into StateTransition
+!insert (disarmToTrigger, triggered) into TransitionState
+
+!insert (triggered, triggerToArm) into StateTransition
+!insert (triggerToArm, armed) into TransitionState

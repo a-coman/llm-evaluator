@@ -1,0 +1,62 @@
+!new Bank('bank29')
+!bank29.country := 'Canada'
+!bank29.name := 'Maple Leaf Financial'
+!bank29.bic := 'MLFCACTO'
+
+!new Account('account64')
+!account64.iban := 'CA22 MLF 4567 8910 2345 67'
+!account64.balance := 300750
+
+!new Account('account65')
+!account65.iban := 'CA22 MLF 1234 5678 9012 34'
+!account65.balance := 0
+
+!new Account('account66')
+!account66.iban := 'CA22 MLF 9876 5432 1098 76'
+!account66.balance := 3000
+
+!new Account('account67')
+!account67.iban := 'CA22 MLF 3210 9876 5432 10'
+!account67.balance := 1
+
+!new Person('person91')
+!person91.firstName := 'Sarah'
+!person91.lastName := 'Thompson'
+!person91.age := 34
+
+!new Person('person92')
+!person92.firstName := 'Raj'
+!person92.lastName := 'Patel'
+!person92.age := 23
+
+!new Person('person93')
+!person93.firstName := 'Mei'
+!person93.lastName := 'Chen'
+!person93.age := 41
+
+!new Person('person94')
+!person94.firstName := 'Michael'
+!person94.lastName := 'Williams'
+!person94.age := 29
+
+!insert (person91, account64) into Ownership
+!insert (person93, account64) into Ownership
+!insert (person92, account65) into Ownership
+!insert (person94, account65) into Ownership
+!insert (person93, account66) into Ownership
+!insert (person91, account67) into Ownership
+!insert (person92, account67) into Ownership
+
+!insert (person91, account64) into Use
+!insert (person93, account64) into Use
+!insert (person92, account65) into Use
+!insert (person94, account65) into Use
+!insert (person91, account65) into Use
+!insert (person93, account66) into Use
+!insert (person91, account67) into Use
+!insert (person92, account67) into Use
+
+!insert (bank29, account64) into AccountOfBanks
+!insert (bank29, account65) into AccountOfBanks
+!insert (bank29, account66) into AccountOfBanks
+!insert (bank29, account67) into AccountOfBanks

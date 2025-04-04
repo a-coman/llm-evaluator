@@ -1,0 +1,55 @@
+!new Booking('booking16')
+!booking16.startDate := '2024-09-01'
+!booking16.endDate := '2024-09-05'
+!booking16.canceled := false
+!booking16.bookingId := 115
+!booking16.confirmed := true
+
+!new Bill('bill16')
+!bill16.price := 400.00
+!bill16.billId := 215
+
+!new FreeRoomTypesDTO('roomType16')
+!roomType16.roomTypeDescription := 'Mountain View Room'
+!roomType16.numBeds := 2
+!roomType16.pricePerNight := 110.00
+!roomType16.numFreeRooms := 4
+
+!new Customer('customer16')
+!customer16.firstName := 'Sam'
+!customer16.lastName := 'Trevor'
+
+!new RoomReservation('reservation16')
+!reservation16.checkInDate := '2024-09-01'
+!reservation16.checkOutDate := '2024-09-05'
+
+!new RoomExtra('extra16')
+!extra16.price := 40.00
+!extra16.description := 'Guided Hiking Tour'
+
+!new Room('room25')
+!room25.numBeds := 2
+!room25.pricePerNight := 105.00
+!room25.occupied := true
+!room25.blocked := false
+!room25.roomNumber := 125
+
+!new Room('room26')
+!room26.numBeds := 2
+!room26.pricePerNight := 115.00
+!room26.occupied := false
+!room26.blocked := false
+!room26.roomNumber := 126
+
+!insert (booking16, bill16) into BookingBill
+
+!insert (booking16, customer16) into BookingCustomer
+
+!insert (booking16, reservation16) into BookingRoomReservation
+
+!insert (reservation16, extra16) into RoomReservationExtras
+
+!insert (reservation16, room25) into RoomReservationRoom
+!insert (reservation16, room26) into RoomReservationRoom
+
+!insert (bill16, reservation16) into BillRoomReservation

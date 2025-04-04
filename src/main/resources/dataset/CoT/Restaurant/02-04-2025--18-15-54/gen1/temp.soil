@@ -1,0 +1,194 @@
+!new Restaurant('restaurant5')
+!restaurant5.name := 'Global Fusion Dining'
+
+!new Owner('owner10')
+!owner10.name := 'Alejandro Martinez'
+!owner10.percentageShares := 50
+
+!new Owner('owner11')
+!owner11.name := 'Fatima Al-Hassan'
+!owner11.percentageShares := 30
+
+!new Owner('owner12')
+!owner12.name := 'Yuki Nakamura'
+!owner12.percentageShares := 20
+
+!insert (restaurant5, owner10) into RestaurantOwner
+!insert (restaurant5, owner11) into RestaurantOwner
+!insert (restaurant5, owner12) into RestaurantOwner
+
+!new RegularCustomer('customerA')
+!customerA.name := 'Claire Dubois'
+!customerA.prefferedLanguage := #English
+
+!new RegularCustomer('customerB')
+!customerB.name := 'Omar El-Masry'
+!customerB.prefferedLanguage := #English
+
+!new HeadWaiter('headWaiter4')
+!headWaiter4.name := 'Giovanni Rossi'
+!headWaiter4.dateOfBirth := Date('1968-05-12')
+!headWaiter4.phoneNumber := '+39 555 2333'
+
+!new Waiter('waiter9')
+!waiter9.name := 'Elsa Svensson'
+!waiter9.dateOfBirth := Date('1990-04-28')
+!waiter9.phoneNumber := '+46 555 8844'
+
+!new Waiter('waiter10')
+!waiter10.name := 'Amara Singh'
+!waiter10.dateOfBirth := Date('1985-11-14')
+!waiter10.phoneNumber := '+91 555 1122'
+
+!insert (headWaiter4, waiter9) into HeadWaiterWaiter
+!insert (headWaiter4, waiter10) into HeadWaiterWaiter
+
+!new Manager('manager2')
+!manager2.name := 'Lin Zhang'
+!manager2.dateOfBirth := Date('1975-01-22')
+!manager2.phoneNumber := '+86 555 9988'
+
+!new Chef('chef8')
+!chef8.name := 'Carlos Fernandez'
+!chef8.dateOfBirth := Date('1980-08-08')
+!chef8.phoneNumber := '+34 555 7711'
+
+!new Cook('cook8')
+!cook8.name := 'Diego Rios'
+!cook8.dateOfBirth := Date('1992-11-30')
+!cook8.phoneNumber := '+34 555 8833'
+!cook8.yearsOfExperience := 5
+
+!new Cook('cook9')
+!cook9.name := 'Anja Müller'
+!cook9.dateOfBirth := Date('1983-09-10')
+!cook9.phoneNumber := '+49 555 4477'
+!cook9.yearsOfExperience := 8
+
+!insert (chef8, cook8) into ChefCook
+!insert (chef8, cook9) into ChefCook
+
+!new BusDriver('busdriver7')
+!busdriver7.name := 'Sandra Lee'
+!busdriver7.dateOfBirth := Date('1978-03-15')
+!busdriver7.phoneNumber := '+1 555 3321'
+
+!new Table('table12')
+!table12.number := 1
+!table12.description := 'Near window, round'
+!table12.capacity := 4
+
+!new Table('table13')
+!table13.number := 2
+!table13.description := 'Centered, square'
+!table13.capacity := 6
+
+!new Table('table14')
+!table14.number := 3
+!table14.description := 'Garden view, long rectangle'
+!table14.capacity := 12
+
+!new Individual('individualReservation2')
+!individualReservation2.time := Time('19:00')
+!individualReservation2.date := Date('2023-12-20')
+!individualReservation2.numberPeople := 2
+!individualReservation2.name := 'Claire Dubois'
+!individualReservation2.phoneNumber := '+33 555 1234'
+!individualReservation2.number := 12345
+!individualReservation2.seating := #Inside
+!individualReservation2.smoking := #NonSmoking
+
+!insert (restaurant5, individualReservation2) into RestaurantReservation
+!insert (individualReservation2, table12) into ReservationTable
+!insert (individualReservation2, waiter9) into ReservationWaiter
+!insert (individualReservation2, waiter10) into ReservationWaiter
+
+!insert (individualReservation2, customerA) into ReservationCustomer
+
+!new Banquet('banquet5')
+!banquet5.date := Date('2023-12-21')
+!banquet5.time := Time('18:00')
+!banquet5.numberPeople := 18
+!banquet5.groupName := 'International Culinary Meetup'
+!banquet5.paymentMethod := #CreditCard
+!banquet5.busService := true
+
+!insert (restaurant5, banquet5) into RestaurantReservation
+!insert (banquet5, table13) into ReservationTable
+!insert (banquet5, table14) into ReservationTable
+!insert (banquet5, waiter9) into ReservationWaiter
+!insert (banquet5, waiter10) into ReservationWaiter
+
+!insert (banquet5, busdriver7) into BanquetBusDriver
+
+!new ItemOrder('itemOrder3')
+!itemOrder3.time := Time('19:15')
+!insert (individualReservation2, itemOrder3) into ReservationItemOrdered
+
+!new MenuItem('menuItem4')
+!menuItem4.description := 'Fusion Sushi'
+!menuItem4.prepTime := 15.0
+!menuItem4.classification := #Apetizer
+
+!insert (itemOrder3, menuItem4) into ItemOrderMenuItem
+!insert (menuItem4, chef8) into MenuItemChef
+
+!new ItemOrder('itemOrder4')
+!itemOrder4.time := Time('18:30')
+!insert (banquet5, itemOrder4) into ReservationItemOrdered
+
+!new MenuItem('menuItem5')
+!menuItem5.description := 'Red Curry'
+!menuItem5.prepTime := 30.0
+!menuItem5.classification := #Main
+
+!insert (itemOrder4, menuItem5) into ItemOrderMenuItem
+!insert (menuItem5, chef8) into MenuItemChef
+
+!new FoodItem('foodItem6')
+!foodItem6.number := 304
+!foodItem6.description := 'Rice'
+!foodItem6.purchaseFlag := true
+!foodItem6.unit := #Pound
+
+!insert (menuItem4, foodItem6) into MenuItemFoodItem
+
+!new FoodItem('foodItem7')
+!foodItem7.number := 305
+!foodItem7.description := 'Seaweed'
+!foodItem7.purchaseFlag := true
+!foodItem7.unit := #Sheet
+
+!insert (menuItem4, foodItem7) into MenuItemFoodItem
+
+!new FoodItem('foodItem8')
+!foodItem8.number := 306
+!foodItem8.description := 'Salmon'
+!foodItem8.purchaseFlag := false
+!foodItem8.unit := #Gram
+
+!insert (menuItem4, foodItem8) into MenuItemFoodItem
+
+!new FoodItem('foodItem9')
+!foodItem9.number := 307
+!foodItem9.description := 'Coconut Milk'
+!foodItem9.purchaseFlag := true
+!foodItem9.unit := #Ounce
+
+!insert (menuItem5, foodItem9) into MenuItemFoodItem
+
+!new FoodItem('foodItem10')
+!foodItem10.number := 308
+!foodItem10.description := 'Red Chilies'
+!foodItem10.purchaseFlag := true
+!foodItem10.unit := #Gram
+
+!insert (menuItem5, foodItem10) into MenuItemFoodItem
+
+!new Allergen('allergen7')
+!allergen7.type := #Seafood
+
+!new Allergen('allergen8')
+!allergen8.type := #Nuts
+
+!insert (foodItem8, allergen7) into FoodItemAllergen

@@ -1,0 +1,53 @@
+!new Driver('driver10')
+!driver10.id := 'D010'
+!driver10.name := 'Taylor Scott'
+
+!new Shipment('shipment16')
+!shipment16.id := 'S016'
+!shipment16.status := #DELIVERED
+
+!new Shipment('shipment17')
+!shipment17.id := 'S017'
+!shipment17.status := #NEW
+
+!new Address('address19')
+!address19.text := '4040 Maple Leaf Drive'
+
+!new Address('address20')
+!address20.text := '5050 Crescent Lane'
+
+!new GeoLocation('geoLocation19')
+!geoLocation19.latitude := 59.9343
+!geoLocation19.longitude := 30.3351
+
+!new GeoLocation('geoLocation20')
+!geoLocation20.latitude := 31.2304
+!geoLocation20.longitude := 121.4737
+
+!new Customer('customer10')
+!customer10.id := 'C010'
+!customer10.name := 'Vera Johnson'
+!customer10.twitterUserName := '@ver_j'
+
+!new Station('station9')
+
+!insert (driver10, shipment16) into DriverShipment
+
+!insert (shipment16, address19) into ShipmentContainsPickUpAddress
+!insert (shipment16, address20) into ShipmentContainsDeliveryAddress
+
+!insert (shipment17, address20) into ShipmentContainsPickUpAddress
+!insert (shipment17, address19) into ShipmentContainsDeliveryAddress
+
+!insert (address19, geoLocation19) into AddressContainsGeoLocation
+!insert (address20, geoLocation20) into AddressContainsGeoLocation
+
+!insert (customer10, shipment16) into CustomerConsistsOfShipment
+!insert (customer10, shipment17) into CustomerConsistsOfShipment
+
+!insert (station9, customer10) into StationContainsCustomer
+
+!insert (station9, shipment16) into StationShipment
+!insert (station9, shipment17) into StationShipment
+
+!insert (station9, driver10) into StationContainsDriver

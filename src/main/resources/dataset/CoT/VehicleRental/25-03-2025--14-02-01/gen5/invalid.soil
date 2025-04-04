@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice18')
+!rentalOffice18.name := 'City Tours Rentals'
+!rentalOffice18.number := 412
+!rentalOffice18.address := '237 Park Ave, Orlando, FL'
+
+!new Truck('truck16')
+!truck16.id := 35
+!truck16.registrationState := #FL
+!truck16.licensePlateNumber := 'TOUR123'
+!truck16.vehicleTypeCode := #TRUCK
+!truck16.registrationLastMaintenanceDate := Date('2022-08-15')
+!truck16.expirationDate := Date('2024-06-30')
+!truck16.odometerReading := 0
+!truck16.gasTankCapacity := 0
+!truck16.workingRadio := true
+!truck16.mileage := 0
+
+!new Vehicle('vehicle20')
+!vehicle20.id := 36
+!vehicle20.registrationState := #FL
+!vehicle20.licensePlateNumber := 'TOUR456'
+!vehicle20.vehicleTypeCode := #OPEN_TRAILER
+!vehicle20.registrationLastMaintenanceDate := Date('2023-10-05')
+!vehicle20.expirationDate := Date('2024-10-05')
+
+!new RentalAgreement('rentalAgreement29')
+!rentalAgreement29.number := 5030
+!rentalAgreement29.rentalDate := Date('2023-12-15')
+!rentalAgreement29.anticipatedDuration := 10
+!rentalAgreement29.depositPaid := 2000.00
+!rentalAgreement29.quotedDailyRate := 75.00
+!rentalAgreement29.quotedRatePerMile := 0.10
+
+!new RentalAgreement('rentalAgreement30')
+!rentalAgreement30.number := 5031
+!rentalAgreement30.rentalDate := Date('2023-12-16')
+!rentalAgreement30.anticipatedDuration := 5
+!rentalAgreement30.depositPaid := 1500.00
+!rentalAgreement30.quotedDailyRate := 100.00
+!rentalAgreement30.quotedRatePerMile := 0.15
+
+!new Individual('individualCustomer13')
+!individualCustomer13.name := 'Alex Rivera'
+!individualCustomer13.address := '789 Sunshine Blvd, Miami, FL'
+!individualCustomer13.poorRisk := false
+!individualCustomer13.homePhone := '305-555-0222'
+!individualCustomer13.driverLicenseState := #FL
+!individualCustomer13.driverLicenseNumber := 234567
+!individualCustomer13.driverLicenseExpirationDate := Date('2025-12-01')
+
+!new Company('company15')
+!company15.name := 'Holiday Adventures LLC'
+!company15.address := '321 Experience St, Orlando, FL'
+!company15.poorRisk := false
+!company15.idNumber := 12345
+
+!insert (rentalOffice18, truck16) into RentalOfficeVehicle
+!insert (rentalOffice18, vehicle20) into RentalOfficeVehicle
+
+!insert (rentalOffice18, rentalAgreement29) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice18, rentalAgreement29) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement29, truck16) into RentalAgreementVehicle
+!insert (rentalAgreement29, individualCustomer13) into RentalAgreementCustomer
+
+!insert (rentalOffice18, rentalAgreement30) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice18, rentalAgreement30) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement30, vehicle20) into RentalAgreementVehicle
+!insert (rentalAgreement30, company15) into RentalAgreementCustomer

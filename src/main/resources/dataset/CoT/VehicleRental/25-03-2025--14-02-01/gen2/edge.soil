@@ -1,0 +1,61 @@
+!new RentalOffice('rentalOffice9')
+!rentalOffice9.name := 'Sun-Sand Rentals'
+!rentalOffice9.number := 21
+!rentalOffice9.address := '456 Seaside Blvd, Key West, FL, 33040'
+
+!new Vehicle('vehicle9')
+!vehicle9.id := 16
+!vehicle9.registrationState := #FL
+!vehicle9.licensePlateNumber := 'TRL-444KU'
+!vehicle9.vehicleTypeCode := #OPEN_TRAILER
+!vehicle9.registrationLastMaintenanceDate := Date('2023-04-01')
+!vehicle9.expirationDate := Date('2025-04-02')
+
+!new Truck('truck8')
+!truck8.id := 17
+!truck8.registrationState := #FL
+!truck8.licensePlateNumber := 'TRK-556LW'
+!truck8.vehicleTypeCode := #TRUCK
+!truck8.registrationLastMaintenanceDate := Date('2022-12-15')
+!truck8.expirationDate := Date('2025-12-20')
+!truck8.odometerReading := 150000
+!truck8.gasTankCapacity := 100.0
+!truck8.workingRadio := false
+!truck8.mileage := 1
+
+!new RentalAgreement('rentalAgreement13a')
+!rentalAgreement13a.number := 9999
+!rentalAgreement13a.rentalDate := Date('2023-06-01')
+!rentalAgreement13a.anticipatedDuration := 365
+!rentalAgreement13a.depositPaid := 5.00
+!rentalAgreement13a.quotedDailyRate := 75.00
+!rentalAgreement13a.quotedRatePerMile := 0.75
+
+!new RentalAgreement('rentalAgreement13b')
+!rentalAgreement13b.number := 10000
+!rentalAgreement13b.rentalDate := Date('2023-06-01')
+!rentalAgreement13b.anticipatedDuration := 365
+!rentalAgreement13b.depositPaid := 5.00
+!rentalAgreement13b.quotedDailyRate := 75.00
+!rentalAgreement13b.quotedRatePerMile := 0.75
+
+!new Company('company6')
+!company6.name := 'Coral Reef Expeditions, Inc.'
+!company6.address := '230 Ocean Way, Miami, FL, 33139'
+!company6.poorRisk := true
+!company6.idNumber := 91923
+
+!insert (rentalOffice9, vehicle9) into RentalOfficeVehicle
+!insert (rentalOffice9, truck8) into RentalOfficeVehicle
+
+!insert (rentalOffice9, rentalAgreement13a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice9, rentalAgreement13a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement13a, truck8) into RentalAgreementVehicle
+!insert (rentalAgreement13a, company6) into RentalAgreementCustomer
+
+!insert (rentalOffice9, rentalAgreement13b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice9, rentalAgreement13b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement13b, vehicle9) into RentalAgreementVehicle
+!insert (rentalAgreement13b, company6) into RentalAgreementCustomer

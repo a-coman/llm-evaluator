@@ -1,0 +1,24 @@
+!new Expense('expense6')
+!expense6.amount := 200.0
+!expense6.startDate := Date('2023-06-01')
+!expense6.endDate := Date('2023-06-30')
+
+!new Currency('currency4')
+!currency4.name := 'Japanese Yen'
+!currency4.abbreviation := 'JPY'
+
+!new Bill('bill10')
+!bill10.amount := 200.0
+!bill10.category := 'Subscriptions'
+!bill10.date := Date('2023-06-05')
+!bill10.paymentMethod := #CASH
+!bill10.status := #REFUNDED
+
+!insert (expense6, bill10) into ExpenseContainsBills
+
+!insert (bill10, currency4) into BillCurrency
+
+!new Comment('comment6')
+!comment6.text := 'Monthly subscription refunded'
+
+!insert (expense6, comment6) into ExpenseComment

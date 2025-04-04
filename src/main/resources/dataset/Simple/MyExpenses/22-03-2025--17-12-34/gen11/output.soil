@@ -1,0 +1,33 @@
+!new Expense('expense13')
+!expense13.amount := 1200.0
+!expense13.startDate := Date('2024-01-01')
+!expense13.endDate := Date('2024-01-31')
+
+!new Currency('currency11')
+!currency11.name := 'Chinese Yuan'
+!currency11.abbreviation := 'CNY'
+
+!new Bill('bill21')
+!bill21.amount := 700.0
+!bill21.category := 'Electronics'
+!bill21.date := Date('2024-01-15')
+!bill21.paymentMethod := #CASH
+!bill21.status := #VERIFIED
+
+!new Bill('bill22')
+!bill22.amount := 500.0
+!bill22.category := 'Furniture'
+!bill22.date := Date('2024-01-25')
+!bill22.paymentMethod := #CREDIT_CARD
+!bill22.status := #REFUNDED
+
+!insert (expense13, bill21) into ExpenseContainsBills
+!insert (expense13, bill22) into ExpenseContainsBills
+
+!insert (bill21, currency11) into BillCurrency
+!insert (bill22, currency11) into BillCurrency
+
+!new Comment('comment13')
+!comment13.text := 'January purchases for electronics and furniture'
+
+!insert (expense13, comment13) into ExpenseComment

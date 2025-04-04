@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice31')
+!rentalOffice31.name := 'Hilltop Rentals'
+!rentalOffice31.number := 131
+!rentalOffice31.address := '565 Mountain Dr, Boulder, CO'
+
+!new Vehicle('openTrailer7')
+!openTrailer7.id := 30
+!openTrailer7.registrationState := #CO
+!openTrailer7.licensePlateNumber := 'CO1010'
+!openTrailer7.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer7.registrationLastMaintenanceDate := Date('2023-06-02')
+!openTrailer7.expirationDate := Date('2024-06-02')
+
+!new Individual('individualCustomer16')
+!individualCustomer16.name := 'Alex Turner'
+!individualCustomer16.address := '89 Ridge Rd, Boulder, CO'
+!individualCustomer16.poorRisk := false
+!individualCustomer16.homePhone := '555-2323'
+!individualCustomer16.driverLicenseState := #CO
+!individualCustomer16.driverLicenseNumber := 6677889
+!individualCustomer16.driverLicenseExpirationDate := Date('2026-08-19')
+
+!new RentalAgreement('rentalAgreement30')
+!rentalAgreement30.number := 530
+!rentalAgreement30.rentalDate := Date('2023-12-15')
+!rentalAgreement30.anticipatedDuration := 5
+!rentalAgreement30.depositPaid := 100.0
+!rentalAgreement30.quotedDailyRate := 12.0
+!rentalAgreement30.quotedRatePerMile := 0.1
+
+!insert (rentalOffice31, openTrailer7) into RentalOfficeVehicle
+!insert (rentalOffice31, rentalAgreement30) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice31, rentalAgreement30) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement30, openTrailer7) into RentalAgreementVehicle
+!insert (rentalAgreement30, individualCustomer16) into RentalAgreementCustomer

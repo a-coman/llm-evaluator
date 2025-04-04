@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant25')
+!restaurant25.name := 'Harmony Harbor'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner49')
+!owner49.name := 'Sophia Reed'
+!owner49.percentageShares := 50
+
+!new Owner('owner50')
+!owner50.name := 'Henry Blake'
+!owner50.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant25, owner49) into RestaurantOwner
+!insert (restaurant25, owner50) into RestaurantOwner
+
+-- Creating tables with a coastal theme
+!new Table('table49')
+!table49.number := 2501
+!table49.description := 'Ocean Breeze Alcove'
+!table49.capacity := 4
+
+!new Table('table50')
+!table50.number := 2502
+!table50.description := 'Sunrise Deck'
+!table50.capacity := 6
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter25')
+!headwaiter25.name := 'Oliver Stone'
+!headwaiter25.dateOfBirth := Date('1982-07-08')
+!headwaiter25.phoneNumber := '555-6767'
+
+!new Waiter('waiter29')
+!waiter29.name := 'Ava Morgan'
+!waiter29.dateOfBirth := Date('1991-03-14')
+!waiter29.phoneNumber := '555-2525'
+!waiter29.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter25, waiter29) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a family brunch
+!new Individual('reservation25')
+!reservation25.time := Time('11:30')
+!reservation25.date := Date('2024-09-12')
+!reservation25.numberPeople := 5
+!reservation25.name := 'Family Brunch'
+!reservation25.phoneNumber := '555-9090'
+!reservation25.number := 223
+!reservation25.seating := #Inside
+!reservation25.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant25, reservation25) into RestaurantReservation
+!insert (reservation25, waiter29) into ReservationWaiter
+!insert (reservation25, table49) into ReservationTable
+!insert (reservation25, table50) into ReservationTable
+
+-- Adding a brunch MenuItem
+!new MenuItem('menuItem25')
+!menuItem25.description := 'Herb Omelette with Avocado'
+!menuItem25.prepTime := 15.0
+!menuItem25.classification := #Main
+
+-- Associating MenuItem with an expert Chef
+!new Chef('chef25')
+!chef25.name := 'Gianna Russo'
+!chef25.dateOfBirth := Date('1970-12-05')
+!chef25.phoneNumber := '555-4444'
+
+!insert (menuItem25, chef25) into MenuItemChef
+
+-- Creating Cook under Chef supervision
+!new Cook('cook25')
+!cook25.name := 'Liam Evans'
+!cook25.dateOfBirth := Date('1985-06-19')
+!cook25.phoneNumber := '555-1212'
+!cook25.yearsOfExperience := 16
+
+-- Establishing association between Chef and Cook
+!insert (chef25, cook25) into ChefCook
+
+-- Creating an ItemOrder for the family brunch
+!new ItemOrder('order25')
+!order25.time := Time('12:00')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order25, menuItem25) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation25, order25) into ReservationItemOrdered

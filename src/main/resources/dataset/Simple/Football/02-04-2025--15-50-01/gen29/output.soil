@@ -1,0 +1,169 @@
+!new Club('club57')
+!club57.name := 'Wolves FC'
+!club57.homeGround := 'Wolf Den Stadium'
+!club57.chairman := 'Eva Martin'
+
+!new Club('club58')
+!club58.name := 'Raptors FC'
+!club58.homeGround := 'Raptor Arena'
+!club58.chairman := 'John Baxter'
+
+!new Team('team57')
+!team57.name := 'Wolf Pack'
+!insert (club57, team57) into ClubTeam
+
+!new Team('team58')
+!team58.name := 'Raptor Claws'
+!insert (club58, team58) into ClubTeam
+
+!new Player('player85')
+!player85.name := 'Ethan Black'
+!player85.age := 27
+!player85.bestFoot := #RIGHT
+!player85.phoneNumber := '789-321-4567'
+!insert (team57, player85) into TeamPlayer
+
+!new Player('player86')
+!player86.name := 'Chloe Adams'
+!player86.age := 26
+!player86.bestFoot := #LEFT
+!player86.phoneNumber := '678-210-3456'
+!insert (team57, player86) into TeamPlayer
+
+!new Player('player87')
+!player87.name := 'Lucas Reed'
+!player87.age := 28
+!player87.bestFoot := #BOTH
+!player87.phoneNumber := '567-123-2345'
+!insert (team58, player87) into TeamPlayer
+
+!new Position('position85')
+!position85.positionName := #MIDFIELDER
+!insert (player85, position85) into PlayerPositions
+
+!new Position('position86')
+!position86.positionName := #FORWARD
+!insert (player86, position86) into PlayerPositions
+
+!new Position('position87')
+!position87.positionName := #DEFENDER
+!insert (player87, position87) into PlayerPositions
+
+!new TrainingSession('training57')
+!training57.date := '2025-04-20'
+!training57.location := 'Wolf Training Fields'
+!training57.purpose := 'High-Press Strategy'
+!insert (team57, training57) into TeamTraining
+
+!new TrainingSession('training58')
+!training58.date := '2025-04-21'
+!training58.location := 'Raptor Flight Cage'
+!training58.purpose := 'Counter Defense'
+!insert (team58, training58) into TeamTraining
+
+!new TrainingNotes('trainingNotes57')
+!trainingNotes57.note := 'Emphasized strong pressuring tactics in opponent half'
+!trainingNotes57.date := '2025-04-20'
+!insert (training57, trainingNotes57) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes58')
+!trainingNotes58.note := 'Focused on quick recovery and counter-attacks'
+!trainingNotes58.date := '2025-04-21'
+!insert (training58, trainingNotes58) into TrainingTrainingNotes
+
+!new TrainingObjective('objective85')
+!objective85.areaToImprove := 'Pressing and Possession'
+!objective85.startDate := '2025-01-01'
+!objective85.endDate := '2025-04-01'
+!objective85.success := true
+!insert (objective85, player85) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective86')
+!objective86.areaToImprove := 'Finishing Under Pressure'
+!objective86.startDate := '2025-02-15'
+!objective86.endDate := '2025-05-15'
+!objective86.success := false
+!insert (objective86, player86) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective87')
+!objective87.areaToImprove := 'Defensive Agility'
+!objective87.startDate := '2024-12-10'
+!objective87.endDate := '2025-03-10'
+!objective87.success := true
+!insert (objective87, player87) into TrainingObjectivePlayer
+
+!new Competition('competition29')
+!competition29.name := 'Northern Cup'
+!competition29.type := 'Final Match'
+
+!new Match('match29')
+!match29.date := '2025-05-05'
+!match29.homeAway := false
+!insert (competition29, match29) into CompetitionMatch
+!insert (team57, match29) into VisitorMatch
+!insert (team58, match29) into LocalMatch
+
+!new MatchReport('report29')
+!report29.duration := 90
+!report29.scoreVisitor := 3
+!report29.scoreLocal := 3
+!insert (match29, report29) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer85')
+!matchPlayer85.booked := false
+!matchPlayer85.goals := 1
+!matchPlayer85.rating := 8
+!insert (player85, matchPlayer85) into PlayerMatch
+!insert (match29, matchPlayer85) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer87')
+!matchPlayer87.booked := false
+!matchPlayer87.goals := 1
+!matchPlayer87.rating := 9
+!insert (player87, matchPlayer87) into PlayerMatch
+!insert (match29, matchPlayer87) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition85')
+!matchPlayerPosition85.positionName := #MIDFIELDER
+!matchPlayerPosition85.number := 6
+!insert (matchPlayer85, matchPlayerPosition85) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition87')
+!matchPlayerPosition87.positionName := #DEFENDER
+!matchPlayerPosition87.number := 4
+!insert (matchPlayer87, matchPlayerPosition87) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event110')
+!event110.eventType := #GOAL
+!event110.time := 18
+!insert (match29, event110) into MatchMatchEvent
+
+!new MatchEvent('event111')
+!event111.eventType := #GOAL
+!event111.time := 37
+!insert (match29, event111) into MatchMatchEvent
+
+!new MatchEvent('event112')
+!event112.eventType := #GOAL
+!event112.time := 59
+!insert (match29, event112) into MatchMatchEvent
+
+!new MatchEvent('event113')
+!event113.eventType := #GOAL
+!event113.time := 71
+!insert (match29, event113) into MatchMatchEvent
+
+!new MatchEvent('event114')
+!event114.eventType := #GOAL
+!event114.time := 83
+!insert (match29, event114) into MatchMatchEvent
+
+!new MatchEvent('event115')
+!event115.eventType := #GOAL
+!event115.time := 88
+!insert (match29, event115) into MatchMatchEvent
+
+!new MatchNote('matchNote29')
+!matchNote29.note := 'Thrilling draw with an intense second half'
+!matchNote29.date := '2025-05-05'
+!insert (match29, matchNote29) into MatchMatchNote

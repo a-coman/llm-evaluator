@@ -1,0 +1,93 @@
+!new RentalOffice('rentalOffice11')
+!rentalOffice11.name := 'Desert Adventures Rentals'
+!rentalOffice11.number := 211
+!rentalOffice11.address := '789 Cactus Way, Scottsdale, AZ, 85251'
+
+!new Truck('truck9')
+!truck9.id := 20
+!truck9.registrationState := #AZ
+!truck9.licensePlateNumber := 'DSR7620'
+!truck9.vehicleTypeCode := #TRUCK
+!truck9.registrationLastMaintenanceDate := Date('2023-06-20')
+!truck9.expirationDate := Date('2024-06-19')
+!truck9.odometerReading := 30120
+!truck9.gasTankCapacity := 30.0
+!truck9.workingRadio := false
+!truck9.mileage := 10
+
+!new Vehicle('vehicle12')
+!vehicle12.id := 21
+!vehicle12.registrationState := #AZ
+!vehicle12.licensePlateNumber := 'AZTR609'
+!vehicle12.vehicleTypeCode := #OPEN_TRAILER
+!vehicle12.registrationLastMaintenanceDate := Date('2023-05-18')
+!vehicle12.expirationDate := Date('2024-05-17')
+
+!new Vehicle('vehicle13')
+!vehicle13.id := 22
+!vehicle13.registrationState := #AZ
+!vehicle13.licensePlateNumber := 'AZATV123'
+!vehicle13.vehicleTypeCode := #COVERED_TRAILER
+!vehicle13.registrationLastMaintenanceDate := Date('2023-07-10')
+!vehicle13.expirationDate := Date('2024-07-09')
+
+!new Individual('individualCustomer7')
+!individualCustomer7.name := 'Derek Nguyen'
+!individualCustomer7.address := '321 Mesa St, Mesa, AZ, 85201'
+!individualCustomer7.poorRisk := false
+!individualCustomer7.homePhone := '480-555-0345'
+!individualCustomer7.driverLicenseState := #AZ
+!individualCustomer7.driverLicenseNumber := 7845621
+!individualCustomer7.driverLicenseExpirationDate := Date('2025-06-11')
+
+!new Company('company9')
+!company9.name := 'Desert Safari Tours, Inc.'
+!company9.address := '45 Desert Rd, Glendale, AZ, 85301'
+!company9.poorRisk := true
+!company9.idNumber := 302145678
+
+!new RentalAgreement('rentalAgreement15')
+!rentalAgreement15.number := 20034
+!rentalAgreement15.rentalDate := Date('2023-09-12')
+!rentalAgreement15.anticipatedDuration := 7
+!rentalAgreement15.depositPaid := 500.00
+!rentalAgreement15.quotedDailyRate := 90.00
+!rentalAgreement15.quotedRatePerMile := 0.60
+
+!new RentalAgreement('rentalAgreement16')
+!rentalAgreement16.number := 20035
+!rentalAgreement16.rentalDate := Date('2023-09-15')
+!rentalAgreement16.anticipatedDuration := 12
+!rentalAgreement16.depositPaid := 700.00
+!rentalAgreement16.quotedDailyRate := 110.00
+!rentalAgreement16.quotedRatePerMile := 0.75
+
+!new RentalAgreement('rentalAgreement17')
+!rentalAgreement17.number := 20036
+!rentalAgreement17.rentalDate := Date('2023-09-18')
+!rentalAgreement17.anticipatedDuration := 5
+!rentalAgreement17.depositPaid := 300.00
+!rentalAgreement17.quotedDailyRate := 50.00
+!rentalAgreement17.quotedRatePerMile := 0.40
+
+!insert (rentalOffice11, truck9) into RentalOfficeVehicle
+!insert (rentalOffice11, vehicle12) into RentalOfficeVehicle
+!insert (rentalOffice11, vehicle13) into RentalOfficeVehicle
+
+!insert (rentalOffice11, rentalAgreement15) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement15) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement15, truck9) into RentalAgreementVehicle
+!insert (rentalAgreement15, individualCustomer7) into RentalAgreementCustomer
+
+!insert (rentalOffice11, rentalAgreement16) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement16) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement16, vehicle12) into RentalAgreementVehicle
+!insert (rentalAgreement16, company9) into RentalAgreementCustomer
+
+!insert (rentalOffice11, rentalAgreement17) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement17) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement17, vehicle13) into RentalAgreementVehicle
+!insert (rentalAgreement17, individualCustomer7) into RentalAgreementCustomer

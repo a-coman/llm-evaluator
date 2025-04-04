@@ -1,0 +1,93 @@
+!new Driver('driver51')
+!driver51.id := 'DRV6014'
+!driver51.name := 'Lucas Oliveira'
+
+!new Driver('driver52')
+!driver52.id := 'DRV6015'
+!driver52.name := 'Mariana Ribeiro'
+
+!new Shipment('shipment53')
+!shipment53.id := 'SHP18011'
+!shipment53.status := #DELIVERED
+
+!new Shipment('shipment54')
+!shipment54.id := 'SHP18012'
+!shipment54.status := #ASSIGNED
+
+!new Address('pickupAddress53')
+!pickupAddress53.text := 'Mercadão São Paulo, Rua da Cantareira 306, São Paulo, SP 01024-000, Brazil'
+
+!new GeoLocation('pickupGeoLocation53')
+!pickupGeoLocation53.latitude := -23.5419
+!pickupGeoLocation53.longitude := -46.6288
+
+!new Address('deliveryAddress53')
+!deliveryAddress53.text := 'Avenida Paulista, São Paulo, SP 01311-200, Brazil'
+
+!new GeoLocation('deliveryGeoLocation53')
+!deliveryGeoLocation53.latitude := -23.5612
+!deliveryGeoLocation53.longitude := -46.6560
+
+!new Address('pickupAddress54')
+!pickupAddress54.text := 'Vila Madalena, São Paulo, SP 05434-020, Brazil'
+
+!new GeoLocation('pickupGeoLocation54')
+!pickupGeoLocation54.latitude := -23.5544
+!pickupGeoLocation54.longitude := -46.6908
+
+!new Address('deliveryAddress54')
+!deliveryAddress54.text := 'Ibirapuera Park, São Paulo, SP 04094-050, Brazil'
+
+!new GeoLocation('deliveryGeoLocation54')
+!deliveryGeoLocation54.latitude := -23.5874
+!deliveryGeoLocation54.longitude := -46.6572
+
+!new Station('station37')
+
+!new Station('station38')
+
+!new Customer('customer53')
+!customer53.id := 'CUST1005'
+!customer53.name := 'Bianca Silva'
+!customer53.twitterUserName := '@biancasilva'
+
+!new Customer('customer54')
+!customer54.id := 'CUST1006'
+!customer54.name := 'Pedro Almeida'
+!customer54.twitterUserName := '@pedroalmeidaBR'
+
+!insert (driver51, shipment53) into DriverShipment
+
+!insert (driver52, shipment54) into DriverShipment
+
+!insert (shipment53, pickupAddress53) into ShipmentContainsPickUpAddress
+
+!insert (shipment53, deliveryAddress53) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress53, pickupGeoLocation53) into AddressContainsGeoLocation
+
+!insert (deliveryAddress53, deliveryGeoLocation53) into AddressContainsGeoLocation
+
+!insert (shipment54, pickupAddress54) into ShipmentContainsPickUpAddress
+
+!insert (shipment54, deliveryAddress54) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress54, pickupGeoLocation54) into AddressContainsGeoLocation
+
+!insert (deliveryAddress54, deliveryGeoLocation54) into AddressContainsGeoLocation
+
+!insert (customer53, shipment53) into CustomerConsistsOfShipment
+
+!insert (customer54, shipment54) into CustomerConsistsOfShipment
+
+!insert (station37, customer53) into StationContainsCustomer
+
+!insert (station38, customer54) into StationContainsCustomer
+
+!insert (station37, shipment53) into StationShipment
+
+!insert (station38, shipment54) into StationShipment
+
+!insert (station37, driver51) into StationContainsDriver
+
+!insert (station38, driver52) into StationContainsDriver

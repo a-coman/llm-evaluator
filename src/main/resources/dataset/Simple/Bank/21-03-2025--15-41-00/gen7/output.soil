@@ -1,0 +1,51 @@
+!new Bank('bank8')
+!bank8.country := 'France'
+!bank8.name := 'BNP Paribas'
+!bank8.bic := 'BNPAFRPP'
+
+!new Account('account19')
+!account19.iban := 'FR7630006000011234567890189'
+!account19.balance := 7500
+
+!new Account('account20')
+!account20.iban := 'FR7630006000021234567890188'
+!account20.balance := 250
+
+!new Account('account21')
+!account21.iban := 'FR7630006000031234567890187'
+!account21.balance := 5000
+
+!new Person('person23')
+!person23.firstName := 'Jean'
+!person23.lastName := 'Dupont'
+!person23.age := 47
+
+!new Person('person24')
+!person24.firstName := 'Lucie'
+!person24.lastName := 'Martin'
+!person24.age := 35
+
+!new Person('person25')
+!person25.firstName := 'Pierre'
+!person25.lastName := 'Leclerc'
+!person25.age := 54
+
+-- Associations
+!insert (bank8, account19) into AccountOfBanks
+!insert (bank8, account20) into AccountOfBanks
+!insert (bank8, account21) into AccountOfBanks
+
+!insert (person23, account19) into Ownership
+!insert (person24, account19) into Ownership
+
+!insert (person24, account20) into Ownership
+!insert (person25, account20) into Ownership
+
+!insert (person25, account21) into Ownership
+!insert (person23, account21) into Ownership
+
+!insert (person24, account21) into Use
+!insert (person23, account20) into Use
+
+!insert (person25, account19) into Use
+!insert (person24, account19) into Use

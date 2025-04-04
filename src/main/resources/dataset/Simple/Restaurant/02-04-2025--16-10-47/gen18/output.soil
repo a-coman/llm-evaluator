@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant18')
+!restaurant18.name := 'Urban Oasis'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner35')
+!owner35.name := 'Rebecca Shaw'
+!owner35.percentageShares := 65
+
+!new Owner('owner36')
+!owner36.name := 'Ethan Wright'
+!owner36.percentageShares := 35
+
+-- Establish RestaurantOwner association
+!insert (restaurant18, owner35) into RestaurantOwner
+!insert (restaurant18, owner36) into RestaurantOwner
+
+-- Creating tables with unique themes
+!new Table('table35')
+!table35.number := 1801
+!table35.description := 'Vintage Loft'
+!table35.capacity := 4
+
+!new Table('table36')
+!table36.number := 1802
+!table36.description := 'Contemporary Cove'
+!table36.capacity := 6
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter18')
+!headwaiter18.name := 'Oliver Black'
+!headwaiter18.dateOfBirth := Date('1979-05-10')
+!headwaiter18.phoneNumber := '555-1212'
+
+!new Waiter('waiter22')
+!waiter22.name := 'Natalie Cruz'
+!waiter22.dateOfBirth := Date('1992-07-22')
+!waiter22.phoneNumber := '555-4343'
+!waiter22.spokenLanguage := #English
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter18, waiter22) into HeadWaiterWaiter
+
+-- Creating a Group Reservation for a friend's reunion
+!new Banquet('reservation18')
+!reservation18.time := Time('17:00')
+!reservation18.date := Date('2024-11-20')
+!reservation18.numberPeople := 8
+!reservation18.name := 'Friends Reunion'
+!reservation18.phoneNumber := '555-7878'
+!reservation18.number := 216
+!reservation18.groupName := 'Old Schoolmates'
+!reservation18.paymentMethod := #Cash
+!reservation18.busService := false
+
+-- Establishing associations for the Group Reservation
+!insert (restaurant18, reservation18) into RestaurantReservation
+!insert (reservation18, waiter22) into ReservationWaiter
+!insert (reservation18, table35) into ReservationTable
+!insert (reservation18, table36) into ReservationTable
+
+-- Adding a specialized MenuItem for the group event
+!new MenuItem('menuItem18')
+!menuItem18.description := 'Italian Antipasto Platter'
+!menuItem18.prepTime := 20.0
+!menuItem18.classification := #Apetizer
+
+-- Associating MenuItem with a well-known Chef
+!new Chef('chef18')
+!chef18.name := 'Giovanni Rizzo'
+!chef18.dateOfBirth := Date('1974-05-30')
+!chef18.phoneNumber := '555-3434'
+
+!insert (menuItem18, chef18) into MenuItemChef
+
+-- Creating Cook guided by Chef
+!new Cook('cook18')
+!cook18.name := 'Carlos Mendez'
+!cook18.dateOfBirth := Date('1983-03-15')
+!cook18.phoneNumber := '555-2525'
+!cook18.yearsOfExperience := 15
+
+-- Establishing association between Chef and Cook
+!insert (chef18, cook18) into ChefCook
+
+-- Creating an ItemOrder for the reunion event
+!new ItemOrder('order18')
+!order18.time := Time('17:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order18, menuItem18) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Group Reservation
+!insert (reservation18, order18) into ReservationItemOrdered

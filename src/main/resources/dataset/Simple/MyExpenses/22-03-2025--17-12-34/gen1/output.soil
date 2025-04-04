@@ -1,0 +1,83 @@
+!new Expense('expense1')
+!expense1.amount := 300.0
+!expense1.startDate := Date('2023-01-01')
+!expense1.endDate := Date('2023-01-31')
+
+!new Currency('currency1')
+!currency1.name := 'US Dollar'
+!currency1.abbreviation := 'USD'
+
+!new Bill('bill1')
+!bill1.amount := 100.0
+!bill1.category := 'Food'
+!bill1.date := Date('2023-01-05')
+!bill1.paymentMethod := #CREDIT_CARD
+!bill1.status := #PENDING
+
+!new Bill('bill2')
+!bill2.amount := 200.0
+!bill2.category := 'Transport'
+!bill2.date := Date('2023-01-15')
+!bill2.paymentMethod := #CASH
+!bill2.status := #VERIFIED
+
+!insert (expense1, bill1) into ExpenseContainsBills
+!insert (expense1, bill2) into ExpenseContainsBills
+
+!insert (bill1, currency1) into BillCurrency
+!insert (bill2, currency1) into BillCurrency
+
+!new Comment('comment1')
+!comment1.text := 'Business trip expenses'
+
+!insert (expense1, comment1) into ExpenseComment
+
+!new Expense('expense2')
+!expense2.amount := 0.0
+!expense2.startDate := Date('2023-02-01')
+!expense2.endDate := Date('2023-02-28')
+
+!new Bill('bill3')
+!bill3.amount := 0.0
+!bill3.category := 'Misc'
+!bill3.date := Date('2023-02-05')
+!bill3.paymentMethod := #CHECK
+!bill3.status := #DRAFT
+
+!insert (expense2, bill3) into ExpenseContainsBills
+!insert (bill3, currency1) into BillCurrency
+
+!new Comment('comment2')
+!comment2.text := 'Empty bill test'
+
+!insert (expense2, comment2) into ExpenseComment
+
+!new Expense('expense3')
+!expense3.amount := 1000.0
+!expense3.startDate := Date('2023-03-01')
+!expense3.endDate := Date('2023-03-31')
+
+!new Bill('bill4')
+!bill4.amount := 500.0
+!bill4.category := 'Office Supplies'
+!bill4.date := Date('2023-03-10')
+!bill4.paymentMethod := #CREDIT_CARD
+!bill4.status := #VALIDATED
+
+!new Bill('bill5')
+!bill5.amount := 500.0
+!bill5.category := 'Equipment'
+!bill5.date := Date('2023-03-20')
+!bill5.paymentMethod := #CREDIT_CARD
+!bill5.status := #REFUNDED
+
+!insert (expense3, bill4) into ExpenseContainsBills
+!insert (expense3, bill5) into ExpenseContainsBills
+
+!insert (bill4, currency1) into BillCurrency
+!insert (bill5, currency1) into BillCurrency
+
+!new Comment('comment3')
+!comment3.text := 'Monthly office expenses'
+
+!insert (expense3, comment3) into ExpenseComment

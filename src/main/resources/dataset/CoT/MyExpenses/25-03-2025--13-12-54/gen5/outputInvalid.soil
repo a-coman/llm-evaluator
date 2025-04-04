@@ -1,0 +1,47 @@
+!new Currency('chineseYuan')
+!chineseYuan.name := 'Chinese Yuan'
+!chineseYuan.abbreviation := 'CNY'
+
+!new Expense('programmingCourseExpense')
+!programmingCourseExpense.amount := 3000.00
+!programmingCourseExpense.startDate := Date('2023-02-01')
+!programmingCourseExpense.endDate := Date('2023-02-10')
+
+!new Bill('courseFee')
+!courseFee.amount := 2000.00
+!courseFee.category := 'Course Fee'
+!courseFee.date := Date('2023-02-01')
+!courseFee.paymentMethod := #CASH
+!courseFee.status := #DRAFT
+
+!new Bill('studyMaterials')
+!studyMaterials.amount := 700.00
+!studyMaterials.category := 'Study Materials'
+!studyMaterials.date := Date('2023-02-05')
+!studyMaterials.paymentMethod := #CHECK
+!studyMaterials.status := #PENDING
+
+!new Bill('transportation')
+!transportation.amount := 300.00
+!transportation.category := 'Transportation'
+!transportation.date := Date('2023-02-09')
+!transportation.paymentMethod := #CREDIT_CARD
+!transportation.status := #VALIDATED
+
+!insert (courseFee, chineseYuan) into BillCurrency
+!insert (studyMaterials, chineseYuan) into BillCurrency
+!insert (transportation, chineseYuan) into BillCurrency
+
+!insert (programmingCourseExpense, courseFee) into ExpenseContainsBills
+!insert (programmingCourseExpense, studyMaterials) into ExpenseContainsBills
+!insert (programmingCourseExpense, transportation) into ExpenseContainsBills
+
+!new Comment('commentEnthusiasm')
+!commentEnthusiasm.text := 'Enthusiastic about learning the new programming languages.'
+
+!new Comment('commentStudyMaterials')
+!commentStudyMaterials.text := 'Unexpected cost of additional study materials ensured deeper understanding.'
+
+!insert (programmingCourseExpense, commentEnthusiasm) into ExpenseComment
+!insert (programmingCourseExpense, commentStudyMaterials) into ExpenseComment
+

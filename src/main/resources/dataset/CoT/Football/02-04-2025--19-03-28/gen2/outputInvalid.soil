@@ -1,0 +1,133 @@
+!new Club('club15')
+!club15.name := 'Buenos Aires Argentinos'
+!club15.homeGround := 'La Casa Azul'
+!club15.chairman := 'Ricardo Martinez'
+
+!new Club('club16')
+!club16.name := 'Paris Enforcers'
+!club16.homeGround := 'Enforcer Stadium'
+!club16.chairman := 'Isabelle Moreau'
+
+!new Team('teamP')
+!teamP.name := 'Dreamers FC'
+
+!new Team('teamQ')
+!teamQ.name := 'Defenders Co.'
+
+!insert (club15, teamP) into ClubTeam
+!insert (club16, teamQ) into ClubTeam
+
+!new Player('player15')
+!player15.name := 'Marco Diaz'
+!player15.age := 29
+!player15.bestFoot := #BOTH
+!player15.phoneNumber := '+5491112345678'
+
+!new Player('player16')
+!player16.name := 'Thomas Laurent'
+!player16.age := 32
+!player16.bestFoot := #RIGHT
+!player16.phoneNumber := '+33123459876'
+
+!insert (teamP, player15) into TeamPlayer
+!insert (teamQ, player16) into TeamPlayer
+
+!new Position('position20')
+!position20.positionName := #MIDFIELDER
+
+!new Position('position21')
+!position21.positionName := #FORWARD
+
+!new Position('position22')
+!position22.positionName := #GOALKEEPER
+
+!insert (player15, position20) into PlayerPositions
+!insert (player15, position21) into PlayerPositions
+!insert (player16, position22) into PlayerPositions
+
+!new Competition('competition8')
+!competition8.name := 'Global League Cup'
+!competition8.type := 'Round Robin'
+
+!new Match('match8')
+!match8.date := '2023-09-22'
+!match8.homeAway := true
+
+!insert (competition8, match8) into CompetitionMatch
+
+!insert (teamP, match8) into LocalMatch
+!insert (teamP, match8) into VisitorMatch
+
+!new MatchReport('matchReport8')
+!matchReport8.duration := 90
+!matchReport8.scoreVisitor := 1
+!matchReport8.scoreLocal := 2
+
+!insert (match8, matchReport8) into MatchMatchReport
+
+!new MatchEvent('matchEvent25')
+!matchEvent25.eventType := #FOUL
+!matchEvent25.time := 20
+
+!insert (match8, matchEvent25) into MatchMatchEvent
+
+!new MatchNote('matchNote6')
+!matchNote6.note := 'Intense atmosphere with several controversial decision points.'
+!matchNote6.date := '2023-09-23'
+
+!insert (match8, matchNote6) into MatchMatchNote
+
+!new TrainingSession('trainingSession14')
+!trainingSession14.date := '2023-07-10'
+!trainingSession14.location := 'La Casa Azul Training Fields'
+!trainingSession14.purpose := 'Enhance player transitions and ball control'
+
+!insert (teamP, trainingSession14) into TeamTraining
+
+!new TrainingNotes('trainingNote16')
+!trainingNote16.note := 'Focus on building team synergy and rapid transitions.'
+!trainingNote16.date := '2023-07-11'
+
+!insert (trainingSession14, trainingNote16) into TrainingTrainingNotes
+
+!new TrainingSession('trainingSession15')
+!trainingSession15.date := '2023-07-15'
+!trainingSession15.location := 'Enforcer Stadium Practice Area'
+!trainingSession15.purpose := 'Reinforcement of defensive tactics'
+
+!insert (teamQ, trainingSession15) into TeamTraining
+
+!new TrainingFailedToAttend('failedAttend7')
+!failedAttend7.reason := 'Family emergency'
+
+!insert (trainingSession14, failedAttend7) into TrainingFailded
+!insert (failedAttend7, player15) into FailedPlayer
+
+!new TrainingObjective('trainingObjective15')
+!trainingObjective15.areaToImprove := 'Reflex Saves'
+!trainingObjective15.startDate := '2023-05-01'
+!trainingObjective15.endDate := '2023-09-30'
+!trainingObjective15.success := true
+
+!insert (trainingObjective15, player16) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote12')
+!playerNote12.note := 'Displayed leadership potential; could be pivotal in future strategies.'
+!playerNote12.date := '2023-06-20'
+
+!insert (player15, playerNote12) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer12')
+!matchPlayer12.booked := true
+!matchPlayer12.goals := 1
+!matchPlayer12.rating := 8
+
+!insert (player15, matchPlayer12) into PlayerMatch
+!insert (match8, matchPlayer12) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition13')
+!matchPlayerPosition13.positionName := #FORWARD
+!matchPlayerPosition13.number := 10
+
+!insert (matchPlayer12, matchPlayerPosition13) into MatchPlayerMatchPlayerPosition
+

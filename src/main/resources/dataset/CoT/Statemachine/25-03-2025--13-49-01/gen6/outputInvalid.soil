@@ -1,0 +1,92 @@
+!new StateMachine('alarmClockSM')
+!alarmClockSM.name := 'alarmClockSM'
+
+!new State('setTime')
+!setTime.name := 'setTime'
+
+!new State('setAlarm')
+!setAlarm.name := 'setAlarm'
+
+!new State('alarmActive')
+!alarmActive.name := 'alarmActive'
+
+!new State('snooze')
+!snooze.name := 'snooze'
+
+!new State('off')
+!off.name := 'off'
+
+!new Transition('timeToAlarm')
+!timeToAlarm.name := 'timeToAlarm'
+
+!new Transition('activateAlarm')
+!activateAlarm.name := 'activateAlarm'
+
+!new Transition('snoozeAlarm')
+!snoozeAlarm.name := 'snoozeAlarm'
+
+!new Transition('alarmSnoozedToActive')
+!alarmSnoozedToActive.name := 'alarmSnoozedToActive'
+
+!new Transition('deactivateAlarmActive')
+!deactivateAlarmActive.name := 'deactivateAlarm'
+
+!new Transition('deactivateAlarmSnooze')
+!deactivateAlarmSnooze.name := 'deactivateAlarm'
+
+!new TimeEvent('timeEventTimeToAlarm')
+!timeEventTimeToAlarm.time := 15
+
+!new TimeEvent('timeEventActivateAlarm')
+!timeEventActivateAlarm.time := 10
+
+!new TimeEvent('timeEventSnoozeAlarm')
+!timeEventSnoozeAlarm.time := 5
+
+!new TimeEvent('timeEventAlarmSnoozedToActive')
+!timeEventAlarmSnoozedToActive.time := 300
+
+!new TimeEvent('timeEventDeactivateAlarmActive')
+!timeEventDeactivateAlarmActive.time := 1 -- Adjusted from 0 to positive
+
+!new TimeEvent('timeEventDeactivateAlarmSnooze')
+!timeEventDeactivateAlarmSnooze.time := 1 -- Adjusted from 0 to positive
+
+!insert (alarmClockSM, setTime) into StateMachineContainsStates
+!insert (alarmClockSM, setAlarm) into StateMachineContainsStates
+!insert (alarmClockSM, alarmActive) into StateMachineContainsStates
+!insert (alarmClockSM, snooze) into StateMachineContainsStates
+!insert (alarmClockSM, off) into StateMachineContainsStates
+
+!insert (alarmClockSM, timeToAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, activateAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, snoozeAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, alarmSnoozedToActive) into StateMachineContainsTransitions
+!insert (alarmClockSM, deactivateAlarmActive) into StateMachineContainsTransitions
+!insert (alarmClockSM, deactivateAlarmSnooze) into StateMachineContainsTransitions
+
+!insert (timeToAlarm, timeEventTimeToAlarm) into TransitionContainsEvents
+!insert (activateAlarm, timeEventActivateAlarm) into TransitionContainsEvents
+!insert (snoozeAlarm, timeEventSnoozeAlarm) into TransitionContainsEvents
+!insert (alarmSnoozedToActive, timeEventAlarmSnoozedToActive) into TransitionContainsEvents
+!insert (deactivateAlarmActive, timeEventDeactivateAlarmActive) into TransitionContainsEvents
+!insert (deactivateAlarmSnooze, timeEventDeactivateAlarmSnooze) into TransitionContainsEvents
+
+!insert (setTime, timeToAlarm) into StateTransition
+!insert (timeToAlarm, setAlarm) into TransitionState
+
+!insert (setAlarm, activateAlarm) into StateTransition
+!insert (activateAlarm, alarmActive) into TransitionState
+
+!insert (alarmActive, snoozeAlarm) into StateTransition
+!insert (snoozeAlarm, snooze) into TransitionState
+
+!insert (snooze, alarmSnoozedToActive) into StateTransition
+!insert (alarmSnoozedToActive, alarmActive) into TransitionState
+
+!insert (alarmActive, deactivateAlarmActive) into StateTransition
+!insert (deactivateAlarmActive, off) into TransitionState
+
+!insert (snooze, deactivateAlarmSnooze) into StateTransition
+!insert (deactivateAlarmSnooze, off) into TransitionState
+

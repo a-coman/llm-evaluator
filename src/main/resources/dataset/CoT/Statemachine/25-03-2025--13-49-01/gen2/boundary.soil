@@ -1,0 +1,67 @@
+!new StateMachine('dataProcessor')
+!dataProcessor.name := 'dataProcessor'
+
+!new State('initial')
+!initial.name := 'initial'
+
+!new State('processing')
+!processing.name := 'processing'
+
+!new State('waiting')
+!waiting.name := 'waiting'
+
+!new State('terminating')
+!terminating.name := 'terminating'
+
+!new Transition('startToProcess')
+!startToProcess.name := 'startToProcess'
+
+!new Transition('processToWait')
+!processToWait.name := 'processToWait'
+
+!new Transition('waitToProcess')
+!waitToProcess.name := 'waitToProcess'
+
+!new Transition('processToTerminate')
+!processToTerminate.name := 'processToTerminate'
+
+!new TimeEvent('timeEventWaitToProcess')
+!timeEventWaitToProcess.time := 30
+
+!new TimeEvent('timeEventProcessToTerminate')
+!timeEventProcessToTerminate.time := 300
+
+!insert (dataProcessor, initial) into StateMachineContainsStates
+!insert (dataProcessor, processing) into StateMachineContainsStates
+!insert (dataProcessor, waiting) into StateMachineContainsStates
+!insert (dataProcessor, terminating) into StateMachineContainsStates
+
+!insert (dataProcessor, initial) into StateMachineStartsStates
+
+!insert (dataProcessor, startToProcess) into StateMachineContainsTransitions
+!insert (dataProcessor, processToWait) into StateMachineContainsTransitions
+!insert (dataProcessor, waitToProcess) into StateMachineContainsTransitions
+!insert (dataProcessor, processToTerminate) into StateMachineContainsTransitions
+
+!new TimeEvent('timeEventStartToProcess')
+!timeEventStartToProcess.time := 5
+
+!new TimeEvent('timeEventProcessToWait')
+!timeEventProcessToWait.time := 60
+
+!insert (startToProcess, timeEventStartToProcess) into TransitionContainsEvents
+!insert (processToWait, timeEventProcessToWait) into TransitionContainsEvents
+!insert (waitToProcess, timeEventWaitToProcess) into TransitionContainsEvents
+!insert (processToTerminate, timeEventProcessToTerminate) into TransitionContainsEvents
+
+!insert (initial, startToProcess) into StateTransition
+!insert (startToProcess, processing) into TransitionState
+
+!insert (processing, processToWait) into StateTransition
+!insert (processToWait, waiting) into TransitionState
+
+!insert (waiting, waitToProcess) into StateTransition
+!insert (waitToProcess, processing) into TransitionState
+
+!insert (processing, processToTerminate) into StateTransition
+!insert (processToTerminate, terminating) into TransitionState

@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine19')
+!stateMachine19.name := 'taskManagementMachine'
+
+!new State('state51')
+!state51.name := 'open'
+
+!new State('state52')
+!state52.name := 'inProgress'
+
+!new State('state53')
+!state53.name := 'awaitingReview'
+
+!new State('state54')
+!state54.name := 'closed'
+
+!new Transition('transition44')
+!transition44.name := 'startTask'
+
+!new Transition('transition45')
+!transition45.name := 'submitForReview'
+
+!new Transition('transition46')
+!transition46.name := 'approveAndClose'
+
+!new Transition('transition47')
+!transition47.name := 'reopenTask'
+
+!new TimeEvent('event44')
+!event44.time := 12
+
+!new TimeEvent('event45')
+!event45.time := 22
+
+!new TimeEvent('event46')
+!event46.time := 32
+
+!new TimeEvent('event47')
+!event47.time := 42
+
+!insert (stateMachine19, state51) into StateMachineContainsStates
+!insert (stateMachine19, state52) into StateMachineContainsStates
+!insert (stateMachine19, state53) into StateMachineContainsStates
+!insert (stateMachine19, state54) into StateMachineContainsStates
+
+!insert (stateMachine19, transition44) into StateMachineContainsTransitions
+!insert (stateMachine19, transition45) into StateMachineContainsTransitions
+!insert (stateMachine19, transition46) into StateMachineContainsTransitions
+!insert (stateMachine19, transition47) into StateMachineContainsTransitions
+
+!insert (transition44, event44) into TransitionContainsEvents
+!insert (transition45, event45) into TransitionContainsEvents
+!insert (transition46, event46) into TransitionContainsEvents
+!insert (transition47, event47) into TransitionContainsEvents
+
+!insert (state51, transition44) into StateTransition
+!insert (state52, transition45) into StateTransition
+!insert (state53, transition46) into StateTransition
+!insert (state54, transition47) into StateTransition
+
+!insert (transition44, state52) into TransitionState
+!insert (transition45, state53) into TransitionState
+!insert (transition46, state54) into TransitionState
+!insert (transition47, state51) into TransitionState
+
+!insert (stateMachine19, state51) into StateMachineStartsStates

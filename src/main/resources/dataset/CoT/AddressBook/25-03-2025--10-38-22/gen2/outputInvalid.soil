@@ -1,0 +1,90 @@
+!new AddressBook('New_York_Startup_Network')
+
+!new Company('Hudson_Ventures')
+!Hudson_Ventures.name := 'Hudson Ventures'
+!Hudson_Ventures.phone := '+1-212-555-0199'
+!Hudson_Ventures.website := 'www.hudsonventures.com'
+!Hudson_Ventures.email := 'outreach@hudsonventures.com'
+!Hudson_Ventures.industry := 'Venture Capital'
+
+!new Address('Address_Hudson_Ventures')
+!Address_Hudson_Ventures.city := 'New York'
+!Address_Hudson_Ventures.houseNr := '45'
+!Address_Hudson_Ventures.street := 'Wall St'
+!insert (Hudson_Ventures, Address_Hudson_Ventures) into ContactContainsAddress
+
+!new Note('Note_Hudson_Ventures')
+!Note_Hudson_Ventures.author := 'Emily Brighton'
+!Note_Hudson_Ventures.time := Date('2023-10-02 11:00')
+!Note_Hudson_Ventures.type := #EMAIL
+!Note_Hudson_Ventures.comment := 'Sent proposal details to potential investors.'
+!insert (Hudson_Ventures, Note_Hudson_Ventures) into ContactContainsNote
+
+!new Relationship('Relationship_Hudson_to_Jordan')
+!Relationship_Hudson_to_Jordan.type := #BOSS
+!insert (Hudson_Ventures, Relationship_Hudson_to_Jordan) into ContactToRelationship
+
+!new Person('Jordan_Lewis')
+!Jordan_Lewis.name := 'Jordan Lewis'
+!Jordan_Lewis.phone := '+1-646-555-0202'
+!Jordan_Lewis.website := 'www.jordanlewisentrepreneur.com'
+!Jordan_Lewis.email := 'jordan@hudsonventures.com'
+!Jordan_Lewis.title := 'Investment Analyst'
+
+!new Address('Address_Jordan_NY')
+!Address_Jordan_NY.city := 'New York'
+!Address_Jordan_NY.houseNr := '200'
+!Address_Jordan_NY.street := 'Broadway'
+!insert (Jordan_Lewis, Address_Jordan_NY) into ContactContainsAddress
+
+!new Address('Address_Jordan_Brooklyn')
+!Address_Jordan_Brooklyn.city := 'Brooklyn'
+!Address_Jordan_Brooklyn.houseNr := '330'
+!Address_Jordan_Brooklyn.street := 'Bedford Ave'
+!insert (Jordan_Lewis, Address_Jordan_Brooklyn) into ContactContainsAddress
+
+!new Note('Note_Jordan_1')
+!Note_Jordan_1.author := 'Jordan Lewis'
+!Note_Jordan_1.time := Date('2023-09-30 09:30')
+!Note_Jordan_1.type := #MEETING
+!Note_Jordan_1.comment := 'Strategic planning session for startup incubator programs.'
+!insert (Jordan_Lewis, Note_Jordan_1) into ContactContainsNote
+
+!new Note('Note_Jordan_2')
+!Note_Jordan_2.author := 'Jordan Lewis'
+!Note_Jordan_2.time := Date('2023-10-01 14:00')
+!Note_Jordan_2.type := #CALL
+!Note_Jordan_2.comment := 'Phone call with an emerging tech startup CEO.'
+!insert (Jordan_Lewis, Note_Jordan_2) into ContactContainsNote
+
+!insert (Relationship_Hudson_to_Jordan, Jordan_Lewis) into RelationshipToContact
+
+!new Company('InnovateX_Labs')
+!InnovateX_Labs.name := 'InnovateX Labs'
+!InnovateX_Labs.phone := '+1-917-555-0111'
+!InnovateX_Labs.website := 'www.innovatexlabs.com'
+!InnovateX_Labs.email := 'contact@innovatexlabs.com'
+!InnovateX_Labs.industry := 'Technology Incubation'
+
+!new Address('Address_InnovateX_Labs')
+!Address_InnovateX_Labs.city := 'New York'
+!Address_InnovateX_Labs.houseNr := '600'
+!Address_InnovateX_Labs.street := 'Fifth Ave'
+!insert (InnovateX_Labs, Address_InnovateX_Labs) into ContactContainsAddress
+
+!new Note('Note_InnovateX')
+!Note_InnovateX.author := 'Lisa Chang'
+!Note_InnovateX.time := Date('2023-09-28 16:45')
+!Note_InnovateX.type := #CALL
+!Note_InnovateX.comment := 'Discussed potential collaboration with Hudson Ventures.'
+!insert (InnovateX_Labs, Note_InnovateX) into ContactContainsNote
+
+!new Relationship('Relationship_InnovateX_to_Hudson')
+!Relationship_InnovateX_to_Hudson.type := #COWORKER
+!insert (InnovateX_Labs, Relationship_InnovateX_to_Hudson) into ContactToRelationship
+!insert (Relationship_InnovateX_to_Hudson, Hudson_Ventures) into RelationshipToContact
+
+!insert (New_York_Startup_Network, Hudson_Ventures) into AddressBookMadeOfContact
+!insert (New_York_Startup_Network, Jordan_Lewis) into AddressBookMadeOfContact
+!insert (New_York_Startup_Network, InnovateX_Labs) into AddressBookMadeOfContact
+

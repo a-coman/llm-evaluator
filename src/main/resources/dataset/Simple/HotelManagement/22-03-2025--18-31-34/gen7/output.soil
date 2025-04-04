@@ -1,0 +1,55 @@
+!new Booking('booking8')
+!booking8.startDate := '2024-03-01'
+!booking8.endDate := '2024-03-07'
+!booking8.canceled := false
+!booking8.bookingId := 107
+!booking8.confirmed := false
+
+!new Bill('bill8')
+!bill8.price := 700.00
+!bill8.billId := 207
+
+!new FreeRoomTypesDTO('roomType8')
+!roomType8.roomTypeDescription := 'Standard Twin Room'
+!roomType8.numBeds := 2
+!roomType8.pricePerNight := 100.00
+!roomType8.numFreeRooms := 6
+
+!new Customer('customer8')
+!customer8.firstName := 'Helena'
+!customer8.lastName := 'Iversen'
+
+!new RoomReservation('reservation8')
+!reservation8.checkInDate := '2024-03-01'
+!reservation8.checkOutDate := '2024-03-07'
+
+!new RoomExtra('extra8')
+!extra8.price := 35.00
+!extra8.description := 'Room Decor Package'
+
+!new Room('room12')
+!room12.numBeds := 2
+!room12.pricePerNight := 95.00
+!room12.occupied := false
+!room12.blocked := false
+!room12.roomNumber := 112
+
+!new Room('room13')
+!room13.numBeds := 2
+!room13.pricePerNight := 105.00
+!room13.occupied := true
+!room13.blocked := false
+!room13.roomNumber := 113
+
+!insert (booking8, bill8) into BookingBill
+
+!insert (booking8, customer8) into BookingCustomer
+
+!insert (booking8, reservation8) into BookingRoomReservation
+
+!insert (reservation8, extra8) into RoomReservationExtras
+
+!insert (reservation8, room12) into RoomReservationRoom
+!insert (reservation8, room13) into RoomReservationRoom
+
+!insert (bill8, reservation8) into BillRoomReservation

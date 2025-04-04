@@ -1,0 +1,413 @@
+!new Driver('driver33')
+!driver33.id := 'DRV009'
+!driver33.name := 'Maria Garcia'
+
+!new Driver('driver34')
+!driver34.id := 'DRV010'
+!driver34.name := 'David Okeke'
+
+!new Driver('driver35')
+!driver35.id := 'DRV011'
+!driver35.name := 'Lee Xiao'
+
+!new Shipment('shipment34')
+!shipment34.id := 'SHIP008'
+!shipment34.status := #NEW
+
+!new Shipment('shipment35')
+!shipment35.id := 'SHIP009'
+!shipment35.status := #UNDERWAY
+
+!new Address('pickupAddress34')
+!pickupAddress34.text := 'Paseo de la Reforma 222, Mexico City, Mexico'
+
+!new GeoLocation('pickupGeoLocation34')
+!pickupGeoLocation34.latitude := 19.4326
+!pickupGeoLocation34.longitude := -99.1332
+
+!new Address('deliveryAddress34')
+!deliveryAddress34.text := '1 Infinite Loop, Cupertino, USA'
+
+!new GeoLocation('deliveryGeoLocation34')
+!deliveryGeoLocation34.latitude := 37.3318
+!deliveryGeoLocation34.longitude := -122.0312
+
+!new Address('pickupAddress35')
+!pickupAddress35.text := '2-1-1 Nihonbashi, Tokyo, Japan'
+
+!new GeoLocation('pickupGeoLocation35')
+!pickupGeoLocation35.latitude := 35.6863
+!pickupGeoLocation35.longitude := 139.7808
+
+!new Address('deliveryAddress35')
+!deliveryAddress35.text := '101 Collins St, Melbourne, Australia'
+
+!new GeoLocation('deliveryGeoLocation35')
+!deliveryGeoLocation35.latitude := -37.8136
+!deliveryGeoLocation35.longitude := 144.9631
+
+!new Station('station24')
+
+!new Station('station25')
+
+!new Customer('customer34')
+!customer34.id := 'CUST007'
+!customer34.name := 'Carlos Silva'
+!customer34.twitterUserName := '@carlsilva'
+
+!new Customer('customer35')
+!customer35.id := 'CUST008'
+!customer35.name := 'Yumi Sato'
+!customer35.twitterUserName := '@yumixsato'
+
+!new Customer('customer36')
+!customer36.id := 'CUST009'
+!customer36.name := 'Ahmed Patel'
+!customer36.twitterUserName := '@ahmedp'
+
+!insert (driver33, shipment34) into DriverShipment
+
+!insert (driver34, shipment35) into DriverShipment
+
+!insert (shipment34, pickupAddress34) into ShipmentContainsPickUpAddress
+
+!insert (shipment34, deliveryAddress34) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress34, pickupGeoLocation34) into AddressContainsGeoLocation
+
+!insert (deliveryAddress34, deliveryGeoLocation34) into AddressContainsGeoLocation
+
+!insert (shipment35, pickupAddress35) into ShipmentContainsPickUpAddress
+
+!insert (shipment35, deliveryAddress35) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress35, pickupGeoLocation35) into AddressContainsGeoLocation
+
+!insert (deliveryAddress35, deliveryGeoLocation35) into AddressContainsGeoLocation
+
+!insert (customer34, shipment34) into CustomerConsistsOfShipment
+
+!insert (customer35, shipment35) into CustomerConsistsOfShipment
+
+!insert (station24, customer34) into StationContainsCustomer
+
+!insert (station25, customer35) into StationContainsCustomer
+
+!insert (station25, customer36) into StationContainsCustomer
+
+!insert (station24, shipment34) into StationShipment
+
+!insert (station25, shipment35) into StationShipment
+
+!insert (station24, driver33) into StationContainsDriver
+
+!insert (station25, driver34) into StationContainsDriver
+
+!insert (station25, driver35) into StationContainsDriver
+
+!new Driver('driver36')
+!driver36.id := 'DL007'
+!driver36.name := 'Xiao Ming'
+
+!new Shipment('shipment36')
+!shipment36.id := 'SH1359'
+!shipment36.status := #ASSIGNED
+
+!new Shipment('shipment37')
+!shipment37.id := 'SH9753'
+!shipment37.status := #UNDERWAY
+
+!new Address('pickupAddress36')
+!pickupAddress36.text := 'Art Essentials Depot, Kyoto, Japan'
+
+!new GeoLocation('pickupGeoLocation36')
+!pickupGeoLocation36.latitude := 35.0116
+!pickupGeoLocation36.longitude := 135.7681
+
+!new Address('deliveryAddress36')
+!deliveryAddress36.text := 'International Art Venue, Tokyo, Japan'
+
+!new GeoLocation('deliveryGeoLocation36')
+!deliveryGeoLocation36.latitude := 35.6895
+!deliveryGeoLocation36.longitude := 139.6917
+
+!new Address('pickupAddress37')
+!pickupAddress37.text := 'Creative Works, Osaka, Japan'
+
+!new GeoLocation('pickupGeoLocation37')
+!pickupGeoLocation37.latitude := 34.6937
+!pickupGeoLocation37.longitude := 135.5023
+
+!new Address('deliveryAddress37')
+!deliveryAddress37.text := 'Artists\' Hub, Shibuya, Tokyo, Japan'
+
+!new GeoLocation('deliveryGeoLocation37')
+!deliveryGeoLocation37.latitude := 35.6628
+!deliveryGeoLocation37.longitude := 139.7085
+
+!new Station('station26')
+
+!new Customer('customer37')
+!customer37.id := 'CST8901'
+!customer37.name := 'Tokyo Art Collective'
+!customer37.twitterUserName := '@TokyoArtCo'
+
+!new Customer('customer38')
+!customer38.id := 'CST9987'
+!customer38.name := 'Japanese Artisans Guild'
+!customer38.twitterUserName := '@JapanArtisans'
+
+!insert (driver36, shipment36) into DriverShipment
+
+!insert (shipment36, pickupAddress36) into ShipmentContainsPickUpAddress
+
+!insert (shipment36, deliveryAddress36) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress36, pickupGeoLocation36) into AddressContainsGeoLocation
+
+!insert (deliveryAddress36, deliveryGeoLocation36) into AddressContainsGeoLocation
+
+!insert (shipment37, pickupAddress37) into ShipmentContainsPickUpAddress
+
+!insert (shipment37, deliveryAddress37) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress37, pickupGeoLocation37) into AddressContainsGeoLocation
+
+!insert (deliveryAddress37, deliveryGeoLocation37) into AddressContainsGeoLocation
+
+!insert (customer37, shipment36) into CustomerConsistsOfShipment
+
+!insert (customer38, shipment37) into CustomerConsistsOfShipment
+
+!insert (station26, customer37) into StationContainsCustomer
+
+!insert (station26, customer38) into StationContainsCustomer
+
+!insert (station26, shipment36) into StationShipment
+
+!insert (station26, shipment37) into StationShipment
+
+!insert (station26, driver36) into StationContainsDriver
+
+!new Driver('driver40')
+!driver40.id := 'D005'
+!driver40.name := 'Liam O\'Brien'
+
+!new Driver('driver41')
+!driver41.id := 'D006'
+!driver41.name := 'Yasmin Khan'
+
+!new Shipment('shipment42')
+!shipment42.id := 'SHP007'
+!shipment42.status := #DELIVERED
+
+!new Address('pickupAddress42')
+!pickupAddress42.text := 'The Louvre Museum, Rue de Rivoli, 75001 Paris, France'
+
+!new GeoLocation('pickupGeoLocation42')
+!pickupGeoLocation42.latitude := 48.8606
+!pickupGeoLocation42.longitude := 2.3376
+
+!new Address('deliveryAddress42')
+!deliveryAddress42.text := 'Metropolitan Museum of Art, 1000 5th Ave, New York, NY'
+
+!new GeoLocation('deliveryGeoLocation42')
+!deliveryGeoLocation42.latitude := 40.7794
+!deliveryGeoLocation42.longitude := -73.9632
+
+!new Station('station29')
+
+!new Customer('customer42')
+!customer42.id := 'CUST007'
+!customer42.name := 'Global Art Consortium'
+!customer42.twitterUserName := '@globalartnetwork'
+
+!insert (driver40, shipment42) into DriverShipment
+
+!insert (shipment42, pickupAddress42) into ShipmentContainsPickUpAddress
+
+!insert (shipment42, deliveryAddress42) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress42, pickupGeoLocation42) into AddressContainsGeoLocation
+
+!insert (deliveryAddress42, deliveryGeoLocation42) into AddressContainsGeoLocation
+
+!insert (customer42, shipment42) into CustomerConsistsOfShipment
+
+!insert (station29, customer42) into StationContainsCustomer
+
+!insert (station29, shipment42) into StationShipment
+
+!insert (station29, driver40) into StationContainsDriver
+
+!insert (station29, driver41) into StationContainsDriver
+
+!new Driver('driver48')
+!driver48.id := 'D-401'
+!driver48.name := 'Omar Al-Masri'
+
+!new Driver('driver49')
+!driver49.id := 'D-402'
+!driver49.name := 'Zara Khan'
+
+!new Driver('driver50')
+!driver50.id := 'D-403'
+!driver50.name := 'Ahmed Ben Ali'
+
+!new Customer('customer50')
+!customer50.id := 'C-401'
+!customer50.name := 'Fatima El-Tayeb'
+!customer50.twitterUserName := '@fatima_global'
+
+!new Customer('customer51')
+!customer51.id := 'C-402'
+!customer51.name := 'Yousef Habib'
+!customer51.twitterUserName := '@yousefh_apex'
+
+!new Customer('customer52')
+!customer52.id := 'C-403'
+!customer52.name := 'Layla Haddad'
+!customer52.twitterUserName := '@laylah_addis'
+
+!new Shipment('shipment49')
+!shipment49.id := 'S-5001'
+!shipment49.status := #NEW
+
+!new Address('pickupAddress49')
+!pickupAddress49.text := 'The Dubai Mall, Dubai, UAE'
+
+!new GeoLocation('pickupGeoLocation49')
+!pickupGeoLocation49.latitude := 25.2048
+!pickupGeoLocation49.longitude := 55.2708
+
+!new Address('deliveryAddress49')
+!deliveryAddress49.text := 'Kingdom Center, Riyadh, Saudi Arabia'
+
+!new GeoLocation('deliveryGeoLocation49')
+!deliveryGeoLocation49.latitude := 24.7136
+!deliveryGeoLocation49.longitude := 46.6753
+
+!new Shipment('shipment50')
+!shipment50.id := 'S-5002'
+!shipment50.status := #UNDERWAY
+
+!new Address('pickupAddress50')
+!pickupAddress50.text := 'Tahrir Square, Cairo, Egypt'
+
+!new GeoLocation('pickupGeoLocation50')
+!pickupGeoLocation50.latitude := 30.0444
+!pickupGeoLocation50.longitude := 31.2357
+
+!new Address('deliveryAddress50')
+!deliveryAddress50.text := 'Medina, Mecca Province, Saudi Arabia'
+
+!new GeoLocation('deliveryGeoLocation50')
+!deliveryGeoLocation50.latitude := 24.4686
+!deliveryGeoLocation50.longitude := 39.6117
+
+!new Shipment('shipment51')
+!shipment51.id := 'S-5003'
+!shipment51.status := #DELIVERED
+
+!new Address('pickupAddress51')
+!pickupAddress51.text := 'Jemaa el-Fnaa, Marrakech, Morocco'
+
+!new GeoLocation('pickupGeoLocation51')
+!pickupGeoLocation51.latitude := 31.6295
+!pickupGeoLocation51.longitude := -7.9811
+
+!new Address('deliveryAddress51')
+!deliveryAddress51.text := 'Kasbah Market, Tunis, Tunisia'
+
+!new GeoLocation('deliveryGeoLocation51')
+!deliveryGeoLocation51.latitude := 36.8065
+!deliveryGeoLocation51.longitude := 10.1815
+
+!new Shipment('shipment52')
+!shipment52.id := 'S-5004'
+!shipment52.status := #ASSIGNED
+
+!new Address('pickupAddress52')
+!pickupAddress52.text := 'Khalifa City, Abu Dhabi, UAE'
+
+!new GeoLocation('pickupGeoLocation52')
+!pickupGeoLocation52.latitude := 24.4539
+!pickupGeoLocation52.longitude := 54.3773
+
+!new Address('deliveryAddress52')
+!deliveryAddress52.text := 'Downtown Beirut, Lebanon'
+
+!new GeoLocation('deliveryGeoLocation52')
+!deliveryGeoLocation52.latitude := 33.8959
+!deliveryGeoLocation52.longitude := 35.4784
+
+!new Station('station35')
+
+!new Station('station36')
+
+!insert (shipment49, pickupAddress49) into ShipmentContainsPickUpAddress
+
+!insert (shipment49, deliveryAddress49) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress49, pickupGeoLocation49) into AddressContainsGeoLocation
+
+!insert (deliveryAddress49, deliveryGeoLocation49) into AddressContainsGeoLocation
+
+!insert (driver49, shipment50) into DriverShipment
+
+!insert (shipment50, pickupAddress50) into ShipmentContainsPickUpAddress
+
+!insert (shipment50, deliveryAddress50) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress50, pickupGeoLocation50) into AddressContainsGeoLocation
+
+!insert (deliveryAddress50, deliveryGeoLocation50) into AddressContainsGeoLocation
+
+!insert (driver50, shipment51) into DriverShipment
+
+!insert (shipment51, pickupAddress51) into ShipmentContainsPickUpAddress
+
+!insert (shipment51, deliveryAddress51) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress51, pickupGeoLocation51) into AddressContainsGeoLocation
+
+!insert (deliveryAddress51, deliveryGeoLocation51) into AddressContainsGeoLocation
+
+!insert (driver48, shipment52) into DriverShipment
+
+!insert (shipment52, pickupAddress52) into ShipmentContainsPickUpAddress
+
+!insert (shipment52, deliveryAddress52) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress52, pickupGeoLocation52) into AddressContainsGeoLocation
+
+!insert (deliveryAddress52, deliveryGeoLocation52) into AddressContainsGeoLocation
+
+!insert (customer50, shipment49) into CustomerConsistsOfShipment
+
+!insert (customer51, shipment50) into CustomerConsistsOfShipment
+
+!insert (customer52, shipment51) into CustomerConsistsOfShipment
+
+!insert (customer51, shipment52) into CustomerConsistsOfShipment
+
+!insert (station35, customer50) into StationContainsCustomer
+
+!insert (station35, customer51) into StationContainsCustomer
+
+!insert (station36, customer52) into StationContainsCustomer
+
+!insert (station35, shipment49) into StationShipment
+
+!insert (station36, shipment50) into StationShipment
+
+!insert (station36, shipment51) into StationShipment
+
+!insert (station35, shipment52) into StationShipment
+
+!insert (station35, driver48) into StationContainsDriver
+
+!insert (station36, driver49) into StationContainsDriver
+
+!insert (station36, driver50) into StationContainsDriver
+

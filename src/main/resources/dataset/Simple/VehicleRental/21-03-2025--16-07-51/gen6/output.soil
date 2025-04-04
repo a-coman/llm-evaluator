@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice8')
+!rentalOffice8.name := 'Desert Rentals'
+!rentalOffice8.number := 108
+!rentalOffice8.address := '123 Sand Dune Rd, Phoenix, AZ'
+
+!new Truck('truck5')
+!truck5.id := 7
+!truck5.registrationState := #AZ
+!truck5.licensePlateNumber := 'AZ3456'
+!truck5.vehicleTypeCode := #TRUCK10
+!truck5.registrationLastMaintenanceDate := Date('2023-07-12')
+!truck5.expirationDate := Date('2024-07-12')
+!truck5.odometerReading := 12000
+!truck5.gasTankCapacity := 160.0
+!truck5.workingRadio := false
+!truck5.mileage := 20
+
+!new Company('companyCustomer3')
+!companyCustomer3.name := 'Desert Mining Co.'
+!companyCustomer3.address := '987 Ore Trail, Phoenix, AZ'
+!companyCustomer3.poorRisk := true
+!companyCustomer3.idNumber := 4003
+
+!new RentalAgreement('rentalAgreement7')
+!rentalAgreement7.number := 507
+!rentalAgreement7.rentalDate := Date('2023-12-10')
+!rentalAgreement7.anticipatedDuration := 20
+!rentalAgreement7.depositPaid := 300.0
+!rentalAgreement7.quotedDailyRate := 40.0
+!rentalAgreement7.quotedRatePerMile := 0.25
+
+!insert (rentalOffice8, truck5) into RentalOfficeVehicle
+!insert (rentalOffice8, rentalAgreement7) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice8, rentalAgreement7) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement7, truck5) into RentalAgreementVehicle
+!insert (rentalAgreement7, companyCustomer3) into RentalAgreementCustomer

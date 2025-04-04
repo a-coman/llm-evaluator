@@ -1,0 +1,73 @@
+!new RentalOffice('rentalOffice8')
+!rentalOffice8.name := 'Pine Ridge Mobilities'
+!rentalOffice8.number := 45
+!rentalOffice8.address := '234 Evergreen Lane, Boise, ID 83706'
+
+!new Truck('truck7')
+!truck7.id := 13
+!truck7.registrationState := #CO
+!truck7.licensePlateNumber := 'PRID123F'
+!truck7.vehicleTypeCode := #TRUCK
+!truck7.registrationLastMaintenanceDate := Date('2023-07-15')
+!truck7.expirationDate := Date('2025-07-15')
+!truck7.odometerReading := 1000000
+!truck7.gasTankCapacity := 150.0
+!truck7.workingRadio := true
+!truck7.mileage := 5
+
+!new Vehicle('vehicle7')
+!vehicle7.id := 14
+!vehicle7.registrationState := #CO
+!vehicle7.licensePlateNumber := 'PRID124T'
+!vehicle7.vehicleTypeCode := #OPEN_TRAILER
+!vehicle7.registrationLastMaintenanceDate := Date('2022-12-01')
+!vehicle7.expirationDate := Date('2024-12-01')
+
+!new Vehicle('vehicle8')
+!vehicle8.id := 15
+!vehicle8.registrationState := #CO
+!vehicle8.licensePlateNumber := 'PRID125C'
+!vehicle8.vehicleTypeCode := #OPEN_TRAILER
+!vehicle8.registrationLastMaintenanceDate := Date('2023-05-05')
+!vehicle8.expirationDate := Date('2025-05-05')
+
+!new RentalAgreement('rentalAgreement11')
+!rentalAgreement11.number := 987
+!rentalAgreement11.rentalDate := Date('2023-10-20')
+!rentalAgreement11.anticipatedDuration := 1
+!rentalAgreement11.depositPaid := 100.00
+!rentalAgreement11.quotedDailyRate := 150.00
+!rentalAgreement11.quotedRatePerMile := 0.10
+
+!new RentalAgreement('rentalAgreement12')
+!rentalAgreement12.number := 988
+!rentalAgreement12.rentalDate := Date('2023-11-15')
+!rentalAgreement12.anticipatedDuration := 0
+!rentalAgreement12.depositPaid := 0.00
+!rentalAgreement12.quotedDailyRate := 0.00
+!rentalAgreement12.quotedRatePerMile := 0.0
+
+!new Individual('individualCustomer6')
+!individualCustomer6.name := 'Blake Jensen'
+!individualCustomer6.address := '789 Pine St, Boise, ID 83702'
+!individualCustomer6.poorRisk := true
+!individualCustomer6.homePhone := '(208) 555-6789'
+!individualCustomer6.driverLicenseState := #CO
+!individualCustomer6.driverLicenseNumber := 98
+!individualCustomer6.driverLicenseExpirationDate := Date('2034-05-10')
+
+!insert (rentalOffice8, truck7) into RentalOfficeVehicle
+!insert (rentalOffice8, vehicle7) into RentalOfficeVehicle
+!insert (rentalOffice8, vehicle8) into RentalOfficeVehicle
+
+!insert (rentalOffice8, rentalAgreement11) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice8, rentalAgreement11) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement11, truck7) into RentalAgreementVehicle
+!insert (rentalAgreement11, individualCustomer6) into RentalAgreementCustomer
+
+!insert (rentalOffice8, rentalAgreement12) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice8, rentalAgreement12) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement12, vehicle8) into RentalAgreementVehicle
+!insert (rentalAgreement12, individualCustomer6) into RentalAgreementCustomer

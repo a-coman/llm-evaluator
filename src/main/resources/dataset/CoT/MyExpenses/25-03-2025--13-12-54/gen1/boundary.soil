@@ -1,0 +1,18 @@
+!new Expense('boundaryCaseExpense')
+!boundaryCaseExpense.amount := 0.00
+!boundaryCaseExpense.startDate := Date('2023-10-01')
+!boundaryCaseExpense.endDate := Date('2023-10-01')
+
+!new Currency('japaneseYenBoundary')
+!japaneseYenBoundary.name := 'Japanese Yen'
+!japaneseYenBoundary.abbreviation := 'JPY'
+
+!new Bill('dummyBill')
+!dummyBill.amount := 100.00
+!dummyBill.category := 'Utilities'
+!dummyBill.date := Date('2023-10-01')
+!dummyBill.paymentMethod := #CREDIT_CARD
+!dummyBill.status := #DRAFT
+
+!insert (dummyBill, japaneseYenBoundary) into BillCurrency
+!insert (boundaryCaseExpense, dummyBill) into ExpenseContainsBills

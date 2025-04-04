@@ -1,0 +1,71 @@
+!new AddressBook('addressBook27')
+
+!new Company('byteWaveMedia')
+!byteWaveMedia.name := 'ByteWave Media'
+!byteWaveMedia.phone := '999-888-7777'
+!byteWaveMedia.website := 'www.bytewavemedia.com'
+!byteWaveMedia.email := 'contact@bytewavemedia.com'
+!byteWaveMedia.industry := 'Digital Media Production'
+
+!new Person('alexTurner')
+!alexTurner.name := 'Alex Turner'
+!alexTurner.phone := '444-321-6789'
+!alexTurner.website := 'www.alexturnercreatives.com'
+!alexTurner.email := 'alex.turner@bytewavemedia.com'
+!alexTurner.title := 'Creative Director'
+
+!new Note('contentStrategyMeetingNote')
+!contentStrategyMeetingNote.author := 'Alex Turner'
+!contentStrategyMeetingNote.time := Date('2025-11-20')
+!contentStrategyMeetingNote.type := #MEETING
+!contentStrategyMeetingNote.comment := 'Outlined the content strategy for upcoming digital campaigns'
+
+!new Address('alexAddress')
+!alexAddress.city := 'Los Angeles'
+!alexAddress.houseNr := '450'
+!alexAddress.street := 'Media Blvd'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, byteWaveMedia) into RelationshipToContact
+!insert (alexTurner, employeeRelationship) into ContactToRelationship
+!insert (alexTurner, alexAddress) into ContactContainsAddress
+!insert (alexTurner, contentStrategyMeetingNote) into ContactContainsNote
+
+!new Person('rileyKim')
+!rileyKim.name := 'Riley Kim'
+!rileyKim.phone := '555-789-1234'
+!rileyKim.website := 'www.rileykimproductions.com'
+!rileyKim.email := 'riley.kim@example.com'
+!rileyKim.title := 'Video Producer'
+
+!new Note('shootingScheduleNote')
+!shootingScheduleNote.author := 'Riley Kim'
+!shootingScheduleNote.time := Date('2025-11-25')
+!shootingScheduleNote.type := #CALL
+!shootingScheduleNote.comment := 'Finalized shooting schedules for multiple client video projects'
+
+!new Address('rileyAddress')
+!rileyAddress.city := 'New York'
+!rileyAddress.houseNr := '610'
+!rileyAddress.street := 'Film Avenue'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, alexTurner) into RelationshipToContact
+!insert (rileyKim, subdivisionRelationship) into ContactToRelationship
+!insert (rileyKim, rileyAddress) into ContactContainsAddress
+!insert (rileyKim, shootingScheduleNote) into ContactContainsNote
+
+!new Address('byteWaveAddress')
+!byteWaveAddress.city := 'Chicago'
+!byteWaveAddress.houseNr := '300'
+!byteWaveAddress.street := 'Digital Dr'
+
+!insert (byteWaveMedia, byteWaveAddress) into ContactContainsAddress
+
+!insert (addressBook27, byteWaveMedia) into AddressBookMadeOfContact
+!insert (addressBook27, alexTurner) into AddressBookMadeOfContact
+!insert (addressBook27, rileyKim) into AddressBookMadeOfContact

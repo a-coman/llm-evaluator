@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant28')
+!restaurant28.name := 'Culinary Haven'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner55')
+!owner55.name := 'Julian Bell'
+!owner55.percentageShares := 70
+
+!new Owner('owner56')
+!owner56.name := 'Chloe Kelly'
+!owner56.percentageShares := 30
+
+-- Establish RestaurantOwner association
+!insert (restaurant28, owner55) into RestaurantOwner
+!insert (restaurant28, owner56) into RestaurantOwner
+
+-- Creating tables with minimalist styles
+!new Table('table55')
+!table55.number := 2801
+!table55.description := 'Minimalist Corner'
+!table55.capacity := 5
+
+!new Table('table56')
+!table56.number := 2802
+!table56.description := 'Spacious Booth'
+!table56.capacity := 4
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter28')
+!headwaiter28.name := 'Emma Hayes'
+!headwaiter28.dateOfBirth := Date('1976-08-18')
+!headwaiter28.phoneNumber := '555-5555'
+
+!new Waiter('waiter32')
+!waiter32.name := 'Noah Brown'
+!waiter32.dateOfBirth := Date('1990-07-07')
+!waiter32.phoneNumber := '555-6666'
+!waiter32.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter28, waiter32) into HeadWaiterWaiter
+
+-- Creating a Group Reservation for a photography club
+!new Banquet('reservation28')
+!reservation28.time := Time('16:00')
+!reservation28.date := Date('2024-12-10')
+!reservation28.numberPeople := 9
+!reservation28.name := 'Photography Club Meet'
+!reservation28.phoneNumber := '555-7777'
+!reservation28.number := 226
+!reservation28.groupName := 'Lens Lovers'
+!reservation28.paymentMethod := #Cash
+!reservation28.busService := false
+
+-- Establishing associations for the Group Reservation
+!insert (restaurant28, reservation28) into RestaurantReservation
+!insert (reservation28, waiter32) into ReservationWaiter
+!insert (reservation28, table55) into ReservationTable
+!insert (reservation28, table56) into ReservationTable
+
+-- Adding a MenuItem for the photography club
+!new MenuItem('menuItem28')
+!menuItem28.description := 'Artisanal Cheese Sampler'
+!menuItem28.prepTime := 15.0
+!menuItem28.classification := #Apetizer
+
+-- Associating MenuItem with a renown Chef
+!new Chef('chef28')
+!chef28.name := 'Mario Rossi'
+!chef28.dateOfBirth := Date('1969-11-30')
+!chef28.phoneNumber := '555-8888'
+
+!insert (menuItem28, chef28) into MenuItemChef
+
+-- Creating Cook focused on cheese dishes
+!new Cook('cook28')
+!cook28.name := 'Sofia Ramirez'
+!cook28.dateOfBirth := Date('1986-03-12')
+!cook28.phoneNumber := '555-9999'
+!cook28.yearsOfExperience := 10
+
+-- Establishing association between Chef and Cook
+!insert (chef28, cook28) into ChefCook
+
+-- Creating an ItemOrder for the photography club meet
+!new ItemOrder('order28')
+!order28.time := Time('16:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order28, menuItem28) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Group Reservation
+!insert (reservation28, order28) into ReservationItemOrdered

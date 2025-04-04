@@ -1,0 +1,33 @@
+!new Expense('expense11')
+!expense11.amount := 500.0
+!expense11.startDate := Date('2023-11-01')
+!expense11.endDate := Date('2023-11-30')
+
+!new Currency('currency9')
+!currency9.name := 'Brazilian Real'
+!currency9.abbreviation := 'BRL'
+
+!new Bill('bill17')
+!bill17.amount := 250.0
+!bill17.category := 'Maintenance'
+!bill17.date := Date('2023-11-05')
+!bill17.paymentMethod := #CHECK
+!bill17.status := #VALIDATED
+
+!new Bill('bill18')
+!bill18.amount := 250.0
+!bill18.category := 'Insurance'
+!bill18.date := Date('2023-11-12')
+!bill18.paymentMethod := #CREDIT_CARD
+!bill18.status := #DRAFT
+
+!insert (expense11, bill17) into ExpenseContainsBills
+!insert (expense11, bill18) into ExpenseContainsBills
+
+!insert (bill17, currency9) into BillCurrency
+!insert (bill18, currency9) into BillCurrency
+
+!new Comment('comment11')
+!comment11.text := 'Maintenance and insurance expenses for November'
+
+!insert (expense11, comment11) into ExpenseComment

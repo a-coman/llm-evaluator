@@ -1,0 +1,201 @@
+!new Expense('summerTravelToItaly')
+!summerTravelToItaly.amount := 1200.00
+!summerTravelToItaly.startDate := Date('2023-06-01')
+!summerTravelToItaly.endDate := Date('2023-06-15')
+
+!new Bill('flightTicket')
+!flightTicket.amount := 600.00
+!flightTicket.category := 'Travel'
+!flightTicket.date := Date('2023-05-25')
+!flightTicket.paymentMethod := #CREDIT_CARD
+!flightTicket.status := #VERIFIED
+
+!new Bill('hotelAccommodation')
+!hotelAccommodation.amount := 400.00
+!hotelAccommodation.category := 'Lodging'
+!hotelAccommodation.date := Date('2023-06-05')
+!hotelAccommodation.paymentMethod := #CHECK
+!hotelAccommodation.status := #VALIDATED
+
+!new Bill('foodAndDining')
+!foodAndDining.amount := 200.00
+!foodAndDining.category := 'Food'
+!foodAndDining.date := Date('2023-06-06')
+!foodAndDining.paymentMethod := #CASH
+!foodAndDining.status := #VERIFIED
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!insert (flightTicket, euro) into BillCurrency
+!insert (hotelAccommodation, euro) into BillCurrency
+!insert (foodAndDining, euro) into BillCurrency
+
+!insert (summerTravelToItaly, flightTicket) into ExpenseContainsBills
+!insert (summerTravelToItaly, hotelAccommodation) into ExpenseContainsBills
+!insert (summerTravelToItaly, foodAndDining) into ExpenseContainsBills
+
+!new Comment('comment1')
+!comment1.text := 'Great experience with authentic Italian meals. The bill was well within budget.'
+
+!new Comment('comment2')
+!comment2.text := 'Worth every penny for the ambiance and service provided at the hotel.'
+
+!insert (summerTravelToItaly, comment1) into ExpenseComment
+!insert (summerTravelToItaly, comment2) into ExpenseComment
+
+!new Expense('octoberMonthlyExpense')
+!octoberMonthlyExpense.amount := 800.00
+!octoberMonthlyExpense.startDate := Date('2023-10-01')
+!octoberMonthlyExpense.endDate := Date('2023-10-31')
+
+!new Bill('groceryShopping')
+!groceryShopping.amount := 250.00
+!groceryShopping.category := 'Groceries'
+!groceryShopping.date := Date('2023-10-02')
+!groceryShopping.paymentMethod := #CREDIT_CARD
+!groceryShopping.status := #VERIFIED
+
+!new Bill('utilityPayment')
+!utilityPayment.amount := 150.00
+!utilityPayment.category := 'Utilities'
+!utilityPayment.date := Date('2023-10-05')
+!utilityPayment.paymentMethod := #CHECK
+!utilityPayment.status := #PENDING
+
+!new Bill('diningOut')
+!diningOut.amount := 100.00
+!diningOut.category := 'Entertainment'
+!diningOut.date := Date('2023-10-15')
+!diningOut.paymentMethod := #CASH
+!diningOut.status := #VERIFIED
+
+!new Bill('internetSubscription')
+!internetSubscription.amount := 100.00
+!internetSubscription.category := 'Internet and Communication'
+!internetSubscription.date := Date('2023-10-20')
+!internetSubscription.paymentMethod := #CREDIT_CARD
+!internetSubscription.status := #VALIDATED
+
+!new Bill('publicTransportRefill')
+!publicTransportRefill.amount := 200.00
+!publicTransportRefill.category := 'Transportation'
+!publicTransportRefill.date := Date('2023-10-28')
+!publicTransportRefill.paymentMethod := #CREDIT_CARD
+!publicTransportRefill.status := #VERIFIED
+
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!insert (groceryShopping, australianDollar) into BillCurrency
+!insert (utilityPayment, australianDollar) into BillCurrency
+!insert (diningOut, australianDollar) into BillCurrency
+!insert (internetSubscription, australianDollar) into BillCurrency
+!insert (publicTransportRefill, australianDollar) into BillCurrency
+
+!insert (octoberMonthlyExpense, groceryShopping) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, utilityPayment) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, diningOut) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, internetSubscription) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, publicTransportRefill) into ExpenseContainsBills
+
+!new Comment('comment1')
+!comment1.text := 'Reviewed and approved all transactions for groceries. Need to adjust expenditure next month.'
+
+!new Comment('comment2')
+!comment2.text := 'Utility payment pending confirmation from the service provider. Awaiting bill status update.'
+
+!insert (octoberMonthlyExpense, comment1) into ExpenseComment
+!insert (octoberMonthlyExpense, comment2) into ExpenseComment
+
+!new Expense('boundaryCaseExpense')
+!boundaryCaseExpense.amount := 0.00
+!boundaryCaseExpense.startDate := Date('2023-10-01')
+!boundaryCaseExpense.endDate := Date('2023-10-01')
+
+!new Currency('japaneseYenBoundary')
+!japaneseYenBoundary.name := 'Japanese Yen'
+!japaneseYenBoundary.abbreviation := 'JPY'
+
+!new Bill('dummyBill')
+!dummyBill.amount := 100.00
+!dummyBill.category := 'Utilities'
+!dummyBill.date := Date('2023-10-01')
+!dummyBill.paymentMethod := #CREDIT_CARD
+!dummyBill.status := #DRAFT
+
+!insert (dummyBill, japaneseYenBoundary) into BillCurrency
+!insert (boundaryCaseExpense, dummyBill) into ExpenseContainsBills
+
+!new Currency('usDollar')
+!usDollar.name := 'US Dollar'
+!usDollar.abbreviation := 'USD'
+
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!new Currency('bitcoin')
+!bitcoin.name := 'Bitcoin'
+!bitcoin.abbreviation := 'BTC'
+
+!new Bill('internationalFlights')
+!internationalFlights.amount := 6000.00
+!internationalFlights.category := 'International Flights'
+!internationalFlights.date := Date('2023-01-01')
+!internationalFlights.paymentMethod := #CREDIT_CARD
+!internationalFlights.status := #VERIFIED
+
+!new Bill('hotelAccommodationsTokyo')
+!hotelAccommodationsTokyo.amount := 850000.00
+!hotelAccommodationsTokyo.category := 'Hotel Accommodations - Tokyo'
+!hotelAccommodationsTokyo.date := Date('2023-01-01')
+!hotelAccommodationsTokyo.paymentMethod := #CHECK
+!hotelAccommodationsTokyo.status := #VERIFIED
+
+!new Bill('luxuryDining')
+!luxuryDining.amount := 12000.00
+!luxuryDining.category := 'Luxury Dining'
+!luxuryDining.date := Date('2023-01-01')
+!luxuryDining.paymentMethod := #CASH
+!luxuryDining.status := #REFUNDED
+
+!new Bill('travelInsurance')
+!travelInsurance.amount := 1.50
+!travelInsurance.category := 'Travel Insurance'
+!travelInsurance.date := Date('2023-01-01')
+!travelInsurance.paymentMethod := #CREDIT_CARD
+!travelInsurance.status := #VERIFIED
+
+!insert (internationalFlights, usDollar) into BillCurrency
+!insert (hotelAccommodationsTokyo, japaneseYen) into BillCurrency
+!insert (luxuryDining, usDollar) into BillCurrency
+!insert (travelInsurance, bitcoin) into BillCurrency
+
+!new Comment('comment1')
+!comment1.text := 'Considerable expense due to unforeseen travel disruptions.'
+
+!new Comment('comment2')
+!comment2.text := 'Refund processed after itinerary adjustments.'
+
+!new Comment('comment3')
+!comment3.text := 'High expenses justified by strategic investment opportunities.'
+
+!new Expense('corporateTravelExpense')
+-- Assuming conversions and correct sum in USD
+!corporateTravelExpense.amount := 182001.50
+
+!corporateTravelExpense.startDate := Date('2023-01-01')
+!corporateTravelExpense.endDate := Date('2023-12-31')
+
+!insert (corporateTravelExpense, internationalFlights) into ExpenseContainsBills
+!insert (corporateTravelExpense, hotelAccommodationsTokyo) into ExpenseContainsBills
+!insert (corporateTravelExpense, luxuryDining) into ExpenseContainsBills
+!insert (corporateTravelExpense, travelInsurance) into ExpenseContainsBills
+
+!insert (corporateTravelExpense, comment1) into ExpenseComment
+!insert (corporateTravelExpense, comment2) into ExpenseComment
+!insert (corporateTravelExpense, comment3) into ExpenseComment
+

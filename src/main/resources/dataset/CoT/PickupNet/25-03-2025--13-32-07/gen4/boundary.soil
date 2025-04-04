@@ -1,0 +1,129 @@
+!new Driver('driver25')
+!driver25.id := 'DRV006'
+!driver25.name := 'Fatima Khan'
+
+!new Driver('driver26')
+!driver26.id := 'DRV007'
+!driver26.name := 'Lucas Müller'
+
+!new Driver('driver27')
+!driver27.id := 'DRV008'
+!driver27.name := 'Hiroshi Yamada'
+
+!new Shipment('shipment25')
+!shipment25.id := 'SHIP005'
+!shipment25.status := #ASSIGNED
+
+!new Shipment('shipment26')
+!shipment26.id := 'SHIP006'
+!shipment26.status := #DELIVERED
+
+!new Shipment('shipment27')
+!shipment27.id := 'SHIP007'
+!shipment27.status := #UNDERWAY
+
+!new Address('pickupAddress25')
+!pickupAddress25.text := '76 Quai de la Seine, Paris, France'
+
+!new GeoLocation('pickupGeoLocation25')
+!pickupGeoLocation25.latitude := 48.884
+!pickupGeoLocation25.longitude := 2.370
+
+!new Address('deliveryAddress25')
+!deliveryAddress25.text := 'Main Street 2, Cairo, Egypt'
+
+!new GeoLocation('deliveryGeoLocation25')
+!deliveryGeoLocation25.latitude := 30.0444
+!deliveryGeoLocation25.longitude := 31.2357
+
+!new Address('pickupAddress26')
+!pickupAddress26.text := 'Rua São João 128, Lisbon, Portugal'
+
+!new GeoLocation('pickupGeoLocation26')
+!pickupGeoLocation26.latitude := 38.7223
+!pickupGeoLocation26.longitude := -9.1393
+
+!new Address('deliveryAddress26')
+!deliveryAddress26.text := 'Central Park Lane, New York, USA'
+
+!new GeoLocation('deliveryGeoLocation26')
+!deliveryGeoLocation26.latitude := 40.7851
+!deliveryGeoLocation26.longitude := -73.9683
+
+!new Address('pickupAddress27')
+!pickupAddress27.text := 'Tokyo Tower, Tokyo, Japan'
+
+!new GeoLocation('pickupGeoLocation27')
+!pickupGeoLocation27.latitude := 35.6586
+!pickupGeoLocation27.longitude := 139.7454
+
+!new Address('deliveryAddress27')
+!deliveryAddress27.text := 'Sydney Opera House, Sydney, Australia'
+
+!new GeoLocation('deliveryGeoLocation27')
+!deliveryGeoLocation27.latitude := -33.8568
+!deliveryGeoLocation27.longitude := 151.2153
+
+!new Station('station20')
+
+!new Customer('customer26')
+!customer26.id := 'CUST005'
+!customer26.name := 'Omar El-Farouq'
+!customer26.twitterUserName := '@omaref'
+
+!new Customer('customer27')
+!customer27.id := 'CUST006'
+!customer27.name := 'Renata Rossi'
+!customer27.twitterUserName := '@renataross'
+
+!insert (driver25, shipment25) into DriverShipment
+
+!insert (driver26, shipment26) into DriverShipment
+
+!insert (driver27, shipment27) into DriverShipment
+
+!insert (shipment25, pickupAddress25) into ShipmentContainsPickUpAddress
+
+!insert (shipment25, deliveryAddress25) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress25, pickupGeoLocation25) into AddressContainsGeoLocation
+
+!insert (deliveryAddress25, deliveryGeoLocation25) into AddressContainsGeoLocation
+
+!insert (shipment26, pickupAddress26) into ShipmentContainsPickUpAddress
+
+!insert (shipment26, deliveryAddress26) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress26, pickupGeoLocation26) into AddressContainsGeoLocation
+
+!insert (deliveryAddress26, deliveryGeoLocation26) into AddressContainsGeoLocation
+
+!insert (shipment27, pickupAddress27) into ShipmentContainsPickUpAddress
+
+!insert (shipment27, deliveryAddress27) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress27, pickupGeoLocation27) into AddressContainsGeoLocation
+
+!insert (deliveryAddress27, deliveryGeoLocation27) into AddressContainsGeoLocation
+
+!insert (customer26, shipment25) into CustomerConsistsOfShipment
+
+!insert (customer26, shipment26) into CustomerConsistsOfShipment
+
+!insert (customer27, shipment27) into CustomerConsistsOfShipment
+
+!insert (station20, customer26) into StationContainsCustomer
+
+!insert (station20, customer27) into StationContainsCustomer
+
+!insert (station20, shipment25) into StationShipment
+
+!insert (station20, shipment26) into StationShipment
+
+!insert (station20, shipment27) into StationShipment
+
+!insert (station20, driver25) into StationContainsDriver
+
+!insert (station20, driver26) into StationContainsDriver
+
+!insert (station20, driver27) into StationContainsDriver

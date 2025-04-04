@@ -1,0 +1,159 @@
+!new Club('club5')
+!club5.name := 'Hawks United'
+!club5.homeGround := 'Hawk Stadium'
+!club5.chairman := 'Michael Turner'
+
+!new Club('club6')
+!club6.name := 'Wolves FC'
+!club6.homeGround := 'Wolf Arena'
+!club6.chairman := 'Emily Foster'
+
+!new Team('team5')
+!team5.name := 'Hawk Warriors'
+!insert (club5, team5) into ClubTeam
+
+!new Team('team6')
+!team6.name := 'Wolf Pack'
+!insert (club6, team6) into ClubTeam
+
+!new Player('player7')
+!player7.name := 'Nathan Green'
+!player7.age := 26
+!player7.bestFoot := #LEFT
+!player7.phoneNumber := '111-222-3333'
+!insert (team5, player7) into TeamPlayer
+
+!new Player('player8')
+!player8.name := 'Olivia Brown'
+!player8.age := 22
+!player8.bestFoot := #RIGHT
+!player8.phoneNumber := '444-555-6666'
+!insert (team5, player8) into TeamPlayer
+
+!new Player('player9')
+!player9.name := 'Sophia Smith'
+!player9.age := 28
+!player9.bestFoot := #BOTH
+!player9.phoneNumber := '777-888-9999'
+!insert (team6, player9) into TeamPlayer
+
+!new Position('position7')
+!position7.positionName := #MIDFIELDER
+!insert (player7, position7) into PlayerPositions
+
+!new Position('position8')
+!position8.positionName := #DEFENDER
+!insert (player8, position8) into PlayerPositions
+
+!new Position('position9')
+!position9.positionName := #FORWARD
+!insert (player9, position9) into PlayerPositions
+
+!new TrainingSession('training5')
+!training5.date := '2023-11-01'
+!training5.location := 'Hawk Training Center'
+!training5.purpose := 'Passing and Dribbling'
+!insert (team5, training5) into TeamTraining
+
+!new TrainingSession('training6')
+!training6.date := '2023-11-02'
+!training6.location := 'Wolf Training Grounds'
+!training6.purpose := 'Goalkeeping Techniques'
+!insert (team6, training6) into TeamTraining
+
+!new TrainingNotes('trainingNotes5')
+!trainingNotes5.note := 'Emphasis on precision passing'
+!trainingNotes5.date := '2023-11-01'
+!insert (training5, trainingNotes5) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes6')
+!trainingNotes6.note := 'Focused on reflex training for goalkeepers'
+!trainingNotes6.date := '2023-11-02'
+!insert (training6, trainingNotes6) into TrainingTrainingNotes
+
+!new TrainingObjective('objective7')
+!objective7.areaToImprove := 'Accuracy'
+!objective7.startDate := '2023-10-10'
+!objective7.endDate := '2023-12-10'
+!objective7.success := true
+!insert (objective7, player7) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective8')
+!objective8.areaToImprove := 'Defense Skills'
+!objective8.startDate := '2023-09-25'
+!objective8.endDate := '2023-11-25'
+!objective8.success := false
+!insert (objective8, player8) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective9')
+!objective9.areaToImprove := 'Agility'
+!objective9.startDate := '2023-08-15'
+!objective9.endDate := '2023-11-15'
+!objective9.success := true
+!insert (objective9, player9) into TrainingObjectivePlayer
+
+!new Competition('competition3')
+!competition3.name := 'National League'
+!competition3.type := 'Group Stage'
+
+!new Match('match3')
+!match3.date := '2023-11-18'
+!match3.homeAway := true
+!insert (competition3, match3) into CompetitionMatch
+!insert (team5, match3) into LocalMatch
+!insert (team6, match3) into VisitorMatch
+
+!new MatchReport('report3')
+!report3.duration := 90
+!report3.scoreVisitor := 2
+!report3.scoreLocal := 2
+!insert (match3, report3) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer7')
+!matchPlayer7.booked := true
+!matchPlayer7.goals := 1
+!matchPlayer7.rating := 7
+!insert (player7, matchPlayer7) into PlayerMatch
+!insert (match3, matchPlayer7) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer9')
+!matchPlayer9.booked := false
+!matchPlayer9.goals := 2
+!matchPlayer9.rating := 8
+!insert (player9, matchPlayer9) into PlayerMatch
+!insert (match3, matchPlayer9) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition7')
+!matchPlayerPosition7.positionName := #MIDFIELDER
+!matchPlayerPosition7.number := 12
+!insert (matchPlayer7, matchPlayerPosition7) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition9')
+!matchPlayerPosition9.positionName := #FORWARD
+!matchPlayerPosition9.number := 11
+!insert (matchPlayer9, matchPlayerPosition9) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event8')
+!event8.eventType := #GOAL
+!event8.time := 24
+!insert (match3, event8) into MatchMatchEvent
+
+!new MatchEvent('event9')
+!event9.eventType := #GOAL
+!event9.time := 53
+!insert (match3, event9) into MatchMatchEvent
+
+!new MatchEvent('event10')
+!event10.eventType := #GOAL
+!event10.time := 67
+!insert (match3, event10) into MatchMatchEvent
+
+!new MatchEvent('event11')
+!event11.eventType := #GOAL
+!event11.time := 84
+!insert (match3, event11) into MatchMatchEvent
+
+!new MatchNote('matchNote3')
+!matchNote3.note := 'Thrilling draw between Hawks and Wolves'
+!matchNote3.date := '2023-11-18'
+!insert (match3, matchNote3) into MatchMatchNote

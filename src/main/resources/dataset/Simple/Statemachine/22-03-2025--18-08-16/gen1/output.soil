@@ -1,0 +1,74 @@
+!new StateMachine('stateMachine1')
+!stateMachine1.name := 'mainStateMachine'
+
+!new State('state1')
+!state1.name := 'idle'
+
+!new State('state2')
+!state2.name := 'active'
+
+!new State('state3')
+!state3.name := 'paused'
+
+!new Transition('transition1')
+!transition1.name := 'startToActive'
+
+!new Transition('transition2')
+!transition2.name := 'activeToPaused'
+
+!new Transition('transition3')
+!transition3.name := 'pausedToIdle'
+
+!new TimeEvent('event1')
+!event1.time := 5
+
+!new TimeEvent('event2')
+!event2.time := 10
+
+!new TimeEvent('event3')
+!event3.time := 15
+
+!insert (stateMachine1, state1) into StateMachineContainsStates
+!insert (stateMachine1, state2) into StateMachineContainsStates
+!insert (stateMachine1, state3) into StateMachineContainsStates
+
+!insert (stateMachine1, transition1) into StateMachineContainsTransitions
+!insert (stateMachine1, transition2) into StateMachineContainsTransitions
+!insert (stateMachine1, transition3) into StateMachineContainsTransitions
+
+!insert (transition1, event1) into TransitionContainsEvents
+!insert (transition2, event2) into TransitionContainsEvents
+!insert (transition3, event3) into TransitionContainsEvents
+
+!insert (state1, transition1) into StateTransition
+!insert (state2, transition2) into StateTransition
+!insert (state3, transition3) into StateTransition
+
+!insert (transition1, state2) into TransitionState
+!insert (transition2, state3) into TransitionState
+!insert (transition3, state1) into TransitionState
+
+!insert (stateMachine1, state1) into StateMachineStartsStates
+
+-- Additional instance covering corner cases
+!new StateMachine('stateMachine2')
+!stateMachine2.name := 'secondaryMachine'
+
+!new State('state4')
+!state4.name := 'initial'
+
+!new Transition('transition4')
+!transition4.name := 'initialToActive'
+
+!new TimeEvent('event4')
+!event4.time := 1
+
+!insert (stateMachine2, state4) into StateMachineContainsStates
+!insert (stateMachine2, transition4) into StateMachineContainsTransitions
+
+!insert (transition4, event4) into TransitionContainsEvents
+
+!insert (state4, transition4) into StateTransition
+!insert (transition4, state1) into TransitionState
+
+!insert (stateMachine2, state4) into StateMachineStartsStates

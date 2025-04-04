@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant30')
+!restaurant30.name := 'Eclectic Eats'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner59')
+!owner59.name := 'Olivia Bennett'
+!owner59.percentageShares := 50
+
+!new Owner('owner60')
+!owner60.name := 'Jackson Lee'
+!owner60.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant30, owner59) into RestaurantOwner
+!insert (restaurant30, owner60) into RestaurantOwner
+
+-- Creating tables with eclectic decor
+!new Table('table59')
+!table59.number := 3001
+!table59.description := 'Vintage Vault'
+!table59.capacity := 4
+
+!new Table('table60')
+!table60.number := 3002
+!table60.description := 'Modern Chic'
+!table60.capacity := 5
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter30')
+!headwaiter30.name := 'Elijah Thompson'
+!headwaiter30.dateOfBirth := Date('1985-03-22')
+!headwaiter30.phoneNumber := '555-4848'
+
+!new Waiter('waiter34')
+!waiter34.name := 'Isla Martin'
+!waiter34.dateOfBirth := Date('1994-07-30')
+!waiter34.phoneNumber := '555-5959'
+!waiter34.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter30, waiter34) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a writers' workshop
+!new Banquet('reservation30')
+!reservation30.time := Time('13:00')
+!reservation30.date := Date('2024-08-15')
+!reservation30.numberPeople := 9
+!reservation30.name := 'Writers\' Workshop'
+!reservation30.phoneNumber := '555-2020'
+!reservation30.number := 228
+!reservation30.groupName := 'Creative Minds Guild'
+!reservation30.paymentMethod := #CreditCard
+!reservation30.busService := false
+
+-- Establishing associations for the Banquet Reservation
+!insert (restaurant30, reservation30) into RestaurantReservation
+!insert (reservation30, waiter34) into ReservationWaiter
+!insert (reservation30, table59) into ReservationTable
+!insert (reservation30, table60) into ReservationTable
+
+-- Adding a unique and vibrant MenuItem
+!new MenuItem('menuItem30')
+!menuItem30.description := 'Smoked Salmon Canapés'
+!menuItem30.prepTime := 15.0
+!menuItem30.classification := #Apetizer
+
+-- Associating MenuItem with a celebrated Chef
+!new Chef('chef30')
+!chef30.name := 'Amelia Carter'
+!chef30.dateOfBirth := Date('1978-12-12')
+!chef30.phoneNumber := '555-6161'
+
+!insert (menuItem30, chef30) into MenuItemChef
+
+-- Creating Cook with a flair for appetizers
+!new Cook('cook30')
+!cook30.name := 'Liam Parker'
+!cook30.dateOfBirth := Date('1983-05-05')
+!cook30.phoneNumber := '555-7272'
+!cook30.yearsOfExperience := 14
+
+-- Establishing association between Chef and Cook
+!insert (chef30, cook30) into ChefCook
+
+-- Creating an ItemOrder for the writers' workshop
+!new ItemOrder('order30')
+!order30.time := Time('13:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order30, menuItem30) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation30, order30) into ReservationItemOrdered

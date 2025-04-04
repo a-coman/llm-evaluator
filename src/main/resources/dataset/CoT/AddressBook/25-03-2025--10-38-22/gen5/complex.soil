@@ -1,0 +1,106 @@
+!new AddressBook('Horizon_Collaborative_Connections')
+
+!new Person('Fatima_Ahmed')
+!Fatima_Ahmed.name := 'Fatima Ahmed'
+!Fatima_Ahmed.phone := '+971-2-4033-7894'
+!Fatima_Ahmed.website := 'fatimaahmed-innovation.ae'
+!Fatima_Ahmed.email := 'fatima.ahmed@horizoncollaborative.ae'
+!Fatima_Ahmed.title := 'Project Manager'
+
+!new Address('Address_Fatima_Ahmed')
+!Address_Fatima_Ahmed.city := 'Abu Dhabi'
+!Address_Fatima_Ahmed.houseNr := '87'
+!Address_Fatima_Ahmed.street := 'Corniche Road'
+!insert (Fatima_Ahmed, Address_Fatima_Ahmed) into ContactContainsAddress
+
+!new Note('Note_Fatima_Ahmed')
+!Note_Fatima_Ahmed.author := 'Fatima Ahmed'
+!Note_Fatima_Ahmed.time := Date('2023-04-11')
+!Note_Fatima_Ahmed.type := #MEETING
+!Note_Fatima_Ahmed.comment := 'Hosted a regional planning session for the MENA technology summit.'
+!insert (Fatima_Ahmed, Note_Fatima_Ahmed) into ContactContainsNote
+
+!new Company('Baltic_Cyber_Innovations')
+!Baltic_Cyber_Innovations.name := 'Baltic Cyber Innovations'
+!Baltic_Cyber_Innovations.phone := '+371-6-7453-2098'
+!Baltic_Cyber_Innovations.website := 'balticcyber.lv'
+!Baltic_Cyber_Innovations.email := 'contact@balticcyber.lv'
+!Baltic_Cyber_Innovations.industry := 'Information Security'
+
+!new Address('Address_Baltic_Cyber')
+!Address_Baltic_Cyber.city := 'Riga'
+!Address_Baltic_Cyber.houseNr := '22'
+!Address_Baltic_Cyber.street := 'Brivibas Iela'
+!insert (Baltic_Cyber_Innovations, Address_Baltic_Cyber) into ContactContainsAddress
+
+!new Note('Note_Baltic_Cyber')
+!Note_Baltic_Cyber.author := 'IT Director'
+!Note_Baltic_Cyber.time := Date('2023-07-05')
+!Note_Baltic_Cyber.type := #EMAIL
+!Note_Baltic_Cyber.comment := 'Discussed cybersecurity protocols for upcoming EU data protection compliance.'
+!insert (Baltic_Cyber_Innovations, Note_Baltic_Cyber) into ContactContainsNote
+
+!new Person('Amir_Khan')
+!Amir_Khan.name := 'Amir Khan'
+!Amir_Khan.phone := '+92-21-3554-7654'
+!Amir_Khan.website := 'amirkhan-tech.pk'
+!Amir_Khan.email := 'amir.khan@horizoncollaborative.pk'
+!Amir_Khan.title := 'Data Scientist'
+
+!new Address('Address_Amir_Khan')
+!Address_Amir_Khan.city := 'Karachi'
+!Address_Amir_Khan.houseNr := '105'
+!Address_Amir_Khan.street := 'Shahrah-e-Faisal'
+!insert (Amir_Khan, Address_Amir_Khan) into ContactContainsAddress
+
+!new Note('Note_Amir_Khan')
+!Note_Amir_Khan.author := 'Amir Khan'
+!Note_Amir_Khan.time := Date('2023-08-14')
+!Note_Amir_Khan.type := #CALL
+!Note_Amir_Khan.comment := 'Participated in a panel discussion about AI ethics and big data implications.'
+!insert (Amir_Khan, Note_Amir_Khan) into ContactContainsNote
+
+!new Company('Andes_Eco_Tech')
+!Andes_Eco_Tech.name := 'Andes Eco Tech'
+!Andes_Eco_Tech.phone := '+56-2-2955-3620'
+!Andes_Eco_Tech.website := 'andesecotech.cl'
+!Andes_Eco_Tech.email := 'operations@andesecotech.cl'
+!Andes_Eco_Tech.industry := 'Environmental Solutions'
+
+!new Address('Address_Andes_Eco_Tech')
+!Address_Andes_Eco_Tech.city := 'Santiago'
+!Address_Andes_Eco_Tech.houseNr := '68'
+!Address_Andes_Eco_Tech.street := 'Avenida Libertador'
+!insert (Andes_Eco_Tech, Address_Andes_Eco_Tech) into ContactContainsAddress
+
+!new Note('Note_Andes_Eco_Tech')
+!Note_Andes_Eco_Tech.author := 'CTO'
+!Note_Andes_Eco_Tech.time := Date('2023-06-21')
+!Note_Andes_Eco_Tech.type := #MEETING
+!Note_Andes_Eco_Tech.comment := 'Collaborative workshop on sustainable technology integration.'
+!insert (Andes_Eco_Tech, Note_Andes_Eco_Tech) into ContactContainsNote
+
+!new Relationship('Relationship_Fatima_to_Baltic_Cyber')
+!Relationship_Fatima_to_Baltic_Cyber.type := #COWORKER
+!insert (Fatima_Ahmed, Relationship_Fatima_to_Baltic_Cyber) into ContactToRelationship
+!insert (Relationship_Fatima_to_Baltic_Cyber, Baltic_Cyber_Innovations) into RelationshipToContact
+
+!new Relationship('Relationship_Amir_to_Fatima')
+!Relationship_Amir_to_Fatima.type := #EMPLOYEE
+!insert (Amir_Khan, Relationship_Amir_to_Fatima) into ContactToRelationship
+!insert (Relationship_Amir_to_Fatima, Fatima_Ahmed) into RelationshipToContact
+
+!new Relationship('Relationship_Fatima_to_Andes_Eco_Tech')
+!Relationship_Fatima_to_Andes_Eco_Tech.type := #SUBDIVISION
+!insert (Fatima_Ahmed, Relationship_Fatima_to_Andes_Eco_Tech) into ContactToRelationship
+!insert (Relationship_Fatima_to_Andes_Eco_Tech, Andes_Eco_Tech) into RelationshipToContact
+
+!new Relationship('Relationship_Amir_to_Baltic_Cyber')
+!Relationship_Amir_to_Baltic_Cyber.type := #COWORKER
+!insert (Amir_Khan, Relationship_Amir_to_Baltic_Cyber) into ContactToRelationship
+!insert (Relationship_Amir_to_Baltic_Cyber, Baltic_Cyber_Innovations) into RelationshipToContact
+
+!insert (Horizon_Collaborative_Connections, Fatima_Ahmed) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Baltic_Cyber_Innovations) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Amir_Khan) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Andes_Eco_Tech) into AddressBookMadeOfContact

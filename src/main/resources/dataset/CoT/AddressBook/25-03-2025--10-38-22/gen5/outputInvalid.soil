@@ -1,0 +1,75 @@
+!new AddressBook('Silicon_Valley_Tech_Innovators')
+
+!new Person('Aria_Patel')
+!Aria_Patel.name := 'Aria Patel'
+!Aria_Patel.phone := '+1-408-555-0123'
+!Aria_Patel.website := 'www.ariapateltech.com'
+!Aria_Patel.email := 'aria.patel@siliconvalleytech.com'
+!Aria_Patel.title := 'Software Architect'
+
+!new Address('Address_Aria_Patel')
+!Address_Aria_Patel.city := 'San Jose'
+!Address_Aria_Patel.houseNr := '337'
+!Address_Aria_Patel.street := 'Santana Row'
+!insert (Aria_Patel, Address_Aria_Patel) into ContactContainsAddress
+
+!new Note('Note_Aria_Patel')
+!Note_Aria_Patel.author := 'Aria Patel'
+!Note_Aria_Patel.time := Date('2023-09-01 14:00')
+!Note_Aria_Patel.type := #CALL
+!Note_Aria_Patel.comment := 'Discussed upcoming IoT standards with partners.'
+!insert (Aria_Patel, Note_Aria_Patel) into ContactContainsNote
+
+!new Company('Thalia_Technologies')
+!Thalia_Technologies.name := 'Thalia Technologies'
+!Thalia_Technologies.phone := '+1-650-555-0234'
+!Thalia_Technologies.website := 'www.thalia-tech.com'
+!Thalia_Technologies.email := 'contact@thalia-tech.com'
+!Thalia_Technologies.industry := 'Artificial Intelligence'
+
+!new Address('Address_Thalia_Technologies')
+!Address_Thalia_Technologies.city := 'Mountain View'
+!Address_Thalia_Technologies.houseNr := '1200'
+!Address_Thalia_Technologies.street := 'Alta Ave'
+!insert (Thalia_Technologies, Address_Thalia_Technologies) into ContactContainsAddress
+
+!new Relationship('Relationship_Thalia_to_Aria')
+!Relationship_Thalia_to_Aria.type := #BOSS
+!insert (Thalia_Technologies, Relationship_Thalia_to_Aria) into ContactToRelationship
+!insert (Relationship_Thalia_to_Aria, Aria_Patel) into RelationshipToContact
+
+!new Relationship('Relationship_Thalia_to_Innovatech')
+!Relationship_Thalia_to_Innovatech.type := #SUBDIVISION
+!insert (Thalia_Technologies, Relationship_Thalia_to_Innovatech) into ContactToRelationship
+
+!new Company('Innovatech_Labs')
+!Innovatech_Labs.name := 'Innovatech Labs'
+!Innovatech_Labs.phone := '+44-20-555-0456'
+!Innovatech_Labs.website := 'www.innovatechlabs.com'
+!Innovatech_Labs.email := 'helpdesk@innovatechlabs.com'
+!Innovatech_Labs.industry := 'Research and Development'
+
+!new Address('Address_Innovatech_Labs')
+!Address_Innovatech_Labs.city := 'Palo Alto'
+!Address_Innovatech_Labs.houseNr := '789'
+!Address_Innovatech_Labs.street := 'University Ave'
+!insert (Innovatech_Labs, Address_Innovatech_Labs) into ContactContainsAddress
+
+!new Note('Note_Innovatech_Labs')
+!Note_Innovatech_Labs.author := 'Rachel Nguyen'
+!Note_Innovatech_Labs.time := Date('2023-09-15 10:00')
+!Note_Innovatech_Labs.type := #MEETING
+!Note_Innovatech_Labs.comment := 'Brainstorming session for future AI project ventures.'
+!insert (Innovatech_Labs, Note_Innovatech_Labs) into ContactContainsNote
+
+!new Relationship('Relationship_Innovatech_to_Aria')
+!Relationship_Innovatech_to_Aria.type := #EMPLOYEE
+!insert (Innovatech_Labs, Relationship_Innovatech_to_Aria) into ContactToRelationship
+!insert (Relationship_Innovatech_to_Aria, Aria_Patel) into RelationshipToContact
+
+!insert (Relationship_Thalia_to_Innovatech, Innovatech_Labs) into RelationshipToContact
+
+!insert (Silicon_Valley_Tech_Innovators, Aria_Patel) into AddressBookMadeOfContact
+!insert (Silicon_Valley_Tech_Innovators, Thalia_Technologies) into AddressBookMadeOfContact
+!insert (Silicon_Valley_Tech_Innovators, Innovatech_Labs) into AddressBookMadeOfContact
+

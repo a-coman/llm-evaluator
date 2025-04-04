@@ -1,0 +1,51 @@
+!new Client('kojiTanaka')
+!kojiTanaka.clientId := 501
+!kojiTanaka.isSuspended := false
+
+!new Client('aishaKapoor')
+!aishaKapoor.clientId := 502
+!aishaKapoor.isSuspended := false
+
+!new Rental('rentalWeekendCinemaNight')
+!rentalWeekendCinemaNight.date := Date('2023-11-10')
+
+!new Rental('rentalHumorDelightBox')
+!rentalHumorDelightBox.date := Date('2023-11-12')
+
+!new Series('cassetteSamuraiStories')
+!cassetteSamuraiStories.title := 'Samurai Stories'
+!cassetteSamuraiStories.availableCopies := 7
+!cassetteSamuraiStories.episode := 5
+
+!new Movie('cassetteModernJapaneseComedy')
+!cassetteModernJapaneseComedy.title := 'Modern Japanese Comedy'
+!cassetteModernJapaneseComedy.availableCopies := 4
+!cassetteModernJapaneseComedy.genre := #Comedy
+
+!new Series('cassetteBritishWitCollection')
+!cassetteBritishWitCollection.title := 'British Wit Collection'
+!cassetteBritishWitCollection.availableCopies := 6
+!cassetteBritishWitCollection.episode := 8
+
+!new Actor('actorKenWatanabe')
+!actorKenWatanabe.name := 'Ken Watanabe'
+
+!new Actor('actorYukiYamada')
+!actorYukiYamada.name := 'Yūki Yamada'
+
+!new Actor('actorBenedictCumberbatch')
+!actorBenedictCumberbatch.name := 'Benedict Cumberbatch'
+
+!insert (kojiTanaka, rentalWeekendCinemaNight) into ClientRental
+!insert (aishaKapoor, rentalHumorDelightBox) into ClientRental
+
+!insert (rentalWeekendCinemaNight, cassetteSamuraiStories) into RentalCassette
+!insert (rentalWeekendCinemaNight, cassetteModernJapaneseComedy) into RentalCassette
+
+!insert (rentalHumorDelightBox, cassetteModernJapaneseComedy) into RentalCassette
+!insert (rentalHumorDelightBox, cassetteBritishWitCollection) into RentalCassette
+
+!insert (cassetteSamuraiStories, actorKenWatanabe) into CassetteActor
+!insert (cassetteModernJapaneseComedy, actorYukiYamada) into CassetteActor
+!insert (cassetteBritishWitCollection, actorBenedictCumberbatch) into CassetteActor
+

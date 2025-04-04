@@ -1,0 +1,173 @@
+!new Restaurant('restaurant18')
+!restaurant18.name := 'Nocturnal Nibbles'
+
+!new Owner('owner40')
+!owner40.name := 'Johan De Vries'
+!owner40.percentageShares := 50
+
+!new Owner('owner41')
+!owner41.name := 'Penelope Turner'
+!owner41.percentageShares := 50
+
+!insert (restaurant18, owner40) into RestaurantOwner
+!insert (restaurant18, owner41) into RestaurantOwner
+
+!new Table('table39')
+!table39.number := 401
+!table39.description := 'Night Sky Viewing Balcony'
+!table39.capacity := 5
+
+!new Table('table40')
+!table40.number := 402
+!table40.description := 'Retro Lounge Seating'
+!table40.capacity := 4
+
+!new Table('table41')
+!table41.number := 403
+!table41.description := 'Underground Cellar Nook'
+!table41.capacity := 15
+
+!new Table('table42')
+!table42.number := 404
+!table42.description := 'Fireplace Corner'
+!table42.capacity := 40  -- Adjusted to accommodate both reservations comfortably
+
+!new RegularCustomer('customer10')
+!customer10.name := 'Natasha Ivanova'
+!customer10.prefferedLanguage := #English  -- Using #English as placeholder for Russian
+
+!new Chef('chef25')
+!chef25.name := 'Pedro Alvarez'
+
+!new Cook('cook30')
+!cook30.name := 'Laila Bennett'
+!cook30.dateOfBirth := Date('1992-09-12')  -- Dummy date of birth
+!cook30.yearsOfExperience := 3
+
+!new Cook('cook31')
+!cook31.name := 'Omar Hassan'
+!cook31.dateOfBirth := Date('1985-05-20')  -- Dummy date of birth
+!cook31.yearsOfExperience := 9
+
+!insert (chef25, cook30) into ChefCook
+!insert (chef25, cook31) into ChefCook
+
+!new Individual('individualReservation12')
+!individualReservation12.time := Time('23:00')
+!individualReservation12.date := Date('2024-12-31')
+!individualReservation12.numberPeople := 1
+!individualReservation12.name := 'Alexander Foster'
+!individualReservation12.phoneNumber := '+44 20 7946 0958'
+!individualReservation12.number := 20241231
+!individualReservation12.seating := #Inside
+!individualReservation12.smoking := #NonSmoking
+
+!insert (restaurant18, individualReservation12) into RestaurantReservation
+!insert (individualReservation12, table40) into ReservationTable
+
+!new HeadWaiter('headWaiter17')
+!headWaiter17.name := 'Vivienne Choi'
+!headWaiter17.dateOfBirth := Date('1981-07-11')  -- Dummy date of birth
+!headWaiter17.phoneNumber := '+44 20 1234 5678'  -- Dummy phone number
+
+!new Waiter('waiter35')
+!waiter35.name := 'Carlos Mendes'
+!waiter35.dateOfBirth := Date('1987-09-04')  -- Dummy date of birth
+!waiter35.phoneNumber := '+44 20 2345 6789'  -- Dummy phone number
+
+!new Waiter('waiter36')
+!waiter36.name := 'Haruto Sato'
+!waiter36.dateOfBirth := Date('1989-02-25')  -- Dummy date of birth
+!waiter36.phoneNumber := '+44 20 3456 7890'  -- Dummy phone number
+
+!new Waiter('waiter37')
+!waiter37.name := 'Lydia Clarke'
+!waiter37.dateOfBirth := Date('1993-05-18')  -- Dummy date of birth
+!waiter37.phoneNumber := '+44 20 4567 8901'  -- Dummy phone number
+
+!insert (headWaiter17, waiter35) into HeadWaiterWaiter
+!insert (headWaiter17, waiter36) into HeadWaiterWaiter
+!insert (headWaiter17, waiter37) into HeadWaiterWaiter
+!insert (individualReservation12, waiter35) into ReservationWaiter
+
+!new ItemOrder('itemOrder24')
+!itemOrder24.time := Time('23:30')
+!insert (individualReservation12, itemOrder24) into ReservationItemOrdered
+
+!new MenuItem('menuItem29')
+!menuItem29.description := 'Lunar Crusted Sea Bass'
+!menuItem29.prepTime := 20.0
+!menuItem29.classification := #Main
+
+!insert (itemOrder24, menuItem29) into ItemOrderMenuItem
+!insert (menuItem29, chef25) into MenuItemChef
+
+!new MenuItem('menuItem30')
+!menuItem30.description := 'Dark Chocolate Dream'
+!menuItem30.prepTime := 15.0
+!menuItem30.classification := #Dessert
+
+!new ItemOrder('itemOrder25')
+!itemOrder25.time := Time('23:45')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation12, itemOrder25) into ReservationItemOrdered
+!insert (itemOrder25, menuItem30) into ItemOrderMenuItem
+!insert (menuItem30, chef25) into MenuItemChef
+
+!new FoodItem('foodItem52')
+!foodItem52.number := 601
+!foodItem52.description := 'Sea Bass Fillet'
+!foodItem52.purchaseFlag := true
+!foodItem52.unit := #Pound  -- Using #Pound as placeholder for lb
+
+!insert (menuItem29, foodItem52) into MenuItemFoodItem
+
+!new FoodItem('foodItem53')
+!foodItem53.number := 602
+!foodItem53.description := 'Organic Dark Cocoa'
+!foodItem53.purchaseFlag := false
+!foodItem53.unit := #Ounce
+
+!insert (menuItem30, foodItem53) into MenuItemFoodItem
+
+!new Banquet('banquet15')
+!banquet15.date := Date('2024-12-31')
+!banquet15.time := Time('22:00')
+!banquet15.numberPeople := 80
+!banquet15.name := 'Artistic Events Unlimited'
+!banquet15.phoneNumber := '+39 06 8754 1234'
+!banquet15.number := 20241231
+!banquet15.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Direct Bank Deposit
+!banquet15.busService := true
+
+!insert (restaurant18, banquet15) into RestaurantReservation
+!insert (banquet15, table39) into ReservationTable
+!insert (banquet15, table41) into ReservationTable
+
+!insert (banquet15, waiter36) into ReservationWaiter
+!insert (banquet15, waiter37) into ReservationWaiter
+
+!new BusDriver('busdriver16')
+!busdriver16.name := 'Marcelo Guzman'
+!busdriver16.dateOfBirth := Date('1970-11-30')  -- Dummy date of birth
+!busdriver16.phoneNumber := '+39 06 1122 3344'  -- Dummy phone number
+
+!new BusDriver('busdriver17')
+!busdriver17.name := 'Farah Abbas'
+!busdriver17.dateOfBirth := Date('1978-03-14')  -- Dummy date of birth
+!busdriver17.phoneNumber := '+39 06 2233 4455'  -- Dummy phone number
+
+!insert (banquet15, busdriver16) into BanquetBusDriver
+!insert (banquet15, busdriver17) into BanquetBusDriver
+
+!new DietaryRequirement('dietary8')
+!dietary8.diet := #Vegan  -- Using #Vegan as placeholder for Lactose-Free
+
+!insert (individualReservation12, customer10) into ReservationCustomer
+
+!new Allergen('allergen25')
+!allergen25.type := #Lactose
+
+!new Allergen('allergen26')
+!allergen26.type := #Lactose  -- Using #Lactose as placeholder for Nuts
+
+!insert (foodItem53, allergen26) into FoodItemAllergen

@@ -1,0 +1,159 @@
+!new Club('club3')
+!club3.name := 'Lions FC'
+!club3.homeGround := 'Lion Arena'
+!club3.chairman := 'Oliver Brown'
+
+!new Club('club4')
+!club4.name := 'Tigers FC'
+!club4.homeGround := 'Tiger Stadium'
+!club4.chairman := 'Sophia Green'
+
+!new Team('team3')
+!team3.name := 'Lions Pride'
+!insert (club3, team3) into ClubTeam
+
+!new Team('team4')
+!team4.name := 'Tiger Roar'
+!insert (club4, team4) into ClubTeam
+
+!new Player('player4')
+!player4.name := 'David Gray'
+!player4.age := 27
+!player4.bestFoot := #RIGHT
+!player4.phoneNumber := '321-654-9870'
+!insert (team3, player4) into TeamPlayer
+
+!new Player('player5')
+!player5.name := 'Ethan White'
+!player5.age := 23
+!player5.bestFoot := #LEFT
+!player5.phoneNumber := '654-321-0987'
+!insert (team3, player5) into TeamPlayer
+
+!new Player('player6')
+!player6.name := 'Lucas Black'
+!player6.age := 30
+!player6.bestFoot := #BOTH
+!player6.phoneNumber := '789-012-3456'
+!insert (team4, player6) into TeamPlayer
+
+!new Position('position4')
+!position4.positionName := #DEFENDER
+!insert (player4, position4) into PlayerPositions
+
+!new Position('position5')
+!position5.positionName := #FORWARD
+!insert (player5, position5) into PlayerPositions
+
+!new Position('position6')
+!position6.positionName := #MIDFIELDER
+!insert (player6, position6) into PlayerPositions
+
+!new TrainingSession('training3')
+!training3.date := '2023-10-26'
+!training3.location := 'Lion Training Grounds'
+!training3.purpose := 'Defense Drills'
+!insert (team3, training3) into TeamTraining
+
+!new TrainingSession('training4')
+!training4.date := '2023-10-27'
+!training4.location := 'Tiger Training Grounds'
+!training4.purpose := 'Offense Strategy'
+!insert (team4, training4) into TeamTraining
+
+!new TrainingNotes('trainingNotes3')
+!trainingNotes3.note := 'Focused on defensive formations'
+!trainingNotes3.date := '2023-10-26'
+!insert (training3, trainingNotes3) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes4')
+!trainingNotes4.note := 'Practiced shooting tactics'
+!trainingNotes4.date := '2023-10-27'
+!insert (training4, trainingNotes4) into TrainingTrainingNotes
+
+!new TrainingObjective('objective4')
+!objective4.areaToImprove := 'Defensive tactics'
+!objective4.startDate := '2023-10-02'
+!objective4.endDate := '2023-12-02'
+!objective4.success := true
+!insert (objective4, player4) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective5')
+!objective5.areaToImprove := 'Goal scoring'
+!objective5.startDate := '2023-09-20'
+!objective5.endDate := '2023-11-20'
+!objective5.success := true
+!insert (objective5, player5) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective6')
+!objective6.areaToImprove := 'Ball control'
+!objective6.startDate := '2023-08-15'
+!objective6.endDate := '2023-11-15'
+!objective6.success := false
+!insert (objective6, player6) into TrainingObjectivePlayer
+
+!new Competition('competition2')
+!competition2.name := 'Premier Cup'
+!competition2.type := 'League'
+
+!new Match('match2')
+!match2.date := '2023-11-12'
+!match2.homeAway := false
+!insert (competition2, match2) into CompetitionMatch
+!insert (team3, match2) into LocalMatch
+!insert (team4, match2) into VisitorMatch
+
+!new MatchReport('report2')
+!report2.duration := 90
+!report2.scoreVisitor := 3
+!report2.scoreLocal := 1
+!insert (match2, report2) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer4')
+!matchPlayer4.booked := true
+!matchPlayer4.goals := 1
+!matchPlayer4.rating := 6
+!insert (player4, matchPlayer4) into PlayerMatch
+!insert (match2, matchPlayer4) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer6')
+!matchPlayer6.booked := false
+!matchPlayer6.goals := 3
+!matchPlayer6.rating := 9
+!insert (player6, matchPlayer6) into PlayerMatch
+!insert (match2, matchPlayer6) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition4')
+!matchPlayerPosition4.positionName := #DEFENDER
+!matchPlayerPosition4.number := 5
+!insert (matchPlayer4, matchPlayerPosition4) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition6')
+!matchPlayerPosition6.positionName := #MIDFIELDER
+!matchPlayerPosition6.number := 10
+!insert (matchPlayer6, matchPlayerPosition6) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event4')
+!event4.eventType := #GOAL
+!event4.time := 18
+!insert (match2, event4) into MatchMatchEvent
+
+!new MatchEvent('event5')
+!event5.eventType := #GOAL
+!event5.time := 45
+!insert (match2, event5) into MatchMatchEvent
+
+!new MatchEvent('event6')
+!event6.eventType := #GOAL
+!event6.time := 75
+!insert (match2, event6) into MatchMatchEvent
+
+!new MatchEvent('event7')
+!event7.eventType := #GOAL
+!event7.time := 85
+!insert (match2, event7) into MatchMatchEvent
+
+!new MatchNote('matchNote2')
+!matchNote2.note := 'Dominant performance by Tigers FC'
+!matchNote2.date := '2023-11-12'
+!insert (match2, matchNote2) into MatchMatchNote

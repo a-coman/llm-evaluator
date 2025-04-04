@@ -1,0 +1,59 @@
+!new Driver('driver12')
+!driver12.id := 'DL002'
+!driver12.name := 'Hiroshi Tanaka'
+
+!new Driver('driver13')
+!driver13.id := 'DL003'
+!driver13.name := 'Mai Nguyen'
+
+!new Shipment('shipment10')
+!shipment10.id := 'SH0567'
+!shipment10.status := #UNDERWAY
+
+!new Address('pickupAddress10')
+!pickupAddress10.text := 'Hospital Warehouse, Davao City, Philippines'
+
+!new GeoLocation('pickupGeoLocation10')
+!pickupGeoLocation10.latitude := 7.1907
+!pickupGeoLocation10.longitude := 125.4553
+
+!new Address('deliveryAddress10')
+!deliveryAddress10.text := 'Health Clinic, Koror, Palau'
+
+!new GeoLocation('deliveryGeoLocation10')
+!deliveryGeoLocation10.latitude := 7.3451
+!deliveryGeoLocation10.longitude := 134.4790
+
+!new Station('station9')
+
+!new Customer('customer11')
+!customer11.id := 'CST678'
+!customer11.name := 'Global Aid Network'
+!customer11.twitterUserName := '@GlobalAidNet'
+
+!new Customer('customer12')
+!customer12.id := 'CST999'
+!customer12.name := 'Palau Medical Services'
+!customer12.twitterUserName := '@PalauMed'
+
+!insert (driver12, shipment10) into DriverShipment
+
+!insert (shipment10, pickupAddress10) into ShipmentContainsPickUpAddress
+
+!insert (shipment10, deliveryAddress10) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress10, pickupGeoLocation10) into AddressContainsGeoLocation
+
+!insert (deliveryAddress10, deliveryGeoLocation10) into AddressContainsGeoLocation
+
+!insert (customer11, shipment10) into CustomerConsistsOfShipment
+
+!insert (station9, customer11) into StationContainsCustomer
+
+!insert (station9, customer12) into StationContainsCustomer
+
+!insert (station9, shipment10) into StationShipment
+
+!insert (station9, driver12) into StationContainsDriver
+
+!insert (station9, driver13) into StationContainsDriver

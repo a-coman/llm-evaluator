@@ -1,0 +1,53 @@
+!new Driver('driver31')
+!driver31.id := 'D031'
+!driver31.name := 'Ethan Moore'
+
+!new Shipment('shipment55')
+!shipment55.id := 'S055'
+!shipment55.status := #DELIVERED
+
+!new Shipment('shipment56')
+!shipment56.id := 'S056'
+!shipment56.status := #NEW
+
+!new Address('address61')
+!address61.text := '3939 Silverleaf Avenue'
+
+!new Address('address62')
+!address62.text := '4040 Whisper Wind Way'
+
+!new GeoLocation('geoLocation61')
+!geoLocation61.latitude := 34.6937
+!geoLocation61.longitude := 135.5022
+
+!new GeoLocation('geoLocation62')
+!geoLocation62.latitude := -1.2921
+!geoLocation62.longitude := 36.8219
+
+!new Customer('customer31')
+!customer31.id := 'C031'
+!customer31.name := 'Mia Harris'
+!customer31.twitterUserName := '@mia_harris'
+
+!new Station('station30')
+
+!insert (driver31, shipment55) into DriverShipment
+
+!insert (shipment55, address61) into ShipmentContainsPickUpAddress
+!insert (shipment55, address62) into ShipmentContainsDeliveryAddress
+
+!insert (shipment56, address62) into ShipmentContainsPickUpAddress
+!insert (shipment56, address61) into ShipmentContainsDeliveryAddress
+
+!insert (address61, geoLocation61) into AddressContainsGeoLocation
+!insert (address62, geoLocation62) into AddressContainsGeoLocation
+
+!insert (customer31, shipment55) into CustomerConsistsOfShipment
+!insert (customer31, shipment56) into CustomerConsistsOfShipment
+
+!insert (station30, customer31) into StationContainsCustomer
+
+!insert (station30, shipment55) into StationShipment
+!insert (station30, shipment56) into StationShipment
+
+!insert (station30, driver31) into StationContainsDriver

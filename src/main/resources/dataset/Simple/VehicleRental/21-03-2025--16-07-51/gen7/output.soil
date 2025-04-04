@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice9')
+!rentalOffice9.name := 'Northern Rentals'
+!rentalOffice9.number := 109
+!rentalOffice9.address := '567 North Pole Rd, Anchorage, AK'
+
+!new Vehicle('openTrailer2')
+!openTrailer2.id := 8
+!openTrailer2.registrationState := #AK
+!openTrailer2.licensePlateNumber := 'AK6789'
+!openTrailer2.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer2.registrationLastMaintenanceDate := Date('2023-10-05')
+!openTrailer2.expirationDate := Date('2024-10-05')
+
+!new Individual('individualCustomer5')
+!individualCustomer5.name := 'Eve White'
+!individualCustomer5.address := '789 Igloo St, Anchorage, AK'
+!individualCustomer5.poorRisk := false
+!individualCustomer5.homePhone := '555-9876'
+!individualCustomer5.driverLicenseState := #AK
+!individualCustomer5.driverLicenseNumber := 1122334
+!individualCustomer5.driverLicenseExpirationDate := Date('2028-03-22')
+
+!new RentalAgreement('rentalAgreement8')
+!rentalAgreement8.number := 508
+!rentalAgreement8.rentalDate := Date('2023-11-18')
+!rentalAgreement8.anticipatedDuration := 12
+!rentalAgreement8.depositPaid := 180.0
+!rentalAgreement8.quotedDailyRate := 28.0
+!rentalAgreement8.quotedRatePerMile := 0.35
+
+!insert (rentalOffice9, openTrailer2) into RentalOfficeVehicle
+!insert (rentalOffice9, rentalAgreement8) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice9, rentalAgreement8) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement8, openTrailer2) into RentalAgreementVehicle
+!insert (rentalAgreement8, individualCustomer5) into RentalAgreementCustomer

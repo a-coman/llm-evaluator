@@ -1,0 +1,100 @@
+!new AddressBook('Cultural_Exchange_Hub')
+
+!new Company('Global_Cultures_Initiative')
+!Global_Cultures_Initiative.name := 'Global Cultures Initiative'
+!Global_Cultures_Initiative.phone := '+61 2 8765 4321'
+!Global_Cultures_Initiative.website := 'www.globalcultures.org'
+!Global_Cultures_Initiative.email := 'info@globalcultures.org'
+!Global_Cultures_Initiative.industry := 'Non-Profit'
+
+!new Address('Address_Sydney')
+!Address_Sydney.city := 'Sydney'
+!Address_Sydney.houseNr := '50'
+!Address_Sydney.street := 'Bridge St'
+!insert (Global_Cultures_Initiative, Address_Sydney) into ContactContainsAddress
+
+!new Address('Address_Tokyo')
+!Address_Tokyo.city := 'Tokyo'
+!Address_Tokyo.houseNr := '15'
+!Address_Tokyo.street := 'Sakura Avenue'
+!insert (Global_Cultures_Initiative, Address_Tokyo) into ContactContainsAddress
+
+!new Note('Note_1_Global_Cultures')
+!Note_1_Global_Cultures.author := 'Hiro Tanaka'
+!Note_1_Global_Cultures.time := Date('2023-07-10')
+!Note_1_Global_Cultures.type := #MEETING
+!Note_1_Global_Cultures.comment := 'Planning an art exchange program across Australia and Japan.'
+!insert (Global_Cultures_Initiative, Note_1_Global_Cultures) into ContactContainsNote
+
+!new Note('Note_2_Global_Cultures')
+!Note_2_Global_Cultures.author := 'Aisha Patel'
+!Note_2_Global_Cultures.time := Date('2023-08-22')
+!Note_2_Global_Cultures.type := #CALL
+!Note_2_Global_Cultures.comment := 'Visa arrangements for cultural delegates.'
+!insert (Global_Cultures_Initiative, Note_2_Global_Cultures) into ContactContainsNote
+
+!new Company('Arte_de_la_Tierra')
+!Arte_de_la_Tierra.name := 'Arte de la Tierra'
+!Arte_de_la_Tierra.phone := '+52 55 1234 5678'
+!Arte_de_la_Tierra.website := 'www.artedelatierra.mx'
+!Arte_de_la_Tierra.email := 'contacto@artedelatierra.mx'
+!Arte_de_la_Tierra.industry := 'Arts and Culture'
+
+!new Address('Address_Mexico_City')
+!Address_Mexico_City.city := 'Mexico City'
+!Address_Mexico_City.houseNr := '200'
+!Address_Mexico_City.street := 'Paseo de la Reforma'
+!insert (Arte_de_la_Tierra, Address_Mexico_City) into ContactContainsAddress
+
+!new Note('Note_Arte_de_la_Tierra')
+!Note_Arte_de_la_Tierra.author := 'Carlos Mendez'
+!Note_Arte_de_la_Tierra.time := Date('2023-08-15')
+!Note_Arte_de_la_Tierra.type := #EMAIL
+!Note_Arte_de_la_Tierra.comment := 'Interested in the Global Cultures Initiative\'s art program.'
+!insert (Arte_de_la_Tierra, Note_Arte_de_la_Tierra) into ContactContainsNote
+
+!new Person('Zara_Khan')
+!Zara_Khan.name := 'Zara Khan'
+!Zara_Khan.phone := '+1 202 555 0199'
+!Zara_Khan.website := 'www.zarakhan.org'
+!Zara_Khan.email := 'zara.khan@globalcultures.org'
+!Zara_Khan.title := 'Ambassador of Cultural Integration'
+
+!new Address('Address_Washington_DC')
+!Address_Washington_DC.city := 'Washington, D.C.'
+!Address_Washington_DC.houseNr := '1501'
+!Address_Washington_DC.street := 'Constitution Ave NW'
+!insert (Zara_Khan, Address_Washington_DC) into ContactContainsAddress
+
+!new Note('Note_1_Zara_Khan')
+!Note_1_Zara_Khan.author := 'Zara Khan'
+!Note_1_Zara_Khan.time := Date('2023-09-05')
+!Note_1_Zara_Khan.type := #EMAIL
+!Note_1_Zara_Khan.comment := 'Drafting a policy document on cultural exchange policies.'
+!insert (Zara_Khan, Note_1_Zara_Khan) into ContactContainsNote
+
+!new Note('Note_2_Zara_Khan')
+!Note_2_Zara_Khan.author := 'Hiro Tanaka'
+!Note_2_Zara_Khan.time := Date('2023-09-20')
+!Note_2_Zara_Khan.type := #MEETING
+!Note_2_Zara_Khan.comment := 'Discuss cross-continental workshops for artists.'
+!insert (Zara_Khan, Note_2_Zara_Khan) into ContactContainsNote
+
+!new Relationship('Relationship_Global_to_Arte')
+!Relationship_Global_to_Arte.type := #SUBDIVISION
+!insert (Global_Cultures_Initiative, Relationship_Global_to_Arte) into ContactToRelationship
+!insert (Relationship_Global_to_Arte, Arte_de_la_Tierra) into RelationshipToContact
+
+!new Relationship('Relationship_Global_to_Zara')
+!Relationship_Global_to_Zara.type := #EMPLOYEE
+!insert (Global_Cultures_Initiative, Relationship_Global_to_Zara) into ContactToRelationship
+!insert (Relationship_Global_to_Zara, Zara_Khan) into RelationshipToContact
+
+!new Relationship('Relationship_Arte_to_Zara')
+!Relationship_Arte_to_Zara.type := #COWORKER
+!insert (Arte_de_la_Tierra, Relationship_Arte_to_Zara) into ContactToRelationship
+!insert (Relationship_Arte_to_Zara, Zara_Khan) into RelationshipToContact
+
+!insert (Cultural_Exchange_Hub, Global_Cultures_Initiative) into AddressBookMadeOfContact
+!insert (Cultural_Exchange_Hub, Arte_de_la_Tierra) into AddressBookMadeOfContact
+!insert (Cultural_Exchange_Hub, Zara_Khan) into AddressBookMadeOfContact

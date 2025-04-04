@@ -1,0 +1,159 @@
+!new Club('club35')
+!club35.name := 'Vipers FC'
+!club35.homeGround := 'Viper Pit'
+!club35.chairman := 'Rachel Turner'
+
+!new Club('club36')
+!club36.name := 'Wolves FC'
+!club36.homeGround := 'Wolf Lair'
+!club36.chairman := 'Bruce Anderson'
+
+!new Team('team35')
+!team35.name := 'Viper Strike'
+!insert (club35, team35) into ClubTeam
+
+!new Team('team36')
+!team36.name := 'Wolf Pack'
+!insert (club36, team36) into ClubTeam
+
+!new Player('player52')
+!player52.name := 'Samuel Harper'
+!player52.age := 24
+!player52.bestFoot := #LEFT
+!player52.phoneNumber := '111-222-3333'
+!insert (team35, player52) into TeamPlayer
+
+!new Player('player53')
+!player53.name := 'Liam Holmes'
+!player53.age := 29
+!player53.bestFoot := #RIGHT
+!player53.phoneNumber := '444-555-6666'
+!insert (team35, player53) into TeamPlayer
+
+!new Player('player54')
+!player54.name := 'Ella Brooks'
+!player54.age := 26
+!player54.bestFoot := #BOTH
+!player54.phoneNumber := '777-888-9999'
+!insert (team36, player54) into TeamPlayer
+
+!new Position('position52')
+!position52.positionName := #FORWARD
+!insert (player52, position52) into PlayerPositions
+
+!new Position('position53')
+!position53.positionName := #DEFENDER
+!insert (player53, position53) into PlayerPositions
+
+!new Position('position54')
+!position54.positionName := #MIDFIELDER
+!insert (player54, position54) into PlayerPositions
+
+!new TrainingSession('training35')
+!training35.date := '2024-03-10'
+!training35.location := 'Viper Grounds'
+!training35.purpose := 'Shooting Drills'
+!insert (team35, training35) into TeamTraining
+
+!new TrainingSession('training36')
+!training36.date := '2024-03-11'
+!training36.location := 'Wolf Den'
+!training36.purpose := 'Defensive Alignment'
+!insert (team36, training36) into TeamTraining
+
+!new TrainingNotes('trainingNotes35')
+!trainingNotes35.note := 'Focused on improving precision in finishing shots'
+!trainingNotes35.date := '2024-03-10'
+!insert (training35, trainingNotes35) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes36')
+!trainingNotes36.note := 'Enhanced team defensive structure and communication'
+!trainingNotes36.date := '2024-03-11'
+!insert (training36, trainingNotes36) into TrainingTrainingNotes
+
+!new TrainingObjective('objective52')
+!objective52.areaToImprove := 'Shot Accuracy'
+!objective52.startDate := '2024-01-01'
+!objective52.endDate := '2024-03-15'
+!objective52.success := true
+!insert (objective52, player52) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective53')
+!objective53.areaToImprove := 'Tactical Awareness'
+!objective53.startDate := '2024-01-20'
+!objective53.endDate := '2024-04-20'
+!objective53.success := false
+!insert (objective53, player53) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective54')
+!objective54.areaToImprove := 'Passing Under Pressure'
+!objective54.startDate := '2023-12-10'
+!objective54.endDate := '2024-02-10'
+!objective54.success := true
+!insert (objective54, player54) into TrainingObjectivePlayer
+
+!new Competition('competition18')
+!competition18.name := 'Continental Clash'
+!competition18.type := 'Knockout Stage'
+
+!new Match('match18')
+!match18.date := '2024-03-20'
+!match18.homeAway := true
+!insert (competition18, match18) into CompetitionMatch
+!insert (team35, match18) into LocalMatch
+!insert (team36, match18) into VisitorMatch
+
+!new MatchReport('report18')
+!report18.duration := 90
+!report18.scoreVisitor := 1
+!report18.scoreLocal := 3
+!insert (match18, report18) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer52')
+!matchPlayer52.booked := false
+!matchPlayer52.goals := 2
+!matchPlayer52.rating := 9
+!insert (player52, matchPlayer52) into PlayerMatch
+!insert (match18, matchPlayer52) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer54')
+!matchPlayer54.booked := true
+!matchPlayer54.goals := 1
+!matchPlayer54.rating := 7
+!insert (player54, matchPlayer54) into PlayerMatch
+!insert (match18, matchPlayer54) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition52')
+!matchPlayerPosition52.positionName := #FORWARD
+!matchPlayerPosition52.number := 10
+!insert (matchPlayer52, matchPlayerPosition52) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition54')
+!matchPlayerPosition54.positionName := #MIDFIELDER
+!matchPlayerPosition54.number := 8
+!insert (matchPlayer54, matchPlayerPosition54) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event68')
+!event68.eventType := #GOAL
+!event68.time := 23
+!insert (match18, event68) into MatchMatchEvent
+
+!new MatchEvent('event69')
+!event69.eventType := #GOAL
+!event69.time := 37
+!insert (match18, event69) into MatchMatchEvent
+
+!new MatchEvent('event70')
+!event70.eventType := #GOAL
+!event70.time := 49
+!insert (match18, event70) into MatchMatchEvent
+
+!new MatchEvent('event71')
+!event71.eventType := #GOAL
+!event71.time := 66
+!insert (match18, event71) into MatchMatchEvent
+
+!new MatchNote('matchNote18')
+!matchNote18.note := 'Viper Strike dominated the match with excellent attacking plays'
+!matchNote18.date := '2024-03-20'
+!insert (match18, matchNote18) into MatchMatchNote

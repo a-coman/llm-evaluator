@@ -1,0 +1,80 @@
+!new Restaurant('restaurant13')
+!restaurant13.name := 'Pop-up Bistro Delight'
+
+!new Owner('owner29')
+!owner29.name := 'Yuki Tanaka'
+!owner29.percentageShares := 100
+
+!insert (restaurant13, owner29) into RestaurantOwner
+
+!new Table('table30')
+!table30.number := 301
+!table30.description := 'Elevated stage area with panoramic street view'
+!table30.capacity := 5
+
+!new Banquet('banquet11')
+!banquet11.date := Date('2023-12-15')
+!banquet11.time := Time('12:30')
+!banquet11.numberPeople := 30
+!banquet11.name := 'Tech Innovators Meetup'
+!banquet11.phoneNumber := '+81-3-1234-5678'
+!banquet11.number := 20231215
+!banquet11.groupName := 'Silicon Summit'
+!banquet11.paymentMethod := #Cash
+!banquet11.busService := false
+
+!insert (restaurant13, banquet11) into RestaurantReservation
+!insert (banquet11, table30) into ReservationTable
+
+!new Waiter('waiter24')
+!waiter24.name := 'Anna Müller'
+!waiter24.dateOfBirth := Date('1992-11-30')
+!waiter24.phoneNumber := '+81-3-9876-5432'
+
+!new Waiter('waiter25')
+!waiter25.name := 'Morgan Kim'
+!waiter25.dateOfBirth := Date('1994-06-22')
+!waiter25.phoneNumber := '+81-3-5555-6789'
+
+!insert (banquet11, waiter24) into ReservationWaiter
+!insert (banquet11, waiter25) into ReservationWaiter
+
+!new HeadWaiter('headWaiter12')
+!headWaiter12.name := 'Lucas Ferreira'
+!headWaiter12.dateOfBirth := Date('1988-08-01')
+!headWaiter12.phoneNumber := '+81-3-4444-1122'
+
+!insert (headWaiter12, waiter24) into HeadWaiterWaiter
+!insert (headWaiter12, waiter25) into HeadWaiterWaiter
+
+!new MenuItem('menuItem21')
+!menuItem21.description := 'Vegan Avocado Sushi'
+!menuItem21.prepTime := 10.0
+!menuItem21.classification := #Apetizer
+
+!new Chef('chef18')
+!chef18.name := 'Noor Al-Farsi'
+!chef18.dateOfBirth := Date('1980-04-18')
+!chef18.phoneNumber := '+81-3-3333-1221'
+
+!insert (menuItem21, chef18) into MenuItemChef
+
+!new Cook('cook21')
+!cook21.name := 'Maxim Smirnov'
+!cook21.dateOfBirth := Date('1985-03-17')
+!cook21.phoneNumber := '+81-3-1000-4321'
+!cook21.yearsOfExperience := 4
+
+!insert (chef18, cook21) into ChefCook
+
+!new ItemOrder('itemOrder17')
+!itemOrder17.time := Time('13:00')
+!insert (banquet11, itemOrder17) into ReservationItemOrdered
+!insert (itemOrder17, menuItem21) into ItemOrderMenuItem
+
+!new RegularCustomer('customer8')
+!customer8.name := 'Aiko Nakamura'
+!customer8.prefferedLanguage := #English  -- Assuming #Japanese is not defined, using #English as a placeholder
+
+!insert (banquet11, customer8) into ReservationCustomer
+

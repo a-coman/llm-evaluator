@@ -1,0 +1,44 @@
+!new Driver('driver13')
+!driver13.id := 'D013'
+!driver13.name := 'Emily Carter'
+
+!new Shipment('shipment22')
+!shipment22.id := 'S022'
+!shipment22.status := #UNDERWAY
+
+!new Address('address25')
+!address25.text := '1111 Autumn Leaves Street'
+
+!new Address('address26')
+!address26.text := '2222 Meadow Lane'
+
+!new GeoLocation('geoLocation25')
+!geoLocation25.latitude := 40.730610
+!geoLocation25.longitude := -73.935242
+
+!new GeoLocation('geoLocation26')
+!geoLocation26.latitude := 51.509865
+!geoLocation26.longitude := -0.118092
+
+!new Customer('customer13')
+!customer13.id := 'C013'
+!customer13.name := 'Sophia Green'
+!customer13.twitterUserName := '@sophia_green'
+
+!new Station('station12')
+
+!insert (driver13, shipment22) into DriverShipment
+
+!insert (shipment22, address25) into ShipmentContainsPickUpAddress
+!insert (shipment22, address26) into ShipmentContainsDeliveryAddress
+
+!insert (address25, geoLocation25) into AddressContainsGeoLocation
+!insert (address26, geoLocation26) into AddressContainsGeoLocation
+
+!insert (customer13, shipment22) into CustomerConsistsOfShipment
+
+!insert (station12, customer13) into StationContainsCustomer
+
+!insert (station12, shipment22) into StationShipment
+
+!insert (station12, driver13) into StationContainsDriver

@@ -1,0 +1,61 @@
+!new Customer('customer18')
+!customer18.firstName := 'Hiroshi'
+!customer18.lastName := 'Tanaka'
+
+!new Booking('booking18')
+!booking18.bookingId := 456
+!booking18.startDate := 'June 21, 2024'
+!booking18.endDate := 'June 26, 2024'
+!booking18.canceled := false
+!booking18.confirmed := true
+
+!new RoomReservation('roomreservation28')
+!roomreservation28.checkInDate := 'June 21, 2024'
+!roomreservation28.checkOutDate := 'June 26, 2024'
+
+!new Room('room34')
+!room34.roomNumber := 707
+!room34.numBeds := 1
+!room34.pricePerNight := 20000
+!room34.occupied := true
+!room34.blocked := false
+
+!new RoomExtra('roomextra40')
+!roomextra40.price := 15000
+!roomextra40.description := 'Includes access to meeting rooms with conference facilities and in-house catering services.'
+
+!new RoomExtra('roomextra41')
+!roomextra41.price := 5000
+!roomextra41.description := 'Daily laundry service for business attire with same-day delivery.'
+
+!new RoomExtra('roomextra42')
+!roomextra42.price := 8000
+!roomextra42.description := 'Private car transfer from Narita International Airport to the hotel.'
+
+!new Bill('bill34')
+!bill34.billId := 67890
+!bill34.price := 123000
+
+!new FreeRoomTypesDTO('freeroomtypesdto18')
+!freeroomtypesdto18.roomTypeDescription := 'Spacious suite with separate living area, ideal for business travelers seeking comfort and convenience.'
+!freeroomtypesdto18.numBeds := 1
+!freeroomtypesdto18.pricePerNight := 35000
+!freeroomtypesdto18.numFreeRooms := 2
+
+!new FreeRoomTypesDTO('freeroomtypesdto19')
+!freeroomtypesdto19.roomTypeDescription := 'Comfortable twin room suitable for colleagues traveling together.'
+!freeroomtypesdto19.numBeds := 2
+!freeroomtypesdto19.pricePerNight := 22000
+!freeroomtypesdto19.numFreeRooms := 5
+
+!insert (booking18, customer18) into BookingCustomer
+!insert (booking18, roomreservation28) into BookingRoomReservation
+!insert (booking18, bill34) into BookingBill
+
+!insert (roomreservation28, room34) into RoomReservationRoom
+
+!insert (roomreservation28, roomextra40) into RoomReservationExtras
+!insert (roomreservation28, roomextra41) into RoomReservationExtras
+!insert (roomreservation28, roomextra42) into RoomReservationExtras
+
+!insert (bill34, roomreservation28) into BillRoomReservation

@@ -1,0 +1,53 @@
+!new Driver('driver47')
+!driver47.id := 'D007'
+!driver47.name := 'Fatima Al-Abbas'
+
+!new Shipment('shipment48')
+!shipment48.id := 'SHP008'
+!shipment48.status := #UNDERWAY
+
+!new Address('pickupAddress48')
+!pickupAddress48.text := 'MicroHealth, 55 Virology Lane, Seattle, WA'
+
+!new GeoLocation('pickupGeoLocation48')
+!pickupGeoLocation48.latitude := 47.6062
+!pickupGeoLocation48.longitude := -122.3321
+
+!new Address('deliveryAddress48')
+!deliveryAddress48.text := 'St. Mercy Hospital, 500 Health Ave, Portland, OR'
+
+!new GeoLocation('deliveryGeoLocation48')
+!deliveryGeoLocation48.latitude := 45.5051
+!deliveryGeoLocation48.longitude := -122.6750
+
+!new Station('station34')
+
+!new Customer('customer48')
+!customer48.id := 'CUST008'
+!customer48.name := 'Northwest Health Alliance'
+!customer48.twitterUserName := '@NWHealthAlliance'
+
+!new Customer('customer49')
+!customer49.id := 'CUST009'
+!customer49.name := 'Portland Medical Trust'
+!customer49.twitterUserName := '@PortlandMedTrust'
+
+!insert (driver47, shipment48) into DriverShipment
+
+!insert (shipment48, pickupAddress48) into ShipmentContainsPickUpAddress
+
+!insert (shipment48, deliveryAddress48) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress48, pickupGeoLocation48) into AddressContainsGeoLocation
+
+!insert (deliveryAddress48, deliveryGeoLocation48) into AddressContainsGeoLocation
+
+!insert (customer48, shipment48) into CustomerConsistsOfShipment
+
+!insert (station34, customer48) into StationContainsCustomer
+
+!insert (station34, customer49) into StationContainsCustomer
+
+!insert (station34, shipment48) into StationShipment
+
+!insert (station34, driver47) into StationContainsDriver

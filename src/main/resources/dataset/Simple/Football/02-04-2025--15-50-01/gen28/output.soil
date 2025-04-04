@@ -1,0 +1,154 @@
+!new Club('club55')
+!club55.name := 'Tigers FC'
+!club55.homeGround := 'Tiger Valley'
+!club55.chairman := 'Nathan Diaz'
+
+!new Club('club56')
+!club56.name := 'Sharks United'
+!club56.homeGround := 'Shark Bay'
+!club56.chairman := 'Lucy Knight'
+
+!new Team('team55')
+!team55.name := 'Tiger Stripes'
+!insert (club55, team55) into ClubTeam
+
+!new Team('team56')
+!team56.name := 'Shark Savages'
+!insert (club56, team56) into ClubTeam
+
+!new Player('player82')
+!player82.name := 'Zara Lee'
+!player82.age := 24
+!player82.bestFoot := #RIGHT
+!player82.phoneNumber := '234-567-8910'
+!insert (team55, player82) into TeamPlayer
+
+!new Player('player83')
+!player83.name := 'Jack Perez'
+!player83.age := 28
+!player83.bestFoot := #LEFT
+!player83.phoneNumber := '345-678-9011'
+!insert (team55, player83) into TeamPlayer
+
+!new Player('player84')
+!player84.name := 'Sophia Gray'
+!player84.age := 30
+!player84.bestFoot := #BOTH
+!player84.phoneNumber := '456-789-0122'
+!insert (team56, player84) into TeamPlayer
+
+!new Position('position82')
+!position82.positionName := #FORWARD
+!insert (player82, position82) into PlayerPositions
+
+!new Position('position83')
+!position83.positionName := #MIDFIELDER
+!insert (player83, position83) into PlayerPositions
+
+!new Position('position84')
+!position84.positionName := #DEFENDER
+!insert (player84, position84) into PlayerPositions
+
+!new TrainingSession('training55')
+!training55.date := '2025-03-15'
+!training55.location := 'Tiger Training Grounds'
+!training55.purpose := 'Intensity and Speed Drills'
+!insert (team55, training55) into TeamTraining
+
+!new TrainingSession('training56')
+!training56.date := '2025-03-16'
+!training56.location := 'Shark Workout Center'
+!training56.purpose := 'Tactical Flexibility'
+!insert (team56, training56) into TeamTraining
+
+!new TrainingNotes('trainingNotes55')
+!trainingNotes55.note := 'Performed high-intensity sprinting and agility circuits'
+!trainingNotes55.date := '2025-03-15'
+!insert (training55, trainingNotes55) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes56')
+!trainingNotes56.note := 'Focused on adapting strategies for different opposition'
+!trainingNotes56.date := '2025-03-16'
+!insert (training56, trainingNotes56) into TrainingTrainingNotes
+
+!new TrainingObjective('objective82')
+!objective82.areaToImprove := 'Speed and Acceleration'
+!objective82.startDate := '2024-12-01'
+!objective82.endDate := '2025-03-01'
+!objective82.success := true
+!insert (objective82, player82) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective83')
+!objective83.areaToImprove := 'Playmaker Role'
+!objective83.startDate := '2025-01-10'
+!objective83.endDate := '2025-04-10'
+!objective83.success := false
+!insert (objective83, player83) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective84')
+!objective84.areaToImprove := 'Defensive Cohesion'
+!objective84.startDate := '2024-11-05'
+!objective84.endDate := '2025-02-05'
+!objective84.success := true
+!insert (objective84, player84) into TrainingObjectivePlayer
+
+!new Competition('competition28')
+!competition28.name := 'Atlantic Trophy'
+!competition28.type := 'Semi-Final'
+
+!new Match('match28')
+!match28.date := '2025-04-05'
+!match28.homeAway := true
+!insert (competition28, match28) into CompetitionMatch
+!insert (team55, match28) into LocalMatch
+!insert (team56, match28) into VisitorMatch
+
+!new MatchReport('report28')
+!report28.duration := 90
+!report28.scoreVisitor := 2
+!report28.scoreLocal := 1
+!insert (match28, report28) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer82')
+!matchPlayer82.booked := false
+!matchPlayer82.goals := 1
+!matchPlayer82.rating := 7
+!insert (player82, matchPlayer82) into PlayerMatch
+!insert (match28, matchPlayer82) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer84')
+!matchPlayer84.booked := true
+!matchPlayer84.goals := 0
+!matchPlayer84.rating := 8
+!insert (player84, matchPlayer84) into PlayerMatch
+!insert (match28, matchPlayer84) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition82')
+!matchPlayerPosition82.positionName := #FORWARD
+!matchPlayerPosition82.number := 11
+!insert (matchPlayer82, matchPlayerPosition82) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition84')
+!matchPlayerPosition84.positionName := #DEFENDER
+!matchPlayerPosition84.number := 3
+!insert (matchPlayer84, matchPlayerPosition84) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event107')
+!event107.eventType := #GOAL
+!event107.time := 25
+!insert (match28, event107) into MatchMatchEvent
+
+!new MatchEvent('event108')
+!event108.eventType := #GOAL
+!event108.time := 40
+!insert (match28, event108) into MatchMatchEvent
+
+!new MatchEvent('event109')
+!event109.eventType := #GOAL
+!event109.time := 65
+!insert (match28, event109) into MatchMatchEvent
+
+!new MatchNote('matchNote28')
+!matchNote28.note := 'Shark Savages advance with solid defensive play'
+!matchNote28.date := '2025-04-05'
+!insert (match28, matchNote28) into MatchMatchNote

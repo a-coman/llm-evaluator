@@ -1,0 +1,97 @@
+!new StateMachine('textileProductionFlow')
+!textileProductionFlow.name := 'textileProductionFlow'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('threadLoad')
+!threadLoad.name := 'threadLoad'
+
+!new State('patternDesign')
+!patternDesign.name := 'patternDesign'
+
+!new State('weaveFabric')
+!weaveFabric.name := 'weaveFabric'
+
+!new State('qualityCheck')
+!qualityCheck.name := 'qualityCheck'
+
+!new State('package')
+!package.name := 'package'
+
+!new Transition('startWeaving')
+!startWeaving.name := 'startWeaving'
+
+!new Transition('processThreads')
+!processThreads.name := 'processThreads'
+
+!new Transition('designComplete')
+!designComplete.name := 'designComplete'
+
+!new Transition('finishWeaving')
+!finishWeaving.name := 'finishWeaving'
+
+!new Transition('approveProduct')
+!approveProduct.name := 'approveProduct'
+
+!new Transition('restartCycle')
+!restartCycle.name := 'restartCycle'
+
+!new TimeEvent('initiateDelay')
+!initiateDelay.time := 10
+
+!new TimeEvent('loadDelay')
+!loadDelay.time := 40
+
+!new TimeEvent('designTime')
+!designTime.time := 90
+
+!new TimeEvent('weavingDuration')
+!weavingDuration.time := 200
+
+!new TimeEvent('inspectionTime')
+!inspectionTime.time := 30
+
+!new TimeEvent('packingTime')
+!packingTime.time := 25
+
+!insert (textileProductionFlow, standby) into StateMachineContainsStates
+!insert (textileProductionFlow, threadLoad) into StateMachineContainsStates
+!insert (textileProductionFlow, patternDesign) into StateMachineContainsStates
+!insert (textileProductionFlow, weaveFabric) into StateMachineContainsStates
+!insert (textileProductionFlow, qualityCheck) into StateMachineContainsStates
+!insert (textileProductionFlow, package) into StateMachineContainsStates
+
+!insert (textileProductionFlow, standby) into StateMachineStartsStates
+
+!insert (textileProductionFlow, startWeaving) into StateMachineContainsTransitions
+!insert (textileProductionFlow, processThreads) into StateMachineContainsTransitions
+!insert (textileProductionFlow, designComplete) into StateMachineContainsTransitions
+!insert (textileProductionFlow, finishWeaving) into StateMachineContainsTransitions
+!insert (textileProductionFlow, approveProduct) into StateMachineContainsTransitions
+!insert (textileProductionFlow, restartCycle) into StateMachineContainsTransitions
+
+!insert (startWeaving, initiateDelay) into TransitionContainsEvents
+!insert (processThreads, loadDelay) into TransitionContainsEvents
+!insert (designComplete, designTime) into TransitionContainsEvents
+!insert (finishWeaving, weavingDuration) into TransitionContainsEvents
+!insert (approveProduct, inspectionTime) into TransitionContainsEvents
+!insert (restartCycle, packingTime) into TransitionContainsEvents
+
+!insert (standby, startWeaving) into StateTransition
+!insert (startWeaving, threadLoad) into TransitionState
+
+!insert (threadLoad, processThreads) into StateTransition
+!insert (processThreads, patternDesign) into TransitionState
+
+!insert (patternDesign, designComplete) into StateTransition
+!insert (designComplete, weaveFabric) into TransitionState
+
+!insert (weaveFabric, finishWeaving) into StateTransition
+!insert (finishWeaving, qualityCheck) into TransitionState
+
+!insert (qualityCheck, approveProduct) into StateTransition
+!insert (approveProduct, package) into TransitionState
+
+!insert (package, restartCycle) into StateTransition
+!insert (restartCycle, standby) into TransitionState

@@ -1,0 +1,42 @@
+!new Currency('brazilianReal')
+!brazilianReal.name := 'Brazilian Real'
+!brazilianReal.abbreviation := 'BRL'
+
+!new Expense('conferenceTravelExpense')
+!conferenceTravelExpense.amount := 550.00
+!conferenceTravelExpense.startDate := Date('2023-05-15')
+!conferenceTravelExpense.endDate := Date('2023-05-20')
+
+!new Bill('conferenceRegistration')
+!conferenceRegistration.amount := 300.00
+!conferenceRegistration.category := 'Conference Registration'
+!conferenceRegistration.date := Date('2023-05-15')
+!conferenceRegistration.paymentMethod := #CREDIT_CARD
+!conferenceRegistration.status := #VALIDATED
+
+!new Bill('transportation')
+!transportation.amount := 150.00
+!transportation.category := 'Transportation'
+!transportation.date := Date('2023-05-18')
+!transportation.paymentMethod := #CASH
+!transportation.status := #REFUSED
+
+!new Bill('meals')
+!meals.amount := 100.00
+!meals.category := 'Meals'
+!meals.date := Date('2023-05-20')
+!meals.paymentMethod := #CHECK
+!meals.status := #VERIFIED
+
+!insert (conferenceRegistration, brazilianReal) into BillCurrency
+!insert (transportation, brazilianReal) into BillCurrency
+!insert (meals, brazilianReal) into BillCurrency
+
+!insert (conferenceTravelExpense, conferenceRegistration) into ExpenseContainsBills
+!insert (conferenceTravelExpense, transportation) into ExpenseContainsBills
+!insert (conferenceTravelExpense, meals) into ExpenseContainsBills
+
+!new Comment('commentConference')
+!commentConference.text := 'Conference was insightful, and the networking was invaluable.'
+
+!insert (conferenceTravelExpense, commentConference) into ExpenseComment

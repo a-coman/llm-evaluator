@@ -1,0 +1,59 @@
+!new Driver('driver10')
+!driver10.id := 'DRV2002'
+!driver10.name := 'Thomas White'
+
+!new Driver('driver11')
+!driver11.id := 'DRV2003'
+!driver11.name := 'Sophie Taylor'
+
+!new Shipment('shipment9')
+!shipment9.id := 'SHP7003'
+!shipment9.status := #NEW
+
+!new Address('pickupAddress9')
+!pickupAddress9.text := 'Haworth Farm, Moorland Rd, Haworth, BD22 8BS, UK'
+
+!new GeoLocation('pickupGeoLocation9')
+!pickupGeoLocation9.latitude := 53.8321
+!pickupGeoLocation9.longitude := -1.9572
+
+!new Address('deliveryAddress9')
+!deliveryAddress9.text := 'Bolton Abbey, Skipton, BD23 6EX, UK'
+
+!new GeoLocation('deliveryGeoLocation9')
+!deliveryGeoLocation9.latitude := 53.9734
+!deliveryGeoLocation9.longitude := -1.8923
+
+!new Station('station8')
+
+!new Customer('customer9')
+!customer9.id := 'CUST601'
+!customer9.name := 'George Dawson'
+!customer9.twitterUserName := '@georgedw'
+
+!new Customer('customer10')
+!customer10.id := 'CUST602'
+!customer10.name := 'Emma Collins'
+!customer10.twitterUserName := '@emmacollins'
+
+!insert (driver10, shipment9) into DriverShipment
+
+!insert (shipment9, pickupAddress9) into ShipmentContainsPickUpAddress
+
+!insert (shipment9, deliveryAddress9) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress9, pickupGeoLocation9) into AddressContainsGeoLocation
+
+!insert (deliveryAddress9, deliveryGeoLocation9) into AddressContainsGeoLocation
+
+!insert (customer9, shipment9) into CustomerConsistsOfShipment
+
+!insert (station8, customer9) into StationContainsCustomer
+
+!insert (station8, customer10) into StationContainsCustomer
+
+!insert (station8, shipment9) into StationShipment
+
+!insert (station8, driver10) into StationContainsDriver
+
+!insert (station8, driver11) into StationContainsDriver

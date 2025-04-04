@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant15')
+!restaurant15.name := 'Culinary Heights'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner29')
+!owner29.name := 'Amelia Johnson'
+!owner29.percentageShares := 70
+
+!new Owner('owner30')
+!owner30.name := 'Matthew Bennett'
+!owner30.percentageShares := 30
+
+-- Establish RestaurantOwner association
+!insert (restaurant15, owner29) into RestaurantOwner
+!insert (restaurant15, owner30) into RestaurantOwner
+
+-- Creating tables with different atmospheres
+!new Table('table29')
+!table29.number := 1501
+!table29.description := 'Panoramic Table'
+!table29.capacity := 4
+
+!new Table('table30')
+!table30.number := 1502
+!table30.description := 'Chic Lounge'
+!table30.capacity := 6
+
+-- Establishing staff members for excellent service
+!new HeadWaiter('headwaiter15')
+!headwaiter15.name := 'Samuel Green'
+!headwaiter15.dateOfBirth := Date('1975-11-19')
+!headwaiter15.phoneNumber := '555-7373'
+
+!new Waiter('waiter19')
+!waiter19.name := 'Lily Stewart'
+!waiter19.dateOfBirth := Date('1990-01-08')
+!waiter19.phoneNumber := '555-8080'
+!waiter19.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter15, waiter19) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a gourmet experience
+!new Individual('reservation15')
+!reservation15.time := Time('20:00')
+!reservation15.date := Date('2024-11-10')
+!reservation15.numberPeople := 3
+!reservation15.name := 'Gourmet Experience'
+!reservation15.phoneNumber := '555-6767'
+!reservation15.number := 213
+!reservation15.seating := #Inside
+!reservation15.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant15, reservation15) into RestaurantReservation
+!insert (reservation15, waiter19) into ReservationWaiter
+!insert (reservation15, table29) into ReservationTable
+!insert (reservation15, table30) into ReservationTable
+
+-- Adding a unique MenuItem for the gourmet dinner
+!new MenuItem('menuItem15')
+!menuItem15.description := 'Seared Scallops with Asparagus'
+!menuItem15.prepTime := 35.0
+!menuItem15.classification := #Main
+
+-- Associating MenuItem with a renowned Chef
+!new Chef('chef15')
+!chef15.name := 'Gordon Ramsay'
+!chef15.dateOfBirth := Date('1966-11-08')
+!chef15.phoneNumber := '555-9999'
+
+!insert (menuItem15, chef15) into MenuItemChef
+
+-- Creating Cook under the direction of Chef
+!new Cook('cook15')
+!cook15.name := 'Jamie Oliver'
+!cook15.dateOfBirth := Date('1975-05-27')
+!cook15.phoneNumber := '555-5656'
+!cook15.yearsOfExperience := 20
+
+-- Establishing association between Chef and Cook
+!insert (chef15, cook15) into ChefCook
+
+-- Creating an ItemOrder for the gourmet dinner
+!new ItemOrder('order15')
+!order15.time := Time('20:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order15, menuItem15) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation15, order15) into ReservationItemOrdered

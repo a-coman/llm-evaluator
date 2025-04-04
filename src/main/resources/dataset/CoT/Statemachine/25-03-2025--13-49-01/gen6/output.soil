@@ -1,0 +1,495 @@
+!new StateMachine('patientMonitoringControl')
+!patientMonitoringControl.name := 'patientMonitoringControl'
+
+!new State('normalMonitoring')
+!normalMonitoring.name := 'normalMonitoring'
+
+!new State('alertCondition')
+!alertCondition.name := 'alertCondition'
+
+!new State('emergencyResponse')
+!emergencyResponse.name := 'emergencyResponse'
+
+!new State('maintenanceCheck')
+!maintenanceCheck.name := 'maintenanceCheck'
+
+!new State('systemReset')
+!systemReset.name := 'systemReset'
+
+!new Transition('detectAlert')
+!detectAlert.name := 'detectAlert'
+
+!new Transition('escalateEmergency')
+!escalateEmergency.name := 'escalateEmergency'
+
+!new Transition('performMaintenance')
+!performMaintenance.name := 'performMaintenance'
+
+!new Transition('completeMaintenance')
+!completeMaintenance.name := 'completeMaintenance'
+
+!new Transition('resetSystem')
+!resetSystem.name := 'resetSystem'
+
+!new TimeEvent('timeEventDetectAlert')
+!timeEventDetectAlert.time := 1
+
+!new TimeEvent('timeEventEscalateEmergency')
+!timeEventEscalateEmergency.time := 2
+
+!new TimeEvent('timeEventPerformMaintenance')
+!timeEventPerformMaintenance.time := 10
+
+!new TimeEvent('timeEventCompleteMaintenance')
+!timeEventCompleteMaintenance.time := 5
+
+!new TimeEvent('timeEventResetSystem')
+!timeEventResetSystem.time := 3
+
+!insert (patientMonitoringControl, normalMonitoring) into StateMachineContainsStates
+!insert (patientMonitoringControl, alertCondition) into StateMachineContainsStates
+!insert (patientMonitoringControl, emergencyResponse) into StateMachineContainsStates
+!insert (patientMonitoringControl, maintenanceCheck) into StateMachineContainsStates
+!insert (patientMonitoringControl, systemReset) into StateMachineContainsStates
+
+!insert (patientMonitoringControl, normalMonitoring) into StateMachineStartsStates
+
+!insert (patientMonitoringControl, detectAlert) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, escalateEmergency) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, performMaintenance) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, completeMaintenance) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, resetSystem) into StateMachineContainsTransitions
+
+!insert (detectAlert, timeEventDetectAlert) into TransitionContainsEvents
+!insert (escalateEmergency, timeEventEscalateEmergency) into TransitionContainsEvents
+!insert (performMaintenance, timeEventPerformMaintenance) into TransitionContainsEvents
+!insert (completeMaintenance, timeEventCompleteMaintenance) into TransitionContainsEvents
+!insert (resetSystem, timeEventResetSystem) into TransitionContainsEvents
+
+!insert (normalMonitoring, detectAlert) into StateTransition
+!insert (detectAlert, alertCondition) into TransitionState
+
+!insert (normalMonitoring, performMaintenance) into StateTransition
+!insert (performMaintenance, maintenanceCheck) into TransitionState
+
+!insert (alertCondition, escalateEmergency) into StateTransition
+!insert (escalateEmergency, emergencyResponse) into TransitionState
+
+!insert (emergencyResponse, resetSystem) into StateTransition
+!insert (resetSystem, systemReset) into TransitionState
+
+!insert (maintenanceCheck, completeMaintenance) into StateTransition
+!insert (completeMaintenance, normalMonitoring) into TransitionState
+
+!new StateMachine('alarmClockSM')
+!alarmClockSM.name := 'alarmClockSM'
+
+!new State('setTime')
+!setTime.name := 'setTime'
+
+!new State('setAlarm')
+!setAlarm.name := 'setAlarm'
+
+!new State('alarmActive')
+!alarmActive.name := 'alarmActive'
+
+!new State('snooze')
+!snooze.name := 'snooze'
+
+!new State('off')
+!off.name := 'off'
+
+!new Transition('timeToAlarm')
+!timeToAlarm.name := 'timeToAlarm'
+
+!new Transition('activateAlarm')
+!activateAlarm.name := 'activateAlarm'
+
+!new Transition('snoozeAlarm')
+!snoozeAlarm.name := 'snoozeAlarm'
+
+!new Transition('alarmSnoozedToActive')
+!alarmSnoozedToActive.name := 'alarmSnoozedToActive'
+
+!new Transition('deactivateAlarmActive')
+!deactivateAlarmActive.name := 'deactivateAlarm'
+
+!new Transition('deactivateAlarmSnooze')
+!deactivateAlarmSnooze.name := 'deactivateAlarm'
+
+!new TimeEvent('timeEventTimeToAlarm')
+!timeEventTimeToAlarm.time := 15
+
+!new TimeEvent('timeEventActivateAlarm')
+!timeEventActivateAlarm.time := 10
+
+!new TimeEvent('timeEventSnoozeAlarm')
+!timeEventSnoozeAlarm.time := 5
+
+!new TimeEvent('timeEventAlarmSnoozedToActive')
+!timeEventAlarmSnoozedToActive.time := 300
+
+!new TimeEvent('timeEventDeactivateAlarmActive')
+!timeEventDeactivateAlarmActive.time := 1 -- Adjusted from 0 to positive
+
+!new TimeEvent('timeEventDeactivateAlarmSnooze')
+!timeEventDeactivateAlarmSnooze.time := 1 -- Adjusted from 0 to positive
+
+!insert (alarmClockSM, setTime) into StateMachineContainsStates
+!insert (alarmClockSM, setAlarm) into StateMachineContainsStates
+!insert (alarmClockSM, alarmActive) into StateMachineContainsStates
+!insert (alarmClockSM, snooze) into StateMachineContainsStates
+!insert (alarmClockSM, off) into StateMachineContainsStates
+
+!insert (alarmClockSM, timeToAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, activateAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, snoozeAlarm) into StateMachineContainsTransitions
+!insert (alarmClockSM, alarmSnoozedToActive) into StateMachineContainsTransitions
+!insert (alarmClockSM, deactivateAlarmActive) into StateMachineContainsTransitions
+!insert (alarmClockSM, deactivateAlarmSnooze) into StateMachineContainsTransitions
+
+!insert (timeToAlarm, timeEventTimeToAlarm) into TransitionContainsEvents
+!insert (activateAlarm, timeEventActivateAlarm) into TransitionContainsEvents
+!insert (snoozeAlarm, timeEventSnoozeAlarm) into TransitionContainsEvents
+!insert (alarmSnoozedToActive, timeEventAlarmSnoozedToActive) into TransitionContainsEvents
+!insert (deactivateAlarmActive, timeEventDeactivateAlarmActive) into TransitionContainsEvents
+!insert (deactivateAlarmSnooze, timeEventDeactivateAlarmSnooze) into TransitionContainsEvents
+
+!insert (setTime, timeToAlarm) into StateTransition
+!insert (timeToAlarm, setAlarm) into TransitionState
+
+!insert (setAlarm, activateAlarm) into StateTransition
+!insert (activateAlarm, alarmActive) into TransitionState
+
+!insert (alarmActive, snoozeAlarm) into StateTransition
+!insert (snoozeAlarm, snooze) into TransitionState
+
+!insert (snooze, alarmSnoozedToActive) into StateTransition
+!insert (alarmSnoozedToActive, alarmActive) into TransitionState
+
+!insert (alarmActive, deactivateAlarmActive) into StateTransition
+!insert (deactivateAlarmActive, off) into TransitionState
+
+!insert (snooze, deactivateAlarmSnooze) into StateTransition
+!insert (deactivateAlarmSnooze, off) into TransitionState
+
+!new StateMachine('securityManager')
+!securityManager.name := 'securityManager'
+
+!new State('disarmed')
+!disarmed.name := 'disarmed'
+
+!new State('armed')
+!armed.name := 'armed'
+
+!new State('breachDetected')
+!breachDetected.name := 'breachDetected'
+
+!new State('alarmActivated')
+!alarmActivated.name := 'alarmActivated'
+
+!new State('resetting')
+!resetting.name := 'resetting'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('disarmedToArmed')
+!disarmedToArmed.name := 'disarmedToArmed'
+
+!new Transition('armedToBreachDetected')
+!armedToBreachDetected.name := 'armedToBreachDetected'
+
+!new Transition('breachDetectedToAlarmActivated')
+!breachDetectedToAlarmActivated.name := 'breachDetectedToAlarmActivated'
+
+!new Transition('alarmActivatedToResetting')
+!alarmActivatedToResetting.name := 'alarmActivatedToResetting'
+
+!new Transition('resettingToDisarmed')
+!resettingToDisarmed.name := 'resettingToDisarmed'
+
+!new Transition('armedToMaintenance')
+!armedToMaintenance.name := 'armedToMaintenance'
+
+!new TimeEvent('timeEventDisarmedToArmed')
+!timeEventDisarmedToArmed.time := 3
+
+!new TimeEvent('timeEventArmedToBreachDetected')
+!timeEventArmedToBreachDetected.time := 1
+
+!new TimeEvent('timeEventBreachDetectedToAlarmActivated')
+!timeEventBreachDetectedToAlarmActivated.time := 1
+
+!new TimeEvent('timeEventAlarmActivatedToResetting')
+!timeEventAlarmActivatedToResetting.time := 5
+
+!new TimeEvent('timeEventResettingToDisarmed')
+!timeEventResettingToDisarmed.time := 2
+
+!new TimeEvent('timeEventArmedToMaintenance')
+!timeEventArmedToMaintenance.time := 5
+
+!insert (securityManager, disarmed) into StateMachineContainsStates
+!insert (securityManager, armed) into StateMachineContainsStates
+!insert (securityManager, breachDetected) into StateMachineContainsStates
+!insert (securityManager, alarmActivated) into StateMachineContainsStates
+!insert (securityManager, resetting) into StateMachineContainsStates
+!insert (securityManager, maintenance) into StateMachineContainsStates
+
+!insert (securityManager, disarmed) into StateMachineStartsStates
+
+!insert (securityManager, disarmedToArmed) into StateMachineContainsTransitions
+!insert (securityManager, armedToBreachDetected) into StateMachineContainsTransitions
+!insert (securityManager, breachDetectedToAlarmActivated) into StateMachineContainsTransitions
+!insert (securityManager, alarmActivatedToResetting) into StateMachineContainsTransitions
+!insert (securityManager, resettingToDisarmed) into StateMachineContainsTransitions
+!insert (securityManager, armedToMaintenance) into StateMachineContainsTransitions
+
+!insert (disarmedToArmed, timeEventDisarmedToArmed) into TransitionContainsEvents
+!insert (armedToBreachDetected, timeEventArmedToBreachDetected) into TransitionContainsEvents
+!insert (breachDetectedToAlarmActivated, timeEventBreachDetectedToAlarmActivated) into TransitionContainsEvents
+!insert (alarmActivatedToResetting, timeEventAlarmActivatedToResetting) into TransitionContainsEvents
+!insert (resettingToDisarmed, timeEventResettingToDisarmed) into TransitionContainsEvents
+!insert (armedToMaintenance, timeEventArmedToMaintenance) into TransitionContainsEvents
+
+!insert (disarmed, disarmedToArmed) into StateTransition
+!insert (disarmedToArmed, armed) into TransitionState
+
+!insert (armed, armedToBreachDetected) into StateTransition
+!insert (armedToBreachDetected, breachDetected) into TransitionState
+
+!insert (breachDetected, breachDetectedToAlarmActivated) into StateTransition
+!insert (breachDetectedToAlarmActivated, alarmActivated) into TransitionState
+
+!insert (alarmActivated, alarmActivatedToResetting) into StateTransition
+!insert (alarmActivatedToResetting, resetting) into TransitionState
+
+!insert (resetting, resettingToDisarmed) into StateTransition
+!insert (resettingToDisarmed, disarmed) into TransitionState
+
+!insert (armed, armedToMaintenance) into StateTransition
+!insert (armedToMaintenance, maintenance) into TransitionState
+
+!new StateMachine('solarPowerStationController')
+!solarPowerStationController.name := 'solarPowerStationController'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('panelAdjustment')
+!panelAdjustment.name := 'panelAdjustment'
+
+!new State('energyGeneration')
+!energyGeneration.name := 'energyGeneration'
+
+!new State('energyStorage')
+!energyStorage.name := 'energyStorage'
+
+!new State('powerSupply')
+!powerSupply.name := 'powerSupply'
+
+!new State('systemShutdown')
+!systemShutdown.name := 'systemShutdown'
+
+!new Transition('initiatePanelAdjustment')
+!initiatePanelAdjustment.name := 'initiatePanelAdjustment'
+
+!new Transition('startGeneration')
+!startGeneration.name := 'startGeneration'
+
+!new Transition('beginEnergyStorage')
+!beginEnergyStorage.name := 'beginEnergyStorage'
+
+!new Transition('distributePower')
+!distributePower.name := 'distributePower'
+
+!new Transition('revertToStandby')
+!revertToStandby.name := 'revertToStandby'
+
+!new Transition('emergencyShutdown')
+!emergencyShutdown.name := 'emergencyShutdown'
+
+!new TimeEvent('timeEventInitiatePanelAdjustment')
+!timeEventInitiatePanelAdjustment.time := 10
+
+!new TimeEvent('timeEventStartGeneration')
+!timeEventStartGeneration.time := 15
+
+!new TimeEvent('timeEventBeginEnergyStorage')
+!timeEventBeginEnergyStorage.time := 120
+
+!new TimeEvent('timeEventDistributePower')
+!timeEventDistributePower.time := 180
+
+!new TimeEvent('timeEventRevertToStandby')
+!timeEventRevertToStandby.time := 240
+
+!new TimeEvent('timeEventEmergencyShutdown')
+!timeEventEmergencyShutdown.time := 5
+
+!insert (solarPowerStationController, standby) into StateMachineContainsStates
+!insert (solarPowerStationController, panelAdjustment) into StateMachineContainsStates
+!insert (solarPowerStationController, energyGeneration) into StateMachineContainsStates
+!insert (solarPowerStationController, energyStorage) into StateMachineContainsStates
+!insert (solarPowerStationController, powerSupply) into StateMachineContainsStates
+!insert (solarPowerStationController, systemShutdown) into StateMachineContainsStates
+
+!insert (solarPowerStationController, standby) into StateMachineStartsStates
+
+!insert (solarPowerStationController, initiatePanelAdjustment) into StateMachineContainsTransitions
+!insert (solarPowerStationController, startGeneration) into StateMachineContainsTransitions
+!insert (solarPowerStationController, beginEnergyStorage) into StateMachineContainsTransitions
+!insert (solarPowerStationController, distributePower) into StateMachineContainsTransitions
+!insert (solarPowerStationController, revertToStandby) into StateMachineContainsTransitions
+!insert (solarPowerStationController, emergencyShutdown) into StateMachineContainsTransitions
+
+!insert (initiatePanelAdjustment, timeEventInitiatePanelAdjustment) into TransitionContainsEvents
+!insert (startGeneration, timeEventStartGeneration) into TransitionContainsEvents
+!insert (beginEnergyStorage, timeEventBeginEnergyStorage) into TransitionContainsEvents
+!insert (distributePower, timeEventDistributePower) into TransitionContainsEvents
+!insert (revertToStandby, timeEventRevertToStandby) into TransitionContainsEvents
+!insert (emergencyShutdown, timeEventEmergencyShutdown) into TransitionContainsEvents
+
+!insert (standby, initiatePanelAdjustment) into StateTransition
+!insert (initiatePanelAdjustment, panelAdjustment) into TransitionState
+
+!insert (panelAdjustment, startGeneration) into StateTransition
+!insert (startGeneration, energyGeneration) into TransitionState
+
+!insert (energyGeneration, beginEnergyStorage) into StateTransition
+!insert (beginEnergyStorage, energyStorage) into TransitionState
+
+!insert (energyStorage, distributePower) into StateTransition
+!insert (distributePower, powerSupply) into TransitionState
+
+!insert (powerSupply, revertToStandby) into StateTransition
+!insert (revertToStandby, standby) into TransitionState
+
+!insert (energyGeneration, emergencyShutdown) into StateTransition
+!insert (emergencyShutdown, systemShutdown) into TransitionState
+
+!new StateMachine('wildlifeTrackingProtocol')
+!wildlifeTrackingProtocol.name := 'wildlifeTrackingProtocol'
+
+!new State('initializeSensors')
+!initializeSensors.name := 'initializeSensors'
+
+!new State('collectData')
+!collectData.name := 'collectData'
+
+!new State('analyzePatterns')
+!analyzePatterns.name := 'analyzePatterns'
+
+!new State('detectThreats')
+!detectThreats.name := 'detectThreats'
+
+!new State('initiateProtection')
+!initiateProtection.name := 'initiateProtection'
+
+!new State('reportFindings')
+!reportFindings.name := 'reportFindings'
+
+!new State('resetSystem')
+!resetSystem.name := 'resetSystem'
+
+!new Transition('activateTracking')
+!activateTracking.name := 'activateTracking'
+
+!new Transition('performAnalysis')
+!performAnalysis.name := 'performAnalysis'
+
+!new Transition('evaluateThreats')
+!evaluateThreats.name := 'evaluateThreats'
+
+!new Transition('raiseAlert')
+!raiseAlert.name := 'raiseAlert'
+
+!new Transition('compileData')
+!compileData.name := 'compileData'
+
+!new Transition('confirmSafety')
+!confirmSafety.name := 'confirmSafety'
+
+!new Transition('cycleReset')
+!cycleReset.name := 'cycleReset'
+
+!new Transition('startOver')
+!startOver.name := 'startOver'
+
+!new TimeEvent('setupTime')
+!setupTime.time := 20
+
+!new TimeEvent('dataCollectionDuration')
+!dataCollectionDuration.time := 200
+
+!new TimeEvent('analysisDuration')
+!analysisDuration.time := 50
+
+!new TimeEvent('threatResponseTime')
+!threatResponseTime.time := 15
+
+!new TimeEvent('reportingTime')
+!reportingTime.time := 30
+
+!new TimeEvent('resetDuration')
+!resetDuration.time := 10
+
+!new TimeEvent('confirmSafetyTime')
+!confirmSafetyTime.time := 10
+
+!new TimeEvent('startOverTime')
+!startOverTime.time := 5
+
+!insert (wildlifeTrackingProtocol, initializeSensors) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, collectData) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, analyzePatterns) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, detectThreats) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, initiateProtection) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, reportFindings) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, resetSystem) into StateMachineContainsStates
+
+!insert (wildlifeTrackingProtocol, initializeSensors) into StateMachineStartsStates
+
+!insert (wildlifeTrackingProtocol, activateTracking) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, performAnalysis) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, evaluateThreats) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, raiseAlert) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, compileData) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, confirmSafety) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, cycleReset) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, startOver) into StateMachineContainsTransitions
+
+!insert (activateTracking, setupTime) into TransitionContainsEvents
+!insert (performAnalysis, dataCollectionDuration) into TransitionContainsEvents
+!insert (evaluateThreats, analysisDuration) into TransitionContainsEvents
+!insert (raiseAlert, threatResponseTime) into TransitionContainsEvents
+!insert (compileData, reportingTime) into TransitionContainsEvents
+!insert (cycleReset, resetDuration) into TransitionContainsEvents
+!insert (confirmSafety, confirmSafetyTime) into TransitionContainsEvents
+!insert (startOver, startOverTime) into TransitionContainsEvents
+
+!insert (initializeSensors, activateTracking) into StateTransition
+!insert (activateTracking, collectData) into TransitionState
+
+!insert (collectData, performAnalysis) into StateTransition
+!insert (performAnalysis, analyzePatterns) into TransitionState
+
+!insert (analyzePatterns, evaluateThreats) into StateTransition
+!insert (evaluateThreats, detectThreats) into TransitionState
+
+!insert (analyzePatterns, compileData) into StateTransition
+!insert (compileData, reportFindings) into TransitionState
+
+!insert (detectThreats, raiseAlert) into StateTransition
+!insert (raiseAlert, initiateProtection) into TransitionState
+
+!insert (initiateProtection, confirmSafety) into StateTransition
+!insert (confirmSafety, reportFindings) into TransitionState
+
+!insert (reportFindings, cycleReset) into StateTransition
+!insert (cycleReset, resetSystem) into TransitionState
+
+!insert (resetSystem, startOver) into StateTransition
+!insert (startOver, initializeSensors) into TransitionState
+

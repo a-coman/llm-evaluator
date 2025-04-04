@@ -1,0 +1,83 @@
+!new RentalOffice('rentalOffice21')
+!rentalOffice21.name := 'Bayside Haulers LLC'
+!rentalOffice21.number := 43
+!rentalOffice21.address := '789 Maritime Blvd, Newport, RI 02840'
+
+!new Truck('truck19')
+!truck19.id := 40
+!truck19.registrationState := #DE
+!truck19.licensePlateNumber := 'BHLRI567'
+!truck19.vehicleTypeCode := #TRUCK
+!truck19.registrationLastMaintenanceDate := Date('2023-02-28')
+!truck19.expirationDate := Date('2026-02-28')
+!truck19.odometerReading := 1500
+!truck19.gasTankCapacity := 80.0
+!truck19.workingRadio := true
+!truck19.mileage := 12
+
+!new Vehicle('vehicle22')
+!vehicle22.id := 41
+!vehicle22.registrationState := #DE
+!vehicle22.licensePlateNumber := 'BHLRI568'
+!vehicle22.vehicleTypeCode := #OPEN_TRAILER
+!vehicle22.registrationLastMaintenanceDate := Date('2023-06-01')
+!vehicle22.expirationDate := Date('2025-06-01')
+
+!new Truck('truck20')
+!truck20.id := 42
+!truck20.registrationState := #DE
+!truck20.licensePlateNumber := 'BHLRI569'
+!truck20.vehicleTypeCode := #TRUCK
+!truck20.registrationLastMaintenanceDate := Date('2023-09-15')
+!truck20.expirationDate := Date('2025-09-15')
+!truck20.odometerReading := 0
+!truck20.gasTankCapacity := 100.0
+!truck20.workingRadio := false
+!truck20.mileage := 11
+
+!new RentalAgreement('rentalAgreement34')
+!rentalAgreement34.number := 3005
+!rentalAgreement34.rentalDate := Date('2023-12-20')
+!rentalAgreement34.anticipatedDuration := 7
+!rentalAgreement34.depositPaid := 250.00
+!rentalAgreement34.quotedDailyRate := 120.00
+!rentalAgreement34.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement35')
+!rentalAgreement35.number := 3006
+!rentalAgreement35.rentalDate := Date('2023-12-23')
+!rentalAgreement35.anticipatedDuration := 0
+!rentalAgreement35.depositPaid := 0.00
+!rentalAgreement35.quotedDailyRate := 0.00
+!rentalAgreement35.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer15')
+!individualCustomer15.name := 'Avery Smith'
+!individualCustomer15.address := '456 Ocean Drive, Newport, RI 02840'
+!individualCustomer15.poorRisk := false
+!individualCustomer15.homePhone := '(401) 555-1010'
+!individualCustomer15.driverLicenseState := #DE
+!individualCustomer15.driverLicenseNumber := 300
+!individualCustomer15.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company18')
+!company18.name := 'Coastal Logistics Corp.'
+!company18.address := '333 Seaside Lane, Providence, RI 02903'
+!company18.poorRisk := false
+!company18.idNumber := 456789
+
+!insert (rentalOffice21, truck19) into RentalOfficeVehicle
+!insert (rentalOffice21, vehicle22) into RentalOfficeVehicle
+!insert (rentalOffice21, truck20) into RentalOfficeVehicle
+
+!insert (rentalOffice21, rentalAgreement34) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice21, rentalAgreement34) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement34, truck19) into RentalAgreementVehicle
+!insert (rentalAgreement34, individualCustomer15) into RentalAgreementCustomer
+
+!insert (rentalOffice21, rentalAgreement35) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice21, rentalAgreement35) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement35, vehicle22) into RentalAgreementVehicle
+!insert (rentalAgreement35, company18) into RentalAgreementCustomer

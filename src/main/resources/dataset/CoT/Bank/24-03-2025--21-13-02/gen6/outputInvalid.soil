@@ -1,0 +1,43 @@
+!new Bank('bank31')
+!bank31.country := 'Brazil'
+!bank31.name := 'Horizonte Bank'
+!bank31.bic := 'HBRCBRRJ'
+
+!new Account('account73')
+!account73.iban := 'BR9701234567890123456789012'
+!account73.balance := 3500
+
+!new Account('account74')
+!account74.iban := 'BR5609876543210987654321098'
+!account74.balance := -250
+
+!new Person('person100')
+!person100.firstName := 'Ana'
+!person100.lastName := 'Lopez'
+!person100.age := 48
+
+!new Person('person101')
+!person101.firstName := 'Carlos'
+!person101.lastName := 'Lopez'
+!person101.age := 51
+
+!new Person('person102')
+!person102.firstName := 'Pedro'
+!person102.lastName := 'Lopez'
+!person102.age := 17
+
+!new Person('person103')
+!person103.firstName := 'Rafael'
+!person103.lastName := 'Silva'
+!person103.age := 24
+
+!insert (person100, account73) into Ownership
+!insert (person101, account73) into Ownership
+!insert (person103, account74) into Ownership
+
+!insert (person102, account73) into Use
+!insert (person103, account74) into Use
+
+!insert (bank31, account73) into AccountOfBanks
+!insert (bank31, account74) into AccountOfBanks
+

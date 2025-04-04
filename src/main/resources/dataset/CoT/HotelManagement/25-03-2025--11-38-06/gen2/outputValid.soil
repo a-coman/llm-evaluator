@@ -1,0 +1,300 @@
+!new Customer('customer6')
+!customer6.firstName := 'Hiroshi'
+!customer6.lastName := 'Tanaka'
+
+!new Booking('booking6')
+!booking6.bookingId := 67891
+!booking6.startDate := 'December 24, 2023'
+!booking6.endDate := 'December 28, 2023'
+!booking6.canceled := true
+!booking6.confirmed := false
+
+!new RoomReservation('roomreservation9')
+!roomreservation9.checkInDate := 'December 24, 2023'
+!roomreservation9.checkOutDate := 'December 26, 2023'
+
+!new RoomReservation('roomreservation10')
+!roomreservation10.checkInDate := 'December 26, 2023'
+!roomreservation10.checkOutDate := 'December 28, 2023'
+
+!new Room('room13')
+!room13.roomNumber := 101
+!room13.numBeds := 1
+!room13.pricePerNight := 90.00
+!room13.occupied := false
+!room13.blocked := false
+
+!new Room('room14')
+!room14.roomNumber := 203
+!room14.numBeds := 3
+!room14.pricePerNight := 250.00
+!room14.occupied := false
+!room14.blocked := true
+
+!new RoomExtra('roomextra13')
+!roomextra13.price := 15.00
+!roomextra13.description := 'Evening Cocktail'
+
+!new Bill('bill10')
+!bill10.billId := 89012
+!bill10.price := 0.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto6')
+!freeroomtypesdto6.roomTypeDescription := 'Single Economy'
+!freeroomtypesdto6.numBeds := 1
+!freeroomtypesdto6.pricePerNight := 60.00
+!freeroomtypesdto6.numFreeRooms := 10
+
+!insert (booking6, customer6) into BookingCustomer
+!insert (booking6, roomreservation9) into BookingRoomReservation
+!insert (booking6, roomreservation10) into BookingRoomReservation
+!insert (booking6, bill10) into BookingBill
+
+!insert (roomreservation9, room13) into RoomReservationRoom
+!insert (roomreservation10, room14) into RoomReservationRoom
+
+!insert (roomreservation9, roomextra13) into RoomReservationExtras
+
+!new RoomExtra('roomextra14')
+!roomextra14.price := 15.00
+!roomextra14.description := 'Evening Cocktail'
+!insert (roomreservation10, roomextra14) into RoomReservationExtras
+
+!new Bill('bill11')
+!bill11.billId := 89013
+!bill11.price := 0.00
+!insert (bill10, roomreservation9) into BillRoomReservation
+!insert (bill11, roomreservation10) into BillRoomReservation
+
+!new Customer('customer7')
+!customer7.firstName := 'Lin'
+!customer7.lastName := 'Nguyen'
+
+!new Booking('booking7')
+!booking7.bookingId := 2
+!booking7.startDate := '2025-08-15'
+!booking7.endDate := '2025-08-15'
+!booking7.canceled := false
+!booking7.confirmed := true
+
+!new Bill('bill12')
+!bill12.billId := 3
+!bill12.price := 0.01
+
+!new Bill('bill13')
+!bill13.billId := 4
+!bill13.price := 9999.98
+
+!new RoomReservation('roomreservation11')
+!roomreservation11.checkInDate := '2025-08-15'
+!roomreservation11.checkOutDate := '2025-08-15'
+
+!new Room('room15')
+!room15.roomNumber := 202
+!room15.numBeds := 1
+!room15.pricePerNight := 5.00
+!room15.occupied := true
+!room15.blocked := false
+
+!new Room('room16')
+!room16.roomNumber := 303
+!room16.numBeds := 2
+!room16.pricePerNight := 50.00
+!room16.occupied := false
+!room16.blocked := false
+
+!new RoomExtra('roomextra15')
+!roomextra15.price := 30.00
+!roomextra15.description := 'Traditional Vietnamese Dinner Experience'
+
+!new RoomExtra('roomextra16')
+!roomextra16.price := 20.00
+!roomextra16.description := 'Tai Chi Session at the Park'
+
+!new FreeRoomTypesDTO('freeroomtypesdto7')
+!freeroomtypesdto7.roomTypeDescription := 'Standard Family Room'
+!freeroomtypesdto7.numBeds := 4
+!freeroomtypesdto7.pricePerNight := 100.00
+!freeroomtypesdto7.numFreeRooms := 3
+
+!insert (booking7, customer7) into BookingCustomer
+!insert (booking7, roomreservation11) into BookingRoomReservation
+!insert (booking7, bill12) into BookingBill
+!insert (booking7, bill13) into BookingBill
+
+!insert (roomreservation11, room15) into RoomReservationRoom
+!insert (roomreservation11, room16) into RoomReservationRoom
+
+!insert (roomreservation11, roomextra15) into RoomReservationExtras
+!insert (roomreservation11, roomextra16) into RoomReservationExtras
+
+!insert (bill12, roomreservation11) into BillRoomReservation
+
+!new RoomReservation('roomreservation12')
+!roomreservation12.checkInDate := '2025-08-15'
+!roomreservation12.checkOutDate := '2025-08-15'
+!insert (booking7, roomreservation12) into BookingRoomReservation
+!insert (roomreservation12, room15) into RoomReservationRoom
+!insert (roomreservation12, room16) into RoomReservationRoom
+!insert (roomreservation12, roomextra15) into RoomReservationExtras
+!insert (roomreservation12, roomextra16) into RoomReservationExtras
+!insert (bill13, roomreservation12) into BillRoomReservation
+
+!new Customer('customer8')
+!customer8.firstName := 'Li'
+!customer8.lastName := 'Zhang'
+
+!new Booking('booking8')
+!booking8.bookingId := 123
+!booking8.startDate := 'October 10, 2024'
+!booking8.endDate := 'October 17, 2024'
+!booking8.canceled := false
+!booking8.confirmed := true
+
+!new RoomReservation('roomreservation13')
+!roomreservation13.checkInDate := 'October 10, 2024'
+!roomreservation13.checkOutDate := 'October 14, 2024'
+
+!new RoomReservation('roomreservation14')
+!roomreservation14.checkInDate := 'October 14, 2024'
+!roomreservation14.checkOutDate := 'October 17, 2024'
+
+!new Room('room17')
+!room17.roomNumber := 305
+!room17.numBeds := 1
+!room17.pricePerNight := 180.00
+!room17.occupied := true
+!room17.blocked := false
+
+!new Room('room18')
+!room18.roomNumber := 401
+!room18.numBeds := 2
+!room18.pricePerNight := 220.00
+!room18.occupied := true
+!room18.blocked := false
+
+!new RoomExtra('roomextra17')
+!roomextra17.price := 200.00
+!roomextra17.description := 'Guided safari tour inclusive of transportation, meals, and a night safari experience.'
+
+!new RoomExtra('roomextra18')
+!roomextra18.price := 50.00
+!roomextra18.description := 'Evening show featuring traditional dances of the local tribes.'
+
+!new RoomExtra('roomextra19')
+!roomextra19.price := 150.00
+!roomextra19.description := 'Exclusive dinner experience on the savannah, complete with gourmet cuisine and wine.'
+
+!new RoomExtra('roomextra20')
+!roomextra20.price := 300.00
+!roomextra20.description := 'Personalized game drive with a dedicated ranger, inclusive of photography sessions.'
+
+!new Bill('bill14')
+!bill14.billId := 12345
+!bill14.price := 970.00
+
+!new Bill('bill15')
+!bill15.billId := 12346
+!bill15.price := 1010.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto8')
+!freeroomtypesdto8.roomTypeDescription := 'Luxurious tent offering a unique blend of camping experience with high-end amenities.'
+!freeroomtypesdto8.numBeds := 2
+!freeroomtypesdto8.pricePerNight := 250.00
+!freeroomtypesdto8.numFreeRooms := 1
+
+!new FreeRoomTypesDTO('freeroomtypesdto9')
+!freeroomtypesdto9.roomTypeDescription := 'Elegant villa with panoramic views of the savannah, featuring private pools and verandas.'
+!freeroomtypesdto9.numBeds := 3
+!freeroomtypesdto9.pricePerNight := 350.00
+!freeroomtypesdto9.numFreeRooms := 2
+
+!insert (booking8, customer8) into BookingCustomer
+!insert (booking8, roomreservation13) into BookingRoomReservation
+!insert (booking8, roomreservation14) into BookingRoomReservation
+
+!insert (roomreservation13, room17) into RoomReservationRoom
+!insert (roomreservation14, room18) into RoomReservationRoom
+
+!insert (roomreservation13, roomextra17) into RoomReservationExtras
+!insert (roomreservation13, roomextra18) into RoomReservationExtras
+!insert (roomreservation14, roomextra19) into RoomReservationExtras
+!insert (roomreservation14, roomextra20) into RoomReservationExtras
+
+!insert (bill14, roomreservation13) into BillRoomReservation
+!insert (bill15, roomreservation14) into BillRoomReservation
+
+!insert (booking8, bill14) into BookingBill
+!insert (booking8, bill15) into BookingBill
+
+!new Customer('customer10')
+!customer10.firstName := 'Alejandro'
+!customer10.lastName := 'Muñoz'
+
+!new Booking('booking10')
+!booking10.bookingId := 2002
+!booking10.startDate := 'April 1, 2024'
+!booking10.endDate := 'July 1, 2024'
+!booking10.canceled := false
+!booking10.confirmed := true
+
+!new RoomReservation('roomreservation16')
+!roomreservation16.checkInDate := 'April 1, 2024'
+!roomreservation16.checkOutDate := 'July 1, 2024'
+
+!new RoomReservation('roomreservation17')
+!roomreservation17.checkInDate := 'April 1, 2024'
+!roomreservation17.checkOutDate := 'July 1, 2024'
+
+!new Room('room20')
+!room20.roomNumber := 401
+!room20.numBeds := 10
+!room20.pricePerNight := 500.00
+!room20.occupied := true
+!room20.blocked := false
+
+!new Room('room21')
+!room21.roomNumber := 402
+!room21.numBeds := 1
+!room21.pricePerNight := 180.00
+!room21.occupied := true
+!room21.blocked := false
+
+!new RoomExtra('roomextra23')
+!roomextra23.price := 0.00
+!roomextra23.description := 'Complimentary access to study facilities'
+
+!new RoomExtra('roomextra24')
+!roomextra24.price := 0.00
+!roomextra24.description := 'No-cost laundry service'
+
+!new Bill('bill20')
+!bill20.billId := 5004
+!bill20.price := 40500.00
+
+!new Bill('bill21')
+!bill21.billId := 5005
+!bill21.price := 16200.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto10')
+!freeroomtypesdto10.roomTypeDescription := 'Twin Room'
+!freeroomtypesdto10.numBeds := 2
+!freeroomtypesdto10.pricePerNight := 120.00
+!freeroomtypesdto10.numFreeRooms := 5
+
+!insert (booking10, customer10) into BookingCustomer
+!insert (booking10, roomreservation16) into BookingRoomReservation
+!insert (booking10, roomreservation17) into BookingRoomReservation
+
+!insert (roomreservation16, room20) into RoomReservationRoom
+!insert (roomreservation17, room21) into RoomReservationRoom
+
+!insert (roomreservation16, roomextra23) into RoomReservationExtras
+!insert (roomreservation17, roomextra24) into RoomReservationExtras
+
+!insert (bill20, roomreservation16) into BillRoomReservation
+!insert (bill21, roomreservation17) into BillRoomReservation
+
+!insert (booking10, bill20) into BookingBill
+!insert (booking10, bill21) into BookingBill
+

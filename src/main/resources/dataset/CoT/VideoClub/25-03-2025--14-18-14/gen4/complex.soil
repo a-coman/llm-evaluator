@@ -1,0 +1,59 @@
+!new Client('selimKaya')
+!selimKaya.clientId := 401
+!selimKaya.isSuspended := false
+
+!new Client('leylaAydin')
+!leylaAydin.clientId := 402
+!leylaAydin.isSuspended := false
+
+!new Client('mehmetDemir')
+!mehmetDemir.clientId := 403
+!mehmetDemir.isSuspended := true
+
+!new Rental('rentalSelim')
+!rentalSelim.date := Date('2023-08-18')
+
+!new Rental('rentalLeyla')
+!rentalLeyla.date := Date('2023-08-20')
+
+!new Movie('cassetteSultansSecret')
+!cassetteSultansSecret.title := 'The Sultan\'s Secret'
+!cassetteSultansSecret.availableCopies := 5
+!cassetteSultansSecret.genre := #Action
+
+!new Movie('cassetteCafePera')
+!cassetteCafePera.title := 'Café Pera'
+!cassetteCafePera.availableCopies := 4
+!cassetteCafePera.genre := #Comedy
+
+!new Series('cassetteGoldenHornChronicles')
+!cassetteGoldenHornChronicles.title := 'Golden Horn Chronicles'
+!cassetteGoldenHornChronicles.availableCopies := 2
+!cassetteGoldenHornChronicles.episode := 22
+
+!new Actor('actorTubaBuyukustun')
+!actorTubaBuyukustun.name := 'Tuba Büyüküstün'
+
+!new Actor('actorKivancTatlitug')
+!actorKivancTatlitug.name := 'Kıvanç Tatlıtuğ'
+
+!new Actor('actorCagatayUlusoy')
+!actorCagatayUlusoy.name := 'Çağatay Ulusoy'
+
+!new Actor('actorBerenSaat')
+!actorBerenSaat.name := 'Beren Saat'
+
+!insert (selimKaya, rentalSelim) into ClientRental
+!insert (leylaAydin, rentalLeyla) into ClientRental
+
+!insert (rentalSelim, cassetteSultansSecret) into RentalCassette
+!insert (rentalLeyla, cassetteCafePera) into RentalCassette
+!insert (rentalLeyla, cassetteGoldenHornChronicles) into RentalCassette
+
+!insert (cassetteSultansSecret, actorKivancTatlitug) into CassetteActor
+!insert (cassetteSultansSecret, actorTubaBuyukustun) into CassetteActor
+
+!insert (cassetteCafePera, actorCagatayUlusoy) into CassetteActor
+
+!insert (cassetteGoldenHornChronicles, actorBerenSaat) into CassetteActor
+!insert (cassetteGoldenHornChronicles, actorTubaBuyukustun) into CassetteActor

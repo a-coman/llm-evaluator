@@ -1,0 +1,82 @@
+!new StateMachine('patientMonitoringControl')
+!patientMonitoringControl.name := 'patientMonitoringControl'
+
+!new State('normalMonitoring')
+!normalMonitoring.name := 'normalMonitoring'
+
+!new State('alertCondition')
+!alertCondition.name := 'alertCondition'
+
+!new State('emergencyResponse')
+!emergencyResponse.name := 'emergencyResponse'
+
+!new State('maintenanceCheck')
+!maintenanceCheck.name := 'maintenanceCheck'
+
+!new State('systemReset')
+!systemReset.name := 'systemReset'
+
+!new Transition('detectAlert')
+!detectAlert.name := 'detectAlert'
+
+!new Transition('escalateEmergency')
+!escalateEmergency.name := 'escalateEmergency'
+
+!new Transition('performMaintenance')
+!performMaintenance.name := 'performMaintenance'
+
+!new Transition('completeMaintenance')
+!completeMaintenance.name := 'completeMaintenance'
+
+!new Transition('resetSystem')
+!resetSystem.name := 'resetSystem'
+
+!new TimeEvent('timeEventDetectAlert')
+!timeEventDetectAlert.time := 1
+
+!new TimeEvent('timeEventEscalateEmergency')
+!timeEventEscalateEmergency.time := 2
+
+!new TimeEvent('timeEventPerformMaintenance')
+!timeEventPerformMaintenance.time := 10
+
+!new TimeEvent('timeEventCompleteMaintenance')
+!timeEventCompleteMaintenance.time := 5
+
+!new TimeEvent('timeEventResetSystem')
+!timeEventResetSystem.time := 3
+
+!insert (patientMonitoringControl, normalMonitoring) into StateMachineContainsStates
+!insert (patientMonitoringControl, alertCondition) into StateMachineContainsStates
+!insert (patientMonitoringControl, emergencyResponse) into StateMachineContainsStates
+!insert (patientMonitoringControl, maintenanceCheck) into StateMachineContainsStates
+!insert (patientMonitoringControl, systemReset) into StateMachineContainsStates
+
+!insert (patientMonitoringControl, normalMonitoring) into StateMachineStartsStates
+
+!insert (patientMonitoringControl, detectAlert) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, escalateEmergency) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, performMaintenance) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, completeMaintenance) into StateMachineContainsTransitions
+!insert (patientMonitoringControl, resetSystem) into StateMachineContainsTransitions
+
+!insert (detectAlert, timeEventDetectAlert) into TransitionContainsEvents
+!insert (escalateEmergency, timeEventEscalateEmergency) into TransitionContainsEvents
+!insert (performMaintenance, timeEventPerformMaintenance) into TransitionContainsEvents
+!insert (completeMaintenance, timeEventCompleteMaintenance) into TransitionContainsEvents
+!insert (resetSystem, timeEventResetSystem) into TransitionContainsEvents
+
+!insert (normalMonitoring, detectAlert) into StateTransition
+!insert (detectAlert, alertCondition) into TransitionState
+
+!insert (normalMonitoring, performMaintenance) into StateTransition
+!insert (performMaintenance, maintenanceCheck) into TransitionState
+
+!insert (alertCondition, escalateEmergency) into StateTransition
+!insert (escalateEmergency, emergencyResponse) into TransitionState
+
+!insert (emergencyResponse, resetSystem) into StateTransition
+!insert (resetSystem, systemReset) into TransitionState
+
+!insert (maintenanceCheck, completeMaintenance) into StateTransition
+!insert (completeMaintenance, normalMonitoring) into TransitionState

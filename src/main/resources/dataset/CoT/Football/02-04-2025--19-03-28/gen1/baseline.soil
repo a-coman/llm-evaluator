@@ -1,0 +1,206 @@
+!new Club('club2')
+!club2.name := 'Vienna Stars'
+!club2.homeGround := 'Stadion Wien'
+!club2.chairman := 'Ludwig Bauer'
+
+!new Team('teamC')
+!teamC.name := 'Vienna Warriors'
+
+!insert (club2, teamC) into ClubTeam
+
+!new Player('player4')
+!player4.name := 'Leo Graf'
+!player4.age := 27
+!player4.bestFoot := #BOTH
+!player4.phoneNumber := '+43-1-1234567'
+
+!insert (teamC, player4) into TeamPlayer
+
+!new Position('position5')
+!position5.positionName := #FORWARD
+
+!insert (player4, position5) into PlayerPositions
+
+!new Competition('competition2')
+!competition2.name := 'Central European Cup'
+!competition2.type := 'International Tournament'
+
+!new Match('match2')
+!match2.date := '2023-10-15'
+!match2.homeAway := true
+
+!insert (competition2, match2) into CompetitionMatch
+
+!insert (teamC, match2) into LocalMatch
+
+!new Club('club3')
+!club3.name := 'Berlin Bears Club'
+!club3.homeGround := 'Berlin Stadium'
+!club3.chairman := 'Michael Jordan'
+
+!new Team('teamD')
+!teamD.name := 'Berlin Bears'
+
+!insert (club3, teamD) into ClubTeam
+
+!new Player('player2')
+!player2.name := 'Hans Müller'
+!player2.age := 24
+!player2.bestFoot := #RIGHT
+!player2.phoneNumber := '+49-30-123456'
+
+!insert (teamD, player2) into TeamPlayer
+
+!new Position('position3')
+!position3.positionName := #FORWARD
+
+!insert (player2, position3) into PlayerPositions
+
+!new PlayerNotes('playerNote2')
+!playerNote2.note := 'Quick player with excellent dribbling skills.'
+!playerNote2.date := '2023-09-25'
+
+!insert (player2, playerNote2) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective3')
+!trainingObjective3.areaToImprove := 'Endurance'
+!trainingObjective3.startDate := '2023-08-01'
+!trainingObjective3.endDate := '2023-12-01'
+!trainingObjective3.success := false
+
+!insert (trainingObjective3, player2) into TrainingObjectivePlayer
+
+!new Player('player3')
+!player3.name := 'Franziska Schmidt'
+!player3.age := 21
+!player3.bestFoot := #LEFT
+!player3.phoneNumber := '+49-30-654321'
+
+!insert (teamD, player3) into TeamPlayer
+
+!new Position('position4')
+!position4.positionName := #DEFENDER
+
+!insert (player3, position4) into PlayerPositions
+
+!insert (teamD, match2) into VisitorMatch
+
+!new MatchReport('matchReport2')
+!matchReport2.duration := 90
+!matchReport2.scoreVisitor := 2
+!matchReport2.scoreLocal := 3
+
+!insert (match2, matchReport2) into MatchMatchReport
+
+!new MatchEvent('matchEvent1')
+!matchEvent1.eventType := #GOAL
+!matchEvent1.time := 15
+
+!new MatchEvent('matchEvent2')
+!matchEvent2.eventType := #GOAL
+!matchEvent2.time := 37
+
+!new MatchEvent('matchEvent3')
+!matchEvent3.eventType := #GOAL
+!matchEvent3.time := 59
+
+!new MatchEvent('matchEvent4')
+!matchEvent4.eventType := #FOUL
+!matchEvent4.time := 72
+
+!new MatchEvent('matchEvent5')
+!matchEvent5.eventType := #GOAL
+!matchEvent5.time := 88
+
+!insert (match2, matchEvent1) into MatchMatchEvent
+!insert (match2, matchEvent2) into MatchMatchEvent
+!insert (match2, matchEvent3) into MatchMatchEvent
+!insert (match2, matchEvent4) into MatchMatchEvent
+!insert (match2, matchEvent5) into MatchMatchEvent
+
+!new MatchNote('matchNote1')
+!matchNote1.note := 'Unfortunate offside that resulted in a controversy.'
+!matchNote1.date := '2023-10-15'
+
+!insert (match2, matchNote1) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer2')
+!matchPlayer2.booked := false
+!matchPlayer2.goals := 1
+!matchPlayer2.rating := 8
+
+!insert (player2, matchPlayer2) into PlayerMatch
+!insert (match2, matchPlayer2) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition2')
+!matchPlayerPosition2.positionName := #FORWARD
+!matchPlayerPosition2.number := 9
+
+!insert (matchPlayer2, matchPlayerPosition2) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer3')
+!matchPlayer3.booked := true
+!matchPlayer3.goals := 0
+!matchPlayer3.rating := 6
+
+!insert (player3, matchPlayer3) into PlayerMatch
+!insert (match2, matchPlayer3) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition3')
+!matchPlayerPosition3.positionName := #MIDFIELDER
+!matchPlayerPosition3.number := 10
+
+!insert (matchPlayer3, matchPlayerPosition3) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession2')
+!trainingSession2.date := '2023-10-10'
+!trainingSession2.location := 'Berlin Training Grounds'
+!trainingSession2.purpose := 'Pre-Match Preparations'
+
+!insert (teamD, trainingSession2) into TeamTraining
+
+!new TrainingNotes('trainingNote3')
+!trainingNote3.note := 'Focused on defensive strategies.'
+!trainingNote3.date := '2023-10-10'
+
+!new TrainingNotes('trainingNote4')
+!trainingNote4.note := 'Endurance drills at the end.'
+!trainingNote4.date := '2023-10-10'
+
+!insert (trainingSession2, trainingNote3) into TrainingTrainingNotes
+!insert (trainingSession2, trainingNote4) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend1')
+!failedAttend1.reason := 'Illness'
+
+!insert (trainingSession2, failedAttend1) into TrainingFailded
+!insert (failedAttend1, player3) into FailedPlayer
+
+!new TrainingObjective('trainingObjective4')
+!trainingObjective4.areaToImprove := 'Defensive Skills'
+!trainingObjective4.startDate := '2023-07-01'
+!trainingObjective4.endDate := '2023-11-01'
+!trainingObjective4.success := true
+
+!insert (trainingObjective4, player3) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession3')
+!trainingSession3.date := '2023-10-09'
+!trainingSession3.location := 'Vienna Warriors Training Ground'
+!trainingSession3.purpose := 'Strategic Planning'
+
+!insert (teamC, trainingSession3) into TeamTraining
+
+!new TrainingNotes('trainingNote5')
+!trainingNote5.note := 'Tactical formation setup.'
+!trainingNote5.date := '2023-10-09'
+
+!insert (trainingSession3, trainingNote5) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjective5')
+!trainingObjective5.areaToImprove := 'Scoring'
+!trainingObjective5.startDate := '2023-08-01'
+!trainingObjective5.endDate := '2023-12-01'
+!trainingObjective5.success := false
+
+!insert (trainingObjective5, player4) into TrainingObjectivePlayer

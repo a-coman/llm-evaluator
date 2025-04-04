@@ -1,0 +1,93 @@
+!new RentalOffice('rentalOffice30')
+!rentalOffice30.name := 'Rocky Mountain Rentals – Downtown Branch'
+!rentalOffice30.number := 707
+!rentalOffice30.address := '1500 Larimer St, Denver, CO, 80202'
+
+!new Truck('offRoadTruck')
+!offRoadTruck.id := 62
+!offRoadTruck.registrationState := #CO
+!offRoadTruck.licensePlateNumber := 'COOFF78'
+!offRoadTruck.vehicleTypeCode := #TRUCK
+!offRoadTruck.registrationLastMaintenanceDate := Date('2023-03-28')
+!offRoadTruck.expirationDate := Date('2024-03-27')
+!offRoadTruck.odometerReading := 62400
+!offRoadTruck.gasTankCapacity := 35.0
+!offRoadTruck.workingRadio := true
+!offRoadTruck.mileage := 9
+
+!new Vehicle('mountainBikeTrailer')
+!mountainBikeTrailer.id := 63
+!mountainBikeTrailer.registrationState := #CO
+!mountainBikeTrailer.licensePlateNumber := 'COTRAIL9'
+!mountainBikeTrailer.vehicleTypeCode := #OPEN_TRAILER
+!mountainBikeTrailer.registrationLastMaintenanceDate := Date('2023-05-10')
+!mountainBikeTrailer.expirationDate := Date('2024-05-09')
+
+!new Vehicle('snowmobile')
+!snowmobile.id := 64
+!snowmobile.registrationState := #CO
+!snowmobile.licensePlateNumber := 'COSNOW45'
+!snowmobile.vehicleTypeCode := #COVERED_TRAILER
+!snowmobile.registrationLastMaintenanceDate := Date('2023-11-01')
+!snowmobile.expirationDate := Date('2024-10-31')
+
+!new Individual('individualCustomer23')
+!individualCustomer23.name := 'Harper Collins'
+!individualCustomer23.address := '325 Mountain Rd, Boulder, CO, 80301'
+!individualCustomer23.poorRisk := false
+!individualCustomer23.homePhone := '720-555-0123'
+!individualCustomer23.driverLicenseState := #CO
+!individualCustomer23.driverLicenseNumber := 889045
+!individualCustomer23.driverLicenseExpirationDate := Date('2026-07-14')
+
+!new Company('company26')
+!company26.name := 'Alpine Adventures, LLC'
+!company26.address := '889 Peak Ave, Colorado Springs, CO, 80903'
+!company26.poorRisk := false
+!company26.idNumber := 456987321
+
+!new RentalAgreement('rentalAgreement51')
+!rentalAgreement51.number := 61012
+!rentalAgreement51.rentalDate := Date('2023-12-15')
+!rentalAgreement51.anticipatedDuration := 5
+!rentalAgreement51.depositPaid := 350.00
+!rentalAgreement51.quotedDailyRate := 125.00
+!rentalAgreement51.quotedRatePerMile := 0.55
+
+!new RentalAgreement('rentalAgreement52')
+!rentalAgreement52.number := 61013
+!rentalAgreement52.rentalDate := Date('2023-12-17')
+!rentalAgreement52.anticipatedDuration := 10
+!rentalAgreement52.depositPaid := 500.00
+!rentalAgreement52.quotedDailyRate := 100.00
+!rentalAgreement52.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement53')
+!rentalAgreement53.number := 61014
+!rentalAgreement53.rentalDate := Date('2023-12-20')
+!rentalAgreement53.anticipatedDuration := 3
+!rentalAgreement53.depositPaid := 150.00
+!rentalAgreement53.quotedDailyRate := 70.00
+!rentalAgreement53.quotedRatePerMile := 0.25
+
+!insert (rentalOffice30, offRoadTruck) into RentalOfficeVehicle
+!insert (rentalOffice30, mountainBikeTrailer) into RentalOfficeVehicle
+!insert (rentalOffice30, snowmobile) into RentalOfficeVehicle
+
+!insert (rentalOffice30, rentalAgreement51) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement51) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement51, offRoadTruck) into RentalAgreementVehicle
+!insert (rentalAgreement51, individualCustomer23) into RentalAgreementCustomer
+
+!insert (rentalOffice30, rentalAgreement52) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement52) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement52, mountainBikeTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement52, company26) into RentalAgreementCustomer
+
+!insert (rentalOffice30, rentalAgreement53) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement53) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement53, snowmobile) into RentalAgreementVehicle
+!insert (rentalAgreement53, individualCustomer23) into RentalAgreementCustomer

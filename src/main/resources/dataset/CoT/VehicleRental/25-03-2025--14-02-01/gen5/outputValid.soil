@@ -1,0 +1,314 @@
+!new RentalOffice('rentalOffice20')
+!rentalOffice20.name := 'BayArea Rentals'
+!rentalOffice20.number := 505
+!rentalOffice20.address := '742 Bay Street, San Francisco, CA, 94109'
+
+!new Vehicle('vehicle21')
+!vehicle21.id := 38
+!vehicle21.registrationState := #CA
+!vehicle21.licensePlateNumber := 'CA9910HYB'
+!vehicle21.vehicleTypeCode := #TRUCK10
+!vehicle21.registrationLastMaintenanceDate := Date('2023-03-22')
+!vehicle21.expirationDate := Date('2024-03-21')
+
+!new Truck('truck18')
+!truck18.id := 39
+!truck18.registrationState := #CA
+!truck18.licensePlateNumber := 'CA7810RFT'
+!truck18.vehicleTypeCode := #TRUCK
+!truck18.registrationLastMaintenanceDate := Date('2023-09-05')
+!truck18.expirationDate := Date('2024-05-01')
+!truck18.odometerReading := 160000
+!truck18.gasTankCapacity := 55.0
+!truck18.workingRadio := true
+!truck18.mileage := 9
+
+!new Individual('individualCustomer14')
+!individualCustomer14.name := 'Jorge Hernandez'
+!individualCustomer14.address := '100 Forest Hill Drive, Palo Alto, CA, 94301'
+!individualCustomer14.poorRisk := true
+!individualCustomer14.homePhone := '650-321-5678'
+!individualCustomer14.driverLicenseState := #CA
+!individualCustomer14.driverLicenseNumber := 8765432
+!individualCustomer14.driverLicenseExpirationDate := Date('2029-08-30')
+
+!new Company('company17')
+!company17.name := 'FreshFoods Suppliers'
+!company17.address := '888 Market Lane, Oakland, CA, 94607'
+!company17.poorRisk := false
+!company17.idNumber := 505900
+
+!new RentalAgreement('rentalAgreement32')
+!rentalAgreement32.number := 3009
+!rentalAgreement32.rentalDate := Date('2023-09-25')
+!rentalAgreement32.anticipatedDuration := 2
+!rentalAgreement32.depositPaid := 300.00
+!rentalAgreement32.quotedDailyRate := 75.00
+!rentalAgreement32.quotedRatePerMile := 0.22
+
+!new RentalAgreement('rentalAgreement33')
+!rentalAgreement33.number := 3010
+!rentalAgreement33.rentalDate := Date('2023-10-10')
+!rentalAgreement33.anticipatedDuration := 5
+!rentalAgreement33.depositPaid := 1000.00
+!rentalAgreement33.quotedDailyRate := 130.00
+!rentalAgreement33.quotedRatePerMile := 0.55
+
+!insert (rentalOffice20, vehicle21) into RentalOfficeVehicle
+!insert (rentalOffice20, truck18) into RentalOfficeVehicle
+
+!insert (rentalOffice20, rentalAgreement32) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice20, rentalAgreement32) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement32, vehicle21) into RentalAgreementVehicle
+!insert (rentalAgreement32, individualCustomer14) into RentalAgreementCustomer
+
+!insert (rentalOffice20, rentalAgreement33) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice20, rentalAgreement33) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement33, truck18) into RentalAgreementVehicle
+!insert (rentalAgreement33, company17) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice25')
+!rentalOffice25.name := 'Alpine Car & Trailer Rentals'
+!rentalOffice25.number := 55
+!rentalOffice25.address := '202 Summit Road, Denver, CO, 80202'
+
+!new Truck('electricTruck')
+!electricTruck.id := 49
+!electricTruck.registrationState := #CO
+!electricTruck.licensePlateNumber := 'ECO-TRUK'
+!electricTruck.vehicleTypeCode := #TRUCK
+!electricTruck.registrationLastMaintenanceDate := Date('2023-05-20')
+!electricTruck.expirationDate := Date('2024-05-20')
+!electricTruck.odometerReading := 50
+!electricTruck.gasTankCapacity := 0.0
+!electricTruck.workingRadio := true
+!electricTruck.mileage := 0
+
+!new Vehicle('customTrailer')
+!customTrailer.id := 50
+!customTrailer.registrationState := #CO
+!customTrailer.licensePlateNumber := 'CUST-089'
+!customTrailer.vehicleTypeCode := #OPEN_TRAILER
+!customTrailer.registrationLastMaintenanceDate := Date('2023-04-10')
+!customTrailer.expirationDate := Date('2025-04-10')
+
+!new RentalAgreement('rentalAgreement42a')
+!rentalAgreement42a.number := 2001
+!rentalAgreement42a.rentalDate := Date('2023-07-15')
+!rentalAgreement42a.anticipatedDuration := 3
+!rentalAgreement42a.depositPaid := 0.00
+!rentalAgreement42a.quotedDailyRate := 10.00
+!rentalAgreement42a.quotedRatePerMile := 0.00
+
+!new RentalAgreement('rentalAgreement42b')
+!rentalAgreement42b.number := 2002
+!rentalAgreement42b.rentalDate := Date('2023-07-15')
+!rentalAgreement42b.anticipatedDuration := 3
+!rentalAgreement42b.depositPaid := 0.00
+!rentalAgreement42b.quotedDailyRate := 10.00
+!rentalAgreement42b.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer19')
+!individualCustomer19.name := 'Allison Green'
+!individualCustomer19.address := '404 Pine Street, Boulder, CO, 80302'
+!individualCustomer19.poorRisk := false
+!individualCustomer19.homePhone := '+1-720-555-1379'
+!individualCustomer19.driverLicenseState := #CO
+!individualCustomer19.driverLicenseNumber := 678900
+!individualCustomer19.driverLicenseExpirationDate := Date('2031-11-25')
+
+!insert (rentalOffice25, electricTruck) into RentalOfficeVehicle
+!insert (rentalOffice25, customTrailer) into RentalOfficeVehicle
+
+!insert (rentalOffice25, rentalAgreement42a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice25, rentalAgreement42a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement42a, electricTruck) into RentalAgreementVehicle
+!insert (rentalAgreement42a, individualCustomer19) into RentalAgreementCustomer
+
+!insert (rentalOffice25, rentalAgreement42b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice25, rentalAgreement42b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement42b, customTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement42b, individualCustomer19) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice26')
+!rentalOffice26.name := 'Alpine Rentals & Logistics'
+!rentalOffice26.number := 107
+!rentalOffice26.address := '123 Summit Peaks Road, Denver, CO 80202'
+
+!new Truck('truck24')
+!truck24.id := 51
+!truck24.registrationState := #CO
+!truck24.licensePlateNumber := 'ARLCO777'
+!truck24.vehicleTypeCode := #TRUCK
+!truck24.registrationLastMaintenanceDate := Date('2023-09-10')
+!truck24.expirationDate := Date('2024-09-10')
+!truck24.odometerReading := 50
+!truck24.gasTankCapacity := 120.0
+!truck24.workingRadio := false
+!truck24.mileage := 10
+
+!new Vehicle('vehicle26')
+!vehicle26.id := 52
+!vehicle26.registrationState := #CO
+!vehicle26.licensePlateNumber := 'ARLCO888'
+!vehicle26.vehicleTypeCode := #OPEN_TRAILER
+!vehicle26.registrationLastMaintenanceDate := Date('2023-08-15')
+!vehicle26.expirationDate := Date('2025-08-15')
+
+!new Truck('truck25')
+!truck25.id := 53
+!truck25.registrationState := #CO
+!truck25.licensePlateNumber := 'ARLCO999'
+!truck25.vehicleTypeCode := #TRUCK
+!truck25.registrationLastMaintenanceDate := Date('2023-07-20')
+!truck25.expirationDate := Date('2026-07-20')
+!truck25.odometerReading := 999999
+!truck25.gasTankCapacity := 150.0
+!truck25.workingRadio := true
+!truck25.mileage := 7
+
+!new RentalAgreement('rentalAgreement43')
+!rentalAgreement43.number := 5001
+!rentalAgreement43.rentalDate := Date('2023-11-15')
+!rentalAgreement43.anticipatedDuration := 30
+!rentalAgreement43.depositPaid := 400.00
+!rentalAgreement43.quotedDailyRate := 95.00
+!rentalAgreement43.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement44')
+!rentalAgreement44.number := 5002
+!rentalAgreement44.rentalDate := Date('2023-11-22')
+!rentalAgreement44.anticipatedDuration := 2
+!rentalAgreement44.depositPaid := 0.00
+!rentalAgreement44.quotedDailyRate := 0.00
+!rentalAgreement44.quotedRatePerMile := 0.20
+
+!new Individual('individualCustomer20')
+!individualCustomer20.name := 'Jenna Thompson'
+!individualCustomer20.address := '456 Mountain View Way, Boulder, CO 80302'
+!individualCustomer20.poorRisk := false
+!individualCustomer20.homePhone := '(303) 555-1122'
+!individualCustomer20.driverLicenseState := #CO
+!individualCustomer20.driverLicenseNumber := 5100
+!individualCustomer20.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company22')
+!company22.name := 'High Altitude Construction'
+!company22.address := '890 Alpine Drive, Colorado Springs, CO 80903'
+!company22.poorRisk := true
+!company22.idNumber := 320045
+
+!insert (rentalOffice26, truck24) into RentalOfficeVehicle
+!insert (rentalOffice26, vehicle26) into RentalOfficeVehicle
+!insert (rentalOffice26, truck25) into RentalOfficeVehicle
+
+!insert (rentalOffice26, rentalAgreement43) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice26, rentalAgreement43) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement43, truck25) into RentalAgreementVehicle
+!insert (rentalAgreement43, company22) into RentalAgreementCustomer
+
+!insert (rentalOffice26, rentalAgreement44) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice26, rentalAgreement44) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement44, truck24) into RentalAgreementVehicle
+!insert (rentalAgreement44, individualCustomer20) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice27')
+!rentalOffice27.name := 'Sunshine Vehicle Rentals – Biscayne Bay'
+!rentalOffice27.number := 303
+!rentalOffice27.address := '678 Biscayne Blvd, Miami, FL, 33132'
+
+!new Truck('truck26')
+!truck26.id := 54
+!truck26.registrationState := #FL
+!truck26.licensePlateNumber := 'FLRIDE89'
+!truck26.vehicleTypeCode := #TRUCK
+!truck26.registrationLastMaintenanceDate := Date('2023-09-01')
+!truck26.expirationDate := Date('2024-08-31')
+!truck26.odometerReading := 36500
+!truck26.gasTankCapacity := 28.0
+!truck26.workingRadio := true
+!truck26.mileage := 13
+
+!new Vehicle('vehicle27')
+!vehicle27.id := 55
+!vehicle27.registrationState := #FL
+!vehicle27.licensePlateNumber := 'SUNFLY56'
+!vehicle27.vehicleTypeCode := #TRUCK10
+!vehicle27.registrationLastMaintenanceDate := Date('2023-08-15')
+!vehicle27.expirationDate := Date('2024-08-14')
+
+!new Vehicle('vehicle28')
+!vehicle28.id := 56
+!vehicle28.registrationState := #FL
+!vehicle28.licensePlateNumber := 'FLYT701'
+!vehicle28.vehicleTypeCode := #OPEN_TRAILER
+!vehicle28.registrationLastMaintenanceDate := Date('2023-07-25')
+!vehicle28.expirationDate := Date('2024-07-24')
+
+!new Individual('individualCustomer21')
+!individualCustomer21.name := 'Kiara Fernández'
+!individualCustomer21.address := '245 Ocean Drive, Miami Beach, FL, 33139'
+!individualCustomer21.poorRisk := false
+!individualCustomer21.homePhone := '305-555-0912'
+!individualCustomer21.driverLicenseState := #FL
+!individualCustomer21.driverLicenseNumber := 3258967
+!individualCustomer21.driverLicenseExpirationDate := Date('2025-11-30')
+
+!new Company('company23')
+!company23.name := 'Miami Maritime Logistics'
+!company23.address := '120 Seaport Lane, Miami, FL, 33137'
+!company23.poorRisk := false
+!company23.idNumber := 992314578
+
+!new RentalAgreement('rentalAgreement45')
+!rentalAgreement45.number := 50987
+!rentalAgreement45.rentalDate := Date('2023-12-01')
+!rentalAgreement45.anticipatedDuration := 4
+!rentalAgreement45.depositPaid := 450.00
+!rentalAgreement45.quotedDailyRate := 110.00
+!rentalAgreement45.quotedRatePerMile := 0.45
+
+!new RentalAgreement('rentalAgreement46')
+!rentalAgreement46.number := 50988
+!rentalAgreement46.rentalDate := Date('2023-12-03')
+!rentalAgreement46.anticipatedDuration := 7
+!rentalAgreement46.depositPaid := 600.00
+!rentalAgreement46.quotedDailyRate := 150.00
+!rentalAgreement46.quotedRatePerMile := 0.60
+
+!new RentalAgreement('rentalAgreement47')
+!rentalAgreement47.number := 50989
+!rentalAgreement47.rentalDate := Date('2023-12-05')
+!rentalAgreement47.anticipatedDuration := 10
+!rentalAgreement47.depositPaid := 700.00
+!rentalAgreement47.quotedDailyRate := 140.00
+!rentalAgreement47.quotedRatePerMile := 0.55
+
+!insert (rentalOffice27, truck26) into RentalOfficeVehicle
+!insert (rentalOffice27, vehicle27) into RentalOfficeVehicle
+!insert (rentalOffice27, vehicle28) into RentalOfficeVehicle
+
+!insert (rentalOffice27, rentalAgreement45) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice27, rentalAgreement45) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement45, truck26) into RentalAgreementVehicle
+!insert (rentalAgreement45, company23) into RentalAgreementCustomer
+
+!insert (rentalOffice27, rentalAgreement46) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice27, rentalAgreement46) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement46, vehicle27) into RentalAgreementVehicle
+!insert (rentalAgreement46, individualCustomer21) into RentalAgreementCustomer
+
+!insert (rentalOffice27, rentalAgreement47) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice27, rentalAgreement47) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement47, vehicle28) into RentalAgreementVehicle
+!insert (rentalAgreement47, company23) into RentalAgreementCustomer
+

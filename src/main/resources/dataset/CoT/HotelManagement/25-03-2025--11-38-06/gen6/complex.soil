@@ -1,0 +1,61 @@
+!new Customer('customer28')
+!customer28.firstName := 'Lars'
+!customer28.lastName := 'Johansson'
+
+!new Booking('booking28')
+!booking28.bookingId := 987
+!booking28.startDate := 'January 5, 2024'
+!booking28.endDate := 'January 12, 2024'
+!booking28.canceled := false
+!booking28.confirmed := true
+
+!new RoomReservation('roomreservation45')
+!roomreservation45.checkInDate := 'January 5, 2024'
+!roomreservation45.checkOutDate := 'January 12, 2024'
+
+!new Room('room53')
+!room53.roomNumber := 402
+!room53.numBeds := 2
+!room53.pricePerNight := 180.00
+!room53.occupied := true
+!room53.blocked := false
+
+!new RoomExtra('roomextra63')
+!roomextra63.price := 150.00
+!roomextra63.description := 'Full set of skiing gear including skis, poles, boots, and helmet for the duration of the stay.'
+
+!new RoomExtra('roomextra64')
+!roomextra64.price := 90.00
+!roomextra64.description := 'Unlimited access to the spa facilities, including sauna, steam room, and hot tubs.'
+
+!new RoomExtra('roomextra65')
+!roomextra65.price := 140.00  -- Calculated for 7 days
+!roomextra65.description := 'Full access to the daily breakfast buffet featuring alpine specialties and international favorites.'
+
+!new Bill('bill51')
+!bill51.billId := 45230
+!bill51.price := 1590.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto28')
+!freeroomtypesdto28.roomTypeDescription := 'High-end suite with private terrace and panoramic mountain views, ideal for a luxury ski vacation.'
+!freeroomtypesdto28.numBeds := 2
+!freeroomtypesdto28.pricePerNight := 330.00
+!freeroomtypesdto28.numFreeRooms := 2
+
+!new FreeRoomTypesDTO('freeroomtypesdto29')
+!freeroomtypesdto29.roomTypeDescription := 'Cozy studio with rustic charm, perfect for solo travelers or couples seeking convenience on the slopes.'
+!freeroomtypesdto29.numBeds := 1
+!freeroomtypesdto29.pricePerNight := 150.00
+!freeroomtypesdto29.numFreeRooms := 3
+
+!insert (booking28, customer28) into BookingCustomer
+!insert (booking28, roomreservation45) into BookingRoomReservation
+!insert (booking28, bill51) into BookingBill
+
+!insert (roomreservation45, room53) into RoomReservationRoom
+
+!insert (roomreservation45, roomextra63) into RoomReservationExtras
+!insert (roomreservation45, roomextra64) into RoomReservationExtras
+!insert (roomreservation45, roomextra65) into RoomReservationExtras
+
+!insert (bill51, roomreservation45) into BillRoomReservation

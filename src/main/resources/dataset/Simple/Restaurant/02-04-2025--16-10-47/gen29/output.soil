@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant29')
+!restaurant29.name := 'Bamboo Bistro'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner57')
+!owner57.name := 'Liam Thompson'
+!owner57.percentageShares := 60
+
+!new Owner('owner58')
+!owner58.name := 'Ella Zhang'
+!owner58.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant29, owner57) into RestaurantOwner
+!insert (restaurant29, owner58) into RestaurantOwner
+
+-- Creating tables with an Asian-inspired design
+!new Table('table57')
+!table57.number := 2901
+!table57.description := 'Bamboo Garden'
+!table57.capacity := 4
+
+!new Table('table58')
+!table58.number := 2902
+!table58.description := 'Serene Koi Pond'
+!table58.capacity := 6
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter29')
+!headwaiter29.name := 'Grace Lee'
+!headwaiter29.dateOfBirth := Date('1983-04-14')
+!headwaiter29.phoneNumber := '555-3131'
+
+!new Waiter('waiter33')
+!waiter33.name := 'Ethan Cooper'
+!waiter33.dateOfBirth := Date('1992-09-19')
+!waiter33.phoneNumber := '555-2424'
+!waiter33.spokenLanguage := #English
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter29, waiter33) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a tea ceremony
+!new Individual('reservation29')
+!reservation29.time := Time('15:00')
+!reservation29.date := Date('2024-08-22')
+!reservation29.numberPeople := 4
+!reservation29.name := 'Traditional Tea Ceremony'
+!reservation29.phoneNumber := '555-5454'
+!reservation29.number := 227
+!reservation29.seating := #Patio
+!reservation29.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant29, reservation29) into RestaurantReservation
+!insert (reservation29, waiter33) into ReservationWaiter
+!insert (reservation29, table57) into ReservationTable
+!insert (reservation29, table58) into ReservationTable
+
+-- Adding a distinguished MenuItem for the tea ceremony
+!new MenuItem('menuItem29')
+!menuItem29.description := 'Matcha and Mochi Selection'
+!menuItem29.prepTime := 10.0
+!menuItem29.classification := #Dessert
+
+-- Associating MenuItem with a skillful Chef
+!new Chef('chef29')
+!chef29.name := 'Kenji Yamada'
+!chef29.dateOfBirth := Date('1974-05-10')
+!chef29.phoneNumber := '555-3939'
+
+!insert (menuItem29, chef29) into MenuItemChef
+
+-- Creating Cook specialized in Asian cuisine
+!new Cook('cook29')
+!cook29.name := 'Aiko Nakamura'
+!cook29.dateOfBirth := Date('1989-11-27')
+!cook29.phoneNumber := '555-6868'
+!cook29.yearsOfExperience := 8
+
+-- Establishing association between Chef and Cook
+!insert (chef29, cook29) into ChefCook
+
+-- Creating an ItemOrder for the tea ceremony
+!new ItemOrder('order29')
+!order29.time := Time('15:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order29, menuItem29) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation29, order29) into ReservationItemOrdered

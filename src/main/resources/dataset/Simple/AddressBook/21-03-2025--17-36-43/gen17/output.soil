@@ -1,0 +1,71 @@
+!new AddressBook('addressBook17')
+
+!new Company('soundWavesMusic')
+!soundWavesMusic.name := 'Sound Waves Music'
+!soundWavesMusic.phone := '777-888-1234'
+!soundWavesMusic.website := 'www.soundwavesmusic.com'
+!soundWavesMusic.email := 'contact@soundwavesmusic.com'
+!soundWavesMusic.industry := 'Music Production'
+
+!new Person('juliaHayes')
+!juliaHayes.name := 'Julia Hayes'
+!juliaHayes.phone := '222-333-4444'
+!juliaHayes.website := 'www.juliahayesmusic.com'
+!juliaHayes.email := 'julia.hayes@soundwavesmusic.com'
+!juliaHayes.title := 'Music Producer'
+
+!new Note('albumReleaseNote')
+!albumReleaseNote.author := 'Julia Hayes'
+!albumReleaseNote.time := Date('2025-01-10')
+!albumReleaseNote.type := #EMAIL
+!albumReleaseNote.comment := 'Finalized details for upcoming album release event'
+
+!new Address('juliaAddress')
+!juliaAddress.city := 'Nashville'
+!juliaAddress.houseNr := '101'
+!juliaAddress.street := 'Music Row'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, soundWavesMusic) into RelationshipToContact
+!insert (juliaHayes, employeeRelationship) into ContactToRelationship
+!insert (juliaHayes, juliaAddress) into ContactContainsAddress
+!insert (juliaHayes, albumReleaseNote) into ContactContainsNote
+
+!new Person('ryanMiller')
+!ryanMiller.name := 'Ryan Miller'
+!ryanMiller.phone := '555-444-3333'
+!ryanMiller.website := 'www.ryanmillerdrums.com'
+!ryanMiller.email := 'ryan.miller@example.com'
+!ryanMiller.title := 'Studio Drummer'
+
+!new Note('recordingSessionNote')
+!recordingSessionNote.author := 'Ryan Miller'
+!recordingSessionNote.time := Date('2025-01-15')
+!recordingSessionNote.type := #MEETING
+!recordingSessionNote.comment := 'Attended recording session for new artists album'
+
+!new Address('ryanAddress')
+!ryanAddress.city := 'Memphis'
+!ryanAddress.houseNr := '250'
+!ryanAddress.street := 'Jazz Avenue'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, juliaHayes) into RelationshipToContact
+!insert (ryanMiller, subdivisionRelationship) into ContactToRelationship
+!insert (ryanMiller, ryanAddress) into ContactContainsAddress
+!insert (ryanMiller, recordingSessionNote) into ContactContainsNote
+
+!new Address('soundWavesAddress')
+!soundWavesAddress.city := 'Los Angeles'
+!soundWavesAddress.houseNr := '555'
+!soundWavesAddress.street := 'Melody Lane'
+
+!insert (soundWavesMusic, soundWavesAddress) into ContactContainsAddress
+
+!insert (addressBook17, soundWavesMusic) into AddressBookMadeOfContact
+!insert (addressBook17, juliaHayes) into AddressBookMadeOfContact
+!insert (addressBook17, ryanMiller) into AddressBookMadeOfContact

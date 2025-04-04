@@ -1,0 +1,92 @@
+!new Restaurant('restaurant28')
+!restaurant28.name := 'Cultural Fusion Café'
+
+!new Owner('owner63')
+!owner63.name := 'Ravi Desai'
+!owner63.percentageShares := 50
+
+!new Owner('owner64')
+!owner64.name := 'Sophia Bianchi'
+!owner64.percentageShares := 60
+
+!insert (restaurant28, owner63) into RestaurantOwner
+!insert (restaurant28, owner64) into RestaurantOwner
+
+!new Table('table65')
+!table65.number := 601
+!table65.description := 'Rooftop table with city skyline view'
+!table65.capacity := 8
+
+!new Table('table66')
+!table66.number := 602
+!table66.description := 'Central banquet hall table'
+!table66.capacity := 40
+
+!new BusDriver('busdriver26')
+!busdriver26.name := 'Lucien Gautier'
+!busdriver26.dateOfBirth := Date('1980-11-11')
+!busdriver26.phoneNumber := '+33 1-2468-1357'
+
+!new BusDriver('busdriver27')
+!busdriver27.name := 'Hélène Barret'
+!busdriver27.dateOfBirth := Date('1985-10-05')
+!busdriver27.phoneNumber := '+33 1-3759-8642'
+
+!new Waiter('waiter56')
+!waiter56.name := 'Miguel Velasquez'
+!waiter56.dateOfBirth := Date('1998-04-23')
+!waiter56.phoneNumber := '+33 1-2034-6789'
+
+!new Chef('chef36')
+!chef36.name := 'Ling Wong'
+!chef36.dateOfBirth := Date('1976-09-24')
+!chef36.phoneNumber := '+33 1-5678-3452'
+
+!new Cook('cook46')
+!cook46.name := 'Alice Nowak'
+!cook46.dateOfBirth := Date('1991-05-18')
+!cook46.phoneNumber := '+33 1-4567-8910'
+!cook46.yearsOfExperience := 7
+
+!insert (chef36, cook46) into ChefCook
+
+!new RegularCustomer('customer21')
+!customer21.name := 'Anna Svensson'
+!customer21.prefferedLanguage := #English  -- Using #English as placeholder for Swedish
+
+!new Individual('individualReservation21')
+!individualReservation21.time := Time('13:30')
+!individualReservation21.date := Date('2023-11-25')
+!individualReservation21.numberPeople := 1
+!individualReservation21.name := 'Marie Curie'
+!individualReservation21.phoneNumber := '+33 1-2345-6789'
+!individualReservation21.number := 20231125
+!individualReservation21.seating := #Inside  -- Using #Inside as placeholder for Terrace
+!individualReservation21.smoking := #Smoking
+
+!insert (restaurant28, individualReservation21) into RestaurantReservation
+!insert (individualReservation21, table65) into ReservationTable
+
+!insert (individualReservation21, waiter56) into ReservationWaiter
+
+!insert (individualReservation21, customer21) into ReservationCustomer
+
+!new Banquet('banquet25')
+!banquet25.date := Date('2023-11-25')
+!banquet25.time := Time('19:00')
+!banquet25.numberPeople := 120
+!banquet25.name := 'Culinary Enthusiasts Meet'
+!banquet25.phoneNumber := '+33 1-9876-5432'
+!banquet25.number := 20231125
+!banquet25.groupName := 'Food Lovers Association'
+!banquet25.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for PayPal
+!banquet25.busService := true
+
+!insert (restaurant28, banquet25) into RestaurantReservation
+!insert (banquet25, table65) into ReservationTable
+!insert (banquet25, table66) into ReservationTable
+
+!insert (banquet25, waiter56) into ReservationWaiter
+
+!insert (banquet25, busdriver26) into BanquetBusDriver
+!insert (banquet25, busdriver27) into BanquetBusDriver

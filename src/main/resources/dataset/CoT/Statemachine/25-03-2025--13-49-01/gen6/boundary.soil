@@ -1,0 +1,97 @@
+!new StateMachine('securityManager')
+!securityManager.name := 'securityManager'
+
+!new State('disarmed')
+!disarmed.name := 'disarmed'
+
+!new State('armed')
+!armed.name := 'armed'
+
+!new State('breachDetected')
+!breachDetected.name := 'breachDetected'
+
+!new State('alarmActivated')
+!alarmActivated.name := 'alarmActivated'
+
+!new State('resetting')
+!resetting.name := 'resetting'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('disarmedToArmed')
+!disarmedToArmed.name := 'disarmedToArmed'
+
+!new Transition('armedToBreachDetected')
+!armedToBreachDetected.name := 'armedToBreachDetected'
+
+!new Transition('breachDetectedToAlarmActivated')
+!breachDetectedToAlarmActivated.name := 'breachDetectedToAlarmActivated'
+
+!new Transition('alarmActivatedToResetting')
+!alarmActivatedToResetting.name := 'alarmActivatedToResetting'
+
+!new Transition('resettingToDisarmed')
+!resettingToDisarmed.name := 'resettingToDisarmed'
+
+!new Transition('armedToMaintenance')
+!armedToMaintenance.name := 'armedToMaintenance'
+
+!new TimeEvent('timeEventDisarmedToArmed')
+!timeEventDisarmedToArmed.time := 3
+
+!new TimeEvent('timeEventArmedToBreachDetected')
+!timeEventArmedToBreachDetected.time := 1
+
+!new TimeEvent('timeEventBreachDetectedToAlarmActivated')
+!timeEventBreachDetectedToAlarmActivated.time := 1
+
+!new TimeEvent('timeEventAlarmActivatedToResetting')
+!timeEventAlarmActivatedToResetting.time := 5
+
+!new TimeEvent('timeEventResettingToDisarmed')
+!timeEventResettingToDisarmed.time := 2
+
+!new TimeEvent('timeEventArmedToMaintenance')
+!timeEventArmedToMaintenance.time := 5
+
+!insert (securityManager, disarmed) into StateMachineContainsStates
+!insert (securityManager, armed) into StateMachineContainsStates
+!insert (securityManager, breachDetected) into StateMachineContainsStates
+!insert (securityManager, alarmActivated) into StateMachineContainsStates
+!insert (securityManager, resetting) into StateMachineContainsStates
+!insert (securityManager, maintenance) into StateMachineContainsStates
+
+!insert (securityManager, disarmed) into StateMachineStartsStates
+
+!insert (securityManager, disarmedToArmed) into StateMachineContainsTransitions
+!insert (securityManager, armedToBreachDetected) into StateMachineContainsTransitions
+!insert (securityManager, breachDetectedToAlarmActivated) into StateMachineContainsTransitions
+!insert (securityManager, alarmActivatedToResetting) into StateMachineContainsTransitions
+!insert (securityManager, resettingToDisarmed) into StateMachineContainsTransitions
+!insert (securityManager, armedToMaintenance) into StateMachineContainsTransitions
+
+!insert (disarmedToArmed, timeEventDisarmedToArmed) into TransitionContainsEvents
+!insert (armedToBreachDetected, timeEventArmedToBreachDetected) into TransitionContainsEvents
+!insert (breachDetectedToAlarmActivated, timeEventBreachDetectedToAlarmActivated) into TransitionContainsEvents
+!insert (alarmActivatedToResetting, timeEventAlarmActivatedToResetting) into TransitionContainsEvents
+!insert (resettingToDisarmed, timeEventResettingToDisarmed) into TransitionContainsEvents
+!insert (armedToMaintenance, timeEventArmedToMaintenance) into TransitionContainsEvents
+
+!insert (disarmed, disarmedToArmed) into StateTransition
+!insert (disarmedToArmed, armed) into TransitionState
+
+!insert (armed, armedToBreachDetected) into StateTransition
+!insert (armedToBreachDetected, breachDetected) into TransitionState
+
+!insert (breachDetected, breachDetectedToAlarmActivated) into StateTransition
+!insert (breachDetectedToAlarmActivated, alarmActivated) into TransitionState
+
+!insert (alarmActivated, alarmActivatedToResetting) into StateTransition
+!insert (alarmActivatedToResetting, resetting) into TransitionState
+
+!insert (resetting, resettingToDisarmed) into StateTransition
+!insert (resettingToDisarmed, disarmed) into TransitionState
+
+!insert (armed, armedToMaintenance) into StateTransition
+!insert (armedToMaintenance, maintenance) into TransitionState

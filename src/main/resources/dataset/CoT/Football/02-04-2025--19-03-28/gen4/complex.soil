@@ -1,0 +1,181 @@
+!new Club('club39')
+!club39.name := 'Paris Saint-Germain F.C.'
+!club39.homeGround := 'Parc des Princes'
+!club39.chairman := 'Nasser Al-Khelaifi'
+
+!new Club('club40')
+!club40.name := 'FC Bayern Munich'
+!club40.homeGround := 'Allianz Arena'
+!club40.chairman := 'Herbert Hainer'
+
+!new Team('teamAQ')
+!teamAQ.name := 'PSG First Team'
+
+!new Team('teamAR')
+!teamAR.name := 'Bayern Munich First Team'
+
+!insert (club39, teamAQ) into ClubTeam
+!insert (club40, teamAR) into ClubTeam
+
+!new Competition('competition20')
+!competition20.name := 'UEFA Champions League'
+!competition20.type := 'International Club Tournament'
+
+!new Match('match20')
+!match20.date := '2024-02-20'
+!match20.homeAway := false
+
+!insert (competition20, match20) into CompetitionMatch
+
+!insert (teamAR, match20) into LocalMatch
+!insert (teamAQ, match20) into VisitorMatch
+
+!new MatchReport('matchReport20')
+!matchReport20.duration := 95
+!matchReport20.scoreVisitor := 2
+!matchReport20.scoreLocal := 2
+
+!insert (match20, matchReport20) into MatchMatchReport
+
+!new MatchEvent('matchEvent78')
+!matchEvent78.eventType := #GOAL
+!matchEvent78.time := 12
+
+!new MatchEvent('matchEvent79')
+!matchEvent79.eventType := #GOAL
+!matchEvent79.time := 34
+
+!new MatchEvent('matchEvent80')
+!matchEvent80.eventType := #GOAL
+!matchEvent80.time := 56
+
+!new MatchEvent('matchEvent81')
+!matchEvent81.eventType := #GOAL
+!matchEvent81.time := 72
+
+!new MatchEvent('matchEvent82')
+!matchEvent82.eventType := #FOUL
+!matchEvent82.time := 89
+
+!insert (match20, matchEvent78) into MatchMatchEvent
+!insert (match20, matchEvent79) into MatchMatchEvent
+!insert (match20, matchEvent80) into MatchMatchEvent
+!insert (match20, matchEvent81) into MatchMatchEvent
+!insert (match20, matchEvent82) into MatchMatchEvent
+
+!new MatchNote('matchNote15')
+!matchNote15.note := 'The match featured brilliant individual performances and tactical masterclass from both managers.'
+!matchNote15.date := '2024-02-20'
+
+!insert (match20, matchNote15) into MatchMatchNote
+
+!new Player('player43')
+!player43.name := 'Kylian Mbappé'
+!player43.age := 24
+!player43.bestFoot := #RIGHT
+!player43.phoneNumber := '+33 6012345678'
+
+!new Player('player44')
+!player44.name := 'Joshua Kimmich'
+!player44.age := 29
+!player44.bestFoot := #BOTH
+!player44.phoneNumber := '+49 1712345678'
+
+!insert (teamAQ, player43) into TeamPlayer
+!insert (teamAR, player44) into TeamPlayer
+
+!new Position('position62')
+!position62.positionName := #FORWARD
+
+!new Position('position63')
+!position63.positionName := #MIDFIELDER
+
+!insert (player43, position62) into PlayerPositions
+!insert (player44, position63) into PlayerPositions
+
+!new MatchPlayer('matchPlayer27')
+!matchPlayer27.booked := false
+!matchPlayer27.goals := 1
+!matchPlayer27.rating := 8
+
+!insert (player43, matchPlayer27) into PlayerMatch
+!insert (match20, matchPlayer27) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition28')
+!matchPlayerPosition28.positionName := #FORWARD
+!matchPlayerPosition28.number := 7
+
+!insert (matchPlayer27, matchPlayerPosition28) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer28')
+!matchPlayer28.booked := true
+!matchPlayer28.goals := 0
+!matchPlayer28.rating := 7
+
+!insert (player44, matchPlayer28) into PlayerMatch
+!insert (match20, matchPlayer28) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition29')
+!matchPlayerPosition29.positionName := #MIDFIELDER
+!matchPlayerPosition29.number := 6
+
+!insert (matchPlayer28, matchPlayerPosition29) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession34')
+!trainingSession34.date := '2024-02-18'
+!trainingSession34.location := 'Camp des Loges'
+!trainingSession34.purpose := 'Preparatory Defensive Formations'
+
+!insert (teamAQ, trainingSession34) into TeamTraining
+
+!new TrainingNotes('trainingNote35')
+!trainingNote35.note := 'Focused on drills simulating high-pressure situations.'
+!trainingNote35.date := '2024-02-17'
+
+!insert (trainingSession34, trainingNote35) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend14')
+!failedAttend14.reason := 'Injury - Sprain - Mbappé'
+
+!insert (trainingSession34, failedAttend14) into TrainingFailded
+!insert (failedAttend14, player43) into FailedPlayer
+
+!new TrainingSession('trainingSession35')
+!trainingSession35.date := '2024-02-15'
+!trainingSession35.location := 'Bayern Training Grounds'
+!trainingSession35.purpose := 'Tactical Analysis and Recovery'
+
+!insert (teamAR, trainingSession35) into TeamTraining
+
+!new TrainingNotes('trainingNote36')
+!trainingNote36.note := 'Strategies focused on fast recovery and adaptability.'
+!trainingNote36.date := '2024-02-14'
+
+!insert (trainingSession35, trainingNote36) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjective46')
+!trainingObjective46.areaToImprove := 'Agility and Recovery Speed'
+!trainingObjective46.startDate := '2024-01-01'
+!trainingObjective46.endDate := '2024-02-29'
+!trainingObjective46.success := true
+
+!insert (trainingObjective46, player44) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective47')
+!trainingObjective47.areaToImprove := 'Dribbling Control'
+!trainingObjective47.startDate := '2024-02-01'
+!trainingObjective47.endDate := '2024-03-01'
+!trainingObjective47.success := true
+
+!insert (trainingObjective47, player43) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote30')
+!playerNote30.note := 'Demonstrates exceptional pace and tactical versatility in offensive roles.'
+!playerNote30.date := '2024-02-15'
+
+!new PlayerNotes('playerNote31')
+!playerNote31.note := 'Known for his leadership on the pitch and crucial interceptions.'
+!playerNote31.date := '2024-02-16'
+
+!insert (player43, playerNote30) into PlayerPlayerNotes
+!insert (player44, playerNote31) into PlayerPlayerNotes

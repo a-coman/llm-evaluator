@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_3')
+
+!new Person('Amina_Hassan')
+!Amina_Hassan.name := 'Amina Hassan'
+!Amina_Hassan.phone := '+1-202-555-0144'
+!Amina_Hassan.website := 'ahassanresearch.org'
+!Amina_Hassan.email := 'amina.hassan@university.edu'
+!Amina_Hassan.title := 'Professor of Environmental Science'
+
+!new Address('Address_7')
+!Address_7.city := 'Washington D.C.'
+!Address_7.houseNr := '1600'
+!Address_7.street := 'Constitution Avenue'
+!insert (Amina_Hassan, Address_7) into ContactContainsAddress
+
+!new Note('Note_7')
+!Note_7.author := 'Amina Hassan'
+!Note_7.time := Date('2023-07-10')
+!Note_7.type := #CALL
+!Note_7.comment := 'Discussed funding opportunities with the department head.'
+!insert (Amina_Hassan, Note_7) into ContactContainsNote
+
+!new Company('GreenTech_Solutions')
+!GreenTech_Solutions.name := 'GreenTech Solutions'
+!GreenTech_Solutions.phone := '+31-20-555-7890'
+!GreenTech_Solutions.website := 'www.greentechsolutions.nl'
+!GreenTech_Solutions.email := 'contact@greentechsolutions.nl'
+!GreenTech_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_8')
+!Address_8.city := 'Amsterdam'
+!Address_8.houseNr := '508'
+!Address_8.street := 'Keizersgracht'
+!insert (GreenTech_Solutions, Address_8) into ContactContainsAddress
+
+!new Note('Note_8')
+!Note_8.author := 'Eleanor Fields'
+!Note_8.time := Date('2023-08-15')
+!Note_8.type := #MEETING
+!Note_8.comment := 'Strategy meeting to enhance solar panel efficiency.'
+!insert (GreenTech_Solutions, Note_8) into ContactContainsNote
+
+!new Person('Ravi_Patel')
+!Ravi_Patel.name := 'Ravi Patel'
+!Ravi_Patel.phone := '+91-98-7654-3210'
+!Ravi_Patel.website := 'ravipatelfinance.com'
+!Ravi_Patel.email := 'ravi@finadvisors.in'
+!Ravi_Patel.title := 'Financial Consultant'
+
+!new Address('Address_9')
+!Address_9.city := 'Mumbai'
+!Address_9.houseNr := '101'
+!Address_9.street := 'Marine Drive'
+!insert (Ravi_Patel, Address_9) into ContactContainsAddress
+
+!new Note('Note_9')
+!Note_9.author := 'Ravi Patel'
+!Note_9.time := Date('2023-09-25')
+!Note_9.type := #EMAIL
+!Note_9.comment := 'Sent investment strategy proposal to potential clients.'
+!insert (Ravi_Patel, Note_9) into ContactContainsNote
+
+!new Relationship('Relationship_6')
+!Relationship_6.type := #COWORKER
+!insert (Ravi_Patel, Relationship_6) into ContactToRelationship
+!insert (Relationship_6, Amina_Hassan) into RelationshipToContact
+
+!new Relationship('Relationship_7')
+!Relationship_7.type := #COWORKER
+!insert (Ravi_Patel, Relationship_7) into ContactToRelationship
+!insert (Relationship_7, GreenTech_Solutions) into RelationshipToContact
+
+!insert (AddressBook_3, Amina_Hassan) into AddressBookMadeOfContact
+!insert (AddressBook_3, GreenTech_Solutions) into AddressBookMadeOfContact
+!insert (AddressBook_3, Ravi_Patel) into AddressBookMadeOfContact

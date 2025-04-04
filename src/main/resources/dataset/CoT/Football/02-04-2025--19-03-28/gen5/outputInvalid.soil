@@ -1,0 +1,142 @@
+!new Club('club45')
+!set club45.name := 'Sydney Surfers'
+!set club45.homeGround := "Surfer's Stadium"
+!set club45.chairman := 'Leah Murray'
+
+!new Club('club46')
+!set club46.name := 'Auckland Mariners'
+!set club46.homeGround := "Mariner's Grounds"
+!set club46.chairman := 'Jack Thompson'
+
+!new Team('teamAW')
+!set teamAW.name := 'Surf Sydney'
+
+!new Team('teamAX')
+!set teamAX.name := 'Auckland Waves'
+
+!insert (club45, teamAW) into ClubTeam
+!insert (club46, teamAX) into ClubTeam
+
+!new Player('player51')
+!set player51.name := 'Jake Wilson'
+!set player51.age := 24
+!set player51.bestFoot := #RIGHT
+!set player51.phoneNumber := '+61412345678'
+
+!new Player('player52')
+!set player52.name := 'Tane Ngata'
+!set player52.age := 26
+!set player52.bestFoot := #BOTH
+!set player52.phoneNumber := '+64987654321'
+
+!insert (teamAW, player51) into TeamPlayer
+!insert (teamAX, player52) into TeamPlayer
+
+!new Position('position72')
+!set position72.positionName := #GOALKEEPER
+
+!new Position('position73')
+!set position73.positionName := #DEFENDER
+
+!new Position('position74')
+!set position74.positionName := #MIDFIELDER
+
+!new Position('position75')
+!set position75.positionName := #FORWARD
+
+!insert (player51, position72) into PlayerPositions
+!insert (player51, position73) into PlayerPositions
+!insert (player52, position74) into PlayerPositions
+!insert (player52, position75) into PlayerPositions
+
+!new Competition('competition23')
+!set competition23.name := 'Pacific Cup'
+!set competition23.type := 'Cup'
+
+!new Match('match23')
+!set match23.date := '2023-11-05'
+!set match23.homeAway := true
+
+!insert (competition23, match23) into CompetitionMatch
+
+!insert (teamAX, match23) into LocalMatch
+!insert (teamAX, match23) into VisitorMatch
+
+!new MatchReport('matchReport23')
+!set matchReport23.duration := 90
+!set matchReport23.scoreVisitor := 2
+!set matchReport23.scoreLocal := 2
+
+!insert (match23, matchReport23) into MatchMatchReport
+
+!new MatchEvent('matchEvent92')
+!set matchEvent92.eventType := #FOUL
+!set matchEvent92.time := 30
+
+!new MatchEvent('matchEvent93')
+!set matchEvent93.eventType := #FOUL
+!set matchEvent93.time := 75
+
+!insert (match23, matchEvent92) into MatchMatchEvent
+!insert (match23, matchEvent93) into MatchMatchEvent
+
+!new MatchNote('matchNote17')
+!set matchNote17.note := 'A friendly yet fiercely contested match, showcasing skills and camaraderie.'
+!set matchNote17.date := '2023-11-06'
+
+!insert (match23, matchNote17) into MatchMatchNote
+
+!new TrainingSession('trainingSession40')
+!set trainingSession40.date := '2023-09-15'
+!set trainingSession40.location := "Surfer's Stadium Practice Area"
+!set trainingSession40.purpose := 'Enhance passing accuracy and interception skills'
+
+!insert (teamAW, trainingSession40) into TeamTraining
+
+!new TrainingSession('trainingSession41')
+!set trainingSession41.date := '2023-09-20'
+!set trainingSession41.location := "Mariner's Grounds Training Fields"
+!set trainingSession41.purpose := 'Improving response times and saving techniques'
+
+!insert (teamAX, trainingSession41) into TeamTraining
+
+!new TrainingNotes('trainingNote42')
+!set trainingNote42.note := 'Focus on high-pressure scenarios and penalty saves.'
+!set trainingNote42.date := '2023-09-21'
+
+!insert (trainingSession41, trainingNote42) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend16')
+!set failedAttend16.reason := 'Personal reasons.'
+
+!insert (trainingSession40, failedAttend16) into TrainingFailded
+!insert (failedAttend16, player51) into FailedPlayer
+
+!new TrainingObjective('trainingObjective54')
+!set trainingObjective54.areaToImprove := 'Consistent Performance'
+!set trainingObjective54.startDate := '2023-07-01'
+!set trainingObjective54.endDate := '2023-12-01'
+!set trainingObjective54.success := false
+
+!insert (trainingObjective54, player52) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote36')
+!set playerNote36.note := 'Requires boost in confidence following recent performances.'
+!set playerNote36.date := '2023-08-10'
+
+!insert (player51, playerNote36) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer32')
+!set matchPlayer32.booked := true
+!set matchPlayer32.goals := 1
+!set matchPlayer32.rating := 7
+
+!insert (player52, matchPlayer32) into PlayerMatch
+!insert (match23, matchPlayer32) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition33')
+!set matchPlayerPosition33.positionName := #FORWARD
+!set matchPlayerPosition33.number := 11
+
+!insert (matchPlayer32, matchPlayerPosition33) into MatchPlayerMatchPlayerPosition
+

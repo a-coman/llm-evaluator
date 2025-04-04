@@ -1,0 +1,85 @@
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Currency('usDollar')
+!usDollar.name := 'US Dollar'
+!usDollar.abbreviation := 'USD'
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Bill('accommodationSwissChalet')
+!accommodationSwissChalet.amount := 3500.00
+!accommodationSwissChalet.category := 'Accommodation in Swiss Chalet'
+!accommodationSwissChalet.date := Date('2023-07-01')
+!accommodationSwissChalet.paymentMethod := #CREDIT_CARD
+!accommodationSwissChalet.status := #VALIDATED
+
+!new Bill('familyDiningCatering')
+!familyDiningCatering.amount := 1500.00
+!familyDiningCatering.category := 'Family Dining and Catering'
+!familyDiningCatering.date := Date('2023-07-01')
+!familyDiningCatering.paymentMethod := #CASH
+!familyDiningCatering.status := #VALIDATED
+
+!new Bill('souvenirShopping')
+!souvenirShopping.amount := 200.00
+!souvenirShopping.category := 'Souvenir Shopping'
+!souvenirShopping.date := Date('2023-07-01')
+!souvenirShopping.paymentMethod := #CASH
+!souvenirShopping.status := #REFUNDED
+
+!new Bill('localTransportCarRental')
+!localTransportCarRental.amount := 500.00
+!localTransportCarRental.category := 'Local Transport and Car Rental'
+!localTransportCarRental.date := Date('2023-07-01')
+!localTransportCarRental.paymentMethod := #CHECK
+!localTransportCarRental.status := #DRAFT
+
+!new Bill('traditionalArtProjects')
+!traditionalArtProjects.amount := 100.00
+!traditionalArtProjects.category := 'Traditional Art Projects'
+!traditionalArtProjects.date := Date('2023-07-01')
+!traditionalArtProjects.paymentMethod := #CREDIT_CARD
+!traditionalArtProjects.status := #VALIDATED
+
+!insert (accommodationSwissChalet, swissFranc) into BillCurrency
+!insert (familyDiningCatering, usDollar) into BillCurrency
+!insert (souvenirShopping, usDollar) into BillCurrency
+!insert (localTransportCarRental, swissFranc) into BillCurrency
+!insert (traditionalArtProjects, indianRupee) into BillCurrency
+
+!new Expense('familyReunionVacationExpenses')
+-- The correct amount calculation excludes refunded expenses
+!familyReunionVacationExpenses.amount := 5800.00
+!familyReunionVacationExpenses.startDate := Date('2023-07-01')
+!familyReunionVacationExpenses.endDate := Date('2023-07-14')
+
+!insert (familyReunionVacationExpenses, accommodationSwissChalet) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, familyDiningCatering) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, souvenirShopping) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, localTransportCarRental) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, traditionalArtProjects) into ExpenseContainsBills
+
+!new Comment('commentAccommodation')
+!commentAccommodation.text := 'Accommodation validated seamlessly, enhancing family comfort.'
+
+!new Comment('commentDiningOutcome')
+!commentDiningOutcome.text := 'Verified dining outcome keeping family activities within the budget.'
+
+!new Comment('commentSouvenirRefund')
+!commentSouvenirRefund.text := 'Souvenir purchase refunded due to product quality issues.'
+
+!new Comment('commentVehicleDraft')
+!commentVehicleDraft.text := 'Vehicle expenses drafted for potential route adjustments.'
+
+!new Comment('commentArtProjects')
+!commentArtProjects.text := 'Art projects reflect local culture and family engagement.'
+
+!insert (familyReunionVacationExpenses, commentAccommodation) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentDiningOutcome) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentSouvenirRefund) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentVehicleDraft) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentArtProjects) into ExpenseComment

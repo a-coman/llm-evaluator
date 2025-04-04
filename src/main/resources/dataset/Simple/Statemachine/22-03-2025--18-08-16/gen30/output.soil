@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine31')
+!stateMachine31.name := 'paymentProcessingMachine'
+
+!new State('state99')
+!state99.name := 'paymentPending'
+
+!new State('state100')
+!state100.name := 'paymentProcessing'
+
+!new State('state101')
+!state101.name := 'paymentSuccessful'
+
+!new State('state102')
+!state102.name := 'paymentFailed'
+
+!new Transition('transition92')
+!transition92.name := 'startProcessing'
+
+!new Transition('transition93')
+!transition93.name := 'completePayment'
+
+!new Transition('transition94')
+!transition94.name := 'failPayment'
+
+!new Transition('transition95')
+!transition95.name := 'retryPayment'
+
+!new TimeEvent('event92')
+!event92.time := 5
+
+!new TimeEvent('event93')
+!event93.time := 15
+
+!new TimeEvent('event94')
+!event94.time := 25
+
+!new TimeEvent('event95')
+!event95.time := 35
+
+!insert (stateMachine31, state99) into StateMachineContainsStates
+!insert (stateMachine31, state100) into StateMachineContainsStates
+!insert (stateMachine31, state101) into StateMachineContainsStates
+!insert (stateMachine31, state102) into StateMachineContainsStates
+
+!insert (stateMachine31, transition92) into StateMachineContainsTransitions
+!insert (stateMachine31, transition93) into StateMachineContainsTransitions
+!insert (stateMachine31, transition94) into StateMachineContainsTransitions
+!insert (stateMachine31, transition95) into StateMachineContainsTransitions
+
+!insert (transition92, event92) into TransitionContainsEvents
+!insert (transition93, event93) into TransitionContainsEvents
+!insert (transition94, event94) into TransitionContainsEvents
+!insert (transition95, event95) into TransitionContainsEvents
+
+!insert (state99, transition92) into StateTransition
+!insert (state100, transition93) into StateTransition
+!insert (state100, transition94) into StateTransition
+!insert (state102, transition95) into StateTransition
+
+!insert (transition92, state100) into TransitionState
+!insert (transition93, state101) into TransitionState
+!insert (transition94, state102) into TransitionState
+!insert (transition95, state100) into TransitionState
+
+!insert (stateMachine31, state99) into StateMachineStartsStates

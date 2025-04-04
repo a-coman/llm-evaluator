@@ -1,0 +1,71 @@
+!new AddressBook('addressBook14')
+
+!new Company('urbanEats')
+!urbanEats.name := 'Urban Eats'
+!urbanEats.phone := '555-321-4321'
+!urbanEats.website := 'www.urbaneats.com'
+!urbanEats.email := 'contact@urbaneats.com'
+!urbanEats.industry := 'Culinary Arts'
+
+!new Person('chloeBishop')
+!chloeBishop.name := 'Chloe Bishop'
+!chloeBishop.phone := '999-888-7777'
+!chloeBishop.website := 'www.chloebishopcuisine.com'
+!chloeBishop.email := 'chloe.bishop@urbaneats.com'
+!chloeBishop.title := 'Head Chef'
+
+!new Note('recipeDevelopmentNote')
+!recipeDevelopmentNote.author := 'Chloe Bishop'
+!recipeDevelopmentNote.time := Date('2024-10-03')
+!recipeDevelopmentNote.type := #MEETING
+!recipeDevelopmentNote.comment := 'Developed new seasonal recipes with the culinary team'
+
+!new Address('chloeAddress')
+!chloeAddress.city := 'Minneapolis'
+!chloeAddress.houseNr := '6789'
+!chloeAddress.street := 'Chef Boulevard'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, urbanEats) into RelationshipToContact
+!insert (chloeBishop, employeeRelationship) into ContactToRelationship
+!insert (chloeBishop, chloeAddress) into ContactContainsAddress
+!insert (chloeBishop, recipeDevelopmentNote) into ContactContainsNote
+
+!new Person('loganScott')
+!loganScott.name := 'Logan Scott'
+!loganScott.phone := '222-555-4444'
+!loganScott.website := 'www.loganscottbartender.com'
+!loganScott.email := 'logan.scott@example.com'
+!loganScott.title := 'Mixologist'
+
+!new Note('cocktailInnovationNote')
+!cocktailInnovationNote.author := 'Logan Scott'
+!cocktailInnovationNote.time := Date('2024-10-10')
+!cocktailInnovationNote.type := #CALL
+!cocktailInnovationNote.comment := 'Discussed cocktail innovation ideas and menu updates'
+
+!new Address('loganAddress')
+!loganAddress.city := 'Austin'
+!loganAddress.houseNr := '3456'
+!loganAddress.street := 'Mix Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, chloeBishop) into RelationshipToContact
+!insert (loganScott, subdivisionRelationship) into ContactToRelationship
+!insert (loganScott, loganAddress) into ContactContainsAddress
+!insert (loganScott, cocktailInnovationNote) into ContactContainsNote
+
+!new Address('urbanEatsAddress')
+!urbanEatsAddress.city := 'Chicago'
+!urbanEatsAddress.houseNr := '1200'
+!urbanEatsAddress.street := 'Gourmet Street'
+
+!insert (urbanEats, urbanEatsAddress) into ContactContainsAddress
+
+!insert (addressBook14, urbanEats) into AddressBookMadeOfContact
+!insert (addressBook14, chloeBishop) into AddressBookMadeOfContact
+!insert (addressBook14, loganScott) into AddressBookMadeOfContact

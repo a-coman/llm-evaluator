@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine20')
+!stateMachine20.name := 'orderProcessingMachine'
+
+!new State('state55')
+!state55.name := 'orderPlaced'
+
+!new State('state56')
+!state56.name := 'orderConfirmed'
+
+!new State('state57')
+!state57.name := 'orderShipped'
+
+!new State('state58')
+!state58.name := 'orderDelivered'
+
+!new Transition('transition48')
+!transition48.name := 'confirmOrder'
+
+!new Transition('transition49')
+!transition49.name := 'shipOrder'
+
+!new Transition('transition50')
+!transition50.name := 'deliverOrder'
+
+!new Transition('transition51')
+!transition51.name := 'returnOrder'
+
+!new TimeEvent('event48')
+!event48.time := 5
+
+!new TimeEvent('event49')
+!event49.time := 10
+
+!new TimeEvent('event50')
+!event50.time := 15
+
+!new TimeEvent('event51')
+!event51.time := 20
+
+!insert (stateMachine20, state55) into StateMachineContainsStates
+!insert (stateMachine20, state56) into StateMachineContainsStates
+!insert (stateMachine20, state57) into StateMachineContainsStates
+!insert (stateMachine20, state58) into StateMachineContainsStates
+
+!insert (stateMachine20, transition48) into StateMachineContainsTransitions
+!insert (stateMachine20, transition49) into StateMachineContainsTransitions
+!insert (stateMachine20, transition50) into StateMachineContainsTransitions
+!insert (stateMachine20, transition51) into StateMachineContainsTransitions
+
+!insert (transition48, event48) into TransitionContainsEvents
+!insert (transition49, event49) into TransitionContainsEvents
+!insert (transition50, event50) into TransitionContainsEvents
+!insert (transition51, event51) into TransitionContainsEvents
+
+!insert (state55, transition48) into StateTransition
+!insert (state56, transition49) into StateTransition
+!insert (state57, transition50) into StateTransition
+!insert (state58, transition51) into StateTransition
+
+!insert (transition48, state56) into TransitionState
+!insert (transition49, state57) into TransitionState
+!insert (transition50, state58) into TransitionState
+!insert (transition51, state55) into TransitionState
+
+!insert (stateMachine20, state55) into StateMachineStartsStates

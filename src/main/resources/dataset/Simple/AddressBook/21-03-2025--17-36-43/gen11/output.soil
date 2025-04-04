@@ -1,0 +1,71 @@
+!new AddressBook('addressBook11')
+
+!new Company('greenThumbsGardening')
+!greenThumbsGardening.name := 'Green Thumbs Gardening'
+!greenThumbsGardening.phone := '999-777-5555'
+!greenThumbsGardening.website := 'www.greenthumbsgardening.net'
+!greenThumbsGardening.email := 'support@greenthumbs.net'
+!greenThumbsGardening.industry := 'Landscaping Services'
+
+!new Person('willowDavis')
+!willowDavis.name := 'Willow Davis'
+!willowDavis.phone := '321-555-6543'
+!willowDavis.website := 'www.willowdavislandscape.com'
+!willowDavis.email := 'willow.davis@greenthumbs.net'
+!willowDavis.title := 'Senior Landscape Designer'
+
+!new Note('landscapeReviewNote')
+!landscapeReviewNote.author := 'Willow Davis'
+!landscapeReviewNote.time := Date('2024-07-05')
+!landscapeReviewNote.type := #MEETING
+!landscapeReviewNote.comment := 'Reviewed new garden layout designs with clients'
+
+!new Address('willowAddress')
+!willowAddress.city := 'Portland'
+!willowAddress.houseNr := '302'
+!willowAddress.street := 'Garden Lane'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, greenThumbsGardening) into RelationshipToContact
+!insert (willowDavis, bossRelationship) into ContactToRelationship
+!insert (willowDavis, willowAddress) into ContactContainsAddress
+!insert (willowDavis, landscapeReviewNote) into ContactContainsNote
+
+!new Person('tomRivera')
+!tomRivera.name := 'Tom Rivera'
+!tomRivera.phone := '456-555-7890'
+!tomRivera.website := 'www.tomriveradesigns.com'
+!tomRivera.email := 'tom.rivera@example.com'
+!tomRivera.title := 'Botanical Consultant'
+
+!new Note('botanicalConsultNote')
+!botanicalConsultNote.author := 'Tom Rivera'
+!botanicalConsultNote.time := Date('2024-07-12')
+!botanicalConsultNote.type := #CALL
+!botanicalConsultNote.comment := 'Provided consulting on plant selection for a sustainable garden project'
+
+!new Address('tomAddress')
+!tomAddress.city := 'Phoenix'
+!tomAddress.houseNr := '1001'
+!tomAddress.street := 'Botanic Boulevard'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, willowDavis) into RelationshipToContact
+!insert (tomRivera, coworkerRelationship) into ContactToRelationship
+!insert (tomRivera, tomAddress) into ContactContainsAddress
+!insert (tomRivera, botanicalConsultNote) into ContactContainsNote
+
+!new Address('greenThumbsAddress')
+!greenThumbsAddress.city := 'Denver'
+!greenThumbsAddress.houseNr := '400'
+!greenThumbsAddress.street := 'Flora Road'
+
+!insert (greenThumbsGardening, greenThumbsAddress) into ContactContainsAddress
+
+!insert (addressBook11, greenThumbsGardening) into AddressBookMadeOfContact
+!insert (addressBook11, willowDavis) into AddressBookMadeOfContact
+!insert (addressBook11, tomRivera) into AddressBookMadeOfContact

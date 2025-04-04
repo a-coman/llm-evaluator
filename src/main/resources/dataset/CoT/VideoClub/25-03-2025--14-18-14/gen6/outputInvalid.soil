@@ -1,0 +1,58 @@
+!new Client('priyaKhanna')
+!priyaKhanna.clientId := 452
+!priyaKhanna.isSuspended := false
+
+!new Client('amirChoudhary')
+!amirChoudhary.clientId := 453
+!amirChoudhary.isSuspended := false
+
+!new Rental('rentalClassicBollywood')
+!rentalClassicBollywood.date := Date('2023-10-10')
+
+!new Rental('rentalHistoricalTapestry')
+!rentalHistoricalTapestry.date := Date('2023-10-20')
+
+!new Series('cassetteMusicalMoments')
+!cassetteMusicalMoments.title := 'Musical Moments: A Bollywood Journey'
+!cassetteMusicalMoments.availableCopies := 6
+!cassetteMusicalMoments.episode := 12
+
+!new Movie('cassetteEpicRomance')
+!cassetteEpicRomance.title := 'Epic Romance: Eternal Love'
+!cassetteEpicRomance.availableCopies := 3
+!cassetteEpicRomance.genre := #Comedy
+
+!new Movie('cassetteDancingThroughAges')
+!cassetteDancingThroughAges.title := 'Dancing Through the Ages'
+!cassetteDancingThroughAges.availableCopies := 2
+!cassetteDancingThroughAges.genre := #Action
+
+!new Series('cassetteEmpireOfIndia')
+!cassetteEmpireOfIndia.title := 'Empire of India'
+!cassetteEmpireOfIndia.availableCopies := 5
+!cassetteEmpireOfIndia.episode := 8
+
+!new Actor('actorShahrukhKhan')
+!actorShahrukhKhan.name := 'Shahrukh Khan'
+
+!new Actor('actorMadhuriDixit')
+!actorMadhuriDixit.name := 'Madhuri Dixit'
+
+!new Actor('actorAmitabhBachchan')
+!actorAmitabhBachchan.name := 'Amitabh Bachchan'
+
+!insert (priyaKhanna, rentalClassicBollywood) into ClientRental
+!insert (amirChoudhary, rentalHistoricalTapestry) into ClientRental
+
+!insert (rentalClassicBollywood, cassetteMusicalMoments) into RentalCassette
+!insert (rentalClassicBollywood, cassetteEpicRomance) into RentalCassette
+!insert (rentalClassicBollywood, cassetteDancingThroughAges) into RentalCassette
+
+!insert (rentalHistoricalTapestry, cassetteEmpireOfIndia) into RentalCassette
+
+!insert (cassetteEpicRomance, actorShahrukhKhan) into CassetteActor
+
+!insert (cassetteDancingThroughAges, actorMadhuriDixit) into CassetteActor
+
+!insert (cassetteEmpireOfIndia, actorAmitabhBachchan) into CassetteActor
+

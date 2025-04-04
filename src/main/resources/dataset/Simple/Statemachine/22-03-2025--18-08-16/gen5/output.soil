@@ -1,0 +1,37 @@
+!new StateMachine('stateMachine6')
+!stateMachine6.name := 'securityMachine'
+
+!new State('state13')
+!state13.name := 'locked'
+
+!new State('state14')
+!state14.name := 'unlocked'
+
+!new Transition('transition10')
+!transition10.name := 'lockToUnlock'
+
+!new Transition('transition11')
+!transition11.name := 'unlockToLock'
+
+!new TimeEvent('event10')
+!event10.time := 50
+
+!new TimeEvent('event11')
+!event11.time := 60
+
+!insert (stateMachine6, state13) into StateMachineContainsStates
+!insert (stateMachine6, state14) into StateMachineContainsStates
+
+!insert (stateMachine6, transition10) into StateMachineContainsTransitions
+!insert (stateMachine6, transition11) into StateMachineContainsTransitions
+
+!insert (transition10, event10) into TransitionContainsEvents
+!insert (transition11, event11) into TransitionContainsEvents
+
+!insert (state13, transition10) into StateTransition
+!insert (state14, transition11) into StateTransition
+
+!insert (transition10, state14) into TransitionState
+!insert (transition11, state13) into TransitionState
+
+!insert (stateMachine6, state13) into StateMachineStartsStates

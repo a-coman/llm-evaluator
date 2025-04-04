@@ -1,0 +1,36 @@
+!new Client('clientBoundary5')
+!clientBoundary5.clientId := 3
+!clientBoundary5.isSuspended := true
+
+!new Client('clientBoundary6')
+!clientBoundary6.clientId := 123456789
+!clientBoundary6.isSuspended := false
+
+!new Rental('rentalBoundary3')
+!rentalBoundary3.date := Date('2023-12-31')
+
+!new Movie('cassetteLegendsOfTheFall')
+!cassetteLegendsOfTheFall.title := 'Legends of the Fall'
+!cassetteLegendsOfTheFall.availableCopies := 1
+!cassetteLegendsOfTheFall.genre := #Action
+
+!new Series('cassetteMysteryInTheNorth')
+!cassetteMysteryInTheNorth.title := 'Mystery in the North Ep.20'
+!cassetteMysteryInTheNorth.availableCopies := 2
+!cassetteMysteryInTheNorth.episode := 20
+
+!new Actor('actorAnnaMuller')
+!actorAnnaMuller.name := 'Anna Müller'
+
+!new Actor('actorRajeshKumar')
+!actorRajeshKumar.name := 'Rajesh Kumar'
+
+!insert (clientBoundary5, rentalBoundary3) into ClientRental
+
+!insert (rentalBoundary3, cassetteLegendsOfTheFall) into RentalCassette
+!insert (rentalBoundary3, cassetteMysteryInTheNorth) into RentalCassette
+
+!insert (cassetteLegendsOfTheFall, actorAnnaMuller) into CassetteActor
+!insert (cassetteLegendsOfTheFall, actorRajeshKumar) into CassetteActor
+!insert (cassetteMysteryInTheNorth, actorRajeshKumar) into CassetteActor
+!insert (cassetteMysteryInTheNorth, actorAnnaMuller) into CassetteActor

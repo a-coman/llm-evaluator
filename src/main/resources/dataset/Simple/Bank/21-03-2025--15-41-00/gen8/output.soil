@@ -1,0 +1,51 @@
+!new Bank('bank9')
+!bank9.country := 'Italy'
+!bank9.name := 'UniCredit'
+!bank9.bic := 'UNCRITMM'
+
+!new Account('account22')
+!account22.iban := 'IT6003600001001234567890123'
+!account22.balance := 10000
+
+!new Account('account23')
+!account23.iban := 'IT6003600002001234567890122'
+!account23.balance := 1500
+
+!new Account('account24')
+!account24.iban := 'IT6003600003001234567890121'
+!account24.balance := 3200
+
+!new Person('person26')
+!person26.firstName := 'Marco'
+!person26.lastName := 'Rossi'
+!person26.age := 39
+
+!new Person('person27')
+!person27.firstName := 'Giulia'
+!person27.lastName := 'Bianchi'
+!person27.age := 33
+
+!new Person('person28')
+!person28.firstName := 'Luca'
+!person28.lastName := 'Conti'
+!person28.age := 25
+
+-- Associations
+!insert (bank9, account22) into AccountOfBanks
+!insert (bank9, account23) into AccountOfBanks
+!insert (bank9, account24) into AccountOfBanks
+
+!insert (person26, account22) into Ownership
+!insert (person27, account22) into Ownership
+
+!insert (person27, account23) into Ownership
+!insert (person28, account23) into Ownership
+
+!insert (person28, account24) into Ownership
+!insert (person26, account24) into Ownership
+
+!insert (person26, account23) into Use
+!insert (person27, account24) into Use
+
+!insert (person28, account22) into Use
+!insert (person27, account22) into Use

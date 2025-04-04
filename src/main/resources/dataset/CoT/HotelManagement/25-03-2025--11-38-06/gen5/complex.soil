@@ -1,0 +1,86 @@
+!new Customer('customer24')
+!customer24.firstName := 'Maria'
+!customer24.lastName := 'Ortiz'
+
+!new Booking('booking24')
+!booking24.bookingId := 789
+!booking24.startDate := 'July 10, 2024'
+!booking24.endDate := 'July 20, 2024'
+!booking24.canceled := false
+!booking24.confirmed := true
+
+!new RoomReservation('roomreservation38')
+!roomreservation38.checkInDate := 'July 10, 2024'
+!roomreservation38.checkOutDate := 'July 15, 2024'
+
+!new RoomReservation('roomreservation39')
+!roomreservation39.checkInDate := 'July 15, 2024'
+!roomreservation39.checkOutDate := 'July 20, 2024'
+
+!new Room('room45')
+!room45.roomNumber := 1103
+!room45.numBeds := 2
+!room45.pricePerNight := 250.00
+!room45.occupied := true
+!room45.blocked := false
+
+!new Room('room46')
+!room46.roomNumber := 1205
+!room46.numBeds := 3
+!room46.pricePerNight := 300.00
+!room46.occupied := true
+!room46.blocked := false
+
+!new RoomExtra('roomextra55')
+!roomextra55.price := 100.00
+!roomextra55.description := 'Guided snorkeling tour with all necessary equipment provided, exploring colorful coral reefs.'
+
+!new RoomExtra('roomextra56')
+!roomextra56.price := 30.00
+!roomextra56.description := 'In-room movie night setup with a selection of family-friendly DVDs, popcorn, and snacks.'
+
+!new RoomExtra('roomextra57')
+!roomextra57.price := 200.00
+!roomextra57.description := 'Private barbecue dinner set up on the beach with a dedicated chef and a variety of grilled options.'
+
+!new RoomExtra('roomextra58')
+!roomextra58.price := 60.00
+!roomextra58.description := 'Access to the resort\'s kids club, with daily activities and supervision included.'
+
+!new Bill('bill44')
+!bill44.billId := 89123
+!bill44.price := 1330.00
+
+!new Bill('bill45')
+!bill45.billId := 89124
+!bill45.price := 1660.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto23')
+!freeroomtypesdto23.roomTypeDescription := 'Large suite with direct beach access, ideal for families needing extra space.'
+!freeroomtypesdto23.numBeds := 3
+!freeroomtypesdto23.pricePerNight := 350.00
+!freeroomtypesdto23.numFreeRooms := 1
+
+!new FreeRoomTypesDTO('freeroomtypesdto24')
+!freeroomtypesdto24.roomTypeDescription := 'Comfortable room with a balcony view, perfect for small families or couples.'
+!freeroomtypesdto24.numBeds := 2
+!freeroomtypesdto24.pricePerNight := 270.00
+!freeroomtypesdto24.numFreeRooms := 4
+
+!insert (booking24, customer24) into BookingCustomer
+!insert (booking24, roomreservation38) into BookingRoomReservation
+!insert (booking24, roomreservation39) into BookingRoomReservation
+
+!insert (roomreservation38, room45) into RoomReservationRoom
+!insert (roomreservation39, room46) into RoomReservationRoom
+
+!insert (roomreservation38, roomextra55) into RoomReservationExtras
+!insert (roomreservation38, roomextra56) into RoomReservationExtras
+!insert (roomreservation39, roomextra57) into RoomReservationExtras
+!insert (roomreservation39, roomextra58) into RoomReservationExtras
+
+!insert (bill44, roomreservation38) into BillRoomReservation
+!insert (bill45, roomreservation39) into BillRoomReservation
+
+!insert (booking24, bill44) into BookingBill
+!insert (booking24, bill45) into BookingBill

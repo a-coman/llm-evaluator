@@ -1,0 +1,116 @@
+!new Restaurant('restaurant21')
+!restaurant21.name := 'Cultured Kitchen Studio'
+
+!new Owner('owner46')
+!owner46.name := 'Anjali Mehta'
+!owner46.percentageShares := 50
+
+!new Owner('owner47')
+!owner47.name := 'David Yi'
+!owner47.percentageShares := 30
+
+!new Owner('owner48')
+!owner48.name := 'Maria Silva'
+!owner48.percentageShares := 20
+
+!insert (restaurant21, owner46) into RestaurantOwner
+!insert (restaurant21, owner47) into RestaurantOwner
+!insert (restaurant21, owner48) into RestaurantOwner
+
+!new Table('table48')
+!table48.number := 7
+!table48.description := 'Communal Teaching Table'
+!table48.capacity := 15
+
+!new Banquet('banquet18')
+!banquet18.date := Date('2023-11-08')
+!banquet18.time := Time('18:00')
+!banquet18.numberPeople := 15
+!banquet18.name := 'Local Veggie Lovers Club'
+!banquet18.phoneNumber := '+1 555-9089'
+!banquet18.number := 2023110804
+!banquet18.groupName := 'Green Gourmet Society'
+!banquet18.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for PayPal
+!banquet18.busService := false
+
+!insert (restaurant21, banquet18) into RestaurantReservation
+!insert (banquet18, table48) into ReservationTable
+
+!new ItemOrder('itemOrder30')
+!itemOrder30.time := Time('18:20')
+!insert (banquet18, itemOrder30) into ReservationItemOrdered
+
+!new MenuItem('menuItem35')
+!menuItem35.description := 'Stuffed Bell Peppers'
+!menuItem35.prepTime := 35.0
+!menuItem35.classification := #Main
+
+!new ItemOrder('itemOrder31')
+!itemOrder31.time := Time('18:25')  -- Separate ItemOrder for the second menu item
+!insert (banquet18, itemOrder31) into ReservationItemOrdered
+
+!new MenuItem('menuItem36')
+!menuItem36.description := 'Chickpea Salad'
+!menuItem36.prepTime := 15.0
+!menuItem36.classification := #Apetizer
+
+!insert (itemOrder30, menuItem35) into ItemOrderMenuItem
+!insert (itemOrder31, menuItem36) into ItemOrderMenuItem
+
+!new Chef('chef28')
+!chef28.name := 'Nina Kapur'
+
+!new Chef('chef29')
+!chef29.name := 'Carlos Rivera'
+
+!insert (menuItem35, chef28) into MenuItemChef
+!insert (menuItem36, chef29) into MenuItemChef
+
+!new Cook('cook35')
+!cook35.name := 'Priya Shah'
+!cook35.dateOfBirth := Date('1988-03-01')
+!cook35.yearsOfExperience := 9
+
+!insert (chef28, cook35) into ChefCook
+
+!new Cook('cook36')  -- Associate a cook for the second chef
+!cook36.name := 'James Lee'
+!cook36.dateOfBirth := Date('1990-11-11')  -- Dummy date of birth
+!cook36.yearsOfExperience := 5  -- Dummy years of experience
+
+!insert (chef29, cook36) into ChefCook
+
+!new FoodItem('foodItem66')
+!foodItem66.number := 11001
+!foodItem66.description := 'Bell Peppers'
+!foodItem66.purchaseFlag := true
+!foodItem66.unit := #Pound  -- Using #Pound as placeholder for Boxes
+
+!new FoodItem('foodItem67')
+!foodItem67.number := 11002
+!foodItem67.description := 'Chickpeas'
+!foodItem67.purchaseFlag := true
+!foodItem67.unit := #Pound  -- Using #Pound as placeholder for Cans
+
+!new FoodItem('foodItem68')
+!foodItem68.number := 11003
+!foodItem68.description := 'Olive Oil'
+!foodItem68.purchaseFlag := true
+!foodItem68.unit := #Ounce  -- Using #Ounce as placeholder for Bottles
+
+!insert (menuItem35, foodItem66) into MenuItemFoodItem
+!insert (menuItem36, foodItem67) into MenuItemFoodItem
+!insert (menuItem36, foodItem68) into MenuItemFoodItem
+
+!new HeadWaiter('headWaiter19')
+!headWaiter19.name := 'Lucas Thompson'
+!headWaiter19.dateOfBirth := Date('1990-07-22')
+!headWaiter19.phoneNumber := '+1 555-7788'
+
+!new Waiter('waiter41')
+!waiter41.name := 'Emma Johnson'
+!waiter41.dateOfBirth := Date('1993-12-03')
+!waiter41.phoneNumber := '+1 555-8899'
+
+!insert (headWaiter19, waiter41) into HeadWaiterWaiter
+!insert (banquet18, waiter41) into ReservationWaiter

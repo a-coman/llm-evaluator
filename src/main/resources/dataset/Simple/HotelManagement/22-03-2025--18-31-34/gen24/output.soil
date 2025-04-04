@@ -1,0 +1,47 @@
+!new Booking('booking25')
+!booking25.startDate := '2025-07-20'
+!booking25.endDate := '2025-07-25'
+!booking25.canceled := true
+!booking25.bookingId := 124
+!booking25.confirmed := false
+
+!new Bill('bill25')
+!bill25.price := 0.00
+!bill25.billId := 224
+
+!new FreeRoomTypesDTO('roomType25')
+!roomType25.roomTypeDescription := 'Backpacker Dormitory'
+!roomType25.numBeds := 6
+!roomType25.pricePerNight := 40.00
+!roomType25.numFreeRooms := 8
+
+!new Customer('customer25')
+!customer25.firstName := 'Xander'
+!customer25.lastName := 'Clark'
+
+!new RoomReservation('reservation25')
+!reservation25.checkInDate := '2025-07-20'
+!reservation25.checkOutDate := '2025-07-25'
+
+!new RoomExtra('extra25')
+!extra25.price := 5.00
+!extra25.description := 'Locker Rental'
+
+!new Room('room38')
+!room38.numBeds := 6
+!room38.pricePerNight := 35.00
+!room38.occupied := false
+!room38.blocked := false
+!room38.roomNumber := 138
+
+!insert (booking25, bill25) into BookingBill
+
+!insert (booking25, customer25) into BookingCustomer
+
+!insert (booking25, reservation25) into BookingRoomReservation
+
+!insert (reservation25, extra25) into RoomReservationExtras
+
+!insert (reservation25, room38) into RoomReservationRoom
+
+!insert (bill25, reservation25) into BillRoomReservation

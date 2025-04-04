@@ -1,0 +1,83 @@
+!new Driver('driver19')
+!driver19.id := 'D003'
+!driver19.name := 'Carlos Rodriguez'
+
+!new Shipment('shipment16')
+!shipment16.id := 'SHP003'
+!shipment16.status := #DELIVERED
+
+!new Shipment('shipment17')
+!shipment17.id := 'SHP004'
+!shipment17.status := #ASSIGNED
+
+!new Address('pickupAddress16')
+!pickupAddress16.text := 'Green Valley Farms, Route 602, Valleyfield, NM'
+
+!new GeoLocation('pickupGeoLocation16')
+!pickupGeoLocation16.latitude := 35.0088
+!pickupGeoLocation16.longitude := -106.9956
+
+!new Address('deliveryAddress16')
+!deliveryAddress16.text := '215 Orchard St, Farmington, NM'
+
+!new GeoLocation('deliveryGeoLocation16')
+!deliveryGeoLocation16.latitude := 36.7281
+!deliveryGeoLocation16.longitude := -108.2187
+
+!new Address('pickupAddress17')
+!pickupAddress17.text := 'Sunrise Organic Gardens, Route 850, Bloomfield, NM'
+
+!new GeoLocation('pickupGeoLocation17')
+!pickupGeoLocation17.latitude := 36.7128
+!pickupGeoLocation17.longitude := -108.1579
+
+!new Address('deliveryAddress17')
+!deliveryAddress17.text := '12314 Main St, Aztec, NM'
+
+!new GeoLocation('deliveryGeoLocation17')
+!deliveryGeoLocation17.latitude := 36.8225
+!deliveryGeoLocation17.longitude := -107.9929
+
+!new Station('station14')
+
+!new Customer('customer18')
+!customer18.id := 'CUST003'
+!customer18.name := 'Linda Perez'
+!customer18.twitterUserName := '@perezLindaNM'
+
+!new Customer('customer19')
+!customer19.id := 'CUST004'
+!customer19.name := 'Martha Thompson'
+!customer19.twitterUserName := '@marthaT_green'
+
+!insert (driver19, shipment17) into DriverShipment
+
+!insert (shipment16, pickupAddress16) into ShipmentContainsPickUpAddress
+
+!insert (shipment16, deliveryAddress16) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress16, pickupGeoLocation16) into AddressContainsGeoLocation
+
+!insert (deliveryAddress16, deliveryGeoLocation16) into AddressContainsGeoLocation
+
+!insert (shipment17, pickupAddress17) into ShipmentContainsPickUpAddress
+
+!insert (shipment17, deliveryAddress17) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress17, pickupGeoLocation17) into AddressContainsGeoLocation
+
+!insert (deliveryAddress17, deliveryGeoLocation17) into AddressContainsGeoLocation
+
+!insert (customer18, shipment16) into CustomerConsistsOfShipment
+
+!insert (customer19, shipment17) into CustomerConsistsOfShipment
+
+!insert (station14, customer18) into StationContainsCustomer
+
+!insert (station14, customer19) into StationContainsCustomer
+
+!insert (station14, shipment16) into StationShipment
+
+!insert (station14, shipment17) into StationShipment
+
+!insert (station14, driver19) into StationContainsDriver

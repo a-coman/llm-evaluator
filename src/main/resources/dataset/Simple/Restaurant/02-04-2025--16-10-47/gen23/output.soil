@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant23')
+!restaurant23.name := 'Skyline Bistro'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner45')
+!owner45.name := 'Lucas Taylor'
+!owner45.percentageShares := 70
+
+!new Owner('owner46')
+!owner46.name := 'Zoe Bennett'
+!owner46.percentageShares := 30
+
+-- Establish RestaurantOwner association
+!insert (restaurant23, owner45) into RestaurantOwner
+!insert (restaurant23, owner46) into RestaurantOwner
+
+-- Creating tables with a modern design
+!new Table('table45')
+!table45.number := 2301
+!table45.description := 'Rooftop View'
+!table45.capacity := 5
+
+!new Table('table46')
+!table46.number := 2302
+!table46.description := 'Lounge Area'
+!table46.capacity := 8
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter23')
+!headwaiter23.name := 'Dylan Woods'
+!headwaiter23.dateOfBirth := Date('1980-01-25')
+!headwaiter23.phoneNumber := '555-4949'
+
+!new Waiter('waiter27')
+!waiter27.name := 'Alice King'
+!waiter27.dateOfBirth := Date('1991-04-15')
+!waiter27.phoneNumber := '555-5656'
+!waiter27.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter23, waiter27) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a sunset dinner
+!new Individual('reservation23')
+!reservation23.time := Time('19:30')
+!reservation23.date := Date('2024-07-19')
+!reservation23.numberPeople := 3
+!reservation23.name := 'Sunset Dinner'
+!reservation23.phoneNumber := '555-4242'
+!reservation23.number := 221
+!reservation23.seating := #Patio
+!reservation23.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant23, reservation23) into RestaurantReservation
+!insert (reservation23, waiter27) into ReservationWaiter
+!insert (reservation23, table45) into ReservationTable
+!insert (reservation23, table46) into ReservationTable
+
+-- Adding a gourmet MenuItem for the dinner
+!new MenuItem('menuItem23')
+!menuItem23.description := 'Grilled Salmon with Herb Citrus'
+!menuItem23.prepTime := 30.0
+!menuItem23.classification := #Main
+
+-- Associating MenuItem with a skilled Chef
+!new Chef('chef23')
+!chef23.name := 'Sophia Lin'
+!chef23.dateOfBirth := Date('1985-03-11')
+!chef23.phoneNumber := '555-3232'
+
+!insert (menuItem23, chef23) into MenuItemChef
+
+-- Creating Cook under Chef guidance
+!new Cook('cook23')
+!cook23.name := 'James Patel'
+!cook23.dateOfBirth := Date('1977-08-09')
+!cook23.phoneNumber := '555-6767'
+!cook23.yearsOfExperience := 18
+
+-- Establishing association between Chef and Cook
+!insert (chef23, cook23) into ChefCook
+
+-- Creating an ItemOrder for the sunset dinner
+!new ItemOrder('order23')
+!order23.time := Time('20:00')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order23, menuItem23) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation23, order23) into ReservationItemOrdered

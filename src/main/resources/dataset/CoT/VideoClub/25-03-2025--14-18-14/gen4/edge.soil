@@ -1,0 +1,64 @@
+!new Client('client300')
+!client300.clientId := 300
+!client300.isSuspended := false
+
+!new Client('client301')
+!client301.clientId := 301
+!client301.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-10-05')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-10-06')
+
+!new Movie('cassetteTheFinalStand')
+!cassetteTheFinalStand.title := 'The Final Stand'
+!cassetteTheFinalStand.availableCopies := 5
+!cassetteTheFinalStand.genre := #Action
+
+!new Series('cassetteCrossBorderDrama')
+!cassetteCrossBorderDrama.title := 'Cross-Border Drama'
+!cassetteCrossBorderDrama.availableCopies := 2
+!cassetteCrossBorderDrama.episode := 1
+
+!new Series('cassetteGalacticVoyage')
+!cassetteGalacticVoyage.title := 'Galactic Voyage'
+!cassetteGalacticVoyage.availableCopies := 0
+!cassetteGalacticVoyage.episode := 20
+
+!new Actor('actorBruceLee')
+!actorBruceLee.name := 'Bruce Lee'
+
+!new Actor('actorPenelopeCruz')
+!actorPenelopeCruz.name := 'Penélope Cruz'
+
+!new Actor('actorJackieChan')
+!actorJackieChan.name := 'Jackie Chan'
+
+!new Actor('actorChrisEvans')
+!actorChrisEvans.name := 'Chris Evans'
+
+!new Actor('actorGalGadot')
+!actorGalGadot.name := 'Gal Gadot'
+
+!new Actor('actorBenedictCumberbatch')
+!actorBenedictCumberbatch.name := 'Benedict Cumberbatch'
+
+!insert (client300, rental1) into ClientRental
+!insert (client301, rental2) into ClientRental
+
+!insert (rental1, cassetteTheFinalStand) into RentalCassette
+!insert (rental1, cassetteGalacticVoyage) into RentalCassette
+
+!insert (rental2, cassetteCrossBorderDrama) into RentalCassette
+!insert (rental2, cassetteGalacticVoyage) into RentalCassette
+
+!insert (cassetteTheFinalStand, actorBruceLee) into CassetteActor
+
+!insert (cassetteCrossBorderDrama, actorPenelopeCruz) into CassetteActor
+!insert (cassetteCrossBorderDrama, actorJackieChan) into CassetteActor
+
+!insert (cassetteGalacticVoyage, actorChrisEvans) into CassetteActor
+!insert (cassetteGalacticVoyage, actorGalGadot) into CassetteActor
+!insert (cassetteGalacticVoyage, actorBenedictCumberbatch) into CassetteActor

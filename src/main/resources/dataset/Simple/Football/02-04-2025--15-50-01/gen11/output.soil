@@ -1,0 +1,154 @@
+!new Club('club21')
+!club21.name := 'Comets FC'
+!club21.homeGround := 'Comet Stadium'
+!club21.chairman := 'Diana Roberts'
+
+!new Club('club22')
+!club22.name := 'Asteroids FC'
+!club22.homeGround := 'Asteroid Arena'
+!club22.chairman := 'Thomas Clark'
+
+!new Team('team21')
+!team21.name := 'Comet Chasers'
+!insert (club21, team21) into ClubTeam
+
+!new Team('team22')
+!team22.name := 'Asteroid Avengers'
+!insert (club22, team22) into ClubTeam
+
+!new Player('player31')
+!player31.name := 'Ryan Matthews'
+!player31.age := 27
+!player31.bestFoot := #LEFT
+!player31.phoneNumber := '707-234-5678'
+!insert (team21, player31) into TeamPlayer
+
+!new Player('player32')
+!player32.name := 'Sophia Turner'
+!player32.age := 28
+!player32.bestFoot := #RIGHT
+!player32.phoneNumber := '808-345-6789'
+!insert (team21, player32) into TeamPlayer
+
+!new Player('player33')
+!player33.name := 'James Carter'
+!player33.age := 26
+!player33.bestFoot := #BOTH
+!player33.phoneNumber := '909-456-7890'
+!insert (team22, player33) into TeamPlayer
+
+!new Position('position31')
+!position31.positionName := #DEFENDER
+!insert (player31, position31) into PlayerPositions
+
+!new Position('position32')
+!position32.positionName := #FORWARD
+!insert (player32, position32) into PlayerPositions
+
+!new Position('position33')
+!position33.positionName := #MIDFIELDER
+!insert (player33, position33) into PlayerPositions
+
+!new TrainingSession('training21')
+!training21.date := '2023-12-01'
+!training21.location := 'Comet Training Center'
+!training21.purpose := 'Defensive Strategies'
+!insert (team21, training21) into TeamTraining
+
+!new TrainingSession('training22')
+!training22.date := '2023-12-02'
+!training22.location := 'Asteroid Field'
+!training22.purpose := 'Attack Dynamics'
+!insert (team22, training22) into TeamTraining
+
+!new TrainingNotes('trainingNotes21')
+!trainingNotes21.note := 'Enhanced defensive tactics against fast break plays'
+!trainingNotes21.date := '2023-12-01'
+!insert (training21, trainingNotes21) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes22')
+!trainingNotes22.note := 'Practiced offensive movements and finishing'
+!trainingNotes22.date := '2023-12-02'
+!insert (training22, trainingNotes22) into TrainingTrainingNotes
+
+!new TrainingObjective('objective31')
+!objective31.areaToImprove := 'Defensive Positioning'
+!objective31.startDate := '2023-09-15'
+!objective31.endDate := '2023-12-01'
+!objective31.success := true
+!insert (objective31, player31) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective32')
+!objective32.areaToImprove := 'Goal Scoring'
+!objective32.startDate := '2023-09-10'
+!objective32.endDate := '2023-11-15'
+!objective32.success := false
+!insert (objective32, player32) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective33')
+!objective33.areaToImprove := 'Ball Control'
+!objective33.startDate := '2023-08-05'
+!objective33.endDate := '2023-10-20'
+!objective33.success := true
+!insert (objective33, player33) into TrainingObjectivePlayer
+
+!new Competition('competition11')
+!competition11.name := 'Universal League'
+!competition11.type := 'Round Robin'
+
+!new Match('match11')
+!match11.date := '2023-12-18'
+!match11.homeAway := true
+!insert (competition11, match11) into CompetitionMatch
+!insert (team21, match11) into LocalMatch
+!insert (team22, match11) into VisitorMatch
+
+!new MatchReport('report11')
+!report11.duration := 90
+!report11.scoreVisitor := 1
+!report11.scoreLocal := 2
+!insert (match11, report11) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer31')
+!matchPlayer31.booked := false
+!matchPlayer31.goals := 1
+!matchPlayer31.rating := 8
+!insert (player31, matchPlayer31) into PlayerMatch
+!insert (match11, matchPlayer31) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer32')
+!matchPlayer32.booked := true
+!matchPlayer32.goals := 1
+!matchPlayer32.rating := 9
+!insert (player32, matchPlayer32) into PlayerMatch
+!insert (match11, matchPlayer32) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition31')
+!matchPlayerPosition31.positionName := #DEFENDER
+!matchPlayerPosition31.number := 3
+!insert (matchPlayer31, matchPlayerPosition31) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition32')
+!matchPlayerPosition32.positionName := #FORWARD
+!matchPlayerPosition32.number := 11
+!insert (matchPlayer32, matchPlayerPosition32) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event40')
+!event40.eventType := #GOAL
+!event40.time := 10
+!insert (match11, event40) into MatchMatchEvent
+
+!new MatchEvent('event41')
+!event41.eventType := #GOAL
+!event41.time := 52
+!insert (match11, event41) into MatchMatchEvent
+
+!new MatchEvent('event42')
+!event42.eventType := #GOAL
+!event42.time := 80
+!insert (match11, event42) into MatchMatchEvent
+
+!new MatchNote('matchNote11')
+!matchNote11.note := 'Comet Chasers took the lead with strong defense and smart plays'
+!matchNote11.date := '2023-12-18'
+!insert (match11, matchNote11) into MatchMatchNote

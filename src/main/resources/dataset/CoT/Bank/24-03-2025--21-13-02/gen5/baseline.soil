@@ -1,0 +1,55 @@
+!new Bank('bank21')
+!bank21.country := 'France'
+!bank21.name := 'Crédit Agricole'
+!bank21.bic := 'AGRIFRPPXXX'
+
+!new Account('account47')
+!account47.iban := 'FR7630006000011234567890189'
+!account47.balance := 250
+
+!new Account('account48')
+!account48.iban := 'FR7630006000029876543210123'
+!account48.balance := 9400
+
+!new Person('person64')
+!person64.firstName := 'Marie'
+!person64.lastName := 'Dupont'
+!person64.age := 41
+
+!new Person('person65')
+!person65.firstName := 'Jean'
+!person65.lastName := 'Lefebvre'
+!person65.age := 48
+
+!new Person('person66')
+!person66.firstName := 'Chloé'
+!person66.lastName := 'Blanc'
+!person66.age := 30
+
+!new Person('person67')
+!person67.firstName := 'Théo'
+!person67.lastName := 'De la Tour'
+!person67.age := 35
+
+!new Person('person68')
+!person68.firstName := 'Lucas'
+!person68.lastName := 'Petit'
+!person68.age := 24
+
+!insert (person64, account47) into Ownership
+!insert (person65, account47) into Ownership
+!insert (person66, account48) into Ownership
+!insert (person67, account48) into Ownership
+
+!insert (person64, account47) into Use
+!insert (person65, account47) into Use
+!insert (person64, account48) into Use
+!insert (person65, account48) into Use
+!insert (person66, account47) into Use
+!insert (person66, account48) into Use
+!insert (person67, account48) into Use
+!insert (person68, account47) into Use
+!insert (person68, account48) into Use
+
+!insert (bank21, account47) into AccountOfBanks
+!insert (bank21, account48) into AccountOfBanks

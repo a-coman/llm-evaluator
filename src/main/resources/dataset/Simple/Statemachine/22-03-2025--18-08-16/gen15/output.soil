@@ -1,0 +1,37 @@
+!new StateMachine('stateMachine16')
+!stateMachine16.name := 'notificationMachine'
+
+!new State('state42')
+!state42.name := 'unread'
+
+!new State('state43')
+!state43.name := 'read'
+
+!new Transition('transition36')
+!transition36.name := 'markAsRead'
+
+!new Transition('transition37')
+!transition37.name := 'markAsUnread'
+
+!new TimeEvent('event36')
+!event36.time := 5
+
+!new TimeEvent('event37')
+!event37.time := 15
+
+!insert (stateMachine16, state42) into StateMachineContainsStates
+!insert (stateMachine16, state43) into StateMachineContainsStates
+
+!insert (stateMachine16, transition36) into StateMachineContainsTransitions
+!insert (stateMachine16, transition37) into StateMachineContainsTransitions
+
+!insert (transition36, event36) into TransitionContainsEvents
+!insert (transition37, event37) into TransitionContainsEvents
+
+!insert (state42, transition36) into StateTransition
+!insert (state43, transition37) into StateTransition
+
+!insert (transition36, state43) into TransitionState
+!insert (transition37, state42) into TransitionState
+
+!insert (stateMachine16, state42) into StateMachineStartsStates

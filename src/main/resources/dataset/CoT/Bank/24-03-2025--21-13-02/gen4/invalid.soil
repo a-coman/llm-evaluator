@@ -1,0 +1,42 @@
+!new Bank('bank20')
+!bank20.country := 'Canada'
+!bank20.name := 'Maple Leaf Financial'
+!bank20.bic := 'MLFICAT2'
+
+!new Account('account45')
+!account45.iban := 'CA56473829106473598265'
+!account45.balance := 4500
+
+!new Account('account46')
+!account46.iban := 'CA82736481920456719384'
+!account46.balance := 0
+
+!new Person('person60')
+!person60.firstName := 'Emily'
+!person60.lastName := 'Lee'
+!person60.age := 36
+
+!new Person('person61')
+!person61.firstName := 'Daniel'
+!person61.lastName := 'Lee'
+!person61.age := 37
+
+!new Person('person62')
+!person62.firstName := 'Carla'
+!person62.lastName := 'Martinez'
+!person62.age := 19
+
+!new Person('person63')
+!person63.firstName := 'Sophie'
+!person63.lastName := 'Lee'
+!person63.age := 16
+
+!insert (person60, account45) into Ownership
+!insert (person61, account45) into Ownership
+!insert (person62, account46) into Ownership
+
+!insert (person63, account45) into Use
+!insert (person62, account46) into Use
+
+!insert (bank20, account45) into AccountOfBanks
+!insert (bank20, account46) into AccountOfBanks

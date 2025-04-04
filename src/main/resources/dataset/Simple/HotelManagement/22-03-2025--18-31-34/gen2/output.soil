@@ -1,0 +1,55 @@
+!new Booking('booking3')
+!booking3.startDate := '2023-11-20'
+!booking3.endDate := '2023-11-25'
+!booking3.canceled := false
+!booking3.bookingId := 102
+!booking3.confirmed := true
+
+!new Bill('bill3')
+!bill3.price := 500.00
+!bill3.billId := 202
+
+!new FreeRoomTypesDTO('roomType3')
+!roomType3.roomTypeDescription := 'Suite'
+!roomType3.numBeds := 3
+!roomType3.pricePerNight := 300.00
+!roomType3.numFreeRooms := 2
+
+!new Customer('customer3')
+!customer3.firstName := 'Charlie'
+!customer3.lastName := 'Davis'
+
+!new RoomReservation('reservation3')
+!reservation3.checkInDate := '2023-11-20'
+!reservation3.checkOutDate := '2023-11-25'
+
+!new RoomExtra('extra3')
+!extra3.price := 50.00
+!extra3.description := 'Spa Access'
+
+!new Room('room3')
+!room3.numBeds := 3
+!room3.pricePerNight := 280.00
+!room3.occupied := false
+!room3.blocked := true
+!room3.roomNumber := 103
+
+!new Room('room4')
+!room4.numBeds := 3
+!room4.pricePerNight := 300.00
+!room4.occupied := true
+!room4.blocked := false
+!room4.roomNumber := 104
+
+!insert (booking3, bill3) into BookingBill
+
+!insert (booking3, customer3) into BookingCustomer
+
+!insert (booking3, reservation3) into BookingRoomReservation
+
+!insert (reservation3, extra3) into RoomReservationExtras
+
+!insert (reservation3, room3) into RoomReservationRoom
+!insert (reservation3, room4) into RoomReservationRoom
+
+!insert (bill3, reservation3) into BillRoomReservation

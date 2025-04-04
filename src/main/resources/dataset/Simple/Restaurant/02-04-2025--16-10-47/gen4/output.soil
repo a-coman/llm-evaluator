@@ -1,0 +1,112 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant4')
+!restaurant4.name := 'Mountain Retreat'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner7')
+!owner7.name := 'Anna Walker'
+!owner7.percentageShares := 40
+
+!new Owner('owner8')
+!owner8.name := 'Charlie Wood'
+!owner8.percentageShares := 60
+
+-- Establish RestaurantOwner association
+!insert (restaurant4, owner7) into RestaurantOwner
+!insert (restaurant4, owner8) into RestaurantOwner
+
+-- Creating Tables with adequate capacity
+!new Table('table7')
+!table7.number := 401
+!table7.description := 'Deck Seating'
+!table7.capacity := 10
+
+!new Table('table8')
+!table8.number := 402
+!table8.description := 'Cozy Corner'
+!table8.capacity := 10
+
+-- Create a HeadWaiter and multiple Waiters
+!new HeadWaiter('headwaiter4')
+!headwaiter4.name := 'Robert Frost'
+!headwaiter4.dateOfBirth := Date('1978-04-01')
+!headwaiter4.phoneNumber := '555-4321'
+
+!new Waiter('waiter5')
+!waiter5.name := 'Ella Fitzgerald'
+!waiter5.dateOfBirth := Date('1988-07-04')
+!waiter5.phoneNumber := '555-7890'
+!waiter5.spokenLanguage := #English
+
+!new Waiter('waiter6')
+!waiter6.name := 'Frank Sinatra'
+!waiter6.dateOfBirth := Date('1985-12-12')
+!waiter6.phoneNumber := '555-9999'
+!waiter6.spokenLanguage := #Spanish
+
+-- Establish association between HeadWaiter and Waiters
+!insert (headwaiter4, waiter5) into HeadWaiterWaiter
+!insert (headwaiter4, waiter6) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a party
+!new Banquet('reservation4')
+!reservation4.time := Time('18:00')
+!reservation4.date := Date('2023-12-22')
+!reservation4.numberPeople := 18
+!reservation4.name := 'Winter Gala'
+!reservation4.phoneNumber := '555-2121'
+!reservation4.number := 202
+!reservation4.groupName := 'Company Retreat'
+!reservation4.paymentMethod := #Cash
+!reservation4.busService := true
+
+-- Establish associations for Banquet
+!insert (restaurant4, reservation4) into RestaurantReservation
+!insert (reservation4, waiter5) into ReservationWaiter
+!insert (reservation4, waiter6) into ReservationWaiter
+!insert (reservation4, table7) into ReservationTable -- total capacity = 10
+!insert (reservation4, table8) into ReservationTable -- total capacity = 10
+
+-- Create a BusDriver for Banquet Bus Service
+!new BusDriver('busdriver2')
+!busdriver2.name := 'Michael Schumacher'
+!busdriver2.dateOfBirth := Date('1969-01-03')
+!busdriver2.phoneNumber := '555-5678'
+!busdriver2.driverLicenseNr := 'DL456789'
+
+-- Establish BanquetBusDriver association
+!insert (reservation4, busdriver2) into BanquetBusDriver
+
+-- MenuItem for the Banquet
+!new MenuItem('menuItem4')
+!menuItem4.description := 'Roasted Lamb'
+!menuItem4.prepTime := 40.0
+!menuItem4.classification := #Main
+
+-- Assign MenuItem to a new Chef
+!new Chef('chef4')
+!chef4.name := 'Julia Child'
+!chef4.dateOfBirth := Date('1912-08-15')
+!chef4.phoneNumber := '555-2468'
+
+!insert (menuItem4, chef4) into MenuItemChef
+
+-- Creating Cooks supervised by the new Chef
+!new Cook('cook4')
+!cook4.name := 'Alton Brown'
+!cook4.dateOfBirth := Date('1962-07-30')
+!cook4.phoneNumber := '555-1357'
+!cook4.yearsOfExperience := 20
+
+-- Establish association between Chef and Cook
+!insert (chef4, cook4) into ChefCook
+
+-- Create an ItemOrder for the dinner banquet
+!new ItemOrder('order4')
+!order4.time := Time('18:00')
+
+-- Establish ItemOrderMenuItem association
+!insert (order4, menuItem4) into ItemOrderMenuItem
+
+-- Associate the ItemOrder with the Banquet Reservation
+!insert (reservation4, order4) into ReservationItemOrdered

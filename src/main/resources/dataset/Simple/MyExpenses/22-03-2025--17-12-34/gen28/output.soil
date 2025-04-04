@@ -1,0 +1,33 @@
+!new Expense('expense30')
+!expense30.amount := 1280.0
+!expense30.startDate := Date('2025-06-01')
+!expense30.endDate := Date('2025-06-30')
+
+!new Currency('currency28')
+!currency28.name := 'Polish Zloty'
+!currency28.abbreviation := 'PLN'
+
+!new Bill('bill54')
+!bill54.amount := 680.0
+!bill54.category := 'Garden Renovation'
+!bill54.date := Date('2025-06-12')
+!bill54.paymentMethod := #CHECK
+!bill54.status := #DRAFT
+
+!new Bill('bill55')
+!bill55.amount := 600.0
+!bill55.category := 'Home Security'
+!bill55.date := Date('2025-06-25')
+!bill55.paymentMethod := #CREDIT_CARD
+!bill55.status := #VERIFIED
+
+!insert (expense30, bill54) into ExpenseContainsBills
+!insert (expense30, bill55) into ExpenseContainsBills
+
+!insert (bill54, currency28) into BillCurrency
+!insert (bill55, currency28) into BillCurrency
+
+!new Comment('comment30')
+!comment30.text := 'June expenses for garden renovation and home security'
+
+!insert (expense30, comment30) into ExpenseComment

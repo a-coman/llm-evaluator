@@ -1,0 +1,53 @@
+!new Driver('driver23')
+!driver23.id := 'D023'
+!driver23.name := 'Noah Bennett'
+
+!new Shipment('shipment39')
+!shipment39.id := 'S039'
+!shipment39.status := #UNDERWAY
+
+!new Shipment('shipment40')
+!shipment40.id := 'S040'
+!shipment40.status := #ASSIGNED
+
+!new Address('address45')
+!address45.text := '2222 Pine Ridge Way'
+
+!new Address('address46')
+!address46.text := '2323 Birch Lane'
+
+!new GeoLocation('geoLocation45')
+!geoLocation45.latitude := 34.0522
+!geoLocation45.longitude := -118.2437
+
+!new GeoLocation('geoLocation46')
+!geoLocation46.latitude := 40.7128
+!geoLocation46.longitude := -74.0060
+
+!new Customer('customer23')
+!customer23.id := 'C023'
+!customer23.name := 'Olivia Collins'
+!customer23.twitterUserName := '@olivia_collins'
+
+!new Station('station22')
+
+!insert (driver23, shipment40) into DriverShipment
+
+!insert (shipment39, address45) into ShipmentContainsPickUpAddress
+!insert (shipment39, address46) into ShipmentContainsDeliveryAddress
+
+!insert (shipment40, address46) into ShipmentContainsPickUpAddress
+!insert (shipment40, address45) into ShipmentContainsDeliveryAddress
+
+!insert (address45, geoLocation45) into AddressContainsGeoLocation
+!insert (address46, geoLocation46) into AddressContainsGeoLocation
+
+!insert (customer23, shipment39) into CustomerConsistsOfShipment
+!insert (customer23, shipment40) into CustomerConsistsOfShipment
+
+!insert (station22, customer23) into StationContainsCustomer
+
+!insert (station22, shipment39) into StationShipment
+!insert (station22, shipment40) into StationShipment
+
+!insert (station22, driver23) into StationContainsDriver

@@ -1,0 +1,159 @@
+!new Club('club51')
+!club51.name := 'Dragons United'
+!club51.homeGround := 'Dragons Lair'
+!club51.chairman := 'Alan Reed'
+
+!new Club('club52')
+!club52.name := 'Giants FC'
+!club52.homeGround := 'Giants Arena'
+!club52.chairman := 'Sarah Jones'
+
+!new Team('team51')
+!team51.name := 'Dragon Flames'
+!insert (club51, team51) into ClubTeam
+
+!new Team('team52')
+!team52.name := 'Giant Guardians'
+!insert (club52, team52) into ClubTeam
+
+!new Player('player76')
+!player76.name := 'Ethan Foster'
+!player76.age := 31
+!player76.bestFoot := #RIGHT
+!player76.phoneNumber := '345-678-9012'
+!insert (team51, player76) into TeamPlayer
+
+!new Player('player77')
+!player77.name := 'Lily Adams'
+!player77.age := 29
+!player77.bestFoot := #LEFT
+!player77.phoneNumber := '456-789-0123'
+!insert (team51, player77) into TeamPlayer
+
+!new Player('player78')
+!player78.name := 'Noah Turner'
+!player78.age := 28
+!player78.bestFoot := #BOTH
+!player78.phoneNumber := '567-890-1234'
+!insert (team52, player78) into TeamPlayer
+
+!new Position('position76')
+!position76.positionName := #GOALKEEPER
+!insert (player76, position76) into PlayerPositions
+
+!new Position('position77')
+!position77.positionName := #MIDFIELDER
+!insert (player77, position77) into PlayerPositions
+
+!new Position('position78')
+!position78.positionName := #DEFENDER
+!insert (player78, position78) into PlayerPositions
+
+!new TrainingSession('training51')
+!training51.date := '2025-01-05'
+!training51.location := 'Dragons Den'
+!training51.purpose := 'Agility and Flexibility'
+!insert (team51, training51) into TeamTraining
+
+!new TrainingSession('training52')
+!training52.date := '2025-01-06'
+!training52.location := 'Giants Stronghold'
+!training52.purpose := 'Strength Training'
+!insert (team52, training52) into TeamTraining
+
+!new TrainingNotes('trainingNotes51')
+!trainingNotes51.note := 'Worked on enhancing quick changes in direction and flexibility'
+!trainingNotes51.date := '2025-01-05'
+!insert (training51, trainingNotes51) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes52')
+!trainingNotes52.note := 'Focused on muscle strength and overall stamina'
+!trainingNotes52.date := '2025-01-06'
+!insert (training52, trainingNotes52) into TrainingTrainingNotes
+
+!new TrainingObjective('objective76')
+!objective76.areaToImprove := 'Reflexes and Saves'
+!objective76.startDate := '2024-10-01'
+!objective76.endDate := '2025-01-01'
+!objective76.success := true
+!insert (objective76, player76) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective77')
+!objective77.areaToImprove := 'Passing and Control'
+!objective77.startDate := '2024-11-01'
+!objective77.endDate := '2025-02-01'
+!objective77.success := false
+!insert (objective77, player77) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective78')
+!objective78.areaToImprove := 'Defensive Tactics'
+!objective78.startDate := '2024-12-01'
+!objective78.endDate := '2025-03-01'
+!objective78.success := true
+!insert (objective78, player78) into TrainingObjectivePlayer
+
+!new Competition('competition26')
+!competition26.name := 'Island Championship'
+!competition26.type := 'One-off Match'
+
+!new Match('match26')
+!match26.date := '2025-01-20'
+!match26.homeAway := false
+!insert (competition26, match26) into CompetitionMatch
+!insert (team51, match26) into VisitorMatch
+!insert (team52, match26) into LocalMatch
+
+!new MatchReport('report26')
+!report26.duration := 90
+!report26.scoreVisitor := 2
+!report26.scoreLocal := 2
+!insert (match26, report26) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer76')
+!matchPlayer76.booked := false
+!matchPlayer76.goals := 0
+!matchPlayer76.rating := 8
+!insert (player76, matchPlayer76) into PlayerMatch
+!insert (match26, matchPlayer76) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer78')
+!matchPlayer78.booked := true
+!matchPlayer78.goals := 1
+!matchPlayer78.rating := 9
+!insert (player78, matchPlayer78) into PlayerMatch
+!insert (match26, matchPlayer78) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition76')
+!matchPlayerPosition76.positionName := #GOALKEEPER
+!matchPlayerPosition76.number := 1
+!insert (matchPlayer76, matchPlayerPosition76) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition78')
+!matchPlayerPosition78.positionName := #DEFENDER
+!matchPlayerPosition78.number := 4
+!insert (matchPlayer78, matchPlayerPosition78) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event99')
+!event99.eventType := #GOAL
+!event99.time := 28
+!insert (match26, event99) into MatchMatchEvent
+
+!new MatchEvent('event100')
+!event100.eventType := #GOAL
+!event100.time := 42
+!insert (match26, event100) into MatchMatchEvent
+
+!new MatchEvent('event101')
+!event101.eventType := #GOAL
+!event101.time := 60
+!insert (match26, event101) into MatchMatchEvent
+
+!new MatchEvent('event102')
+!event102.eventType := #GOAL
+!event102.time := 88
+!insert (match26, event102) into MatchMatchEvent
+
+!new MatchNote('matchNote26')
+!matchNote26.note := 'Thrilling draw with both teams capitalizing on goals in the critical moments'
+!matchNote26.date := '2025-01-20'
+!insert (match26, matchNote26) into MatchMatchNote

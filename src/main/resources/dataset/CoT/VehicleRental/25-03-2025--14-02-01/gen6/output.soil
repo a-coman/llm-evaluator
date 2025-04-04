@@ -1,0 +1,361 @@
+!new RentalOffice('rentalOffice22')
+!rentalOffice22.name := 'Global Vehicles Inc.'
+!rentalOffice22.number := 525
+!rentalOffice22.address := '50 North Blvd, El Paso, TX'
+
+!new Truck('truck21')
+!truck21.id := 43
+!truck21.registrationState := #AL
+!truck21.licensePlateNumber := 'INTL100'
+!truck21.vehicleTypeCode := #TRUCK
+!truck21.registrationLastMaintenanceDate := Date('2023-05-01')
+!truck21.expirationDate := Date('2024-05-01')
+!truck21.odometerReading := 0
+!truck21.gasTankCapacity := 0
+!truck21.workingRadio := true
+!truck21.mileage := 0
+
+!new RentalAgreement('rentalAgreement36')
+!rentalAgreement36.number := 6040
+!rentalAgreement36.rentalDate := Date('2023-09-01')
+!rentalAgreement36.anticipatedDuration := 90
+!rentalAgreement36.depositPaid := 3000.00
+!rentalAgreement36.quotedDailyRate := 90.00
+!rentalAgreement36.quotedRatePerMile := 0.18
+
+!new Individual('individualCustomer16')
+!individualCustomer16.name := 'Javier Ramirez'
+!individualCustomer16.address := '102 Border Rd, Laredo, TX'
+!individualCustomer16.poorRisk := false
+!individualCustomer16.homePhone := '956-555-0333'
+!individualCustomer16.driverLicenseState := #AL
+!individualCustomer16.driverLicenseNumber := 345678
+!individualCustomer16.driverLicenseExpirationDate := Date('2027-07-10')
+
+!new Company('company19')
+!company19.name := 'Cross Border Enterprises'
+!company19.address := '88 Trade St, Monterrey, Mexico'
+!company19.poorRisk := false
+!company19.idNumber := 56789
+
+!insert (rentalOffice22, truck21) into RentalOfficeVehicle
+
+!insert (rentalOffice22, rentalAgreement36) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice22, rentalAgreement36) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement36, truck21) into RentalAgreementVehicle
+
+!insert (rentalAgreement36, individualCustomer16) into RentalAgreementCustomer
+!insert (rentalAgreement36, company19) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice24')
+!rentalOffice24.name := 'WindyCity Rentals'
+!rentalOffice24.number := 606
+!rentalOffice24.address := '960 Lake Shore Drive, Chicago, IL, 60611'
+
+!new Vehicle('vehicle25')
+!vehicle25.id := 47
+!vehicle25.registrationState := #CO
+!vehicle25.licensePlateNumber := 'IL5623ELS'
+!vehicle25.vehicleTypeCode := #TRUCK10
+!vehicle25.registrationLastMaintenanceDate := Date('2023-07-01')
+!vehicle25.expirationDate := Date('2024-07-01')
+
+!new Truck('truck23')
+!truck23.id := 48
+!truck23.registrationState := #CO
+!truck23.licensePlateNumber := 'IL1122DMP'
+!truck23.vehicleTypeCode := #TRUCK
+!truck23.registrationLastMaintenanceDate := Date('2023-02-28')
+!truck23.expirationDate := Date('2023-12-22')
+!truck23.odometerReading := 140000
+!truck23.gasTankCapacity := 70.0
+!truck23.workingRadio := true
+!truck23.mileage := 6
+
+!new Individual('individualCustomer18')
+!individualCustomer18.name := 'Emily Nguyen'
+!individualCustomer18.address := '347 Oak Avenue, Evanston, IL, 60201'
+!individualCustomer18.poorRisk := false
+!individualCustomer18.homePhone := '847-555-7890'
+!individualCustomer18.driverLicenseState := #CO
+!individualCustomer18.driverLicenseNumber := 3479021
+!individualCustomer18.driverLicenseExpirationDate := Date('2025-02-10')
+
+!new Company('company21')
+!company21.name := 'Midwest Builders'
+!company21.address := '200 Construction Way, Naperville, IL, 60540'
+!company21.poorRisk := true
+!company21.idNumber := 606777
+
+!new RentalAgreement('rentalAgreement40')
+!rentalAgreement40.number := 3011
+!rentalAgreement40.rentalDate := Date('2023-11-15')
+!rentalAgreement40.anticipatedDuration := 4
+!rentalAgreement40.depositPaid := 150.00
+!rentalAgreement40.quotedDailyRate := 45.00
+!rentalAgreement40.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement41')
+!rentalAgreement41.number := 3012
+!rentalAgreement41.rentalDate := Date('2023-11-30')
+!rentalAgreement41.anticipatedDuration := 10
+!rentalAgreement41.depositPaid := 1100.00
+!rentalAgreement41.quotedDailyRate := 175.00
+!rentalAgreement41.quotedRatePerMile := 0.60
+
+!insert (rentalOffice24, vehicle25) into RentalOfficeVehicle
+!insert (rentalOffice24, truck23) into RentalOfficeVehicle
+
+!insert (rentalOffice24, rentalAgreement40) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice24, rentalAgreement40) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement40, vehicle25) into RentalAgreementVehicle
+!insert (rentalAgreement40, individualCustomer18) into RentalAgreementCustomer
+
+!insert (rentalOffice24, rentalAgreement41) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice24, rentalAgreement41) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement41, truck23) into RentalAgreementVehicle
+!insert (rentalAgreement41, company21) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice28')
+!rentalOffice28.name := 'Great Plains Rentals'
+!rentalOffice28.number := 66
+!rentalOffice28.address := '300 Prairie Way, Fargo, ND, 58102'
+
+!new Truck('historicalTruck')
+!historicalTruck.id := 57
+!historicalTruck.registrationState := #MD
+!historicalTruck.licensePlateNumber := 'HIST-1930'
+!historicalTruck.vehicleTypeCode := #TRUCK
+!historicalTruck.registrationLastMaintenanceDate := Date('2023-01-15')
+!historicalTruck.expirationDate := Date('2024-01-15')
+!historicalTruck.odometerReading := 1000000
+!historicalTruck.gasTankCapacity := 25.0
+!historicalTruck.workingRadio := false
+!historicalTruck.mileage := 10
+
+!new Vehicle('animalTrailer')
+!animalTrailer.id := 58
+!animalTrailer.registrationState := #MD
+!animalTrailer.licensePlateNumber := 'ANIM-404'
+!animalTrailer.vehicleTypeCode := #OPEN_TRAILER
+!animalTrailer.registrationLastMaintenanceDate := Date('2023-02-05')
+!animalTrailer.expirationDate := Date('2025-02-05')
+
+!new RentalAgreement('rentalAgreement48a')
+!rentalAgreement48a.number := 3738
+!rentalAgreement48a.rentalDate := Date('2024-06-15')
+!rentalAgreement48a.anticipatedDuration := 7
+!rentalAgreement48a.depositPaid := 1.00
+!rentalAgreement48a.quotedDailyRate := 0.00
+!rentalAgreement48a.quotedRatePerMile := 0.00
+
+!new RentalAgreement('rentalAgreement48b')
+!rentalAgreement48b.number := 3739
+!rentalAgreement48b.rentalDate := Date('2024-06-15')
+!rentalAgreement48b.anticipatedDuration := 7
+!rentalAgreement48b.depositPaid := 1.00
+!rentalAgreement48b.quotedDailyRate := 0.00
+!rentalAgreement48b.quotedRatePerMile := 0.00
+
+!new Company('company24')
+!company24.name := 'Fargo Heritage Society'
+!company24.address := '789 History Ave, Fargo, ND, 58103'
+!company24.poorRisk := false
+!company24.idNumber := 2024
+
+!insert (rentalOffice28, historicalTruck) into RentalOfficeVehicle
+!insert (rentalOffice28, animalTrailer) into RentalOfficeVehicle
+
+!insert (rentalOffice28, rentalAgreement48a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice28, rentalAgreement48a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement48a, historicalTruck) into RentalAgreementVehicle
+!insert (rentalAgreement48a, company24) into RentalAgreementCustomer
+
+!insert (rentalOffice28, rentalAgreement48b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice28, rentalAgreement48b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement48b, animalTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement48b, company24) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice29')
+!rentalOffice29.name := 'Coastal Rental Solutions'
+!rentalOffice29.number := 212
+!rentalOffice29.address := '321 Ocean Front Walk, Santa Monica, CA 90401'
+
+!new Truck('truck30')
+!truck30.id := 59
+!truck30.registrationState := #CO
+!truck30.licensePlateNumber := 'CRSCA123'
+!truck30.vehicleTypeCode := #TRUCK
+!truck30.registrationLastMaintenanceDate := Date('2023-10-05')
+!truck30.expirationDate := Date('2024-10-05')
+!truck30.odometerReading := 5000
+!truck30.gasTankCapacity := 140.0
+!truck30.workingRadio := true
+!truck30.mileage := 9
+
+!new Vehicle('vehicle30')
+!vehicle30.id := 60
+!vehicle30.registrationState := #CO
+!vehicle30.licensePlateNumber := 'CRSCA456'
+!vehicle30.vehicleTypeCode := #OPEN_TRAILER
+!vehicle30.registrationLastMaintenanceDate := Date('2023-02-14')
+!vehicle30.expirationDate := Date('2025-02-14')
+
+!new Truck('truck31')
+!truck31.id := 61
+!truck31.registrationState := #CO
+!truck31.licensePlateNumber := 'CRSCA789'
+!truck31.vehicleTypeCode := #TRUCK
+!truck31.registrationLastMaintenanceDate := Date('2023-05-20')
+!truck31.expirationDate := Date('2025-05-20')
+!truck31.odometerReading := 0
+!truck31.gasTankCapacity := 130.0
+!truck31.workingRadio := true
+!truck31.mileage := 11
+
+!new RentalAgreement('rentalAgreement49')
+!rentalAgreement49.number := 4001
+!rentalAgreement49.rentalDate := Date('2023-11-10')
+!rentalAgreement49.anticipatedDuration := 7
+!rentalAgreement49.depositPaid := 0.00
+!rentalAgreement49.quotedDailyRate := 90.00
+!rentalAgreement49.quotedRatePerMile := 0.15
+
+!new RentalAgreement('rentalAgreement50')
+!rentalAgreement50.number := 4002
+!rentalAgreement50.rentalDate := Date('2023-12-05')
+!rentalAgreement50.anticipatedDuration := 0
+!rentalAgreement50.depositPaid := 0.00
+!rentalAgreement50.quotedDailyRate := 0.00
+!rentalAgreement50.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer22')
+!individualCustomer22.name := 'Miguel Fernández'
+!individualCustomer22.address := '102 Sunset Strip, Santa Monica, CA 90405'
+!individualCustomer22.poorRisk := false
+!individualCustomer22.homePhone := '(424) 555-0090'
+!individualCustomer22.driverLicenseState := #CO
+!individualCustomer22.driverLicenseNumber := 4501
+!individualCustomer22.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company25')
+!company25.name := 'Pacific International Shipping'
+!company25.address := '4100 Marina Blvd, Long Beach, CA 90803'
+!company25.poorRisk := false
+!company25.idNumber := 671004
+
+!insert (rentalOffice29, truck30) into RentalOfficeVehicle
+!insert (rentalOffice29, vehicle30) into RentalOfficeVehicle
+!insert (rentalOffice29, truck31) into RentalOfficeVehicle
+
+!insert (rentalOffice29, rentalAgreement49) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice29, rentalAgreement49) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement49, truck30) into RentalAgreementVehicle
+!insert (rentalAgreement49, individualCustomer22) into RentalAgreementCustomer
+
+!insert (rentalOffice29, rentalAgreement50) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice29, rentalAgreement50) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement50, truck31) into RentalAgreementVehicle
+!insert (rentalAgreement50, company25) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice30')
+!rentalOffice30.name := 'Rocky Mountain Rentals – Downtown Branch'
+!rentalOffice30.number := 707
+!rentalOffice30.address := '1500 Larimer St, Denver, CO, 80202'
+
+!new Truck('offRoadTruck')
+!offRoadTruck.id := 62
+!offRoadTruck.registrationState := #CO
+!offRoadTruck.licensePlateNumber := 'COOFF78'
+!offRoadTruck.vehicleTypeCode := #TRUCK
+!offRoadTruck.registrationLastMaintenanceDate := Date('2023-03-28')
+!offRoadTruck.expirationDate := Date('2024-03-27')
+!offRoadTruck.odometerReading := 62400
+!offRoadTruck.gasTankCapacity := 35.0
+!offRoadTruck.workingRadio := true
+!offRoadTruck.mileage := 9
+
+!new Vehicle('mountainBikeTrailer')
+!mountainBikeTrailer.id := 63
+!mountainBikeTrailer.registrationState := #CO
+!mountainBikeTrailer.licensePlateNumber := 'COTRAIL9'
+!mountainBikeTrailer.vehicleTypeCode := #OPEN_TRAILER
+!mountainBikeTrailer.registrationLastMaintenanceDate := Date('2023-05-10')
+!mountainBikeTrailer.expirationDate := Date('2024-05-09')
+
+!new Vehicle('snowmobile')
+!snowmobile.id := 64
+!snowmobile.registrationState := #CO
+!snowmobile.licensePlateNumber := 'COSNOW45'
+!snowmobile.vehicleTypeCode := #COVERED_TRAILER
+!snowmobile.registrationLastMaintenanceDate := Date('2023-11-01')
+!snowmobile.expirationDate := Date('2024-10-31')
+
+!new Individual('individualCustomer23')
+!individualCustomer23.name := 'Harper Collins'
+!individualCustomer23.address := '325 Mountain Rd, Boulder, CO, 80301'
+!individualCustomer23.poorRisk := false
+!individualCustomer23.homePhone := '720-555-0123'
+!individualCustomer23.driverLicenseState := #CO
+!individualCustomer23.driverLicenseNumber := 889045
+!individualCustomer23.driverLicenseExpirationDate := Date('2026-07-14')
+
+!new Company('company26')
+!company26.name := 'Alpine Adventures, LLC'
+!company26.address := '889 Peak Ave, Colorado Springs, CO, 80903'
+!company26.poorRisk := false
+!company26.idNumber := 456987321
+
+!new RentalAgreement('rentalAgreement51')
+!rentalAgreement51.number := 61012
+!rentalAgreement51.rentalDate := Date('2023-12-15')
+!rentalAgreement51.anticipatedDuration := 5
+!rentalAgreement51.depositPaid := 350.00
+!rentalAgreement51.quotedDailyRate := 125.00
+!rentalAgreement51.quotedRatePerMile := 0.55
+
+!new RentalAgreement('rentalAgreement52')
+!rentalAgreement52.number := 61013
+!rentalAgreement52.rentalDate := Date('2023-12-17')
+!rentalAgreement52.anticipatedDuration := 10
+!rentalAgreement52.depositPaid := 500.00
+!rentalAgreement52.quotedDailyRate := 100.00
+!rentalAgreement52.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement53')
+!rentalAgreement53.number := 61014
+!rentalAgreement53.rentalDate := Date('2023-12-20')
+!rentalAgreement53.anticipatedDuration := 3
+!rentalAgreement53.depositPaid := 150.00
+!rentalAgreement53.quotedDailyRate := 70.00
+!rentalAgreement53.quotedRatePerMile := 0.25
+
+!insert (rentalOffice30, offRoadTruck) into RentalOfficeVehicle
+!insert (rentalOffice30, mountainBikeTrailer) into RentalOfficeVehicle
+!insert (rentalOffice30, snowmobile) into RentalOfficeVehicle
+
+!insert (rentalOffice30, rentalAgreement51) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement51) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement51, offRoadTruck) into RentalAgreementVehicle
+!insert (rentalAgreement51, individualCustomer23) into RentalAgreementCustomer
+
+!insert (rentalOffice30, rentalAgreement52) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement52) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement52, mountainBikeTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement52, company26) into RentalAgreementCustomer
+
+!insert (rentalOffice30, rentalAgreement53) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice30, rentalAgreement53) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement53, snowmobile) into RentalAgreementVehicle
+!insert (rentalAgreement53, individualCustomer23) into RentalAgreementCustomer
+

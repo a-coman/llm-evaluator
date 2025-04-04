@@ -1,0 +1,38 @@
+!new Bank('bank16')
+!bank16.country := 'Bhutan'
+!bank16.name := 'Druk Gyalpo Bank'
+!bank16.bic := 'DGBTKHBTXXX'
+
+!new Account('account32')
+!account32.iban := 'BT2222222222222222'
+!account32.balance := 10000000
+
+!new Account('account33')
+!account33.iban := 'BT3333333333333333'
+!account33.balance := 100
+
+!new Person('person44')
+!person44.firstName := 'Tenzin'
+!person44.lastName := 'Norbu'
+!person44.age := 44
+
+!new Person('person45')
+!person45.firstName := 'Karma'
+!person45.lastName := 'Wangmo'
+!person45.age := 28
+
+!new Person('person46')
+!person46.firstName := 'Sonam'
+!person46.lastName := 'Phuntsho'
+!person46.age := 21
+
+!insert (person44, account32) into Ownership
+!insert (person45, account33) into Ownership
+!insert (person46, account33) into Ownership
+
+!insert (person44, account32) into Use
+!insert (person45, account32) into Use
+!insert (person46, account32) into Use
+
+!insert (bank16, account32) into AccountOfBanks
+!insert (bank16, account33) into AccountOfBanks

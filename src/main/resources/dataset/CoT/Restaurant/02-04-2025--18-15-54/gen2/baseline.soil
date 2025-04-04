@@ -1,0 +1,138 @@
+!new Restaurant('restaurant7')
+!restaurant7.name := 'Le Petit Gourmet'
+
+!new Owner('owner15')
+!owner15.name := 'François Dupont'
+!owner15.percentageShares := 50
+
+!new Owner('owner16')
+!owner16.name := 'Claire Dubois'
+!owner16.percentageShares := 50
+
+!insert (restaurant7, owner15) into RestaurantOwner
+!insert (restaurant7, owner16) into RestaurantOwner
+
+!new Table('table16')
+!table16.number := 1
+!table16.description := 'A romantic table for two with a view of the city skyline.'
+!table16.capacity := 2
+
+!new Table('table17')
+!table17.number := 2
+!table17.description := 'Perfect for families, near the fireplace.'
+!table17.capacity := 12  -- Adjusting capacity to meet requirement
+
+!new Individual('individualReservation4')
+!individualReservation4.time := Time('18:30')
+!individualReservation4.date := Date('2023-10-16')
+!individualReservation4.numberPeople := 1
+!individualReservation4.name := 'Hiroshi Tanaka'
+!individualReservation4.phoneNumber := '555-2045'
+!individualReservation4.number := 3002
+!individualReservation4.seating := #Inside
+!individualReservation4.smoking := #NonSmoking
+
+!insert (restaurant7, individualReservation4) into RestaurantReservation
+!insert (individualReservation4, table16) into ReservationTable
+
+!new RegularCustomer('customer3')
+!customer3.name := 'Hiroshi Tanaka'
+!customer3.prefferedLanguage := #English  -- Assuming #Japanese is not defined, using #English as a placeholder
+
+!insert (individualReservation4, customer3) into ReservationCustomer
+
+!new Waiter('waiter12')
+!waiter12.name := 'Jean Laurent'
+!waiter12.dateOfBirth := Date('1991-03-29')
+!waiter12.phoneNumber := '555-1964'
+
+!insert (individualReservation4, waiter12) into ReservationWaiter
+
+!new ItemOrder('itemOrder7')
+!itemOrder7.time := Time('18:40')
+!insert (individualReservation4, itemOrder7) into ReservationItemOrdered
+
+!new MenuItem('menuItem10')
+!menuItem10.description := 'Escargots de Bourgogne'
+!menuItem10.prepTime := 15.0
+!menuItem10.classification := #Apetizer
+
+!insert (itemOrder7, menuItem10) into ItemOrderMenuItem
+
+!new Chef('chef11')
+!chef11.name := 'Amélie Monet'
+!chef11.dateOfBirth := Date('1975-05-14')
+!chef11.phoneNumber := '555-1532'
+
+!insert (menuItem10, chef11) into MenuItemChef
+
+!new Cook('cook12')
+!cook12.name := 'Pierre Lafont'
+!cook12.dateOfBirth := Date('1980-07-22')
+!cook12.phoneNumber := '555-1234'
+!cook12.yearsOfExperience := 12
+
+!insert (chef11, cook12) into ChefCook
+
+!new Banquet('banquet6')
+!banquet6.date := Date('2023-10-16')
+!banquet6.time := Time('19:45')
+!banquet6.numberPeople := 12
+!banquet6.groupName := 'La Société Gastronomique'
+!banquet6.paymentMethod := #Cash
+!banquet6.busService := false
+
+!insert (restaurant7, banquet6) into RestaurantReservation
+!insert (banquet6, table17) into ReservationTable
+
+!insert (banquet6, waiter12) into ReservationWaiter
+
+!new Waiter('waiter13')
+!waiter13.name := 'Marine Poirier'
+!waiter13.dateOfBirth := Date('1988-10-10')
+!waiter13.phoneNumber := '555-1678'
+
+!insert (banquet6, waiter13) into ReservationWaiter
+
+!new HeadWaiter('headWaiter6')
+!headWaiter6.name := 'Lucien Moreau'
+!headWaiter6.dateOfBirth := Date('1983-05-15')
+!headWaiter6.phoneNumber := '555-1456'
+
+!insert (headWaiter6, waiter12) into HeadWaiterWaiter
+!insert (headWaiter6, waiter13) into HeadWaiterWaiter
+
+!new FoodItem('foodItem19')
+!foodItem19.number := 401
+!foodItem19.description := 'Snails'
+!foodItem19.purchaseFlag := true
+!foodItem19.unit := #Dozen
+
+!new FoodItem('foodItem20')
+!foodItem20.number := 402
+!foodItem20.description := 'Garlic'
+!foodItem20.purchaseFlag := true
+!foodItem20.unit := #Gram
+
+!new FoodItem('foodItem21')
+!foodItem21.number := 403
+!foodItem21.description := 'Butter'
+!foodItem21.purchaseFlag := true
+!foodItem21.unit := #Gram
+
+!insert (menuItem10, foodItem19) into MenuItemFoodItem
+!insert (menuItem10, foodItem20) into MenuItemFoodItem
+!insert (menuItem10, foodItem21) into MenuItemFoodItem
+
+!new Allergen('allergen11')
+!allergen11.type := #Lactose
+
+!insert (foodItem21, allergen11) into FoodItemAllergen
+
+!new DietaryRequirement('dietary3')
+!dietary3.diet := #Vegan  -- Using #Vegan as placeholder for Dairy-Free
+
+!new Manager('manager3')
+!manager3.name := 'Sophie Lemieux'
+!manager3.dateOfBirth := Date('1970-02-24')
+!manager3.phoneNumber := '555-1345'

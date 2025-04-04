@@ -1,0 +1,149 @@
+!new Club('club37')
+!club37.name := 'Gladiators FC'
+!club37.homeGround := 'Coliseum Stadium'
+!club37.chairman := 'Emma Gale'
+
+!new Club('club38')
+!club38.name := 'Titans FC'
+!club38.homeGround := 'Titan Arena'
+!club38.chairman := 'Victor Lopez'
+
+!new Team('team37')
+!team37.name := 'Gladiator Squad'
+!insert (club37, team37) into ClubTeam
+
+!new Team('team38')
+!team38.name := 'Titan Force'
+!insert (club38, team38) into ClubTeam
+
+!new Player('player55')
+!player55.name := 'Finn Taylor'
+!player55.age := 31
+!player55.bestFoot := #RIGHT
+!player55.phoneNumber := '555-987-6543'
+!insert (team37, player55) into TeamPlayer
+
+!new Player('player56')
+!player56.name := 'Hannah Lee'
+!player56.age := 29
+!player56.bestFoot := #LEFT
+!player56.phoneNumber := '555-876-5432'
+!insert (team37, player56) into TeamPlayer
+
+!new Player('player57')
+!player57.name := 'Jackson Smith'
+!player57.age := 27
+!player57.bestFoot := #BOTH
+!player57.phoneNumber := '555-765-4321'
+!insert (team38, player57) into TeamPlayer
+
+!new Position('position55')
+!position55.positionName := #MIDFIELDER
+!insert (player55, position55) into PlayerPositions
+
+!new Position('position56')
+!position56.positionName := #GOALKEEPER
+!insert (player56, position56) into PlayerPositions
+
+!new Position('position57')
+!position57.positionName := #FORWARD
+!insert (player57, position57) into PlayerPositions
+
+!new TrainingSession('training37')
+!training37.date := '2024-03-25'
+!training37.location := 'Gladiator Grounds'
+!training37.purpose := 'Stamina Building'
+!insert (team37, training37) into TeamTraining
+
+!new TrainingSession('training38')
+!training38.date := '2024-03-27'
+!training38.location := 'Titan Fortress'
+!training38.purpose := 'Strategic Plays'
+!insert (team38, training38) into TeamTraining
+
+!new TrainingNotes('trainingNotes37')
+!trainingNotes37.note := 'Intensive interval training to boost endurance'
+!trainingNotes37.date := '2024-03-25'
+!insert (training37, trainingNotes37) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes38')
+!trainingNotes38.note := 'Focus on coordinating strategic attacks'
+!trainingNotes38.date := '2024-03-27'
+!insert (training38, trainingNotes38) into TrainingTrainingNotes
+
+!new TrainingObjective('objective55')
+!objective55.areaToImprove := 'Endurance'
+!objective55.startDate := '2024-01-05'
+!objective55.endDate := '2024-04-05'
+!objective55.success := true
+!insert (objective55, player55) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective56')
+!objective56.areaToImprove := 'Save Techniques'
+!objective56.startDate := '2024-02-01'
+!objective56.endDate := '2024-05-01'
+!objective56.success := false
+!insert (objective56, player56) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective57')
+!objective57.areaToImprove := 'Attacking Maneuvers'
+!objective57.startDate := '2024-01-20'
+!objective57.endDate := '2024-04-20'
+!objective57.success := true
+!insert (objective57, player57) into TrainingObjectivePlayer
+
+!new Competition('competition19')
+!competition19.name := 'Continental Cup'
+!competition19.type := 'Quarter Finals'
+
+!new Match('match19')
+!match19.date := '2024-04-15'
+!match19.homeAway := false
+!insert (competition19, match19) into CompetitionMatch
+!insert (team37, match19) into VisitorMatch
+!insert (team38, match19) into LocalMatch
+
+!new MatchReport('report19')
+!report19.duration := 120
+!report19.scoreVisitor := 1
+!report19.scoreLocal := 0
+!insert (match19, report19) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer55')
+!matchPlayer55.booked := false
+!matchPlayer55.goals := 0
+!matchPlayer55.rating := 8
+!insert (player55, matchPlayer55) into PlayerMatch
+!insert (match19, matchPlayer55) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer57')
+!matchPlayer57.booked := true
+!matchPlayer57.goals := 0
+!matchPlayer57.rating := 7
+!insert (player57, matchPlayer57) into PlayerMatch
+!insert (match19, matchPlayer57) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition55')
+!matchPlayerPosition55.positionName := #MIDFIELDER
+!matchPlayerPosition55.number := 6
+!insert (matchPlayer55, matchPlayerPosition55) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition57')
+!matchPlayerPosition57.positionName := #FORWARD
+!matchPlayerPosition57.number := 11
+!insert (matchPlayer57, matchPlayerPosition57) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event72')
+!event72.eventType := #FOUL
+!event72.time := 40
+!insert (match19, event72) into MatchMatchEvent
+
+!new MatchEvent('event73')
+!event73.eventType := #GOAL
+!event73.time := 110
+!insert (match19, event73) into MatchMatchEvent
+
+!new MatchNote('matchNote19')
+!matchNote19.note := 'Tense match with Gladiator Squad securing victory in extra time'
+!matchNote19.date := '2024-04-15'
+!insert (match19, matchNote19) into MatchMatchNote

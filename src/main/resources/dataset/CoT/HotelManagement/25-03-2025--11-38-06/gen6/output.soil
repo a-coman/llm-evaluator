@@ -1,0 +1,331 @@
+!new Customer('customer25')
+!customer25.firstName := 'Ayesha'
+!customer25.lastName := 'Ibrahim'
+
+!new Booking('booking25')
+!booking25.bookingId := 23456
+!booking25.startDate := 'February 20, 2023'
+!booking25.endDate := 'February 24, 2023'
+!booking25.canceled := false
+!booking25.confirmed := true
+
+!new RoomReservation('roomreservation40')
+!roomreservation40.checkInDate := 'February 20, 2023'
+!roomreservation40.checkOutDate := 'February 22, 2023'
+
+!new RoomReservation('roomreservation41')
+!roomreservation41.checkInDate := 'February 22, 2023'
+!roomreservation41.checkOutDate := 'February 24, 2023'
+
+!new Room('room47')
+!room47.roomNumber := 108
+!room47.numBeds := 1
+!room47.pricePerNight := 100.00
+!room47.occupied := true
+!room47.blocked := false
+
+!new Room('room48')
+!room48.roomNumber := 202
+!room48.numBeds := 3
+!room48.pricePerNight := 240.00
+!room48.occupied := true
+!room48.blocked := false
+
+!new RoomExtra('roomextra59')
+!roomextra59.price := 20.00
+!roomextra59.description := 'Laundry Service'
+
+!new RoomExtra('roomextra60')
+!roomextra60.price := 60.00
+!roomextra60.description := 'Adventure Park Tickets'
+
+!new Bill('bill46')
+!bill46.billId := 456789
+!bill46.price := 360.00
+
+!new Bill('bill47')
+!bill47.billId := 456790
+!bill47.price := 380.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto25')
+!freeroomtypesdto25.roomTypeDescription := 'Standard Twin Room'
+!freeroomtypesdto25.numBeds := 2
+!freeroomtypesdto25.pricePerNight := 140.00
+!freeroomtypesdto25.numFreeRooms := 5
+
+!insert (booking25, customer25) into BookingCustomer
+!insert (booking25, roomreservation40) into BookingRoomReservation
+!insert (booking25, roomreservation41) into BookingRoomReservation
+!insert (booking25, bill46) into BookingBill
+!insert (booking25, bill47) into BookingBill
+
+!insert (roomreservation40, room47) into RoomReservationRoom
+!insert (roomreservation41, room48) into RoomReservationRoom
+
+!insert (roomreservation40, roomextra59) into RoomReservationExtras
+!insert (roomreservation41, roomextra60) into RoomReservationExtras
+
+!insert (bill46, roomreservation40) into BillRoomReservation
+!insert (bill47, roomreservation41) into BillRoomReservation
+
+!new Customer('customer26')
+!customer26.firstName := 'Anja'
+!customer26.lastName := 'Petrovic'
+
+!new Booking('booking26')
+!booking26.bookingId := 6
+!booking26.startDate := '2023-12-25'
+!booking26.endDate := '2023-12-26'
+!booking26.canceled := false
+!booking26.confirmed := true
+
+!new Bill('bill48')
+!bill48.billId := 8
+!bill48.price := 100.00
+
+!new RoomReservation('roomreservation42')
+!roomreservation42.checkInDate := '2023-12-25'
+!roomreservation42.checkOutDate := '2023-12-26'
+
+!new Room('room49')
+!room49.roomNumber := 404
+!room49.numBeds := 2
+!room49.pricePerNight := 100.00
+!room49.occupied := true
+!room49.blocked := false
+
+!new FreeRoomTypesDTO('freeroomtypesdto26')
+!freeroomtypesdto26.roomTypeDescription := 'Emergency Double Room'
+!freeroomtypesdto26.numBeds := 2
+!freeroomtypesdto26.pricePerNight := 100.00
+!freeroomtypesdto26.numFreeRooms := 0
+
+!insert (booking26, customer26) into BookingCustomer
+!insert (booking26, roomreservation42) into BookingRoomReservation
+!insert (booking26, bill48) into BookingBill
+
+!insert (roomreservation42, room49) into RoomReservationRoom
+
+!insert (bill48, roomreservation42) into BillRoomReservation
+
+!new Customer('customer28')
+!customer28.firstName := 'Lars'
+!customer28.lastName := 'Johansson'
+
+!new Booking('booking28')
+!booking28.bookingId := 987
+!booking28.startDate := 'January 5, 2024'
+!booking28.endDate := 'January 12, 2024'
+!booking28.canceled := false
+!booking28.confirmed := true
+
+!new RoomReservation('roomreservation45')
+!roomreservation45.checkInDate := 'January 5, 2024'
+!roomreservation45.checkOutDate := 'January 12, 2024'
+
+!new Room('room53')
+!room53.roomNumber := 402
+!room53.numBeds := 2
+!room53.pricePerNight := 180.00
+!room53.occupied := true
+!room53.blocked := false
+
+!new RoomExtra('roomextra63')
+!roomextra63.price := 150.00
+!roomextra63.description := 'Full set of skiing gear including skis, poles, boots, and helmet for the duration of the stay.'
+
+!new RoomExtra('roomextra64')
+!roomextra64.price := 90.00
+!roomextra64.description := 'Unlimited access to the spa facilities, including sauna, steam room, and hot tubs.'
+
+!new RoomExtra('roomextra65')
+!roomextra65.price := 140.00  -- Calculated for 7 days
+!roomextra65.description := 'Full access to the daily breakfast buffet featuring alpine specialties and international favorites.'
+
+!new Bill('bill51')
+!bill51.billId := 45230
+!bill51.price := 1590.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto28')
+!freeroomtypesdto28.roomTypeDescription := 'High-end suite with private terrace and panoramic mountain views, ideal for a luxury ski vacation.'
+!freeroomtypesdto28.numBeds := 2
+!freeroomtypesdto28.pricePerNight := 330.00
+!freeroomtypesdto28.numFreeRooms := 2
+
+!new FreeRoomTypesDTO('freeroomtypesdto29')
+!freeroomtypesdto29.roomTypeDescription := 'Cozy studio with rustic charm, perfect for solo travelers or couples seeking convenience on the slopes.'
+!freeroomtypesdto29.numBeds := 1
+!freeroomtypesdto29.pricePerNight := 150.00
+!freeroomtypesdto29.numFreeRooms := 3
+
+!insert (booking28, customer28) into BookingCustomer
+!insert (booking28, roomreservation45) into BookingRoomReservation
+!insert (booking28, bill51) into BookingBill
+
+!insert (roomreservation45, room53) into RoomReservationRoom
+
+!insert (roomreservation45, roomextra63) into RoomReservationExtras
+!insert (roomreservation45, roomextra64) into RoomReservationExtras
+!insert (roomreservation45, roomextra65) into RoomReservationExtras
+
+!insert (bill51, roomreservation45) into BillRoomReservation
+
+!new Customer('customer29')
+!customer29.firstName := 'Ana Maria'
+!customer29.lastName := 'López'
+
+!new Booking('booking29')
+!booking29.bookingId := 712009
+!booking29.startDate := 'July 15, 2024'
+!booking29.endDate := 'July 22, 2024'
+!booking29.canceled := false
+!booking29.confirmed := true
+
+!new RoomReservation('roomreservation46')
+!roomreservation46.checkInDate := 'July 15, 2024'
+!roomreservation46.checkOutDate := 'July 18, 2024'
+
+!new Room('room54')
+!room54.roomNumber := 203
+!room54.numBeds := 2
+!room54.pricePerNight := 120.00
+!room54.occupied := true
+!room54.blocked := false
+
+!new RoomExtra('roomextra66')
+!roomextra66.price := 40.00
+!roomextra66.description := 'Nightly show of traditional Andean dances.'
+
+!new RoomExtra('roomextra67')
+!roomextra67.price := 50.00
+!roomextra67.description := 'Guided tasting session of Peruvian pisco varieties.'
+
+!new RoomExtra('roomextra68')
+!roomextra68.price := 35.00
+!roomextra68.description := 'Introduction to basic Quechua phrases and conversation.'
+
+!new RoomExtra('roomextra69')
+!roomextra69.price := 120.00
+!roomextra69.description := 'Full-day guided tour of the Sacred Valley.'
+
+!new RoomExtra('roomextra70')
+!roomextra70.price := 60.00
+!roomextra70.description := 'Hands-on cooking class featuring traditional Peruvian dishes.'
+
+!new Bill('bill52')
+!bill52.billId := 71200901
+!bill52.price := 225.00
+
+!new Bill('bill53')
+!bill53.billId := 71200902
+!bill53.price := 180.00
+
+!insert (booking29, customer29) into BookingCustomer
+!insert (booking29, roomreservation46) into BookingRoomReservation
+
+!insert (roomreservation46, room54) into RoomReservationRoom
+
+!insert (roomreservation46, roomextra66) into RoomReservationExtras
+!insert (roomreservation46, roomextra67) into RoomReservationExtras
+!insert (roomreservation46, roomextra68) into RoomReservationExtras
+
+!insert (bill52, roomreservation46) into BillRoomReservation
+
+!insert (booking29, bill52) into BookingBill
+!insert (booking29, bill53) into BookingBill
+
+!new Customer('customer30')
+!customer30.firstName := 'Pierre'
+!customer30.lastName := 'Dubois'
+
+!new Booking('booking30')
+!booking30.bookingId := 6006
+!booking30.startDate := 'April 1, 2025'
+!booking30.endDate := 'April 10, 2025'
+!booking30.canceled := false
+!booking30.confirmed := true
+
+!new RoomReservation('roomreservation47')
+!roomreservation47.checkInDate := 'April 1, 2025'
+!roomreservation47.checkOutDate := 'April 5, 2025'
+
+!new RoomReservation('roomreservation48')
+!roomreservation48.checkInDate := 'April 5, 2025'
+!roomreservation48.checkOutDate := 'April 8, 2025'
+
+!new RoomReservation('roomreservation49')
+!roomreservation49.checkInDate := 'April 8, 2025'
+!roomreservation49.checkOutDate := 'April 10, 2025'
+
+!new Room('room55')
+!room55.roomNumber := 801
+!room55.numBeds := 1  -- Adjusted for positive number of beds invariant
+!room55.pricePerNight := 250
+!room55.occupied := true
+!room55.blocked := false
+
+!new Room('room56')
+!room56.roomNumber := 802
+!room56.numBeds := 3
+!room56.pricePerNight := 400
+!room56.occupied := true
+!room56.blocked := false
+
+!new Room('room57')
+!room57.roomNumber := 803
+!room57.numBeds := 3
+!room57.pricePerNight := 400
+!room57.occupied := true
+!room57.blocked := false
+
+!new RoomExtra('roomextra71')
+!roomextra71.price := 150
+!roomextra71.description := 'French Gourmet welcome package'
+
+!new RoomExtra('roomextra72')
+!roomextra72.price := 100
+!roomextra72.description := 'German Beer and Snacks package'
+
+!new RoomExtra('roomextra73')
+!roomextra73.price := 200
+!roomextra73.description := 'Traditional Japanese Tea Ceremony'
+
+!new Bill('bill54')
+!bill54.billId := 10013
+!bill54.price := 1450
+
+!new Bill('bill55')
+!bill55.billId := 10014
+!bill55.price := 1150
+
+!new Bill('bill56')
+!bill56.billId := 10015
+!bill56.price := 1050
+
+!new FreeRoomTypesDTO('freeroomtypesdto30')
+!freeroomtypesdto30.roomTypeDescription := 'Standard Double'
+!freeroomtypesdto30.numBeds := 2
+!freeroomtypesdto30.pricePerNight := 150
+!freeroomtypesdto30.numFreeRooms := 8
+
+!insert (booking30, customer30) into BookingCustomer
+!insert (booking30, roomreservation47) into BookingRoomReservation
+!insert (booking30, roomreservation48) into BookingRoomReservation
+!insert (booking30, roomreservation49) into BookingRoomReservation
+
+!insert (roomreservation47, room55) into RoomReservationRoom
+!insert (roomreservation48, room56) into RoomReservationRoom
+!insert (roomreservation49, room57) into RoomReservationRoom
+
+!insert (roomreservation47, roomextra71) into RoomReservationExtras
+!insert (roomreservation48, roomextra72) into RoomReservationExtras
+!insert (roomreservation49, roomextra73) into RoomReservationExtras
+
+!insert (bill54, roomreservation47) into BillRoomReservation
+!insert (bill55, roomreservation48) into BillRoomReservation
+!insert (bill56, roomreservation49) into BillRoomReservation
+
+!insert (booking30, bill54) into BookingBill
+!insert (booking30, bill55) into BookingBill
+!insert (booking30, bill56) into BookingBill
+

@@ -1,0 +1,52 @@
+!new Customer('customer19')
+!customer19.firstName := 'René'
+!customer19.lastName := 'Dubois'
+
+!new Booking('booking19')
+!booking19.bookingId := 122007
+!booking19.startDate := 'December 18, 2024'
+!booking19.endDate := 'December 22, 2024'
+!booking19.canceled := false
+!booking19.confirmed := true
+
+!new RoomReservation('roomreservation29')
+!roomreservation29.checkInDate := 'December 18, 2024'
+!roomreservation29.checkOutDate := 'December 22, 2024'
+
+!new RoomReservation('roomreservation30')
+!roomreservation30.checkInDate := 'December 20, 2024'
+!roomreservation30.checkOutDate := 'December 24, 2024'
+
+!new Room('room35')
+!room35.roomNumber := 305
+!room35.numBeds := 1
+!room35.pricePerNight := 250
+!room35.occupied := true
+!room35.blocked := false
+
+!new RoomExtra('roomextra43')
+!roomextra43.price := 70
+!roomextra43.description := 'Traditional Swiss fondue dining evening.'
+
+!new RoomExtra('roomextra44')
+!roomextra44.price := 120
+!roomextra44.description := 'Complete ski gear set for full snow sport enjoyment.'
+
+!new Bill('bill35')
+!bill35.billId := 1220071
+!bill35.price := 1000
+
+!insert (booking19, customer19) into BookingCustomer
+!insert (booking19, roomreservation29) into BookingRoomReservation
+!insert (booking19, roomreservation30) into BookingRoomReservation
+
+!insert (roomreservation29, room35) into RoomReservationRoom
+!insert (roomreservation30, room35) into RoomReservationRoom
+
+!insert (roomreservation29, roomextra43) into RoomReservationExtras
+!insert (roomreservation30, roomextra44) into RoomReservationExtras
+
+!insert (bill35, roomreservation29) into BillRoomReservation
+!insert (bill35, roomreservation30) into BillRoomReservation
+
+!insert (booking19, bill35) into BookingBill

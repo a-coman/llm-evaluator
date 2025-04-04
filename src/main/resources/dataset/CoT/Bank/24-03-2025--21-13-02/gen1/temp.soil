@@ -1,0 +1,53 @@
+!new Bank('bank5')
+!bank5.country := 'Italy'
+!bank5.name := 'Commercio Bank'
+!bank5.bic := 'COMMIT22'
+
+!new Account('account9')
+!account9.iban := 'IT60X0542811101000000123456'
+!account9.balance := 15000
+
+!new Account('account10')
+!account10.iban := 'IT60X0542811101000000654321'
+!account10.balance := 5000
+
+!new Account('account11')
+!account11.iban := 'IT60X0542811101000000987654'
+!account11.balance := 25000
+
+!new Person('person11')
+!person11.firstName := 'Marco'
+!person11.lastName := 'Rossi'
+!person11.age := 45
+
+!new Person('person12')
+!person12.firstName := 'Giulia'
+!person12.lastName := 'Bianchi'
+!person12.age := 34
+
+!new Person('person13')
+!person13.firstName := 'Ahmed'
+!person13.lastName := 'Ali'
+!person13.age := 28
+
+!new Person('person14')
+!person14.firstName := 'Mary'
+!person14.lastName := 'O\'Connor'
+!person14.age := 30
+
+!insert (person11, account9) into Ownership
+!insert (person12, account9) into Ownership
+!insert (person12, account10) into Ownership
+!insert (person13, account11) into Ownership
+!insert (person14, account11) into Ownership
+
+!insert (person11, account9) into Use
+!insert (person12, account9) into Use
+!insert (person13, account9) into Use
+!insert (person12, account10) into Use
+!insert (person13, account11) into Use
+!insert (person14, account11) into Use
+
+!insert (bank5, account9) into AccountOfBanks
+!insert (bank5, account10) into AccountOfBanks
+!insert (bank5, account11) into AccountOfBanks

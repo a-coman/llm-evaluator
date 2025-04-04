@@ -1,0 +1,164 @@
+!new Club('club31')
+!club31.name := 'Raptors FC'
+!club31.homeGround := 'Raptor Den'
+!club31.chairman := 'Fiona Adams'
+
+!new Club('club32')
+!club32.name := 'Cougars FC'
+!club32.homeGround := 'Cougar Claw Stadium'
+!club32.chairman := 'George Phillips'
+
+!new Team('team31')
+!team31.name := 'Raptor Claws'
+!insert (club31, team31) into ClubTeam
+
+!new Team('team32')
+!team32.name := 'Cougar Prowl'
+!insert (club32, team32) into ClubTeam
+
+!new Player('player46')
+!player46.name := 'Chloe Scott'
+!player46.age := 23
+!player46.bestFoot := #LEFT
+!player46.phoneNumber := '123-345-6789'
+!insert (team31, player46) into TeamPlayer
+
+!new Player('player47')
+!player47.name := 'Jake Evans'
+!player47.age := 26
+!player47.bestFoot := #RIGHT
+!player47.phoneNumber := '234-456-7890'
+!insert (team31, player47) into TeamPlayer
+
+!new Player('player48')
+!player48.name := 'Mia Rogers'
+!player48.age := 27
+!player48.bestFoot := #BOTH
+!player48.phoneNumber := '345-567-8901'
+!insert (team32, player48) into TeamPlayer
+
+!new Position('position46')
+!position46.positionName := #MIDFIELDER
+!insert (player46, position46) into PlayerPositions
+
+!new Position('position47')
+!position47.positionName := #DEFENDER
+!insert (player47, position47) into PlayerPositions
+
+!new Position('position48')
+!position48.positionName := #FORWARD
+!insert (player48, position48) into PlayerPositions
+
+!new TrainingSession('training31')
+!training31.date := '2024-02-02'
+!training31.location := 'Raptor Training Camp'
+!training31.purpose := 'Team Coordination and Drills'
+!insert (team31, training31) into TeamTraining
+
+!new TrainingSession('training32')
+!training32.date := '2024-02-03'
+!training32.location := 'Cougar Ground'
+!training32.purpose := 'Offensive Drills'
+!insert (team32, training32) into TeamTraining
+
+!new TrainingNotes('trainingNotes31')
+!trainingNotes31.note := 'Focused on team passing drills and coordination'
+!trainingNotes31.date := '2024-02-02'
+!insert (training31, trainingNotes31) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes32')
+!trainingNotes32.note := 'Worked on offensive movements and finishing under pressure'
+!trainingNotes32.date := '2024-02-03'
+!insert (training32, trainingNotes32) into TrainingTrainingNotes
+
+!new TrainingObjective('objective46')
+!objective46.areaToImprove := 'Team Coordination'
+!objective46.startDate := '2023-11-20'
+!objective46.endDate := '2024-02-20'
+!objective46.success := true
+!insert (objective46, player46) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective47')
+!objective47.areaToImprove := 'Defensive Coordination'
+!objective47.startDate := '2023-10-10'
+!objective47.endDate := '2024-01-10'
+!objective47.success := false
+!insert (objective47, player47) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective48')
+!objective48.areaToImprove := 'Goal Scoring Efficiency'
+!objective48.startDate := '2023-09-15'
+!objective48.endDate := '2023-12-15'
+!objective48.success := true
+!insert (objective48, player48) into TrainingObjectivePlayer
+
+!new Competition('competition16')
+!competition16.name := 'World Series Cup'
+!competition16.type := 'Group Stage'
+
+!new Match('match16')
+!match16.date := '2024-02-10'
+!match16.homeAway := true
+!insert (competition16, match16) into CompetitionMatch
+!insert (team31, match16) into LocalMatch
+!insert (team32, match16) into VisitorMatch
+
+!new MatchReport('report16')
+!report16.duration := 90
+!report16.scoreVisitor := 2
+!report16.scoreLocal := 3
+!insert (match16, report16) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer46')
+!matchPlayer46.booked := false
+!matchPlayer46.goals := 1
+!matchPlayer46.rating := 8
+!insert (player46, matchPlayer46) into PlayerMatch
+!insert (match16, matchPlayer46) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer48')
+!matchPlayer48.booked := true
+!matchPlayer48.goals := 2
+!matchPlayer48.rating := 9
+!insert (player48, matchPlayer48) into PlayerMatch
+!insert (match16, matchPlayer48) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition46')
+!matchPlayerPosition46.positionName := #MIDFIELDER
+!matchPlayerPosition46.number := 10
+!insert (matchPlayer46, matchPlayerPosition46) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition48')
+!matchPlayerPosition48.positionName := #FORWARD
+!matchPlayerPosition48.number := 11
+!insert (matchPlayer48, matchPlayerPosition48) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event59')
+!event59.eventType := #GOAL
+!event59.time := 12
+!insert (match16, event59) into MatchMatchEvent
+
+!new MatchEvent('event60')
+!event60.eventType := #GOAL
+!event60.time := 34
+!insert (match16, event60) into MatchMatchEvent
+
+!new MatchEvent('event61')
+!event61.eventType := #GOAL
+!event61.time := 49
+!insert (match16, event61) into MatchMatchEvent
+
+!new MatchEvent('event62')
+!event62.eventType := #GOAL
+!event62.time := 66
+!insert (match16, event62) into MatchMatchEvent
+
+!new MatchEvent('event63')
+!event63.eventType := #GOAL
+!event63.time := 81
+!insert (match16, event63) into MatchMatchEvent
+
+!new MatchNote('matchNote16')
+!matchNote16.note := 'Hard-fought match with Raptor Claws clinching a narrow win'
+!matchNote16.date := '2024-02-10'
+!insert (match16, matchNote16) into MatchMatchNote

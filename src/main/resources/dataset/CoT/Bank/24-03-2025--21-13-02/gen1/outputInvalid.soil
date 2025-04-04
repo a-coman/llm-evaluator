@@ -1,0 +1,41 @@
+!new Bank('bank3')
+!bank3.country := 'Germany'
+!bank3.name := 'Rheinbank'
+!bank3.bic := 'RHNBDEBB'
+
+!new Account('account5')
+!account5.iban := 'DE89370400440532013000'
+!account5.balance := 1500
+
+!new Account('account6')
+!account6.iban := 'DE89370400440532013001'
+!account6.balance := 2500
+
+!new Person('person6')
+!person6.firstName := 'Hans'
+!person6.lastName := 'Müller'
+!person6.age := 45
+
+!new Person('person7')
+!person7.firstName := 'Maria'
+!person7.lastName := 'Müller'
+!person7.age := 43
+
+!new Person('person8')
+!person8.firstName := 'Alex'
+!person8.lastName := 'Schmidt'
+!person8.age := 17
+
+!insert (person6, account5) into Ownership
+!insert (person7, account5) into Ownership
+
+!insert (person6, account5) into Use
+!insert (person7, account5) into Use
+!insert (person8, account5) into Use
+
+!insert (person6, account6) into Ownership
+!insert (person6, account6) into Use
+
+!insert (bank3, account5) into AccountOfBanks
+!insert (bank3, account6) into AccountOfBanks
+

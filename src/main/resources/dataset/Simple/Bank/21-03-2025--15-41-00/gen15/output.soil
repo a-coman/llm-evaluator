@@ -1,0 +1,51 @@
+!new Bank('bank16')
+!bank16.country := 'Mexico'
+!bank16.name := 'Banorte'
+!bank16.bic := 'BNMXMXMM'
+
+!new Account('account43')
+!account43.iban := 'MX12345678901234567890'
+!account43.balance := 1200
+
+!new Account('account44')
+!account44.iban := 'MX09876543210987654321'
+!account44.balance := 3300
+
+!new Account('account45')
+!account45.iban := 'MX11121314151617181920'
+!account45.balance := 7200
+
+!new Person('person47')
+!person47.firstName := 'Juan'
+!person47.lastName := 'Lopez'
+!person47.age := 45
+
+!new Person('person48')
+!person48.firstName := 'Ana'
+!person48.lastName := 'Garcia'
+!person48.age := 32
+
+!new Person('person49')
+!person49.firstName := 'Carlos'
+!person49.lastName := 'Martinez'
+!person49.age := 25
+
+-- Associations
+!insert (bank16, account43) into AccountOfBanks
+!insert (bank16, account44) into AccountOfBanks
+!insert (bank16, account45) into AccountOfBanks
+
+!insert (person47, account43) into Ownership
+!insert (person48, account43) into Ownership
+
+!insert (person48, account44) into Ownership
+!insert (person49, account44) into Ownership
+
+!insert (person49, account45) into Ownership
+!insert (person47, account45) into Ownership
+
+!insert (person47, account44) into Use
+!insert (person48, account45) into Use
+
+!insert (person49, account43) into Use
+!insert (person48, account43) into Use

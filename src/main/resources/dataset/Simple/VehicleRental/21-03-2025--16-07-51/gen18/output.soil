@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice20')
+!rentalOffice20.name := 'Cityscape Rentals'
+!rentalOffice20.number := 120
+!rentalOffice20.address := '456 Metro Ave, Atlanta, GA'
+
+!new Vehicle('coveredTrailer4')
+!coveredTrailer4.id := 19
+!coveredTrailer4.registrationState := #FL
+!coveredTrailer4.licensePlateNumber := 'GA8888'
+!coveredTrailer4.vehicleTypeCode := #COVERED_TRAILER
+!coveredTrailer4.registrationLastMaintenanceDate := Date('2023-02-10')
+!coveredTrailer4.expirationDate := Date('2024-02-10')
+
+!new Company('companyCustomer9')
+!companyCustomer9.name := 'Peachtree Logistics'
+!companyCustomer9.address := '123 Commerce St, Atlanta, GA'
+!companyCustomer9.poorRisk := false
+!companyCustomer9.idNumber := 10009
+
+!new RentalAgreement('rentalAgreement19')
+!rentalAgreement19.number := 519
+!rentalAgreement19.rentalDate := Date('2023-11-22')
+!rentalAgreement19.anticipatedDuration := 4
+!rentalAgreement19.depositPaid := 110.0
+!rentalAgreement19.quotedDailyRate := 25.0
+!rentalAgreement19.quotedRatePerMile := 0.3
+
+!insert (rentalOffice20, coveredTrailer4) into RentalOfficeVehicle
+!insert (rentalOffice20, rentalAgreement19) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice20, rentalAgreement19) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement19, coveredTrailer4) into RentalAgreementVehicle
+!insert (rentalAgreement19, companyCustomer9) into RentalAgreementCustomer

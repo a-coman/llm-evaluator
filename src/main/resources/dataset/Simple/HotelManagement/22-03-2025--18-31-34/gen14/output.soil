@@ -1,0 +1,47 @@
+!new Booking('booking15')
+!booking15.startDate := '2024-08-10'
+!booking15.endDate := '2024-08-19'
+!booking15.canceled := true
+!booking15.bookingId := 114
+!booking15.confirmed := false
+
+!new Bill('bill15')
+!bill15.price := 0.00
+!bill15.billId := 214
+
+!new FreeRoomTypesDTO('roomType15')
+!roomType15.roomTypeDescription := 'Budget Single Room'
+!roomType15.numBeds := 1
+!roomType15.pricePerNight := 60.00
+!roomType15.numFreeRooms := 10
+
+!new Customer('customer15')
+!customer15.firstName := 'Rita'
+!customer15.lastName := 'Stevens'
+
+!new RoomReservation('reservation15')
+!reservation15.checkInDate := '2024-08-10'
+!reservation15.checkOutDate := '2024-08-19'
+
+!new RoomExtra('extra15')
+!extra15.price := 0.00
+!extra15.description := 'Free Breakfast Voucher'
+
+!new Room('room24')
+!room24.numBeds := 1
+!room24.pricePerNight := 55.00
+!room24.occupied := false
+!room24.blocked := false
+!room24.roomNumber := 124
+
+!insert (booking15, bill15) into BookingBill
+
+!insert (booking15, customer15) into BookingCustomer
+
+!insert (booking15, reservation15) into BookingRoomReservation
+
+!insert (reservation15, extra15) into RoomReservationExtras
+
+!insert (reservation15, room24) into RoomReservationRoom
+
+!insert (bill15, reservation15) into BillRoomReservation

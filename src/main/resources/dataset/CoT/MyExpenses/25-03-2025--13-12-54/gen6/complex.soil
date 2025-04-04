@@ -1,0 +1,59 @@
+!new Currency('turkishLira')
+!turkishLira.name := 'Turkish Lira'
+!turkishLira.abbreviation := 'TRY'
+
+!new Expense('educationalConferenceTripExpense')
+!educationalConferenceTripExpense.amount := 18000.00
+!educationalConferenceTripExpense.startDate := Date('2023-04-01')
+!educationalConferenceTripExpense.endDate := Date('2023-04-10')
+
+!new Bill('flightTickets')
+!flightTickets.amount := 6000.00
+!flightTickets.category := 'Travel'
+!flightTickets.date := Date('2023-04-01')
+!flightTickets.paymentMethod := #CREDIT_CARD
+!flightTickets.status := #VERIFIED
+
+!new Bill('hotelAccommodation')
+!hotelAccommodation.amount := 5000.00
+!hotelAccommodation.category := 'Accommodation'
+!hotelAccommodation.date := Date('2023-04-02')
+!hotelAccommodation.paymentMethod := #CHECK
+!hotelAccommodation.status := #PENDING
+
+!new Bill('conferenceRegistration')
+!conferenceRegistration.amount := 4000.00
+!conferenceRegistration.category := 'Registration'
+!conferenceRegistration.date := Date('2023-04-03')
+!conferenceRegistration.paymentMethod := #CREDIT_CARD
+!conferenceRegistration.status := #VALIDATED
+
+!new Bill('mealsAndIncidentals')
+!mealsAndIncidentals.amount := 3000.00
+!mealsAndIncidentals.category := 'Meals'
+!mealsAndIncidentals.date := Date('2023-04-05')
+!mealsAndIncidentals.paymentMethod := #CASH
+!mealsAndIncidentals.status := #DRAFT
+
+!insert (flightTickets, turkishLira) into BillCurrency
+!insert (hotelAccommodation, turkishLira) into BillCurrency
+!insert (conferenceRegistration, turkishLira) into BillCurrency
+!insert (mealsAndIncidentals, turkishLira) into BillCurrency
+
+!insert (educationalConferenceTripExpense, flightTickets) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, hotelAccommodation) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, conferenceRegistration) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, mealsAndIncidentals) into ExpenseContainsBills
+
+!new Comment('commentFlight')
+!commentFlight.text := 'Flight was comfortable, ensuring I arrived fresh and ready to engage.'
+
+!new Comment('commentHotel')
+!commentHotel.text := 'Hotel is conveniently located near the conference venue, awaiting confirmation.'
+
+!new Comment('commentRegistration')
+!commentRegistration.text := 'Registration process was smooth, access to all sessions confirmed.'
+
+!insert (educationalConferenceTripExpense, commentFlight) into ExpenseComment
+!insert (educationalConferenceTripExpense, commentHotel) into ExpenseComment
+!insert (educationalConferenceTripExpense, commentRegistration) into ExpenseComment

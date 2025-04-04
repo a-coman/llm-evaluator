@@ -1,0 +1,45 @@
+!new RentalOffice('rentalOffice3')
+!rentalOffice3.name := 'Suburban Rentals'
+!rentalOffice3.number := 103
+!rentalOffice3.address := '789 Suburb Ln, Springfield, AZ'
+
+!new RentalOffice('rentalOffice4')
+!rentalOffice4.name := 'City Center Rentals'
+!rentalOffice4.number := 104
+!rentalOffice4.address := '222 Central Ave, Springfield, AZ'
+
+!new Truck('truck3')
+!truck3.id := 3
+!truck3.registrationState := #AZ
+!truck3.licensePlateNumber := 'AZ9012'
+!truck3.vehicleTypeCode := #TRUCK10
+!truck3.registrationLastMaintenanceDate := Date('2023-03-01')
+!truck3.expirationDate := Date('2024-03-01')
+!truck3.odometerReading := 7500
+!truck3.gasTankCapacity := 100.0
+!truck3.workingRadio := true
+!truck3.mileage := 8
+
+!new Individual('individualCustomer2')
+!individualCustomer2.name := 'Jane Smith'
+!individualCustomer2.address := '101 Oak Dr, Springfield, AZ'
+!individualCustomer2.poorRisk := true
+!individualCustomer2.homePhone := '555-6789'
+!individualCustomer2.driverLicenseState := #AZ
+!individualCustomer2.driverLicenseNumber := 1234567
+!individualCustomer2.driverLicenseExpirationDate := Date('2025-02-15')
+
+!new RentalAgreement('rentalAgreement3')
+!rentalAgreement3.number := 503
+!rentalAgreement3.rentalDate := Date('2023-11-15')
+!rentalAgreement3.anticipatedDuration := 3
+!rentalAgreement3.depositPaid := 80.0
+!rentalAgreement3.quotedDailyRate := 45.0
+!rentalAgreement3.quotedRatePerMile := 0.6
+
+!insert (rentalOffice3, truck3) into RentalOfficeVehicle
+!insert (rentalOffice3, rentalAgreement3) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice4, rentalAgreement3) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement3, truck3) into RentalAgreementVehicle
+!insert (rentalAgreement3, individualCustomer2) into RentalAgreementCustomer

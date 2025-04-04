@@ -1,0 +1,47 @@
+!new Booking('booking28')
+!booking28.startDate := '2025-10-05'
+!booking28.endDate := '2025-10-12'
+!booking28.canceled := false
+!booking28.bookingId := 127
+!booking28.confirmed := true
+
+!new Bill('bill28')
+!bill28.price := 900.00
+!bill28.billId := 227
+
+!new FreeRoomTypesDTO('roomType28')
+!roomType28.roomTypeDescription := 'Artist Loft'
+!roomType28.numBeds := 1
+!roomType28.pricePerNight := 125.00
+!roomType28.numFreeRooms := 2
+
+!new Customer('customer28')
+!customer28.firstName := 'Aaron'
+!customer28.lastName := 'Foley'
+
+!new RoomReservation('reservation28')
+!reservation28.checkInDate := '2025-10-05'
+!reservation28.checkOutDate := '2025-10-12'
+
+!new RoomExtra('extra28')
+!extra28.price := 45.00
+!extra28.description := 'Art Supplies Kit'
+
+!new Room('room43')
+!room43.numBeds := 1
+!room43.pricePerNight := 120.00
+!room43.occupied := true
+!room43.blocked := false
+!room43.roomNumber := 143
+
+!insert (booking28, bill28) into BookingBill
+
+!insert (booking28, customer28) into BookingCustomer
+
+!insert (booking28, reservation28) into BookingRoomReservation
+
+!insert (reservation28, extra28) into RoomReservationExtras
+
+!insert (reservation28, room43) into RoomReservationRoom
+
+!insert (bill28, reservation28) into BillRoomReservation

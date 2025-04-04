@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant21')
+!restaurant21.name := 'Lunar Lounge'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner41')
+!owner41.name := 'Isabella Clark'
+!owner41.percentageShares := 40
+
+!new Owner('owner42')
+!owner42.name := 'Jack Parker'
+!owner42.percentageShares := 60
+
+-- Establish RestaurantOwner association
+!insert (restaurant21, owner41) into RestaurantOwner
+!insert (restaurant21, owner42) into RestaurantOwner
+
+-- Creating tables with a celestial theme
+!new Table('table41')
+!table41.number := 2101
+!table41.description := 'Starlit Bay'
+!table41.capacity := 3
+
+!new Table('table42')
+!table42.number := 2102
+!table42.description := 'Galactic Nook'
+!table42.capacity := 5
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter21')
+!headwaiter21.name := 'Andrew Lee'
+!headwaiter21.dateOfBirth := Date('1983-02-18')
+!headwaiter21.phoneNumber := '555-6161'
+
+!new Waiter('waiter25')
+!waiter25.name := 'Sophie Turner'
+!waiter25.dateOfBirth := Date('1989-05-23')
+!waiter25.phoneNumber := '555-7373'
+!waiter25.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter21, waiter25) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a family dinner
+!new Individual('reservation21')
+!reservation21.time := Time('18:00')
+!reservation21.date := Date('2024-08-20')
+!reservation21.numberPeople := 4
+!reservation21.name := 'Family Night Out'
+!reservation21.phoneNumber := '555-6565'
+!reservation21.number := 219
+!reservation21.seating := #Patio
+!reservation21.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant21, reservation21) into RestaurantReservation
+!insert (reservation21, waiter25) into ReservationWaiter
+!insert (reservation21, table41) into ReservationTable
+!insert (reservation21, table42) into ReservationTable
+
+-- Adding a unique MenuItem for family dining
+!new MenuItem('menuItem21')
+!menuItem21.description := 'Family-Style Pasta Platter'
+!menuItem21.prepTime := 25.0
+!menuItem21.classification := #Main
+
+-- Associating MenuItem with a creative Chef
+!new Chef('chef21')
+!chef21.name := 'Elena Ferrante'
+!chef21.dateOfBirth := Date('1975-03-15')
+!chef21.phoneNumber := '555-2020'
+
+!insert (menuItem21, chef21) into MenuItemChef
+
+-- Creating Cook under the Chef's supervision
+!new Cook('cook21')
+!cook21.name := 'Alex Romero'
+!cook21.dateOfBirth := Date('1984-07-11')
+!cook21.phoneNumber := '555-9090'
+!cook21.yearsOfExperience := 15
+
+-- Establishing association between Chef and Cook
+!insert (chef21, cook21) into ChefCook
+
+-- Creating an ItemOrder for the family dinner
+!new ItemOrder('order21')
+!order21.time := Time('18:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order21, menuItem21) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation21, order21) into ReservationItemOrdered

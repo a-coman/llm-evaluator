@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice18')
+!rentalOffice18.name := 'Valley Rentals'
+!rentalOffice18.number := 118
+!rentalOffice18.address := '159 Valley Road, Phoenix, AZ'
+
+!new Vehicle('openTrailer4')
+!openTrailer4.id := 17
+!openTrailer4.registrationState := #AZ
+!openTrailer4.licensePlateNumber := 'AZ7777'
+!openTrailer4.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer4.registrationLastMaintenanceDate := Date('2023-03-11')
+!openTrailer4.expirationDate := Date('2024-03-11')
+
+!new Company('companyCustomer8')
+!companyCustomer8.name := 'Sunshine Enterprises'
+!companyCustomer8.address := '543 Desert Dr, Phoenix, AZ'
+!companyCustomer8.poorRisk := true
+!companyCustomer8.idNumber := 9008
+
+!new RentalAgreement('rentalAgreement17')
+!rentalAgreement17.number := 517
+!rentalAgreement17.rentalDate := Date('2023-12-15')
+!rentalAgreement17.anticipatedDuration := 2
+!rentalAgreement17.depositPaid := 90.0
+!rentalAgreement17.quotedDailyRate := 10.0
+!rentalAgreement17.quotedRatePerMile := 0.15
+
+!insert (rentalOffice18, openTrailer4) into RentalOfficeVehicle
+!insert (rentalOffice18, rentalAgreement17) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice18, rentalAgreement17) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement17, openTrailer4) into RentalAgreementVehicle
+!insert (rentalAgreement17, companyCustomer8) into RentalAgreementCustomer

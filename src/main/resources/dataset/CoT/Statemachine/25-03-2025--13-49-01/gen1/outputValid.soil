@@ -1,0 +1,262 @@
+!new State('sleep')
+!sleep.name := 'sleep'
+
+!new State('active')
+!active.name := 'active'
+
+!new State('shutdown')
+!shutdown.name := 'shutdown'
+
+!new StateMachine('powerManagement')
+!powerManagement.name := 'powerManagement'
+
+!new Transition('wakeTransition')
+!wakeTransition.name := 'wakeTransition'
+
+!new Transition('shutdownTransition')
+!shutdownTransition.name := 'shutdownTransition'
+
+!new TimeEvent('timeEvent1')
+!timeEvent1.time := 1
+
+!insert (powerManagement, sleep) into StateMachineContainsStates
+!insert (powerManagement, active) into StateMachineContainsStates
+!insert (powerManagement, shutdown) into StateMachineContainsStates
+
+!insert (powerManagement, sleep) into StateMachineStartsStates
+
+!insert (powerManagement, wakeTransition) into StateMachineContainsTransitions
+!insert (powerManagement, shutdownTransition) into StateMachineContainsTransitions
+
+!insert (shutdownTransition, timeEvent1) into TransitionContainsEvents
+
+!insert (sleep, wakeTransition) into StateTransition
+!insert (sleep, shutdownTransition) into StateTransition
+
+!insert (wakeTransition, active) into TransitionState
+!insert (shutdownTransition, shutdown) into TransitionState
+
+!new TimeEvent('timeEvent2')
+!timeEvent2.time := 1
+
+!insert (wakeTransition, timeEvent2) into TransitionContainsEvents
+
+!new StateMachine('automatedTrafficControl')
+!automatedTrafficControl.name := 'automatedTrafficControl'
+
+!new State('redLight')
+!redLight.name := 'redLight'
+
+!new State('greenLight')
+!greenLight.name := 'greenLight'
+
+!new State('yellowLight')
+!yellowLight.name := 'yellowLight'
+
+!new State('pedestrianCrossing')
+!pedestrianCrossing.name := 'pedestrianCrossing'
+
+!new Transition('redToGreen')
+!redToGreen.name := 'redToGreen'
+
+!new Transition('greenToYellow')
+!greenToYellow.name := 'greenToYellow'
+
+!new Transition('yellowToRed')
+!yellowToRed.name := 'yellowToRed'
+
+!new Transition('safeCrossing')
+!safeCrossing.name := 'safeCrossing'
+
+!new TimeEvent('timeEventRedToGreen')
+!timeEventRedToGreen.time := 60
+
+!new TimeEvent('timeEventGreenToYellow')
+!timeEventGreenToYellow.time := 30
+
+!new TimeEvent('timeEventYellowToRed')
+!timeEventYellowToRed.time := 15
+
+!new TimeEvent('timeEventSafeCrossing')
+!timeEventSafeCrossing.time := 90
+
+!insert (automatedTrafficControl, redLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, greenLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, yellowLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, pedestrianCrossing) into StateMachineContainsStates
+
+!insert (automatedTrafficControl, redLight) into StateMachineStartsStates
+
+!insert (automatedTrafficControl, redToGreen) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, greenToYellow) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, yellowToRed) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, safeCrossing) into StateMachineContainsTransitions
+
+!insert (redToGreen, timeEventRedToGreen) into TransitionContainsEvents
+!insert (greenToYellow, timeEventGreenToYellow) into TransitionContainsEvents
+!insert (yellowToRed, timeEventYellowToRed) into TransitionContainsEvents
+!insert (safeCrossing, timeEventSafeCrossing) into TransitionContainsEvents
+
+!insert (redLight, redToGreen) into StateTransition
+!insert (redToGreen, greenLight) into TransitionState
+
+!insert (greenLight, greenToYellow) into StateTransition
+!insert (greenToYellow, yellowLight) into TransitionState
+
+!insert (yellowLight, yellowToRed) into StateTransition
+!insert (yellowToRed, redLight) into TransitionState
+
+!insert (redLight, safeCrossing) into StateTransition
+!insert (safeCrossing, pedestrianCrossing) into TransitionState
+
+!new StateMachine('brewBotProcess')
+!brewBotProcess.name := 'brewBotProcess'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('heatWater')
+!heatWater.name := 'heatWater'
+
+!new State('brewCoffee')
+!brewCoffee.name := 'brewCoffee'
+
+!new State('dispense')
+!dispense.name := 'dispense'
+
+!new State('cleanUp')
+!cleanUp.name := 'cleanUp'
+
+!new Transition('startBrewing')
+!startBrewing.name := 'startBrewing'
+
+!new Transition('startBrewing_process')
+!startBrewing_process.name := 'startBrewing_process'
+
+!new Transition('finishBrewing')
+!finishBrewing.name := 'finishBrewing'
+
+!new Transition('completeTask')
+!completeTask.name := 'completeTask'
+
+!new Transition('reset')
+!reset.name := 'reset'
+
+!new TimeEvent('waitForUserInput')
+!waitForUserInput.time := 5
+
+!new TimeEvent('waterHeatingDelay')
+!waterHeatingDelay.time := 120
+
+!new TimeEvent('brewingDuration')
+!brewingDuration.time := 180
+
+!new TimeEvent('dispensingTime')
+!dispensingTime.time := 30
+
+!new TimeEvent('cleanupTime')
+!cleanupTime.time := 15
+
+!insert (brewBotProcess, idle) into StateMachineContainsStates
+!insert (brewBotProcess, heatWater) into StateMachineContainsStates
+!insert (brewBotProcess, brewCoffee) into StateMachineContainsStates
+!insert (brewBotProcess, dispense) into StateMachineContainsStates
+!insert (brewBotProcess, cleanUp) into StateMachineContainsStates
+
+!insert (brewBotProcess, idle) into StateMachineStartsStates
+
+!insert (brewBotProcess, startBrewing) into StateMachineContainsTransitions
+!insert (brewBotProcess, startBrewing_process) into StateMachineContainsTransitions
+!insert (brewBotProcess, finishBrewing) into StateMachineContainsTransitions
+!insert (brewBotProcess, completeTask) into StateMachineContainsTransitions
+!insert (brewBotProcess, reset) into StateMachineContainsTransitions
+
+!insert (startBrewing, waitForUserInput) into TransitionContainsEvents
+!insert (startBrewing_process, waterHeatingDelay) into TransitionContainsEvents
+!insert (finishBrewing, brewingDuration) into TransitionContainsEvents
+!insert (completeTask, dispensingTime) into TransitionContainsEvents
+!insert (reset, cleanupTime) into TransitionContainsEvents
+
+!insert (idle, startBrewing) into StateTransition
+!insert (startBrewing, heatWater) into TransitionState
+
+!insert (heatWater, startBrewing_process) into StateTransition
+!insert (startBrewing_process, brewCoffee) into TransitionState
+
+!insert (brewCoffee, finishBrewing) into StateTransition
+!insert (finishBrewing, dispense) into TransitionState
+
+!insert (dispense, completeTask) into StateTransition
+!insert (completeTask, cleanUp) into TransitionState
+
+!insert (cleanUp, reset) into StateTransition
+!insert (reset, idle) into TransitionState
+
+!new StateMachine('regionalTimewarp')
+!regionalTimewarp.name := 'regionalTimewarp'
+
+!new State('atlantic')
+!atlantic.name := 'atlantic'
+
+!new State('europeCentral')
+!europeCentral.name := 'europeCentral'
+
+!new State('eastAsia')
+!eastAsia.name := 'eastAsia'
+
+!new State('reset')
+!reset.name := 'reset'
+
+!new Transition('toEuropeCentral')
+!toEuropeCentral.name := 'toEuropeCentral'
+
+!new Transition('toEastAsia')
+!toEastAsia.name := 'toEastAsia'
+
+!new Transition('toReset')
+!toReset.name := 'toReset'
+
+!new Transition('toAtlantic')
+!toAtlantic.name := 'toAtlantic'
+
+!new TimeEvent('timeEventToEuropeCentral')
+!timeEventToEuropeCentral.time := 1
+
+!new TimeEvent('timeEventToEastAsia')
+!timeEventToEastAsia.time := 99999
+
+!new TimeEvent('timeEventToReset')
+!timeEventToReset.time := 24
+
+!new TimeEvent('timeEventToAtlantic')
+!timeEventToAtlantic.time := 60
+
+!insert (regionalTimewarp, atlantic) into StateMachineContainsStates
+!insert (regionalTimewarp, europeCentral) into StateMachineContainsStates
+!insert (regionalTimewarp, eastAsia) into StateMachineContainsStates
+!insert (regionalTimewarp, reset) into StateMachineContainsStates
+
+!insert (regionalTimewarp, atlantic) into StateMachineStartsStates
+
+!insert (regionalTimewarp, toEuropeCentral) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toEastAsia) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toReset) into StateMachineContainsTransitions
+!insert (regionalTimewarp, toAtlantic) into StateMachineContainsTransitions
+
+!insert (toEuropeCentral, timeEventToEuropeCentral) into TransitionContainsEvents
+!insert (toEastAsia, timeEventToEastAsia) into TransitionContainsEvents
+!insert (toReset, timeEventToReset) into TransitionContainsEvents
+!insert (toAtlantic, timeEventToAtlantic) into TransitionContainsEvents
+
+!insert (atlantic, toEuropeCentral) into StateTransition
+!insert (toEuropeCentral, europeCentral) into TransitionState
+
+!insert (europeCentral, toEastAsia) into StateTransition
+!insert (toEastAsia, eastAsia) into TransitionState
+
+!insert (eastAsia, toReset) into StateTransition
+!insert (toReset, reset) into TransitionState
+
+!insert (reset, toAtlantic) into StateTransition
+!insert (toAtlantic, atlantic) into TransitionState
+

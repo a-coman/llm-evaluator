@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant24')
+!restaurant24.name := 'Innovative Eats'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner47')
+!owner47.name := 'Emma Watson'
+!owner47.percentageShares := 65
+
+!new Owner('owner48')
+!owner48.name := 'Michael Clarke'
+!owner48.percentageShares := 35
+
+-- Establish RestaurantOwner association
+!insert (restaurant24, owner47) into RestaurantOwner
+!insert (restaurant24, owner48) into RestaurantOwner
+
+-- Creating tables with contemporary styles
+!new Table('table47')
+!table47.number := 2401
+!table47.description := 'Inventor\'s Hub'
+!table47.capacity := 8
+
+!new Table('table48')
+!table48.number := 2402
+!table48.description := 'Tech Haven'
+!table48.capacity := 8
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter24')
+!headwaiter24.name := 'Isaac Newton'
+!headwaiter24.dateOfBirth := Date('1988-11-05')
+!headwaiter24.phoneNumber := '555-9090'
+
+!new Waiter('waiter28')
+!waiter28.name := 'Lara Smith'
+!waiter28.dateOfBirth := Date('1994-06-23')
+!waiter28.phoneNumber := '555-7878'
+!waiter28.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter24, waiter28) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a tech meetup
+!new Banquet('reservation24')
+!reservation24.time := Time('18:00')
+!reservation24.date := Date('2024-11-25')
+!reservation24.numberPeople := 12
+!reservation24.name := 'Tech Innovators Meet'
+!reservation24.phoneNumber := '555-8989'
+!reservation24.number := 222
+!reservation24.groupName := 'Future Leaders'
+!reservation24.paymentMethod := #CreditCard
+!reservation24.busService := true
+
+-- Establishing associations for the Banquet Reservation
+!insert (restaurant24, reservation24) into RestaurantReservation
+!insert (reservation24, waiter28) into ReservationWaiter
+!insert (reservation24, table47) into ReservationTable
+!insert (reservation24, table48) into ReservationTable
+
+-- Adding a sophisticated MenuItem for the tech dinner
+!new MenuItem('menuItem24')
+!menuItem24.description := 'Fusion Avocado Rolls'
+!menuItem24.prepTime := 20.0
+!menuItem24.classification := #Apetizer
+
+-- Associating MenuItem with a pioneering Chef
+!new Chef('chef24')
+!chef24.name := 'Rachel Adams'
+!chef24.dateOfBirth := Date('1968-02-14')
+!chef24.phoneNumber := '555-5454'
+
+!insert (menuItem24, chef24) into MenuItemChef
+
+-- Creating Cook under the direction of Chef
+!new Cook('cook24')
+!cook24.name := 'Elvis Presley'
+!cook24.dateOfBirth := Date('1983-08-16')
+!cook24.phoneNumber := '555-1212'
+!cook24.yearsOfExperience := 15
+
+-- Establishing association between Chef and Cook
+!insert (chef24, cook24) into ChefCook
+
+-- Creating an ItemOrder for the tech meetup dinner
+!new ItemOrder('order24')
+!order24.time := Time('18:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order24, menuItem24) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation24, order24) into ReservationItemOrdered

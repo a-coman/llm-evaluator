@@ -1,0 +1,175 @@
+!new Club('club9')
+!club9.name := 'Buenos Aires Athletic'
+!club9.homeGround := 'Estadio Monumental'
+!club9.chairman := 'Santiago Alvarez'
+
+!new Team('teamJ')
+!teamJ.name := 'Buenos Aires Condors'
+
+!insert (club9, teamJ) into ClubTeam
+
+!new Club('club10')
+!club10.name := 'Sao Paulo Football Club'
+!club10.homeGround := 'Morumbi Stadium'
+!club10.chairman := 'Carlos Miguel'
+
+!new Team('teamK')
+!teamK.name := 'Sao Paulo Panthers'
+
+!insert (club10, teamK) into ClubTeam
+
+!new Player('player9')
+!player9.name := 'Roberto Silva'
+!player9.age := 30
+!player9.bestFoot := #BOTH
+!player9.phoneNumber := '+55-11-987654'
+
+!insert (teamK, player9) into TeamPlayer
+
+!new Position('position10')
+!position10.positionName := #MIDFIELDER
+
+!new Position('position11')
+!position11.positionName := #DEFENDER
+
+!insert (player9, position10) into PlayerPositions
+!insert (player9, position11) into PlayerPositions
+
+!new PlayerNotes('playerNote6')
+!playerNote6.note := 'Versatile player trusted to handle multiple roles.'
+!playerNote6.date := '2023-09-10'
+
+!insert (player9, playerNote6) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective9')
+!trainingObjective9.areaToImprove := 'Leadership'
+!trainingObjective9.startDate := '2023-09-01'
+!trainingObjective9.endDate := '2023-11-01'
+!trainingObjective9.success := true
+
+!new TrainingObjective('trainingObjective10')
+!trainingObjective10.areaToImprove := 'Speed'
+!trainingObjective10.startDate := '2023-08-15'
+!trainingObjective10.endDate := '2023-10-15'
+!trainingObjective10.success := false
+
+!insert (trainingObjective9, player9) into TrainingObjectivePlayer
+!insert (trainingObjective10, player9) into TrainingObjectivePlayer
+
+!new Player('player10')
+!player10.name := 'Ana Gomes'
+!player10.age := 26
+!player10.bestFoot := #LEFT
+!player10.phoneNumber := '+55-11-678543'
+
+!insert (teamK, player10) into TeamPlayer
+
+!new Position('position12')
+!position12.positionName := #FORWARD
+
+!insert (player10, position12) into PlayerPositions
+
+!new PlayerNotes('playerNote7')
+!playerNote7.note := 'Known for her precise shots and quick pace.'
+!playerNote7.date := '2023-09-01'
+
+!insert (player10, playerNote7) into PlayerPlayerNotes
+
+!new Competition('competition5')
+!competition5.name := 'South American League'
+!competition5.type := 'Regional League'
+
+!new Match('match5')
+!match5.date := '2023-09-20'
+!match5.homeAway := false
+
+!insert (competition5, match5) into CompetitionMatch
+
+!insert (teamJ, match5) into LocalMatch
+!insert (teamK, match5) into VisitorMatch
+
+!new MatchReport('matchReport5')
+!matchReport5.duration := 120
+!matchReport5.scoreVisitor := 1
+!matchReport5.scoreLocal := 1
+
+!insert (match5, matchReport5) into MatchMatchReport
+
+!new MatchEvent('matchEvent10')
+!matchEvent10.eventType := #GOAL
+!matchEvent10.time := 33
+
+!new MatchEvent('matchEvent11')
+!matchEvent11.eventType := #FOUL
+!matchEvent11.time := 44
+
+!new MatchEvent('matchEvent12')
+!matchEvent12.eventType := #GOAL
+!matchEvent12.time := 81
+
+!new MatchEvent('matchEvent13')
+!matchEvent13.eventType := #FOUL
+!matchEvent13.time := 110
+
+!insert (match5, matchEvent10) into MatchMatchEvent
+!insert (match5, matchEvent11) into MatchMatchEvent
+!insert (match5, matchEvent12) into MatchMatchEvent
+!insert (match5, matchEvent13) into MatchMatchEvent
+
+!new MatchNote('matchNote4')
+!matchNote4.note := 'Match ended in penalties due to a tie after extra time.'
+!matchNote4.date := '2023-09-20'
+
+!insert (match5, matchNote4) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer7')
+!matchPlayer7.booked := false
+!matchPlayer7.goals := 1
+!matchPlayer7.rating := 7
+
+!insert (player9, matchPlayer7) into PlayerMatch
+!insert (match5, matchPlayer7) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition7')
+!matchPlayerPosition7.positionName := #MIDFIELDER
+!matchPlayerPosition7.number := 8
+
+!insert (matchPlayer7, matchPlayerPosition7) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer8')
+!matchPlayer8.booked := true
+!matchPlayer8.goals := 0
+!matchPlayer8.rating := 5
+
+!insert (player10, matchPlayer8) into PlayerMatch
+!insert (match5, matchPlayer8) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition8')
+!matchPlayerPosition8.positionName := #DEFENDER
+!matchPlayerPosition8.number := 5
+
+!insert (matchPlayer8, matchPlayerPosition8) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession9')
+!trainingSession9.date := '2023-08-18'
+!trainingSession9.location := 'Sao Paulo Training Facility'
+!trainingSession9.purpose := 'Tactical Adjustments'
+
+!insert (teamK, trainingSession9) into TeamTraining
+
+!new TrainingNotes('trainingNote9')
+!trainingNote9.note := 'Intensive focus on counter-attacking drills.'
+!trainingNote9.date := '2023-08-18'
+
+!new TrainingNotes('trainingNote10')
+!trainingNote10.note := 'Review of previous match tape for improvements.'
+!trainingNote10.date := '2023-08-18'
+
+!insert (trainingSession9, trainingNote9) into TrainingTrainingNotes
+!insert (trainingSession9, trainingNote10) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend4')
+!failedAttend4.reason := 'Family Emergency'
+
+!insert (trainingSession9, failedAttend4) into TrainingFailded
+!insert (failedAttend4, player10) into FailedPlayer

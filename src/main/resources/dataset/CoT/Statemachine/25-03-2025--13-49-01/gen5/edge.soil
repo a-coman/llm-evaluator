@@ -1,0 +1,82 @@
+!new StateMachine('roboticFactoryWorkflow')
+!roboticFactoryWorkflow.name := 'roboticFactoryWorkflow'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('assembly')
+!assembly.name := 'assembly'
+
+!new State('qualityCheck')
+!qualityCheck.name := 'qualityCheck'
+
+!new State('packaging')
+!packaging.name := 'packaging'
+
+!new State('shutdown')
+!shutdown.name := 'shutdown'
+
+!new Transition('startAssembly')
+!startAssembly.name := 'startAssembly'
+
+!new Transition('moveToQualityCheck')
+!moveToQualityCheck.name := 'moveToQualityCheck'
+
+!new Transition('approveForPackaging')
+!approveForPackaging.name := 'approveForPackaging'
+
+!new Transition('returnToIdle')
+!returnToIdle.name := 'returnToIdle'
+
+!new Transition('initiateShutdown')
+!initiateShutdown.name := 'initiateShutdown'
+
+!new TimeEvent('timeEventStartAssembly')
+!timeEventStartAssembly.time := 5
+
+!new TimeEvent('timeEventMoveToQualityCheck')
+!timeEventMoveToQualityCheck.time := 60
+
+!new TimeEvent('timeEventApproveForPackaging')
+!timeEventApproveForPackaging.time := 30
+
+!new TimeEvent('timeEventReturnToIdle')
+!timeEventReturnToIdle.time := 90
+
+!new TimeEvent('timeEventInitiateShutdown')
+!timeEventInitiateShutdown.time := 10
+
+!insert (roboticFactoryWorkflow, idle) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, assembly) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, qualityCheck) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, packaging) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, shutdown) into StateMachineContainsStates
+
+!insert (roboticFactoryWorkflow, idle) into StateMachineStartsStates
+
+!insert (roboticFactoryWorkflow, startAssembly) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, moveToQualityCheck) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, approveForPackaging) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, returnToIdle) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, initiateShutdown) into StateMachineContainsTransitions
+
+!insert (startAssembly, timeEventStartAssembly) into TransitionContainsEvents
+!insert (moveToQualityCheck, timeEventMoveToQualityCheck) into TransitionContainsEvents
+!insert (approveForPackaging, timeEventApproveForPackaging) into TransitionContainsEvents
+!insert (returnToIdle, timeEventReturnToIdle) into TransitionContainsEvents
+!insert (initiateShutdown, timeEventInitiateShutdown) into TransitionContainsEvents
+
+!insert (idle, startAssembly) into StateTransition
+!insert (startAssembly, assembly) into TransitionState
+
+!insert (assembly, moveToQualityCheck) into StateTransition
+!insert (moveToQualityCheck, qualityCheck) into TransitionState
+
+!insert (qualityCheck, approveForPackaging) into StateTransition
+!insert (approveForPackaging, packaging) into TransitionState
+
+!insert (qualityCheck, initiateShutdown) into StateTransition
+!insert (initiateShutdown, shutdown) into TransitionState
+
+!insert (packaging, returnToIdle) into StateTransition
+!insert (returnToIdle, idle) into TransitionState

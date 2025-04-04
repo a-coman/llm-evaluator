@@ -1,0 +1,59 @@
+!new Currency('chineseYuan')
+!chineseYuan.name := 'Chinese Yuan'
+!chineseYuan.abbreviation := 'CNY'
+
+!new Expense('lunarNewYearCelebrationExpense')
+!lunarNewYearCelebrationExpense.amount := 5000.00
+!lunarNewYearCelebrationExpense.startDate := Date('2023-01-10')
+!lunarNewYearCelebrationExpense.endDate := Date('2023-01-30')
+
+!new Bill('newYearDecorations')
+!newYearDecorations.amount := 800.00
+!newYearDecorations.category := 'Decoration'
+!newYearDecorations.date := Date('2023-01-12')
+!newYearDecorations.paymentMethod := #CASH
+!newYearDecorations.status := #VERIFIED
+
+!new Bill('familyReunionDinner')
+!familyReunionDinner.amount := 2000.00
+!familyReunionDinner.category := 'Meals'
+!familyReunionDinner.date := Date('2023-01-21')
+!familyReunionDinner.paymentMethod := #CREDIT_CARD
+!familyReunionDinner.status := #VALIDATED
+
+!new Bill('traditionalClothesPurchase')
+!traditionalClothesPurchase.amount := 1200.00
+!traditionalClothesPurchase.category := 'Clothing'
+!traditionalClothesPurchase.date := Date('2023-01-15')
+!traditionalClothesPurchase.paymentMethod := #CREDIT_CARD
+!traditionalClothesPurchase.status := #VERIFIED
+
+!new Bill('redEnvelopes')
+!redEnvelopes.amount := 1000.00
+!redEnvelopes.category := 'Gifts'
+!redEnvelopes.date := Date('2023-01-22')
+!redEnvelopes.paymentMethod := #CHECK
+!redEnvelopes.status := #DRAFT
+
+!insert (newYearDecorations, chineseYuan) into BillCurrency
+!insert (familyReunionDinner, chineseYuan) into BillCurrency
+!insert (traditionalClothesPurchase, chineseYuan) into BillCurrency
+!insert (redEnvelopes, chineseYuan) into BillCurrency
+
+!insert (lunarNewYearCelebrationExpense, newYearDecorations) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, familyReunionDinner) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, traditionalClothesPurchase) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, redEnvelopes) into ExpenseContainsBills
+
+!new Comment('commentDecorations')
+!commentDecorations.text := 'All decorations followed traditional designs, added a special touch to the home.'
+
+!new Comment('commentDinner')
+!commentDinner.text := 'The family dinner was a success, everyone enjoyed the meal and ambiance.'
+
+!new Comment('commentClothes')
+!commentClothes.text := 'Shopping for clothes during the festival was vibrant but crowded, need to plan better next year.'
+
+!insert (lunarNewYearCelebrationExpense, commentDecorations) into ExpenseComment
+!insert (lunarNewYearCelebrationExpense, commentDinner) into ExpenseComment
+!insert (lunarNewYearCelebrationExpense, commentClothes) into ExpenseComment

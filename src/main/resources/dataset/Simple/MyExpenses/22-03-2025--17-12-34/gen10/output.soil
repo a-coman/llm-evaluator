@@ -1,0 +1,33 @@
+!new Expense('expense12')
+!expense12.amount := 850.0
+!expense12.startDate := Date('2023-12-01')
+!expense12.endDate := Date('2023-12-31')
+
+!new Currency('currency10')
+!currency10.name := 'South African Rand'
+!currency10.abbreviation := 'ZAR'
+
+!new Bill('bill19')
+!bill19.amount := 500.0
+!bill19.category := 'Gift'
+!bill19.date := Date('2023-12-10')
+!bill19.paymentMethod := #CREDIT_CARD
+!bill19.status := #VALIDATED
+
+!new Bill('bill20')
+!bill20.amount := 350.0
+!bill20.category := 'Decorations'
+!bill20.date := Date('2023-12-20')
+!bill20.paymentMethod := #CHECK
+!bill20.status := #PENDING
+
+!insert (expense12, bill19) into ExpenseContainsBills
+!insert (expense12, bill20) into ExpenseContainsBills
+
+!insert (bill19, currency10) into BillCurrency
+!insert (bill20, currency10) into BillCurrency
+
+!new Comment('comment12')
+!comment12.text := 'Holiday gifts and decorations for December'
+
+!insert (expense12, comment12) into ExpenseComment

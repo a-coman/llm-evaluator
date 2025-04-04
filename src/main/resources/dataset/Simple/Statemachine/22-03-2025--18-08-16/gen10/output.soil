@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine11')
+!stateMachine11.name := 'escalationMachine'
+
+!new State('state27')
+!state27.name := 'lowPriority'
+
+!new State('state28')
+!state28.name := 'mediumPriority'
+
+!new State('state29')
+!state29.name := 'highPriority'
+
+!new Transition('transition23')
+!transition23.name := 'lowToMedium'
+
+!new Transition('transition24')
+!transition24.name := 'mediumToHigh'
+
+!new Transition('transition25')
+!transition25.name := 'highToLow'
+
+!new TimeEvent('event23')
+!event23.time := 5
+
+!new TimeEvent('event24')
+!event24.time := 25
+
+!new TimeEvent('event25')
+!event25.time := 50
+
+!insert (stateMachine11, state27) into StateMachineContainsStates
+!insert (stateMachine11, state28) into StateMachineContainsStates
+!insert (stateMachine11, state29) into StateMachineContainsStates
+
+!insert (stateMachine11, transition23) into StateMachineContainsTransitions
+!insert (stateMachine11, transition24) into StateMachineContainsTransitions
+!insert (stateMachine11, transition25) into StateMachineContainsTransitions
+
+!insert (transition23, event23) into TransitionContainsEvents
+!insert (transition24, event24) into TransitionContainsEvents
+!insert (transition25, event25) into TransitionContainsEvents
+
+!insert (state27, transition23) into StateTransition
+!insert (state28, transition24) into StateTransition
+!insert (state29, transition25) into StateTransition
+
+!insert (transition23, state28) into TransitionState
+!insert (transition24, state29) into TransitionState
+!insert (transition25, state27) into TransitionState
+
+!insert (stateMachine11, state27) into StateMachineStartsStates

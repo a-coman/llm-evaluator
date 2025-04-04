@@ -1,0 +1,51 @@
+!new Bank('bank15')
+!bank15.country := 'South Africa'
+!bank15.name := 'FirstRand Bank'
+!bank15.bic := 'FIRNZAJJ'
+
+!new Account('account40')
+!account40.iban := 'ZA123456789012345678'
+!account40.balance := 5500
+
+!new Account('account41')
+!account41.iban := 'ZA876543210987654321'
+!account41.balance := 800
+
+!new Account('account42')
+!account42.iban := 'ZA192837465091827364'
+!account42.balance := 3100
+
+!new Person('person44')
+!person44.firstName := 'Thandi'
+!person44.lastName := 'Nkosi'
+!person44.age := 36
+
+!new Person('person45')
+!person45.firstName := 'Sipho'
+!person45.lastName := 'Moyo'
+!person45.age := 28
+
+!new Person('person46')
+!person46.firstName := 'Lerato'
+!person46.lastName := 'Dlamini'
+!person46.age := 40
+
+-- Associations
+!insert (bank15, account40) into AccountOfBanks
+!insert (bank15, account41) into AccountOfBanks
+!insert (bank15, account42) into AccountOfBanks
+
+!insert (person44, account40) into Ownership
+!insert (person45, account40) into Ownership
+
+!insert (person45, account41) into Ownership
+!insert (person46, account41) into Ownership
+
+!insert (person46, account42) into Ownership
+!insert (person44, account42) into Ownership
+
+!insert (person44, account41) into Use
+!insert (person45, account42) into Use
+
+!insert (person46, account40) into Use
+!insert (person45, account40) into Use

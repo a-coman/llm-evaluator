@@ -1,0 +1,51 @@
+!new RentalOffice('rentalOffice15')
+!rentalOffice15.name := 'Desert Oasis Rentals'
+!rentalOffice15.number := 33
+!rentalOffice15.address := '789 Mirage Lane, Las Vegas, NV, 89109'
+
+!new Truck('truck13')
+!truck13.id := 28
+!truck13.registrationState := #AK
+!truck13.licensePlateNumber := 'TRK-007LV'
+!truck13.vehicleTypeCode := #TRUCK
+!truck13.registrationLastMaintenanceDate := Date('2023-08-01')
+!truck13.expirationDate := Date('2024-08-15')
+!truck13.odometerReading := 100000
+!truck13.gasTankCapacity := 50.5
+!truck13.workingRadio := true
+!truck13.mileage := 3
+
+!new Vehicle('vehicle16')
+!vehicle16.id := 29
+!vehicle16.registrationState := #AK
+!vehicle16.licensePlateNumber := 'TRL-303NV'
+!vehicle16.vehicleTypeCode := #OPEN_TRAILER
+!vehicle16.registrationLastMaintenanceDate := Date('2023-06-15')
+!vehicle16.expirationDate := Date('2026-06-15')
+
+!new RentalAgreement('rentalAgreement23')
+!rentalAgreement23.number := 1111
+!rentalAgreement23.rentalDate := Date('2024-01-01')
+!rentalAgreement23.anticipatedDuration := 1
+!rentalAgreement23.depositPaid := 0.50
+!rentalAgreement23.quotedDailyRate := 5.00
+!rentalAgreement23.quotedRatePerMile := 0.20
+
+!new Individual('individualCustomer10')
+!individualCustomer10.name := 'Carlos Rivera'
+!individualCustomer10.address := '1001 High Dunes Avenue, Phoenix, AZ, 85001'
+!individualCustomer10.poorRisk := true
+!individualCustomer10.homePhone := '+1-602-555-0420'
+!individualCustomer10.driverLicenseState := #AZ
+!individualCustomer10.driverLicenseNumber := 2233445
+!individualCustomer10.driverLicenseExpirationDate := Date('2030-12-31')
+
+!insert (rentalOffice15, truck13) into RentalOfficeVehicle
+!insert (rentalOffice15, vehicle16) into RentalOfficeVehicle
+
+!insert (rentalOffice15, rentalAgreement23) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice15, rentalAgreement23) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement23, truck13) into RentalAgreementVehicle
+
+!insert (rentalAgreement23, individualCustomer10) into RentalAgreementCustomer

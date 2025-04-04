@@ -1,0 +1,31 @@
+!new Bank('bank9')
+!bank9.country := 'Maldives'
+!bank9.name := 'Coral Reef Bank'
+!bank9.bic := 'CRBVMVXXXX'
+
+!new Account('account18')
+!account18.iban := 'MV1111111111111111'
+!account18.balance := 1
+
+!new Person('person22')
+!person22.firstName := 'Amina'
+!person22.lastName := 'Ibrahim'
+!person22.age := 18
+
+!new Person('person23')
+!person23.firstName := 'Ravi'
+!person23.lastName := 'Patel'
+!person23.age := 30
+
+!new Person('person24')
+!person24.firstName := 'Zhong'
+!person24.lastName := 'Wei'
+!person24.age := 90
+
+!insert (person22, account18) into Ownership
+!insert (person23, account18) into Ownership
+
+!insert (person22, account18) into Use
+!insert (person23, account18) into Use
+
+!insert (bank9, account18) into AccountOfBanks

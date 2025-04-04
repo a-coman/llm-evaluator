@@ -1,0 +1,88 @@
+-- Correctly assign instances of data types using the constructors
+-- Assign Date and Time datatypes for specific reservations
+!new Restaurant('restaurant1')
+!restaurant1.name := 'The Culinary Experience'
+
+-- Instance of Owners with their shares
+!new Owner('owner1')
+!owner1.name := 'Alice Johnson'
+!owner1.percentageShares := 60
+
+!new Owner('owner2')
+!owner2.name := 'Bob Smith'
+!owner2.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant1, owner1) into RestaurantOwner
+!insert (restaurant1, owner2) into RestaurantOwner
+
+-- Tables with their capacities (ensuring positive capacity)
+!new Table('table1')
+!table1.number := 101
+!table1.description := 'Corner Table'
+!table1.capacity := 4
+
+-- Creating headwaiter and waiters
+!new HeadWaiter('headwaiter1')
+!headwaiter1.name := 'Charles Will'
+!headwaiter1.dateOfBirth := Date('1985-07-15')
+!headwaiter1.phoneNumber := '555-0123'
+
+!new Waiter('waiter1')
+!waiter1.name := 'Diana Prince'
+!waiter1.dateOfBirth := Date('1990-04-23')
+!waiter1.phoneNumber := '555-0456'
+!waiter1.spokenLanguage := #English
+
+!insert (headwaiter1, waiter1) into HeadWaiterWaiter
+
+-- Creating Chef and Cook instances
+!new Chef('chef1')
+!chef1.name := 'Gordon Ramsay'
+!chef1.dateOfBirth := Date('1966-11-08')
+!chef1.phoneNumber := '555-0987'
+
+!new Cook('cook1')
+!cook1.name := 'Jamie Oliver'
+!cook1.dateOfBirth := Date('1975-05-27')
+!cook1.phoneNumber := '555-1094'
+!cook1.yearsOfExperience := 15
+
+-- Establish the association between Chef and Cook
+!insert (chef1, cook1) into ChefCook
+
+-- Individual Reservation
+!new Individual('reservation1')
+!reservation1.time := Time('18:30')
+!reservation1.date := Date('2023-11-01')
+!reservation1.numberPeople := 3
+!reservation1.name := 'Bruce Wayne'
+!reservation1.phoneNumber := '555-0111'
+!reservation1.number := 1
+!reservation1.seating := #Inside
+!reservation1.smoking := #NonSmoking
+
+-- Establish associations
+!insert (restaurant1, reservation1) into RestaurantReservation
+!insert (reservation1, waiter1) into ReservationWaiter
+!insert (reservation1, table1) into ReservationTable
+
+-- Menu items designed by chef
+!new MenuItem('menuItem1')
+!menuItem1.description := 'Classic Burger'
+!menuItem1.prepTime := 15.0
+!menuItem1.classification := #Main
+
+!insert (menuItem1, chef1) into MenuItemChef
+
+-- Food item associated with allergens
+!new FoodItem('foodItem1')
+!foodItem1.number := 1
+!foodItem1.description := 'Lettuce'
+!foodItem1.purchaseFlag := true
+!foodItem1.unit := #Gram
+
+!new Allergen('allergen1')
+!allergen1.type := #Gluten
+
+!insert (foodItem1, allergen1) into FoodItemAllergen

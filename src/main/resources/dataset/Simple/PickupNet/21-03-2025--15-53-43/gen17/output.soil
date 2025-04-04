@@ -1,0 +1,53 @@
+!new Driver('driver18')
+!driver18.id := 'D018'
+!driver18.name := 'James Thompson'
+
+!new Shipment('shipment30')
+!shipment30.id := 'S030'
+!shipment30.status := #NEW
+
+!new Shipment('shipment31')
+!shipment31.id := 'S031'
+!shipment31.status := #ASSIGNED
+
+!new Address('address35')
+!address35.text := '1212 Cliff Edge Parkway'
+
+!new Address('address36')
+!address36.text := '1313 Mountain Pass Boulevard'
+
+!new GeoLocation('geoLocation35')
+!geoLocation35.latitude := 13.7563
+!geoLocation35.longitude := 100.5018
+
+!new GeoLocation('geoLocation36')
+!geoLocation36.latitude := -33.4489
+!geoLocation36.longitude := -70.6693
+
+!new Customer('customer18')
+!customer18.id := 'C018'
+!customer18.name := 'Emma Hall'
+!customer18.twitterUserName := '@emma_hall'
+
+!new Station('station17')
+
+!insert (driver18, shipment31) into DriverShipment
+
+!insert (shipment30, address35) into ShipmentContainsPickUpAddress
+!insert (shipment30, address36) into ShipmentContainsDeliveryAddress
+
+!insert (shipment31, address36) into ShipmentContainsPickUpAddress
+!insert (shipment31, address35) into ShipmentContainsDeliveryAddress
+
+!insert (address35, geoLocation35) into AddressContainsGeoLocation
+!insert (address36, geoLocation36) into AddressContainsGeoLocation
+
+!insert (customer18, shipment30) into CustomerConsistsOfShipment
+!insert (customer18, shipment31) into CustomerConsistsOfShipment
+
+!insert (station17, customer18) into StationContainsCustomer
+
+!insert (station17, shipment30) into StationShipment
+!insert (station17, shipment31) into StationShipment
+
+!insert (station17, driver18) into StationContainsDriver

@@ -1,0 +1,136 @@
+!new Driver('driver14')
+!driver14.id := 'D-101'
+!driver14.name := 'Alessandro Rossi'
+
+!new Driver('driver15')
+!driver15.id := 'D-102'
+!driver15.name := 'Marta Müller'
+
+!new Driver('driver16')
+!driver16.id := 'D-103'
+!driver16.name := 'Nina Novak'
+
+!new Customer('customer13')
+!customer13.id := 'C-101'
+!customer13.name := 'Ayşe Yılmaz'
+!customer13.twitterUserName := '@ayseyil_global'
+
+!new Customer('customer14')
+!customer14.id := 'C-102'
+!customer14.name := 'Carlos Gutierrez'
+!customer14.twitterUserName := '@cgut_express'
+
+!new Customer('customer15')
+!customer15.id := 'C-103'
+!customer15.name := 'Søren Larsen'
+!customer15.twitterUserName := '@sorenlarsen_dk'
+
+!new Shipment('shipment11')
+!shipment11.id := 'S-2001'
+!shipment11.status := #DELIVERED
+
+!new Address('pickupAddress11')
+!pickupAddress11.text := 'Piazza della Signoria, Florence, Italy'
+
+!new GeoLocation('pickupGeoLocation11')
+!pickupGeoLocation11.latitude := 43.7696
+!pickupGeoLocation11.longitude := 11.2558
+
+!new Address('deliveryAddress11')
+!deliveryAddress11.text := 'Avenue des Champs-Élysées, Paris, France'
+
+!new GeoLocation('deliveryGeoLocation11')
+!deliveryGeoLocation11.latitude := 48.8566
+!deliveryGeoLocation11.longitude := 2.3522
+
+!new Shipment('shipment12')
+!shipment12.id := 'S-2002'
+!shipment12.status := #UNDERWAY
+
+!new Address('pickupAddress12')
+!pickupAddress12.text := 'Gran Via, Madrid, Spain'
+
+!new GeoLocation('pickupGeoLocation12')
+!pickupGeoLocation12.latitude := 40.4168
+!pickupGeoLocation12.longitude := -3.7038
+
+!new Address('deliveryAddress12')
+!deliveryAddress12.text := 'Karl Johans Gate, Oslo, Norway'
+
+!new GeoLocation('deliveryGeoLocation12')
+!deliveryGeoLocation12.latitude := 59.9139
+!deliveryGeoLocation12.longitude := 10.7522
+
+!new Shipment('shipment13')
+!shipment13.id := 'S-2003'
+!shipment13.status := #NEW
+
+!new Address('pickupAddress13')
+!pickupAddress13.text := 'Nyhavn, Copenhagen, Denmark'
+
+!new GeoLocation('pickupGeoLocation13')
+!pickupGeoLocation13.latitude := 55.6761
+!pickupGeoLocation13.longitude := 12.5683
+
+!new Address('deliveryAddress13')
+!deliveryAddress13.text := 'Rebagliati Street, Lima, Peru'
+
+!new GeoLocation('deliveryGeoLocation13')
+!deliveryGeoLocation13.latitude := -12.0464
+!deliveryGeoLocation13.longitude := -77.0428
+
+!new Station('station10')
+
+!new Station('station11')
+
+!insert (driver14, shipment11) into DriverShipment
+
+!insert (shipment11, pickupAddress11) into ShipmentContainsPickUpAddress
+
+!insert (shipment11, deliveryAddress11) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress11, pickupGeoLocation11) into AddressContainsGeoLocation
+
+!insert (deliveryAddress11, deliveryGeoLocation11) into AddressContainsGeoLocation
+
+!insert (customer13, shipment11) into CustomerConsistsOfShipment
+
+!insert (station10, shipment11) into StationShipment
+
+!insert (station10, driver14) into StationContainsDriver
+
+!insert (station10, customer13) into StationContainsCustomer
+
+!insert (driver15, shipment12) into DriverShipment
+
+!insert (shipment12, pickupAddress12) into ShipmentContainsPickUpAddress
+
+!insert (shipment12, deliveryAddress12) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress12, pickupGeoLocation12) into AddressContainsGeoLocation
+
+!insert (deliveryAddress12, deliveryGeoLocation12) into AddressContainsGeoLocation
+
+!insert (customer14, shipment12) into CustomerConsistsOfShipment
+
+!insert (station10, shipment12) into StationShipment
+
+!insert (station10, driver15) into StationContainsDriver
+
+!insert (station10, customer14) into StationContainsCustomer
+
+!insert (shipment13, pickupAddress13) into ShipmentContainsPickUpAddress
+
+!insert (shipment13, deliveryAddress13) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress13, pickupGeoLocation13) into AddressContainsGeoLocation
+
+!insert (deliveryAddress13, deliveryGeoLocation13) into AddressContainsGeoLocation
+
+!insert (customer15, shipment13) into CustomerConsistsOfShipment
+
+!insert (station11, shipment13) into StationShipment
+
+!insert (station11, driver16) into StationContainsDriver
+
+!insert (station11, customer15) into StationContainsCustomer

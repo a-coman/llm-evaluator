@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice14')
+!rentalOffice14.name := 'Urban Rentals'
+!rentalOffice14.number := 114
+!rentalOffice14.address := '101 City Plaza, Los Angeles, CA'
+
+!new Vehicle('openTrailer3')
+!openTrailer3.id := 13
+!openTrailer3.registrationState := #CA
+!openTrailer3.licensePlateNumber := 'CA3333'
+!openTrailer3.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer3.registrationLastMaintenanceDate := Date('2023-09-20')
+!openTrailer3.expirationDate := Date('2024-09-20')
+
+!new Company('companyCustomer6')
+!companyCustomer6.name := 'City Logistics Corp.'
+!companyCustomer6.address := '202 Industrial Park, Los Angeles, CA'
+!companyCustomer6.poorRisk := false
+!companyCustomer6.idNumber := 7006
+
+!new RentalAgreement('rentalAgreement13')
+!rentalAgreement13.number := 513
+!rentalAgreement13.rentalDate := Date('2023-11-29')
+!rentalAgreement13.anticipatedDuration := 10
+!rentalAgreement13.depositPaid := 120.0
+!rentalAgreement13.quotedDailyRate := 15.0
+!rentalAgreement13.quotedRatePerMile := 0.25
+
+!insert (rentalOffice14, openTrailer3) into RentalOfficeVehicle
+!insert (rentalOffice14, rentalAgreement13) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice14, rentalAgreement13) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement13, openTrailer3) into RentalAgreementVehicle
+!insert (rentalAgreement13, companyCustomer6) into RentalAgreementCustomer

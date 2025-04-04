@@ -1,0 +1,149 @@
+!new Club('club17')
+!club17.name := 'Vikings FC'
+!club17.homeGround := 'Viking Ground'
+!club17.chairman := 'Alice Thompson'
+
+!new Club('club18')
+!club18.name := 'Royals FC'
+!club18.homeGround := 'Royal Palace Stadium'
+!club18.chairman := 'Henry Williams'
+
+!new Team('team17')
+!team17.name := 'Viking Raiders'
+!insert (club17, team17) into ClubTeam
+
+!new Team('team18')
+!team18.name := 'Royal Knights'
+!insert (club18, team18) into ClubTeam
+
+!new Player('player25')
+!player25.name := 'Aiden Clarke'
+!player25.age := 28
+!player25.bestFoot := #RIGHT
+!player25.phoneNumber := '101-234-5678'
+!insert (team17, player25) into TeamPlayer
+
+!new Player('player26')
+!player26.name := 'Sophia Young'
+!player26.age := 26
+!player26.bestFoot := #LEFT
+!player26.phoneNumber := '202-345-6789'
+!insert (team17, player26) into TeamPlayer
+
+!new Player('player27')
+!player27.name := 'Ethan Bell'
+!player27.age := 29
+!player27.bestFoot := #BOTH
+!player27.phoneNumber := '303-456-7890'
+!insert (team18, player27) into TeamPlayer
+
+!new Position('position25')
+!position25.positionName := #FORWARD
+!insert (player25, position25) into PlayerPositions
+
+!new Position('position26')
+!position26.positionName := #DEFENDER
+!insert (player26, position26) into PlayerPositions
+
+!new Position('position27')
+!position27.positionName := #MIDFIELDER
+!insert (player27, position27) into PlayerPositions
+
+!new TrainingSession('training17')
+!training17.date := '2023-11-20'
+!training17.location := 'Viking Fortress'
+!training17.purpose := 'Tactical Practice'
+!insert (team17, training17) into TeamTraining
+
+!new TrainingSession('training18')
+!training18.date := '2023-11-21'
+!training18.location := 'Royal Fields'
+!training18.purpose := 'Endurance Training'
+!insert (team18, training18) into TeamTraining
+
+!new TrainingNotes('trainingNotes17')
+!trainingNotes17.note := 'Focused on strategic positioning and passing'
+!trainingNotes17.date := '2023-11-20'
+!insert (training17, trainingNotes17) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes18')
+!trainingNotes18.note := 'Included high-intensity interval runs'
+!trainingNotes18.date := '2023-11-21'
+!insert (training18, trainingNotes18) into TrainingTrainingNotes
+
+!new TrainingObjective('objective25')
+!objective25.areaToImprove := 'Vision on the Field'
+!objective25.startDate := '2023-10-01'
+!objective25.endDate := '2023-12-01'
+!objective25.success := true
+!insert (objective25, player25) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective26')
+!objective26.areaToImprove := 'Marking Technique'
+!objective26.startDate := '2023-09-15'
+!objective26.endDate := '2023-11-15'
+!objective26.success := false
+!insert (objective26, player26) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective27')
+!objective27.areaToImprove := 'Dribbling Skills'
+!objective27.startDate := '2023-08-10'
+!objective27.endDate := '2023-10-10'
+!objective27.success := true
+!insert (objective27, player27) into TrainingObjectivePlayer
+
+!new Competition('competition9')
+!competition9.name := 'Premier Tournament'
+!competition9.type := 'Elimination Round'
+
+!new Match('match9')
+!match9.date := '2023-12-10'
+!match9.homeAway := true
+!insert (competition9, match9) into CompetitionMatch
+!insert (team17, match9) into LocalMatch
+!insert (team18, match9) into VisitorMatch
+
+!new MatchReport('report9')
+!report9.duration := 90
+!report9.scoreVisitor := 0
+!report9.scoreLocal := 2
+!insert (match9, report9) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer25')
+!matchPlayer25.booked := false
+!matchPlayer25.goals := 1
+!matchPlayer25.rating := 9
+!insert (player25, matchPlayer25) into PlayerMatch
+!insert (match9, matchPlayer25) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer26')
+!matchPlayer26.booked := false
+!matchPlayer26.goals := 0
+!matchPlayer26.rating := 8
+!insert (player26, matchPlayer26) into PlayerMatch
+!insert (match9, matchPlayer26) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition25')
+!matchPlayerPosition25.positionName := #FORWARD
+!matchPlayerPosition25.number := 11
+!insert (matchPlayer25, matchPlayerPosition25) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition26')
+!matchPlayerPosition26.positionName := #DEFENDER
+!matchPlayerPosition26.number := 5
+!insert (matchPlayer26, matchPlayerPosition26) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event34')
+!event34.eventType := #GOAL
+!event34.time := 12
+!insert (match9, event34) into MatchMatchEvent
+
+!new MatchEvent('event35')
+!event35.eventType := #GOAL
+!event35.time := 77
+!insert (match9, event35) into MatchMatchEvent
+
+!new MatchNote('matchNote9')
+!matchNote9.note := 'Viking Raiders displayed excellent defensive and offensive balance'
+!matchNote9.date := '2023-12-10'
+!insert (match9, matchNote9) into MatchMatchNote

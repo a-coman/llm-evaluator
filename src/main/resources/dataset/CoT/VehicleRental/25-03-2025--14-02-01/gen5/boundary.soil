@@ -1,0 +1,83 @@
+!new RentalOffice('rentalOffice26')
+!rentalOffice26.name := 'Alpine Rentals & Logistics'
+!rentalOffice26.number := 107
+!rentalOffice26.address := '123 Summit Peaks Road, Denver, CO 80202'
+
+!new Truck('truck24')
+!truck24.id := 51
+!truck24.registrationState := #CO
+!truck24.licensePlateNumber := 'ARLCO777'
+!truck24.vehicleTypeCode := #TRUCK
+!truck24.registrationLastMaintenanceDate := Date('2023-09-10')
+!truck24.expirationDate := Date('2024-09-10')
+!truck24.odometerReading := 50
+!truck24.gasTankCapacity := 120.0
+!truck24.workingRadio := false
+!truck24.mileage := 10
+
+!new Vehicle('vehicle26')
+!vehicle26.id := 52
+!vehicle26.registrationState := #CO
+!vehicle26.licensePlateNumber := 'ARLCO888'
+!vehicle26.vehicleTypeCode := #OPEN_TRAILER
+!vehicle26.registrationLastMaintenanceDate := Date('2023-08-15')
+!vehicle26.expirationDate := Date('2025-08-15')
+
+!new Truck('truck25')
+!truck25.id := 53
+!truck25.registrationState := #CO
+!truck25.licensePlateNumber := 'ARLCO999'
+!truck25.vehicleTypeCode := #TRUCK
+!truck25.registrationLastMaintenanceDate := Date('2023-07-20')
+!truck25.expirationDate := Date('2026-07-20')
+!truck25.odometerReading := 999999
+!truck25.gasTankCapacity := 150.0
+!truck25.workingRadio := true
+!truck25.mileage := 7
+
+!new RentalAgreement('rentalAgreement43')
+!rentalAgreement43.number := 5001
+!rentalAgreement43.rentalDate := Date('2023-11-15')
+!rentalAgreement43.anticipatedDuration := 30
+!rentalAgreement43.depositPaid := 400.00
+!rentalAgreement43.quotedDailyRate := 95.00
+!rentalAgreement43.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement44')
+!rentalAgreement44.number := 5002
+!rentalAgreement44.rentalDate := Date('2023-11-22')
+!rentalAgreement44.anticipatedDuration := 2
+!rentalAgreement44.depositPaid := 0.00
+!rentalAgreement44.quotedDailyRate := 0.00
+!rentalAgreement44.quotedRatePerMile := 0.20
+
+!new Individual('individualCustomer20')
+!individualCustomer20.name := 'Jenna Thompson'
+!individualCustomer20.address := '456 Mountain View Way, Boulder, CO 80302'
+!individualCustomer20.poorRisk := false
+!individualCustomer20.homePhone := '(303) 555-1122'
+!individualCustomer20.driverLicenseState := #CO
+!individualCustomer20.driverLicenseNumber := 5100
+!individualCustomer20.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company22')
+!company22.name := 'High Altitude Construction'
+!company22.address := '890 Alpine Drive, Colorado Springs, CO 80903'
+!company22.poorRisk := true
+!company22.idNumber := 320045
+
+!insert (rentalOffice26, truck24) into RentalOfficeVehicle
+!insert (rentalOffice26, vehicle26) into RentalOfficeVehicle
+!insert (rentalOffice26, truck25) into RentalOfficeVehicle
+
+!insert (rentalOffice26, rentalAgreement43) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice26, rentalAgreement43) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement43, truck25) into RentalAgreementVehicle
+!insert (rentalAgreement43, company22) into RentalAgreementCustomer
+
+!insert (rentalOffice26, rentalAgreement44) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice26, rentalAgreement44) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement44, truck24) into RentalAgreementVehicle
+!insert (rentalAgreement44, individualCustomer20) into RentalAgreementCustomer

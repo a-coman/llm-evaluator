@@ -1,0 +1,35 @@
+-- New Client instance
+!new Client('client4')
+!client4.clientId := 4
+!client4.isSuspended := true
+
+-- New Rental instance
+!new Rental('rental3')
+!rental3.date := Date('2023-09-15')
+
+-- New Movie instance with a different genre
+!new Movie('movie3')
+!movie3.title := 'Thrilling Action'
+!movie3.availableCopies := 7
+!movie3.genre := #Action
+
+-- New Series instance with more episodes
+!new Series('series4')
+!series4.title := 'Endless Mystery'
+!series4.availableCopies := 4
+!series4.episode := 10
+
+-- New Actor instance
+!new Actor('actor3')
+!actor3.name := 'Alice Brown'
+
+-- Establishing associations for the new Rental
+!insert (client4, rental3) into ClientRental
+
+-- Establishing associations between rental3 and cassettes
+!insert (rental3, movie3) into RentalCassette
+!insert (rental3, series4) into RentalCassette
+
+-- Establishing association between cassettes and the new actor
+!insert (movie3, actor3) into CassetteActor
+!insert (series4, actor3) into CassetteActor

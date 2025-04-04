@@ -1,0 +1,71 @@
+!new AddressBook('addressBook26')
+
+!new Company('urbanGreenscape')
+!urbanGreenscape.name := 'Urban Greenscape'
+!urbanGreenscape.phone := '888-777-6666'
+!urbanGreenscape.website := 'www.urbangreenscape.com'
+!urbanGreenscape.email := 'info@urbangreenscape.com'
+!urbanGreenscape.industry := 'Landscape Architecture'
+
+!new Person('graceMiller')
+!graceMiller.name := 'Grace Miller'
+!graceMiller.phone := '333-444-5555'
+!graceMiller.website := 'www.gracemillerlandscapes.com'
+!graceMiller.email := 'grace.miller@urbangreenscape.com'
+!graceMiller.title := 'Chief Landscape Architect'
+
+!new Note('projectDesignNote')
+!projectDesignNote.author := 'Grace Miller'
+!projectDesignNote.time := Date('2025-10-04')
+!projectDesignNote.type := #MEETING
+!projectDesignNote.comment := 'Led project design discussions for new urban park developments'
+
+!new Address('graceAddress')
+!graceAddress.city := 'Seattle'
+!graceAddress.houseNr := '234'
+!graceAddress.street := 'Garden Ave'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, urbanGreenscape) into RelationshipToContact
+!insert (graceMiller, employeeRelationship) into ContactToRelationship
+!insert (graceMiller, graceAddress) into ContactContainsAddress
+!insert (graceMiller, projectDesignNote) into ContactContainsNote
+
+!new Person('maxHunter')
+!maxHunter.name := 'Max Hunter'
+!maxHunter.phone := '555-342-1234'
+!maxHunter.website := 'www.maxhunterdesign.com'
+!maxHunter.email := 'max.hunter@example.com'
+!maxHunter.title := 'Horticultural Consultant'
+
+!new Note('plantSelectionNote')
+!plantSelectionNote.author := 'Max Hunter'
+!plantSelectionNote.time := Date('2025-10-15')
+!plantSelectionNote.type := #CALL
+!plantSelectionNote.comment := 'Consulted on plant selection for the community garden project'
+
+!new Address('maxAddress')
+!maxAddress.city := 'Vancouver'
+!maxAddress.houseNr := '678'
+!maxAddress.street := 'Leaf Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, graceMiller) into RelationshipToContact
+!insert (maxHunter, subdivisionRelationship) into ContactToRelationship
+!insert (maxHunter, maxAddress) into ContactContainsAddress
+!insert (maxHunter, plantSelectionNote) into ContactContainsNote
+
+!new Address('urbanGreenscapeAddress')
+!urbanGreenscapeAddress.city := 'Portland'
+!urbanGreenscapeAddress.houseNr := '890'
+!urbanGreenscapeAddress.street := 'Green Pathway'
+
+!insert (urbanGreenscape, urbanGreenscapeAddress) into ContactContainsAddress
+
+!insert (addressBook26, urbanGreenscape) into AddressBookMadeOfContact
+!insert (addressBook26, graceMiller) into AddressBookMadeOfContact
+!insert (addressBook26, maxHunter) into AddressBookMadeOfContact

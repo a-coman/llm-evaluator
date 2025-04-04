@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant14')
+!restaurant14.name := 'Lakeside Dining'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner27')
+!owner27.name := 'Kevin Baker'
+!owner27.percentageShares := 50
+
+!new Owner('owner28')
+!owner28.name := 'Laura Edwards'
+!owner28.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant14, owner27) into RestaurantOwner
+!insert (restaurant14, owner28) into RestaurantOwner
+
+-- Creating diverse tables
+!new Table('table27')
+!table27.number := 1401
+!table27.description := 'Lake View Terrace'
+!table27.capacity := 5
+
+!new Table('table28')
+!table28.number := 1402
+!table28.description := 'Garden Area'
+!table28.capacity := 3
+
+-- Staff setup for the restaurant
+!new HeadWaiter('headwaiter14')
+!headwaiter14.name := 'Jessica Moore'
+!headwaiter14.dateOfBirth := Date('1982-10-05')
+!headwaiter14.phoneNumber := '555-3232'
+
+!new Waiter('waiter18')
+!waiter18.name := 'Ethan Brooks'
+!waiter18.dateOfBirth := Date('1994-06-11')
+!waiter18.phoneNumber := '555-9091'
+!waiter18.spokenLanguage := #Italian
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter14, waiter18) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a corporate lunch
+!new Banquet('reservation14')
+!reservation14.time := Time('13:00')
+!reservation14.date := Date('2024-10-05')
+!reservation14.numberPeople := 8
+!reservation14.name := 'Corporate Luncheon'
+!reservation14.phoneNumber := '555-6565'
+!reservation14.number := 212
+!reservation14.groupName := 'Global Enterprises'
+!reservation14.paymentMethod := #Cash
+!reservation14.busService := false
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant14, reservation14) into RestaurantReservation
+!insert (reservation14, waiter18) into ReservationWaiter
+!insert (reservation14, table27) into ReservationTable
+!insert (reservation14, table28) into ReservationTable
+
+-- Adding a distinguished MenuItem for the corporate lunch
+!new MenuItem('menuItem14')
+!menuItem14.description := 'Mediterranean Platter'
+!menuItem14.prepTime := 30.0
+!menuItem14.classification := #Apetizer
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef14')
+!chef14.name := 'Alice Durand'
+!chef14.dateOfBirth := Date('1978-02-26')
+!chef14.phoneNumber := '555-5858'
+
+!insert (menuItem14, chef14) into MenuItemChef
+
+-- Creating Cook under Chef direction
+!new Cook('cook14')
+!cook14.name := 'Ian Turner'
+!cook14.dateOfBirth := Date('1980-12-15')
+!cook14.phoneNumber := '555-4949'
+!cook14.yearsOfExperience := 18
+
+-- Establishing association between Chef and Cook
+!insert (chef14, cook14) into ChefCook
+
+-- Creating an ItemOrder for the corporate lunch
+!new ItemOrder('order14')
+!order14.time := Time('13:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order14, menuItem14) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation14, order14) into ReservationItemOrdered

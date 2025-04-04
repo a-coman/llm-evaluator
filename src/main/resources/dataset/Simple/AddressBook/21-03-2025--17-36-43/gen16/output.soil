@@ -1,0 +1,71 @@
+!new AddressBook('addressBook16')
+
+!new Company('freshHarvestOrganics')
+!freshHarvestOrganics.name := 'Fresh Harvest Organics'
+!freshHarvestOrganics.phone := '111-222-3333'
+!freshHarvestOrganics.website := 'www.freshharvestorganics.com'
+!freshHarvestOrganics.email := 'info@freshharvest.com'
+!freshHarvestOrganics.industry := 'Organic Farming'
+
+!new Person('ninaReynolds')
+!ninaReynolds.name := 'Nina Reynolds'
+!ninaReynolds.phone := '444-555-6666'
+!ninaReynolds.website := 'www.ninareynoldsorganics.com'
+!ninaReynolds.email := 'nina.reynolds@freshharvest.com'
+!ninaReynolds.title := 'Chief Agricultural Officer'
+
+!new Note('organicCertificationNote')
+!organicCertificationNote.author := 'Nina Reynolds'
+!organicCertificationNote.time := Date('2024-12-05')
+!organicCertificationNote.type := #EMAIL
+!organicCertificationNote.comment := 'Coordinated organic certification process for new produce line'
+
+!new Address('ninaAddress')
+!ninaAddress.city := 'Madison'
+!ninaAddress.houseNr := '100'
+!ninaAddress.street := 'Harvest Lane'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, freshHarvestOrganics) into RelationshipToContact
+!insert (ninaReynolds, bossRelationship) into ContactToRelationship
+!insert (ninaReynolds, ninaAddress) into ContactContainsAddress
+!insert (ninaReynolds, organicCertificationNote) into ContactContainsNote
+
+!new Person('dylanMorris')
+!dylanMorris.name := 'Dylan Morris'
+!dylanMorris.phone := '777-888-9999'
+!dylanMorris.website := 'www.dylanmorrisagriculture.com'
+!dylanMorris.email := 'dylan.morris@example.com'
+!dylanMorris.title := 'Farm Operations Manager'
+
+!new Note('harvestPlanningNote')
+!harvestPlanningNote.author := 'Dylan Morris'
+!harvestPlanningNote.time := Date('2024-12-12')
+!harvestPlanningNote.type := #MEETING
+!harvestPlanningNote.comment := 'Conducted meeting for upcoming harvest planning and logistics'
+
+!new Address('dylanAddress')
+!dylanAddress.city := 'Des Moines'
+!dylanAddress.houseNr := '222'
+!dylanAddress.street := 'Field Road'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, ninaReynolds) into RelationshipToContact
+!insert (dylanMorris, subdivisionRelationship) into ContactToRelationship
+!insert (dylanMorris, dylanAddress) into ContactContainsAddress
+!insert (dylanMorris, harvestPlanningNote) into ContactContainsNote
+
+!new Address('freshHarvestAddress')
+!freshHarvestAddress.city := 'Iowa City'
+!freshHarvestAddress.houseNr := '678'
+!freshHarvestAddress.street := 'Organic Avenue'
+
+!insert (freshHarvestOrganics, freshHarvestAddress) into ContactContainsAddress
+
+!insert (addressBook16, freshHarvestOrganics) into AddressBookMadeOfContact
+!insert (addressBook16, ninaReynolds) into AddressBookMadeOfContact
+!insert (addressBook16, dylanMorris) into AddressBookMadeOfContact

@@ -1,0 +1,141 @@
+!new Restaurant('restaurant25')
+!restaurant25.name := 'Ocean Breeze Bistro'
+
+!new Owner('owner56')
+!owner56.name := 'Emily Collins'
+!owner56.percentageShares := 50
+
+!new Owner('owner57')
+!owner57.name := 'Liam Johnson'
+!owner57.percentageShares := 50
+
+!insert (restaurant25, owner56) into RestaurantOwner
+!insert (restaurant25, owner57) into RestaurantOwner
+
+!new Table('table56')
+!table56.number := 9
+!table56.description := 'Seaside table for enjoying ocean views.'
+!table56.capacity := 2
+
+!new Table('table57')
+!table57.number := 10
+!table57.description := 'Spacious round table under the pergola.'
+!table57.capacity := 8
+
+!new RegularCustomer('customer17')
+!customer17.name := 'Noah Kim'
+!customer17.prefferedLanguage := #English  -- Using #English as placeholder for Korean
+
+!new Waiter('waiter48')
+!waiter48.name := 'Eliza Reed'
+!waiter48.dateOfBirth := Date('1989-05-19')
+!waiter48.phoneNumber := '555-7652'
+
+!new Individual('individualReservation18')
+!individualReservation18.time := Time('17:00')
+!individualReservation18.date := Date('2023-10-20')
+!individualReservation18.numberPeople := 2
+!individualReservation18.name := 'Noah Kim'
+!individualReservation18.phoneNumber := '555-4890'
+!individualReservation18.number := 11006
+!individualReservation18.seating := #Inside  -- Using #Inside as placeholder for Ocean View
+!individualReservation18.smoking := #NonSmoking
+
+!insert (restaurant25, individualReservation18) into RestaurantReservation
+!insert (individualReservation18, table56) into ReservationTable
+!insert (individualReservation18, waiter48) into ReservationWaiter
+
+!insert (individualReservation18, customer17) into ReservationCustomer
+
+!new MenuItem('menuItem40')
+!menuItem40.description := 'Grilled Salmon with Lemon-Herb Sauce'
+!menuItem40.prepTime := 20.0
+!menuItem40.classification := #Main
+
+!new Chef('chef33')
+!chef33.name := 'Oliver Tran'
+!chef33.dateOfBirth := Date('1979-11-08')
+!chef33.phoneNumber := '555-2012'
+
+!new Cook('cook41')
+!cook41.name := 'Hannah Blake'
+!cook41.dateOfBirth := Date('1983-01-15')
+!cook41.phoneNumber := '555-4941'
+!cook41.yearsOfExperience := 8
+
+!insert (menuItem40, chef33) into MenuItemChef
+!insert (chef33, cook41) into ChefCook
+
+!new ItemOrder('itemOrder35')
+!itemOrder35.time := Time('17:15')
+!insert (individualReservation18, itemOrder35) into ReservationItemOrdered
+!insert (itemOrder35, menuItem40) into ItemOrderMenuItem
+
+!new Banquet('banquet22')
+!banquet22.date := Date('2023-10-20')
+!banquet22.time := Time('19:00')
+!banquet22.numberPeople := 7
+!banquet22.name := 'Sunset Yoga Group'
+!banquet22.paymentMethod := #CreditCard
+!banquet22.busService := true
+
+!insert (restaurant25, banquet22) into RestaurantReservation
+!insert (banquet22, table57) into ReservationTable
+
+!new Waiter('waiter49')
+!waiter49.name := 'Mark Stewart'
+!waiter49.dateOfBirth := Date('1991-02-25')
+!waiter49.phoneNumber := '555-6643'
+
+!insert (banquet22, waiter48) into ReservationWaiter
+!insert (banquet22, waiter49) into ReservationWaiter
+
+!new HeadWaiter('headWaiter22')
+!headWaiter22.name := 'Isabella Moore'
+!headWaiter22.dateOfBirth := Date('1977-09-23')
+!headWaiter22.phoneNumber := '555-3372'
+
+!insert (headWaiter22, waiter48) into HeadWaiterWaiter
+!insert (headWaiter22, waiter49) into HeadWaiterWaiter
+
+!new BusDriver('busdriver21')
+!busdriver21.name := 'Tom Gardner'
+!busdriver21.dateOfBirth := Date('1981-08-10')
+!busdriver21.phoneNumber := '555-8365'
+
+!insert (banquet22, busdriver21) into BanquetBusDriver
+
+!new FoodItem('foodItem74')
+!foodItem74.number := 11001
+!foodItem74.description := 'Atlantic salmon fillet'
+!foodItem74.purchaseFlag := true
+!foodItem74.unit := #Kilogram  -- Using a placeholder as the UML definition might need specific enumeration
+
+!new FoodItem('foodItem75')
+!foodItem75.number := 11002
+!foodItem75.description := 'Fresh lemons'
+!foodItem75.purchaseFlag := true
+!foodItem75.unit := #Ounce  -- Using #Ounce as a nuanced placeholder
+
+!new FoodItem('foodItem76')
+!foodItem76.number := 11003
+!foodItem76.description := 'Assorted herbs for seasoning'
+!foodItem76.purchaseFlag := true
+!foodItem76.unit := #Gram
+
+!insert (menuItem40, foodItem74) into MenuItemFoodItem
+!insert (menuItem40, foodItem75) into MenuItemFoodItem
+!insert (menuItem40, foodItem76) into MenuItemFoodItem
+
+!new Allergen('allergen33')
+!allergen33.type := #Lactose  -- Using #Lactose as placeholder for Fish due to lack of specific literals
+
+!insert (foodItem74, allergen33) into FoodItemAllergen
+
+!new DietaryRequirement('dietary11')
+!dietary11.diet := #Vegan  -- Using #Vegan as placeholder for Pescatarian
+
+!new Manager('manager9')
+!manager9.name := 'Sophia Kelly'
+!manager9.dateOfBirth := Date('1975-03-17')
+!manager9.phoneNumber := '555-7461'

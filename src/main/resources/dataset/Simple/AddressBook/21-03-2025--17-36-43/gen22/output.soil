@@ -1,0 +1,71 @@
+!new AddressBook('addressBook22')
+
+!new Company('innovativeCulinaryArts')
+!innovativeCulinaryArts.name := 'Innovative Culinary Arts'
+!innovativeCulinaryArts.phone := '333-222-7890'
+!innovativeCulinaryArts.website := 'www.innovativeculinaryarts.com'
+!innovativeCulinaryArts.email := 'info@culinaryarts.com'
+!innovativeCulinaryArts.industry := 'Culinary Consulting'
+
+!new Person('ameliaTurner')
+!ameliaTurner.name := 'Amelia Turner'
+!ameliaTurner.phone := '444-777-8888'
+!ameliaTurner.website := 'www.ameliaturnercuisine.com'
+!ameliaTurner.email := 'amelia.turner@culinaryarts.com'
+!ameliaTurner.title := 'Culinary Consultant'
+
+!new Note('kitchenInnovationNote')
+!kitchenInnovationNote.author := 'Amelia Turner'
+!kitchenInnovationNote.time := Date('2025-06-08')
+!kitchenInnovationNote.type := #EMAIL
+!kitchenInnovationNote.comment := 'Discussed innovative kitchen layouts with restaurant clients'
+
+!new Address('ameliaAddress')
+!ameliaAddress.city := 'Austin'
+!ameliaAddress.houseNr := '789'
+!ameliaAddress.street := 'Cuisine Court'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, innovativeCulinaryArts) into RelationshipToContact
+!insert (ameliaTurner, employeeRelationship) into ContactToRelationship
+!insert (ameliaTurner, ameliaAddress) into ContactContainsAddress
+!insert (ameliaTurner, kitchenInnovationNote) into ContactContainsNote
+
+!new Person('marcoDiaz')
+!marcoDiaz.name := 'Marco Diaz'
+!marcoDiaz.phone := '555-987-6543'
+!marcoDiaz.website := 'www.marcodiazrecipes.com'
+!marcoDiaz.email := 'marco.diaz@example.com'
+!marcoDiaz.title := 'Menu Developer'
+
+!new Note('summerMenuNote')
+!summerMenuNote.author := 'Marco Diaz'
+!summerMenuNote.time := Date('2025-06-15')
+!summerMenuNote.type := #CALL
+!summerMenuNote.comment := 'Developed and discussed new summer menu items with team'
+
+!new Address('marcoAddress')
+!marcoAddress.city := 'Miami'
+!marcoAddress.houseNr := '357'
+!marcoAddress.street := 'Flavors Ave'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, ameliaTurner) into RelationshipToContact
+!insert (marcoDiaz, subdivisionRelationship) into ContactToRelationship
+!insert (marcoDiaz, marcoAddress) into ContactContainsAddress
+!insert (marcoDiaz, summerMenuNote) into ContactContainsNote
+
+!new Address('culinaryArtsAddress')
+!culinaryArtsAddress.city := 'Portland'
+!culinaryArtsAddress.houseNr := '567'
+!culinaryArtsAddress.street := 'Gastronomy St'
+
+!insert (innovativeCulinaryArts, culinaryArtsAddress) into ContactContainsAddress
+
+!insert (addressBook22, innovativeCulinaryArts) into AddressBookMadeOfContact
+!insert (addressBook22, ameliaTurner) into AddressBookMadeOfContact
+!insert (addressBook22, marcoDiaz) into AddressBookMadeOfContact

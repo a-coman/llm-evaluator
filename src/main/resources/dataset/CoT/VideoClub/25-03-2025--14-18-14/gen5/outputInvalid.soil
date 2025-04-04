@@ -1,0 +1,50 @@
+!new Client('elinaKoivisto')
+!elinaKoivisto.clientId := 188
+!elinaKoivisto.isSuspended := false
+
+!new Client('johanNielsen')
+!johanNielsen.clientId := 189
+!johanNielsen.isSuspended := true
+
+!new Rental('rentalArcticMystery')
+!rentalArcticMystery.date := Date('2023-12-05')
+
+!new Rental('rentalNordicCinema')
+!rentalNordicCinema.date := Date('2023-11-20')
+
+!new Series('cassetteFrozenShadows')
+!cassetteFrozenShadows.title := 'Frozen Shadows: Crime Series'
+!cassetteFrozenShadows.availableCopies := 5
+!cassetteFrozenShadows.episode := 8
+
+!new Movie('cassetteMidsummerLaughs')
+!cassetteMidsummerLaughs.title := 'Midsummer Laughs'
+!cassetteMidsummerLaughs.availableCopies := 0
+!cassetteMidsummerLaughs.genre := #Comedy
+
+!new Series('cassetteNordicNoirMasterpieces')
+!cassetteNordicNoirMasterpieces.title := 'Nordic Noir Masterpieces'
+!cassetteNordicNoirMasterpieces.availableCopies := 3
+!cassetteNordicNoirMasterpieces.episode := 6
+
+!new Actor('actorAliciaVikander')
+!actorAliciaVikander.name := 'Alicia Vikander'
+
+!new Actor('actorPeterStormare')
+!actorPeterStormare.name := 'Peter Stormare'
+
+!new Actor('actorMadsMikkelsen')
+!actorMadsMikkelsen.name := 'Mads Mikkelsen'
+
+!insert (elinaKoivisto, rentalArcticMystery) into ClientRental
+!insert (johanNielsen, rentalNordicCinema) into ClientRental
+
+!insert (rentalArcticMystery, cassetteFrozenShadows) into RentalCassette
+!insert (rentalArcticMystery, cassetteMidsummerLaughs) into RentalCassette
+
+!insert (rentalNordicCinema, cassetteNordicNoirMasterpieces) into RentalCassette
+
+!insert (cassetteFrozenShadows, actorAliciaVikander) into CassetteActor
+!insert (cassetteMidsummerLaughs, actorPeterStormare) into CassetteActor
+!insert (cassetteNordicNoirMasterpieces, actorMadsMikkelsen) into CassetteActor
+

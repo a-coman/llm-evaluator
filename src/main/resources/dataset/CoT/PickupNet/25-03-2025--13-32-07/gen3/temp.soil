@@ -1,0 +1,138 @@
+!new Driver('driver22')
+!driver22.id := 'D-201'
+!driver22.name := 'Takashi Yamamoto'
+
+!new Driver('driver23')
+!driver23.id := 'D-202'
+!driver23.name := 'Harpreet Singh'
+
+!new Driver('driver24')
+!driver24.id := 'D-203'
+!driver24.name := 'Siti Nurhaliza'
+
+!new Customer('customer23')
+!customer23.id := 'C-201'
+!customer23.name := 'Li Wei'
+!customer23.twitterUserName := '@liwei_china'
+
+!new Customer('customer24')
+!customer24.id := 'C-202'
+!customer24.name := 'Kang Min Ho'
+!customer24.twitterUserName := '@minho_k'
+
+!new Customer('customer25')
+!customer25.id := 'C-203'
+!customer25.name := 'Amelia Tan'
+!customer25.twitterUserName := '@ameliatan_sg'
+
+!new Shipment('shipment22')
+!shipment22.id := 'S-3001'
+!shipment22.status := #NEW
+
+!new Address('pickupAddress22')
+!pickupAddress22.text := 'Nanjing Road, Shanghai, China'
+
+!new GeoLocation('pickupGeoLocation22')
+!pickupGeoLocation22.latitude := 31.2304
+!pickupGeoLocation22.longitude := 121.4737
+
+!new Address('deliveryAddress22')
+!deliveryAddress22.text := 'Ginza, Tokyo, Japan'
+
+!new GeoLocation('deliveryGeoLocation22')
+!deliveryGeoLocation22.latitude := 35.6895
+!deliveryGeoLocation22.longitude := 139.6917
+
+!new Shipment('shipment23')
+!shipment23.id := 'S-3002'
+!shipment23.status := #UNDERWAY
+
+!new Address('pickupAddress23')
+!pickupAddress23.text := 'Myeong-dong, Seoul, South Korea'
+
+!new GeoLocation('pickupGeoLocation23')
+!pickupGeoLocation23.latitude := 37.5665
+!pickupGeoLocation23.longitude := 126.9780
+
+!new Address('deliveryAddress23')
+!deliveryAddress23.text := 'Connaught Place, New Delhi, India'
+
+!new GeoLocation('deliveryGeoLocation23')
+!deliveryGeoLocation23.latitude := 28.6139
+!deliveryGeoLocation23.longitude := 77.2090
+
+!new Shipment('shipment24')
+!shipment24.id := 'S-3003'
+!shipment24.status := #DELIVERED
+
+!new Address('pickupAddress24')
+!pickupAddress24.text := 'Bugis Junction, Singapore'
+
+!new GeoLocation('pickupGeoLocation24')
+!pickupGeoLocation24.latitude := 1.3521
+!pickupGeoLocation24.longitude := 103.8198
+
+!new Address('deliveryAddress24')
+!deliveryAddress24.text := 'Pitt Street, Sydney, Australia'
+
+!new GeoLocation('deliveryGeoLocation24')
+!deliveryGeoLocation24.latitude := -33.8688
+!deliveryGeoLocation24.longitude := 151.2093
+
+!new Station('station17')
+
+!new Station('station18')
+
+!new Station('station19')
+
+!insert (shipment22, pickupAddress22) into ShipmentContainsPickUpAddress
+
+!insert (shipment22, deliveryAddress22) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress22, pickupGeoLocation22) into AddressContainsGeoLocation
+
+!insert (deliveryAddress22, deliveryGeoLocation22) into AddressContainsGeoLocation
+
+!insert (customer23, shipment22) into CustomerConsistsOfShipment
+
+!insert (station17, shipment22) into StationShipment
+
+!insert (station17, driver22) into StationContainsDriver
+
+!insert (station17, customer23) into StationContainsCustomer
+
+!insert (driver23, shipment23) into DriverShipment
+
+!insert (shipment23, pickupAddress23) into ShipmentContainsPickUpAddress
+
+!insert (shipment23, deliveryAddress23) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress23, pickupGeoLocation23) into AddressContainsGeoLocation
+
+!insert (deliveryAddress23, deliveryGeoLocation23) into AddressContainsGeoLocation
+
+!insert (customer24, shipment23) into CustomerConsistsOfShipment
+
+!insert (station18, shipment23) into StationShipment
+
+!insert (station18, driver23) into StationContainsDriver
+
+!insert (station18, customer24) into StationContainsCustomer
+
+!insert (driver24, shipment24) into DriverShipment
+
+!insert (shipment24, pickupAddress24) into ShipmentContainsPickUpAddress
+
+!insert (shipment24, deliveryAddress24) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress24, pickupGeoLocation24) into AddressContainsGeoLocation
+
+!insert (deliveryAddress24, deliveryGeoLocation24) into AddressContainsGeoLocation
+
+!insert (customer25, shipment24) into CustomerConsistsOfShipment
+
+!insert (station19, shipment24) into StationShipment
+
+!insert (station19, driver24) into StationContainsDriver
+
+!insert (station19, customer25) into StationContainsCustomer

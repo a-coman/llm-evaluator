@@ -1,0 +1,138 @@
+!new Club('club19')
+!club19.name := 'Western Warriors SC'
+!club19.homeGround := 'Warrior Dome'
+!club19.chairman := 'Liam O''Connor'
+
+!new Team('teamU')
+!teamU.name := 'Warriors First XI'
+
+!insert (club19, teamU) into ClubTeam
+
+!new Player('player19')
+!player19.name := 'Jagjeet Singh'
+!player19.age := 25
+!player19.bestFoot := #RIGHT
+!player19.phoneNumber := '+919876543210'
+
+!insert (teamU, player19) into TeamPlayer
+
+!new Position('position29')
+!position29.positionName := #DEFENDER
+
+!insert (player19, position29) into PlayerPositions
+
+!new PlayerNotes('playerNote14')
+!playerNote14.note := 'Agile with exceptional tackling'
+!playerNote14.date := '2023-02-01'
+
+!insert (player19, playerNote14) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective20')
+!trainingObjective20.areaToImprove := 'Defensive coordination'
+!trainingObjective20.startDate := '2023-03-01'
+!trainingObjective20.endDate := '2023-03-30'
+!trainingObjective20.success := false
+
+!insert (trainingObjective20, player19) into TrainingObjectivePlayer
+
+!new Competition('competition10')
+!competition10.name := 'Interstate Knockout'
+!competition10.type := 'Tournament'
+
+!new Match('match10')
+!match10.date := '2023-07-22'
+!match10.homeAway := true
+
+!insert (competition10, match10) into CompetitionMatch
+
+!new Team('teamV')
+!teamV.name := 'Highland Rangers'
+
+!new Club('club20')
+!club20.name := 'Highland Club'
+!club20.homeGround := 'Highland Stadium'
+!club20.chairman := 'John Highland'
+
+!insert (club20, teamV) into ClubTeam
+
+!new Player('player20')
+!player20.name := 'Alex Cooper'
+!player20.age := 27
+!player20.bestFoot := #LEFT
+!player20.phoneNumber := '+449876543211'
+
+!insert (teamV, player20) into TeamPlayer
+
+!new Position('position30')
+!position30.positionName := #FORWARD
+
+!insert (player20, position30) into PlayerPositions
+
+!new TrainingObjective('trainingObjective21')
+!trainingObjective21.areaToImprove := 'Finishing'
+!trainingObjective21.startDate := '2023-06-01'
+!trainingObjective21.endDate := '2023-07-20'
+!trainingObjective21.success := true
+
+!insert (trainingObjective21, player20) into TrainingObjectivePlayer
+
+!insert (teamU, match10) into LocalMatch
+!insert (teamV, match10) into VisitorMatch
+
+!new MatchReport('matchReport10')
+!matchReport10.duration := 90
+!matchReport10.scoreVisitor := 1
+!matchReport10.scoreLocal := 1
+
+!insert (match10, matchReport10) into MatchMatchReport
+
+!new MatchEvent('matchEvent40')
+!matchEvent40.eventType := #GOAL
+!matchEvent40.time := 45
+
+!new MatchEvent('matchEvent41')
+!matchEvent41.eventType := #GOAL
+!matchEvent41.time := 65
+
+!insert (match10, matchEvent40) into MatchMatchEvent
+!insert (match10, matchEvent41) into MatchMatchEvent
+
+!new MatchPlayer('matchPlayer14')
+!matchPlayer14.booked := false
+!matchPlayer14.goals := 0
+!matchPlayer14.rating := 7
+
+!insert (player19, matchPlayer14) into PlayerMatch
+!insert (match10, matchPlayer14) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition15')
+!matchPlayerPosition15.positionName := #DEFENDER
+!matchPlayerPosition15.number := 5
+
+!insert (matchPlayer14, matchPlayerPosition15) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession17')
+!trainingSession17.date := '2023-07-20'
+!trainingSession17.location := 'Warrior Dome Practice Field'
+!trainingSession17.purpose := 'Match readiness'
+
+!insert (teamU, trainingSession17) into TeamTraining
+
+!new TrainingNotes('trainingNote19')
+!trainingNote19.note := 'Focused on defensive drills'
+!trainingNote19.date := '2023-07-20'
+
+!insert (trainingSession17, trainingNote19) into TrainingTrainingNotes
+
+!new TrainingSession('trainingSession18')
+!trainingSession18.date := '2023-07-21'
+!trainingSession18.location := 'Highland Stadium Training Field'
+!trainingSession18.purpose := 'Preparation for match'
+
+!insert (teamV, trainingSession18) into TeamTraining
+
+!new TrainingNotes('trainingNote20')
+!trainingNote20.note := 'Reviewing set-piece strategies'
+!trainingNote20.date := '2023-07-21'
+
+!insert (trainingSession18, trainingNote20) into TrainingTrainingNotes

@@ -1,0 +1,24 @@
+!new Expense('expense14')
+!expense14.amount := 300.0
+!expense14.startDate := Date('2024-02-01')
+!expense14.endDate := Date('2024-02-28')
+
+!new Currency('currency12')
+!currency12.name := 'Mexican Peso'
+!currency12.abbreviation := 'MXN'
+
+!new Bill('bill23')
+!bill23.amount := 300.0
+!bill23.category := 'Gym Membership'
+!bill23.date := Date('2024-02-05')
+!bill23.paymentMethod := #CREDIT_CARD
+!bill23.status := #DRAFT
+
+!insert (expense14, bill23) into ExpenseContainsBills
+
+!insert (bill23, currency12) into BillCurrency
+
+!new Comment('comment14')
+!comment14.text := 'Annual gym membership payment for February'
+
+!insert (expense14, comment14) into ExpenseComment

@@ -1,0 +1,159 @@
+!new Club('club53')
+!club53.name := 'Panthers FC'
+!club53.homeGround := 'Panther Arena'
+!club53.chairman := 'Mia Carter'
+
+!new Club('club54')
+!club54.name := 'Eagles FC'
+!club54.homeGround := 'Eagle Nest'
+!club54.chairman := 'Oliver Hayes'
+
+!new Team('team53')
+!team53.name := 'Panther Prowlers'
+!insert (club53, team53) into ClubTeam
+
+!new Team('team54')
+!team54.name := 'Eagle Runners'
+!insert (club54, team54) into ClubTeam
+
+!new Player('player79')
+!player79.name := 'Ava Simmons'
+!player79.age := 26
+!player79.bestFoot := #RIGHT
+!player79.phoneNumber := '789-012-3456'
+!insert (team53, player79) into TeamPlayer
+
+!new Player('player80')
+!player80.name := 'James Bennett'
+!player80.age := 27
+!player80.bestFoot := #LEFT
+!player80.phoneNumber := '890-123-4567'
+!insert (team53, player80) into TeamPlayer
+
+!new Player('player81')
+!player81.name := 'Liam Brooks'
+!player81.age := 28
+!player81.bestFoot := #BOTH
+!player81.phoneNumber := '901-234-5678'
+!insert (team54, player81) into TeamPlayer
+
+!new Position('position79')
+!position79.positionName := #DEFENDER
+!insert (player79, position79) into PlayerPositions
+
+!new Position('position80')
+!position80.positionName := #MIDFIELDER
+!insert (player80, position80) into PlayerPositions
+
+!new Position('position81')
+!position81.positionName := #FORWARD
+!insert (player81, position81) into PlayerPositions
+
+!new TrainingSession('training53')
+!training53.date := '2025-02-10'
+!training53.location := 'Panther Grounds'
+!training53.purpose := 'Ball Distribution and Control'
+!insert (team53, training53) into TeamTraining
+
+!new TrainingSession('training54')
+!training54.date := '2025-02-11'
+!training54.location := 'Eagle Flight Zone'
+!training54.purpose := 'Precision Shooting'
+!insert (team54, training54) into TeamTraining
+
+!new TrainingNotes('trainingNotes53')
+!trainingNotes53.note := 'Improved ball control under tight conditions'
+!trainingNotes53.date := '2025-02-10'
+!insert (training53, trainingNotes53) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes54')
+!trainingNotes54.note := 'Focused on accuracy and timing of shots'
+!trainingNotes54.date := '2025-02-11'
+!insert (training54, trainingNotes54) into TrainingTrainingNotes
+
+!new TrainingObjective('objective79')
+!objective79.areaToImprove := 'Passing Accuracy'
+!objective79.startDate := '2024-11-05'
+!objective79.endDate := '2025-02-05'
+!objective79.success := true
+!insert (objective79, player79) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective80')
+!objective80.areaToImprove := 'Midfield Vision'
+!objective80.startDate := '2024-12-01'
+!objective80.endDate := '2025-03-01'
+!objective80.success := false
+!insert (objective80, player80) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective81')
+!objective81.areaToImprove := 'Finishing Techniques'
+!objective81.startDate := '2024-10-20'
+!objective81.endDate := '2025-01-20'
+!objective81.success := true
+!insert (objective81, player81) into TrainingObjectivePlayer
+
+!new Competition('competition27')
+!competition27.name := 'Intercontinental Cup'
+!competition27.type := 'Quarter-Finals'
+
+!new Match('match27')
+!match27.date := '2025-02-25'
+!match27.homeAway := true
+!insert (competition27, match27) into CompetitionMatch
+!insert (team53, match27) into LocalMatch
+!insert (team54, match27) into VisitorMatch
+
+!new MatchReport('report27')
+!report27.duration := 90
+!report27.scoreVisitor := 1
+!report27.scoreLocal := 3
+!insert (match27, report27) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer79')
+!matchPlayer79.booked := false
+!matchPlayer79.goals := 1
+!matchPlayer79.rating := 8
+!insert (player79, matchPlayer79) into PlayerMatch
+!insert (match27, matchPlayer79) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer81')
+!matchPlayer81.booked := true
+!matchPlayer81.goals := 0
+!matchPlayer81.rating := 6
+!insert (player81, matchPlayer81) into PlayerMatch
+!insert (match27, matchPlayer81) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition79')
+!matchPlayerPosition79.positionName := #DEFENDER
+!matchPlayerPosition79.number := 5
+!insert (matchPlayer79, matchPlayerPosition79) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition81')
+!matchPlayerPosition81.positionName := #FORWARD
+!matchPlayerPosition81.number := 7
+!insert (matchPlayer81, matchPlayerPosition81) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event103')
+!event103.eventType := #GOAL
+!event103.time := 17
+!insert (match27, event103) into MatchMatchEvent
+
+!new MatchEvent('event104')
+!event104.eventType := #GOAL
+!event104.time := 36
+!insert (match27, event104) into MatchMatchEvent
+
+!new MatchEvent('event105')
+!event105.eventType := #GOAL
+!event105.time := 60
+!insert (match27, event105) into MatchMatchEvent
+
+!new MatchEvent('event106')
+!event106.eventType := #GOAL
+!event106.time := 82
+!insert (match27, event106) into MatchMatchEvent
+
+!new MatchNote('matchNote27')
+!matchNote27.note := 'Panther Prowlers controlled the match with solid defense and attack'
+!matchNote27.date := '2025-02-25'
+!insert (match27, matchNote27) into MatchMatchNote

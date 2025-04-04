@@ -1,0 +1,175 @@
+!new Club('club54')
+!set club54.name := 'Sprouting Seeds FC'
+!set club54.homeGround := 'Youth Development Park'
+!set club54.chairman := 'Ms. Harriet Gardener'
+
+!new Team('teamBF')
+!set teamBF.name := 'Seeds Youngsters'
+
+!new Team('teamBG')
+!set teamBG.name := 'Budding Stars'
+
+!insert (club54, teamBF) into ClubTeam
+
+!new Club('club55')
+!set club55.name := 'Youth Pioneers'
+!set club55.homeGround := 'Pioneers Arena'
+!set club55.chairman := 'Mr. John Evergreen'
+
+!insert (club55, teamBG) into ClubTeam
+
+!new Player('player62')
+!set player62.name := 'Emma Blossom'
+!set player62.age := 17
+!set player62.bestFoot := #RIGHT
+!set player62.phoneNumber := '+447812345678'
+
+!insert (teamBG, player62) into TeamPlayer
+
+!new Position('position88')
+!set position88.positionName := #MIDFIELDER
+
+!insert (player62, position88) into PlayerPositions
+
+!new TrainingObjective('trainingObjective65')
+!set trainingObjective65.areaToImprove := 'Game Vision'
+!set trainingObjective65.startDate := '2023-02-01'
+!set trainingObjective65.endDate := '2023-04-01'
+!set trainingObjective65.success := true
+
+!insert (trainingObjective65, player62) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession48')
+!set trainingSession48.date := '2023-03-25'
+!set trainingSession48.location := 'Pioneers Training Field'
+!set trainingSession48.purpose := 'Enhanced Ball Control Skills'
+
+!new TrainingNotes('trainingNote51')
+!set trainingNote51.note := 'Focus on ball control routines and vision exercises'
+!set trainingNote51.date := '2023-03-25'
+
+!insert (trainingSession48, trainingNote51) into TrainingTrainingNotes
+
+!insert (teamBG, trainingSession48) into TeamTraining
+
+!new Competition('competition27')
+!set competition27.name := 'Local Youth League'
+!set competition27.type := 'Youth Development'
+
+!new TrainingSession('trainingSession47')
+!set trainingSession47.date := '2023-04-01'
+!set trainingSession47.location := 'Youth Academy Grounds'
+!set trainingSession47.purpose := 'Foundation Skills Enhancement'
+
+!new TrainingNotes('trainingNote49')
+!set trainingNote49.note := 'Introduce basic tactical awareness'
+!set trainingNote49.date := '2023-04-01'
+
+!new TrainingNotes('trainingNote50')
+!set trainingNote50.note := 'Emphasize teamwork and coordination'
+!set trainingNote50.date := '2023-04-01'
+
+!insert (trainingSession47, trainingNote49) into TrainingTrainingNotes
+!insert (trainingSession47, trainingNote50) into TrainingTrainingNotes
+
+!insert (teamBF, trainingSession47) into TeamTraining
+
+!new Player('player61')
+!set player61.name := 'Tommy Sprout'
+!set player61.age := 16
+!set player61.bestFoot := #LEFT
+!set player61.phoneNumber := '+447899001122'
+
+!insert (teamBF, player61) into TeamPlayer
+
+!new PlayerNotes('playerNote41')
+!set playerNote41.note := 'Promising defensive talent with excellent spatial awareness'
+!set playerNote41.date := '2023-03-15'
+
+!insert (player61, playerNote41) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective63')
+!set trainingObjective63.areaToImprove := 'Basic dribbling skills'
+!set trainingObjective63.startDate := '2023-03-01'
+!set trainingObjective63.endDate := '2023-04-01'
+!set trainingObjective63.success := true
+
+!new TrainingObjective('trainingObjective64')
+!set trainingObjective64.areaToImprove := 'Passing accuracy'
+!set trainingObjective64.startDate := '2023-03-15'
+!set trainingObjective64.endDate := '2023-04-15'
+!set trainingObjective64.success := true
+
+!insert (trainingObjective63, player61) into TrainingObjectivePlayer
+!insert (trainingObjective64, player61) into TrainingObjectivePlayer
+
+!new Position('position86')
+!set position86.positionName := #DEFENDER
+
+!new Position('position87')
+!set position87.positionName := #MIDFIELDER
+
+!insert (player61, position86) into PlayerPositions
+!insert (player61, position87) into PlayerPositions
+
+!new Match('match27')
+!set match27.date := '2023-05-15'
+!set match27.homeAway := true
+
+!insert (competition27, match27) into CompetitionMatch
+
+!insert (teamBF, match27) into LocalMatch
+!insert (teamBG, match27) into VisitorMatch
+
+!new MatchReport('matchReport27')
+!set matchReport27.duration := 90
+!set matchReport27.scoreVisitor := 0
+!set matchReport27.scoreLocal := 0
+
+!insert (match27, matchReport27) into MatchMatchReport
+
+!new MatchEvent('matchEvent113')
+!set matchEvent113.eventType := #FOUL
+!set matchEvent113.time := 15
+
+!new MatchEvent('matchEvent114')
+!set matchEvent114.eventType := #SUBSTITUTION
+!set matchEvent114.time := 45
+
+!new MatchEvent('matchEvent115')
+!set matchEvent115.eventType := #FOUL
+!set matchEvent115.time := 70
+
+!new MatchEvent('matchEvent116')
+!set matchEvent116.eventType := #SUBSTITUTION
+!set matchEvent116.time := 80
+
+!new MatchEvent('matchEvent117')
+!set matchEvent117.eventType := #CAUTION
+!set matchEvent117.time := 85
+
+!insert (match27, matchEvent113) into MatchMatchEvent
+!insert (match27, matchEvent114) into MatchMatchEvent
+!insert (match27, matchEvent115) into MatchMatchEvent
+!insert (match27, matchEvent116) into MatchMatchEvent
+!insert (match27, matchEvent117) into MatchMatchEvent
+
+!new MatchNote('matchNote21')
+!set matchNote21.note := 'Strong defensive showing from both sides, reflecting training improvements'
+!set matchNote21.date := '2023-05-15'
+
+!insert (match27, matchNote21) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer37')
+!set matchPlayer37.booked := true
+!set matchPlayer37.goals := 0
+!set matchPlayer37.rating := 8
+
+!insert (player61, matchPlayer37) into PlayerMatch
+!insert (match27, matchPlayer37) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition38')
+!set matchPlayerPosition38.positionName := #DEFENDER
+!set matchPlayerPosition38.number := 3
+
+!insert (matchPlayer37, matchPlayerPosition38) into MatchPlayerMatchPlayerPosition

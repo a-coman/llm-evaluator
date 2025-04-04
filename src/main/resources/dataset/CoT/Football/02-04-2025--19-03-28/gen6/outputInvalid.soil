@@ -1,0 +1,152 @@
+!new Club('club51')
+!set club51.name := 'Rio Rivals'
+!set club51.homeGround := 'Carnival Stadium'
+!set club51.chairman := 'Bianca Costa'
+
+!new Club('club52')
+!set club52.name := 'Lisbon Legends'
+!set club52.homeGround := 'Legend Arena'
+!set club52.chairman := 'Miguel Silva'
+
+!new Club('club53')
+!set club53.name := 'Seville Stars'
+!set club53.homeGround := 'Star Field'
+!set club53.chairman := 'Antonio Ramirez'
+
+!new Team('teamBC')
+!set teamBC.name := 'Rio Samba'
+
+!new Team('teamBD')
+!set teamBD.name := 'Lisbon Royals'
+
+!new Team('teamBE')
+!set teamBE.name := 'Sevilla Suns'
+
+!insert (club51, teamBC) into ClubTeam
+!insert (club52, teamBD) into ClubTeam
+!insert (club53, teamBE) into ClubTeam
+
+!new Player('player59')
+!set player59.name := 'Fabio Ribeiro'
+!set player59.age := 30
+!set player59.bestFoot := #RIGHT
+!set player59.phoneNumber := '+5521998765432'
+
+!new Player('player60')
+!set player60.name := 'Carlos Montoya'
+!set player60.age := 28
+!set player60.bestFoot := #LEFT
+!set player60.phoneNumber := '+34678912345'
+
+!insert (teamBC, player59) into TeamPlayer
+!insert (teamBD, player60) into TeamPlayer
+
+!new Position('position83')
+!set position83.positionName := #MIDFIELDER
+
+!new Position('position84')
+!set position84.positionName := #FORWARD
+
+!new Position('position85')
+!set position85.positionName := #DEFENDER
+
+!insert (player59, position83) into PlayerPositions
+!insert (player59, position84) into PlayerPositions
+!insert (player60, position85) into PlayerPositions
+
+!new Competition('competition26')
+!set competition26.name := 'Iberian Derby Series'
+!set competition26.type := 'Series'
+
+!new Match('match26')
+!set match26.date := '2023-12-15'
+!set match26.homeAway := false
+
+!insert (competition26, match26) into CompetitionMatch
+
+!insert (teamBC, match26) into LocalMatch
+!insert (teamBC, match26) into VisitorMatch
+
+!new MatchReport('matchReport26')
+!set matchReport26.duration := 120
+!set matchReport26.scoreVisitor := 1
+!set matchReport26.scoreLocal := 1
+
+!insert (match26, matchReport26) into MatchMatchReport
+
+!new MatchEvent('matchEvent110')
+!set matchEvent110.eventType := #FOUL
+!set matchEvent110.time := 15
+
+!new MatchEvent('matchEvent111')
+!set matchEvent111.eventType := #FOUL
+!set matchEvent111.time := 60
+
+!new MatchEvent('matchEvent112')
+!set matchEvent112.eventType := #FOUL
+!set matchEvent112.time := 110
+
+!insert (match26, matchEvent110) into MatchMatchEvent
+!insert (match26, matchEvent111) into MatchMatchEvent
+!insert (match26, matchEvent112) into MatchMatchEvent
+
+!new MatchNote('matchNote20')
+!set matchNote20.note := 'An incredible showcase reflecting the rich and vibrant football cultures meeting, with high skill and entertainment.'
+!set matchNote20.date := '2023-12-16'
+
+!insert (match26, matchNote20) into MatchMatchNote
+
+!new TrainingSession('trainingSession45')
+!set trainingSession45.date := '2023-10-05'
+!set trainingSession45.location := 'Carnival Stadium Practice Grounds'
+!set trainingSession45.purpose := 'Integrating diverse football techniques from different cultures'
+
+!insert (teamBC, trainingSession45) into TeamTraining
+
+!new TrainingSession('trainingSession46')
+!set trainingSession46.date := '2023-10-10'
+!set trainingSession46.location := 'Legend Arena Defense Zone'
+!set trainingSession46.purpose := 'Enhancing player coordination in defensive setups'
+
+!insert (teamBD, trainingSession46) into TeamTraining
+
+!new TrainingNotes('trainingNote48')
+!set trainingNote48.note := 'Prioritize blending traditional with innovative techniques.'
+!set trainingNote48.date := '2023-10-06'
+
+!insert (trainingSession45, trainingNote48) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend18')
+!set failedAttend18.reason := 'Family commitment.'
+
+!insert (trainingSession45, failedAttend18) into TrainingFailded
+!insert (failedAttend18, player59) into FailedPlayer
+
+!new TrainingObjective('trainingObjective62')
+!set trainingObjective62.areaToImprove := 'Positional Awareness'
+!set trainingObjective62.startDate := '2023-08-01'
+!set trainingObjective62.endDate := '2023-12-31'
+!set trainingObjective62.success := true
+
+!insert (trainingObjective62, player60) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote40')
+!set playerNote40.note := 'Vital part of team chemistry; offers leadership insight during gameplay.'
+!set playerNote40.date := '2023-09-01'
+
+!insert (player59, playerNote40) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer36')
+!set matchPlayer36.booked := true
+!set matchPlayer36.goals := 0
+!set matchPlayer36.rating := 8
+
+!insert (player60, matchPlayer36) into PlayerMatch
+!insert (match26, matchPlayer36) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition37')
+!set matchPlayerPosition37.positionName := #DEFENDER
+!set matchPlayerPosition37.number := 4
+
+!insert (matchPlayer36, matchPlayerPosition37) into MatchPlayerMatchPlayerPosition
+

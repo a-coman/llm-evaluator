@@ -1,0 +1,67 @@
+!new Client('client200')
+!client200.clientId := 200
+!client200.isSuspended := false
+
+!new Client('client201')
+!client201.clientId := 201
+!client201.isSuspended := false
+
+!new Client('client202')
+!client202.clientId := 202
+!client202.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-15')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-16')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-09-17')
+
+!new Movie('cassetteDirectorsVision')
+!cassetteDirectorsVision.title := 'Director’s Vision'
+!cassetteDirectorsVision.availableCopies := 0
+!cassetteDirectorsVision.genre := #Action
+
+!new Series('cassetteEpicConclusion')
+!cassetteEpicConclusion.title := 'Epic Conclusion'
+!cassetteEpicConclusion.availableCopies := 1
+!cassetteEpicConclusion.episode := 30
+
+!new Movie('cassetteEveningLaughs')
+!cassetteEveningLaughs.title := 'Evening Laughs'
+!cassetteEveningLaughs.availableCopies := 2
+!cassetteEveningLaughs.genre := #Comedy
+
+!new Actor('actorCateBlanchett')
+!actorCateBlanchett.name := 'Cate Blanchett'
+
+!new Actor('actorDenzelWashington')
+!actorDenzelWashington.name := 'Denzel Washington'
+
+!new Actor('actorEmmaWatson')
+!actorEmmaWatson.name := 'Emma Watson'
+
+!new Actor('actorRyanReynolds')
+!actorRyanReynolds.name := 'Ryan Reynolds'
+
+!insert (client200, rental1) into ClientRental
+!insert (client201, rental2) into ClientRental
+!insert (client202, rental3) into ClientRental
+
+!insert (rental1, cassetteDirectorsVision) into RentalCassette
+!insert (rental1, cassetteEpicConclusion) into RentalCassette
+
+!insert (rental2, cassetteEpicConclusion) into RentalCassette
+!insert (rental2, cassetteEveningLaughs) into RentalCassette
+
+!insert (rental3, cassetteDirectorsVision) into RentalCassette
+!insert (rental3, cassetteEveningLaughs) into RentalCassette
+
+!insert (cassetteDirectorsVision, actorCateBlanchett) into CassetteActor
+!insert (cassetteDirectorsVision, actorDenzelWashington) into CassetteActor
+
+!insert (cassetteEpicConclusion, actorEmmaWatson) into CassetteActor
+
+!insert (cassetteEveningLaughs, actorRyanReynolds) into CassetteActor

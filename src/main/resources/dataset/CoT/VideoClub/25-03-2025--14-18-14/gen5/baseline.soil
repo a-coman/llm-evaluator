@@ -1,0 +1,73 @@
+!new Client('client501')
+!client501.clientId := 501
+!client501.isSuspended := false
+
+!new Client('client502')
+!client502.clientId := 502
+!client502.isSuspended := true
+
+!new Client('client503')
+!client503.clientId := 503
+!client503.isSuspended := false
+
+!new Client('client504')
+!client504.clientId := 504
+!client504.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-07-18')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-12-01')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-11-02')
+
+!new Movie('cassetteMediterraneanWhisper')
+!cassetteMediterraneanWhisper.title := 'The Mediterranean Whisper'
+!cassetteMediterraneanWhisper.availableCopies := 4
+!cassetteMediterraneanWhisper.genre := #Comedy
+
+!new Series('cassetteTalesOfTimbuktu')
+!cassetteTalesOfTimbuktu.title := 'Tales of Timbuktu'
+!cassetteTalesOfTimbuktu.availableCopies := 2
+!cassetteTalesOfTimbuktu.episode := 4
+
+!new Movie('cassetteNorthernLights')
+!cassetteNorthernLights.title := 'Through the Northern Lights'
+!cassetteNorthernLights.availableCopies := 0
+!cassetteNorthernLights.genre := #Action
+
+!new Series('cassetteDigitalDreamscapes')
+!cassetteDigitalDreamscapes.title := 'Digital Dreamscapes'
+!cassetteDigitalDreamscapes.availableCopies := 1
+!cassetteDigitalDreamscapes.episode := 7
+
+!new Actor('actorSophiaValdez')
+!actorSophiaValdez.name := 'Sophia Valdez'
+
+!new Actor('actorMaliKeita')
+!actorMaliKeita.name := 'Mali Keita'
+
+!new Actor('actorNinaKoulibaly')
+!actorNinaKoulibaly.name := 'Nina Koulibaly'
+
+!new Actor('actorErikNyman')
+!actorErikNyman.name := 'Erik Nyman'
+
+!new Actor('actorLianChen')
+!actorLianChen.name := 'Lian Chen'
+
+!insert (client501, rental1) into ClientRental
+!insert (client503, rental2) into ClientRental
+!insert (client504, rental3) into ClientRental
+
+!insert (rental1, cassetteMediterraneanWhisper) into RentalCassette
+!insert (rental2, cassetteTalesOfTimbuktu) into RentalCassette
+!insert (rental3, cassetteNorthernLights) into RentalCassette
+
+!insert (cassetteMediterraneanWhisper, actorSophiaValdez) into CassetteActor
+!insert (cassetteTalesOfTimbuktu, actorMaliKeita) into CassetteActor
+!insert (cassetteTalesOfTimbuktu, actorNinaKoulibaly) into CassetteActor
+!insert (cassetteNorthernLights, actorErikNyman) into CassetteActor
+!insert (cassetteDigitalDreamscapes, actorLianChen) into CassetteActor

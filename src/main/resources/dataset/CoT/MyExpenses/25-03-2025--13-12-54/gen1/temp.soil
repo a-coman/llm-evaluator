@@ -1,0 +1,69 @@
+!new Currency('usDollar')
+!usDollar.name := 'US Dollar'
+!usDollar.abbreviation := 'USD'
+
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!new Currency('bitcoin')
+!bitcoin.name := 'Bitcoin'
+!bitcoin.abbreviation := 'BTC'
+
+!new Bill('internationalFlights')
+!internationalFlights.amount := 6000.00
+!internationalFlights.category := 'International Flights'
+!internationalFlights.date := Date('2023-01-01')
+!internationalFlights.paymentMethod := #CREDIT_CARD
+!internationalFlights.status := #VERIFIED
+
+!new Bill('hotelAccommodationsTokyo')
+!hotelAccommodationsTokyo.amount := 850000.00
+!hotelAccommodationsTokyo.category := 'Hotel Accommodations - Tokyo'
+!hotelAccommodationsTokyo.date := Date('2023-01-01')
+!hotelAccommodationsTokyo.paymentMethod := #CHECK
+!hotelAccommodationsTokyo.status := #VERIFIED
+
+!new Bill('luxuryDining')
+!luxuryDining.amount := 12000.00
+!luxuryDining.category := 'Luxury Dining'
+!luxuryDining.date := Date('2023-01-01')
+!luxuryDining.paymentMethod := #CASH
+!luxuryDining.status := #REFUNDED
+
+!new Bill('travelInsurance')
+!travelInsurance.amount := 1.50
+!travelInsurance.category := 'Travel Insurance'
+!travelInsurance.date := Date('2023-01-01')
+!travelInsurance.paymentMethod := #CREDIT_CARD
+!travelInsurance.status := #VERIFIED
+
+!insert (internationalFlights, usDollar) into BillCurrency
+!insert (hotelAccommodationsTokyo, japaneseYen) into BillCurrency
+!insert (luxuryDining, usDollar) into BillCurrency
+!insert (travelInsurance, bitcoin) into BillCurrency
+
+!new Comment('comment1')
+!comment1.text := 'Considerable expense due to unforeseen travel disruptions.'
+
+!new Comment('comment2')
+!comment2.text := 'Refund processed after itinerary adjustments.'
+
+!new Comment('comment3')
+!comment3.text := 'High expenses justified by strategic investment opportunities.'
+
+!new Expense('corporateTravelExpense')
+-- Assuming conversions and correct sum in USD
+!corporateTravelExpense.amount := 182001.50
+
+!corporateTravelExpense.startDate := Date('2023-01-01')
+!corporateTravelExpense.endDate := Date('2023-12-31')
+
+!insert (corporateTravelExpense, internationalFlights) into ExpenseContainsBills
+!insert (corporateTravelExpense, hotelAccommodationsTokyo) into ExpenseContainsBills
+!insert (corporateTravelExpense, luxuryDining) into ExpenseContainsBills
+!insert (corporateTravelExpense, travelInsurance) into ExpenseContainsBills
+
+!insert (corporateTravelExpense, comment1) into ExpenseComment
+!insert (corporateTravelExpense, comment2) into ExpenseComment
+!insert (corporateTravelExpense, comment3) into ExpenseComment

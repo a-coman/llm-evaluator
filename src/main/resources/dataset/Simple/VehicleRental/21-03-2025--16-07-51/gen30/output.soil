@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice32')
+!rentalOffice32.name := 'Lone Star Rentals'
+!rentalOffice32.number := 132
+!rentalOffice32.address := '321 Lone Star Rd, Austin, TX'
+
+!new Truck('truck18')
+!truck18.id := 31
+!truck18.registrationState := #CO
+!truck18.licensePlateNumber := 'TX1212'
+!truck18.vehicleTypeCode := #TRUCK10
+!truck18.registrationLastMaintenanceDate := Date('2023-10-10')
+!truck18.expirationDate := Date('2024-10-10')
+!truck18.odometerReading := 32000
+!truck18.gasTankCapacity := 160.0
+!truck18.workingRadio := true
+!truck18.mileage := 19
+
+!new Company('companyCustomer15')
+!companyCustomer15.name := 'Texas Transport Co.'
+!companyCustomer15.address := '202 Longhorn Dr, Austin, TX'
+!companyCustomer15.poorRisk := false
+!companyCustomer15.idNumber := 16015
+
+!new RentalAgreement('rentalAgreement31')
+!rentalAgreement31.number := 531
+!rentalAgreement31.rentalDate := Date('2023-12-22')
+!rentalAgreement31.anticipatedDuration := 6
+!rentalAgreement31.depositPaid := 220.0
+!rentalAgreement31.quotedDailyRate := 48.0
+!rentalAgreement31.quotedRatePerMile := 0.35
+
+!insert (rentalOffice32, truck18) into RentalOfficeVehicle
+!insert (rentalOffice32, rentalAgreement31) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice32, rentalAgreement31) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement31, truck18) into RentalAgreementVehicle
+!insert (rentalAgreement31, companyCustomer15) into RentalAgreementCustomer

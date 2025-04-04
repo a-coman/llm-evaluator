@@ -1,0 +1,52 @@
+!new RentalOffice('rentalOffice10')
+!rentalOffice10.name := 'Interstate Vehicle Hire'
+!rentalOffice10.number := 205
+!rentalOffice10.address := '123 Highway Blvd, Flagstaff, AZ'
+
+!new Vehicle('vehicle10')
+!vehicle10.id := 18
+!vehicle10.registrationState := #AZ
+!vehicle10.licensePlateNumber := 'FLEET10'
+!vehicle10.vehicleTypeCode := #TRUCK
+!vehicle10.registrationLastMaintenanceDate := Date('2023-07-20')
+!vehicle10.expirationDate := Date('2024-05-20')
+
+!new Vehicle('vehicle11')
+!vehicle11.id := 19
+!vehicle11.registrationState := #AZ
+!vehicle11.licensePlateNumber := 'FLEET11'
+!vehicle11.vehicleTypeCode := #TRUCK
+!vehicle11.registrationLastMaintenanceDate := Date('2023-09-15')
+!vehicle11.expirationDate := Date('2024-06-15')
+
+!new RentalAgreement('rentalAgreement14')
+!rentalAgreement14.number := 3010
+!rentalAgreement14.rentalDate := Date('2023-11-01')
+!rentalAgreement14.anticipatedDuration := 60
+!rentalAgreement14.depositPaid := 8000.00
+!rentalAgreement14.quotedDailyRate := 150.00
+!rentalAgreement14.quotedRatePerMile := 0.20
+
+!new Company('company7')
+!company7.name := 'Southwest Logistics Ltd.'
+!company7.address := '345 Transport Rd, Phoenix, AZ'
+!company7.poorRisk := false
+!company7.idNumber := 234
+
+!new Company('company8')
+!company8.name := 'Desert Transport Co.'
+!company8.address := '678 Freight Ave, Las Vegas, NV'
+!company8.poorRisk := false
+!company8.idNumber := 567
+
+!insert (rentalOffice10, vehicle10) into RentalOfficeVehicle
+!insert (rentalOffice10, vehicle11) into RentalOfficeVehicle
+
+!insert (rentalOffice10, rentalAgreement14) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice10, rentalAgreement14) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement14, vehicle10) into RentalAgreementVehicle
+
+!insert (rentalAgreement14, company7) into RentalAgreementCustomer
+!insert (rentalAgreement14, company8) into RentalAgreementCustomer
+

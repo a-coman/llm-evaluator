@@ -1,0 +1,33 @@
+!new Expense('expense29')
+!expense29.amount := 670.0
+!expense29.startDate := Date('2025-05-01')
+!expense29.endDate := Date('2025-05-31')
+
+!new Currency('currency27')
+!currency27.name := 'Malaysian Ringgit'
+!currency27.abbreviation := 'MYR'
+
+!new Bill('bill52')
+!bill52.amount := 270.0
+!bill52.category := 'Sports Equipment'
+!bill52.date := Date('2025-05-07')
+!bill52.paymentMethod := #CREDIT_CARD
+!bill52.status := #VALIDATED
+
+!new Bill('bill53')
+!bill53.amount := 400.0
+!bill53.category := 'Music Lessons'
+!bill53.date := Date('2025-05-14')
+!bill53.paymentMethod := #CASH
+!bill53.status := #PENDING
+
+!insert (expense29, bill52) into ExpenseContainsBills
+!insert (expense29, bill53) into ExpenseContainsBills
+
+!insert (bill52, currency27) into BillCurrency
+!insert (bill53, currency27) into BillCurrency
+
+!new Comment('comment29')
+!comment29.text := 'May expenses for sports equipment and music lessons'
+
+!insert (expense29, comment29) into ExpenseComment

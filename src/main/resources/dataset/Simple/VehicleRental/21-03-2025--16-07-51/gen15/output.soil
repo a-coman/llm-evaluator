@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice17')
+!rentalOffice17.name := 'Lakeside Rentals'
+!rentalOffice17.number := 117
+!rentalOffice17.address := '789 Lakeview Blvd, Chicago, IL'
+
+!new Truck('truck10')
+!truck10.id := 16
+!truck10.registrationState := #CA
+!truck10.licensePlateNumber := 'IL6666'
+!truck10.vehicleTypeCode := #TRUCK
+!truck10.registrationLastMaintenanceDate := Date('2023-04-22')
+!truck10.expirationDate := Date('2024-04-22')
+!truck10.odometerReading := 22000
+!truck10.gasTankCapacity := 170.0
+!truck10.workingRadio := true
+!truck10.mileage := 16
+
+!new Individual('individualCustomer9')
+!individualCustomer9.name := 'Megan Lee'
+!individualCustomer9.address := '321 River Rd, Chicago, IL'
+!individualCustomer9.poorRisk := false
+!individualCustomer9.homePhone := '555-4455'
+!individualCustomer9.driverLicenseState := #CA
+!individualCustomer9.driverLicenseNumber := 6677889
+!individualCustomer9.driverLicenseExpirationDate := Date('2026-05-25')
+
+!new RentalAgreement('rentalAgreement16')
+!rentalAgreement16.number := 516
+!rentalAgreement16.rentalDate := Date('2023-12-05')
+!rentalAgreement16.anticipatedDuration := 9
+!rentalAgreement16.depositPaid := 300.0
+!rentalAgreement16.quotedDailyRate := 40.0
+!rentalAgreement16.quotedRatePerMile := 0.3
+
+!insert (rentalOffice17, truck10) into RentalOfficeVehicle
+!insert (rentalOffice17, rentalAgreement16) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice17, rentalAgreement16) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement16, truck10) into RentalAgreementVehicle
+!insert (rentalAgreement16, individualCustomer9) into RentalAgreementCustomer

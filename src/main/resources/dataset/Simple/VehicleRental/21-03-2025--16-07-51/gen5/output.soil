@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice7')
+!rentalOffice7.name := 'Downtown Express Rentals'
+!rentalOffice7.number := 107
+!rentalOffice7.address := '444 Business St, Denver, CO'
+
+!new Truck('truck4')
+!truck4.id := 6
+!truck4.registrationState := #CO
+!truck4.licensePlateNumber := 'CO5678'
+!truck4.vehicleTypeCode := #TRUCK24
+!truck4.registrationLastMaintenanceDate := Date('2023-09-01')
+!truck4.expirationDate := Date('2024-09-01')
+!truck4.odometerReading := 5000
+!truck4.gasTankCapacity := 180.0
+!truck4.workingRadio := true
+!truck4.mileage := 12
+
+!new Individual('individualCustomer4')
+!individualCustomer4.name := 'Bob Brown'
+!individualCustomer4.address := '321 City Rd, Denver, CO'
+!individualCustomer4.poorRisk := false
+!individualCustomer4.homePhone := '555-8765'
+!individualCustomer4.driverLicenseState := #CO
+!individualCustomer4.driverLicenseNumber := 4567890
+!individualCustomer4.driverLicenseExpirationDate := Date('2026-07-14')
+
+!new RentalAgreement('rentalAgreement6')
+!rentalAgreement6.number := 506
+!rentalAgreement6.rentalDate := Date('2023-11-01')
+!rentalAgreement6.anticipatedDuration := 5
+!rentalAgreement6.depositPaid := 75.0
+!rentalAgreement6.quotedDailyRate := 65.0
+!rentalAgreement6.quotedRatePerMile := 0.45
+
+!insert (rentalOffice7, truck4) into RentalOfficeVehicle
+!insert (rentalOffice7, rentalAgreement6) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice7, rentalAgreement6) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement6, truck4) into RentalAgreementVehicle
+!insert (rentalAgreement6, individualCustomer4) into RentalAgreementCustomer

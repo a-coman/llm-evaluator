@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant19')
+!restaurant19.name := 'Bohemian Bites'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner37')
+!owner37.name := 'Eliza Martinez'
+!owner37.percentageShares := 50
+
+!new Owner('owner38')
+!owner38.name := 'David Liu'
+!owner38.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant19, owner37) into RestaurantOwner
+!insert (restaurant19, owner38) into RestaurantOwner
+
+-- Creating tables with artistic styles
+!new Table('table37')
+!table37.number := 1901
+!table37.description := 'Art Deco Table'
+!table37.capacity := 3
+
+!new Table('table38')
+!table38.number := 1902
+!table38.description := 'Rustic Charm'
+!table38.capacity := 5
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter19')
+!headwaiter19.name := 'Francis Scott'
+!headwaiter19.dateOfBirth := Date('1981-12-11')
+!headwaiter19.phoneNumber := '555-6767'
+
+!new Waiter('waiter23')
+!waiter23.name := 'Emily Nguyen'
+!waiter23.dateOfBirth := Date('1990-11-30')
+!waiter23.phoneNumber := '555-9898'
+!waiter23.spokenLanguage := #Italian
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter19, waiter23) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a book club gathering
+!new Individual('reservation19')
+!reservation19.time := Time('16:00')
+!reservation19.date := Date('2024-10-05')
+!reservation19.numberPeople := 5
+!reservation19.name := 'Book Club Gathering'
+!reservation19.phoneNumber := '555-4242'
+!reservation19.number := 217
+!reservation19.seating := #Inside
+!reservation19.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant19, reservation19) into RestaurantReservation
+!insert (reservation19, waiter23) into ReservationWaiter
+!insert (reservation19, table37) into ReservationTable
+!insert (reservation19, table38) into ReservationTable
+
+-- Adding a unique MenuItem for a tea time
+!new MenuItem('menuItem19')
+!menuItem19.description := 'Gourmet Cheese Plate'
+!menuItem19.prepTime := 15.0
+!menuItem19.classification := #Apetizer
+
+-- Associating MenuItem with a talented Chef
+!new Chef('chef19')
+!chef19.name := 'Sophia Laurent'
+!chef19.dateOfBirth := Date('1979-08-21')
+!chef19.phoneNumber := '555-6565'
+
+!insert (menuItem19, chef19) into MenuItemChef
+
+-- Creating Cook under the guidance of Chef
+!new Cook('cook19')
+!cook19.name := 'Mark Bennett'
+!cook19.dateOfBirth := Date('1985-01-17')
+!cook19.phoneNumber := '555-7272'
+!cook19.yearsOfExperience := 12
+
+-- Establishing association between Chef and Cook
+!insert (chef19, cook19) into ChefCook
+
+-- Creating an ItemOrder for the book club
+!new ItemOrder('order19')
+!order19.time := Time('16:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order19, menuItem19) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation19, order19) into ReservationItemOrdered

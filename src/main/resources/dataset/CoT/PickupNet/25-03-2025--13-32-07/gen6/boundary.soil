@@ -1,0 +1,59 @@
+!new Driver('driver42')
+!driver42.id := 'DRV012'
+!driver42.name := 'Elena Popov'
+
+!new Driver('driver43')
+!driver43.id := 'DRV013'
+!driver43.name := 'Samir Hassan'
+
+!new Shipment('shipment43')
+!shipment43.id := 'SHIP010'
+!shipment43.status := #NEW
+
+!new Address('pickupAddress43')
+!pickupAddress43.text := 'Stroget 35, Malmö, Sweden'
+
+!new GeoLocation('pickupGeoLocation43')
+!pickupGeoLocation43.latitude := 55.6050
+!pickupGeoLocation43.longitude := 13.0038
+
+!new Address('deliveryAddress43')
+!deliveryAddress43.text := 'Piazza del Duomo, Milan, Italy'
+
+!new GeoLocation('deliveryGeoLocation43')
+!deliveryGeoLocation43.latitude := 45.4642
+!deliveryGeoLocation43.longitude := 9.1900
+
+!new Station('station30')
+
+!new Customer('customer43')
+!customer43.id := 'CUST010'
+!customer43.name := 'Giovanni Bellini'
+!customer43.twitterUserName := '@giovanniart'
+
+!new Customer('customer44')
+!customer44.id := 'CUST011'
+!customer44.name := 'Amina Ngugi'
+!customer44.twitterUserName := '@aminan'
+
+!insert (driver42, shipment43) into DriverShipment
+
+!insert (shipment43, pickupAddress43) into ShipmentContainsPickUpAddress
+
+!insert (shipment43, deliveryAddress43) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress43, pickupGeoLocation43) into AddressContainsGeoLocation
+
+!insert (deliveryAddress43, deliveryGeoLocation43) into AddressContainsGeoLocation
+
+!insert (customer43, shipment43) into CustomerConsistsOfShipment
+
+!insert (station30, customer43) into StationContainsCustomer
+
+!insert (station30, customer44) into StationContainsCustomer
+
+!insert (station30, shipment43) into StationShipment
+
+!insert (station30, driver42) into StationContainsDriver
+
+!insert (station30, driver43) into StationContainsDriver

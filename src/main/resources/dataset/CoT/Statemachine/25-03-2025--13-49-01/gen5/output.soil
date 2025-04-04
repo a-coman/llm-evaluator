@@ -1,0 +1,446 @@
+!new StateMachine('cinematicLightControl')
+!cinematicLightControl.name := 'cinematicLightControl'
+
+!new State('lightsOff')
+!lightsOff.name := 'lightsOff'
+
+!new State('introductionScene')
+!introductionScene.name := 'introductionScene'
+
+!new State('actionScene')
+!actionScene.name := 'actionScene'
+
+!new State('romanticScene')
+!romanticScene.name := 'romanticScene'
+
+!new State('intermission')
+!intermission.name := 'intermission'
+
+!new Transition('beginIntroScene')
+!beginIntroScene.name := 'beginIntroScene'
+
+!new Transition('switchToAction')
+!switchToAction.name := 'switchToAction'
+
+!new Transition('switchToRomantic')
+!switchToRomantic.name := 'switchToRomantic'
+
+!new Transition('startIntermissionFromAction')
+!startIntermissionFromAction.name := 'startIntermission'
+
+!new Transition('startIntermissionFromRomantic')
+!startIntermissionFromRomantic.name := 'startIntermission'
+
+!new Transition('resumeFromIntermission')
+!resumeFromIntermission.name := 'resumeFromIntermission'
+
+!new TimeEvent('timeEventBeginIntroScene')
+!timeEventBeginIntroScene.time := 5
+
+!new TimeEvent('timeEventSwitchToAction')
+!timeEventSwitchToAction.time := 10
+
+!new TimeEvent('timeEventSwitchToRomantic')
+!timeEventSwitchToRomantic.time := 7
+
+!new TimeEvent('timeEventStartIntermissionFromAction')
+!timeEventStartIntermissionFromAction.time := 20
+
+!new TimeEvent('timeEventStartIntermissionFromRomantic')
+!timeEventStartIntermissionFromRomantic.time := 20
+
+!new TimeEvent('timeEventResumeFromIntermission')
+!timeEventResumeFromIntermission.time := 15
+
+!insert (cinematicLightControl, lightsOff) into StateMachineContainsStates
+!insert (cinematicLightControl, introductionScene) into StateMachineContainsStates
+!insert (cinematicLightControl, actionScene) into StateMachineContainsStates
+!insert (cinematicLightControl, romanticScene) into StateMachineContainsStates
+!insert (cinematicLightControl, intermission) into StateMachineContainsStates
+
+!insert (cinematicLightControl, lightsOff) into StateMachineStartsStates
+
+!insert (cinematicLightControl, beginIntroScene) into StateMachineContainsTransitions
+!insert (cinematicLightControl, switchToAction) into StateMachineContainsTransitions
+!insert (cinematicLightControl, switchToRomantic) into StateMachineContainsTransitions
+!insert (cinematicLightControl, startIntermissionFromAction) into StateMachineContainsTransitions
+!insert (cinematicLightControl, startIntermissionFromRomantic) into StateMachineContainsTransitions
+!insert (cinematicLightControl, resumeFromIntermission) into StateMachineContainsTransitions
+
+!insert (beginIntroScene, timeEventBeginIntroScene) into TransitionContainsEvents
+!insert (switchToAction, timeEventSwitchToAction) into TransitionContainsEvents
+!insert (switchToRomantic, timeEventSwitchToRomantic) into TransitionContainsEvents
+!insert (startIntermissionFromAction, timeEventStartIntermissionFromAction) into TransitionContainsEvents
+!insert (startIntermissionFromRomantic, timeEventStartIntermissionFromRomantic) into TransitionContainsEvents
+!insert (resumeFromIntermission, timeEventResumeFromIntermission) into TransitionContainsEvents
+
+!insert (lightsOff, beginIntroScene) into StateTransition
+!insert (beginIntroScene, introductionScene) into TransitionState
+
+!insert (introductionScene, switchToAction) into StateTransition
+!insert (switchToAction, actionScene) into TransitionState
+
+!insert (actionScene, switchToRomantic) into StateTransition
+!insert (switchToRomantic, romanticScene) into TransitionState
+
+!insert (actionScene, startIntermissionFromAction) into StateTransition
+!insert (startIntermissionFromAction, intermission) into TransitionState
+
+!insert (romanticScene, startIntermissionFromRomantic) into StateTransition
+!insert (startIntermissionFromRomantic, intermission) into TransitionState
+
+!insert (intermission, resumeFromIntermission) into StateTransition
+!insert (resumeFromIntermission, introductionScene) into TransitionState
+
+!new StateMachine('airQualityControl')
+!airQualityControl.name := 'airQualityControl'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('sensing')
+!sensing.name := 'sensing'
+
+!new State('analyzing')
+!analyzing.name := 'analyzing'
+
+!new State('alert')
+!alert.name := 'alert'
+
+!new State('reporting')
+!reporting.name := 'reporting'
+
+!new Transition('standbyToSensing')
+!standbyToSensing.name := 'standbyToSensing'
+
+!new Transition('sensingToAnalyzing')
+!sensingToAnalyzing.name := 'sensingToAnalyzing'
+
+!new Transition('analyzingToAlert')
+!analyzingToAlert.name := 'analyzingToAlert'
+
+!new Transition('alertToReporting')
+!alertToReporting.name := 'alertToReporting'
+
+!new Transition('analyzingToReporting')
+!analyzingToReporting.name := 'analyzingToReporting'
+
+!new TimeEvent('timeEventStandbyToSensing')
+!timeEventStandbyToSensing.time := 60
+
+!new TimeEvent('timeEventSensingToAnalyzing')
+!timeEventSensingToAnalyzing.time := 60
+
+!new TimeEvent('timeEventAnalyzingToAlert')
+!timeEventAnalyzingToAlert.time := 15
+
+!new TimeEvent('timeEventAnalyzingToReporting')
+!timeEventAnalyzingToReporting.time := 15
+
+!new TimeEvent('timeEventAlertToReporting')
+!timeEventAlertToReporting.time := 10
+
+!insert (airQualityControl, standby) into StateMachineContainsStates
+!insert (airQualityControl, sensing) into StateMachineContainsStates
+!insert (airQualityControl, analyzing) into StateMachineContainsStates
+!insert (airQualityControl, alert) into StateMachineContainsStates
+!insert (airQualityControl, reporting) into StateMachineContainsStates
+
+!insert (airQualityControl, standby) into StateMachineStartsStates
+
+!insert (airQualityControl, standbyToSensing) into StateMachineContainsTransitions
+!insert (airQualityControl, sensingToAnalyzing) into StateMachineContainsTransitions
+!insert (airQualityControl, analyzingToAlert) into StateMachineContainsTransitions
+!insert (airQualityControl, alertToReporting) into StateMachineContainsTransitions
+!insert (airQualityControl, analyzingToReporting) into StateMachineContainsTransitions
+
+!insert (standbyToSensing, timeEventStandbyToSensing) into TransitionContainsEvents
+!insert (sensingToAnalyzing, timeEventSensingToAnalyzing) into TransitionContainsEvents
+!insert (analyzingToAlert, timeEventAnalyzingToAlert) into TransitionContainsEvents
+!insert (analyzingToReporting, timeEventAnalyzingToReporting) into TransitionContainsEvents
+!insert (alertToReporting, timeEventAlertToReporting) into TransitionContainsEvents
+
+!insert (standby, standbyToSensing) into StateTransition
+!insert (standbyToSensing, sensing) into TransitionState
+
+!insert (sensing, sensingToAnalyzing) into StateTransition
+!insert (sensingToAnalyzing, analyzing) into TransitionState
+
+!insert (analyzing, analyzingToAlert) into StateTransition
+!insert (analyzingToAlert, alert) into TransitionState
+
+!insert (analyzing, analyzingToReporting) into StateTransition
+!insert (analyzingToReporting, reporting) into TransitionState
+
+!insert (alert, alertToReporting) into StateTransition
+!insert (alertToReporting, reporting) into TransitionState
+
+!new StateMachine('trafficControlSM')
+!trafficControlSM.name := 'trafficControlSM'
+
+!new State('green')
+!green.name := 'green'
+
+!new State('amber')
+!amber.name := 'amber'
+
+!new State('red')
+!red.name := 'red'
+
+!new State('flashingAmber')
+!flashingAmber.name := 'flashingAmber'
+
+!new Transition('greenToAmber')
+!greenToAmber.name := 'greenToAmber'
+
+!new Transition('amberToRed')
+!amberToRed.name := 'amberToRed'
+
+!new Transition('redToGreen')
+!redToGreen.name := 'redToGreen'
+
+!new Transition('emergencyFromGreen')
+!emergencyFromGreen.name := 'emergency'
+
+!new Transition('emergencyFromAmber')
+!emergencyFromAmber.name := 'emergency'
+
+!new TimeEvent('timeEventGreenToAmber')
+!timeEventGreenToAmber.time := 30
+
+!new TimeEvent('timeEventAmberToRed')
+!timeEventAmberToRed.time := 5
+
+!new TimeEvent('timeEventRedToGreen')
+!timeEventRedToGreen.time := 60
+
+!new TimeEvent('timeEventEmergencyFromGreen')
+!timeEventEmergencyFromGreen.time := 1 -- Adjusted from 0 to positive
+
+!new TimeEvent('timeEventEmergencyFromAmber')
+!timeEventEmergencyFromAmber.time := 1 -- Adjusted from 0 to positive
+
+!insert (trafficControlSM, green) into StateMachineContainsStates
+!insert (trafficControlSM, amber) into StateMachineContainsStates
+!insert (trafficControlSM, red) into StateMachineContainsStates
+!insert (trafficControlSM, flashingAmber) into StateMachineContainsStates
+
+!insert (trafficControlSM, greenToAmber) into StateMachineContainsTransitions
+!insert (trafficControlSM, amberToRed) into StateMachineContainsTransitions
+!insert (trafficControlSM, redToGreen) into StateMachineContainsTransitions
+!insert (trafficControlSM, emergencyFromGreen) into StateMachineContainsTransitions
+!insert (trafficControlSM, emergencyFromAmber) into StateMachineContainsTransitions
+
+!insert (greenToAmber, timeEventGreenToAmber) into TransitionContainsEvents
+!insert (amberToRed, timeEventAmberToRed) into TransitionContainsEvents
+!insert (redToGreen, timeEventRedToGreen) into TransitionContainsEvents
+!insert (emergencyFromGreen, timeEventEmergencyFromGreen) into TransitionContainsEvents
+!insert (emergencyFromAmber, timeEventEmergencyFromAmber) into TransitionContainsEvents
+
+!insert (green, greenToAmber) into StateTransition
+!insert (greenToAmber, amber) into TransitionState
+
+!insert (amber, amberToRed) into StateTransition
+!insert (amberToRed, red) into TransitionState
+
+!insert (red, redToGreen) into StateTransition
+!insert (redToGreen, green) into TransitionState
+
+!insert (green, emergencyFromGreen) into StateTransition
+!insert (emergencyFromGreen, flashingAmber) into TransitionState
+
+!insert (amber, emergencyFromAmber) into StateTransition
+!insert (emergencyFromAmber, flashingAmber) into TransitionState
+
+!new StateMachine('roboticFactoryWorkflow')
+!roboticFactoryWorkflow.name := 'roboticFactoryWorkflow'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('assembly')
+!assembly.name := 'assembly'
+
+!new State('qualityCheck')
+!qualityCheck.name := 'qualityCheck'
+
+!new State('packaging')
+!packaging.name := 'packaging'
+
+!new State('shutdown')
+!shutdown.name := 'shutdown'
+
+!new Transition('startAssembly')
+!startAssembly.name := 'startAssembly'
+
+!new Transition('moveToQualityCheck')
+!moveToQualityCheck.name := 'moveToQualityCheck'
+
+!new Transition('approveForPackaging')
+!approveForPackaging.name := 'approveForPackaging'
+
+!new Transition('returnToIdle')
+!returnToIdle.name := 'returnToIdle'
+
+!new Transition('initiateShutdown')
+!initiateShutdown.name := 'initiateShutdown'
+
+!new TimeEvent('timeEventStartAssembly')
+!timeEventStartAssembly.time := 5
+
+!new TimeEvent('timeEventMoveToQualityCheck')
+!timeEventMoveToQualityCheck.time := 60
+
+!new TimeEvent('timeEventApproveForPackaging')
+!timeEventApproveForPackaging.time := 30
+
+!new TimeEvent('timeEventReturnToIdle')
+!timeEventReturnToIdle.time := 90
+
+!new TimeEvent('timeEventInitiateShutdown')
+!timeEventInitiateShutdown.time := 10
+
+!insert (roboticFactoryWorkflow, idle) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, assembly) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, qualityCheck) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, packaging) into StateMachineContainsStates
+!insert (roboticFactoryWorkflow, shutdown) into StateMachineContainsStates
+
+!insert (roboticFactoryWorkflow, idle) into StateMachineStartsStates
+
+!insert (roboticFactoryWorkflow, startAssembly) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, moveToQualityCheck) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, approveForPackaging) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, returnToIdle) into StateMachineContainsTransitions
+!insert (roboticFactoryWorkflow, initiateShutdown) into StateMachineContainsTransitions
+
+!insert (startAssembly, timeEventStartAssembly) into TransitionContainsEvents
+!insert (moveToQualityCheck, timeEventMoveToQualityCheck) into TransitionContainsEvents
+!insert (approveForPackaging, timeEventApproveForPackaging) into TransitionContainsEvents
+!insert (returnToIdle, timeEventReturnToIdle) into TransitionContainsEvents
+!insert (initiateShutdown, timeEventInitiateShutdown) into TransitionContainsEvents
+
+!insert (idle, startAssembly) into StateTransition
+!insert (startAssembly, assembly) into TransitionState
+
+!insert (assembly, moveToQualityCheck) into StateTransition
+!insert (moveToQualityCheck, qualityCheck) into TransitionState
+
+!insert (qualityCheck, approveForPackaging) into StateTransition
+!insert (approveForPackaging, packaging) into TransitionState
+
+!insert (qualityCheck, initiateShutdown) into StateTransition
+!insert (initiateShutdown, shutdown) into TransitionState
+
+!insert (packaging, returnToIdle) into StateTransition
+!insert (returnToIdle, idle) into TransitionState
+
+!new StateMachine('marineMonitoringProtocol')
+!marineMonitoringProtocol.name := 'marineMonitoringProtocol'
+
+!new State('initialize')
+!initialize.name := 'initialize'
+
+!new State('dataCollection')
+!dataCollection.name := 'dataCollection'
+
+!new State('dataAnalysis')
+!dataAnalysis.name := 'dataAnalysis'
+
+!new State('alertTrigger')
+!alertTrigger.name := 'alertTrigger'
+
+!new State('reporting')
+!reporting.name := 'reporting'
+
+!new State('systemReset')
+!systemReset.name := 'systemReset'
+
+!new Transition('startCollection')
+!startCollection.name := 'startCollection'
+
+!new Transition('processData')
+!processData.name := 'processData'
+
+!new Transition('checkAnomalies')
+!checkAnomalies.name := 'checkAnomalies'
+
+!new Transition('generateReport')
+!generateReport.name := 'generateReport'
+
+!new Transition('finalizeReport')
+!finalizeReport.name := 'finalizeReport'
+
+!new Transition('resetCycle')
+!resetCycle.name := 'resetCycle'
+
+!new Transition('reinitialize')
+!reinitialize.name := 'reinitialize'
+
+!new TimeEvent('initializationTime')
+!initializationTime.time := 15
+
+!new TimeEvent('collectionDuration')
+!collectionDuration.time := 180
+
+!new TimeEvent('analysisTime')
+!analysisTime.time := 45
+
+!new TimeEvent('alertProcessingTime')
+!alertProcessingTime.time := 20
+
+!new TimeEvent('reportCompilationTime')
+!reportCompilationTime.time := 25
+
+!new TimeEvent('resetDuration')
+!resetDuration.time := 10
+
+!new TimeEvent('reinitializeTime')
+!reinitializeTime.time := 5
+
+!insert (marineMonitoringProtocol, initialize) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, dataCollection) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, dataAnalysis) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, alertTrigger) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, reporting) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, systemReset) into StateMachineContainsStates
+
+!insert (marineMonitoringProtocol, initialize) into StateMachineStartsStates
+
+!insert (marineMonitoringProtocol, startCollection) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, processData) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, checkAnomalies) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, generateReport) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, finalizeReport) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, resetCycle) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, reinitialize) into StateMachineContainsTransitions
+
+!insert (startCollection, initializationTime) into TransitionContainsEvents
+!insert (processData, collectionDuration) into TransitionContainsEvents
+!insert (checkAnomalies, analysisTime) into TransitionContainsEvents
+!insert (generateReport, alertProcessingTime) into TransitionContainsEvents
+!insert (finalizeReport, reportCompilationTime) into TransitionContainsEvents
+!insert (resetCycle, resetDuration) into TransitionContainsEvents
+!insert (reinitialize, reinitializeTime) into TransitionContainsEvents
+
+!insert (initialize, startCollection) into StateTransition
+!insert (startCollection, dataCollection) into TransitionState
+
+!insert (dataCollection, processData) into StateTransition
+!insert (processData, dataAnalysis) into TransitionState
+
+!insert (dataAnalysis, checkAnomalies) into StateTransition
+!insert (checkAnomalies, alertTrigger) into TransitionState
+
+!insert (dataAnalysis, finalizeReport) into StateTransition
+!insert (finalizeReport, reporting) into TransitionState
+
+!insert (alertTrigger, generateReport) into StateTransition
+!insert (generateReport, reporting) into TransitionState
+
+!insert (reporting, resetCycle) into StateTransition
+!insert (resetCycle, systemReset) into TransitionState
+
+!insert (systemReset, reinitialize) into StateTransition
+!insert (reinitialize, initialize) into TransitionState
+

@@ -1,0 +1,159 @@
+!new Club('club41')
+!club41.name := 'Eagles United'
+!club41.homeGround := 'Eagle Nest'
+!club41.chairman := 'Linda Rodriguez'
+
+!new Club('club42')
+!club42.name := 'Lions Brigade'
+!club42.homeGround := 'Lion Heart Stadium'
+!club42.chairman := 'David King'
+
+!new Team('team41')
+!team41.name := 'Eagle Warriors'
+!insert (club41, team41) into ClubTeam
+
+!new Team('team42')
+!team42.name := 'Lions Guard'
+!insert (club42, team42) into ClubTeam
+
+!new Player('player61')
+!player61.name := 'Logan Hill'
+!player61.age := 24
+!player61.bestFoot := #RIGHT
+!player61.phoneNumber := '765-432-1098'
+!insert (team41, player61) into TeamPlayer
+
+!new Player('player62')
+!player62.name := 'Sophia White'
+!player62.age := 27
+!player62.bestFoot := #LEFT
+!player62.phoneNumber := '654-321-9870'
+!insert (team41, player62) into TeamPlayer
+
+!new Player('player63')
+!player63.name := 'Benjamin Carter'
+!player63.age := 30
+!player63.bestFoot := #BOTH
+!player63.phoneNumber := '543-210-8765'
+!insert (team42, player63) into TeamPlayer
+
+!new Position('position61')
+!position61.positionName := #MIDFIELDER
+!insert (player61, position61) into PlayerPositions
+
+!new Position('position62')
+!position62.positionName := #DEFENDER
+!insert (player62, position62) into PlayerPositions
+
+!new Position('position63')
+!position63.positionName := #FORWARD
+!insert (player63, position63) into PlayerPositions
+
+!new TrainingSession('training41')
+!training41.date := '2024-06-15'
+!training41.location := 'Eagle High Roost'
+!training41.purpose := 'Precision Passing'
+!insert (team41, training41) into TeamTraining
+
+!new TrainingSession('training42')
+!training42.date := '2024-06-16'
+!training42.location := 'Lions Den'
+!training42.purpose := 'Power Striking'
+!insert (team42, training42) into TeamTraining
+
+!new TrainingNotes('trainingNotes41')
+!trainingNotes41.note := 'Intensive drills on short and long-range passing accuracy'
+!trainingNotes41.date := '2024-06-15'
+!insert (training41, trainingNotes41) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes42')
+!trainingNotes42.note := 'Focused on enhancing striking power and shot placement'
+!trainingNotes42.date := '2024-06-16'
+!insert (training42, trainingNotes42) into TrainingTrainingNotes
+
+!new TrainingObjective('objective61')
+!objective61.areaToImprove := 'Passing Precision'
+!objective61.startDate := '2024-03-01'
+!objective61.endDate := '2024-05-01'
+!objective61.success := true
+!insert (objective61, player61) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective62')
+!objective62.areaToImprove := 'Defensive Blocking'
+!objective62.startDate := '2024-02-05'
+!objective62.endDate := '2024-04-05'
+!objective62.success := false
+!insert (objective62, player62) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective63')
+!objective63.areaToImprove := 'Goal Accuracy'
+!objective63.startDate := '2024-01-10'
+!objective63.endDate := '2024-03-10'
+!objective63.success := true
+!insert (objective63, player63) into TrainingObjectivePlayer
+
+!new Competition('competition21')
+!competition21.name := 'Elite Champions Cup'
+!competition21.type := 'Grand Final'
+
+!new Match('match21')
+!match21.date := '2024-07-05'
+!match21.homeAway := true
+!insert (competition21, match21) into CompetitionMatch
+!insert (team41, match21) into LocalMatch
+!insert (team42, match21) into VisitorMatch
+
+!new MatchReport('report21')
+!report21.duration := 90
+!report21.scoreVisitor := 2
+!report21.scoreLocal := 2
+!insert (match21, report21) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer61')
+!matchPlayer61.booked := false
+!matchPlayer61.goals := 1
+!matchPlayer61.rating := 8
+!insert (player61, matchPlayer61) into PlayerMatch
+!insert (match21, matchPlayer61) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer63')
+!matchPlayer63.booked := true
+!matchPlayer63.goals := 2
+!matchPlayer63.rating := 9
+!insert (player63, matchPlayer63) into PlayerMatch
+!insert (match21, matchPlayer63) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition61')
+!matchPlayerPosition61.positionName := #MIDFIELDER
+!matchPlayerPosition61.number := 8
+!insert (matchPlayer61, matchPlayerPosition61) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition63')
+!matchPlayerPosition63.positionName := #FORWARD
+!matchPlayerPosition63.number := 10
+!insert (matchPlayer63, matchPlayerPosition63) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event79')
+!event79.eventType := #GOAL
+!event79.time := 20
+!insert (match21, event79) into MatchMatchEvent
+
+!new MatchEvent('event80')
+!event80.eventType := #GOAL
+!event80.time := 38
+!insert (match21, event80) into MatchMatchEvent
+
+!new MatchEvent('event81')
+!event81.eventType := #GOAL
+!event81.time := 55
+!insert (match21, event81) into MatchMatchEvent
+
+!new MatchEvent('event82')
+!event82.eventType := #GOAL
+!event82.time := 78
+!insert (match21, event82) into MatchMatchEvent
+
+!new MatchNote('matchNote21')
+!matchNote21.note := 'Electrifying grand final with both teams displaying excellent form'
+!matchNote21.date := '2024-07-05'
+!insert (match21, matchNote21) into MatchMatchNote

@@ -1,0 +1,225 @@
+!new Club('club21')
+!club21.name := 'Auckland United'
+!club21.homeGround := 'Eden Park'
+!club21.chairman := 'Mathew O''Connor'
+
+!new Team('teamW')
+!teamW.name := 'Auckland Rangers'
+
+!insert (club21, teamW) into ClubTeam
+
+!new Player('player23')
+!player23.name := 'James Thompson'
+!player23.age := 28
+!player23.bestFoot := #RIGHT
+!player23.phoneNumber := '+64-9-112233'
+
+!insert (teamW, player23) into TeamPlayer
+
+!new Player('player24')
+!player24.name := 'Oliver Harris'
+!player24.age := 30
+!player24.bestFoot := #LEFT
+!player24.phoneNumber := '+64-9-445566'
+
+!insert (teamW, player24) into TeamPlayer
+
+!new Position('position34')
+!position34.positionName := #FORWARD
+
+!new Position('position35')
+!position35.positionName := #DEFENDER
+
+!insert (player23, position34) into PlayerPositions
+!insert (player24, position35) into PlayerPositions
+
+!new TrainingObjective('trainingObjective23')
+!trainingObjective23.areaToImprove := 'Tactical Awareness'
+!trainingObjective23.startDate := '2023-10-01'
+!trainingObjective23.endDate := '2023-12-01'
+!trainingObjective23.success := true
+
+!insert (trainingObjective23, player23) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective25')
+!trainingObjective25.areaToImprove := 'Strength Training'
+!trainingObjective25.startDate := '2023-09-01'
+!trainingObjective25.endDate := '2023-10-31'
+!trainingObjective25.success := false
+
+!insert (trainingObjective25, player24) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession20')
+!trainingSession20.date := '2023-10-01'
+!trainingSession20.location := 'Auckland Training Grounds'
+!trainingSession20.purpose := 'Technique Enhancement'
+
+!insert (teamW, trainingSession20) into TeamTraining
+
+!new TrainingNotes('trainingNote22')
+!trainingNote22.note := 'Improving agility and ball control.'
+!trainingNote22.date := '2023-10-01'
+
+!insert (trainingSession20, trainingNote22) into TrainingTrainingNotes
+
+!new Competition('competition11')
+!competition11.name := 'Oceanic Champions Cup'
+!competition11.type := 'Continental Championship'
+
+!new Match('match11')
+!match11.date := '2023-11-05'
+!match11.homeAway := true
+
+!insert (competition11, match11) into CompetitionMatch
+
+!insert (teamW, match11) into LocalMatch
+
+!new Team('teamX')
+!teamX.name := 'Sydney Sharks'
+
+!new Club('club22')
+!club22.name := 'Sydney Club'
+!club22.homeGround := 'Sydney Stadium'
+!club22.chairman := 'Peter Doyle'
+
+!insert (club22, teamX) into ClubTeam
+
+!insert (teamX, match11) into VisitorMatch
+
+!new MatchReport('matchReport11')
+!matchReport11.duration := 90
+!matchReport11.scoreVisitor := 0
+!matchReport11.scoreLocal := 4
+
+!insert (match11, matchReport11) into MatchMatchReport
+
+!new MatchEvent('matchEvent42')
+!matchEvent42.eventType := #GOAL
+!matchEvent42.time := 9
+
+!new MatchEvent('matchEvent43')
+!matchEvent43.eventType := #GOAL
+!matchEvent43.time := 23
+
+!new MatchEvent('matchEvent44')
+!matchEvent44.eventType := #GOAL
+!matchEvent44.time := 66
+
+!new MatchEvent('matchEvent45')
+!matchEvent45.eventType := #GOAL
+!matchEvent45.time := 89
+
+!new MatchEvent('matchEvent46')
+!matchEvent46.eventType := #FOUL
+!matchEvent46.time := 54
+
+!insert (match11, matchEvent42) into MatchMatchEvent
+!insert (match11, matchEvent43) into MatchMatchEvent
+!insert (match11, matchEvent44) into MatchMatchEvent
+!insert (match11, matchEvent45) into MatchMatchEvent
+!insert (match11, matchEvent46) into MatchMatchEvent
+
+!new MatchNote('matchNote8')
+!matchNote8.note := 'Dominant performance on home turf with fan support.'
+!matchNote8.date := '2023-11-05'
+
+!insert (match11, matchNote8) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer15')
+!matchPlayer15.booked := false
+!matchPlayer15.goals := 2
+!matchPlayer15.rating := 9
+
+!insert (player23, matchPlayer15) into PlayerMatch
+!insert (match11, matchPlayer15) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition16')
+!matchPlayerPosition16.positionName := #FORWARD
+!matchPlayerPosition16.number := 11
+
+!insert (matchPlayer15, matchPlayerPosition16) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer16')
+!matchPlayer16.booked := false
+!matchPlayer16.goals := 0
+!matchPlayer16.rating := 8
+
+!insert (player24, matchPlayer16) into PlayerMatch
+!insert (match11, matchPlayer16) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition17')
+!matchPlayerPosition17.positionName := #DEFENDER
+!matchPlayerPosition17.number := 4
+
+!insert (matchPlayer16, matchPlayerPosition17) into MatchPlayerMatchPlayerPosition
+
+!new Player('player21')
+!player21.name := 'Liam Johnson'
+!player21.age := 27
+!player21.bestFoot := #RIGHT
+!player21.phoneNumber := '+61-2-111222'
+
+!insert (teamX, player21) into TeamPlayer
+
+!new Position('position31')
+!position31.positionName := #FORWARD
+
+!new Position('position32')
+!position32.positionName := #MIDFIELDER
+
+!insert (player21, position31) into PlayerPositions
+!insert (player21, position32) into PlayerPositions
+
+!new PlayerNotes('playerNote15')
+!playerNote15.note := 'Noted for versatility and high stamina.'
+!playerNote15.date := '2023-10-15'
+
+!insert (player21, playerNote15) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective22')
+!trainingObjective22.areaToImprove := 'Scoring Accuracy'
+!trainingObjective22.startDate := '2023-09-10'
+!trainingObjective22.endDate := '2023-11-10'
+!trainingObjective22.success := true
+
+!insert (trainingObjective22, player21) into TrainingObjectivePlayer
+
+!new Player('player22')
+!player22.name := 'Sophie Wright'
+!player22.age := 23
+!player22.bestFoot := #LEFT
+!player22.phoneNumber := '+61-2-333444'
+
+!insert (teamX, player22) into TeamPlayer
+
+!new Position('position33')
+!position33.positionName := #GOALKEEPER
+
+!insert (player22, position33) into PlayerPositions
+
+!new PlayerNotes('playerNote16')
+!playerNote16.note := 'Outstanding reflexes and shot-stopping ability.'
+!playerNote16.date := '2023-10-10'
+
+!insert (player22, playerNote16) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective24')
+!trainingObjective24.areaToImprove := 'Agility'
+!trainingObjective24.startDate := '2023-08-01'
+!trainingObjective24.endDate := '2023-10-01'
+!trainingObjective24.success := true
+
+!insert (trainingObjective24, player22) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession19')
+!trainingSession19.date := '2023-09-30'
+!trainingSession19.location := 'Sydney Training Centre'
+!trainingSession19.purpose := 'Defensive Drill Reinforcement'
+
+!insert (teamX, trainingSession19) into TeamTraining
+
+!new TrainingNotes('trainingNote21')
+!trainingNote21.note := 'Focused on defensive positioning and tackling.'
+!trainingNote21.date := '2023-09-30'
+
+!insert (trainingSession19, trainingNote21) into TrainingTrainingNotes

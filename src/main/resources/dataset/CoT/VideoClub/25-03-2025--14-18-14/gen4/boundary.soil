@@ -1,0 +1,36 @@
+!new Client('client7')
+!client7.clientId := 4
+!client7.isSuspended := false
+
+!new Client('client8')
+!client8.clientId := 987654321
+!client8.isSuspended := true
+
+!new Rental('rental4')
+!rental4.date := Date('2023-02-28')
+
+!new Movie('cassetteSilentNight')
+!cassetteSilentNight.title := 'Silent Night'
+!cassetteSilentNight.availableCopies := 500
+!cassetteSilentNight.genre := #Comedy
+
+!new Series('cassetteDragonsTale')
+!cassetteDragonsTale.title := 'Dragon\'s Tale Ep.45'
+!cassetteDragonsTale.availableCopies := 3
+!cassetteDragonsTale.episode := 45
+
+!new Actor('actorKevinCheng')
+!actorKevinCheng.name := 'Kevin Cheng'
+
+!new Actor('actorLunaSofia')
+!actorLunaSofia.name := 'Luna Sofia'
+
+!insert (client7, rental4) into ClientRental
+
+!insert (rental4, cassetteSilentNight) into RentalCassette
+!insert (rental4, cassetteDragonsTale) into RentalCassette
+
+!insert (cassetteSilentNight, actorKevinCheng) into CassetteActor
+!insert (cassetteSilentNight, actorLunaSofia) into CassetteActor
+!insert (cassetteDragonsTale, actorLunaSofia) into CassetteActor
+!insert (cassetteDragonsTale, actorKevinCheng) into CassetteActor

@@ -1,0 +1,35 @@
+-- New Client instance with a unique client ID and suspension status
+!new Client('client28')
+!client28.clientId := 28
+!client28.isSuspended := false
+
+-- New Rental instance with a distinct date
+!new Rental('rental27')
+!rental27.date := Date('2025-07-22')
+
+-- New Movie instance with a unique title, genre, and limited number of copies
+!new Movie('movie27')
+!movie27.title := 'Adventure Awaits'
+!movie27.availableCopies := 3
+!movie27.genre := #Action
+
+-- New Series instance with unique episodes and ample available copies
+!new Series('series28')
+!series28.title := 'The Time Travelers'
+!series28.availableCopies := 8
+!series28.episode := 21
+
+-- New Actor instance with a distinct name
+!new Actor('actor27')
+!actor27.name := 'Isabella Holt'
+
+-- Establishing a unique client-rental association
+!insert (client28, rental27) into ClientRental
+
+-- Associating the rental with the new movie and series
+!insert (rental27, movie27) into RentalCassette
+!insert (rental27, series28) into RentalCassette
+
+-- Associating the movie and series with the new actor
+!insert (movie27, actor27) into CassetteActor
+!insert (series28, actor27) into CassetteActor

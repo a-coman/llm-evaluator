@@ -1,0 +1,45 @@
+!new Bank('bank10')
+!bank10.country := 'Japan'
+!bank10.name := 'Yamaguchi Financial Group'
+!bank10.bic := 'YMFGJPJT'
+
+!new Account('account19')
+!account19.iban := 'JP12345678901234567890'
+!account19.balance := 8000
+
+!new Account('account20')
+!account20.iban := 'JP09876543210987654321'
+!account20.balance := 0
+
+!new Person('person25')
+!person25.firstName := 'Keiko'
+!person25.lastName := 'Saito'
+!person25.age := 37
+
+!new Person('person26')
+!person26.firstName := 'Hiroshi'
+!person26.lastName := 'Saito'
+!person26.age := 39
+
+!new Person('person27')
+!person27.firstName := 'Yamato'
+!person27.lastName := 'Tanaka'
+!person27.age := 29
+
+!new Person('person28')
+!person28.firstName := 'Haruto'
+!person28.lastName := 'Saito'
+!person28.age := 16
+
+!insert (person25, account19) into Ownership
+!insert (person26, account19) into Ownership
+
+!insert (person27, account20) into Ownership
+
+!insert (person25, account20) into Use
+!insert (person26, account20) into Use
+!insert (person28, account19) into Use
+
+!insert (bank10, account19) into AccountOfBanks
+!insert (bank10, account20) into AccountOfBanks
+

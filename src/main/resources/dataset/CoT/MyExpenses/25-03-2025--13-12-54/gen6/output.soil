@@ -1,0 +1,286 @@
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Expense('creativePaintingWorkshop')
+!creativePaintingWorkshop.amount := 400.00
+!creativePaintingWorkshop.startDate := Date('2023-04-08')
+!creativePaintingWorkshop.endDate := Date('2023-04-09')
+
+!new Bill('workshopVenueRental')
+!workshopVenueRental.amount := 150.00
+!workshopVenueRental.category := 'Event'
+!workshopVenueRental.date := Date('2023-03-15')
+!workshopVenueRental.paymentMethod := #CHECK
+!workshopVenueRental.status := #VERIFIED
+
+!new Bill('artSupplies')
+!artSupplies.amount := 100.00
+!artSupplies.category := 'Materials'
+!artSupplies.date := Date('2023-03-20')
+!artSupplies.paymentMethod := #CREDIT_CARD
+!artSupplies.status := #REFUNDED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 100.00
+!cateringServices.category := 'Food'
+!cateringServices.date := Date('2023-04-08')
+!cateringServices.paymentMethod := #CASH
+!cateringServices.status := #PENDING
+
+!new Bill('promotionAndAdvertising')
+!promotionAndAdvertising.amount := 50.00
+!promotionAndAdvertising.category := 'Marketing'
+!promotionAndAdvertising.date := Date('2023-03-25')
+!promotionAndAdvertising.paymentMethod := #CREDIT_CARD
+!promotionAndAdvertising.status := #VERIFIED
+
+!insert (workshopVenueRental, euro) into BillCurrency
+!insert (artSupplies, euro) into BillCurrency
+!insert (cateringServices, euro) into BillCurrency
+!insert (promotionAndAdvertising, euro) into BillCurrency
+
+!insert (creativePaintingWorkshop, workshopVenueRental) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, artSupplies) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, cateringServices) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, promotionAndAdvertising) into ExpenseContainsBills
+
+!new Comment('commentVenue')
+!commentVenue.text := 'Participants appreciated the calm and inspiring environment for the workshop.'
+
+!new Comment('commentArtSupplies')
+!commentArtSupplies.text := 'High-quality paints and brushes enhanced the workshop experience.'
+
+!new Comment('commentCatering')
+!commentCatering.text := 'The refreshments were well-received, keeping energy levels high throughout.'
+
+!insert (creativePaintingWorkshop, commentVenue) into ExpenseComment
+!insert (creativePaintingWorkshop, commentArtSupplies) into ExpenseComment
+!insert (creativePaintingWorkshop, commentCatering) into ExpenseComment
+
+!new Currency('turkishLira')
+!turkishLira.name := 'Turkish Lira'
+!turkishLira.abbreviation := 'TRY'
+
+!new Expense('educationalConferenceTripExpense')
+!educationalConferenceTripExpense.amount := 18000.00
+!educationalConferenceTripExpense.startDate := Date('2023-04-01')
+!educationalConferenceTripExpense.endDate := Date('2023-04-10')
+
+!new Bill('flightTickets')
+!flightTickets.amount := 6000.00
+!flightTickets.category := 'Travel'
+!flightTickets.date := Date('2023-04-01')
+!flightTickets.paymentMethod := #CREDIT_CARD
+!flightTickets.status := #VERIFIED
+
+!new Bill('hotelAccommodation')
+!hotelAccommodation.amount := 5000.00
+!hotelAccommodation.category := 'Accommodation'
+!hotelAccommodation.date := Date('2023-04-02')
+!hotelAccommodation.paymentMethod := #CHECK
+!hotelAccommodation.status := #PENDING
+
+!new Bill('conferenceRegistration')
+!conferenceRegistration.amount := 4000.00
+!conferenceRegistration.category := 'Registration'
+!conferenceRegistration.date := Date('2023-04-03')
+!conferenceRegistration.paymentMethod := #CREDIT_CARD
+!conferenceRegistration.status := #VALIDATED
+
+!new Bill('mealsAndIncidentals')
+!mealsAndIncidentals.amount := 3000.00
+!mealsAndIncidentals.category := 'Meals'
+!mealsAndIncidentals.date := Date('2023-04-05')
+!mealsAndIncidentals.paymentMethod := #CASH
+!mealsAndIncidentals.status := #DRAFT
+
+!insert (flightTickets, turkishLira) into BillCurrency
+!insert (hotelAccommodation, turkishLira) into BillCurrency
+!insert (conferenceRegistration, turkishLira) into BillCurrency
+!insert (mealsAndIncidentals, turkishLira) into BillCurrency
+
+!insert (educationalConferenceTripExpense, flightTickets) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, hotelAccommodation) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, conferenceRegistration) into ExpenseContainsBills
+!insert (educationalConferenceTripExpense, mealsAndIncidentals) into ExpenseContainsBills
+
+!new Comment('commentFlight')
+!commentFlight.text := 'Flight was comfortable, ensuring I arrived fresh and ready to engage.'
+
+!new Comment('commentHotel')
+!commentHotel.text := 'Hotel is conveniently located near the conference venue, awaiting confirmation.'
+
+!new Comment('commentRegistration')
+!commentRegistration.text := 'Registration process was smooth, access to all sessions confirmed.'
+
+!insert (educationalConferenceTripExpense, commentFlight) into ExpenseComment
+!insert (educationalConferenceTripExpense, commentHotel) into ExpenseComment
+!insert (educationalConferenceTripExpense, commentRegistration) into ExpenseComment
+
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Expense('zeroExpense')
+!zeroExpense.amount := 0.00
+!zeroExpense.startDate := Date('2023-02-01')
+!zeroExpense.endDate := Date('2023-02-28')
+
+!new Bill('conferenceFees')
+!conferenceFees.amount := 0.00
+!conferenceFees.category := 'Conference Fees'
+!conferenceFees.date := Date('2023-02-15')
+!conferenceFees.paymentMethod := #CHECK
+!conferenceFees.status := #REFUNDED
+
+!insert (conferenceFees, swissFranc) into BillCurrency
+
+!insert (zeroExpense, conferenceFees) into ExpenseContainsBills
+
+!new Comment('commentCancelledRegistration')
+!commentCancelledRegistration.text := 'Cancelled conference registration due to travel restrictions'
+
+!new Comment('commentRefundProcessed')
+!commentRefundProcessed.text := 'Refund processed successfully; no financial liabilities incurred'
+
+!new Comment('commentFinancialAdjustments')
+!commentFinancialAdjustments.text := 'Ensured seamless financial adjustments for better audit transparency'
+
+!insert (zeroExpense, commentCancelledRegistration) into ExpenseComment
+!insert (zeroExpense, commentRefundProcessed) into ExpenseComment
+!insert (zeroExpense, commentFinancialAdjustments) into ExpenseComment
+
+!new Currency('euro') 
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Expense('renaissanceArtWorkshopExpense')
+!renaissanceArtWorkshopExpense.amount := 700.00
+!renaissanceArtWorkshopExpense.startDate := Date('2023-10-10')
+!renaissanceArtWorkshopExpense.endDate := Date('2023-10-12')
+
+!new Bill('venueRental')
+!venueRental.amount := 450.00
+!venueRental.category := 'Venue Rental'
+!venueRental.date := Date('2023-10-10')
+!venueRental.paymentMethod := #CHECK
+!venueRental.status := #VERIFIED
+
+!new Bill('promotionalMaterials')
+!promotionalMaterials.amount := 150.00
+!promotionalMaterials.category := 'Promotional Materials'
+!promotionalMaterials.date := Date('2023-10-11')
+!promotionalMaterials.paymentMethod := #CREDIT_CARD
+!promotionalMaterials.status := #REFUNDED
+
+!new Bill('catering')
+!catering.amount := 100.00
+!catering.category := 'Catering'
+!catering.date := Date('2023-10-12')
+!catering.paymentMethod := #CASH
+!catering.status := #PENDING
+
+!insert (venueRental, euro) into BillCurrency
+!insert (promotionalMaterials, euro) into BillCurrency
+!insert (catering, euro) into BillCurrency
+
+!insert (renaissanceArtWorkshopExpense, venueRental) into ExpenseContainsBills
+!insert (renaissanceArtWorkshopExpense, promotionalMaterials) into ExpenseContainsBills
+!insert (renaissanceArtWorkshopExpense, catering) into ExpenseContainsBills
+
+!new Comment('commentVenueAmbiance')
+!commentVenueAmbiance.text := 'Venue choice was exceptional for the ambiance of the period.'
+
+!new Comment('commentPromotionalMaterials')
+!commentPromotionalMaterials.text := 'Promotional materials needed adjustments – refund facilitated revising strategy.'
+
+!insert (renaissanceArtWorkshopExpense, commentVenueAmbiance) into ExpenseComment
+!insert (renaissanceArtWorkshopExpense, commentPromotionalMaterials) into ExpenseComment
+
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Currency('usDollar')
+!usDollar.name := 'US Dollar'
+!usDollar.abbreviation := 'USD'
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Bill('accommodationSwissChalet')
+!accommodationSwissChalet.amount := 3500.00
+!accommodationSwissChalet.category := 'Accommodation in Swiss Chalet'
+!accommodationSwissChalet.date := Date('2023-07-01')
+!accommodationSwissChalet.paymentMethod := #CREDIT_CARD
+!accommodationSwissChalet.status := #VALIDATED
+
+!new Bill('familyDiningCatering')
+!familyDiningCatering.amount := 1500.00
+!familyDiningCatering.category := 'Family Dining and Catering'
+!familyDiningCatering.date := Date('2023-07-01')
+!familyDiningCatering.paymentMethod := #CASH
+!familyDiningCatering.status := #VALIDATED
+
+!new Bill('souvenirShopping')
+!souvenirShopping.amount := 200.00
+!souvenirShopping.category := 'Souvenir Shopping'
+!souvenirShopping.date := Date('2023-07-01')
+!souvenirShopping.paymentMethod := #CASH
+!souvenirShopping.status := #REFUNDED
+
+!new Bill('localTransportCarRental')
+!localTransportCarRental.amount := 500.00
+!localTransportCarRental.category := 'Local Transport and Car Rental'
+!localTransportCarRental.date := Date('2023-07-01')
+!localTransportCarRental.paymentMethod := #CHECK
+!localTransportCarRental.status := #DRAFT
+
+!new Bill('traditionalArtProjects')
+!traditionalArtProjects.amount := 100.00
+!traditionalArtProjects.category := 'Traditional Art Projects'
+!traditionalArtProjects.date := Date('2023-07-01')
+!traditionalArtProjects.paymentMethod := #CREDIT_CARD
+!traditionalArtProjects.status := #VALIDATED
+
+!insert (accommodationSwissChalet, swissFranc) into BillCurrency
+!insert (familyDiningCatering, usDollar) into BillCurrency
+!insert (souvenirShopping, usDollar) into BillCurrency
+!insert (localTransportCarRental, swissFranc) into BillCurrency
+!insert (traditionalArtProjects, indianRupee) into BillCurrency
+
+!new Expense('familyReunionVacationExpenses')
+-- The correct amount calculation excludes refunded expenses
+!familyReunionVacationExpenses.amount := 5800.00
+!familyReunionVacationExpenses.startDate := Date('2023-07-01')
+!familyReunionVacationExpenses.endDate := Date('2023-07-14')
+
+!insert (familyReunionVacationExpenses, accommodationSwissChalet) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, familyDiningCatering) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, souvenirShopping) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, localTransportCarRental) into ExpenseContainsBills
+!insert (familyReunionVacationExpenses, traditionalArtProjects) into ExpenseContainsBills
+
+!new Comment('commentAccommodation')
+!commentAccommodation.text := 'Accommodation validated seamlessly, enhancing family comfort.'
+
+!new Comment('commentDiningOutcome')
+!commentDiningOutcome.text := 'Verified dining outcome keeping family activities within the budget.'
+
+!new Comment('commentSouvenirRefund')
+!commentSouvenirRefund.text := 'Souvenir purchase refunded due to product quality issues.'
+
+!new Comment('commentVehicleDraft')
+!commentVehicleDraft.text := 'Vehicle expenses drafted for potential route adjustments.'
+
+!new Comment('commentArtProjects')
+!commentArtProjects.text := 'Art projects reflect local culture and family engagement.'
+
+!insert (familyReunionVacationExpenses, commentAccommodation) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentDiningOutcome) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentSouvenirRefund) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentVehicleDraft) into ExpenseComment
+!insert (familyReunionVacationExpenses, commentArtProjects) into ExpenseComment
+

@@ -1,0 +1,69 @@
+!new Customer('customer20')
+!customer20.firstName := 'Emiliana'
+!customer20.lastName := 'Rossi'
+
+!new Booking('booking20')
+!booking20.bookingId := 56789
+!booking20.startDate := 'April 10, 2023'
+!booking20.endDate := 'April 17, 2023'
+!booking20.canceled := false
+!booking20.confirmed := true
+
+!new RoomReservation('roomreservation31')
+!roomreservation31.checkInDate := 'April 10, 2023'
+!roomreservation31.checkOutDate := 'April 13, 2023'
+
+!new RoomReservation('roomreservation32')
+!roomreservation32.checkInDate := 'April 13, 2023'
+!roomreservation32.checkOutDate := 'April 17, 2023'
+
+!new Room('room36')
+!room36.roomNumber := 210
+!room36.numBeds := 3
+!room36.pricePerNight := 220.00
+!room36.occupied := true
+!room36.blocked := false
+
+!new Room('room37')
+!room37.roomNumber := 312
+!room37.numBeds := 2
+!room37.pricePerNight := 180.00
+!room37.occupied := true
+!room37.blocked := false
+
+!new RoomExtra('roomextra45')
+!roomextra45.price := 35.00
+!roomextra45.description := 'Private Yoga Session'
+
+!new RoomExtra('roomextra46')
+!roomextra46.price := 45.00
+!roomextra46.description := 'Gourmet Dinner Experience'
+
+!new Bill('bill36')
+!bill36.billId := 345678
+!bill36.price := 680.00
+
+!new Bill('bill37')
+!bill37.billId := 345679
+!bill37.price := 680.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto20')
+!freeroomtypesdto20.roomTypeDescription := 'Business Suite'
+!freeroomtypesdto20.numBeds := 2
+!freeroomtypesdto20.pricePerNight := 260.00
+!freeroomtypesdto20.numFreeRooms := 4
+
+!insert (booking20, customer20) into BookingCustomer
+!insert (booking20, roomreservation31) into BookingRoomReservation
+!insert (booking20, roomreservation32) into BookingRoomReservation
+!insert (booking20, bill36) into BookingBill
+!insert (booking20, bill37) into BookingBill
+
+!insert (roomreservation31, room36) into RoomReservationRoom
+!insert (roomreservation32, room37) into RoomReservationRoom
+
+!insert (roomreservation31, roomextra45) into RoomReservationExtras
+!insert (roomreservation32, roomextra46) into RoomReservationExtras
+
+!insert (bill36, roomreservation31) into BillRoomReservation
+!insert (bill37, roomreservation32) into BillRoomReservation

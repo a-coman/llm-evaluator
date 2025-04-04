@@ -1,0 +1,39 @@
+!new Bank('bank24')
+!bank24.country := 'United Arab Emirates'
+!bank24.name := 'Desert Oasis Bank'
+!bank24.bic := 'DOBAAEAD'
+
+!new Account('account55')
+!account55.iban := 'AE99 DOBA 0000 9876 5432 10'
+!account55.balance := 1500000
+
+!new Account('account56')
+!account56.iban := 'AE99 DOBA 1111 2222 3333 44'
+!account56.balance := 0
+
+!new Person('person77')
+!person77.firstName := 'Amal'
+!person77.lastName := 'Al-Farsi'
+!person77.age := 30
+
+!new Person('person78')
+!person78.firstName := 'Fatima'
+!person78.lastName := 'El-Sayed'
+!person78.age := 48
+
+!new Person('person79')
+!person79.firstName := 'Khalid'
+!person79.lastName := 'Bin Rashid'
+!person79.age := 55
+
+!insert (person77, account55) into Ownership
+!insert (person79, account55) into Ownership
+!insert (person78, account56) into Ownership
+
+!insert (person77, account55) into Use
+!insert (person79, account55) into Use
+!insert (person78, account55) into Use
+!insert (person78, account56) into Use
+
+!insert (bank24, account55) into AccountOfBanks
+!insert (bank24, account56) into AccountOfBanks

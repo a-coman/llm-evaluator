@@ -1,0 +1,104 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant12')
+!restaurant12.name := 'Seaside Serenity'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner23')
+!owner23.name := 'Ella Fisher'
+!owner23.percentageShares := 60
+
+!new Owner('owner24')
+!owner24.name := 'Ryan Brooks'
+!owner24.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant12, owner23) into RestaurantOwner
+!insert (restaurant12, owner24) into RestaurantOwner
+
+-- Creating an assortment of tables
+!new Table('table23')
+!table23.number := 1201
+!table23.description := 'Ocean View Deck'
+!table23.capacity := 8
+
+!new Table('table24')
+!table24.number := 1202
+!table24.description := 'Sunset Bay Corner'
+!table24.capacity := 4
+
+-- Setting up staff members
+!new HeadWaiter('headwaiter12')
+!headwaiter12.name := 'James Carter'
+!headwaiter12.dateOfBirth := Date('1983-11-17')
+!headwaiter12.phoneNumber := '555-9090'
+
+!new Waiter('waiter16')
+!waiter16.name := 'Melissa Wong'
+!waiter16.dateOfBirth := Date('1992-02-14')
+!waiter16.phoneNumber := '555-2929'
+!waiter16.spokenLanguage := #English
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter12, waiter16) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a wedding reception
+!new Banquet('reservation12')
+!reservation12.time := Time('18:00')
+!reservation12.date := Date('2024-08-25')
+!reservation12.numberPeople := 10
+!reservation12.name := 'Wedding Celebration'
+!reservation12.phoneNumber := '555-3737'
+!reservation12.number := 210
+!reservation12.groupName := 'Smith-Jones Wedding'
+!reservation12.paymentMethod := #CreditCard
+!reservation12.busService := true
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant12, reservation12) into RestaurantReservation
+!insert (reservation12, waiter16) into ReservationWaiter
+!insert (reservation12, table23) into ReservationTable
+!insert (reservation12, table24) into ReservationTable
+
+-- Creating a BusDriver for the wedding reception
+!new BusDriver('busdriver5')
+!busdriver5.name := 'Michael Flynn'
+!busdriver5.dateOfBirth := Date('1988-06-23')
+!busdriver5.phoneNumber := '555-3434'
+!busdriver5.driverLicenseNr := 'DL567890'
+
+-- Establish BanquetBusDriver association
+!insert (reservation12, busdriver5) into BanquetBusDriver
+
+-- Adding a MenuItem for the reception dinner
+!new MenuItem('menuItem12')
+!menuItem12.description := 'Seafood Paella'
+!menuItem12.prepTime := 35.0
+!menuItem12.classification := #Main
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef12')
+!chef12.name := 'Thomas Keller'
+!chef12.dateOfBirth := Date('1965-10-14')
+!chef12.phoneNumber := '555-9999'
+
+!insert (menuItem12, chef12) into MenuItemChef
+
+-- Creating Cook under the supervision of Chef
+!new Cook('cook12')
+!cook12.name := 'Alice Waters'
+!cook12.dateOfBirth := Date('1944-04-28')
+!cook12.phoneNumber := '555-6767'
+!cook12.yearsOfExperience := 20
+
+-- Establishing association between Chef and Cook
+!insert (chef12, cook12) into ChefCook
+
+-- Creating an ItemOrder for the wedding reception
+!new ItemOrder('order12')
+!order12.time := Time('18:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order12, menuItem12) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation12, order12) into ReservationItemOrdered

@@ -1,0 +1,33 @@
+!new Expense('expense23')
+!expense23.amount := 1750.0
+!expense23.startDate := Date('2024-11-01')
+!expense23.endDate := Date('2024-11-30')
+
+!new Currency('currency21')
+!currency21.name := 'United Arab Emirates Dirham'
+!currency21.abbreviation := 'AED'
+
+!new Bill('bill40')
+!bill40.amount := 1000.0
+!bill40.category := 'Hotel Accommodation'
+!bill40.date := Date('2024-11-12')
+!bill40.paymentMethod := #CREDIT_CARD
+!bill40.status := #DRAFT
+
+!new Bill('bill41')
+!bill41.amount := 750.0
+!bill41.category := 'Conference Fees'
+!bill41.date := Date('2024-11-20')
+!bill41.paymentMethod := #CHECK
+!bill41.status := #VALIDATED
+
+!insert (expense23, bill40) into ExpenseContainsBills
+!insert (expense23, bill41) into ExpenseContainsBills
+
+!insert (bill40, currency21) into BillCurrency
+!insert (bill41, currency21) into BillCurrency
+
+!new Comment('comment23')
+!comment23.text := 'November expenses for hotel and conference'
+
+!insert (expense23, comment23) into ExpenseComment

@@ -1,0 +1,33 @@
+!new Expense('expense7')
+!expense7.amount := 600.0
+!expense7.startDate := Date('2023-07-01')
+!expense7.endDate := Date('2023-07-31')
+
+!new Currency('currency5')
+!currency5.name := 'Canadian Dollar'
+!currency5.abbreviation := 'CAD'
+
+!new Bill('bill11')
+!bill11.amount := 200.0
+!bill11.category := 'Healthcare'
+!bill11.date := Date('2023-07-10')
+!bill11.paymentMethod := #CHECK
+!bill11.status := #DRAFT
+
+!new Bill('bill12')
+!bill12.amount := 400.0
+!bill12.category := 'Education'
+!bill12.date := Date('2023-07-20')
+!bill12.paymentMethod := #CREDIT_CARD
+!bill12.status := #VALIDATED
+
+!insert (expense7, bill11) into ExpenseContainsBills
+!insert (expense7, bill12) into ExpenseContainsBills
+
+!insert (bill11, currency5) into BillCurrency
+!insert (bill12, currency5) into BillCurrency
+
+!new Comment('comment7')
+!comment7.text := 'Healthcare and education expenses for July'
+
+!insert (expense7, comment7) into ExpenseComment

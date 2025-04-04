@@ -1,0 +1,67 @@
+!new StateMachine('choppySeasNavigator')
+!choppySeasNavigator.name := 'choppySeasNavigator'
+
+!new State('calm')
+!calm.name := 'calm'
+
+!new State('stormy')
+!stormy.name := 'stormy'
+
+!new State('nocturnal')
+!nocturnal.name := 'nocturnal'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('toStormy')
+!toStormy.name := 'toStormy'
+
+!new Transition('toNocturnal')
+!toNocturnal.name := 'toNocturnal'
+
+!new Transition('toMaintenance')
+!toMaintenance.name := 'toMaintenance'
+
+!new Transition('resumeCalm')
+!resumeCalm.name := 'resumeCalm'
+
+!new TimeEvent('timeEventToStormy')
+!timeEventToStormy.time := 5
+
+!new TimeEvent('timeEventToNocturnal')
+!timeEventToNocturnal.time := 30
+
+!new TimeEvent('timeEventToMaintenance')
+!timeEventToMaintenance.time := 45
+
+!new TimeEvent('timeEventResumeCalm')
+!timeEventResumeCalm.time := 600
+
+!insert (choppySeasNavigator, calm) into StateMachineContainsStates
+!insert (choppySeasNavigator, stormy) into StateMachineContainsStates
+!insert (choppySeasNavigator, nocturnal) into StateMachineContainsStates
+!insert (choppySeasNavigator, maintenance) into StateMachineContainsStates
+
+!insert (choppySeasNavigator, calm) into StateMachineStartsStates
+
+!insert (choppySeasNavigator, toStormy) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, toNocturnal) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, toMaintenance) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, resumeCalm) into StateMachineContainsTransitions
+
+!insert (toStormy, timeEventToStormy) into TransitionContainsEvents
+!insert (toNocturnal, timeEventToNocturnal) into TransitionContainsEvents
+!insert (toMaintenance, timeEventToMaintenance) into TransitionContainsEvents
+!insert (resumeCalm, timeEventResumeCalm) into TransitionContainsEvents
+
+!insert (calm, toStormy) into StateTransition
+!insert (toStormy, stormy) into TransitionState
+
+!insert (stormy, toNocturnal) into StateTransition
+!insert (toNocturnal, nocturnal) into TransitionState
+
+!insert (nocturnal, toMaintenance) into StateTransition
+!insert (toMaintenance, maintenance) into TransitionState
+
+!insert (maintenance, resumeCalm) into StateTransition
+!insert (resumeCalm, calm) into TransitionState

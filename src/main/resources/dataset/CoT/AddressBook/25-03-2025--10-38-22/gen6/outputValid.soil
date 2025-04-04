@@ -1,0 +1,364 @@
+!new AddressBook('AddressBook_6')
+
+!new Person('Laura_Espinoza')
+!Laura_Espinoza.name := 'Laura Espinoza'
+!Laura_Espinoza.phone := '+34-93-555-3344'
+!Laura_Espinoza.website := 'lauraresearch.net'
+!Laura_Espinoza.email := 'laura.espinoza@barcelonainnovate.es'
+!Laura_Espinoza.title := 'Research Scientist'
+
+!new Address('Address_16')
+!Address_16.city := 'Barcelona'
+!Address_16.houseNr := '76'
+!Address_16.street := 'Gran Via de les Corts Catalanes'
+!insert (Laura_Espinoza, Address_16) into ContactContainsAddress
+
+!new Note('Note_16')
+!Note_16.author := 'Laura Espinoza'
+!Note_16.time := Date('2024-04-15')
+!Note_16.type := #MEETING
+!Note_16.comment := 'Presented findings at the annual renewable energy conference.'
+!insert (Laura_Espinoza, Note_16) into ContactContainsNote
+
+!new Company('Fintech_Innovators')
+!Fintech_Innovators.name := 'Fintech Innovators'
+!Fintech_Innovators.phone := '+65-6222-8899'
+!Fintech_Innovators.website := 'www.fintechinnovators.sg'
+!Fintech_Innovators.email := 'hello@fintechinnovators.sg'
+!Fintech_Innovators.industry := 'Financial Technology'
+
+!new Address('Address_17')
+!Address_17.city := 'Singapore'
+!Address_17.houseNr := '10'
+!Address_17.street := 'Marina Bay Sands'
+!insert (Fintech_Innovators, Address_17) into ContactContainsAddress
+
+!new Note('Note_17')
+!Note_17.author := 'Rohan Kapoor'
+!Note_17.time := Date('2024-05-22')
+!Note_17.type := #CALL
+!Note_17.comment := 'Discussed strategies for implementing blockchain solutions.'
+!insert (Fintech_Innovators, Note_17) into ContactContainsNote
+
+!new Person('Zoe_Ndlovu')
+!Zoe_Ndlovu.name := 'Zoe Ndlovu'
+!Zoe_Ndlovu.phone := '+263-4-777-8888'
+!Zoe_Ndlovu.website := 'zoetechconsulting.co.zw'
+!Zoe_Ndlovu.email := 'zoe.ndlovu@consultingafrica.com'
+!Zoe_Ndlovu.title := 'Technology Consultant'
+
+!new Address('Address_18')
+!Address_18.city := 'Harare'
+!Address_18.houseNr := '101'
+!Address_18.street := 'Samora Machel Avenue'
+!insert (Zoe_Ndlovu, Address_18) into ContactContainsAddress
+
+!new Note('Note_18')
+!Note_18.author := 'Zoe Ndlovu'
+!Note_18.time := Date('2024-06-30')
+!Note_18.type := #EMAIL
+!Note_18.comment := 'Sent a proposal for integrating AI tools in financial services.'
+!insert (Zoe_Ndlovu, Note_18) into ContactContainsNote
+
+!new Relationship('Relationship_12')
+!Relationship_12.type := #COWORKER
+!insert (Zoe_Ndlovu, Relationship_12) into ContactToRelationship
+!insert (Relationship_12, Laura_Espinoza) into RelationshipToContact
+
+!new Relationship('Relationship_13')
+!Relationship_13.type := #SUBDIVISION
+!insert (Zoe_Ndlovu, Relationship_13) into ContactToRelationship
+!insert (Relationship_13, Fintech_Innovators) into RelationshipToContact
+
+!insert (AddressBook_6, Laura_Espinoza) into AddressBookMadeOfContact
+!insert (AddressBook_6, Fintech_Innovators) into AddressBookMadeOfContact
+!insert (AddressBook_6, Zoe_Ndlovu) into AddressBookMadeOfContact
+
+!new AddressBook('AddressBook_6')
+
+!new Company('Culinary_Innovations_Inc')
+!Culinary_Innovations_Inc.name := 'Culinary Innovations Inc.'
+!Culinary_Innovations_Inc.phone := '+65-6571-4001'
+!Culinary_Innovations_Inc.website := 'www.culinaryinnovations.sg'
+!Culinary_Innovations_Inc.email := 'support@culinaryinnovations.sg'
+!Culinary_Innovations_Inc.industry := 'Food Technology'
+
+!new Address('Address_Culinary_Innovations')
+!Address_Culinary_Innovations.city := 'Singapore'
+!Address_Culinary_Innovations.houseNr := '50'
+!Address_Culinary_Innovations.street := 'Orchard Road'
+!insert (Culinary_Innovations_Inc, Address_Culinary_Innovations) into ContactContainsAddress
+
+!new Note('Note_Culinary_Innovations')
+!Note_Culinary_Innovations.author := 'Jasmine Lee'
+!Note_Culinary_Innovations.time := Date('2023-08-11')
+!Note_Culinary_Innovations.type := #CALL
+!Note_Culinary_Innovations.comment := 'Discussed integration of AI in recipe development.'
+!insert (Culinary_Innovations_Inc, Note_Culinary_Innovations) into ContactContainsNote
+
+!new Person('Chef_Lian_Wei')
+!Chef_Lian_Wei.name := 'Chef Lian Wei'
+!Chef_Lian_Wei.phone := '+852-2891-1234'
+!Chef_Lian_Wei.website := 'www.chefwei.hk'
+!Chef_Lian_Wei.email := 'liaowei@chefwei.hk'
+!Chef_Lian_Wei.title := 'Executive Chef'
+
+!new Address('Address_Chef_Lian_Wei')
+!Address_Chef_Lian_Wei.city := 'Hong Kong'
+!Address_Chef_Lian_Wei.houseNr := '88'
+!Address_Chef_Lian_Wei.street := 'Victoria Street'
+!insert (Chef_Lian_Wei, Address_Chef_Lian_Wei) into ContactContainsAddress
+
+!new Note('Note_Chef_Lian_Wei')
+!Note_Chef_Lian_Wei.author := 'Ming Zhao'
+!Note_Chef_Lian_Wei.time := Date('2023-02-20')
+!Note_Chef_Lian_Wei.type := #EMAIL
+!Note_Chef_Lian_Wei.comment := 'Invitation to the International Culinary Symposium.'
+!insert (Chef_Lian_Wei, Note_Chef_Lian_Wei) into ContactContainsNote
+
+!new Person('Elena_Costa')
+!Elena_Costa.name := 'Elena Costa'
+!Elena_Costa.phone := '+39-06-1234-5678'
+!Elena_Costa.website := 'www.elenacostaart.it'
+!Elena_Costa.email := 'elenacosta@artmail.it'
+!Elena_Costa.title := 'Digital Artist'
+
+!new Address('Address_Elena_Costa')
+!Address_Elena_Costa.city := 'Rome'
+!Address_Elena_Costa.houseNr := '22'
+!Address_Elena_Costa.street := 'Via Condotti'
+!insert (Elena_Costa, Address_Elena_Costa) into ContactContainsAddress
+
+!new Note('Note_Elena_Costa')
+!Note_Elena_Costa.author := 'Mario Rossi'
+!Note_Elena_Costa.time := Date('2023-03-16')
+!Note_Elena_Costa.type := #MEETING
+!Note_Elena_Costa.comment := 'Collaborated on a virtual art exhibition.'
+!insert (Elena_Costa, Note_Elena_Costa) into ContactContainsNote
+
+!new Relationship('Relationship_Culinary_Subdivision_Chef_Wei')
+!Relationship_Culinary_Subdivision_Chef_Wei.type := #SUBDIVISION
+!insert (Culinary_Innovations_Inc, Relationship_Culinary_Subdivision_Chef_Wei) into ContactToRelationship
+!insert (Relationship_Culinary_Subdivision_Chef_Wei, Chef_Lian_Wei) into RelationshipToContact
+
+!new Relationship('Relationship_Chef_Wei_to_Culinary_Innovations')
+!Relationship_Chef_Wei_to_Culinary_Innovations.type := #EMPLOYEE
+!insert (Chef_Lian_Wei, Relationship_Chef_Wei_to_Culinary_Innovations) into ContactToRelationship
+!insert (Relationship_Chef_Wei_to_Culinary_Innovations, Culinary_Innovations_Inc) into RelationshipToContact
+
+!new Relationship('Relationship_Elena_to_Chef_Wei')
+!Relationship_Elena_to_Chef_Wei.type := #COWORKER
+!insert (Elena_Costa, Relationship_Elena_to_Chef_Wei) into ContactToRelationship
+!insert (Relationship_Elena_to_Chef_Wei, Chef_Lian_Wei) into RelationshipToContact
+
+!insert (AddressBook_6, Culinary_Innovations_Inc) into AddressBookMadeOfContact
+!insert (AddressBook_6, Chef_Lian_Wei) into AddressBookMadeOfContact
+!insert (AddressBook_6, Elena_Costa) into AddressBookMadeOfContact
+
+!new AddressBook('Nexus_International_Network')
+
+!new Person('Youssef_El_Khoury')
+!Youssef_El_Khoury.name := 'Youssef El Khoury'
+!Youssef_El_Khoury.phone := '+212-537-655-839'
+!Youssef_El_Khoury.website := 'youssefelkhoury-solutions.ma'
+!Youssef_El_Khoury.email := 'youssef.elkhoury@nexusnetwork.ma'
+!Youssef_El_Khoury.title := 'Business Development Director'
+
+!new Address('Address_Youssef_El_Khoury')
+!Address_Youssef_El_Khoury.city := 'Rabat'
+!Address_Youssef_El_Khoury.houseNr := '12'
+!Address_Youssef_El_Khoury.street := 'Avenue Mohammed V'
+!insert (Youssef_El_Khoury, Address_Youssef_El_Khoury) into ContactContainsAddress
+
+!new Note('Note_Youssef_El_Khoury')
+!Note_Youssef_El_Khoury.author := 'Youssef El Khoury'
+!Note_Youssef_El_Khoury.time := Date('2023-09-03')
+!Note_Youssef_El_Khoury.type := #MEETING
+!Note_Youssef_El_Khoury.comment := 'Led workshop on expanding telecommunications infrastructure in North Africa.'
+!insert (Youssef_El_Khoury, Note_Youssef_El_Khoury) into ContactContainsNote
+
+!new Company('Alpine_IT_Solutions')
+!Alpine_IT_Solutions.name := 'Alpine IT Solutions'
+!Alpine_IT_Solutions.phone := '+43-1-3456-789'
+!Alpine_IT_Solutions.website := 'alpineitsolutions.at'
+!Alpine_IT_Solutions.email := 'service@alpineitsolutions.at'
+!Alpine_IT_Solutions.industry := 'Cloud Computing'
+
+!new Address('Address_Alpine_IT_Solutions')
+!Address_Alpine_IT_Solutions.city := 'Vienna'
+!Address_Alpine_IT_Solutions.houseNr := '9'
+!Address_Alpine_IT_Solutions.street := 'Kärntnerring'
+!insert (Alpine_IT_Solutions, Address_Alpine_IT_Solutions) into ContactContainsAddress
+
+!new Note('Note_Alpine_IT_Solutions')
+!Note_Alpine_IT_Solutions.author := 'CTO'
+!Note_Alpine_IT_Solutions.time := Date('2023-08-10')
+!Note_Alpine_IT_Solutions.type := #EMAIL
+!Note_Alpine_IT_Solutions.comment := 'Provided a new rollout of secure cloud platforms for European SMEs.'
+!insert (Alpine_IT_Solutions, Note_Alpine_IT_Solutions) into ContactContainsNote
+
+!new Person('Svetlana_Ivanova')
+!Svetlana_Ivanova.name := 'Svetlana Ivanova'
+!Svetlana_Ivanova.phone := '+7-495-123-2468'
+!Svetlana_Ivanova.website := 'svetlanaivanova-connect.ru'
+!Svetlana_Ivanova.email := 'svetlana.ivanova@nexusnetwork.ru'
+!Svetlana_Ivanova.title := 'Head of Innovation'
+
+!new Address('Address_Svetlana_Ivanova')
+!Address_Svetlana_Ivanova.city := 'Moscow'
+!Address_Svetlana_Ivanova.houseNr := '32'
+!Address_Svetlana_Ivanova.street := 'Tverskaya Street'
+!insert (Svetlana_Ivanova, Address_Svetlana_Ivanova) into ContactContainsAddress
+
+!new Note('Note_Svetlana_Ivanova')
+!Note_Svetlana_Ivanova.author := 'Svetlana Ivanova'
+!Note_Svetlana_Ivanova.time := Date('2023-07-22')
+!Note_Svetlana_Ivanova.type := #CALL
+!Note_Svetlana_Ivanova.comment := 'Discussed the integration of AI-driven solutions in logistics systems.'
+!insert (Svetlana_Ivanova, Note_Svetlana_Ivanova) into ContactContainsNote
+
+!new Company('Serengeti_Renewable_Development')
+!Serengeti_Renewable_Development.name := 'Serengeti Renewable Development'
+!Serengeti_Renewable_Development.phone := '+255-22-1234-5678'
+!Serengeti_Renewable_Development.website := 'serengetirenewable-tz.com'
+!Serengeti_Renewable_Development.email := 'info@serengetirenewable-tz.com'
+!Serengeti_Renewable_Development.industry := 'Renewable Energy'
+
+!new Address('Address_Serengeti_Renewable_Development')
+!Address_Serengeti_Renewable_Development.city := 'Dar es Salaam'
+!Address_Serengeti_Renewable_Development.houseNr := '57'
+!Address_Serengeti_Renewable_Development.street := 'Uhuru Street'
+!insert (Serengeti_Renewable_Development, Address_Serengeti_Renewable_Development) into ContactContainsAddress
+
+!new Note('Note_Serengeti_Renewable_Development')
+!Note_Serengeti_Renewable_Development.author := 'Operations Manager'
+!Note_Serengeti_Renewable_Development.time := Date('2023-05-17')
+!Note_Serengeti_Renewable_Development.type := #MEETING
+!Note_Serengeti_Renewable_Development.comment := 'Explored solar energy expansion projects in East Africa.'
+!insert (Serengeti_Renewable_Development, Note_Serengeti_Renewable_Development) into ContactContainsNote
+
+!new Relationship('Relationship_Youssef_to_Alpine_IT')
+!Relationship_Youssef_to_Alpine_IT.type := #COWORKER
+!insert (Youssef_El_Khoury, Relationship_Youssef_to_Alpine_IT) into ContactToRelationship
+!insert (Relationship_Youssef_to_Alpine_IT, Alpine_IT_Solutions) into RelationshipToContact
+
+!new Relationship('Relationship_Svetlana_to_Youssef')
+!Relationship_Svetlana_to_Youssef.type := #COWORKER
+!insert (Svetlana_Ivanova, Relationship_Svetlana_to_Youssef) into ContactToRelationship
+!insert (Relationship_Svetlana_to_Youssef, Youssef_El_Khoury) into RelationshipToContact
+
+!new Relationship('Relationship_Youssef_to_Serengeti_Renewable')
+!Relationship_Youssef_to_Serengeti_Renewable.type := #BOSS
+!insert (Youssef_El_Khoury, Relationship_Youssef_to_Serengeti_Renewable) into ContactToRelationship
+!insert (Relationship_Youssef_to_Serengeti_Renewable, Serengeti_Renewable_Development) into RelationshipToContact
+
+!new Relationship('Relationship_Svetlana_to_Serengeti_Renewable')
+!Relationship_Svetlana_to_Serengeti_Renewable.type := #COWORKER
+!insert (Svetlana_Ivanova, Relationship_Svetlana_to_Serengeti_Renewable) into ContactToRelationship
+!insert (Relationship_Svetlana_to_Serengeti_Renewable, Serengeti_Renewable_Development) into RelationshipToContact
+
+!insert (Nexus_International_Network, Youssef_El_Khoury) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Alpine_IT_Solutions) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Svetlana_Ivanova) into AddressBookMadeOfContact
+!insert (Nexus_International_Network, Serengeti_Renewable_Development) into AddressBookMadeOfContact
+
+!new AddressBook('World_Heritage_Preservation_Consortium')
+
+!new Company('World_Heritage_Trust')
+!World_Heritage_Trust.name := 'World Heritage Trust'
+!World_Heritage_Trust.phone := '+44 20 7890 1234'
+!World_Heritage_Trust.website := 'www.worldheritagetrust.org'
+!World_Heritage_Trust.email := 'contact@worldheritagetrust.org'
+!World_Heritage_Trust.industry := 'Cultural Preservation'
+
+!new Address('Address_Edinburgh_Trust')
+!Address_Edinburgh_Trust.city := 'Edinburgh'
+!Address_Edinburgh_Trust.houseNr := '10'
+!Address_Edinburgh_Trust.street := 'Castle Hill'
+!insert (World_Heritage_Trust, Address_Edinburgh_Trust) into ContactContainsAddress
+
+!new Address('Address_Rome_Trust')
+!Address_Rome_Trust.city := 'Rome'
+!Address_Rome_Trust.houseNr := '50'
+!Address_Rome_Trust.street := 'Via del Corso'
+!insert (World_Heritage_Trust, Address_Rome_Trust) into ContactContainsAddress
+
+!new Note('Note_World_Heritage_Trust')
+!Note_World_Heritage_Trust.author := 'Catherine Grey'
+!Note_World_Heritage_Trust.time := Date('2023-04-22')
+!Note_World_Heritage_Trust.type := #MEETING
+!Note_World_Heritage_Trust.comment := 'Strategic meeting for funding of new restoration projects.'
+!insert (World_Heritage_Trust, Note_World_Heritage_Trust) into ContactContainsNote
+
+!new Company('Preservation_Architects_Inc')
+!Preservation_Architects_Inc.name := 'Preservation Architects Inc.'
+!Preservation_Architects_Inc.phone := '+1 312 555 6789'
+!Preservation_Architects_Inc.website := 'www.preservationarchitects.com'
+!Preservation_Architects_Inc.email := 'info@preservationarchitects.com'
+!Preservation_Architects_Inc.industry := 'Architecture and Restoration'
+
+!new Address('Address_Chicago_Architects')
+!Address_Chicago_Architects.city := 'Chicago'
+!Address_Chicago_Architects.houseNr := '210'
+!Address_Chicago_Architects.street := 'N Michigan Avenue'
+!insert (Preservation_Architects_Inc, Address_Chicago_Architects) into ContactContainsAddress
+
+!new Note('Note_Preservation_Architects_Inc')
+!Note_Preservation_Architects_Inc.author := 'Michael D\'Arcy'
+!Note_Preservation_Architects_Inc.time := Date('2023-05-15')
+!Note_Preservation_Architects_Inc.type := #EMAIL
+!Note_Preservation_Architects_Inc.comment := 'Proposal for architectural input in UNESCO heritage sites.'
+!insert (Preservation_Architects_Inc, Note_Preservation_Architects_Inc) into ContactContainsNote
+
+!new Person('Min_Jae_Lee')
+!Min_Jae_Lee.name := 'Min-Jae Lee'
+!Min_Jae_Lee.phone := '+82 2 555 7890'
+!Min_Jae_Lee.website := 'www.minjaeconsulting.com'
+!Min_Jae_Lee.email := 'minjae.lee@advisor.com'
+!Min_Jae_Lee.title := 'Heritage Conservation Specialist'
+
+!new Address('Address_Seoul_Lee')
+!Address_Seoul_Lee.city := 'Seoul'
+!Address_Seoul_Lee.houseNr := '99'
+!Address_Seoul_Lee.street := 'Insa-dong'
+!insert (Min_Jae_Lee, Address_Seoul_Lee) into ContactContainsAddress
+
+!new Address('Address_Edinburgh_Lee')
+!Address_Edinburgh_Lee.city := 'Edinburgh'
+!Address_Edinburgh_Lee.houseNr := '15'
+!Address_Edinburgh_Lee.street := 'Castle Hill'
+!insert (Min_Jae_Lee, Address_Edinburgh_Lee) into ContactContainsAddress
+
+!new Note('Note_1_Min_Jae_Lee')
+!Note_1_Min_Jae_Lee.author := 'Min-Jae Lee'
+!Note_1_Min_Jae_Lee.time := Date('2023-03-10')
+!Note_1_Min_Jae_Lee.type := #CALL
+!Note_1_Min_Jae_Lee.comment := 'Evaluated potential sites in Korea for collaboration.'
+!insert (Min_Jae_Lee, Note_1_Min_Jae_Lee) into ContactContainsNote
+
+!new Note('Note_2_Min_Jae_Lee')
+!Note_2_Min_Jae_Lee.author := 'Catherine Grey'
+!Note_2_Min_Jae_Lee.time := Date('2023-06-05')
+!Note_2_Min_Jae_Lee.type := #EMAIL
+!Note_2_Min_Jae_Lee.comment := 'Agreed upon conservation techniques and resource sharing.'
+!insert (Min_Jae_Lee, Note_2_Min_Jae_Lee) into ContactContainsNote
+
+!new Relationship('Relationship_Trust_to_Architects')
+!Relationship_Trust_to_Architects.type := #EMPLOYEE
+!insert (World_Heritage_Trust, Relationship_Trust_to_Architects) into ContactToRelationship
+!insert (Relationship_Trust_to_Architects, Preservation_Architects_Inc) into RelationshipToContact
+
+!new Relationship('Relationship_Trust_to_Min_Jae_Lee')
+!Relationship_Trust_to_Min_Jae_Lee.type := #SUBDIVISION
+!insert (World_Heritage_Trust, Relationship_Trust_to_Min_Jae_Lee) into ContactToRelationship
+!insert (Relationship_Trust_to_Min_Jae_Lee, Min_Jae_Lee) into RelationshipToContact
+
+!new Relationship('Relationship_Architects_to_Min_Jae_Lee')
+!Relationship_Architects_to_Min_Jae_Lee.type := #COWORKER
+!insert (Preservation_Architects_Inc, Relationship_Architects_to_Min_Jae_Lee) into ContactToRelationship
+!insert (Relationship_Architects_to_Min_Jae_Lee, Min_Jae_Lee) into RelationshipToContact
+
+!insert (World_Heritage_Preservation_Consortium, World_Heritage_Trust) into AddressBookMadeOfContact
+!insert (World_Heritage_Preservation_Consortium, Preservation_Architects_Inc) into AddressBookMadeOfContact
+!insert (World_Heritage_Preservation_Consortium, Min_Jae_Lee) into AddressBookMadeOfContact
+

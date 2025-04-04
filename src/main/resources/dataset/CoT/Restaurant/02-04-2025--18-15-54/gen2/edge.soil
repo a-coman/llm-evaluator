@@ -1,0 +1,145 @@
+!new Restaurant('restaurant9')
+!restaurant9.name := 'The Global Plate'
+
+!new Owner('owner19')
+!owner19.name := 'Marco Zanetti'
+!owner19.percentageShares := 40
+
+!new Owner('owner20')
+!owner20.name := 'Amara El-Adly'
+!owner20.percentageShares := 40
+
+!new Owner('owner21')
+!owner21.name := 'Hiro Suzuki'
+!owner21.percentageShares := 20
+
+!insert (restaurant9, owner19) into RestaurantOwner
+!insert (restaurant9, owner20) into RestaurantOwner
+!insert (restaurant9, owner21) into RestaurantOwner
+
+!new Table('table21')
+!table21.number := 201
+!table21.description := 'VIP Lounge Area'
+!table21.capacity := 2
+
+!new Table('table22')
+!table22.number := 202
+!table22.description := 'High-Profile Deck'
+!table22.capacity := 20  -- Adjust to cover the reservation requirement
+
+!new Table('table23')
+!table23.number := 203
+!table23.description := 'Spacious Dining Hall'
+!table23.capacity := 80  -- Adjust to cover the reservation requirement
+
+!new RegularCustomer('customer4')
+!customer4.name := 'Carlos Mendoza'
+!customer4.prefferedLanguage := #English
+
+!new Chef('chef13')
+!chef13.name := 'Georgios Nikolaidis'
+
+!new Cook('cook14')
+!cook14.name := 'Akira Tanaka'
+!cook14.dateOfBirth := Date('1975-04-10')  -- Dummy date of birth
+!cook14.yearsOfExperience := 10
+
+!new Cook('cook15')
+!cook15.name := 'Fatima Al-Hassan'
+!cook15.dateOfBirth := Date('1982-07-25')  -- Dummy date of birth
+!cook15.yearsOfExperience := 8
+
+!insert (chef13, cook14) into ChefCook
+!insert (chef13, cook15) into ChefCook
+
+!new Individual('individualReservation6')
+!individualReservation6.time := Time('20:00')
+!individualReservation6.date := Date('2024-04-22')
+!individualReservation6.numberPeople := 1
+!individualReservation6.name := 'Samuel Levine'
+!individualReservation6.phoneNumber := '+1 212 555 0192'
+!individualReservation6.number := 20240422
+!individualReservation6.seating := #Inside
+!individualReservation6.smoking := #NonSmoking
+
+!insert (restaurant9, individualReservation6) into RestaurantReservation
+!insert (individualReservation6, table21) into ReservationTable
+
+!new HeadWaiter('headWaiter8')
+!headWaiter8.name := 'Josephine Laurent'
+!headWaiter8.dateOfBirth := Date('1989-02-20')  -- Dummy date of birth
+!headWaiter8.phoneNumber := '+1 212 555 1234'
+
+!new Waiter('waiter15')
+!waiter15.name := 'Andre Federer'
+!waiter15.dateOfBirth := Date('1990-11-11')  -- Dummy date of birth
+!waiter15.phoneNumber := '+1 212 555 5678'
+
+!new Waiter('waiter16')
+!waiter16.name := 'Mei Liu'
+!waiter16.dateOfBirth := Date('1992-05-25')  -- Dummy date of birth
+!waiter16.phoneNumber := '+1 212 555 8765'
+
+!insert (headWaiter8, waiter15) into HeadWaiterWaiter
+!insert (headWaiter8, waiter16) into HeadWaiterWaiter
+!insert (individualReservation6, waiter15) into ReservationWaiter
+
+!new ItemOrder('itemOrder8')
+!itemOrder8.time := Time('20:15')
+!insert (individualReservation6, itemOrder8) into ReservationItemOrdered
+
+!new MenuItem('menuItem12')
+!menuItem12.description := 'Mediterranean Delight Salad'
+!menuItem12.prepTime := 10.0
+!menuItem12.classification := #Apetizer
+
+!insert (itemOrder8, menuItem12) into ItemOrderMenuItem
+!insert (menuItem12, chef13) into MenuItemChef
+
+!new FoodItem('foodItem22')
+!foodItem22.number := 401
+!foodItem22.description := 'Organic Spinach'
+!foodItem22.purchaseFlag := true
+!foodItem22.unit := #Pound
+
+!insert (menuItem12, foodItem22) into MenuItemFoodItem
+
+!new MenuItem('menuItem13')
+!menuItem13.description := 'Miso-Glazed Cod'
+!menuItem13.prepTime := 20.0
+!menuItem13.classification := #Main
+
+!new ItemOrder('itemOrder9')
+!itemOrder9.time := Time('20:30')  -- Creating a new ItemOrder instance for the second menu item
+!insert (individualReservation6, itemOrder9) into ReservationItemOrdered
+!insert (itemOrder9, menuItem13) into ItemOrderMenuItem
+!insert (menuItem13, chef13) into MenuItemChef
+
+!new FoodItem('foodItem23')
+!foodItem23.number := 402
+!foodItem23.description := 'Fresh Cod'
+!foodItem23.purchaseFlag := true
+!foodItem23.unit := #Pound
+
+!new Allergen('allergen12')
+!allergen12.type := #Seafood
+
+!insert (menuItem13, foodItem23) into MenuItemFoodItem
+!insert (foodItem23, allergen12) into FoodItemAllergen
+
+!new Banquet('banquet7')
+!banquet7.date := Date('2024-04-23')
+!banquet7.time := Time('19:00')
+!banquet7.numberPeople := 100
+!banquet7.name := 'Noelle Rivera'
+!banquet7.phoneNumber := '+33 1 44 55 66 77'
+!banquet7.number := 20240423
+!banquet7.paymentMethod := #CreditCard
+!banquet7.busService := false
+
+!insert (restaurant9, banquet7) into RestaurantReservation
+!insert (banquet7, table22) into ReservationTable
+!insert (banquet7, table23) into ReservationTable
+
+!insert (banquet7, waiter15) into ReservationWaiter
+!insert (banquet7, waiter16) into ReservationWaiter

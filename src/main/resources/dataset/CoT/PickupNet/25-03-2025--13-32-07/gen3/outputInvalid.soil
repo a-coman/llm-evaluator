@@ -1,0 +1,86 @@
+!new Driver('driver21')
+!driver21.id := 'DRV3004'
+!driver21.name := 'Anil Gupta'
+
+!new Shipment('shipment20')
+!shipment20.id := 'SHP9005'
+!shipment20.status := #UNDERWAY
+
+!new Shipment('shipment21')
+!shipment21.id := 'SHP9006'
+!shipment21.status := #NEW
+
+!new Address('pickupAddress20')
+!pickupAddress20.text := 'Dadar Market, Mumbai, MH 400014, India'
+
+!new GeoLocation('pickupGeoLocation20')
+!pickupGeoLocation20.latitude := 19.0180
+!pickupGeoLocation20.longitude := 72.8446
+
+!new Address('deliveryAddress20')
+!deliveryAddress20.text := 'Colaba Causeway, Mumbai, MH 400005, India'
+
+!new GeoLocation('deliveryGeoLocation20')
+!deliveryGeoLocation20.latitude := 18.9218
+!deliveryGeoLocation20.longitude := 72.8322
+
+!new Address('pickupAddress21')
+!pickupAddress21.text := 'Vile Parle West, Mumbai, MH 400056, India'
+
+!new GeoLocation('pickupGeoLocation21')
+!pickupGeoLocation21.latitude := 19.0990
+!pickupGeoLocation21.longitude := 72.8543
+
+!new Address('deliveryAddress21')
+!deliveryAddress21.text := 'Juhu Beach, Mumbai, MH 400049, India'
+
+!new GeoLocation('deliveryGeoLocation21')
+!deliveryGeoLocation21.latitude := 19.1027
+!deliveryGeoLocation21.longitude := 72.8258
+
+!new Station('station16')
+
+!new Customer('customer21')
+!customer21.id := 'CUST701'
+!customer21.name := 'Riya Mittal'
+!customer21.twitterUserName := '@riya_mumbai'
+
+!new Customer('customer22')
+!customer22.id := 'CUST702'
+!customer22.name := 'Vikram Desai'
+!customer22.twitterUserName := '@vikramdesai'
+
+!insert (driver21, shipment20) into DriverShipment
+
+!insert (driver21, shipment21) into DriverShipment
+
+!insert (shipment20, pickupAddress20) into ShipmentContainsPickUpAddress
+
+!insert (shipment20, deliveryAddress20) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress20, pickupGeoLocation20) into AddressContainsGeoLocation
+
+!insert (deliveryAddress20, deliveryGeoLocation20) into AddressContainsGeoLocation
+
+!insert (shipment21, pickupAddress21) into ShipmentContainsPickUpAddress
+
+!insert (shipment21, deliveryAddress21) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress21, pickupGeoLocation21) into AddressContainsGeoLocation
+
+!insert (deliveryAddress21, deliveryGeoLocation21) into AddressContainsGeoLocation
+
+!insert (customer21, shipment20) into CustomerConsistsOfShipment
+
+!insert (customer21, shipment21) into CustomerConsistsOfShipment
+
+!insert (station16, customer21) into StationContainsCustomer
+
+!insert (station16, customer22) into StationContainsCustomer
+
+!insert (station16, shipment20) into StationShipment
+
+!insert (station16, shipment21) into StationShipment
+
+!insert (station16, driver21) into StationContainsDriver
+

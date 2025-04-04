@@ -1,0 +1,71 @@
+!new AddressBook('addressBook23')
+
+!new Company('redwoodPublishing')
+!redwoodPublishing.name := 'Redwood Publishing'
+!redwoodPublishing.phone := '555-321-6789'
+!redwoodPublishing.website := 'www.redwoodpublishing.com'
+!redwoodPublishing.email := 'contact@redwoodpublishing.com'
+!redwoodPublishing.industry := 'Publishing'
+
+!new Person('elizabethGreen')
+!elizabethGreen.name := 'Elizabeth Green'
+!elizabethGreen.phone := '222-555-0987'
+!elizabethGreen.website := 'www.elizabethgreenwriter.com'
+!elizabethGreen.email := 'elizabeth.green@redwoodpublishing.com'
+!elizabethGreen.title := 'Editor in Chief'
+
+!new Note('bookLaunchMeetingNote')
+!bookLaunchMeetingNote.author := 'Elizabeth Green'
+!bookLaunchMeetingNote.time := Date('2025-07-11')
+!bookLaunchMeetingNote.type := #MEETING
+!bookLaunchMeetingNote.comment := 'Organized book launch meetings with authors and the marketing team'
+
+!new Address('elizabethAddress')
+!elizabethAddress.city := 'Boston'
+!elizabethAddress.houseNr := '124'
+!elizabethAddress.street := 'Literary Way'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, redwoodPublishing) into RelationshipToContact
+!insert (elizabethGreen, bossRelationship) into ContactToRelationship
+!insert (elizabethGreen, elizabethAddress) into ContactContainsAddress
+!insert (elizabethGreen, bookLaunchMeetingNote) into ContactContainsNote
+
+!new Person('jasonParker')
+!jasonParker.name := 'Jason Parker'
+!jasonParker.phone := '333-666-1234'
+!jasonParker.website := 'www.jasonparkereditor.com'
+!jasonParker.email := 'jason.parker@example.com'
+!jasonParker.title := 'Acquisitions Editor'
+
+!new Note('manuscriptReviewNote')
+!manuscriptReviewNote.author := 'Jason Parker'
+!manuscriptReviewNote.time := Date('2025-07-20')
+!manuscriptReviewNote.type := #CALL
+!manuscriptReviewNote.comment := 'Reviewed new manuscript submissions with the editorial board'
+
+!new Address('jasonAddress')
+!jasonAddress.city := 'San Francisco'
+!jasonAddress.houseNr := '789'
+!jasonAddress.street := 'Editors Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, elizabethGreen) into RelationshipToContact
+!insert (jasonParker, subdivisionRelationship) into ContactToRelationship
+!insert (jasonParker, jasonAddress) into ContactContainsAddress
+!insert (jasonParker, manuscriptReviewNote) into ContactContainsNote
+
+!new Address('redwoodAddress')
+!redwoodAddress.city := 'New York City'
+!redwoodAddress.houseNr := '456'
+!redwoodAddress.street := 'Publication Street'
+
+!insert (redwoodPublishing, redwoodAddress) into ContactContainsAddress
+
+!insert (addressBook23, redwoodPublishing) into AddressBookMadeOfContact
+!insert (addressBook23, elizabethGreen) into AddressBookMadeOfContact
+!insert (addressBook23, jasonParker) into AddressBookMadeOfContact

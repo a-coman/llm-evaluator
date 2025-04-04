@@ -1,0 +1,78 @@
+!new StateMachine('homeSecurityAlarm')
+!homeSecurityAlarm.name := 'homeSecurityAlarm'
+
+!new State('disarmed')
+!disarmed.name := 'disarmed'
+
+!new State('armedStay')
+!armedStay.name := 'armedStay'
+
+!new State('armedAway')
+!armedAway.name := 'armedAway'
+
+!new State('alarmTriggered')
+!alarmTriggered.name := 'alarmTriggered'
+
+!new Transition('setToStay')
+!setToStay.name := 'setToStay'
+
+!new Transition('setToAway')
+!setToAway.name := 'setToAway'
+
+!new Transition('triggerAlarmStay')
+!triggerAlarmStay.name := 'triggerAlarmStay'
+
+!new Transition('triggerAlarmAway')
+!triggerAlarmAway.name := 'triggerAlarmAway'
+
+!new Transition('disarmAlarm')
+!disarmAlarm.name := 'disarmAlarm'
+
+!new TimeEvent('timeEventSetToStay')
+!timeEventSetToStay.time := 1
+
+!new TimeEvent('timeEventSetToAway')
+!timeEventSetToAway.time := 30
+
+!new TimeEvent('timeEventTriggerAlarmStay')
+!timeEventTriggerAlarmStay.time := 15
+
+!new TimeEvent('timeEventTriggerAlarmAway')
+!timeEventTriggerAlarmAway.time := 15
+
+!new TimeEvent('timeEventDisarmAlarm')
+!timeEventDisarmAlarm.time := 3
+
+!insert (homeSecurityAlarm, disarmed) into StateMachineContainsStates
+!insert (homeSecurityAlarm, armedStay) into StateMachineContainsStates
+!insert (homeSecurityAlarm, armedAway) into StateMachineContainsStates
+!insert (homeSecurityAlarm, alarmTriggered) into StateMachineContainsStates
+
+!insert (homeSecurityAlarm, disarmed) into StateMachineStartsStates
+
+!insert (homeSecurityAlarm, setToStay) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, setToAway) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, triggerAlarmStay) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, triggerAlarmAway) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, disarmAlarm) into StateMachineContainsTransitions
+
+!insert (setToStay, timeEventSetToStay) into TransitionContainsEvents
+!insert (setToAway, timeEventSetToAway) into TransitionContainsEvents
+!insert (triggerAlarmStay, timeEventTriggerAlarmStay) into TransitionContainsEvents
+!insert (triggerAlarmAway, timeEventTriggerAlarmAway) into TransitionContainsEvents
+!insert (disarmAlarm, timeEventDisarmAlarm) into TransitionContainsEvents
+
+!insert (disarmed, setToStay) into StateTransition
+!insert (setToStay, armedStay) into TransitionState
+
+!insert (disarmed, setToAway) into StateTransition
+!insert (setToAway, armedAway) into TransitionState
+
+!insert (armedStay, triggerAlarmStay) into StateTransition
+!insert (triggerAlarmStay, alarmTriggered) into TransitionState
+
+!insert (armedAway, triggerAlarmAway) into StateTransition
+!insert (triggerAlarmAway, alarmTriggered) into TransitionState
+
+!insert (alarmTriggered, disarmAlarm) into StateTransition
+!insert (disarmAlarm, disarmed) into TransitionState

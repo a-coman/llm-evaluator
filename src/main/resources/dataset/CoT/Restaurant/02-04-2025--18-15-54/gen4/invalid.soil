@@ -1,0 +1,89 @@
+!new Restaurant('restaurant20')
+!restaurant20.name := 'Family Harvest'
+
+!new Owner('owner44')
+!owner44.name := 'Miguel Lopez'
+!owner44.percentageShares := 65
+
+!new Owner('owner45')
+!owner45.name := 'Isabella Lopez'
+!owner45.percentageShares := 65
+
+!insert (restaurant20, owner44) into RestaurantOwner
+!insert (restaurant20, owner45) into RestaurantOwner
+
+!new Table('table46')
+!table46.number := 401
+!table46.description := 'Vintage wooden table by the fireplace'
+!table46.capacity := 4
+
+!new Table('table47')
+!table47.number := 402
+!table47.description := 'Long family dining table'
+!table47.capacity := 20
+
+!new BusDriver('busdriver19')
+!busdriver19.name := 'Juan Sanchez'
+!busdriver19.dateOfBirth := Date('1978-05-12')
+!busdriver19.phoneNumber := '+34 678-234999'
+
+!new BusDriver('busdriver20')
+!busdriver20.name := 'Pedro Alvarez'
+!busdriver20.dateOfBirth := Date('1985-09-25')
+!busdriver20.phoneNumber := '+34 678-567888'
+
+!new Waiter('waiter40')
+!waiter40.name := 'Sophia Davis'
+!waiter40.dateOfBirth := Date('1996-04-01')
+!waiter40.phoneNumber := '+34 678-101112'
+
+!new Chef('chef27')
+!chef27.name := 'Luca Ricci'
+!chef27.dateOfBirth := Date('1980-07-07')
+!chef27.phoneNumber := '+34 678-222333'
+
+!new Cook('cook34')
+!cook34.name := 'Olivia Nunes'
+!cook34.dateOfBirth := Date('1992-06-13')
+!cook34.phoneNumber := '+34 678-444555'
+!cook34.yearsOfExperience := 6
+
+!new RegularCustomer('customer13')
+!customer13.name := 'Marie Dubois'
+!customer13.prefferedLanguage := #English  -- Using #English as placeholder for French
+
+!new Banquet('banquet17')
+!banquet17.date := Date('2023-12-20')
+!banquet17.time := Time('18:00')
+!banquet17.numberPeople := 25
+!banquet17.name := 'Lopez\'s Annual Gathering'
+!banquet17.phoneNumber := '+34 678-234567'
+!banquet17.number := 20231220
+!banquet17.groupName := 'The Lopez Family'
+!banquet17.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Credit
+!banquet17.busService := true
+
+!insert (restaurant20, banquet17) into RestaurantReservation
+!insert (banquet17, table47) into ReservationTable
+
+!insert (banquet17, waiter40) into ReservationWaiter
+
+!insert (banquet17, busdriver19) into BanquetBusDriver
+!insert (banquet17, busdriver20) into BanquetBusDriver
+
+!new Individual('individualReservation14')
+!individualReservation14.time := Time('19:00')
+!individualReservation14.date := Date('2023-12-20')
+!individualReservation14.numberPeople := 2
+!individualReservation14.name := 'Hiro Tanaka'
+!individualReservation14.phoneNumber := '+34 678-876543'
+!individualReservation14.number := 30231220  -- Adjusted to avoid potential number conflict
+!individualReservation14.seating := #Inside  -- Placeholder used for Garden as no specific literal is defined
+!individualReservation14.smoking := #Smoking
+
+!insert (restaurant20, individualReservation14) into RestaurantReservation
+!insert (individualReservation14, table46) into ReservationTable
+
+!insert (individualReservation14, waiter40) into ReservationWaiter
+
+!insert (individualReservation14, customer13) into ReservationCustomer

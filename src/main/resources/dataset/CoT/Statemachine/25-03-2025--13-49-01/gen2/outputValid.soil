@@ -1,0 +1,302 @@
+!new StateMachine('roboticVacuumControl')
+!roboticVacuumControl.name := 'roboticVacuumControl'
+
+!new State('idleMode')
+!idleMode.name := 'idleMode'
+
+!new State('cleanMode')
+!cleanMode.name := 'cleanMode'
+
+!new State('returnToDock')
+!returnToDock.name := 'returnToDock'
+
+!new State('charging')
+!charging.name := 'charging'
+
+!new Transition('startCleaning')
+!startCleaning.name := 'startCleaning'
+
+!new Transition('finishCleaning')
+!finishCleaning.name := 'finishCleaning'
+
+!new Transition('lowBatteryToDock')
+!lowBatteryToDock.name := 'lowBatteryToDock'
+
+!new Transition('fullyCharged')
+!fullyCharged.name := 'fullyCharged'
+
+!new TimeEvent('timeEventStartCleaning')
+!timeEventStartCleaning.time := 5
+
+!new TimeEvent('timeEventFinishCleaning')
+!timeEventFinishCleaning.time := 120
+
+!new TimeEvent('timeEventLowBatteryToDock')
+!timeEventLowBatteryToDock.time := 10
+
+!new TimeEvent('timeEventFullyCharged')
+!timeEventFullyCharged.time := 240
+
+!insert (roboticVacuumControl, idleMode) into StateMachineContainsStates
+!insert (roboticVacuumControl, cleanMode) into StateMachineContainsStates
+!insert (roboticVacuumControl, returnToDock) into StateMachineContainsStates
+!insert (roboticVacuumControl, charging) into StateMachineContainsStates
+
+!insert (roboticVacuumControl, idleMode) into StateMachineStartsStates
+
+!insert (roboticVacuumControl, startCleaning) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, finishCleaning) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, lowBatteryToDock) into StateMachineContainsTransitions
+!insert (roboticVacuumControl, fullyCharged) into StateMachineContainsTransitions
+
+!insert (startCleaning, timeEventStartCleaning) into TransitionContainsEvents
+!insert (finishCleaning, timeEventFinishCleaning) into TransitionContainsEvents
+!insert (lowBatteryToDock, timeEventLowBatteryToDock) into TransitionContainsEvents
+!insert (fullyCharged, timeEventFullyCharged) into TransitionContainsEvents
+
+!insert (idleMode, startCleaning) into StateTransition
+!insert (startCleaning, cleanMode) into TransitionState
+
+!insert (cleanMode, finishCleaning) into StateTransition
+!insert (finishCleaning, returnToDock) into TransitionState
+
+!insert (cleanMode, lowBatteryToDock) into StateTransition
+!insert (lowBatteryToDock, returnToDock) into TransitionState
+
+!insert (charging, fullyCharged) into StateTransition
+!insert (fullyCharged, idleMode) into TransitionState
+
+!new StateMachine('dataProcessor')
+!dataProcessor.name := 'dataProcessor'
+
+!new State('initial')
+!initial.name := 'initial'
+
+!new State('processing')
+!processing.name := 'processing'
+
+!new State('waiting')
+!waiting.name := 'waiting'
+
+!new State('terminating')
+!terminating.name := 'terminating'
+
+!new Transition('startToProcess')
+!startToProcess.name := 'startToProcess'
+
+!new Transition('processToWait')
+!processToWait.name := 'processToWait'
+
+!new Transition('waitToProcess')
+!waitToProcess.name := 'waitToProcess'
+
+!new Transition('processToTerminate')
+!processToTerminate.name := 'processToTerminate'
+
+!new TimeEvent('timeEventWaitToProcess')
+!timeEventWaitToProcess.time := 30
+
+!new TimeEvent('timeEventProcessToTerminate')
+!timeEventProcessToTerminate.time := 300
+
+!insert (dataProcessor, initial) into StateMachineContainsStates
+!insert (dataProcessor, processing) into StateMachineContainsStates
+!insert (dataProcessor, waiting) into StateMachineContainsStates
+!insert (dataProcessor, terminating) into StateMachineContainsStates
+
+!insert (dataProcessor, initial) into StateMachineStartsStates
+
+!insert (dataProcessor, startToProcess) into StateMachineContainsTransitions
+!insert (dataProcessor, processToWait) into StateMachineContainsTransitions
+!insert (dataProcessor, waitToProcess) into StateMachineContainsTransitions
+!insert (dataProcessor, processToTerminate) into StateMachineContainsTransitions
+
+!new TimeEvent('timeEventStartToProcess')
+!timeEventStartToProcess.time := 5
+
+!new TimeEvent('timeEventProcessToWait')
+!timeEventProcessToWait.time := 60
+
+!insert (startToProcess, timeEventStartToProcess) into TransitionContainsEvents
+!insert (processToWait, timeEventProcessToWait) into TransitionContainsEvents
+!insert (waitToProcess, timeEventWaitToProcess) into TransitionContainsEvents
+!insert (processToTerminate, timeEventProcessToTerminate) into TransitionContainsEvents
+
+!insert (initial, startToProcess) into StateTransition
+!insert (startToProcess, processing) into TransitionState
+
+!insert (processing, processToWait) into StateTransition
+!insert (processToWait, waiting) into TransitionState
+
+!insert (waiting, waitToProcess) into StateTransition
+!insert (waitToProcess, processing) into TransitionState
+
+!insert (processing, processToTerminate) into StateTransition
+!insert (processToTerminate, terminating) into TransitionState
+
+!new StateMachine('textileProductionFlow')
+!textileProductionFlow.name := 'textileProductionFlow'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('threadLoad')
+!threadLoad.name := 'threadLoad'
+
+!new State('patternDesign')
+!patternDesign.name := 'patternDesign'
+
+!new State('weaveFabric')
+!weaveFabric.name := 'weaveFabric'
+
+!new State('qualityCheck')
+!qualityCheck.name := 'qualityCheck'
+
+!new State('package')
+!package.name := 'package'
+
+!new Transition('startWeaving')
+!startWeaving.name := 'startWeaving'
+
+!new Transition('processThreads')
+!processThreads.name := 'processThreads'
+
+!new Transition('designComplete')
+!designComplete.name := 'designComplete'
+
+!new Transition('finishWeaving')
+!finishWeaving.name := 'finishWeaving'
+
+!new Transition('approveProduct')
+!approveProduct.name := 'approveProduct'
+
+!new Transition('restartCycle')
+!restartCycle.name := 'restartCycle'
+
+!new TimeEvent('initiateDelay')
+!initiateDelay.time := 10
+
+!new TimeEvent('loadDelay')
+!loadDelay.time := 40
+
+!new TimeEvent('designTime')
+!designTime.time := 90
+
+!new TimeEvent('weavingDuration')
+!weavingDuration.time := 200
+
+!new TimeEvent('inspectionTime')
+!inspectionTime.time := 30
+
+!new TimeEvent('packingTime')
+!packingTime.time := 25
+
+!insert (textileProductionFlow, standby) into StateMachineContainsStates
+!insert (textileProductionFlow, threadLoad) into StateMachineContainsStates
+!insert (textileProductionFlow, patternDesign) into StateMachineContainsStates
+!insert (textileProductionFlow, weaveFabric) into StateMachineContainsStates
+!insert (textileProductionFlow, qualityCheck) into StateMachineContainsStates
+!insert (textileProductionFlow, package) into StateMachineContainsStates
+
+!insert (textileProductionFlow, standby) into StateMachineStartsStates
+
+!insert (textileProductionFlow, startWeaving) into StateMachineContainsTransitions
+!insert (textileProductionFlow, processThreads) into StateMachineContainsTransitions
+!insert (textileProductionFlow, designComplete) into StateMachineContainsTransitions
+!insert (textileProductionFlow, finishWeaving) into StateMachineContainsTransitions
+!insert (textileProductionFlow, approveProduct) into StateMachineContainsTransitions
+!insert (textileProductionFlow, restartCycle) into StateMachineContainsTransitions
+
+!insert (startWeaving, initiateDelay) into TransitionContainsEvents
+!insert (processThreads, loadDelay) into TransitionContainsEvents
+!insert (designComplete, designTime) into TransitionContainsEvents
+!insert (finishWeaving, weavingDuration) into TransitionContainsEvents
+!insert (approveProduct, inspectionTime) into TransitionContainsEvents
+!insert (restartCycle, packingTime) into TransitionContainsEvents
+
+!insert (standby, startWeaving) into StateTransition
+!insert (startWeaving, threadLoad) into TransitionState
+
+!insert (threadLoad, processThreads) into StateTransition
+!insert (processThreads, patternDesign) into TransitionState
+
+!insert (patternDesign, designComplete) into StateTransition
+!insert (designComplete, weaveFabric) into TransitionState
+
+!insert (weaveFabric, finishWeaving) into StateTransition
+!insert (finishWeaving, qualityCheck) into TransitionState
+
+!insert (qualityCheck, approveProduct) into StateTransition
+!insert (approveProduct, package) into TransitionState
+
+!insert (package, restartCycle) into StateTransition
+!insert (restartCycle, standby) into TransitionState
+
+!new StateMachine('choppySeasNavigator')
+!choppySeasNavigator.name := 'choppySeasNavigator'
+
+!new State('calm')
+!calm.name := 'calm'
+
+!new State('stormy')
+!stormy.name := 'stormy'
+
+!new State('nocturnal')
+!nocturnal.name := 'nocturnal'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('toStormy')
+!toStormy.name := 'toStormy'
+
+!new Transition('toNocturnal')
+!toNocturnal.name := 'toNocturnal'
+
+!new Transition('toMaintenance')
+!toMaintenance.name := 'toMaintenance'
+
+!new Transition('resumeCalm')
+!resumeCalm.name := 'resumeCalm'
+
+!new TimeEvent('timeEventToStormy')
+!timeEventToStormy.time := 5
+
+!new TimeEvent('timeEventToNocturnal')
+!timeEventToNocturnal.time := 30
+
+!new TimeEvent('timeEventToMaintenance')
+!timeEventToMaintenance.time := 45
+
+!new TimeEvent('timeEventResumeCalm')
+!timeEventResumeCalm.time := 600
+
+!insert (choppySeasNavigator, calm) into StateMachineContainsStates
+!insert (choppySeasNavigator, stormy) into StateMachineContainsStates
+!insert (choppySeasNavigator, nocturnal) into StateMachineContainsStates
+!insert (choppySeasNavigator, maintenance) into StateMachineContainsStates
+
+!insert (choppySeasNavigator, calm) into StateMachineStartsStates
+
+!insert (choppySeasNavigator, toStormy) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, toNocturnal) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, toMaintenance) into StateMachineContainsTransitions
+!insert (choppySeasNavigator, resumeCalm) into StateMachineContainsTransitions
+
+!insert (toStormy, timeEventToStormy) into TransitionContainsEvents
+!insert (toNocturnal, timeEventToNocturnal) into TransitionContainsEvents
+!insert (toMaintenance, timeEventToMaintenance) into TransitionContainsEvents
+!insert (resumeCalm, timeEventResumeCalm) into TransitionContainsEvents
+
+!insert (calm, toStormy) into StateTransition
+!insert (toStormy, stormy) into TransitionState
+
+!insert (stormy, toNocturnal) into StateTransition
+!insert (toNocturnal, nocturnal) into TransitionState
+
+!insert (nocturnal, toMaintenance) into StateTransition
+!insert (toMaintenance, maintenance) into TransitionState
+
+!insert (maintenance, resumeCalm) into StateTransition
+!insert (resumeCalm, calm) into TransitionState
+

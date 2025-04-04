@@ -1,0 +1,51 @@
+!new Bank('bank28')
+!bank28.country := 'Russia'
+!bank28.name := 'Sberbank'
+!bank28.bic := 'SABRRUMM'
+
+!new Account('account79')
+!account79.iban := 'RU1234567890123456789012'
+!account79.balance := 8400
+
+!new Account('account80')
+!account80.iban := 'RU2345678901234567890123'
+!account80.balance := 3100
+
+!new Account('account81')
+!account81.iban := 'RU3456789012345678901234'
+!account81.balance := 200
+
+!new Person('person83')
+!person83.firstName := 'Ivan'
+!person83.lastName := 'Petrov'
+!person83.age := 45
+
+!new Person('person84')
+!person84.firstName := 'Anastasia'
+!person84.lastName := 'Ivanova'
+!person84.age := 32
+
+!new Person('person85')
+!person85.firstName := 'Dmitri'
+!person85.lastName := 'Sokolov'
+!person85.age := 28
+
+-- Associations
+!insert (bank28, account79) into AccountOfBanks
+!insert (bank28, account80) into AccountOfBanks
+!insert (bank28, account81) into AccountOfBanks
+
+!insert (person83, account79) into Ownership
+!insert (person84, account79) into Ownership
+
+!insert (person84, account80) into Ownership
+!insert (person85, account80) into Ownership
+
+!insert (person85, account81) into Ownership
+!insert (person83, account81) into Ownership
+
+!insert (person83, account80) into Use
+!insert (person84, account81) into Use
+
+!insert (person85, account79) into Use
+!insert (person84, account79) into Use

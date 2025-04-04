@@ -1,0 +1,59 @@
+!new Bank('bank33')
+!bank33.country := 'Japan'
+!bank33.name := 'Hayashi Bank'
+!bank33.bic := 'HYJPJPJT'
+
+!new Account('account77')
+!account77.iban := 'JP2750930000012345678'
+!account77.balance := 250000
+
+!new Account('account78')
+!account78.iban := 'JP2750930000054321098'
+!account78.balance := 150000
+
+!new Account('account79')
+!account79.iban := 'JP2750930000098765432'
+!account79.balance := 5000
+
+!new Person('person107')
+!person107.firstName := 'Haruto'
+!person107.lastName := 'Tanaka'
+!person107.age := 55
+
+!new Person('person108')
+!person108.firstName := 'Yuki'
+!person108.lastName := 'Sato'
+!person108.age := 29
+
+!new Person('person109')
+!person109.firstName := 'Arisa'
+!person109.lastName := 'Nakamura'
+!person109.age := 45
+
+!new Person('person110')
+!person110.firstName := 'Kenji'
+!person110.lastName := 'Ito'
+!person110.age := 60
+
+!new Person('person111')
+!person111.firstName := 'Mei'
+!person111.lastName := 'Suzuki'
+!person111.age := 35
+
+!insert (person107, account77) into Ownership
+!insert (person108, account77) into Ownership
+!insert (person109, account78) into Ownership
+!insert (person110, account78) into Ownership
+!insert (person111, account79) into Ownership
+
+!insert (person107, account77) into Use
+!insert (person108, account77) into Use
+!insert (person111, account77) into Use
+!insert (person109, account78) into Use
+!insert (person110, account78) into Use
+!insert (person107, account78) into Use
+!insert (person111, account79) into Use
+
+!insert (bank33, account77) into AccountOfBanks
+!insert (bank33, account78) into AccountOfBanks
+!insert (bank33, account79) into AccountOfBanks

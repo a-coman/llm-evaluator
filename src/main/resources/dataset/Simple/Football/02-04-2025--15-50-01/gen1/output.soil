@@ -1,0 +1,159 @@
+!new Club('club1')
+!club1.name := 'FC Falcons'
+!club1.homeGround := 'Falcon Stadium'
+!club1.chairman := 'John Smith'
+
+!new Club('club2')
+!club2.name := 'FC Eagles'
+!club2.homeGround := 'Eagle Stadium'
+!club2.chairman := 'Jane Doe'
+
+!new Team('team1')
+!team1.name := 'Falcon Warriors'
+!insert (club1, team1) into ClubTeam
+
+!new Team('team2')
+!team2.name := 'Eagle Fighters'
+!insert (club2, team2) into ClubTeam
+
+!new Player('player1')
+!player1.name := 'Mike Andrews'
+!player1.age := 24
+!player1.bestFoot := #RIGHT
+!player1.phoneNumber := '123-456-7890'
+!insert (team1, player1) into TeamPlayer
+
+!new Player('player2')
+!player2.name := 'Jimmy Clark'
+!player2.age := 21
+!player2.bestFoot := #LEFT
+!player2.phoneNumber := '987-654-3210'
+!insert (team1, player2) into TeamPlayer
+
+!new Player('player3')
+!player3.name := 'Jose Sanchez'
+!player3.age := 29
+!player3.bestFoot := #BOTH
+!player3.phoneNumber := '555-123-4567'
+!insert (team2, player3) into TeamPlayer
+
+!new Position('position1')
+!position1.positionName := #FORWARD
+!insert (player1, position1) into PlayerPositions
+
+!new Position('position2')
+!position2.positionName := #MIDFIELDER
+!insert (player2, position2) into PlayerPositions
+
+!new Position('position3')
+!position3.positionName := #GOALKEEPER
+!insert (player3, position3) into PlayerPositions
+
+!new TrainingSession('training1')
+!training1.date := '2023-10-24'
+!training1.location := 'Falcon Training Ground'
+!training1.purpose := 'Skill Improvement'
+!insert (team1, training1) into TeamTraining
+
+!new TrainingSession('training2')
+!training2.date := '2023-10-25'
+!training2.location := 'Eagle Training Facility'
+!training2.purpose := 'Team Strategy'
+!insert (team2, training2) into TeamTraining
+
+!new TrainingNotes('trainingNotes1')
+!trainingNotes1.note := 'Focused on passing drills'
+!trainingNotes1.date := '2023-10-24'
+!insert (training1, trainingNotes1) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes2')
+!trainingNotes2.note := 'Practiced defensive strategies'
+!trainingNotes2.date := '2023-10-25'
+!insert (training2, trainingNotes2) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failed1')
+!failed1.reason := 'Family emergency'
+!insert (training1, failed1) into TrainingFailded
+!insert (failed1, player2) into FailedPlayer
+
+!new TrainingObjective('objective1')
+!objective1.areaToImprove := 'Agility'
+!objective1.startDate := '2023-10-01'
+!objective1.endDate := '2023-12-01'
+!objective1.success := true
+!insert (objective1, player1) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective2')
+!objective2.areaToImprove := 'Stamina'
+!objective2.startDate := '2023-09-15'
+!objective2.endDate := '2023-11-30'
+!objective2.success := false
+!insert (objective2, player2) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective3')
+!objective3.areaToImprove := 'Endurance'
+!objective3.startDate := '2023-08-10'
+!objective3.endDate := '2023-11-10'
+!objective3.success := true
+!insert (objective3, player3) into TrainingObjectivePlayer
+
+!new Competition('competition1')
+!competition1.name := 'Champions League'
+!competition1.type := 'Knockout'
+
+!new Match('match1')
+!match1.date := '2023-11-05'
+!match1.homeAway := true
+!insert (competition1, match1) into CompetitionMatch
+!insert (team1, match1) into LocalMatch
+!insert (team2, match1) into VisitorMatch
+
+!new MatchReport('report1')
+!report1.duration := 90
+!report1.scoreVisitor := 1
+!report1.scoreLocal := 2
+!insert (match1, report1) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer1')
+!matchPlayer1.booked := false
+!matchPlayer1.goals := 2
+!matchPlayer1.rating := 8
+!insert (player1, matchPlayer1) into PlayerMatch
+!insert (match1, matchPlayer1) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer3')
+!matchPlayer3.booked := false
+!matchPlayer3.goals := 1
+!matchPlayer3.rating := 6
+!insert (player3, matchPlayer3) into PlayerMatch
+!insert (match1, matchPlayer3) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition1')
+!matchPlayerPosition1.positionName := #FORWARD
+!matchPlayerPosition1.number := 9
+!insert (matchPlayer1, matchPlayerPosition1) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition3')
+!matchPlayerPosition3.positionName := #GOALKEEPER
+!matchPlayerPosition3.number := 1
+!insert (matchPlayer3, matchPlayerPosition3) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event1')
+!event1.eventType := #GOAL
+!event1.time := 30
+!insert (match1, event1) into MatchMatchEvent
+
+!new MatchEvent('event2')
+!event2.eventType := #GOAL
+!event2.time := 70
+!insert (match1, event2) into MatchMatchEvent
+
+!new MatchEvent('event3')
+!event3.eventType := #GOAL
+!event3.time := 85
+!insert (match1, event3) into MatchMatchEvent
+
+!new MatchNote('matchNote1')
+!matchNote1.note := 'Exciting match with great goals'
+!matchNote1.date := '2023-11-05'
+!insert (match1, matchNote1) into MatchMatchNote

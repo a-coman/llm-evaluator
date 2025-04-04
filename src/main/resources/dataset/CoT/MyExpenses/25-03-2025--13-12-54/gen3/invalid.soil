@@ -1,0 +1,42 @@
+!new Expense('culinaryWorkshopExpense')
+!culinaryWorkshopExpense.amount := 350.00
+!culinaryWorkshopExpense.startDate := Date('2023-03-01')
+!culinaryWorkshopExpense.endDate := Date('2023-03-03')
+
+!new Bill('workshopFee')
+!workshopFee.amount := 250.00
+!workshopFee.category := 'Workshop Fee'
+!workshopFee.date := Date('2023-03-01')
+!workshopFee.paymentMethod := #CREDIT_CARD
+!workshopFee.status := #VERIFIED
+
+!new Bill('cookingSupplies')
+!cookingSupplies.amount := 100.00
+!cookingSupplies.category := 'Cooking Supplies'
+!cookingSupplies.date := Date('2023-03-02')
+!cookingSupplies.paymentMethod := #CASH
+!cookingSupplies.status := #VERIFIED
+
+!new Bill('placeholderEntry')
+!placeholderEntry.amount := 0.00
+!placeholderEntry.category := 'Placeholder Entry'
+!placeholderEntry.date := Date('2023-03-03')
+!placeholderEntry.paymentMethod := #CHECK
+!placeholderEntry.status := #DRAFT
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!insert (workshopFee, euro) into BillCurrency
+!insert (cookingSupplies, euro) into BillCurrency
+!insert (placeholderEntry, euro) into BillCurrency
+
+!insert (culinaryWorkshopExpense, workshopFee) into ExpenseContainsBills
+!insert (culinaryWorkshopExpense, cookingSupplies) into ExpenseContainsBills
+!insert (culinaryWorkshopExpense, placeholderEntry) into ExpenseContainsBills
+
+!new Comment('commentWorkshop')
+!commentWorkshop.text := 'Attending the workshop exceeded expectations but was worth every cent!'
+
+!insert (culinaryWorkshopExpense, commentWorkshop) into ExpenseComment

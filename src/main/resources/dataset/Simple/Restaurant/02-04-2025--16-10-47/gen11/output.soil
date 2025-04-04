@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant11')
+!restaurant11.name := 'The Green Bowl'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner21')
+!owner21.name := 'Noah Thompson'
+!owner21.percentageShares := 50
+
+!new Owner('owner22')
+!owner22.name := 'Lily Scott'
+!owner22.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant11, owner21) into RestaurantOwner
+!insert (restaurant11, owner22) into RestaurantOwner
+
+-- Creating a set of tables
+!new Table('table21')
+!table21.number := 1101
+!table21.description := 'Al Fresco Courtyard'
+!table21.capacity := 6
+
+!new Table('table22')
+!table22.number := 1102
+!table22.description := 'Cozy Alcove'
+!table22.capacity := 4
+
+-- Setting up a new set of staff
+!new HeadWaiter('headwaiter11')
+!headwaiter11.name := 'Rebecca Lee'
+!headwaiter11.dateOfBirth := Date('1980-10-12')
+!headwaiter11.phoneNumber := '555-6767'
+
+!new Waiter('waiter15')
+!waiter15.name := 'William Harris'
+!waiter15.dateOfBirth := Date('1995-03-25')
+!waiter15.phoneNumber := '555-4848'
+!waiter15.spokenLanguage := #Italian
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter11, waiter15) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a casual dinner
+!new Individual('reservation11')
+!reservation11.time := Time('20:00')
+!reservation11.date := Date('2024-07-21')
+!reservation11.numberPeople := 5
+!reservation11.name := 'Casual Gathering'
+!reservation11.phoneNumber := '555-5454'
+!reservation11.number := 209
+!reservation11.seating := #Inside
+!reservation11.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant11, reservation11) into RestaurantReservation
+!insert (reservation11, waiter15) into ReservationWaiter
+!insert (reservation11, table21) into ReservationTable
+!insert (reservation11, table22) into ReservationTable
+
+-- Adding a unique MenuItem for the dinner
+!new MenuItem('menuItem11')
+!menuItem11.description := 'Herb-Crusted Chicken'
+!menuItem11.prepTime := 25.0
+!menuItem11.classification := #Main
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef11')
+!chef11.name := 'Nigel Caesar'
+!chef11.dateOfBirth := Date('1990-01-30')
+!chef11.phoneNumber := '555-6766'
+
+!insert (menuItem11, chef11) into MenuItemChef
+
+-- Creating Cook under the supervision of Chef
+!new Cook('cook11')
+!cook11.name := 'Julia Brown'
+!cook11.dateOfBirth := Date('1982-02-28')
+!cook11.phoneNumber := '555-7878'
+!cook11.yearsOfExperience := 15
+
+-- Establishing association between Chef and Cook
+!insert (chef11, cook11) into ChefCook
+
+-- Creating an ItemOrder for the dinner
+!new ItemOrder('order11')
+!order11.time := Time('20:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order11, menuItem11) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation11, order11) into ReservationItemOrdered

@@ -1,0 +1,257 @@
+!new Bank('bank12')
+!bank12.country := 'Kenya'
+!bank12.name := 'Equity Bank Kenya'
+!bank12.bic := 'EQBLKENAXXX'
+
+!new Bank('bank13')
+!bank13.country := 'Mexico'
+!bank13.name := 'Banco Nacional de México'
+!bank13.bic := 'BNMXMXMMXXX'
+
+!new Account('account25')
+!account25.iban := 'KE00123456789012345678'
+!account25.balance := 300
+
+!new Account('account26')
+!account26.iban := 'MX36901234567891234567'
+!account26.balance := 12000
+
+!new Person('person33')
+!person33.firstName := 'Amina'
+!person33.lastName := 'Mwangi'
+!person33.age := 36
+
+!new Person('person34')
+!person34.firstName := 'Carlos'
+!person34.lastName := 'González'
+!person34.age := 28
+
+!new Person('person35')
+!person35.firstName := 'Lily'
+!person35.lastName := 'Otieno'
+!person35.age := 23
+
+!new Person('person36')
+!person36.firstName := 'Martín'
+!person36.lastName := 'Perez'
+!person36.age := 40
+
+!insert (person33, account25) into Ownership
+!insert (person34, account26) into Ownership
+!insert (person36, account26) into Ownership
+
+!insert (person33, account25) into Use
+!insert (person35, account25) into Use
+!insert (person34, account26) into Use
+!insert (person35, account26) into Use
+!insert (person36, account26) into Use
+
+!insert (bank12, account25) into AccountOfBanks
+!insert (bank13, account26) into AccountOfBanks
+
+!new Bank('bank14')
+!bank14.country := 'Mexico'
+!bank14.name := 'Azteca Bank'
+!bank14.bic := 'AZTMXMXA'
+
+!new Account('account27')
+!account27.iban := 'MX51 AZTE 1234 5678 9012 3456'
+!account27.balance := 50000
+
+!new Account('account28')
+!account28.iban := 'MX51 AZTE 0987 6543 2109 8765'
+!account28.balance := 75500
+
+!new Account('account29')
+!account29.iban := 'MX51 AZTE 1111 2222 3333 4444'
+!account29.balance := 0
+
+!new Person('person37')
+!person37.firstName := 'Rodrigo'
+!person37.lastName := 'López'
+!person37.age := 45
+
+!new Person('person38')
+!person38.firstName := 'Mariana'
+!person38.lastName := 'Torres'
+!person38.age := 37
+
+!new Person('person39')
+!person39.firstName := 'Jorge'
+!person39.lastName := 'García'
+!person39.age := 22
+
+!insert (person37, account27) into Ownership
+!insert (person38, account27) into Ownership
+!insert (person39, account28) into Ownership
+!insert (person37, account29) into Ownership
+!insert (person39, account29) into Ownership
+
+!insert (person37, account27) into Use
+!insert (person38, account27) into Use
+!insert (person39, account27) into Use
+!insert (person39, account28) into Use
+!insert (person38, account28) into Use
+!insert (person37, account29) into Use
+
+!insert (bank14, account27) into AccountOfBanks
+!insert (bank14, account28) into AccountOfBanks
+!insert (bank14, account29) into AccountOfBanks
+
+!new Bank('bank15')
+!bank15.country := 'Kenya'
+!bank15.name := 'Jambo Bank'
+!bank15.bic := 'JMBOKENY'
+
+!new Account('account30')
+!account30.iban := 'KE12345678901234567890'
+!account30.balance := 60000
+
+!new Account('account31')
+!account31.iban := 'KE09876543210987654321'
+!account31.balance := -500
+
+!new Person('person40')
+!person40.firstName := 'Achieng'
+!person40.lastName := 'Odongo'
+!person40.age := 40
+
+!new Person('person41')
+!person41.firstName := 'Kwame'
+!person41.lastName := 'Odongo'
+!person41.age := 42
+
+!new Person('person42')
+!person42.firstName := 'Grace'
+!person42.lastName := 'Njoroge'
+!person42.age := 19
+
+!new Person('person43')
+!person43.firstName := 'Kendi'
+!person43.lastName := 'Odongo'
+!person43.age := 16
+
+!insert (person40, account30) into Ownership
+!insert (person41, account30) into Ownership
+!insert (person42, account31) into Ownership
+
+!insert (person40, account31) into Use
+!insert (person41, account31) into Use
+!insert (person42, account31) into Use
+!insert (person43, account30) into Use
+
+!insert (bank15, account30) into AccountOfBanks
+!insert (bank15, account31) into AccountOfBanks
+
+!new Bank('bank16')
+!bank16.country := 'Bhutan'
+!bank16.name := 'Druk Gyalpo Bank'
+!bank16.bic := 'DGBTKHBTXXX'
+
+!new Account('account32')
+!account32.iban := 'BT2222222222222222'
+!account32.balance := 10000000
+
+!new Account('account33')
+!account33.iban := 'BT3333333333333333'
+!account33.balance := 100
+
+!new Person('person44')
+!person44.firstName := 'Tenzin'
+!person44.lastName := 'Norbu'
+!person44.age := 44
+
+!new Person('person45')
+!person45.firstName := 'Karma'
+!person45.lastName := 'Wangmo'
+!person45.age := 28
+
+!new Person('person46')
+!person46.firstName := 'Sonam'
+!person46.lastName := 'Phuntsho'
+!person46.age := 21
+
+!insert (person44, account32) into Ownership
+!insert (person45, account33) into Ownership
+!insert (person46, account33) into Ownership
+
+!insert (person44, account32) into Use
+!insert (person45, account32) into Use
+!insert (person46, account32) into Use
+
+!insert (bank16, account32) into AccountOfBanks
+!insert (bank16, account33) into AccountOfBanks
+
+!new Bank('bank18')
+!bank18.country := 'Canada'
+!bank18.name := 'Maple Leaf Financial'
+!bank18.bic := 'MLFCANCAXXXX'
+
+!new Account('account37')
+!account37.iban := 'CA951234000000045267'
+!account37.balance := 4000
+
+!new Account('account38')
+!account38.iban := 'CA951234000000076543'
+!account38.balance := 15000
+
+!new Account('account39')
+!account39.iban := 'CA951234000000065432'
+!account39.balance := 1000
+
+!new Account('account40')
+!account40.iban := 'CA951234000000098765'
+!account40.balance := 8000
+
+!new Account('account41')
+!account41.iban := 'CA951234000000032176'
+!account41.balance := 25000
+
+!new Person('person51')
+!person51.firstName := 'David'
+!person51.lastName := 'Thompson'
+!person51.age := 50
+
+!new Person('person52')
+!person52.firstName := 'Li'
+!person52.lastName := 'Zhang'
+!person52.age := 27
+
+!new Person('person53')
+!person53.firstName := 'Sofia'
+!person53.lastName := 'Hernandez'
+!person53.age := 32
+
+!new Person('person54')
+!person54.firstName := 'Noah'
+!person54.lastName := 'Smith'
+!person54.age := 22
+
+!new Person('person55')
+!person55.firstName := 'Emily'
+!person55.lastName := 'Jones'
+!person55.age := 45
+
+!insert (person51, account37) into Ownership
+!insert (person53, account37) into Ownership
+!insert (person55, account38) into Ownership
+!insert (person52, account39) into Ownership
+!insert (person53, account40) into Ownership
+!insert (person54, account40) into Ownership
+!insert (person51, account41) into Ownership
+
+!insert (person51, account37) into Use
+!insert (person53, account37) into Use
+!insert (person55, account37) into Use
+!insert (person55, account38) into Use
+!insert (person52, account39) into Use
+!insert (person53, account40) into Use
+!insert (person54, account40) into Use
+!insert (person51, account41) into Use
+
+!insert (bank18, account37) into AccountOfBanks
+!insert (bank18, account38) into AccountOfBanks
+!insert (bank18, account39) into AccountOfBanks
+!insert (bank18, account40) into AccountOfBanks
+!insert (bank18, account41) into AccountOfBanks
+

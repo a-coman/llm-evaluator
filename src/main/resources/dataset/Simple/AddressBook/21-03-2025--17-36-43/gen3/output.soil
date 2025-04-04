@@ -1,0 +1,71 @@
+!new AddressBook('addressBook3')
+
+!new Company('greenEnergyInc')
+!greenEnergyInc.name := 'Green Energy Inc.'
+!greenEnergyInc.phone := '844-444-2222'
+!greenEnergyInc.website := 'www.greenenergyinc.com'
+!greenEnergyInc.email := 'contact@greenenergyinc.com'
+!greenEnergyInc.industry := 'Renewable Energy'
+
+!new Person('davidLee')
+!davidLee.name := 'David Lee'
+!davidLee.phone := '609-555-7777'
+!davidLee.website := 'www.davidleeconsulting.com'
+!davidLee.email := 'david.lee@example.com'
+!davidLee.title := 'Environmental Consultant'
+
+!new Note('consultationNote')
+!consultationNote.author := 'David Lee'
+!consultationNote.time := Date('2023-12-15')
+!consultationNote.type := #CALL
+!consultationNote.comment := 'Consulted on solar power expansion project'
+
+!new Address('davidAddress')
+!davidAddress.city := 'Austin'
+!davidAddress.houseNr := '777'
+!davidAddress.street := 'Congress Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, greenEnergyInc) into RelationshipToContact
+!insert (davidLee, employeeRelationship) into ContactToRelationship
+!insert (davidLee, davidAddress) into ContactContainsAddress
+!insert (davidLee, consultationNote) into ContactContainsNote
+
+!new Person('sophiaKim')
+!sophiaKim.name := 'Sophia Kim'
+!sophiaKim.phone := '333-444-1111'
+!sophiaKim.website := 'www.sophiakimdesign.com'
+!sophiaKim.email := 'sophia.kim@example.com'
+!sophiaKim.title := 'Graphic Designer'
+
+!new Note('creativeDesignNote')
+!creativeDesignNote.author := 'Sophia Kim'
+!creativeDesignNote.time := Date('2023-12-20')
+!creativeDesignNote.type := #EMAIL
+!creativeDesignNote.comment := 'Submitted new design prototypes for review'
+
+!new Address('sophiaAddress')
+!sophiaAddress.city := 'Miami'
+!sophiaAddress.houseNr := '1500'
+!sophiaAddress.street := 'Biscayne Blvd'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, davidLee) into RelationshipToContact
+!insert (sophiaKim, coworkerRelationship) into ContactToRelationship
+!insert (sophiaKim, sophiaAddress) into ContactContainsAddress
+!insert (sophiaKim, creativeDesignNote) into ContactContainsNote
+
+!new Address('greenEnergyAddress')
+!greenEnergyAddress.city := 'Denver'
+!greenEnergyAddress.houseNr := '404'
+!greenEnergyAddress.street := 'Energy Parkway'
+
+!insert (greenEnergyInc, greenEnergyAddress) into ContactContainsAddress
+
+!insert (addressBook3, greenEnergyInc) into AddressBookMadeOfContact
+!insert (addressBook3, davidLee) into AddressBookMadeOfContact
+!insert (addressBook3, sophiaKim) into AddressBookMadeOfContact

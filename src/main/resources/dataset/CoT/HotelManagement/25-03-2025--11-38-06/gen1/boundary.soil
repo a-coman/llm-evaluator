@@ -1,0 +1,60 @@
+!new Booking('booking2')
+!booking2.bookingId := 1
+!booking2.startDate := '2024-12-31'
+!booking2.endDate := '2025-01-01'
+!booking2.canceled := false
+!booking2.confirmed := true
+
+!new Customer('customer2')
+!customer2.firstName := 'Amina'
+!customer2.lastName := 'Takahashi'
+
+!new Bill('bill2')
+!bill2.billId := 1
+!bill2.price := 0.00
+
+!new Bill('bill3')
+!bill3.billId := 2
+!bill3.price := 9999.99
+
+!new RoomReservation('roomreservation2')
+!roomreservation2.checkInDate := '2024-12-31'
+!roomreservation2.checkOutDate := '2025-01-01'
+
+!new Room('room2')
+!room2.roomNumber := 101
+!room2.numBeds := 1
+!room2.pricePerNight := 0.00
+!room2.occupied := false
+!room2.blocked := false
+
+!new Room('room3')
+!room3.roomNumber := 999
+!room3.numBeds := 10
+!room3.pricePerNight := 1000.00
+!room3.occupied := true
+!room3.blocked := false
+
+!new RoomExtra('roomextra3')
+!roomextra3.description := 'Complimentary Water Bottle'
+!roomextra3.price := 0.00
+
+!new RoomExtra('roomextra4')
+!roomextra4.description := 'Private Jet Transport'
+!roomextra4.price := 5000.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto2')
+!freeroomtypesdto2.roomTypeDescription := 'Luxury Suite'
+!freeroomtypesdto2.numBeds := 10
+!freeroomtypesdto2.pricePerNight := 5000.00
+!freeroomtypesdto2.numFreeRooms := 1
+
+!insert (booking2, customer2) into BookingCustomer
+!insert (booking2, roomreservation2) into BookingRoomReservation
+!insert (booking2, bill2) into BookingBill
+!insert (booking2, bill3) into BookingBill
+!insert (roomreservation2, room2) into RoomReservationRoom
+!insert (roomreservation2, room3) into RoomReservationRoom
+!insert (roomreservation2, roomextra3) into RoomReservationExtras
+!insert (roomreservation2, roomextra4) into RoomReservationExtras
+!insert (bill2, roomreservation2) into BillRoomReservation

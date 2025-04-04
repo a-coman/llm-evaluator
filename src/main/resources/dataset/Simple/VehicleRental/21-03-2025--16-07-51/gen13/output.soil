@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice15')
+!rentalOffice15.name := 'Coastal Rentals'
+!rentalOffice15.number := 115
+!rentalOffice15.address := '456 Seaside Blvd, Miami Beach, FL'
+
+!new Truck('truck9')
+!truck9.id := 14
+!truck9.registrationState := #FL
+!truck9.licensePlateNumber := 'FL4444'
+!truck9.vehicleTypeCode := #TRUCK24
+!truck9.registrationLastMaintenanceDate := Date('2023-06-25')
+!truck9.expirationDate := Date('2024-06-25')
+!truck9.odometerReading := 8000
+!truck9.gasTankCapacity := 155.0
+!truck9.workingRadio := false
+!truck9.mileage := 14
+
+!new Individual('individualCustomer8')
+!individualCustomer8.name := 'Henry Miller'
+!individualCustomer8.address := '789 Ocean View St, Miami Beach, FL'
+!individualCustomer8.poorRisk := true
+!individualCustomer8.homePhone := '555-3344'
+!individualCustomer8.driverLicenseState := #FL
+!individualCustomer8.driverLicenseNumber := 5566778
+!individualCustomer8.driverLicenseExpirationDate := Date('2026-09-18')
+
+!new RentalAgreement('rentalAgreement14')
+!rentalAgreement14.number := 514
+!rentalAgreement14.rentalDate := Date('2023-12-20')
+!rentalAgreement14.anticipatedDuration := 3
+!rentalAgreement14.depositPaid := 250.0
+!rentalAgreement14.quotedDailyRate := 70.0
+!rentalAgreement14.quotedRatePerMile := 0.55
+
+!insert (rentalOffice15, truck9) into RentalOfficeVehicle
+!insert (rentalOffice15, rentalAgreement14) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice15, rentalAgreement14) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement14, truck9) into RentalAgreementVehicle
+!insert (rentalAgreement14, individualCustomer8) into RentalAgreementCustomer

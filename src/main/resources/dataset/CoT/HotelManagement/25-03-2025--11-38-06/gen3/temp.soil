@@ -1,0 +1,70 @@
+!new Customer('customer15')
+!customer15.firstName := 'Priya'
+!customer15.lastName := 'Desai'
+
+!new Booking('booking15')
+!booking15.bookingId := 3003
+!booking15.startDate := 'November 15, 2024'
+!booking15.endDate := 'December 15, 2024'
+!booking15.canceled := false
+!booking15.confirmed := true
+
+!new RoomReservation('roomreservation24')
+!roomreservation24.checkInDate := 'November 15, 2024'
+!roomreservation24.checkOutDate := 'December 15, 2024'
+
+!new RoomReservation('roomreservation25')
+!roomreservation25.checkInDate := 'November 15, 2024'
+!roomreservation25.checkOutDate := 'December 15, 2024'
+
+!new Room('room29')
+!room29.roomNumber := 501
+!room29.numBeds := 2
+!room29.pricePerNight := 0.00
+!room29.occupied := false
+!room29.blocked := true
+
+!new Room('room30')
+!room30.roomNumber := 502
+!room30.numBeds := 2
+!room30.pricePerNight := 0.00
+!room30.occupied := false
+!room30.blocked := true
+
+!new RoomExtra('roomextra36')
+!roomextra36.price := 200.00
+!roomextra36.description := 'Specialized cleaning service'
+
+!new RoomExtra('roomextra37')
+!roomextra37.price := 150.00
+!roomextra37.description := 'Minimal supplies delivery'
+
+!new Bill('bill30')
+!bill30.billId := 8006
+!bill30.price := 200.00
+
+!new Bill('bill31')
+!bill31.billId := 8007
+!bill31.price := 150.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto15')
+!freeroomtypesdto15.roomTypeDescription := 'Deluxe Suite'
+!freeroomtypesdto15.numBeds := 3
+!freeroomtypesdto15.pricePerNight := 350.00
+!freeroomtypesdto15.numFreeRooms := 2
+
+!insert (booking15, customer15) into BookingCustomer
+!insert (booking15, roomreservation24) into BookingRoomReservation
+!insert (booking15, roomreservation25) into BookingRoomReservation
+
+!insert (roomreservation24, room29) into RoomReservationRoom
+!insert (roomreservation25, room30) into RoomReservationRoom
+
+!insert (roomreservation24, roomextra36) into RoomReservationExtras
+!insert (roomreservation25, roomextra37) into RoomReservationExtras
+
+!insert (bill30, roomreservation24) into BillRoomReservation
+!insert (bill31, roomreservation25) into BillRoomReservation
+
+!insert (booking15, bill30) into BookingBill
+!insert (booking15, bill31) into BookingBill

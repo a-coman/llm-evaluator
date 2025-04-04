@@ -1,0 +1,44 @@
+!new Driver('driver2')
+!driver2.id := 'DL001'
+!driver2.name := 'Leonie Schmidt'
+
+!new Shipment('shipment2')
+!shipment2.id := 'SH7890'
+!shipment2.status := #NEW
+
+!new Address('pickupAddressEco')
+!pickupAddressEco.text := 'Farmer\'s Market, Ashoka Road, Delhi, India'
+
+!new GeoLocation('pickupGeoLocationEco')
+!pickupGeoLocationEco.latitude := 28.6139
+!pickupGeoLocationEco.longitude := 77.2090
+
+!new Address('deliveryAddressEco')
+!deliveryAddressEco.text := 'O\'Hare International Airport Cargo Terminal, Chicago, Illinois, USA'
+
+!new GeoLocation('deliveryGeoLocationEco')
+!deliveryGeoLocationEco.latitude := 41.9742
+!deliveryGeoLocationEco.longitude := -87.9073
+
+!new Station('station2')
+
+!new Customer('customer2')
+!customer2.id := 'CST345'
+!customer2.name := 'BioGreen International Ltd.'
+!customer2.twitterUserName := '@BioGreenIntl'
+
+!insert (shipment2, pickupAddressEco) into ShipmentContainsPickUpAddress
+
+!insert (shipment2, deliveryAddressEco) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddressEco, pickupGeoLocationEco) into AddressContainsGeoLocation
+
+!insert (deliveryAddressEco, deliveryGeoLocationEco) into AddressContainsGeoLocation
+
+!insert (customer2, shipment2) into CustomerConsistsOfShipment
+
+!insert (station2, customer2) into StationContainsCustomer
+
+!insert (station2, shipment2) into StationShipment
+
+!insert (station2, driver2) into StationContainsDriver

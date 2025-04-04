@@ -1,0 +1,82 @@
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Currency('mexicanPeso')
+!mexicanPeso.name := 'Mexican Peso'
+!mexicanPeso.abbreviation := 'MXN'
+
+!new Currency('virtualCoin')
+!virtualCoin.name := 'Virtual Coin'
+!virtualCoin.abbreviation := 'VRC'
+
+!new Bill('gallerySpaceRental')
+!gallerySpaceRental.amount := 2500.00
+!gallerySpaceRental.category := 'Gallery Space Rental'
+!gallerySpaceRental.date := Date('2023-08-01')
+!gallerySpaceRental.paymentMethod := #CREDIT_CARD
+!gallerySpaceRental.status := #VALIDATED
+
+!new Bill('artSupplies')
+!artSupplies.amount := 500.00
+!artSupplies.category := 'Art Supplies'
+!artSupplies.date := Date('2023-08-01')
+!artSupplies.paymentMethod := #CASH
+!artSupplies.status := #REFUSED
+
+!new Bill('digitalExhibitionPlatformSubscription')
+!digitalExhibitionPlatformSubscription.amount := 75.00
+!digitalExhibitionPlatformSubscription.category := 'Digital Exhibition Platform Subscription'
+!digitalExhibitionPlatformSubscription.date := Date('2023-08-01')
+!digitalExhibitionPlatformSubscription.paymentMethod := #CASH
+!digitalExhibitionPlatformSubscription.status := #VALIDATED
+
+!new Bill('marketingPromotion')
+!marketingPromotion.amount := 1000.00
+!marketingPromotion.category := 'Marketing and Promotion'
+!marketingPromotion.date := Date('2023-08-01')
+!marketingPromotion.paymentMethod := #CREDIT_CARD
+!marketingPromotion.status := #VERIFIED
+
+!new Bill('craftWorkshopMaterials')
+!craftWorkshopMaterials.amount := 150.00
+!craftWorkshopMaterials.category := 'Craft Workshop Materials'
+!craftWorkshopMaterials.date := Date('2023-08-01')
+!craftWorkshopMaterials.paymentMethod := #CREDIT_CARD
+!craftWorkshopMaterials.status := #VERIFIED
+
+!insert (gallerySpaceRental, euro) into BillCurrency
+!insert (artSupplies, mexicanPeso) into BillCurrency
+!insert (digitalExhibitionPlatformSubscription, virtualCoin) into BillCurrency
+!insert (marketingPromotion, euro) into BillCurrency
+!insert (craftWorkshopMaterials, virtualCoin) into BillCurrency
+
+!new Expense('artistsCooperativeProjectExpenses')
+-- Correct total amount reflects only validated and verified expenses
+-- Make sure to include all bills to satisfy multiplicity
+!artistsCooperativeProjectExpenses.amount := 3725.00
+!artistsCooperativeProjectExpenses.startDate := Date('2023-08-01')
+!artistsCooperativeProjectExpenses.endDate := Date('2023-12-31')
+
+!insert (artistsCooperativeProjectExpenses, gallerySpaceRental) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, artSupplies) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, digitalExhibitionPlatformSubscription) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, marketingPromotion) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, craftWorkshopMaterials) into ExpenseContainsBills
+
+!new Comment('commentValidatedRental')
+!commentValidatedRental.text := 'Validated rental expenses for the exhibition.'
+
+!new Comment('commentRefusedArtSupplies')
+!commentRefusedArtSupplies.text := 'Refused art supplies purchase due to quality concerns.'
+
+!new Comment('commentSubscriptionConfirmed')
+!commentSubscriptionConfirmed.text := 'Subscription for virtual platform confirmed for entire project duration.'
+
+!new Comment('commentPromotionalActivities')
+!commentPromotionalActivities.text := 'Promotional activities extended due to increased artist participation.'
+
+!insert (artistsCooperativeProjectExpenses, commentValidatedRental) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentRefusedArtSupplies) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentSubscriptionConfirmed) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentPromotionalActivities) into ExpenseComment

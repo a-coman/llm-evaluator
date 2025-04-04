@@ -1,0 +1,159 @@
+!new Club('club23')
+!club23.name := 'Thunder FC'
+!club23.homeGround := 'Thunder Dome'
+!club23.chairman := 'Helen Brooks'
+
+!new Club('club24')
+!club24.name := 'Lightning FC'
+!club24.homeGround := 'Lightning Arena'
+!club24.chairman := 'Samuel Wright'
+
+!new Team('team23')
+!team23.name := 'Thunder Strikers'
+!insert (club23, team23) into ClubTeam
+
+!new Team('team24')
+!team24.name := 'Lightning Bolts'
+!insert (club24, team24) into ClubTeam
+
+!new Player('player34')
+!player34.name := 'Oliver King'
+!player34.age := 30
+!player34.bestFoot := #BOTH
+!player34.phoneNumber := '123-567-8901'
+!insert (team23, player34) into TeamPlayer
+
+!new Player('player35')
+!player35.name := 'Ella Moore'
+!player35.age := 25
+!player35.bestFoot := #RIGHT
+!player35.phoneNumber := '234-678-9012'
+!insert (team23, player35) into TeamPlayer
+
+!new Player('player36')
+!player36.name := 'Jack Mason'
+!player36.age := 28
+!player36.bestFoot := #LEFT
+!player36.phoneNumber := '345-789-0123'
+!insert (team24, player36) into TeamPlayer
+
+!new Position('position34')
+!position34.positionName := #MIDFIELDER
+!insert (player34, position34) into PlayerPositions
+
+!new Position('position35')
+!position35.positionName := #DEFENDER
+!insert (player35, position35) into PlayerPositions
+
+!new Position('position36')
+!position36.positionName := #FORWARD
+!insert (player36, position36) into PlayerPositions
+
+!new TrainingSession('training23')
+!training23.date := '2023-11-30'
+!training23.location := 'Thunder Training Complex'
+!training23.purpose := 'Fitness Drills'
+!insert (team23, training23) into TeamTraining
+
+!new TrainingSession('training24')
+!training24.date := '2023-12-01'
+!training24.location := 'Lightning Practice Field'
+!training24.purpose := 'Tactical Exercises'
+!insert (team24, training24) into TeamTraining
+
+!new TrainingNotes('trainingNotes23')
+!trainingNotes23.note := 'Conducted high-intensity fitness circuits'
+!trainingNotes23.date := '2023-11-30'
+!insert (training23, trainingNotes23) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes24')
+!trainingNotes24.note := 'Refined positional and movement strategies'
+!trainingNotes24.date := '2023-12-01'
+!insert (training24, trainingNotes24) into TrainingTrainingNotes
+
+!new TrainingObjective('objective34')
+!objective34.areaToImprove := 'Stamina and Endurance'
+!objective34.startDate := '2023-10-01'
+!objective34.endDate := '2023-12-05'
+!objective34.success := true
+!insert (objective34, player34) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective35')
+!objective35.areaToImprove := 'Defensive Coverage'
+!objective35.startDate := '2023-09-20'
+!objective35.endDate := '2023-11-25'
+!objective35.success := false
+!insert (objective35, player35) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective36')
+!objective36.areaToImprove := 'Finishing Techniques'
+!objective36.startDate := '2023-08-15'
+!objective36.endDate := '2023-11-15'
+!objective36.success := true
+!insert (objective36, player36) into TrainingObjectivePlayer
+
+!new Competition('competition12')
+!competition12.name := 'Champions Series'
+!competition12.type := 'Knockout'
+
+!new Match('match12')
+!match12.date := '2023-12-20'
+!match12.homeAway := true
+!insert (competition12, match12) into CompetitionMatch
+!insert (team23, match12) into LocalMatch
+!insert (team24, match12) into VisitorMatch
+
+!new MatchReport('report12')
+!report12.duration := 90
+!report12.scoreVisitor := 1
+!report12.scoreLocal := 3
+!insert (match12, report12) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer34')
+!matchPlayer34.booked := false
+!matchPlayer34.goals := 1
+!matchPlayer34.rating := 8
+!insert (player34, matchPlayer34) into PlayerMatch
+!insert (match12, matchPlayer34) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer36')
+!matchPlayer36.booked := true
+!matchPlayer36.goals := 1
+!matchPlayer36.rating := 7
+!insert (player36, matchPlayer36) into PlayerMatch
+!insert (match12, matchPlayer36) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition34')
+!matchPlayerPosition34.positionName := #MIDFIELDER
+!matchPlayerPosition34.number := 8
+!insert (matchPlayer34, matchPlayerPosition34) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition36')
+!matchPlayerPosition36.positionName := #FORWARD
+!matchPlayerPosition36.number := 10
+!insert (matchPlayer36, matchPlayerPosition36) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event43')
+!event43.eventType := #GOAL
+!event43.time := 25
+!insert (match12, event43) into MatchMatchEvent
+
+!new MatchEvent('event44')
+!event44.eventType := #GOAL
+!event44.time := 55
+!insert (match12, event44) into MatchMatchEvent
+
+!new MatchEvent('event45')
+!event45.eventType := #GOAL
+!event45.time := 70
+!insert (match12, event45) into MatchMatchEvent
+
+!new MatchEvent('event46')
+!event46.eventType := #GOAL
+!event46.time := 82
+!insert (match12, event46) into MatchMatchEvent
+
+!new MatchNote('matchNote12')
+!matchNote12.note := 'Thunder Strikers executed a flawless game with strong offensive plays'
+!matchNote12.date := '2023-12-20'
+!insert (match12, matchNote12) into MatchMatchNote

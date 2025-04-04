@@ -1,0 +1,48 @@
+!new Bank('bank14')
+!bank14.country := 'Mexico'
+!bank14.name := 'Azteca Bank'
+!bank14.bic := 'AZTMXMXA'
+
+!new Account('account27')
+!account27.iban := 'MX51 AZTE 1234 5678 9012 3456'
+!account27.balance := 50000
+
+!new Account('account28')
+!account28.iban := 'MX51 AZTE 0987 6543 2109 8765'
+!account28.balance := 75500
+
+!new Account('account29')
+!account29.iban := 'MX51 AZTE 1111 2222 3333 4444'
+!account29.balance := 0
+
+!new Person('person37')
+!person37.firstName := 'Rodrigo'
+!person37.lastName := 'López'
+!person37.age := 45
+
+!new Person('person38')
+!person38.firstName := 'Mariana'
+!person38.lastName := 'Torres'
+!person38.age := 37
+
+!new Person('person39')
+!person39.firstName := 'Jorge'
+!person39.lastName := 'García'
+!person39.age := 22
+
+!insert (person37, account27) into Ownership
+!insert (person38, account27) into Ownership
+!insert (person39, account28) into Ownership
+!insert (person37, account29) into Ownership
+!insert (person39, account29) into Ownership
+
+!insert (person37, account27) into Use
+!insert (person38, account27) into Use
+!insert (person39, account27) into Use
+!insert (person39, account28) into Use
+!insert (person38, account28) into Use
+!insert (person37, account29) into Use
+
+!insert (bank14, account27) into AccountOfBanks
+!insert (bank14, account28) into AccountOfBanks
+!insert (bank14, account29) into AccountOfBanks

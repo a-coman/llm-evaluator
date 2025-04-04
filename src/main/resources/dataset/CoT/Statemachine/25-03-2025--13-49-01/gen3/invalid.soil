@@ -1,0 +1,80 @@
+!new StateMachine('washingMachineCycle')
+!washingMachineCycle.name := 'washingMachineCycle'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('washing')
+!washing.name := 'washing'
+
+!new State('rinsing')
+!rinsing.name := 'rinsing'
+
+!new State('spinning')
+!spinning.name := 'spinning'
+
+!new State('off')
+!off.name := 'off'
+
+!new Transition('beginWash')
+!beginWash.name := 'beginWash'
+
+!new Transition('washToRinse')
+!washToRinse.name := 'washToRinse'
+
+!new Transition('rinseToSpin')
+!rinseToSpin.name := 'rinseToSpin'
+
+!new Transition('endCycleToIdle')
+!endCycleToIdle.name := 'endCycleToIdle'
+
+!new Transition('endCycleToOff')
+!endCycleToOff.name := 'endCycleToOff'
+
+!new TimeEvent('timeEventBeginWash')
+!timeEventBeginWash.time := 5
+
+!new TimeEvent('timeEventWashToRinse')
+!timeEventWashToRinse.time := 8
+
+!new TimeEvent('timeEventRinseToSpin')
+!timeEventRinseToSpin.time := 10
+
+!new TimeEvent('timeEventEndCycleToIdle')
+!timeEventEndCycleToIdle.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!new TimeEvent('timeEventEndCycleToOff')
+!timeEventEndCycleToOff.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!insert (washingMachineCycle, idle) into StateMachineContainsStates
+!insert (washingMachineCycle, washing) into StateMachineContainsStates
+!insert (washingMachineCycle, rinsing) into StateMachineContainsStates
+!insert (washingMachineCycle, spinning) into StateMachineContainsStates
+!insert (washingMachineCycle, off) into StateMachineContainsStates
+
+!insert (washingMachineCycle, beginWash) into StateMachineContainsTransitions
+!insert (washingMachineCycle, washToRinse) into StateMachineContainsTransitions
+!insert (washingMachineCycle, rinseToSpin) into StateMachineContainsTransitions
+!insert (washingMachineCycle, endCycleToIdle) into StateMachineContainsTransitions
+!insert (washingMachineCycle, endCycleToOff) into StateMachineContainsTransitions
+
+!insert (beginWash, timeEventBeginWash) into TransitionContainsEvents
+!insert (washToRinse, timeEventWashToRinse) into TransitionContainsEvents
+!insert (rinseToSpin, timeEventRinseToSpin) into TransitionContainsEvents
+!insert (endCycleToIdle, timeEventEndCycleToIdle) into TransitionContainsEvents
+!insert (endCycleToOff, timeEventEndCycleToOff) into TransitionContainsEvents
+
+!insert (idle, beginWash) into StateTransition
+!insert (beginWash, washing) into TransitionState
+
+!insert (washing, washToRinse) into StateTransition
+!insert (washToRinse, rinsing) into TransitionState
+
+!insert (rinsing, rinseToSpin) into StateTransition
+!insert (rinseToSpin, spinning) into TransitionState
+
+!insert (spinning, endCycleToIdle) into StateTransition
+!insert (endCycleToIdle, idle) into TransitionState
+
+!insert (spinning, endCycleToOff) into StateTransition
+!insert (endCycleToOff, off) into TransitionState

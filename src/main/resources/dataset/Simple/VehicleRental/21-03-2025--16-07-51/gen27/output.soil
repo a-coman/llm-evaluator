@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice29')
+!rentalOffice29.name := 'Main Street Rentals'
+!rentalOffice29.number := 129
+!rentalOffice29.address := '789 Central Ave, Boston, MA'
+
+!new Vehicle('coveredTrailer6')
+!coveredTrailer6.id := 28
+!coveredTrailer6.registrationState := #CA
+!coveredTrailer6.licensePlateNumber := 'MA8989'
+!coveredTrailer6.vehicleTypeCode := #COVERED_TRAILER
+!coveredTrailer6.registrationLastMaintenanceDate := Date('2023-07-22')
+!coveredTrailer6.expirationDate := Date('2024-07-22')
+
+!new Individual('individualCustomer15')
+!individualCustomer15.name := 'Emma Watson'
+!individualCustomer15.address := '123 Elm St, Boston, MA'
+!individualCustomer15.poorRisk := false
+!individualCustomer15.homePhone := '555-8899'
+!individualCustomer15.driverLicenseState := #CA
+!individualCustomer15.driverLicenseNumber := 5566778
+!individualCustomer15.driverLicenseExpirationDate := Date('2027-06-01')
+
+!new RentalAgreement('rentalAgreement28')
+!rentalAgreement28.number := 528
+!rentalAgreement28.rentalDate := Date('2023-10-10')
+!rentalAgreement28.anticipatedDuration := 7
+!rentalAgreement28.depositPaid := 200.0
+!rentalAgreement28.quotedDailyRate := 25.0
+!rentalAgreement28.quotedRatePerMile := 0.2
+
+!insert (rentalOffice29, coveredTrailer6) into RentalOfficeVehicle
+!insert (rentalOffice29, rentalAgreement28) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice29, rentalAgreement28) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement28, coveredTrailer6) into RentalAgreementVehicle
+!insert (rentalAgreement28, individualCustomer15) into RentalAgreementCustomer

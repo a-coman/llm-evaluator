@@ -1,0 +1,94 @@
+!new Customer('customer21')
+!customer21.firstName := 'Emily'
+!customer21.lastName := 'Thompson'
+
+!new Booking('booking21')
+!booking21.bookingId := 4004
+!booking21.startDate := 'October 15, 2024'
+!booking21.endDate := 'October 18, 2024'
+!booking21.canceled := false
+!booking21.confirmed := true
+
+!new RoomReservation('roomreservation33')
+!roomreservation33.checkInDate := 'October 15, 2024'
+!roomreservation33.checkOutDate := 'October 18, 2024'
+
+!new RoomReservation('roomreservation34')
+!roomreservation34.checkInDate := 'October 15, 2024'
+!roomreservation34.checkOutDate := 'October 18, 2024'
+
+!new RoomReservation('roomreservation35')
+!roomreservation35.checkInDate := 'October 16, 2024'
+!roomreservation35.checkOutDate := 'October 17, 2024'
+
+!new Room('room38')
+!room38.roomNumber := 601
+!room38.numBeds := 2
+!room38.pricePerNight := 500.00
+!room38.occupied := true
+!room38.blocked := false
+
+!new Room('room39')
+!room39.roomNumber := 602
+!room39.numBeds := 2
+!room39.pricePerNight := 500.00
+!room39.occupied := true
+!room39.blocked := false
+
+!new Room('room40')
+!room40.roomNumber := 700
+!room40.numBeds := 1  -- Adjusted to comply with the positive number of beds invariant
+!room40.pricePerNight := 400.00
+!room40.occupied := true
+!room40.blocked := false
+
+!new RoomExtra('roomextra47')
+!roomextra47.price := 500.00
+!roomextra47.description := 'Private Chef Service'
+
+!new RoomExtra('roomextra48')
+!roomextra48.price := 400.00
+!roomextra48.description := 'In-room Spa Treatment'
+
+!new RoomExtra('roomextra49')
+!roomextra49.price := 300.00
+!roomextra49.description := 'Advanced Audio-Visual Setup'
+
+!new Bill('bill38')
+!bill38.billId := 9008
+!bill38.price := 2000.00
+
+!new Bill('bill39')
+!bill39.billId := 9009
+!bill39.price := 2000.00
+
+!new Bill('bill40')
+!bill40.billId := 9010
+!bill40.price := 1100.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto21')
+!freeroomtypesdto21.roomTypeDescription := 'Standard Room'
+!freeroomtypesdto21.numBeds := 1
+!freeroomtypesdto21.pricePerNight := 200.00
+!freeroomtypesdto21.numFreeRooms := 3
+
+!insert (booking21, customer21) into BookingCustomer
+!insert (booking21, roomreservation33) into BookingRoomReservation
+!insert (booking21, roomreservation34) into BookingRoomReservation
+!insert (booking21, roomreservation35) into BookingRoomReservation
+
+!insert (roomreservation33, room38) into RoomReservationRoom
+!insert (roomreservation34, room39) into RoomReservationRoom
+!insert (roomreservation35, room40) into RoomReservationRoom
+
+!insert (roomreservation33, roomextra47) into RoomReservationExtras
+!insert (roomreservation34, roomextra48) into RoomReservationExtras
+!insert (roomreservation35, roomextra49) into RoomReservationExtras
+
+!insert (bill38, roomreservation33) into BillRoomReservation
+!insert (bill39, roomreservation34) into BillRoomReservation
+!insert (bill40, roomreservation35) into BillRoomReservation
+
+!insert (booking21, bill38) into BookingBill
+!insert (booking21, bill39) into BookingBill
+!insert (booking21, bill40) into BookingBill

@@ -1,0 +1,55 @@
+!new AddressBook('AddressBook_4')
+
+!new Company('Artisanal_Foundation')
+!Artisanal_Foundation.name := 'Artisanal Foundation'
+!Artisanal_Foundation.phone := '+81-3-1234-5678'
+!Artisanal_Foundation.website := 'www.artisanalfoundation.jp'
+!Artisanal_Foundation.email := 'info@artisanal.jp'
+!Artisanal_Foundation.industry := 'Non-profit'
+
+!new Address('Address_Artisanal_Foundation')
+!Address_Artisanal_Foundation.city := 'Tokyo'
+!Address_Artisanal_Foundation.houseNr := '101'
+!Address_Artisanal_Foundation.street := 'Ginza'
+!insert (Artisanal_Foundation, Address_Artisanal_Foundation) into ContactContainsAddress
+
+!new Note('Note_Artisanal_Foundation')
+!Note_Artisanal_Foundation.author := 'Akira Tanaka'
+!Note_Artisanal_Foundation.time := Date('2023-04-10')
+!Note_Artisanal_Foundation.type := #MEETING
+!Note_Artisanal_Foundation.comment := 'Planning cultural heritage workshop.'
+!insert (Artisanal_Foundation, Note_Artisanal_Foundation) into ContactContainsNote
+
+!new Relationship('Relationship_Artisanal_to_Sofia')
+!Relationship_Artisanal_to_Sofia.type := #COWORKER
+!insert (Artisanal_Foundation, Relationship_Artisanal_to_Sofia) into ContactToRelationship
+
+!new Person('Sofia_Martinez')
+!Sofia_Martinez.name := 'Sofia Martínez'
+!Sofia_Martinez.phone := '+52-55-9876-5432'
+!Sofia_Martinez.website := 'www.sofiamartinezcontemporary.mx'
+!Sofia_Martinez.email := 'sofia@martinezart.mx'
+!Sofia_Martinez.title := 'Contemporary Artist'
+
+!new Address('Address_Sofia_Martinez')
+!Address_Sofia_Martinez.city := 'Mexico City'
+!Address_Sofia_Martinez.houseNr := '23'
+!Address_Sofia_Martinez.street := 'Paseo de la Reforma'
+!insert (Sofia_Martinez, Address_Sofia_Martinez) into ContactContainsAddress
+
+!new Note('Note_Sofia_Martinez')
+!Note_Sofia_Martinez.author := 'Diego Luna'
+!Note_Sofia_Martinez.time := Date('2023-01-17')
+!Note_Sofia_Martinez.type := #CALL
+!Note_Sofia_Martinez.comment := 'Discussed details for a collaborative art project.'
+!insert (Sofia_Martinez, Note_Sofia_Martinez) into ContactContainsNote
+
+!new Relationship('Relationship_Sofia_to_Artisanal')
+!Relationship_Sofia_to_Artisanal.type := #COWORKER
+!insert (Sofia_Martinez, Relationship_Sofia_to_Artisanal) into ContactToRelationship
+!insert (Relationship_Sofia_to_Artisanal, Artisanal_Foundation) into RelationshipToContact
+
+!insert (Relationship_Artisanal_to_Sofia, Sofia_Martinez) into RelationshipToContact
+
+!insert (AddressBook_4, Artisanal_Foundation) into AddressBookMadeOfContact
+!insert (AddressBook_4, Sofia_Martinez) into AddressBookMadeOfContact

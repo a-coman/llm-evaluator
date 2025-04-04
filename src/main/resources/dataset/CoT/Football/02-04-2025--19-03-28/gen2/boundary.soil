@@ -1,0 +1,182 @@
+!new Club('club11')
+!club11.name := 'Southern Tigers FC'
+!club11.homeGround := 'Tiger Arena'
+!club11.chairman := 'Emily Zhang'
+
+!new Team('teamL')
+!teamL.name := 'Tigers Elite'
+
+!insert (club11, teamL) into ClubTeam
+
+!new Player('player11')
+!player11.name := 'Carlos Mendes'
+!player11.age := 32
+!player11.bestFoot := #BOTH
+!player11.phoneNumber := '+351910000111'
+
+!insert (teamL, player11) into TeamPlayer
+
+!new Position('position13')
+!position13.positionName := #FORWARD
+
+!new Position('position14')
+!position14.positionName := #MIDFIELDER
+
+!new Position('position15')
+!position15.positionName := #DEFENDER
+
+!insert (player11, position13) into PlayerPositions
+!insert (player11, position14) into PlayerPositions
+!insert (player11, position15) into PlayerPositions
+
+!new PlayerNotes('playerNote8')
+!playerNote8.note := 'Top scorer of the season'
+!playerNote8.date := '2023-04-01'
+
+!new PlayerNotes('playerNote9')
+!playerNote9.note := 'Consistent performer in mid-field'
+!playerNote9.date := '2023-03-20'
+
+!insert (player11, playerNote8) into PlayerPlayerNotes
+!insert (player11, playerNote9) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective11')
+!trainingObjective11.areaToImprove := 'Versatility'
+!trainingObjective11.startDate := '2023-01-01'
+!trainingObjective11.endDate := '2023-12-31'
+!trainingObjective11.success := true
+
+!insert (trainingObjective11, player11) into TrainingObjectivePlayer
+
+!new Competition('competition6')
+!competition6.name := 'City Championship'
+!competition6.type := 'Cup'
+
+!new Match('match6')
+!match6.date := '2023-06-15'
+!match6.homeAway := false
+
+!insert (competition6, match6) into CompetitionMatch
+
+!new Team('teamM')
+!teamM.name := 'East Leopards'
+
+!new Club('club12')
+!club12.name := 'East Leopards Club'
+!club12.homeGround := 'Leopard Stadium'
+!club12.chairman := 'John Doe'
+
+!insert (club12, teamM) into ClubTeam
+
+!new Player('player12')
+!player12.name := 'Igor Silva'
+!player12.age := 28
+!player12.bestFoot := #LEFT
+!player12.phoneNumber := '+55-21-9876543'
+
+!insert (teamM, player12) into TeamPlayer
+
+!new Position('position16')
+!position16.positionName := #MIDFIELDER
+
+!insert (player12, position16) into PlayerPositions
+
+!new TrainingObjective('trainingObjective12')
+!trainingObjective12.areaToImprove := 'Midfield Control'
+!trainingObjective12.startDate := '2023-02-01'
+!trainingObjective12.endDate := '2023-06-01'
+!trainingObjective12.success := false
+
+!insert (trainingObjective12, player12) into TrainingObjectivePlayer
+
+!insert (teamM, match6) into LocalMatch
+!insert (teamL, match6) into VisitorMatch
+
+!new MatchReport('matchReport6')
+!matchReport6.duration := 120
+!matchReport6.scoreVisitor := 3
+!matchReport6.scoreLocal := 3
+
+!insert (match6, matchReport6) into MatchMatchReport
+
+!new MatchEvent('matchEvent14')
+!matchEvent14.eventType := #GOAL
+!matchEvent14.time := 22
+
+!new MatchEvent('matchEvent15')
+!matchEvent15.eventType := #GOAL
+!matchEvent15.time := 35
+
+!new MatchEvent('matchEvent16')
+!matchEvent16.eventType := #GOAL
+!matchEvent16.time := 47
+
+!new MatchEvent('matchEvent17')
+!matchEvent17.eventType := #GOAL
+!matchEvent17.time := 59
+
+!new MatchEvent('matchEvent18')
+!matchEvent18.eventType := #GOAL
+!matchEvent18.time := 76
+
+!new MatchEvent('matchEvent19')
+!matchEvent19.eventType := #GOAL
+!matchEvent19.time := 89
+
+!insert (match6, matchEvent14) into MatchMatchEvent
+!insert (match6, matchEvent15) into MatchMatchEvent
+!insert (match6, matchEvent16) into MatchMatchEvent
+!insert (match6, matchEvent17) into MatchMatchEvent
+!insert (match6, matchEvent18) into MatchMatchEvent
+!insert (match6, matchEvent19) into MatchMatchEvent
+
+!new MatchPlayer('matchPlayer9')
+!matchPlayer9.booked := true
+!matchPlayer9.goals := 2
+!matchPlayer9.rating := 8
+
+!insert (player11, matchPlayer9) into PlayerMatch
+!insert (match6, matchPlayer9) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition9')
+!matchPlayerPosition9.positionName := #FORWARD
+!matchPlayerPosition9.number := 9
+
+!insert (matchPlayer9, matchPlayerPosition9) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession10')
+!trainingSession10.date := '2023-06-10'
+!trainingSession10.location := 'Tiger Arena Training Complex'
+!trainingSession10.purpose := 'Routine skills enhancement'
+
+!insert (teamL, trainingSession10) into TeamTraining
+
+!new TrainingNotes('trainingNote11')
+!trainingNote11.note := 'Intensity set to high'
+!trainingNote11.date := '2023-06-10'
+
+!new TrainingNotes('trainingNote12')
+!trainingNote12.note := 'Emphasis on team collaboration'
+!trainingNote12.date := '2023-06-10'
+
+!insert (trainingSession10, trainingNote11) into TrainingTrainingNotes
+!insert (trainingSession10, trainingNote12) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend5')
+!failedAttend5.reason := 'Personal commitments'
+
+!insert (trainingSession10, failedAttend5) into TrainingFailded
+!insert (failedAttend5, player11) into FailedPlayer
+
+!new TrainingSession('trainingSession11')
+!trainingSession11.date := '2023-06-12'
+!trainingSession11.location := 'Leopard Stadium Training Ground'
+!trainingSession11.purpose := 'Midfield Tactics'
+
+!insert (teamM, trainingSession11) into TeamTraining
+
+!new TrainingNotes('trainingNote13')
+!trainingNote13.note := 'Focus on player positioning'
+!trainingNote13.date := '2023-06-12'
+
+!insert (trainingSession11, trainingNote13) into TrainingTrainingNotes

@@ -1,0 +1,108 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant5')
+!restaurant5.name := 'City Skylines'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner9')
+!owner9.name := 'Jessica Adams'
+!owner9.percentageShares := 50
+
+!new Owner('owner10')
+!owner10.name := 'Daniel Lee'
+!owner10.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant5, owner9) into RestaurantOwner
+!insert (restaurant5, owner10) into RestaurantOwner
+
+-- Creating Tables with varying capacities
+!new Table('table9')
+!table9.number := 501
+!table9.description := 'Rooftop Table'
+!table9.capacity := 6
+
+!new Table('table10')
+!table10.number := 502
+!table10.description := 'Balcony View'
+!table10.capacity := 4
+
+-- Create a HeadWaiter and multiple Waiters
+!new HeadWaiter('headwaiter5')
+!headwaiter5.name := 'Lucas Gray'
+!headwaiter5.dateOfBirth := Date('1980-02-18')
+!headwaiter5.phoneNumber := '555-6543'
+
+!new Waiter('waiter7')
+!waiter7.name := 'Eva Green'
+!waiter7.dateOfBirth := Date('1993-06-05')
+!waiter7.phoneNumber := '555-8912'
+!waiter7.spokenLanguage := #German
+
+!new Waiter('waiter8')
+!waiter8.name := 'Leo Martin'
+!waiter8.dateOfBirth := Date('1990-03-22')
+!waiter8.phoneNumber := '555-6666'
+!waiter8.spokenLanguage := #Spanish
+
+-- Establish association between HeadWaiter and Waiters
+!insert (headwaiter5, waiter7) into HeadWaiterWaiter
+!insert (headwaiter5, waiter8) into HeadWaiterWaiter
+
+-- New RegularCustomer instance
+!new RegularCustomer('customer3')
+!customer3.name := 'Oliver Stone'
+!customer3.prefferedLanguage := #English
+
+-- Creating an Individual Reservation for a private dinner
+!new Individual('reservation5')
+!reservation5.time := Time('19:30')
+!reservation5.date := Date('2024-01-10')
+!reservation5.numberPeople := 3
+!reservation5.name := 'Emily Clarke'
+!reservation5.phoneNumber := '555-1122'
+!reservation5.number := 203
+!reservation5.seating := #Inside
+!reservation5.smoking := #NonSmoking
+
+-- Establish associations for Individual Reservation
+!insert (restaurant5, reservation5) into RestaurantReservation
+!insert (reservation5, waiter7) into ReservationWaiter
+!insert (reservation5, table9) into ReservationTable -- total capacity > numberPeople
+!insert (reservation5, table10) into ReservationTable -- ensure all tables are utilized
+
+-- Associate RegularCustomer with the Reservation
+!insert (reservation5, customer3) into ReservationCustomer
+
+-- Create a new MenuItem for the private dinner
+!new MenuItem('menuItem5')
+!menuItem5.description := 'Stuffed Bell Peppers'
+!menuItem5.prepTime := 20.0
+!menuItem5.classification := #Main
+
+-- Assign MenuItem to a new Chef
+!new Chef('chef5')
+!chef5.name := 'Gordon Ramsay Jr.'
+!chef5.dateOfBirth := Date('1992-09-21')
+!chef5.phoneNumber := '555-9999'
+
+!insert (menuItem5, chef5) into MenuItemChef
+
+-- Creating Cooks supervised by the new Chef
+!new Cook('cook5')
+!cook5.name := 'Ina Garten'
+!cook5.dateOfBirth := Date('1948-02-02')
+!cook5.phoneNumber := '555-3333'
+!cook5.yearsOfExperience := 25
+
+-- Establish association between Chef and Cook
+!insert (chef5, cook5) into ChefCook
+
+-- Create an ItemOrder for the private dinner
+!new ItemOrder('order5')
+!order5.time := Time('19:30')
+
+-- Establish ItemOrderMenuItem association
+!insert (order5, menuItem5) into ItemOrderMenuItem
+
+-- Associate the ItemOrder with the Individual Reservation
+!insert (reservation5, order5) into ReservationItemOrdered

@@ -1,0 +1,47 @@
+!new Booking('booking14')
+!booking14.startDate := '2024-07-01'
+!booking14.endDate := '2024-07-07'
+!booking14.canceled := false
+!booking14.bookingId := 113
+!booking14.confirmed := true
+
+!new Bill('bill14')
+!bill14.price := 1200.00
+!bill14.billId := 213
+
+!new FreeRoomTypesDTO('roomType14')
+!roomType14.roomTypeDescription := 'Ocean View Room'
+!roomType14.numBeds := 2
+!roomType14.pricePerNight := 250.00
+!roomType14.numFreeRooms := 3
+
+!new Customer('customer14')
+!customer14.firstName := 'Paul'
+!customer14.lastName := 'Quincy'
+
+!new RoomReservation('reservation14')
+!reservation14.checkInDate := '2024-07-01'
+!reservation14.checkOutDate := '2024-07-07'
+
+!new RoomExtra('extra14')
+!extra14.price := 75.00
+!extra14.description := 'Surfboard Rental'
+
+!new Room('room23')
+!room23.numBeds := 2
+!room23.pricePerNight := 240.00
+!room23.occupied := true
+!room23.blocked := false
+!room23.roomNumber := 123
+
+!insert (booking14, bill14) into BookingBill
+
+!insert (booking14, customer14) into BookingCustomer
+
+!insert (booking14, reservation14) into BookingRoomReservation
+
+!insert (reservation14, extra14) into RoomReservationExtras
+
+!insert (reservation14, room23) into RoomReservationRoom
+
+!insert (bill14, reservation14) into BillRoomReservation

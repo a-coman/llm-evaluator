@@ -1,0 +1,264 @@
+!new Restaurant('restaurant30')
+!restaurant30.name := 'Harmony Lodge Gourmet Retreat'
+
+!new Owner('owner68')
+!owner68.name := 'Samuel Johnson'
+!owner68.percentageShares := 35
+
+!new Owner('owner69')
+!owner69.name := 'Niamh O'Sullivan'
+!owner69.percentageShares := 35
+
+!new Owner('owner70')
+!owner70.name := 'Lee Chang'
+!owner70.percentageShares := 30
+
+!insert (restaurant30, owner68) into RestaurantOwner
+!insert (restaurant30, owner69) into RestaurantOwner
+!insert (restaurant30, owner70) into RestaurantOwner
+
+!new RegularCustomer('customer24')
+!customer24.name := 'Jean-Paul Laurent'
+!customer24.prefferedLanguage := #English  -- Using #English as placeholder for French
+
+!new RegularCustomer('customer25')
+!customer25.name := 'Lillian Ng'
+!customer25.prefferedLanguage := #English  -- Using #English as placeholder for Cantonese
+
+!new HeadWaiter('headWaiter26')
+!headWaiter26.name := 'Anton Boskovic'
+!headWaiter26.dateOfBirth := Date('1970-03-01')
+!headWaiter26.phoneNumber := '+61 555 234 9876'
+
+!new Waiter('waiter59')
+!waiter59.name := 'Chloe Edwards'
+!waiter59.dateOfBirth := Date('1992-05-18')
+!waiter59.phoneNumber := '+61 555 234 1212'
+
+!new Waiter('waiter60')
+!waiter60.name := 'Akeem Olufemi'
+!waiter60.dateOfBirth := Date('1987-11-22')
+!waiter60.phoneNumber := '+61 555 234 3434'
+
+!insert (headWaiter26, waiter59) into HeadWaiterWaiter
+!insert (headWaiter26, waiter60) into HeadWaiterWaiter
+
+!new Manager('manager12')
+!manager12.name := 'Fatima Rahman'
+!manager12.dateOfBirth := Date('1980-02-28')
+!manager12.phoneNumber := '+61 555 234 5656'
+
+!new Chef('chef38')
+!chef38.name := 'Katarina Milosevic'
+!chef38.dateOfBirth := Date('1976-10-10')
+!chef38.phoneNumber := '+61 555 234 7878'
+
+!new Cook('cook49')
+!cook49.name := 'Yusuke Tanaka'
+!cook49.dateOfBirth := Date('1988-12-05')
+!cook49.phoneNumber := '+61 555 234 9090'
+!cook49.yearsOfExperience := 9
+
+!new Cook('cook50')
+!cook50.name := 'Brenda Kealoha'
+!cook50.dateOfBirth := Date('1985-08-28')
+!cook50.phoneNumber := '+61 555 234 8080'
+!cook50.yearsOfExperience := 12
+
+!insert (chef38, cook49) into ChefCook
+!insert (chef38, cook50) into ChefCook
+
+!new BusDriver('busdriver29')
+!busdriver29.name := 'Carlos Silva'
+!busdriver29.dateOfBirth := Date('1973-04-14')
+!busdriver29.phoneNumber := '+61 555 234 6767'
+
+!new Table('table70')
+!table70.number := 16
+!table70.description := 'Elevated view, enclosed by glass'
+!table70.capacity := 6
+
+!new Table('table71')
+!table71.number := 17
+!table71.description := 'Rustic log seating, outdoor'
+!table71.capacity := 4
+
+!new Table('table72')
+!table72.number := 18
+!table72.description := 'Near waterfall, secluded'
+!table72.capacity := 10
+
+!new Individual('individualReservation23')
+!individualReservation23.time := Time('13:00')
+!individualReservation23.date := Date('2024-01-10')
+!individualReservation23.numberPeople := 3
+!individualReservation23.name := 'Jean-Paul Laurent'
+!individualReservation23.phoneNumber := '+33 555 4567'
+!individualReservation23.number := 34987
+!individualReservation23.seating := #Inside  -- Using #Inside as placeholder for Enclosed
+!individualReservation23.smoking := #NonSmoking
+
+!insert (restaurant30, individualReservation23) into RestaurantReservation
+!insert (individualReservation23, table70) into ReservationTable
+!insert (individualReservation23, waiter59) into ReservationWaiter
+
+!insert (individualReservation23, customer24) into ReservationCustomer
+
+!new Banquet('banquet27')
+!banquet27.date := Date('2024-01-15')
+!banquet27.time := Time('11:30')
+!banquet27.numberPeople := 20
+!banquet27.name := 'Nature\'s Epicureans Club'
+!banquet27.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Bank Transfer
+!banquet27.busService := true
+
+!insert (restaurant30, banquet27) into RestaurantReservation
+!insert (banquet27, table71) into ReservationTable
+!insert (banquet27, table72) into ReservationTable
+!insert (banquet27, busdriver29) into BanquetBusDriver
+
+!insert (banquet27, waiter60) into ReservationWaiter
+!insert (banquet27, waiter59) into ReservationWaiter
+
+!new ItemOrder('itemOrder46')
+!itemOrder46.time := Time('13:15')
+!insert (individualReservation23, itemOrder46) into ReservationItemOrdered
+
+!new MenuItem('menuItem51')
+!menuItem51.description := 'Truffled Risotto'
+!menuItem51.prepTime := 30.0
+!menuItem51.classification := #Main
+
+!insert (itemOrder46, menuItem51) into ItemOrderMenuItem
+!insert (menuItem51, chef38) into MenuItemChef
+
+!new MenuItem('menuItem52')
+!menuItem52.description := 'Lemon Tart'
+!menuItem52.prepTime := 45.0
+!menuItem52.classification := #Dessert
+
+!new ItemOrder('itemOrder47')
+!itemOrder47.time := Time('13:30')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation23, itemOrder47) into ReservationItemOrdered
+!insert (itemOrder47, menuItem52) into ItemOrderMenuItem
+!insert (menuItem52, chef38) into MenuItemChef
+
+!new ItemOrder('itemOrder48')
+!itemOrder48.time := Time('12:00')
+!insert (banquet27, itemOrder48) into ReservationItemOrdered
+
+!new MenuItem('menuItem53')
+!menuItem53.description := 'Grilled Barramundi'
+!menuItem53.prepTime := 25.0
+!menuItem53.classification := #Main
+
+!insert (itemOrder48, menuItem53) into ItemOrderMenuItem
+!insert (menuItem53, chef38) into MenuItemChef
+
+!new MenuItem('menuItem54')
+!menuItem54.description := 'Heirloom Tomato Salad'
+!menuItem54.prepTime := 15.0
+!menuItem54.classification := #Main  -- Using #Main as placeholder
+
+!new ItemOrder('itemOrder49')
+!itemOrder49.time := Time('12:15')  -- Separate ItemOrder for the second menu item
+!insert (banquet27, itemOrder49) into ReservationItemOrdered
+!insert (itemOrder49, menuItem54) into ItemOrderMenuItem
+!insert (menuItem54, chef38) into MenuItemChef
+
+!new FoodItem('foodItem103')
+!foodItem103.number := 14001
+!foodItem103.description := 'Arborio Rice'
+!foodItem103.purchaseFlag := true
+!foodItem103.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem104')
+!foodItem104.number := 14002
+!foodItem104.description := 'Black Truffle'
+!foodItem104.purchaseFlag := true
+!foodItem104.unit := #Gram
+
+!new FoodItem('foodItem105')
+!foodItem105.number := 14003
+!foodItem105.description := 'Parmesan Cheese'
+!foodItem105.purchaseFlag := true
+!foodItem105.unit := #Gram
+
+!insert (menuItem51, foodItem103) into MenuItemFoodItem
+!insert (menuItem51, foodItem104) into MenuItemFoodItem
+!insert (menuItem51, foodItem105) into MenuItemFoodItem
+
+!new FoodItem('foodItem106')
+!foodItem106.number := 14004
+!foodItem106.description := 'Lemons'
+!foodItem106.purchaseFlag := true
+!foodItem106.unit := #Ounce  -- Using #Ounce as flexible descriptor for Pieces
+
+!new FoodItem('foodItem107')
+!foodItem107.number := 14005
+!foodItem107.description := 'Flour'
+!foodItem107.purchaseFlag := true
+!foodItem107.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem108')
+!foodItem108.number := 14006
+!foodItem108.description := 'Butter'
+!foodItem108.purchaseFlag := true
+!foodItem108.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!insert (menuItem52, foodItem106) into MenuItemFoodItem
+!insert (menuItem52, foodItem107) into MenuItemFoodItem
+!insert (menuItem52, foodItem108) into MenuItemFoodItem
+
+!new FoodItem('foodItem109')
+!foodItem109.number := 14007
+!foodItem109.description := 'Barramundi'
+!foodItem109.purchaseFlag := false
+!foodItem109.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem110')
+!foodItem110.number := 14008
+!foodItem110.description := 'Mixed Herbs'
+!foodItem110.purchaseFlag := true
+!foodItem110.unit := #Gram
+
+!new FoodItem('foodItem111')
+!foodItem111.number := 14009
+!foodItem111.description := 'Olive Oil'
+!foodItem111.purchaseFlag := true
+!foodItem111.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem53, foodItem109) into MenuItemFoodItem
+!insert (menuItem53, foodItem110) into MenuItemFoodItem
+!insert (menuItem53, foodItem111) into MenuItemFoodItem
+
+!new FoodItem('foodItem112')
+!foodItem112.number := 14010
+!foodItem112.description := 'Tomatoes'
+!foodItem112.purchaseFlag := true
+!foodItem112.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem113')
+!foodItem113.number := 14011
+!foodItem113.description := 'Basil'
+!foodItem113.purchaseFlag := true
+!foodItem113.unit := #Ounce  -- Using #Ounce as placeholder for Bunches
+
+!new FoodItem('foodItem114')
+!foodItem114.number := 14012
+!foodItem114.description := 'Balsamic Vinegar'
+!foodItem114.purchaseFlag := true
+!foodItem114.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem54, foodItem112) into MenuItemFoodItem
+!insert (menuItem54, foodItem113) into MenuItemFoodItem
+!insert (menuItem54, foodItem114) into MenuItemFoodItem
+
+!new Allergen('allergen40')
+!allergen40.type := #Lactose  -- Using #Lactose as placeholder for Dairy
+
+!new Allergen('allergen41')
+!allergen41.type := #Lactose  -- Using #Lactose as placeholder for Gluten
+
+!insert (foodItem107, allergen41) into FoodItemAllergen
+!insert (foodItem108, allergen40) into FoodItemAllergen

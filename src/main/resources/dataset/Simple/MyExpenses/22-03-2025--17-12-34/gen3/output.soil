@@ -1,0 +1,33 @@
+!new Expense('expense5')
+!expense5.amount := 750.0
+!expense5.startDate := Date('2023-05-01')
+!expense5.endDate := Date('2023-05-31')
+
+!new Currency('currency3')
+!currency3.name := 'British Pound'
+!currency3.abbreviation := 'GBP'
+
+!new Bill('bill8')
+!bill8.amount := 300.0
+!bill8.category := 'Entertainment'
+!bill8.date := Date('2023-05-10')
+!bill8.paymentMethod := #CREDIT_CARD
+!bill8.status := #VERIFIED
+
+!new Bill('bill9')
+!bill9.amount := 450.0
+!bill9.category := 'Groceries'
+!bill9.date := Date('2023-05-15')
+!bill9.paymentMethod := #CREDIT_CARD
+!bill9.status := #VALIDATED
+
+!insert (expense5, bill8) into ExpenseContainsBills
+!insert (expense5, bill9) into ExpenseContainsBills
+
+!insert (bill8, currency3) into BillCurrency
+!insert (bill9, currency3) into BillCurrency
+
+!new Comment('comment5')
+!comment5.text := 'Holiday and groceries expense for May'
+
+!insert (expense5, comment5) into ExpenseComment

@@ -1,0 +1,29 @@
+!new Expense('kyotoExplorationExpense')
+!kyotoExplorationExpense.amount := 50000.00
+!kyotoExplorationExpense.startDate := Date('2023-04-10')
+!kyotoExplorationExpense.endDate := Date('2023-04-15')
+
+!new Bill('kyotoAccommodation')
+!kyotoAccommodation.amount := 20000.00
+!kyotoAccommodation.category := 'Accommodation'
+!kyotoAccommodation.date := Date('2023-04-10')
+!kyotoAccommodation.paymentMethod := #CREDIT_CARD
+!kyotoAccommodation.status := #VALIDATED
+
+!new Bill('kyotoSightseeing')
+!kyotoSightseeing.amount := 30000.00
+!kyotoSightseeing.category := 'Sightseeing Tours'
+!kyotoSightseeing.date := Date('2023-04-12')
+!kyotoSightseeing.paymentMethod := #CASH
+!kyotoSightseeing.status := #VERIFIED
+
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!insert (kyotoAccommodation, japaneseYen) into BillCurrency
+!insert (kyotoSightseeing, japaneseYen) into BillCurrency
+
+!insert (kyotoExplorationExpense, kyotoAccommodation) into ExpenseContainsBills
+!insert (kyotoExplorationExpense, kyotoSightseeing) into ExpenseContainsBills
+

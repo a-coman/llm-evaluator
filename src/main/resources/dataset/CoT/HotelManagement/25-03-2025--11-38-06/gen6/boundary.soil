@@ -1,0 +1,39 @@
+!new Customer('customer26')
+!customer26.firstName := 'Anja'
+!customer26.lastName := 'Petrovic'
+
+!new Booking('booking26')
+!booking26.bookingId := 6
+!booking26.startDate := '2023-12-25'
+!booking26.endDate := '2023-12-26'
+!booking26.canceled := false
+!booking26.confirmed := true
+
+!new Bill('bill48')
+!bill48.billId := 8
+!bill48.price := 100.00
+
+!new RoomReservation('roomreservation42')
+!roomreservation42.checkInDate := '2023-12-25'
+!roomreservation42.checkOutDate := '2023-12-26'
+
+!new Room('room49')
+!room49.roomNumber := 404
+!room49.numBeds := 2
+!room49.pricePerNight := 100.00
+!room49.occupied := true
+!room49.blocked := false
+
+!new FreeRoomTypesDTO('freeroomtypesdto26')
+!freeroomtypesdto26.roomTypeDescription := 'Emergency Double Room'
+!freeroomtypesdto26.numBeds := 2
+!freeroomtypesdto26.pricePerNight := 100.00
+!freeroomtypesdto26.numFreeRooms := 0
+
+!insert (booking26, customer26) into BookingCustomer
+!insert (booking26, roomreservation42) into BookingRoomReservation
+!insert (booking26, bill48) into BookingBill
+
+!insert (roomreservation42, room49) into RoomReservationRoom
+
+!insert (bill48, roomreservation42) into BillRoomReservation

@@ -1,0 +1,193 @@
+!new Client('clientGlobal1')
+!clientGlobal1.clientId := 201
+!clientGlobal1.isSuspended := false
+
+!new Client('clientGlobal2')
+!clientGlobal2.clientId := 202
+!clientGlobal2.isSuspended := false
+
+!new Rental('rentalGlobal1')
+!rentalGlobal1.date := Date('2023-10-03')
+
+!new Rental('rentalGlobal2')
+!rentalGlobal2.date := Date('2023-10-10')
+
+!new Movie('movieChateauMysteres')
+!movieChateauMysteres.title := 'Château de Mystères'
+!movieChateauMysteres.availableCopies := 5
+!movieChateauMysteres.genre := #Comedy
+
+!new Series('seriesTeknologiRevolusi')
+!seriesTeknologiRevolusi.title := 'Teknologi Revolusi'
+!seriesTeknologiRevolusi.availableCopies := 1
+!seriesTeknologiRevolusi.episode := 3
+
+!new Actor('actorFrancoisHumour')
+!actorFrancoisHumour.name := 'François Humour'
+
+!new Actor('actorIndahSarjana')
+!actorIndahSarjana.name := 'Indah Sarjana'
+
+!new Actor('actorRinaEkstra')
+!actorRinaEkstra.name := 'Rina Ekstra'
+
+!insert (clientGlobal1, rentalGlobal1) into ClientRental
+!insert (clientGlobal2, rentalGlobal2) into ClientRental
+
+!insert (rentalGlobal1, movieChateauMysteres) into RentalCassette
+!insert (rentalGlobal2, seriesTeknologiRevolusi) into RentalCassette
+
+!insert (movieChateauMysteres, actorFrancoisHumour) into CassetteActor
+!insert (seriesTeknologiRevolusi, actorIndahSarjana) into CassetteActor
+!insert (seriesTeknologiRevolusi, actorRinaEkstra) into CassetteActor
+
+!new Client('clientBoundary3')
+!clientBoundary3.clientId := 2
+!clientBoundary3.isSuspended := true
+
+!new Client('clientBoundary4')
+!clientBoundary4.clientId := 1000000
+!clientBoundary4.isSuspended := false
+
+!new Rental('rentalBoundary2')
+!rentalBoundary2.date := Date('2024-01-01')
+
+!new Movie('cassetteGalaxyQuestXX')
+!cassetteGalaxyQuestXX.title := 'Galaxy Quest XX'
+!cassetteGalaxyQuestXX.availableCopies := 10000
+!cassetteGalaxyQuestXX.genre := #Action
+
+!new Series('cassetteDetectiveChronicles')
+!cassetteDetectiveChronicles.title := 'Detective Chronicles Ep.5'
+!cassetteDetectiveChronicles.availableCopies := 5
+!cassetteDetectiveChronicles.episode := 5
+
+!new Movie('cassetteStreetLaughs')
+!cassetteStreetLaughs.title := 'Street Laughs'
+!cassetteStreetLaughs.availableCopies := 0
+!cassetteStreetLaughs.genre := #Comedy
+
+!new Actor('actorCarlosSanz')
+!actorCarlosSanz.name := 'Carlos Sanz'
+
+!new Actor('actorMiyukiTanaka')
+!actorMiyukiTanaka.name := 'Miyuki Tanaka'
+
+!insert (clientBoundary3, rentalBoundary2) into ClientRental
+
+!insert (rentalBoundary2, cassetteGalaxyQuestXX) into RentalCassette
+!insert (rentalBoundary2, cassetteDetectiveChronicles) into RentalCassette
+
+!insert (cassetteGalaxyQuestXX, actorCarlosSanz) into CassetteActor
+!insert (cassetteDetectiveChronicles, actorMiyukiTanaka) into CassetteActor
+
+!insert (cassetteStreetLaughs, actorCarlosSanz) into CassetteActor
+!insert (cassetteStreetLaughs, actorMiyukiTanaka) into CassetteActor
+
+!new Client('ivanPopovic')
+!ivanPopovic.clientId := 201
+!ivanPopovic.isSuspended := false
+
+!new Client('anaKovacevic')
+!anaKovacevic.clientId := 202
+!anaKovacevic.isSuspended := false
+
+!new Client('johnSmith')
+!johnSmith.clientId := 203
+!johnSmith.isSuspended := true
+
+!new Rental('rentalIvan')
+!rentalIvan.date := Date('2023-10-01')
+
+!new Rental('rentalAna')
+!rentalAna.date := Date('2023-10-02')
+
+!new Movie('movieAdriaticHeist')
+!movieAdriaticHeist.title := 'The Adriatic Heist'
+!movieAdriaticHeist.availableCopies := 7
+!movieAdriaticHeist.genre := #Action
+
+!new Movie('movieNightsInSplit')
+!movieNightsInSplit.title := 'Nights in Split'
+!movieNightsInSplit.availableCopies := 4
+!movieNightsInSplit.genre := #Comedy
+
+!new Series('seriesDalmatianDays')
+!seriesDalmatianDays.title := 'Dalmatian Days'
+!seriesDalmatianDays.availableCopies := 1
+!seriesDalmatianDays.episode := 10
+
+!new Actor('actorGoranVisnjic')
+!actorGoranVisnjic.name := 'Goran Visnjic'
+
+!new Actor('actorMillaJovovich')
+!actorMillaJovovich.name := 'Milla Jovovich'
+
+!new Actor('actorEllaMorales')
+!actorEllaMorales.name := 'Ella Morales'
+
+!insert (ivanPopovic, rentalIvan) into ClientRental
+!insert (anaKovacevic, rentalAna) into ClientRental
+
+!insert (rentalIvan, movieAdriaticHeist) into RentalCassette
+!insert (rentalAna, movieNightsInSplit) into RentalCassette
+!insert (rentalAna, seriesDalmatianDays) into RentalCassette
+
+!insert (movieAdriaticHeist, actorGoranVisnjic) into CassetteActor
+!insert (movieNightsInSplit, actorMillaJovovich) into CassetteActor
+!insert (seriesDalmatianDays, actorEllaMorales) into CassetteActor
+
+!new Client('clientEdge101')
+!clientEdge101.clientId := 101
+!clientEdge101.isSuspended := false
+
+!new Client('clientEdge102')
+!clientEdge102.clientId := 102
+!clientEdge102.isSuspended := true
+
+!new Rental('rentalEdge1')
+!rentalEdge1.date := Date('2023-10-01')
+
+!new Rental('rentalEdge2')
+!rentalEdge2.date := Date('2023-10-01')
+
+!new Movie('cassetteCrouchingTiger')
+!cassetteCrouchingTiger.title := 'Crouching Tiger'
+!cassetteCrouchingTiger.availableCopies := 3
+!cassetteCrouchingTiger.genre := #Action
+
+!new Series('cassetteFinaleFrenzy')
+!cassetteFinaleFrenzy.title := 'Finale Frenzy'
+!cassetteFinaleFrenzy.availableCopies := 1
+!cassetteFinaleFrenzy.episode := 48
+
+!new Movie('cassetteSilentComedy')
+!cassetteSilentComedy.title := 'Silent Comedy'
+!cassetteSilentComedy.availableCopies := 2
+!cassetteSilentComedy.genre := #Comedy
+
+!new Actor('actorJetLi')
+!actorJetLi.name := 'Jet Li'
+
+!new Actor('actorTomHanks')
+!actorTomHanks.name := 'Tom Hanks'
+
+!new Actor('actorJessicaAlba')
+!actorJessicaAlba.name := 'Jessica Alba'
+
+!new Actor('actorCharlieChaplin')
+!actorCharlieChaplin.name := 'Charlie Chaplin'
+
+!insert (clientEdge101, rentalEdge1) into ClientRental
+!insert (clientEdge102, rentalEdge2) into ClientRental
+
+!insert (rentalEdge1, cassetteCrouchingTiger) into RentalCassette
+!insert (rentalEdge1, cassetteFinaleFrenzy) into RentalCassette
+
+!insert (rentalEdge2, cassetteSilentComedy) into RentalCassette
+
+!insert (cassetteCrouchingTiger, actorJetLi) into CassetteActor
+!insert (cassetteFinaleFrenzy, actorTomHanks) into CassetteActor
+!insert (cassetteFinaleFrenzy, actorJessicaAlba) into CassetteActor
+!insert (cassetteSilentComedy, actorCharlieChaplin) into CassetteActor
+

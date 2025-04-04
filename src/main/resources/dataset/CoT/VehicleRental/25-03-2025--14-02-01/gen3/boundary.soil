@@ -1,0 +1,47 @@
+!new RentalOffice('rentalOffice14')
+!rentalOffice14.name := 'Heritage Auto Rentals'
+!rentalOffice14.number := 98
+!rentalOffice14.address := '456 Old Timers Street, Portsmouth, NH 03801'
+
+!new Truck('truck12')
+!truck12.id := 26
+!truck12.registrationState := #DE
+!truck12.licensePlateNumber := 'HARNH456'
+!truck12.vehicleTypeCode := #TRUCK
+!truck12.registrationLastMaintenanceDate := Date('2022-11-11')
+!truck12.expirationDate := Date('2024-11-11')
+!truck12.odometerReading := 500000
+!truck12.gasTankCapacity := 100.0
+!truck12.workingRadio := false
+!truck12.mileage := 6
+
+!new Vehicle('vehicle15')
+!vehicle15.id := 27
+!vehicle15.registrationState := #DE
+!vehicle15.licensePlateNumber := 'HARNT789'
+!vehicle15.vehicleTypeCode := #OPEN_TRAILER
+!vehicle15.registrationLastMaintenanceDate := Date('2023-04-07')
+!vehicle15.expirationDate := Date('2025-04-07')
+
+!new RentalAgreement('rentalAgreement22')
+!rentalAgreement22.number := 2000
+!rentalAgreement22.rentalDate := Date('2023-12-01')
+!rentalAgreement22.anticipatedDuration := 365
+!rentalAgreement22.depositPaid := 500.00
+!rentalAgreement22.quotedDailyRate := 50.00
+!rentalAgreement22.quotedRatePerMile := 0.50
+
+!new Company('company12')
+!company12.name := 'New England Farm Supplies Co.'
+!company12.address := '163 Maple Tree Road, Concord, NH 03301'
+!company12.poorRisk := false
+!company12.idNumber := 2023
+
+!insert (rentalOffice14, truck12) into RentalOfficeVehicle
+!insert (rentalOffice14, vehicle15) into RentalOfficeVehicle
+
+!insert (rentalOffice14, rentalAgreement22) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice14, rentalAgreement22) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement22, truck12) into RentalAgreementVehicle
+!insert (rentalAgreement22, company12) into RentalAgreementCustomer

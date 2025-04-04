@@ -1,0 +1,93 @@
+!new AddressBook('Global_Health_Partners_Consortium')
+
+!new Company('BioScience_Research_Institute')
+!BioScience_Research_Institute.name := 'BioScience Research Institute'
+!BioScience_Research_Institute.phone := '+1 212 555 7845'
+!BioScience_Research_Institute.website := 'www.bioscienceresearch.org'
+!BioScience_Research_Institute.email := 'info@bioscienceresearch.org'
+!BioScience_Research_Institute.industry := 'Biotechnology Research'
+
+!new Address('Address_BioScience')
+!Address_BioScience.city := 'New York'
+!Address_BioScience.houseNr := '300'
+!Address_BioScience.street := 'Madison Avenue'
+!insert (BioScience_Research_Institute, Address_BioScience) into ContactContainsAddress
+
+!new Note('Note_BioScience_Research_Institute')
+!Note_BioScience_Research_Institute.author := 'Dr. Alex Jordan'
+!Note_BioScience_Research_Institute.time := Date('2023-08-05')
+!Note_BioScience_Research_Institute.type := #CALL
+!Note_BioScience_Research_Institute.comment := 'Discussed latest developments in gene therapy.'
+!insert (BioScience_Research_Institute, Note_BioScience_Research_Institute) into ContactContainsNote
+
+!new Company('LifeCare_Pharmaceuticals')
+!LifeCare_Pharmaceuticals.name := 'LifeCare Pharmaceuticals'
+!LifeCare_Pharmaceuticals.phone := '+49 69 2108 5456'
+!LifeCare_Pharmaceuticals.website := 'www.lifecarepharma.de'
+!LifeCare_Pharmaceuticals.email := 'contact@lifecarepharma.de'
+!LifeCare_Pharmaceuticals.industry := 'Pharmaceuticals'
+
+!new Address('Address_LifeCare')
+!Address_LifeCare.city := 'Frankfurt'
+!Address_LifeCare.houseNr := '85'
+!Address_LifeCare.street := 'Kaiserstraße'
+!insert (LifeCare_Pharmaceuticals, Address_LifeCare) into ContactContainsAddress
+
+!new Note('Note_LifeCare_Pharmaceuticals')
+!Note_LifeCare_Pharmaceuticals.author := 'Dr. Andrea Schmidt'
+!Note_LifeCare_Pharmaceuticals.time := Date('2023-09-12')
+!Note_LifeCare_Pharmaceuticals.type := #EMAIL
+!Note_LifeCare_Pharmaceuticals.comment := 'Potential collaboration on vaccine research.'
+!insert (LifeCare_Pharmaceuticals, Note_LifeCare_Pharmaceuticals) into ContactContainsNote
+
+!new Person('Sanjay_Patel')
+!Sanjay_Patel.name := 'Sanjay Patel'
+!Sanjay_Patel.phone := '+91 98200 12345'
+!Sanjay_Patel.website := 'www.sanjaypatelhealth.com'
+!Sanjay_Patel.email := 'sanjay.patel@consultant.org'
+!Sanjay_Patel.title := 'Healthcare Advisory Specialist'
+
+!new Address('Address_Mumbai_Sanjay')
+!Address_Mumbai_Sanjay.city := 'Mumbai'
+!Address_Mumbai_Sanjay.houseNr := '47'
+!Address_Mumbai_Sanjay.street := 'Mahatma Gandhi Road'
+!insert (Sanjay_Patel, Address_Mumbai_Sanjay) into ContactContainsAddress
+
+!new Address('Address_London_Sanjay')
+!Address_London_Sanjay.city := 'London'
+!Address_London_Sanjay.houseNr := '220'
+!Address_London_Sanjay.street := 'Harley Street'
+!insert (Sanjay_Patel, Address_London_Sanjay) into ContactContainsAddress
+
+!new Note('Note_1_Sanjay_Patel')
+!Note_1_Sanjay_Patel.author := 'Sanjay Patel'
+!Note_1_Sanjay_Patel.time := Date('2023-07-30')
+!Note_1_Sanjay_Patel.type := #MEETING
+!Note_1_Sanjay_Patel.comment := 'Joint analysis session on international healthcare challenges.'
+!insert (Sanjay_Patel, Note_1_Sanjay_Patel) into ContactContainsNote
+
+!new Note('Note_2_Sanjay_Patel')
+!Note_2_Sanjay_Patel.author := 'Dr. Alex Jordan'
+!Note_2_Sanjay_Patel.time := Date('2023-08-20')
+!Note_2_Sanjay_Patel.type := #EMAIL
+!Note_2_Sanjay_Patel.comment := 'Evaluating research input from BioScience and LifeCare.'
+!insert (Sanjay_Patel, Note_2_Sanjay_Patel) into ContactContainsNote
+
+!new Relationship('Relationship_BioScience_to_LifeCare')
+!Relationship_BioScience_to_LifeCare.type := #SUBDIVISION
+!insert (BioScience_Research_Institute, Relationship_BioScience_to_LifeCare) into ContactToRelationship
+!insert (Relationship_BioScience_to_LifeCare, LifeCare_Pharmaceuticals) into RelationshipToContact
+
+!new Relationship('Relationship_BioScience_to_Sanjay')
+!Relationship_BioScience_to_Sanjay.type := #COWORKER
+!insert (BioScience_Research_Institute, Relationship_BioScience_to_Sanjay) into ContactToRelationship
+!insert (Relationship_BioScience_to_Sanjay, Sanjay_Patel) into RelationshipToContact
+
+!new Relationship('Relationship_LifeCare_to_Sanjay')
+!Relationship_LifeCare_to_Sanjay.type := #BOSS
+!insert (LifeCare_Pharmaceuticals, Relationship_LifeCare_to_Sanjay) into ContactToRelationship
+!insert (Relationship_LifeCare_to_Sanjay, Sanjay_Patel) into RelationshipToContact
+
+!insert (Global_Health_Partners_Consortium, BioScience_Research_Institute) into AddressBookMadeOfContact
+!insert (Global_Health_Partners_Consortium, LifeCare_Pharmaceuticals) into AddressBookMadeOfContact
+!insert (Global_Health_Partners_Consortium, Sanjay_Patel) into AddressBookMadeOfContact

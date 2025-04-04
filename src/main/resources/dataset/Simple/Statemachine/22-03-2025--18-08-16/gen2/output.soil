@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine3')
+!stateMachine3.name := 'auxiliaryMachine'
+
+!new State('state5')
+!state5.name := 'waiting'
+
+!new State('state6')
+!state6.name := 'running'
+
+!new State('state7')
+!state7.name := 'finished'
+
+!new Transition('transition5')
+!transition5.name := 'waitToRun'
+
+!new Transition('transition6')
+!transition6.name := 'runToFinish'
+
+!new TimeEvent('event5')
+!event5.time := 20
+
+!new TimeEvent('event6')
+!event6.time := 25
+
+!insert (stateMachine3, state5) into StateMachineContainsStates
+!insert (stateMachine3, state6) into StateMachineContainsStates
+!insert (stateMachine3, state7) into StateMachineContainsStates
+
+!insert (stateMachine3, transition5) into StateMachineContainsTransitions
+!insert (stateMachine3, transition6) into StateMachineContainsTransitions
+
+!insert (transition5, event5) into TransitionContainsEvents
+!insert (transition6, event6) into TransitionContainsEvents
+
+!insert (state5, transition5) into StateTransition
+!insert (state6, transition6) into StateTransition
+
+!insert (transition5, state6) into TransitionState
+!insert (transition6, state7) into TransitionState
+
+!insert (stateMachine3, state5) into StateMachineStartsStates

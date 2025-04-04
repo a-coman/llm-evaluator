@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice22')
+!rentalOffice22.name := 'Mountain High Rentals'
+!rentalOffice22.number := 122
+!rentalOffice22.address := '321 Summit Rd, Aspen, CO'
+
+!new Vehicle('openTrailer5')
+!openTrailer5.id := 21
+!openTrailer5.registrationState := #CO
+!openTrailer5.licensePlateNumber := 'CO1212'
+!openTrailer5.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer5.registrationLastMaintenanceDate := Date('2023-07-30')
+!openTrailer5.expirationDate := Date('2024-07-30')
+
+!new Company('companyCustomer10')
+!companyCustomer10.name := 'Alpine Transporters'
+!companyCustomer10.address := '789 Slope St, Aspen, CO'
+!companyCustomer10.poorRisk := true
+!companyCustomer10.idNumber := 11010
+
+!new RentalAgreement('rentalAgreement21')
+!rentalAgreement21.number := 521
+!rentalAgreement21.rentalDate := Date('2023-11-05')
+!rentalAgreement21.anticipatedDuration := 3
+!rentalAgreement21.depositPaid := 150.0
+!rentalAgreement21.quotedDailyRate := 18.0
+!rentalAgreement21.quotedRatePerMile := 0.25
+
+!insert (rentalOffice22, openTrailer5) into RentalOfficeVehicle
+!insert (rentalOffice22, rentalAgreement21) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice22, rentalAgreement21) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement21, openTrailer5) into RentalAgreementVehicle
+!insert (rentalAgreement21, companyCustomer10) into RentalAgreementCustomer

@@ -1,0 +1,53 @@
+!new Driver('driver11')
+!driver11.id := 'D011'
+!driver11.name := 'Isaac Newton'
+
+!new Shipment('shipment18')
+!shipment18.id := 'S018'
+!shipment18.status := #ASSIGNED
+
+!new Shipment('shipment19')
+!shipment19.id := 'S019'
+!shipment19.status := #UNDERWAY
+
+!new Address('address21')
+!address21.text := '6060 Horizon Ridge'
+
+!new Address('address22')
+!address22.text := '7070 Valley Road'
+
+!new GeoLocation('geoLocation21')
+!geoLocation21.latitude := 48.8566
+!geoLocation21.longitude := 2.3522
+
+!new GeoLocation('geoLocation22')
+!geoLocation22.latitude := -34.6037
+!geoLocation22.longitude := -58.3816
+
+!new Customer('customer11')
+!customer11.id := 'C011'
+!customer11.name := 'Nina Hart'
+!customer11.twitterUserName := '@nina_hart'
+
+!new Station('station10')
+
+!insert (driver11, shipment18) into DriverShipment
+
+!insert (shipment18, address21) into ShipmentContainsPickUpAddress
+!insert (shipment18, address22) into ShipmentContainsDeliveryAddress
+
+!insert (shipment19, address22) into ShipmentContainsPickUpAddress
+!insert (shipment19, address21) into ShipmentContainsDeliveryAddress
+
+!insert (address21, geoLocation21) into AddressContainsGeoLocation
+!insert (address22, geoLocation22) into AddressContainsGeoLocation
+
+!insert (customer11, shipment18) into CustomerConsistsOfShipment
+!insert (customer11, shipment19) into CustomerConsistsOfShipment
+
+!insert (station10, customer11) into StationContainsCustomer
+
+!insert (station10, shipment18) into StationShipment
+!insert (station10, shipment19) into StationShipment
+
+!insert (station10, driver11) into StationContainsDriver

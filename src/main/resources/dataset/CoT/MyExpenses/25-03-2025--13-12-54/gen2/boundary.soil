@@ -1,0 +1,28 @@
+!new Expense('highValueCorporateExpense')
+!highValueCorporateExpense.amount := 1000000.00
+!highValueCorporateExpense.startDate := Date('2023-01-01')
+!highValueCorporateExpense.endDate := Date('2023-01-15')
+
+!new Bill('corporateInvestmentBill')
+!corporateInvestmentBill.amount := 1000000.00
+!corporateInvestmentBill.category := 'Corporate Investment'
+!corporateInvestmentBill.date := Date('2023-01-01')
+!corporateInvestmentBill.paymentMethod := #CHECK
+!corporateInvestmentBill.status := #VERIFIED
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!insert (corporateInvestmentBill, britishPound) into BillCurrency
+
+!insert (highValueCorporateExpense, corporateInvestmentBill) into ExpenseContainsBills
+
+!new Comment('commentFinancialStrategy')
+!commentFinancialStrategy.text := 'Annual Financial Strategy Payment'
+
+!new Comment('commentVerifiedAccountant')
+!commentVerifiedAccountant.text := 'Verified by Senior Accountant'
+
+!insert (highValueCorporateExpense, commentFinancialStrategy) into ExpenseComment
+!insert (highValueCorporateExpense, commentVerifiedAccountant) into ExpenseComment

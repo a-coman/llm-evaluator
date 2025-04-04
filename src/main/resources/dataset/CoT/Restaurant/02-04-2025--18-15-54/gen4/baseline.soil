@@ -1,0 +1,140 @@
+!new Restaurant('restaurant16')
+!restaurant16.name := 'The Green Lotus'
+
+!new Owner('owner35')
+!owner35.name := 'Mei Wang'
+!owner35.percentageShares := 75
+
+!new Owner('owner36')
+!owner36.name := 'Aamir Patel'
+!owner36.percentageShares := 25
+
+!insert (restaurant16, owner35) into RestaurantOwner
+!insert (restaurant16, owner36) into RestaurantOwner
+
+!new Table('table36')
+!table36.number := 5
+!table36.description := 'Intimate table in the garden area.'
+!table36.capacity := 2
+
+!new Table('table37')
+!table37.number := 6
+!table37.description := 'Large family table under the pergola.'
+!table37.capacity := 8
+
+!new RegularCustomer('customer9')
+!customer9.name := 'Sofia Ivanov'
+!customer9.prefferedLanguage := #English  -- Using #English as placeholder for Russian
+
+!new Individual('individualReservation10')
+!individualReservation10.time := Time('19:30')
+!individualReservation10.date := Date('2023-10-18')
+!individualReservation10.numberPeople := 2
+!individualReservation10.name := 'Sofia Ivanov'
+!individualReservation10.phoneNumber := '555-7896'
+!individualReservation10.number := 7004
+!individualReservation10.seating := #Inside  -- Placeholder adapting for Garden, no specific literal
+!individualReservation10.smoking := #NonSmoking
+
+!insert (restaurant16, individualReservation10) into RestaurantReservation
+!insert (individualReservation10, table36) into ReservationTable
+
+!insert (individualReservation10, customer9) into ReservationCustomer
+
+!new Waiter('waiter32')
+!waiter32.name := 'Julian Kim'
+!waiter32.dateOfBirth := Date('1995-07-05')
+!waiter32.phoneNumber := '555-2341'
+
+!insert (individualReservation10, waiter32) into ReservationWaiter
+
+!new ItemOrder('itemOrder21')
+!itemOrder21.time := Time('19:40')
+!insert (individualReservation10, itemOrder21) into ReservationItemOrdered
+
+!new MenuItem('menuItem26')
+!menuItem26.description := 'Mango Avocado Roll'
+!menuItem26.prepTime := 8.0
+!menuItem26.classification := #Apetizer
+
+!insert (itemOrder21, menuItem26) into ItemOrderMenuItem
+
+!new Chef('chef22')
+!chef22.name := 'Hana Lee'
+!chef22.dateOfBirth := Date('1978-06-21')
+!chef22.phoneNumber := '555-8776'
+
+!insert (menuItem26, chef22) into MenuItemChef
+
+!new Cook('cook27')
+!cook27.name := 'Yuzu Tanaka'
+!cook27.dateOfBirth := Date('1982-02-25')
+!cook27.phoneNumber := '555-3948'
+!cook27.yearsOfExperience := 9
+
+!insert (chef22, cook27) into ChefCook
+
+!new Banquet('banquet14')
+!banquet14.date := Date('2023-10-18')
+!banquet14.time := Time('18:00')
+!banquet14.numberPeople := 8
+!banquet14.name := 'Yoga Retreat Reunion'
+!banquet14.paymentMethod := #CreditCard  -- Using placeholder for PayPal
+!banquet14.busService := false
+
+!insert (restaurant16, banquet14) into RestaurantReservation
+!insert (banquet14, table37) into ReservationTable
+
+!insert (banquet14, waiter32) into ReservationWaiter
+
+!new Waiter('waiter33')
+!waiter33.name := 'Mia Nguyen'
+!waiter33.dateOfBirth := Date('1992-11-19')
+!waiter33.phoneNumber := '555-1123'
+
+!insert (banquet14, waiter33) into ReservationWaiter
+
+!new HeadWaiter('headWaiter15')
+!headWaiter15.name := 'Anya Mitra'
+!headWaiter15.dateOfBirth := Date('1985-03-30')
+!headWaiter15.phoneNumber := '555-5582'
+
+!insert (headWaiter15, waiter32) into HeadWaiterWaiter
+!insert (headWaiter15, waiter33) into HeadWaiterWaiter
+
+!new FoodItem('foodItem46')
+!foodItem46.number := 7001
+!foodItem46.description := 'Ripe Mango'
+!foodItem46.purchaseFlag := true
+!foodItem46.unit := #Pound  -- Using #Pound as placeholder for Kg
+
+!new FoodItem('foodItem47')
+!foodItem47.number := 7002
+!foodItem47.description := 'Fresh Avocado'
+!foodItem47.purchaseFlag := true
+!foodItem47.unit := #Pound  -- Using #Pound as placeholder for Pieces
+
+!new FoodItem('foodItem48')
+!foodItem48.number := 7003
+!foodItem48.description := 'Ginger Soy Sauce'
+!foodItem48.purchaseFlag := true
+!foodItem48.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem26, foodItem46) into MenuItemFoodItem
+!insert (menuItem26, foodItem47) into MenuItemFoodItem
+!insert (menuItem26, foodItem48) into MenuItemFoodItem
+
+!new Allergen('allergen23')
+!allergen23.type := #Lactose  -- Using #Lactose as placeholder for Soy
+
+!insert (foodItem48, allergen23) into FoodItemAllergen
+
+!new DietaryRequirement('dietary7')
+!dietary7.diet := #Vegan
+
+!insert (customer9, dietary7) into CustomerDietary
+
+!new Manager('manager6')
+!manager6.name := 'Daniel Silva'
+!manager6.dateOfBirth := Date('1971-08-12')
+!manager6.phoneNumber := '555-2367'

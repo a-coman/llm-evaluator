@@ -1,0 +1,33 @@
+!new Expense('expense25')
+!expense25.amount := 450.0
+!expense25.startDate := Date('2025-01-01')
+!expense25.endDate := Date('2025-01-31')
+
+!new Currency('currency23')
+!currency23.name := 'Egyptian Pound'
+!currency23.abbreviation := 'EGP'
+
+!new Bill('bill44')
+!bill44.amount := 250.0
+!bill44.category := 'Event Tickets'
+!bill44.date := Date('2025-01-05')
+!bill44.paymentMethod := #CHECK
+!bill44.status := #VALIDATED
+
+!new Bill('bill45')
+!bill45.amount := 200.0
+!bill45.category := 'New Year Celebration'
+!bill45.date := Date('2025-01-10')
+!bill45.paymentMethod := #CASH
+!bill45.status := #DRAFT
+
+!insert (expense25, bill44) into ExpenseContainsBills
+!insert (expense25, bill45) into ExpenseContainsBills
+
+!insert (bill44, currency23) into BillCurrency
+!insert (bill45, currency23) into BillCurrency
+
+!new Comment('comment25')
+!comment25.text := 'January expenses for events and celebrations'
+
+!insert (expense25, comment25) into ExpenseComment

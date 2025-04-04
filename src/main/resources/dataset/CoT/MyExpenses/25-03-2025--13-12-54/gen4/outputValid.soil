@@ -1,0 +1,245 @@
+!new Expense('traditionalWeddingCeremony')
+!traditionalWeddingCeremony.amount := 2500.00
+!traditionalWeddingCeremony.startDate := Date('2023-11-10')
+!traditionalWeddingCeremony.endDate := Date('2023-11-12')
+
+!new Bill('venueRental')
+!venueRental.amount := 1000.00
+!venueRental.category := 'Event'
+!venueRental.date := Date('2023-10-05')
+!venueRental.paymentMethod := #CHECK
+!venueRental.status := #VERIFIED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 750.00
+!cateringServices.category := 'Food'
+!cateringServices.date := Date('2023-11-11')
+!cateringServices.paymentMethod := #CREDIT_CARD
+!cateringServices.status := #VALIDATED
+
+!new Bill('photographyVideography')
+!photographyVideography.amount := 500.00
+!photographyVideography.category := 'Services'
+!photographyVideography.date := Date('2023-11-12')
+!photographyVideography.paymentMethod := #CASH
+!photographyVideography.status := #DRAFT
+
+!new Bill('traditionalAttireAccessories')
+!traditionalAttireAccessories.amount := 250.00
+!traditionalAttireAccessories.category := 'Clothing'
+!traditionalAttireAccessories.date := Date('2023-10-20')
+!traditionalAttireAccessories.paymentMethod := #CASH
+!traditionalAttireAccessories.status := #REFUSED
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!insert (venueRental, indianRupee) into BillCurrency
+!insert (cateringServices, indianRupee) into BillCurrency
+!insert (photographyVideography, indianRupee) into BillCurrency
+!insert (traditionalAttireAccessories, indianRupee) into BillCurrency
+
+!insert (traditionalWeddingCeremony, venueRental) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, cateringServices) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, photographyVideography) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, traditionalAttireAccessories) into ExpenseContainsBills
+
+!new Comment('commentVenueDecor')
+!commentVenueDecor.text := 'The location added a majestic touch to the wedding, with traditional Indian decor.'
+
+!new Comment('commentCulinaryExperience')
+!commentCulinaryExperience.text := 'Guests raved about the variety of dishes, bringing authentic flavors to every table.'
+
+!new Comment('commentPhotography')
+!commentPhotography.text := 'The team did an excellent job capturing candid moments and details.'
+
+!insert (traditionalWeddingCeremony, commentVenueDecor) into ExpenseComment
+!insert (traditionalWeddingCeremony, commentCulinaryExperience) into ExpenseComment
+!insert (traditionalWeddingCeremony, commentPhotography) into ExpenseComment
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Expense('weddingAnniversaryCelebrationExpense')
+!weddingAnniversaryCelebrationExpense.amount := 75000.00
+!weddingAnniversaryCelebrationExpense.startDate := Date('2023-11-05')
+!weddingAnniversaryCelebrationExpense.endDate := Date('2023-11-30')
+
+!new Bill('anniversaryDinnerAtTaj')
+!anniversaryDinnerAtTaj.amount := 25000.00
+!anniversaryDinnerAtTaj.category := 'Dining'
+!anniversaryDinnerAtTaj.date := Date('2023-11-09')
+!anniversaryDinnerAtTaj.paymentMethod := #CREDIT_CARD
+!anniversaryDinnerAtTaj.status := #VALIDATED
+
+!new Bill('weekendGetawayToKerala')
+!weekendGetawayToKerala.amount := 30000.00
+!weekendGetawayToKerala.category := 'Travel'
+!weekendGetawayToKerala.date := Date('2023-11-15')
+!weekendGetawayToKerala.paymentMethod := #CHECK
+!weekendGetawayToKerala.status := #VERIFIED
+
+!new Bill('jewelryGiftForSpouse')
+!jewelryGiftForSpouse.amount := 15000.00
+!jewelryGiftForSpouse.category := 'Gifts'
+!jewelryGiftForSpouse.date := Date('2023-11-10')
+!jewelryGiftForSpouse.paymentMethod := #CASH
+!jewelryGiftForSpouse.status := #VERIFIED
+
+!new Bill('romanticPhotoshoot')
+!romanticPhotoshoot.amount := 5000.00
+!romanticPhotoshoot.category := 'Photography'
+!romanticPhotoshoot.date := Date('2023-11-20')
+!romanticPhotoshoot.paymentMethod := #CREDIT_CARD
+!romanticPhotoshoot.status := #VERIFIED
+
+!insert (anniversaryDinnerAtTaj, indianRupee) into BillCurrency
+!insert (weekendGetawayToKerala, indianRupee) into BillCurrency
+!insert (jewelryGiftForSpouse, indianRupee) into BillCurrency
+!insert (romanticPhotoshoot, indianRupee) into BillCurrency
+
+!insert (weddingAnniversaryCelebrationExpense, anniversaryDinnerAtTaj) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, weekendGetawayToKerala) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, jewelryGiftForSpouse) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, romanticPhotoshoot) into ExpenseContainsBills
+
+!new Comment('commentTajDinner')
+!commentTajDinner.text := 'Taj dinner exceeded expectations; ambiance was superb, a night to remember.'
+
+!new Comment('commentGetaway')
+!commentGetaway.text := 'Getaway was relaxing and picturesque, great choice for celebrating a milestone.'
+
+!new Comment('commentPhotoshoot')
+!commentPhotoshoot.text := 'Photoshoot captured unforgettable moments, a perfect keepsake.'
+
+!insert (weddingAnniversaryCelebrationExpense, commentTajDinner) into ExpenseComment
+!insert (weddingAnniversaryCelebrationExpense, commentGetaway) into ExpenseComment
+!insert (weddingAnniversaryCelebrationExpense, commentPhotoshoot) into ExpenseComment
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Expense('juneMonthlyExpense')
+!juneMonthlyExpense.amount := 5000.00
+!juneMonthlyExpense.startDate := Date('2023-06-01')
+!juneMonthlyExpense.endDate := Date('2023-06-30')
+
+!new Bill('travelBill')
+!travelBill.amount := 2000.00
+!travelBill.category := 'Travel'
+!travelBill.date := Date('2023-06-05')
+!travelBill.paymentMethod := #CREDIT_CARD
+!travelBill.status := #VALIDATED
+
+!new Bill('accommodationsBill')
+!accommodationsBill.amount := 3000.00
+!accommodationsBill.category := 'Accommodations'
+!accommodationsBill.date := Date('2023-06-28')
+!accommodationsBill.paymentMethod := #CHECK
+!accommodationsBill.status := #VERIFIED
+
+!insert (travelBill, euro) into BillCurrency
+!insert (accommodationsBill, euro) into BillCurrency
+
+!insert (juneMonthlyExpense, travelBill) into ExpenseContainsBills
+!insert (juneMonthlyExpense, accommodationsBill) into ExpenseContainsBills
+
+!new Comment('commentQuarterReview')
+!commentQuarterReview.text := 'Expenses for June Quarter Review'
+
+!new Comment('commentBusinessTrip')
+!commentBusinessTrip.text := 'Travel and stay for business trip to Germany'
+
+!new Comment('commentPaymentSchedule')
+!commentPaymentSchedule.text := 'Managed payment schedule successfully'
+
+!insert (juneMonthlyExpense, commentQuarterReview) into ExpenseComment
+!insert (juneMonthlyExpense, commentBusinessTrip) into ExpenseComment
+!insert (juneMonthlyExpense, commentPaymentSchedule) into ExpenseComment
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Currency('mexicanPeso')
+!mexicanPeso.name := 'Mexican Peso'
+!mexicanPeso.abbreviation := 'MXN'
+
+!new Currency('virtualCoin')
+!virtualCoin.name := 'Virtual Coin'
+!virtualCoin.abbreviation := 'VRC'
+
+!new Bill('gallerySpaceRental')
+!gallerySpaceRental.amount := 2500.00
+!gallerySpaceRental.category := 'Gallery Space Rental'
+!gallerySpaceRental.date := Date('2023-08-01')
+!gallerySpaceRental.paymentMethod := #CREDIT_CARD
+!gallerySpaceRental.status := #VALIDATED
+
+!new Bill('artSupplies')
+!artSupplies.amount := 500.00
+!artSupplies.category := 'Art Supplies'
+!artSupplies.date := Date('2023-08-01')
+!artSupplies.paymentMethod := #CASH
+!artSupplies.status := #REFUSED
+
+!new Bill('digitalExhibitionPlatformSubscription')
+!digitalExhibitionPlatformSubscription.amount := 75.00
+!digitalExhibitionPlatformSubscription.category := 'Digital Exhibition Platform Subscription'
+!digitalExhibitionPlatformSubscription.date := Date('2023-08-01')
+!digitalExhibitionPlatformSubscription.paymentMethod := #CASH
+!digitalExhibitionPlatformSubscription.status := #VALIDATED
+
+!new Bill('marketingPromotion')
+!marketingPromotion.amount := 1000.00
+!marketingPromotion.category := 'Marketing and Promotion'
+!marketingPromotion.date := Date('2023-08-01')
+!marketingPromotion.paymentMethod := #CREDIT_CARD
+!marketingPromotion.status := #VERIFIED
+
+!new Bill('craftWorkshopMaterials')
+!craftWorkshopMaterials.amount := 150.00
+!craftWorkshopMaterials.category := 'Craft Workshop Materials'
+!craftWorkshopMaterials.date := Date('2023-08-01')
+!craftWorkshopMaterials.paymentMethod := #CREDIT_CARD
+!craftWorkshopMaterials.status := #VERIFIED
+
+!insert (gallerySpaceRental, euro) into BillCurrency
+!insert (artSupplies, mexicanPeso) into BillCurrency
+!insert (digitalExhibitionPlatformSubscription, virtualCoin) into BillCurrency
+!insert (marketingPromotion, euro) into BillCurrency
+!insert (craftWorkshopMaterials, virtualCoin) into BillCurrency
+
+!new Expense('artistsCooperativeProjectExpenses')
+-- Correct total amount reflects only validated and verified expenses
+-- Make sure to include all bills to satisfy multiplicity
+!artistsCooperativeProjectExpenses.amount := 3725.00
+!artistsCooperativeProjectExpenses.startDate := Date('2023-08-01')
+!artistsCooperativeProjectExpenses.endDate := Date('2023-12-31')
+
+!insert (artistsCooperativeProjectExpenses, gallerySpaceRental) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, artSupplies) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, digitalExhibitionPlatformSubscription) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, marketingPromotion) into ExpenseContainsBills
+!insert (artistsCooperativeProjectExpenses, craftWorkshopMaterials) into ExpenseContainsBills
+
+!new Comment('commentValidatedRental')
+!commentValidatedRental.text := 'Validated rental expenses for the exhibition.'
+
+!new Comment('commentRefusedArtSupplies')
+!commentRefusedArtSupplies.text := 'Refused art supplies purchase due to quality concerns.'
+
+!new Comment('commentSubscriptionConfirmed')
+!commentSubscriptionConfirmed.text := 'Subscription for virtual platform confirmed for entire project duration.'
+
+!new Comment('commentPromotionalActivities')
+!commentPromotionalActivities.text := 'Promotional activities extended due to increased artist participation.'
+
+!insert (artistsCooperativeProjectExpenses, commentValidatedRental) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentRefusedArtSupplies) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentSubscriptionConfirmed) into ExpenseComment
+!insert (artistsCooperativeProjectExpenses, commentPromotionalActivities) into ExpenseComment
+

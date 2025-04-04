@@ -1,0 +1,47 @@
+!new Booking('booking24')
+!booking24.startDate := '2025-06-10'
+!booking24.endDate := '2025-06-15'
+!booking24.canceled := false
+!booking24.bookingId := 123
+!booking24.confirmed := true
+
+!new Bill('bill24')
+!bill24.price := 900.00
+!bill24.billId := 223
+
+!new FreeRoomTypesDTO('roomType24')
+!roomType24.roomTypeDescription := 'Rustic Cabin'
+!roomType24.numBeds := 2
+!roomType24.pricePerNight := 180.00
+!roomType24.numFreeRooms := 3
+
+!new Customer('customer24')
+!customer24.firstName := 'Victoria'
+!customer24.lastName := 'Brown'
+
+!new RoomReservation('reservation24')
+!reservation24.checkInDate := '2025-06-10'
+!reservation24.checkOutDate := '2025-06-15'
+
+!new RoomExtra('extra24')
+!extra24.price := 30.00
+!extra24.description := 'Guided Nature Walk'
+
+!new Room('room37')
+!room37.numBeds := 2
+!room37.pricePerNight := 175.00
+!room37.occupied := true
+!room37.blocked := false
+!room37.roomNumber := 137
+
+!insert (booking24, bill24) into BookingBill
+
+!insert (booking24, customer24) into BookingCustomer
+
+!insert (booking24, reservation24) into BookingRoomReservation
+
+!insert (reservation24, extra24) into RoomReservationExtras
+
+!insert (reservation24, room37) into RoomReservationRoom
+
+!insert (bill24, reservation24) into BillRoomReservation

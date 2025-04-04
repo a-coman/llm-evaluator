@@ -1,0 +1,51 @@
+!new Bank('bank18')
+!bank18.country := 'Netherlands'
+!bank18.name := 'ING Bank'
+!bank18.bic := 'INGBNL2A'
+
+!new Account('account49')
+!account49.iban := 'NL91ABNA0417164300'
+!account49.balance := 6500
+
+!new Account('account50')
+!account50.iban := 'NL91ABNA0417164301'
+!account50.balance := 2000
+
+!new Account('account51')
+!account51.iban := 'NL91ABNA0417164302'
+!account51.balance := 450
+
+!new Person('person53')
+!person53.firstName := 'Sander'
+!person53.lastName := 'Janssen'
+!person53.age := 38
+
+!new Person('person54')
+!person54.firstName := 'Eva'
+!person54.lastName := 'Meijer'
+!person54.age := 30
+
+!new Person('person55')
+!person55.firstName := 'Tom'
+!person55.lastName := 'Willems'
+!person55.age := 44
+
+-- Associations
+!insert (bank18, account49) into AccountOfBanks
+!insert (bank18, account50) into AccountOfBanks
+!insert (bank18, account51) into AccountOfBanks
+
+!insert (person53, account49) into Ownership
+!insert (person54, account49) into Ownership
+
+!insert (person54, account50) into Ownership
+!insert (person55, account50) into Ownership
+
+!insert (person55, account51) into Ownership
+!insert (person53, account51) into Ownership
+
+!insert (person53, account50) into Use
+!insert (person54, account51) into Use
+
+!insert (person55, account49) into Use
+!insert (person54, account49) into Use

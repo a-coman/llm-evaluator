@@ -1,0 +1,51 @@
+!new Bank('bank30')
+!bank30.country := 'Thailand'
+!bank30.name := 'Bangkok Bank'
+!bank30.bic := 'BKKBTHBK'
+
+!new Account('account85')
+!account85.iban := 'TH123456789012345678901'
+!account85.balance := 7700
+
+!new Account('account86')
+!account86.iban := 'TH987654321098765432109'
+!account86.balance := 900
+
+!new Account('account87')
+!account87.iban := 'TH543217890123456789012'
+!account87.balance := 4100
+
+!new Person('person89')
+!person89.firstName := 'Apinya'
+!person89.lastName := 'Somchai'
+!person89.age := 37
+
+!new Person('person90')
+!person90.firstName := 'Niran'
+!person90.lastName := 'Chatri'
+!person90.age := 41
+
+!new Person('person91')
+!person91.firstName := 'Arisa'
+!person91.lastName := 'Kamon'
+!person91.age := 28
+
+-- Associations
+!insert (bank30, account85) into AccountOfBanks
+!insert (bank30, account86) into AccountOfBanks
+!insert (bank30, account87) into AccountOfBanks
+
+!insert (person89, account85) into Ownership
+!insert (person90, account85) into Ownership
+
+!insert (person90, account86) into Ownership
+!insert (person91, account86) into Ownership
+
+!insert (person91, account87) into Ownership
+!insert (person89, account87) into Ownership
+
+!insert (person89, account86) into Use
+!insert (person90, account87) into Use
+
+!insert (person91, account85) into Use
+!insert (person90, account85) into Use

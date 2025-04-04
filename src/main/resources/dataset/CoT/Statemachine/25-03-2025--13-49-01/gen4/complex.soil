@@ -1,0 +1,78 @@
+!new StateMachine('smartIrrigationControl')
+!smartIrrigationControl.name := 'smartIrrigationControl'
+
+!new State('systemIdle')
+!systemIdle.name := 'systemIdle'
+
+!new State('irrigating')
+!irrigating.name := 'irrigating'
+
+!new State('maintenanceMode')
+!maintenanceMode.name := 'maintenanceMode'
+
+!new State('weatherMonitoring')
+!weatherMonitoring.name := 'weatherMonitoring'
+
+!new Transition('startIrrigation')
+!startIrrigation.name := 'startIrrigation'
+
+!new Transition('pauseForMaintenance')
+!pauseForMaintenance.name := 'pauseForMaintenance'
+
+!new Transition('resumeIrrigation')
+!resumeIrrigation.name := 'resumeIrrigation'
+
+!new Transition('handleRainEvent')
+!handleRainEvent.name := 'handleRainEvent'
+
+!new Transition('completeCycle')
+!completeCycle.name := 'completeCycle'
+
+!new TimeEvent('timeEventStartIrrigation')
+!timeEventStartIrrigation.time := 10
+
+!new TimeEvent('timeEventPauseForMaintenance')
+!timeEventPauseForMaintenance.time := 5
+
+!new TimeEvent('timeEventResumeIrrigation')
+!timeEventResumeIrrigation.time := 15
+
+!new TimeEvent('timeEventHandleRainEvent')
+!timeEventHandleRainEvent.time := 2
+
+!new TimeEvent('timeEventCompleteCycle')
+!timeEventCompleteCycle.time := 30
+
+!insert (smartIrrigationControl, systemIdle) into StateMachineContainsStates
+!insert (smartIrrigationControl, irrigating) into StateMachineContainsStates
+!insert (smartIrrigationControl, maintenanceMode) into StateMachineContainsStates
+!insert (smartIrrigationControl, weatherMonitoring) into StateMachineContainsStates
+
+!insert (smartIrrigationControl, systemIdle) into StateMachineStartsStates
+
+!insert (smartIrrigationControl, startIrrigation) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, pauseForMaintenance) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, resumeIrrigation) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, handleRainEvent) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, completeCycle) into StateMachineContainsTransitions
+
+!insert (startIrrigation, timeEventStartIrrigation) into TransitionContainsEvents
+!insert (pauseForMaintenance, timeEventPauseForMaintenance) into TransitionContainsEvents
+!insert (resumeIrrigation, timeEventResumeIrrigation) into TransitionContainsEvents
+!insert (handleRainEvent, timeEventHandleRainEvent) into TransitionContainsEvents
+!insert (completeCycle, timeEventCompleteCycle) into TransitionContainsEvents
+
+!insert (systemIdle, startIrrigation) into StateTransition
+!insert (startIrrigation, irrigating) into TransitionState
+
+!insert (irrigating, pauseForMaintenance) into StateTransition
+!insert (pauseForMaintenance, maintenanceMode) into TransitionState
+
+!insert (irrigating, handleRainEvent) into StateTransition
+!insert (handleRainEvent, weatherMonitoring) into TransitionState
+
+!insert (maintenanceMode, resumeIrrigation) into StateTransition
+!insert (resumeIrrigation, irrigating) into TransitionState
+
+!insert (weatherMonitoring, completeCycle) into StateTransition
+!insert (completeCycle, systemIdle) into TransitionState

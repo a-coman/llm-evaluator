@@ -1,0 +1,93 @@
+!new AddressBook('Tech_Innovators_Network')
+
+!new Company('FutureTech_Labs')
+!FutureTech_Labs.name := 'FutureTech Labs'
+!FutureTech_Labs.phone := '+1 415 555 3399'
+!FutureTech_Labs.website := 'www.futuretechlabs.com'
+!FutureTech_Labs.email := 'info@futuretechlabs.com'
+!FutureTech_Labs.industry := 'Software Development'
+
+!new Address('Address_FutureTech_Labs')
+!Address_FutureTech_Labs.city := 'San Francisco'
+!Address_FutureTech_Labs.houseNr := '75'
+!Address_FutureTech_Labs.street := 'Market Street'
+!insert (FutureTech_Labs, Address_FutureTech_Labs) into ContactContainsAddress
+
+!new Note('Note_FutureTech_Labs')
+!Note_FutureTech_Labs.author := 'Sophie Turner'
+!Note_FutureTech_Labs.time := Date('2023-06-17')
+!Note_FutureTech_Labs.type := #CALL
+!Note_FutureTech_Labs.comment := 'Brainstorming session on next-gen AI tools.'
+!insert (FutureTech_Labs, Note_FutureTech_Labs) into ContactContainsNote
+
+!new Company('GreenSphere_Technologies')
+!GreenSphere_Technologies.name := 'GreenSphere Technologies'
+!GreenSphere_Technologies.phone := '+33 1 4770 3399'
+!GreenSphere_Technologies.website := 'www.greenspheretech.fr'
+!GreenSphere_Technologies.email := 'contact@greenspheretech.fr'
+!GreenSphere_Technologies.industry := 'Environmental Research'
+
+!new Address('Address_GreenSphere_Technologies')
+!Address_GreenSphere_Technologies.city := 'Paris'
+!Address_GreenSphere_Technologies.houseNr := '200'
+!Address_GreenSphere_Technologies.street := 'Rue de Rivoli'
+!insert (GreenSphere_Technologies, Address_GreenSphere_Technologies) into ContactContainsAddress
+
+!new Note('Note_GreenSphere_Technologies')
+!Note_GreenSphere_Technologies.author := 'Lucas Debois'
+!Note_GreenSphere_Technologies.time := Date('2023-07-01')
+!Note_GreenSphere_Technologies.type := #EMAIL
+!Note_GreenSphere_Technologies.comment := 'Proposal to collaborate on eco-friendly tech solutions.'
+!insert (GreenSphere_Technologies, Note_GreenSphere_Technologies) into ContactContainsNote
+
+!new Person('Naomi_Okada')
+!Naomi_Okada.name := 'Naomi Okada'
+!Naomi_Okada.phone := '+81 90 3456 7890'
+!Naomi_Okada.website := 'www.naomiokada.com'
+!Naomi_Okada.email := 'naomi@innovate.jp'
+!Naomi_Okada.title := 'Tech Consultant'
+
+!new Address('Address_Tokyo_Naomi')
+!Address_Tokyo_Naomi.city := 'Tokyo'
+!Address_Tokyo_Naomi.houseNr := '18'
+!Address_Tokyo_Naomi.street := 'Shibuya Crossing'
+!insert (Naomi_Okada, Address_Tokyo_Naomi) into ContactContainsAddress
+
+!new Address('Address_SanFrancisco_Naomi')
+!Address_SanFrancisco_Naomi.city := 'San Francisco'
+!Address_SanFrancisco_Naomi.houseNr := '85'
+!Address_SanFrancisco_Naomi.street := 'Market Street'
+!insert (Naomi_Okada, Address_SanFrancisco_Naomi) into ContactContainsAddress
+
+!new Note('Note_1_Naomi_Okada')
+!Note_1_Naomi_Okada.author := 'Naomi Okada'
+!Note_1_Naomi_Okada.time := Date('2023-06-25')
+!Note_1_Naomi_Okada.type := #MEETING
+!Note_1_Naomi_Okada.comment := 'Reviewing tech sustainability models with GreenSphere.'
+!insert (Naomi_Okada, Note_1_Naomi_Okada) into ContactContainsNote
+
+!new Note('Note_2_Naomi_Okada')
+!Note_2_Naomi_Okada.author := 'Sophie Turner'
+!Note_2_Naomi_Okada.time := Date('2023-07-15')
+!Note_2_Naomi_Okada.type := #EMAIL
+!Note_2_Naomi_Okada.comment := 'Initiating joint project between FutureTech and Naomi.'
+!insert (Naomi_Okada, Note_2_Naomi_Okada) into ContactContainsNote
+
+!new Relationship('Relationship_FutureTech_to_GreenSphere')
+!Relationship_FutureTech_to_GreenSphere.type := #COWORKER
+!insert (FutureTech_Labs, Relationship_FutureTech_to_GreenSphere) into ContactToRelationship
+!insert (Relationship_FutureTech_to_GreenSphere, GreenSphere_Technologies) into RelationshipToContact
+
+!new Relationship('Relationship_FutureTech_to_Naomi')
+!Relationship_FutureTech_to_Naomi.type := #EMPLOYEE
+!insert (FutureTech_Labs, Relationship_FutureTech_to_Naomi) into ContactToRelationship
+!insert (Relationship_FutureTech_to_Naomi, Naomi_Okada) into RelationshipToContact
+
+!new Relationship('Relationship_GreenSphere_to_Naomi')
+!Relationship_GreenSphere_to_Naomi.type := #BOSS
+!insert (GreenSphere_Technologies, Relationship_GreenSphere_to_Naomi) into ContactToRelationship
+!insert (Relationship_GreenSphere_to_Naomi, Naomi_Okada) into RelationshipToContact
+
+!insert (Tech_Innovators_Network, FutureTech_Labs) into AddressBookMadeOfContact
+!insert (Tech_Innovators_Network, GreenSphere_Technologies) into AddressBookMadeOfContact
+!insert (Tech_Innovators_Network, Naomi_Okada) into AddressBookMadeOfContact

@@ -1,0 +1,65 @@
+!new Bank('bank26')
+!bank26.country := 'United States'
+!bank26.name := 'JPMorgan Chase'
+!bank26.bic := 'CHASUS33XXX'
+
+!new Bank('bank27')
+!bank27.country := 'Brazil'
+!bank27.name := 'Banco do Brasil'
+!bank27.bic := 'BRASBRRXXXX'
+
+!new Account('account59')
+!account59.iban := 'US64CHAS1234567890123'
+!account59.balance := 50000
+
+!new Account('account60')
+!account60.iban := 'BR720000000012345678901'
+!account60.balance := 30000
+
+!new Account('account61')
+!account61.iban := 'US64CHAS2345678901234'
+!account61.balance := 1500
+
+!new Person('person84')
+!person84.firstName := 'John'
+!person84.lastName := 'Wilson'
+!person84.age := 52
+
+!new Person('person85')
+!person85.firstName := 'Ana'
+!person85.lastName := 'Barbosa'
+!person85.age := 43
+
+!new Person('person86')
+!person86.firstName := 'Lucas'
+!person86.lastName := 'Silva'
+!person86.age := 38
+
+!new Person('person87')
+!person87.firstName := 'Emily'
+!person87.lastName := 'Johnson'
+!person87.age := 30
+
+!new Person('person88')
+!person88.firstName := 'Pedro'
+!person88.lastName := 'Martinez'
+!person88.age := 29
+
+!insert (person84, account59) into Ownership
+!insert (person85, account60) into Ownership
+!insert (person86, account60) into Ownership
+!insert (person87, account61) into Ownership
+!insert (person88, account61) into Ownership
+
+!insert (person84, account59) into Use
+!insert (person84, account60) into Use
+!insert (person85, account60) into Use
+!insert (person85, account61) into Use
+!insert (person86, account60) into Use
+!insert (person87, account61) into Use
+!insert (person88, account61) into Use
+!insert (person87, account59) into Use
+
+!insert (bank26, account59) into AccountOfBanks
+!insert (bank27, account60) into AccountOfBanks
+!insert (bank26, account61) into AccountOfBanks

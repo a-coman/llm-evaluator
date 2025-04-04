@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant20')
+!restaurant20.name := 'Vintage Vibes'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner39')
+!owner39.name := 'Alex Rivera'
+!owner39.percentageShares := 60
+
+!new Owner('owner40')
+!owner40.name := 'Jessica Ma'
+!owner40.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant20, owner39) into RestaurantOwner
+!insert (restaurant20, owner40) into RestaurantOwner
+
+-- Creating tables with vintage aesthetics
+!new Table('table39')
+!table39.number := 2001
+!table39.description := 'Classic Parlor'
+!table39.capacity := 4
+
+!new Table('table40')
+!table40.number := 2002
+!table40.description := 'Retro Booth'
+!table40.capacity := 6
+
+-- Setting up the service team
+!new HeadWaiter('headwaiter20')
+!headwaiter20.name := 'Michael Zhang'
+!headwaiter20.dateOfBirth := Date('1980-04-15')
+!headwaiter20.phoneNumber := '555-5252'
+
+!new Waiter('waiter24')
+!waiter24.name := 'Olivia Kim'
+!waiter24.dateOfBirth := Date('1993-12-19')
+!waiter24.phoneNumber := '555-3939'
+!waiter24.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter20, waiter24) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for an anniversary party
+!new Banquet('reservation20')
+!reservation20.time := Time('19:00')
+!reservation20.date := Date('2024-09-10')
+!reservation20.numberPeople := 10
+!reservation20.name := 'Anniversary Celebration'
+!reservation20.phoneNumber := '555-7878'
+!reservation20.number := 218
+!reservation20.groupName := 'Golden Jubilee'
+!reservation20.paymentMethod := #CreditCard
+!reservation20.busService := true
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant20, reservation20) into RestaurantReservation
+!insert (reservation20, waiter24) into ReservationWaiter
+!insert (reservation20, table39) into ReservationTable
+!insert (reservation20, table40) into ReservationTable
+
+-- Adding a special MenuItem for the anniversary dinner
+!new MenuItem('menuItem20')
+!menuItem20.description := 'Classic Beef Bourguignon'
+!menuItem20.prepTime := 45.0
+!menuItem20.classification := #Main
+
+-- Associating MenuItem with a renowned Chef
+!new Chef('chef20')
+!chef20.name := 'Julia Curie'
+!chef20.dateOfBirth := Date('1960-06-05')
+!chef20.phoneNumber := '555-4949'
+
+!insert (menuItem20, chef20) into MenuItemChef
+
+-- Creating Cook under Chef's direction
+!new Cook('cook20')
+!cook20.name := 'Henri Dupont'
+!cook20.dateOfBirth := Date('1972-11-08')
+!cook20.phoneNumber := '555-8181'
+!cook20.yearsOfExperience := 28
+
+-- Establishing association between Chef and Cook
+!insert (chef20, cook20) into ChefCook
+
+-- Creating an ItemOrder for the anniversary
+!new ItemOrder('order20')
+!order20.time := Time('19:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order20, menuItem20) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation20, order20) into ReservationItemOrdered

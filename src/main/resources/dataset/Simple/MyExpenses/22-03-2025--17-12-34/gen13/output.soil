@@ -1,0 +1,33 @@
+!new Expense('expense15')
+!expense15.amount := 400.0
+!expense15.startDate := Date('2024-03-01')
+!expense15.endDate := Date('2024-03-31')
+
+!new Currency('currency13')
+!currency13.name := 'Russian Ruble'
+!currency13.abbreviation := 'RUB'
+
+!new Bill('bill24')
+!bill24.amount := 150.0
+!bill24.category := 'Internet'
+!bill24.date := Date('2024-03-10')
+!bill24.paymentMethod := #CHECK
+!bill24.status := #PENDING
+
+!new Bill('bill25')
+!bill25.amount := 250.0
+!bill25.category := 'Utilities'
+!bill25.date := Date('2024-03-15')
+!bill25.paymentMethod := #CASH
+!bill25.status := #VALIDATED
+
+!insert (expense15, bill24) into ExpenseContainsBills
+!insert (expense15, bill25) into ExpenseContainsBills
+
+!insert (bill24, currency13) into BillCurrency
+!insert (bill25, currency13) into BillCurrency
+
+!new Comment('comment15')
+!comment15.text := 'March expenses for internet and utilities'
+
+!insert (expense15, comment15) into ExpenseComment

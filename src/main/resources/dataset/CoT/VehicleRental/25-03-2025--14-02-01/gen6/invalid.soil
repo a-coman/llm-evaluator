@@ -1,0 +1,49 @@
+!new RentalOffice('rentalOffice22')
+!rentalOffice22.name := 'Global Vehicles Inc.'
+!rentalOffice22.number := 525
+!rentalOffice22.address := '50 North Blvd, El Paso, TX'
+
+!new Truck('truck21')
+!truck21.id := 43
+!truck21.registrationState := #AL
+!truck21.licensePlateNumber := 'INTL100'
+!truck21.vehicleTypeCode := #TRUCK
+!truck21.registrationLastMaintenanceDate := Date('2023-05-01')
+!truck21.expirationDate := Date('2024-05-01')
+!truck21.odometerReading := 0
+!truck21.gasTankCapacity := 0
+!truck21.workingRadio := true
+!truck21.mileage := 0
+
+!new RentalAgreement('rentalAgreement36')
+!rentalAgreement36.number := 6040
+!rentalAgreement36.rentalDate := Date('2023-09-01')
+!rentalAgreement36.anticipatedDuration := 90
+!rentalAgreement36.depositPaid := 3000.00
+!rentalAgreement36.quotedDailyRate := 90.00
+!rentalAgreement36.quotedRatePerMile := 0.18
+
+!new Individual('individualCustomer16')
+!individualCustomer16.name := 'Javier Ramirez'
+!individualCustomer16.address := '102 Border Rd, Laredo, TX'
+!individualCustomer16.poorRisk := false
+!individualCustomer16.homePhone := '956-555-0333'
+!individualCustomer16.driverLicenseState := #AL
+!individualCustomer16.driverLicenseNumber := 345678
+!individualCustomer16.driverLicenseExpirationDate := Date('2027-07-10')
+
+!new Company('company19')
+!company19.name := 'Cross Border Enterprises'
+!company19.address := '88 Trade St, Monterrey, Mexico'
+!company19.poorRisk := false
+!company19.idNumber := 56789
+
+!insert (rentalOffice22, truck21) into RentalOfficeVehicle
+
+!insert (rentalOffice22, rentalAgreement36) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice22, rentalAgreement36) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement36, truck21) into RentalAgreementVehicle
+
+!insert (rentalAgreement36, individualCustomer16) into RentalAgreementCustomer
+!insert (rentalAgreement36, company19) into RentalAgreementCustomer

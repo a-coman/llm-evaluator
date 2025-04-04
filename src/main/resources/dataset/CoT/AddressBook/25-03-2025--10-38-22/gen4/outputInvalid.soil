@@ -1,0 +1,87 @@
+!new AddressBook('World_Culinary_Network_Directory')
+
+!new Person('Luca_Rossi')
+!Luca_Rossi.name := 'Luca Rossi'
+!Luca_Rossi.phone := '+39-06-555-0101'
+!Luca_Rossi.website := 'www.lucarossiitalianchef.com'
+!Luca_Rossi.email := 'luca.rossi@italiancuisine.com'
+!Luca_Rossi.title := 'Executive Chef'
+
+!new Address('Address_Luca_Rossi')
+!Address_Luca_Rossi.city := 'Rome'
+!Address_Luca_Rossi.houseNr := '15'
+!Address_Luca_Rossi.street := 'Via Condotti'
+!insert (Luca_Rossi, Address_Luca_Rossi) into ContactContainsAddress
+
+!new Note('Note_Luca_Rossi')
+!Note_Luca_Rossi.author := 'Luca Rossi'
+!Note_Luca_Rossi.time := Date('2023-08-20 12:00')
+!Note_Luca_Rossi.type := #EMAIL
+!Note_Luca_Rossi.comment := 'Shared authentic Italian recipes with fellow chefs.'
+!insert (Luca_Rossi, Note_Luca_Rossi) into ContactContainsNote
+
+!new Company('Culinary_Arts_Institute')
+!Culinary_Arts_Institute.name := 'Culinary Arts Institute'
+!Culinary_Arts_Institute.phone := '+44-20-555-0202'
+!Culinary_Arts_Institute.website := 'www.culinaryartsinstitute.co.uk'
+!Culinary_Arts_Institute.email := 'contact@culinaryartsinstitute.co.uk'
+!Culinary_Arts_Institute.industry := 'Culinary Education'
+
+!new Address('Address_Culinary_Arts_London')
+!Address_Culinary_Arts_London.city := 'London'
+!Address_Culinary_Arts_London.houseNr := '221B'
+!Address_Culinary_Arts_London.street := 'Baker St'
+!insert (Culinary_Arts_Institute, Address_Culinary_Arts_London) into ContactContainsAddress
+
+!new Address('Address_Culinary_Arts_Paris')
+!Address_Culinary_Arts_Paris.city := 'Paris'
+!Address_Culinary_Arts_Paris.houseNr := '392'
+!Address_Culinary_Arts_Paris.street := 'Avenue des Champs-Élysées'
+!insert (Culinary_Arts_Institute, Address_Culinary_Arts_Paris) into ContactContainsAddress
+
+!new Note('Note_Culinary_Arts_Institute')
+!Note_Culinary_Arts_Institute.author := 'Emily Thompson'
+!Note_Culinary_Arts_Institute.time := Date('2023-09-05 09:30')
+!Note_Culinary_Arts_Institute.type := #MEETING
+!Note_Culinary_Arts_Institute.comment := 'Planning the annual international chef summit.'
+!insert (Culinary_Arts_Institute, Note_Culinary_Arts_Institute) into ContactContainsNote
+
+!new Relationship('Relationship_Luca_to_Culinary_Arts')
+!Relationship_Luca_to_Culinary_Arts.type := #COWORKER
+!insert (Luca_Rossi, Relationship_Luca_to_Culinary_Arts) into ContactToRelationship
+!insert (Relationship_Luca_to_Culinary_Arts, Culinary_Arts_Institute) into RelationshipToContact
+
+!new Company('World_Spice_Forum')
+!World_Spice_Forum.name := 'World Spice Forum'
+!World_Spice_Forum.phone := '+91-22-555-0303'
+!World_Spice_Forum.website := 'www.worldspiceforum.org'
+!World_Spice_Forum.email := 'info@worldspiceforum.org'
+!World_Spice_Forum.industry := 'Culinary Innovations'
+
+!new Address('Address_World_Spice_Forum')
+!Address_World_Spice_Forum.city := 'Mumbai'
+!Address_World_Spice_Forum.houseNr := '14A'
+!Address_World_Spice_Forum.street := 'Marine Drive'
+!insert (World_Spice_Forum, Address_World_Spice_Forum) into ContactContainsAddress
+
+!new Note('Note_World_Spice_Forum')
+!Note_World_Spice_Forum.author := 'Anjali Patel'
+!Note_World_Spice_Forum.time := Date('2023-10-15 11:00')
+!Note_World_Spice_Forum.type := #CALL
+!Note_World_Spice_Forum.comment := 'Discussed global spice trends with culinary institutes.'
+!insert (World_Spice_Forum, Note_World_Spice_Forum) into ContactContainsNote
+
+!new Relationship('Relationship_Culinary_Arts_to_World_Spice')
+!Relationship_Culinary_Arts_to_World_Spice.type := #SUBDIVISION
+!insert (Culinary_Arts_Institute, Relationship_Culinary_Arts_to_World_Spice) into ContactToRelationship
+!insert (Relationship_Culinary_Arts_to_World_Spice, World_Spice_Forum) into RelationshipToContact
+
+!new Relationship('Relationship_World_Spice_to_Luca')
+!Relationship_World_Spice_to_Luca.type := #EMPLOYEE
+!insert (World_Spice_Forum, Relationship_World_Spice_to_Luca) into ContactToRelationship
+!insert (Relationship_World_Spice_to_Luca, Luca_Rossi) into RelationshipToContact
+
+!insert (World_Culinary_Network_Directory, Luca_Rossi) into AddressBookMadeOfContact
+!insert (World_Culinary_Network_Directory, Culinary_Arts_Institute) into AddressBookMadeOfContact
+!insert (World_Culinary_Network_Directory, World_Spice_Forum) into AddressBookMadeOfContact
+

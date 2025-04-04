@@ -1,0 +1,50 @@
+!new Bank('bank4')
+!bank4.country := 'Australia'
+!bank4.name := 'Commonwealth Bank'
+!bank4.bic := 'CTBAAU2S'
+
+!new Account('account8')
+!account8.iban := 'AU765432109876'
+!account8.balance := 10000
+
+!new Account('account9')
+!account9.iban := 'AU123123123123'
+!account9.balance := 2500
+
+!new Account('account10')
+!account10.iban := 'AU999888777666'
+!account10.balance := 0
+
+!new Person('person10')
+!person10.firstName := 'Emma'
+!person10.lastName := 'Brown'
+!person10.age := 37
+
+!new Person('person11')
+!person11.firstName := 'Lucas'
+!person11.lastName := 'Davis'
+!person11.age := 22
+
+!new Person('person12')
+!person12.firstName := 'Sophia'
+!person12.lastName := 'Wilson'
+!person12.age := 19
+
+-- Associations
+!insert (bank4, account8) into AccountOfBanks
+!insert (bank4, account9) into AccountOfBanks
+!insert (bank4, account10) into AccountOfBanks
+
+!insert (person10, account8) into Ownership
+!insert (person11, account8) into Ownership
+
+!insert (person11, account9) into Ownership
+!insert (person12, account9) into Ownership
+
+!insert (person12, account10) into Ownership
+!insert (person11, account10) into Ownership
+
+!insert (person10, account9) into Use
+!insert (person10, account10) into Use
+
+!insert (person12, account8) into Use

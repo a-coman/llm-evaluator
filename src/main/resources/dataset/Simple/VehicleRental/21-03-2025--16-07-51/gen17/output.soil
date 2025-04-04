@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice19')
+!rentalOffice19.name := 'Skyline Rentals'
+!rentalOffice19.number := 119
+!rentalOffice19.address := '321 Skyway Drive, Denver, CO'
+
+!new Truck('truck11')
+!truck11.id := 18
+!truck11.registrationState := #CO
+!truck11.licensePlateNumber := 'CO9999'
+!truck11.vehicleTypeCode := #TRUCK
+!truck11.registrationLastMaintenanceDate := Date('2023-06-18')
+!truck11.expirationDate := Date('2024-06-18')
+!truck11.odometerReading := 30000
+!truck11.gasTankCapacity := 200.0
+!truck11.workingRadio := true
+!truck11.mileage := 12
+
+!new Individual('individualCustomer10')
+!individualCustomer10.name := 'Linda Harris'
+!individualCustomer10.address := '789 Eagle St, Denver, CO'
+!individualCustomer10.poorRisk := false
+!individualCustomer10.homePhone := '555-5566'
+!individualCustomer10.driverLicenseState := #CO
+!individualCustomer10.driverLicenseNumber := 7788990
+!individualCustomer10.driverLicenseExpirationDate := Date('2027-04-14')
+
+!new RentalAgreement('rentalAgreement18')
+!rentalAgreement18.number := 518
+!rentalAgreement18.rentalDate := Date('2023-10-20')
+!rentalAgreement18.anticipatedDuration := 6
+!rentalAgreement18.depositPaid := 160.0
+!rentalAgreement18.quotedDailyRate := 50.0
+!rentalAgreement18.quotedRatePerMile := 0.4
+
+!insert (rentalOffice19, truck11) into RentalOfficeVehicle
+!insert (rentalOffice19, rentalAgreement18) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice19, rentalAgreement18) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement18, truck11) into RentalAgreementVehicle
+!insert (rentalAgreement18, individualCustomer10) into RentalAgreementCustomer

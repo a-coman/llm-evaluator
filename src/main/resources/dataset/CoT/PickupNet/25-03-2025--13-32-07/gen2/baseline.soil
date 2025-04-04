@@ -1,0 +1,46 @@
+!new Driver('driver7')
+!driver7.id := 'D002'
+!driver7.name := 'Akira Tanaka'
+
+!new Shipment('shipment7')
+!shipment7.id := 'SHP002'
+!shipment7.status := #UNDERWAY
+
+!new Address('pickupAddress7')
+!pickupAddress7.text := '15 Chome-9-1 Marunouchi, Chiyoda City, Tokyo 100-0005, Japan'
+
+!new GeoLocation('pickupGeoLocation7')
+!pickupGeoLocation7.latitude := 35.6824
+!pickupGeoLocation7.longitude := 139.7661
+
+!new Address('deliveryAddress7')
+!deliveryAddress7.text := '221B Baker Street, London NW1 6XE, UK'
+
+!new GeoLocation('deliveryGeoLocation7')
+!deliveryGeoLocation7.latitude := 51.5237
+!deliveryGeoLocation7.longitude := -0.1586
+
+!new Station('station6')
+
+!new Customer('customer7')
+!customer7.id := 'CUST002'
+!customer7.name := 'Emily Collins'
+!customer7.twitterUserName := '@emilyLondoner'
+
+!insert (driver7, shipment7) into DriverShipment
+
+!insert (shipment7, pickupAddress7) into ShipmentContainsPickUpAddress
+
+!insert (shipment7, deliveryAddress7) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress7, pickupGeoLocation7) into AddressContainsGeoLocation
+
+!insert (deliveryAddress7, deliveryGeoLocation7) into AddressContainsGeoLocation
+
+!insert (customer7, shipment7) into CustomerConsistsOfShipment
+
+!insert (station6, customer7) into StationContainsCustomer
+
+!insert (station6, shipment7) into StationShipment
+
+!insert (station6, driver7) into StationContainsDriver

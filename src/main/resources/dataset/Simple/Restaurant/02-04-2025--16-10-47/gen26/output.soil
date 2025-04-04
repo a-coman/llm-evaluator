@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant26')
+!restaurant26.name := 'Tranquil Terrace'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner51')
+!owner51.name := 'Lydia Harper'
+!owner51.percentageShares := 55
+
+!new Owner('owner52')
+!owner52.name := 'Ryan Shaw'
+!owner52.percentageShares := 45
+
+-- Establish RestaurantOwner association
+!insert (restaurant26, owner51) into RestaurantOwner
+!insert (restaurant26, owner52) into RestaurantOwner
+
+-- Creating tables with a serene setting
+!new Table('table51')
+!table51.number := 2601
+!table51.description := 'Zen Garden View'
+!table51.capacity := 3
+
+!new Table('table52')
+!table52.number := 2602
+!table52.description := 'Peaceful Pavilion'
+!table52.capacity := 5
+
+-- Setting up the service staff
+!new HeadWaiter('headwaiter26')
+!headwaiter26.name := 'Jasper Collins'
+!headwaiter26.dateOfBirth := Date('1985-10-30')
+!headwaiter26.phoneNumber := '555-5858'
+
+!new Waiter('waiter30')
+!waiter30.name := 'Zara Lee'
+!waiter30.dateOfBirth := Date('1992-08-25')
+!waiter30.phoneNumber := '555-2626'
+!waiter30.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter26, waiter30) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a yoga retreat dinner
+!new Banquet('reservation26')
+!reservation26.time := Time('19:00')
+!reservation26.date := Date('2024-10-20')
+!reservation26.numberPeople := 7
+!reservation26.name := 'Yoga Retreat Dinner'
+!reservation26.phoneNumber := '555-8700'
+!reservation26.number := 224
+!reservation26.groupName := 'Serenity Seekers'
+!reservation26.paymentMethod := #Cash
+!reservation26.busService := false
+
+-- Establishing associations for the Banquet Reservation
+!insert (restaurant26, reservation26) into RestaurantReservation
+!insert (reservation26, waiter30) into ReservationWaiter
+!insert (reservation26, table51) into ReservationTable
+!insert (reservation26, table52) into ReservationTable
+
+-- Adding a healthy MenuItem for the yoga dinner
+!new MenuItem('menuItem26')
+!menuItem26.description := 'Quinoa and Kale Salad'
+!menuItem26.prepTime := 20.0
+!menuItem26.classification := #Main
+
+-- Associating MenuItem with a renowned Chef
+!new Chef('chef26')
+!chef26.name := 'Aria Wells'
+!chef26.dateOfBirth := Date('1978-05-02')
+!chef26.phoneNumber := '555-9999'
+
+!insert (menuItem26, chef26) into MenuItemChef
+
+-- Creating Cook working alongside the Chef
+!new Cook('cook26')
+!cook26.name := 'Jordan Brooks'
+!cook26.dateOfBirth := Date('1988-09-15')
+!cook26.phoneNumber := '555-3535'
+!cook26.yearsOfExperience := 12
+
+-- Establishing association between Chef and Cook
+!insert (chef26, cook26) into ChefCook
+
+-- Creating an ItemOrder for the yoga dinner
+!new ItemOrder('order26')
+!order26.time := Time('19:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order26, menuItem26) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation26, order26) into ReservationItemOrdered

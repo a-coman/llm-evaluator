@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine15')
+!stateMachine15.name := 'assignmentMachine'
+
+!new State('state39')
+!state39.name := 'notAssigned'
+
+!new State('state40')
+!state40.name := 'assigned'
+
+!new State('state41')
+!state41.name := 'completedAssignment'
+
+!new Transition('transition33')
+!transition33.name := 'assign'
+
+!new Transition('transition34')
+!transition34.name := 'completeAssignment'
+
+!new Transition('transition35')
+!transition35.name := 'returnToNotAssigned'
+
+!new TimeEvent('event33')
+!event33.time := 8
+
+!new TimeEvent('event34')
+!event34.time := 18
+
+!new TimeEvent('event35')
+!event35.time := 28
+
+!insert (stateMachine15, state39) into StateMachineContainsStates
+!insert (stateMachine15, state40) into StateMachineContainsStates
+!insert (stateMachine15, state41) into StateMachineContainsStates
+
+!insert (stateMachine15, transition33) into StateMachineContainsTransitions
+!insert (stateMachine15, transition34) into StateMachineContainsTransitions
+!insert (stateMachine15, transition35) into StateMachineContainsTransitions
+
+!insert (transition33, event33) into TransitionContainsEvents
+!insert (transition34, event34) into TransitionContainsEvents
+!insert (transition35, event35) into TransitionContainsEvents
+
+!insert (state39, transition33) into StateTransition
+!insert (state40, transition34) into StateTransition
+!insert (state41, transition35) into StateTransition
+
+!insert (transition33, state40) into TransitionState
+!insert (transition34, state41) into TransitionState
+!insert (transition35, state39) into TransitionState
+
+!insert (stateMachine15, state39) into StateMachineStartsStates

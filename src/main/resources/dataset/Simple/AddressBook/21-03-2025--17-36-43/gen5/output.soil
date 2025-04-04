@@ -1,0 +1,71 @@
+!new AddressBook('addressBook5')
+
+!new Company('blueTechInnovations')
+!blueTechInnovations.name := 'BlueTech Innovations'
+!blueTechInnovations.phone := '800-768-5674'
+!blueTechInnovations.website := 'www.bluetech.com'
+!blueTechInnovations.email := 'contact@bluetech.com'
+!blueTechInnovations.industry := 'Software Development'
+
+!new Person('emmaWatson')
+!emmaWatson.name := 'Emma Watson'
+!emmaWatson.phone := '222-333-4455'
+!emmaWatson.website := 'www.emmawatsondesign.com'
+!emmaWatson.email := 'emma.watson@bluetech.com'
+!emmaWatson.title := 'Lead UX Designer'
+
+!new Note('designWorkshopNote')
+!designWorkshopNote.author := 'Emma Watson'
+!designWorkshopNote.time := Date('2024-01-12')
+!designWorkshopNote.type := #MEETING
+!designWorkshopNote.comment := 'Participate in UX design workshop with stakeholders'
+
+!new Address('emmaAddress')
+!emmaAddress.city := 'Boston'
+!emmaAddress.houseNr := '455'
+!emmaAddress.street := 'Maple Street'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, blueTechInnovations) into RelationshipToContact
+!insert (emmaWatson, coworkerRelationship) into ContactToRelationship
+!insert (emmaWatson, emmaAddress) into ContactContainsAddress
+!insert (emmaWatson, designWorkshopNote) into ContactContainsNote
+
+!new Person('oliverStone')
+!oliverStone.name := 'Oliver Stone'
+!oliverStone.phone := '444-555-6789'
+!oliverStone.website := 'www.oliverstone.photography'
+!oliverStone.email := 'oliver.stone@example.com'
+!oliverStone.title := 'Multimedia Specialist'
+
+!new Note('mediaProjectNote')
+!mediaProjectNote.author := 'Oliver Stone'
+!mediaProjectNote.time := Date('2024-02-01')
+!mediaProjectNote.type := #CALL
+!mediaProjectNote.comment := 'Discuss multimedia content strategies for product launch'
+
+!new Address('oliverAddress')
+!oliverAddress.city := 'San Diego'
+!oliverAddress.houseNr := '989'
+!oliverAddress.street := 'Palm Lane'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, emmaWatson) into RelationshipToContact
+!insert (oliverStone, bossRelationship) into ContactToRelationship
+!insert (oliverStone, oliverAddress) into ContactContainsAddress
+!insert (oliverStone, mediaProjectNote) into ContactContainsNote
+
+!new Address('blueTechAddress')
+!blueTechAddress.city := 'Seattle'
+!blueTechAddress.houseNr := '150'
+!blueTechAddress.street := 'Lakeview Ave'
+
+!insert (blueTechInnovations, blueTechAddress) into ContactContainsAddress
+
+!insert (addressBook5, blueTechInnovations) into AddressBookMadeOfContact
+!insert (addressBook5, emmaWatson) into AddressBookMadeOfContact
+!insert (addressBook5, oliverStone) into AddressBookMadeOfContact

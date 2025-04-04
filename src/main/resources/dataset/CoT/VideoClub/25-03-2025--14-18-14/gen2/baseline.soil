@@ -1,0 +1,42 @@
+!new Client('clientGlobal1')
+!clientGlobal1.clientId := 201
+!clientGlobal1.isSuspended := false
+
+!new Client('clientGlobal2')
+!clientGlobal2.clientId := 202
+!clientGlobal2.isSuspended := false
+
+!new Rental('rentalGlobal1')
+!rentalGlobal1.date := Date('2023-10-03')
+
+!new Rental('rentalGlobal2')
+!rentalGlobal2.date := Date('2023-10-10')
+
+!new Movie('movieChateauMysteres')
+!movieChateauMysteres.title := 'Château de Mystères'
+!movieChateauMysteres.availableCopies := 5
+!movieChateauMysteres.genre := #Comedy
+
+!new Series('seriesTeknologiRevolusi')
+!seriesTeknologiRevolusi.title := 'Teknologi Revolusi'
+!seriesTeknologiRevolusi.availableCopies := 1
+!seriesTeknologiRevolusi.episode := 3
+
+!new Actor('actorFrancoisHumour')
+!actorFrancoisHumour.name := 'François Humour'
+
+!new Actor('actorIndahSarjana')
+!actorIndahSarjana.name := 'Indah Sarjana'
+
+!new Actor('actorRinaEkstra')
+!actorRinaEkstra.name := 'Rina Ekstra'
+
+!insert (clientGlobal1, rentalGlobal1) into ClientRental
+!insert (clientGlobal2, rentalGlobal2) into ClientRental
+
+!insert (rentalGlobal1, movieChateauMysteres) into RentalCassette
+!insert (rentalGlobal2, seriesTeknologiRevolusi) into RentalCassette
+
+!insert (movieChateauMysteres, actorFrancoisHumour) into CassetteActor
+!insert (seriesTeknologiRevolusi, actorIndahSarjana) into CassetteActor
+!insert (seriesTeknologiRevolusi, actorRinaEkstra) into CassetteActor

@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine10')
+!stateMachine10.name := 'cycleMachine'
+
+!new State('state24')
+!state24.name := 'beginning'
+
+!new State('state25')
+!state25.name := 'middle'
+
+!new State('state26')
+!state26.name := 'end'
+
+!new Transition('transition20')
+!transition20.name := 'beginToMiddle'
+
+!new Transition('transition21')
+!transition21.name := 'middleToEnd'
+
+!new Transition('transition22')
+!transition22.name := 'endToBegin'
+
+!new TimeEvent('event20')
+!event20.time := 10
+
+!new TimeEvent('event21')
+!event21.time := 15
+
+!new TimeEvent('event22')
+!event22.time := 20
+
+!insert (stateMachine10, state24) into StateMachineContainsStates
+!insert (stateMachine10, state25) into StateMachineContainsStates
+!insert (stateMachine10, state26) into StateMachineContainsStates
+
+!insert (stateMachine10, transition20) into StateMachineContainsTransitions
+!insert (stateMachine10, transition21) into StateMachineContainsTransitions
+!insert (stateMachine10, transition22) into StateMachineContainsTransitions
+
+!insert (transition20, event20) into TransitionContainsEvents
+!insert (transition21, event21) into TransitionContainsEvents
+!insert (transition22, event22) into TransitionContainsEvents
+
+!insert (state24, transition20) into StateTransition
+!insert (state25, transition21) into StateTransition
+!insert (state26, transition22) into StateTransition
+
+!insert (transition20, state25) into TransitionState
+!insert (transition21, state26) into TransitionState
+!insert (transition22, state24) into TransitionState
+
+!insert (stateMachine10, state24) into StateMachineStartsStates

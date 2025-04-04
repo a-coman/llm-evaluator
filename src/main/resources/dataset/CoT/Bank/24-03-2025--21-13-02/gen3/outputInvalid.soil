@@ -1,0 +1,45 @@
+!new Bank('bank15')
+!bank15.country := 'Kenya'
+!bank15.name := 'Jambo Bank'
+!bank15.bic := 'JMBOKENY'
+
+!new Account('account30')
+!account30.iban := 'KE12345678901234567890'
+!account30.balance := 60000
+
+!new Account('account31')
+!account31.iban := 'KE09876543210987654321'
+!account31.balance := -500
+
+!new Person('person40')
+!person40.firstName := 'Achieng'
+!person40.lastName := 'Odongo'
+!person40.age := 40
+
+!new Person('person41')
+!person41.firstName := 'Kwame'
+!person41.lastName := 'Odongo'
+!person41.age := 42
+
+!new Person('person42')
+!person42.firstName := 'Grace'
+!person42.lastName := 'Njoroge'
+!person42.age := 19
+
+!new Person('person43')
+!person43.firstName := 'Kendi'
+!person43.lastName := 'Odongo'
+!person43.age := 16
+
+!insert (person40, account30) into Ownership
+!insert (person41, account30) into Ownership
+!insert (person42, account31) into Ownership
+
+!insert (person40, account31) into Use
+!insert (person41, account31) into Use
+!insert (person42, account31) into Use
+!insert (person43, account30) into Use
+
+!insert (bank15, account30) into AccountOfBanks
+!insert (bank15, account31) into AccountOfBanks
+

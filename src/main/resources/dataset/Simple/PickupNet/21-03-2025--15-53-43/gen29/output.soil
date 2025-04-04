@@ -1,0 +1,53 @@
+!new Driver('driver30')
+!driver30.id := 'D030'
+!driver30.name := 'Harper Taylor'
+
+!new Shipment('shipment53')
+!shipment53.id := 'S053'
+!shipment53.status := #UNDERWAY
+
+!new Shipment('shipment54')
+!shipment54.id := 'S054'
+!shipment54.status := #ASSIGNED
+
+!new Address('address59')
+!address59.text := '3737 Crystal Lake Way'
+
+!new Address('address60')
+!address60.text := '3838 Amber Ridge Drive'
+
+!new GeoLocation('geoLocation59')
+!geoLocation59.latitude := -22.9068
+!geoLocation59.longitude := -43.1729
+
+!new GeoLocation('geoLocation60')
+!geoLocation60.latitude := -26.2041
+!geoLocation60.longitude := 28.0473
+
+!new Customer('customer30')
+!customer30.id := 'C030'
+!customer30.name := 'Ava Martinez'
+!customer30.twitterUserName := '@ava_martinez'
+
+!new Station('station29')
+
+!insert (driver30, shipment54) into DriverShipment
+
+!insert (shipment53, address59) into ShipmentContainsPickUpAddress
+!insert (shipment53, address60) into ShipmentContainsDeliveryAddress
+
+!insert (shipment54, address60) into ShipmentContainsPickUpAddress
+!insert (shipment54, address59) into ShipmentContainsDeliveryAddress
+
+!insert (address59, geoLocation59) into AddressContainsGeoLocation
+!insert (address60, geoLocation60) into AddressContainsGeoLocation
+
+!insert (customer30, shipment53) into CustomerConsistsOfShipment
+!insert (customer30, shipment54) into CustomerConsistsOfShipment
+
+!insert (station29, customer30) into StationContainsCustomer
+
+!insert (station29, shipment53) into StationShipment
+!insert (station29, shipment54) into StationShipment
+
+!insert (station29, driver30) into StationContainsDriver

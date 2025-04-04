@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine27')
+!stateMachine27.name := 'documentApprovalMachine'
+
+!new State('state83')
+!state83.name := 'drafted'
+
+!new State('state84')
+!state84.name := 'submitted'
+
+!new State('state85')
+!state85.name := 'approved'
+
+!new State('state86')
+!state86.name := 'rejected'
+
+!new Transition('transition76')
+!transition76.name := 'submitForApproval'
+
+!new Transition('transition77')
+!transition77.name := 'approveDocument'
+
+!new Transition('transition78')
+!transition78.name := 'rejectDocument'
+
+!new Transition('transition79')
+!transition79.name := 'reviseDocument'
+
+!new TimeEvent('event76')
+!event76.time := 7
+
+!new TimeEvent('event77')
+!event77.time := 12
+
+!new TimeEvent('event78')
+!event78.time := 18
+
+!new TimeEvent('event79')
+!event79.time := 25
+
+!insert (stateMachine27, state83) into StateMachineContainsStates
+!insert (stateMachine27, state84) into StateMachineContainsStates
+!insert (stateMachine27, state85) into StateMachineContainsStates
+!insert (stateMachine27, state86) into StateMachineContainsStates
+
+!insert (stateMachine27, transition76) into StateMachineContainsTransitions
+!insert (stateMachine27, transition77) into StateMachineContainsTransitions
+!insert (stateMachine27, transition78) into StateMachineContainsTransitions
+!insert (stateMachine27, transition79) into StateMachineContainsTransitions
+
+!insert (transition76, event76) into TransitionContainsEvents
+!insert (transition77, event77) into TransitionContainsEvents
+!insert (transition78, event78) into TransitionContainsEvents
+!insert (transition79, event79) into TransitionContainsEvents
+
+!insert (state83, transition76) into StateTransition
+!insert (state84, transition77) into StateTransition
+!insert (state84, transition78) into StateTransition
+!insert (state86, transition79) into StateTransition
+
+!insert (transition76, state84) into TransitionState
+!insert (transition77, state85) into TransitionState
+!insert (transition78, state86) into TransitionState
+!insert (transition79, state83) into TransitionState
+
+!insert (stateMachine27, state83) into StateMachineStartsStates

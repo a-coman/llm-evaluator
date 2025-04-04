@@ -1,0 +1,64 @@
+!new AddressBook('addressBook2')
+
+!new Company('techSolutions')
+!techSolutions.name := 'Tech Solutions'
+!techSolutions.phone := '800-555-0199'
+!techSolutions.website := 'www.techsolutions.com'
+!techSolutions.email := 'info@techsolutions.com'
+!techSolutions.industry := 'Consulting'
+
+!new Person('aliceWong')
+!aliceWong.name := 'Alice Wong'
+!aliceWong.phone := '600-432-8888'
+!aliceWong.website := 'www.alicewong.biz'
+!aliceWong.email := 'alice.wong@example.com'
+!aliceWong.title := 'Chief Executive Officer'
+
+!new Note('emailNote')
+!emailNote.author := 'Alice Wong'
+!emailNote.time := Date('2023-11-10')
+!emailNote.type := #EMAIL
+!emailNote.comment := 'Sent quarterly earnings report'
+
+!new Address('aliceAddress')
+!aliceAddress.city := 'Los Angeles'
+!aliceAddress.houseNr := '200'
+!aliceAddress.street := 'Sunset Boulevard'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, techSolutions) into RelationshipToContact
+!insert (aliceWong, subdivisionRelationship) into ContactToRelationship
+!insert (aliceWong, aliceAddress) into ContactContainsAddress
+!insert (aliceWong, emailNote) into ContactContainsNote
+
+!new Person('bobCarter')
+!bobCarter.name := 'Bob Carter'
+!bobCarter.phone := '423-555-0177'
+!bobCarter.website := 'www.bobcarter.org'
+!bobCarter.email := 'bob.carter@example.com'
+!bobCarter.title := 'Operations Manager'
+
+!new Note('meetingReminderNote')
+!meetingReminderNote.author := 'Bob Carter'
+!meetingReminderNote.time := Date('2023-12-01')
+!meetingReminderNote.type := #MEETING
+!meetingReminderNote.comment := 'Reminder for annual strategic planning meeting'
+
+!new Address('bobAddress')
+!bobAddress.city := 'Seattle'
+!bobAddress.houseNr := '405'
+!bobAddress.street := 'Pine Street'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, aliceWong) into RelationshipToContact
+!insert (bobCarter, coworkerRelationship) into ContactToRelationship
+!insert (bobCarter, bobAddress) into ContactContainsAddress
+!insert (bobCarter, meetingReminderNote) into ContactContainsNote
+
+!insert (addressBook2, techSolutions) into AddressBookMadeOfContact
+!insert (addressBook2, aliceWong) into AddressBookMadeOfContact
+!insert (addressBook2, bobCarter) into AddressBookMadeOfContact

@@ -1,0 +1,51 @@
+!new Bank('bank14')
+!bank14.country := 'New Zealand'
+!bank14.name := 'ANZ Bank'
+!bank14.bic := 'ANZBNZ22'
+
+!new Account('account37')
+!account37.iban := 'NZ123456789012345678901'
+!account37.balance := 4400
+
+!new Account('account38')
+!account38.iban := 'NZ987654321098765432109'
+!account38.balance := 6000
+
+!new Account('account39')
+!account39.iban := 'NZ555666777888999000123'
+!account39.balance := 150
+
+!new Person('person41')
+!person41.firstName := 'Sophie'
+!person41.lastName := 'Wilson'
+!person41.age := 29
+
+!new Person('person42')
+!person42.firstName := 'Oliver'
+!person42.lastName := 'Jackson'
+!person42.age := 42
+
+!new Person('person43')
+!person43.firstName := 'Charlotte'
+!person43.lastName := 'Harris'
+!person43.age := 31
+
+-- Associations
+!insert (bank14, account37) into AccountOfBanks
+!insert (bank14, account38) into AccountOfBanks
+!insert (bank14, account39) into AccountOfBanks
+
+!insert (person41, account37) into Ownership
+!insert (person42, account37) into Ownership
+
+!insert (person42, account38) into Ownership
+!insert (person43, account38) into Ownership
+
+!insert (person43, account39) into Ownership
+!insert (person41, account39) into Ownership
+
+!insert (person41, account38) into Use
+!insert (person42, account39) into Use
+
+!insert (person43, account37) into Use
+!insert (person42, account37) into Use

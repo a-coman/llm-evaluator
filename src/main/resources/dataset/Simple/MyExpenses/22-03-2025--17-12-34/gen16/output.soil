@@ -1,0 +1,33 @@
+!new Expense('expense18')
+!expense18.amount := 750.0
+!expense18.startDate := Date('2024-06-01')
+!expense18.endDate := Date('2024-06-30')
+
+!new Currency('currency16')
+!currency16.name := 'Singapore Dollar'
+!currency16.abbreviation := 'SGD'
+
+!new Bill('bill30')
+!bill30.amount := 400.0
+!bill30.category := 'Medical'
+!bill30.date := Date('2024-06-08')
+!bill30.paymentMethod := #CHECK
+!bill30.status := #VERIFIED
+
+!new Bill('bill31')
+!bill31.amount := 350.0
+!bill31.category := 'Utilities'
+!bill31.date := Date('2024-06-15')
+!bill31.paymentMethod := #CREDIT_CARD
+!bill31.status := #REFUSED
+
+!insert (expense18, bill30) into ExpenseContainsBills
+!insert (expense18, bill31) into ExpenseContainsBills
+
+!insert (bill30, currency16) into BillCurrency
+!insert (bill31, currency16) into BillCurrency
+
+!new Comment('comment18')
+!comment18.text := 'Medical and utilities expenses for June'
+
+!insert (expense18, comment18) into ExpenseComment

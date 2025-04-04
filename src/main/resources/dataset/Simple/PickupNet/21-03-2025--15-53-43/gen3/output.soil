@@ -1,0 +1,53 @@
+!new Driver('driver4')
+!driver4.id := 'D004'
+!driver4.name := 'George King'
+
+!new Shipment('shipment6')
+!shipment6.id := 'S006'
+!shipment6.status := #NEW
+
+!new Shipment('shipment7')
+!shipment7.id := 'S007'
+!shipment7.status := #UNDERWAY
+
+!new Address('address7')
+!address7.text := '222 Cedar Lane'
+
+!new Address('address8')
+!address8.text := '333 Birch Boulevard'
+
+!new GeoLocation('geoLocation7')
+!geoLocation7.latitude := 35.6895
+!geoLocation7.longitude := 139.6917
+
+!new GeoLocation('geoLocation8')
+!geoLocation8.latitude := -33.8688
+!geoLocation8.longitude := 151.2093
+
+!new Customer('customer4')
+!customer4.id := 'C004'
+!customer4.name := 'Hannah Bell'
+!customer4.twitterUserName := '@hannah_bell'
+
+!new Station('station3')
+
+!insert (driver4, shipment7) into DriverShipment
+
+!insert (shipment6, address7) into ShipmentContainsPickUpAddress
+!insert (shipment6, address8) into ShipmentContainsDeliveryAddress
+
+!insert (shipment7, address8) into ShipmentContainsPickUpAddress
+!insert (shipment7, address7) into ShipmentContainsDeliveryAddress
+
+!insert (address7, geoLocation7) into AddressContainsGeoLocation
+!insert (address8, geoLocation8) into AddressContainsGeoLocation
+
+!insert (customer4, shipment6) into CustomerConsistsOfShipment
+!insert (customer4, shipment7) into CustomerConsistsOfShipment
+
+!insert (station3, customer4) into StationContainsCustomer
+
+!insert (station3, shipment6) into StationShipment
+!insert (station3, shipment7) into StationShipment
+
+!insert (station3, driver4) into StationContainsDriver

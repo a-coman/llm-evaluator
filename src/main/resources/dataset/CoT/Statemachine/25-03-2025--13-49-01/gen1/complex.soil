@@ -1,0 +1,67 @@
+!new StateMachine('automatedTrafficControl')
+!automatedTrafficControl.name := 'automatedTrafficControl'
+
+!new State('redLight')
+!redLight.name := 'redLight'
+
+!new State('greenLight')
+!greenLight.name := 'greenLight'
+
+!new State('yellowLight')
+!yellowLight.name := 'yellowLight'
+
+!new State('pedestrianCrossing')
+!pedestrianCrossing.name := 'pedestrianCrossing'
+
+!new Transition('redToGreen')
+!redToGreen.name := 'redToGreen'
+
+!new Transition('greenToYellow')
+!greenToYellow.name := 'greenToYellow'
+
+!new Transition('yellowToRed')
+!yellowToRed.name := 'yellowToRed'
+
+!new Transition('safeCrossing')
+!safeCrossing.name := 'safeCrossing'
+
+!new TimeEvent('timeEventRedToGreen')
+!timeEventRedToGreen.time := 60
+
+!new TimeEvent('timeEventGreenToYellow')
+!timeEventGreenToYellow.time := 30
+
+!new TimeEvent('timeEventYellowToRed')
+!timeEventYellowToRed.time := 15
+
+!new TimeEvent('timeEventSafeCrossing')
+!timeEventSafeCrossing.time := 90
+
+!insert (automatedTrafficControl, redLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, greenLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, yellowLight) into StateMachineContainsStates
+!insert (automatedTrafficControl, pedestrianCrossing) into StateMachineContainsStates
+
+!insert (automatedTrafficControl, redLight) into StateMachineStartsStates
+
+!insert (automatedTrafficControl, redToGreen) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, greenToYellow) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, yellowToRed) into StateMachineContainsTransitions
+!insert (automatedTrafficControl, safeCrossing) into StateMachineContainsTransitions
+
+!insert (redToGreen, timeEventRedToGreen) into TransitionContainsEvents
+!insert (greenToYellow, timeEventGreenToYellow) into TransitionContainsEvents
+!insert (yellowToRed, timeEventYellowToRed) into TransitionContainsEvents
+!insert (safeCrossing, timeEventSafeCrossing) into TransitionContainsEvents
+
+!insert (redLight, redToGreen) into StateTransition
+!insert (redToGreen, greenLight) into TransitionState
+
+!insert (greenLight, greenToYellow) into StateTransition
+!insert (greenToYellow, yellowLight) into TransitionState
+
+!insert (yellowLight, yellowToRed) into StateTransition
+!insert (yellowToRed, redLight) into TransitionState
+
+!insert (redLight, safeCrossing) into StateTransition
+!insert (safeCrossing, pedestrianCrossing) into TransitionState

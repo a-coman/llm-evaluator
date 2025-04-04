@@ -1,0 +1,33 @@
+!new Expense('expense22')
+!expense22.amount := 350.0
+!expense22.startDate := Date('2024-10-01')
+!expense22.endDate := Date('2024-10-31')
+
+!new Currency('currency20')
+!currency20.name := 'Swedish Krona'
+!currency20.abbreviation := 'SEK'
+
+!new Bill('bill38')
+!bill38.amount := 100.0
+!bill38.category := 'Pet Care'
+!bill38.date := Date('2024-10-05')
+!bill38.paymentMethod := #CASH
+!bill38.status := #DRAFT
+
+!new Bill('bill39')
+!bill39.amount := 250.0
+!bill39.category := 'Garden Supplies'
+!bill39.date := Date('2024-10-18')
+!bill39.paymentMethod := #CHECK
+!bill39.status := #VERIFIED
+
+!insert (expense22, bill38) into ExpenseContainsBills
+!insert (expense22, bill39) into ExpenseContainsBills
+
+!insert (bill38, currency20) into BillCurrency
+!insert (bill39, currency20) into BillCurrency
+
+!new Comment('comment22')
+!comment22.text := 'October expenses for pet care and garden supplies'
+
+!insert (expense22, comment22) into ExpenseComment

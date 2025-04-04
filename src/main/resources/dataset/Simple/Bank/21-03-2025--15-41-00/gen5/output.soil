@@ -1,0 +1,52 @@
+!new Bank('bank6')
+!bank6.country := 'India'
+!bank6.name := 'State Bank of India'
+!bank6.bic := 'SBINAINBB'
+
+!new Account('account13')
+!account13.iban := 'IN5013370001000000'
+!account13.balance := 8000
+
+!new Account('account14')
+!account14.iban := 'IN6013370002000001'
+!account14.balance := 1200
+
+!new Account('account15')
+!account15.iban := 'IN7013370003000002'
+!account15.balance := 2100
+
+!new Person('person17')
+!person17.firstName := 'Raj'
+!person17.lastName := 'Gupta'
+!person17.age := 29
+
+!new Person('person18')
+!person18.firstName := 'Simran'
+!person18.lastName := 'Kaur'
+!person18.age := 23
+
+!new Person('person19')
+!person19.firstName := 'Vikram'
+!person19.lastName := 'Rao'
+!person19.age := 50
+
+-- Associations
+!insert (bank6, account13) into AccountOfBanks
+!insert (bank6, account14) into AccountOfBanks
+!insert (bank6, account15) into AccountOfBanks
+
+!insert (person17, account13) into Ownership
+!insert (person18, account13) into Ownership
+
+!insert (person18, account14) into Ownership
+!insert (person19, account14) into Ownership
+
+!insert (person17, account15) into Ownership
+!insert (person19, account15) into Ownership
+
+!insert (person18, account15) into Use
+!insert (person19, account13) into Use
+
+-- Ensure unique usage relationships
+!insert (person17, account14) into Use
+!insert (person19, account15) into Use

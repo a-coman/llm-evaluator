@@ -1,0 +1,55 @@
+!new Booking('booking27')
+!booking27.startDate := '2025-09-10'
+!booking27.endDate := '2025-09-15'
+!booking27.canceled := false
+!booking27.bookingId := 126
+!booking27.confirmed := true
+
+!new Bill('bill27')
+!bill27.price := 750.00
+!bill27.billId := 226
+
+!new FreeRoomTypesDTO('roomType27')
+!roomType27.roomTypeDescription := 'Eco-Friendly Cabin'
+!roomType27.numBeds := 2
+!roomType27.pricePerNight := 150.00
+!roomType27.numFreeRooms := 3
+
+!new Customer('customer27')
+!customer27.firstName := 'Zoe'
+!customer27.lastName := 'Ellis'
+
+!new RoomReservation('reservation27')
+!reservation27.checkInDate := '2025-09-10'
+!reservation27.checkOutDate := '2025-09-15'
+
+!new RoomExtra('extra27')
+!extra27.price := 20.00
+!extra27.description := 'Bicycle Rental'
+
+!new Room('room41')
+!room41.numBeds := 2
+!room41.pricePerNight := 140.00
+!room41.occupied := false
+!room41.blocked := true
+!room41.roomNumber := 141
+
+!new Room('room42')
+!room42.numBeds := 2
+!room42.pricePerNight := 160.00
+!room42.occupied := true
+!room42.blocked := false
+!room42.roomNumber := 142
+
+!insert (booking27, bill27) into BookingBill
+
+!insert (booking27, customer27) into BookingCustomer
+
+!insert (booking27, reservation27) into BookingRoomReservation
+
+!insert (reservation27, extra27) into RoomReservationExtras
+
+!insert (reservation27, room41) into RoomReservationRoom
+!insert (reservation27, room42) into RoomReservationRoom
+
+!insert (bill27, reservation27) into BillRoomReservation

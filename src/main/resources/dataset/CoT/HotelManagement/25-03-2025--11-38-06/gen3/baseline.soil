@@ -1,0 +1,69 @@
+!new Customer('customer11')
+!customer11.firstName := 'Fatima'
+!customer11.lastName := 'Oumarou'
+
+!new Booking('booking11')
+!booking11.bookingId := 34567
+!booking11.startDate := 'July 1, 2023'
+!booking11.endDate := 'July 10, 2023'
+!booking11.canceled := false
+!booking11.confirmed := true
+
+!new RoomReservation('roomreservation18')
+!roomreservation18.checkInDate := 'July 1, 2023'
+!roomreservation18.checkOutDate := 'July 5, 2023'
+
+!new RoomReservation('roomreservation19')
+!roomreservation19.checkInDate := 'July 5, 2023'
+!roomreservation19.checkOutDate := 'July 10, 2023'
+
+!new Room('room22')
+!room22.roomNumber := 302
+!room22.numBeds := 2
+!room22.pricePerNight := 180.00
+!room22.occupied := true
+!room22.blocked := false
+
+!new Room('room23')
+!room23.roomNumber := 501
+!room23.numBeds := 1
+!room23.pricePerNight := 120.00
+!room23.occupied := true
+!room23.blocked := false
+
+!new RoomExtra('roomextra25')
+!roomextra25.price := 30.00
+!roomextra25.description := 'On-call doctor service'
+
+!new RoomExtra('roomextra26')
+!roomextra26.price := 40.00
+!roomextra26.description := 'Guided city tour'
+
+!new Bill('bill22')
+!bill22.billId := 123456
+!bill22.price := 770.00
+
+!new Bill('bill23')
+!bill23.billId := 123457
+!bill23.price := 770.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto11')
+!freeroomtypesdto11.roomTypeDescription := 'Family Suite'
+!freeroomtypesdto11.numBeds := 4
+!freeroomtypesdto11.pricePerNight := 400.00
+!freeroomtypesdto11.numFreeRooms := 3
+
+!insert (booking11, customer11) into BookingCustomer
+!insert (booking11, roomreservation18) into BookingRoomReservation
+!insert (booking11, roomreservation19) into BookingRoomReservation
+!insert (booking11, bill22) into BookingBill
+!insert (booking11, bill23) into BookingBill
+
+!insert (roomreservation18, room22) into RoomReservationRoom
+!insert (roomreservation19, room23) into RoomReservationRoom
+
+!insert (roomreservation18, roomextra25) into RoomReservationExtras
+!insert (roomreservation19, roomextra26) into RoomReservationExtras
+
+!insert (bill22, roomreservation18) into BillRoomReservation
+!insert (bill23, roomreservation19) into BillRoomReservation

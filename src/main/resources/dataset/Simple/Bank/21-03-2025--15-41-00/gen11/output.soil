@@ -1,0 +1,51 @@
+!new Bank('bank12')
+!bank12.country := 'Sweden'
+!bank12.name := 'SEB'
+!bank12.bic := 'ESSESESS'
+
+!new Account('account31')
+!account31.iban := 'SE3550000000054910000003'
+!account31.balance := 4800
+
+!new Account('account32')
+!account32.iban := 'SE3550000000069480000004'
+!account32.balance := 900
+
+!new Account('account33')
+!account33.iban := 'SE3550000000071230000005'
+!account33.balance := 12000
+
+!new Person('person35')
+!person35.firstName := 'Ingrid'
+!person35.lastName := 'Larsson'
+!person35.age := 41
+
+!new Person('person36')
+!person36.firstName := 'Erik'
+!person36.lastName := 'Svensson'
+!person36.age := 38
+
+!new Person('person37')
+!person37.firstName := 'Karin'
+!person37.lastName := 'Nilsson'
+!person37.age := 29
+
+-- Associations
+!insert (bank12, account31) into AccountOfBanks
+!insert (bank12, account32) into AccountOfBanks
+!insert (bank12, account33) into AccountOfBanks
+
+!insert (person35, account31) into Ownership
+!insert (person36, account31) into Ownership
+
+!insert (person36, account32) into Ownership
+!insert (person37, account32) into Ownership
+
+!insert (person37, account33) into Ownership
+!insert (person35, account33) into Ownership
+
+!insert (person35, account32) into Use
+!insert (person36, account33) into Use
+
+!insert (person37, account31) into Use
+!insert (person36, account31) into Use

@@ -1,0 +1,53 @@
+!new Driver('driver19')
+!driver19.id := 'D019'
+!driver19.name := 'Amelia Turner'
+
+!new Shipment('shipment32')
+!shipment32.id := 'S032'
+!shipment32.status := #NEW
+
+!new Shipment('shipment33')
+!shipment33.id := 'S033'
+!shipment33.status := #UNDERWAY
+
+!new Address('address37')
+!address37.text := '1414 Sunflower Court'
+
+!new Address('address38')
+!address38.text := '1515 Snowy Peak Avenue'
+
+!new GeoLocation('geoLocation37')
+!geoLocation37.latitude := 59.3293
+!geoLocation37.longitude := 18.0686
+
+!new GeoLocation('geoLocation38')
+!geoLocation38.latitude := 35.6762
+!geoLocation38.longitude := 139.6503
+
+!new Customer('customer19')
+!customer19.id := 'C019'
+!customer19.name := 'Jack Wilson'
+!customer19.twitterUserName := '@jack_wilson'
+
+!new Station('station18')
+
+!insert (driver19, shipment32) into DriverShipment
+
+!insert (shipment32, address37) into ShipmentContainsPickUpAddress
+!insert (shipment32, address38) into ShipmentContainsDeliveryAddress
+
+!insert (shipment33, address38) into ShipmentContainsPickUpAddress
+!insert (shipment33, address37) into ShipmentContainsDeliveryAddress
+
+!insert (address37, geoLocation37) into AddressContainsGeoLocation
+!insert (address38, geoLocation38) into AddressContainsGeoLocation
+
+!insert (customer19, shipment32) into CustomerConsistsOfShipment
+!insert (customer19, shipment33) into CustomerConsistsOfShipment
+
+!insert (station18, customer19) into StationContainsCustomer
+
+!insert (station18, shipment32) into StationShipment
+!insert (station18, shipment33) into StationShipment
+
+!insert (station18, driver19) into StationContainsDriver

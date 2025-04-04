@@ -1,0 +1,168 @@
+!new Driver('driver48')
+!driver48.id := 'D-401'
+!driver48.name := 'Omar Al-Masri'
+
+!new Driver('driver49')
+!driver49.id := 'D-402'
+!driver49.name := 'Zara Khan'
+
+!new Driver('driver50')
+!driver50.id := 'D-403'
+!driver50.name := 'Ahmed Ben Ali'
+
+!new Customer('customer50')
+!customer50.id := 'C-401'
+!customer50.name := 'Fatima El-Tayeb'
+!customer50.twitterUserName := '@fatima_global'
+
+!new Customer('customer51')
+!customer51.id := 'C-402'
+!customer51.name := 'Yousef Habib'
+!customer51.twitterUserName := '@yousefh_apex'
+
+!new Customer('customer52')
+!customer52.id := 'C-403'
+!customer52.name := 'Layla Haddad'
+!customer52.twitterUserName := '@laylah_addis'
+
+!new Shipment('shipment49')
+!shipment49.id := 'S-5001'
+!shipment49.status := #NEW
+
+!new Address('pickupAddress49')
+!pickupAddress49.text := 'The Dubai Mall, Dubai, UAE'
+
+!new GeoLocation('pickupGeoLocation49')
+!pickupGeoLocation49.latitude := 25.2048
+!pickupGeoLocation49.longitude := 55.2708
+
+!new Address('deliveryAddress49')
+!deliveryAddress49.text := 'Kingdom Center, Riyadh, Saudi Arabia'
+
+!new GeoLocation('deliveryGeoLocation49')
+!deliveryGeoLocation49.latitude := 24.7136
+!deliveryGeoLocation49.longitude := 46.6753
+
+!new Shipment('shipment50')
+!shipment50.id := 'S-5002'
+!shipment50.status := #UNDERWAY
+
+!new Address('pickupAddress50')
+!pickupAddress50.text := 'Tahrir Square, Cairo, Egypt'
+
+!new GeoLocation('pickupGeoLocation50')
+!pickupGeoLocation50.latitude := 30.0444
+!pickupGeoLocation50.longitude := 31.2357
+
+!new Address('deliveryAddress50')
+!deliveryAddress50.text := 'Medina, Mecca Province, Saudi Arabia'
+
+!new GeoLocation('deliveryGeoLocation50')
+!deliveryGeoLocation50.latitude := 24.4686
+!deliveryGeoLocation50.longitude := 39.6117
+
+!new Shipment('shipment51')
+!shipment51.id := 'S-5003'
+!shipment51.status := #DELIVERED
+
+!new Address('pickupAddress51')
+!pickupAddress51.text := 'Jemaa el-Fnaa, Marrakech, Morocco'
+
+!new GeoLocation('pickupGeoLocation51')
+!pickupGeoLocation51.latitude := 31.6295
+!pickupGeoLocation51.longitude := -7.9811
+
+!new Address('deliveryAddress51')
+!deliveryAddress51.text := 'Kasbah Market, Tunis, Tunisia'
+
+!new GeoLocation('deliveryGeoLocation51')
+!deliveryGeoLocation51.latitude := 36.8065
+!deliveryGeoLocation51.longitude := 10.1815
+
+!new Shipment('shipment52')
+!shipment52.id := 'S-5004'
+!shipment52.status := #ASSIGNED
+
+!new Address('pickupAddress52')
+!pickupAddress52.text := 'Khalifa City, Abu Dhabi, UAE'
+
+!new GeoLocation('pickupGeoLocation52')
+!pickupGeoLocation52.latitude := 24.4539
+!pickupGeoLocation52.longitude := 54.3773
+
+!new Address('deliveryAddress52')
+!deliveryAddress52.text := 'Downtown Beirut, Lebanon'
+
+!new GeoLocation('deliveryGeoLocation52')
+!deliveryGeoLocation52.latitude := 33.8959
+!deliveryGeoLocation52.longitude := 35.4784
+
+!new Station('station35')
+
+!new Station('station36')
+
+!insert (shipment49, pickupAddress49) into ShipmentContainsPickUpAddress
+
+!insert (shipment49, deliveryAddress49) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress49, pickupGeoLocation49) into AddressContainsGeoLocation
+
+!insert (deliveryAddress49, deliveryGeoLocation49) into AddressContainsGeoLocation
+
+!insert (driver49, shipment50) into DriverShipment
+
+!insert (shipment50, pickupAddress50) into ShipmentContainsPickUpAddress
+
+!insert (shipment50, deliveryAddress50) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress50, pickupGeoLocation50) into AddressContainsGeoLocation
+
+!insert (deliveryAddress50, deliveryGeoLocation50) into AddressContainsGeoLocation
+
+!insert (driver50, shipment51) into DriverShipment
+
+!insert (shipment51, pickupAddress51) into ShipmentContainsPickUpAddress
+
+!insert (shipment51, deliveryAddress51) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress51, pickupGeoLocation51) into AddressContainsGeoLocation
+
+!insert (deliveryAddress51, deliveryGeoLocation51) into AddressContainsGeoLocation
+
+!insert (driver48, shipment52) into DriverShipment
+
+!insert (shipment52, pickupAddress52) into ShipmentContainsPickUpAddress
+
+!insert (shipment52, deliveryAddress52) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress52, pickupGeoLocation52) into AddressContainsGeoLocation
+
+!insert (deliveryAddress52, deliveryGeoLocation52) into AddressContainsGeoLocation
+
+!insert (customer50, shipment49) into CustomerConsistsOfShipment
+
+!insert (customer51, shipment50) into CustomerConsistsOfShipment
+
+!insert (customer52, shipment51) into CustomerConsistsOfShipment
+
+!insert (customer51, shipment52) into CustomerConsistsOfShipment
+
+!insert (station35, customer50) into StationContainsCustomer
+
+!insert (station35, customer51) into StationContainsCustomer
+
+!insert (station36, customer52) into StationContainsCustomer
+
+!insert (station35, shipment49) into StationShipment
+
+!insert (station36, shipment50) into StationShipment
+
+!insert (station36, shipment51) into StationShipment
+
+!insert (station35, shipment52) into StationShipment
+
+!insert (station35, driver48) into StationContainsDriver
+
+!insert (station36, driver49) into StationContainsDriver
+
+!insert (station36, driver50) into StationContainsDriver

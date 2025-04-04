@@ -1,0 +1,55 @@
+!new Booking('booking23')
+!booking23.startDate := '2025-04-15'
+!booking23.endDate := '2025-04-20'
+!booking23.canceled := false
+!booking23.bookingId := 122
+!booking23.confirmed := true
+
+!new Bill('bill23')
+!bill23.price := 1100.00
+!bill23.billId := 222
+
+!new FreeRoomTypesDTO('roomType23')
+!roomType23.roomTypeDescription := 'Beachfront Bungalow'
+!roomType23.numBeds := 2
+!roomType23.pricePerNight := 250.00
+!roomType23.numFreeRooms := 2
+
+!new Customer('customer23')
+!customer23.firstName := 'Wendy'
+!customer23.lastName := 'Anderson'
+
+!new RoomReservation('reservation23')
+!reservation23.checkInDate := '2025-04-15'
+!reservation23.checkOutDate := '2025-04-20'
+
+!new RoomExtra('extra23')
+!extra23.price := 50.00
+!extra23.description := 'Snorkeling Gear Rental'
+
+!new Room('room35')
+!room35.numBeds := 2
+!room35.pricePerNight := 240.00
+!room35.occupied := true
+!room35.blocked := false
+!room35.roomNumber := 135
+
+!new Room('room36')
+!room36.numBeds := 2
+!room36.pricePerNight := 255.00
+!room36.occupied := false
+!room36.blocked := false
+!room36.roomNumber := 136
+
+!insert (booking23, bill23) into BookingBill
+
+!insert (booking23, customer23) into BookingCustomer
+
+!insert (booking23, reservation23) into BookingRoomReservation
+
+!insert (reservation23, extra23) into RoomReservationExtras
+
+!insert (reservation23, room35) into RoomReservationRoom
+!insert (reservation23, room36) into RoomReservationRoom
+
+!insert (bill23, reservation23) into BillRoomReservation

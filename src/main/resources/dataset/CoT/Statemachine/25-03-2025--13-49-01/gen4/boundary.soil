@@ -1,0 +1,67 @@
+!new StateMachine('libraryBookHandler')
+!libraryBookHandler.name := 'libraryBookHandler'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('scanning')
+!scanning.name := 'scanning'
+
+!new State('verifying')
+!verifying.name := 'verifying'
+
+!new State('checkedIn')
+!checkedIn.name := 'checkedIn'
+
+!new Transition('idleToScanning')
+!idleToScanning.name := 'idleToScanning'
+
+!new Transition('scanningToVerifying')
+!scanningToVerifying.name := 'scanningToVerifying'
+
+!new Transition('verifyingToCheckedIn')
+!verifyingToCheckedIn.name := 'verifyingToCheckedIn'
+
+!new Transition('scanningToIdle')
+!scanningToIdle.name := 'scanningToIdle'
+
+!new TimeEvent('timeEventIdleToScanning')
+!timeEventIdleToScanning.time := 5
+
+!new TimeEvent('timeEventScanningToVerifying')
+!timeEventScanningToVerifying.time := 10
+
+!new TimeEvent('timeEventScanningToIdle')
+!timeEventScanningToIdle.time := 10
+
+!new TimeEvent('timeEventVerifyingToCheckedIn')
+!timeEventVerifyingToCheckedIn.time := 15
+
+!insert (libraryBookHandler, idle) into StateMachineContainsStates
+!insert (libraryBookHandler, scanning) into StateMachineContainsStates
+!insert (libraryBookHandler, verifying) into StateMachineContainsStates
+!insert (libraryBookHandler, checkedIn) into StateMachineContainsStates
+
+!insert (libraryBookHandler, idle) into StateMachineStartsStates
+
+!insert (libraryBookHandler, idleToScanning) into StateMachineContainsTransitions
+!insert (libraryBookHandler, scanningToVerifying) into StateMachineContainsTransitions
+!insert (libraryBookHandler, verifyingToCheckedIn) into StateMachineContainsTransitions
+!insert (libraryBookHandler, scanningToIdle) into StateMachineContainsTransitions
+
+!insert (idleToScanning, timeEventIdleToScanning) into TransitionContainsEvents
+!insert (scanningToVerifying, timeEventScanningToVerifying) into TransitionContainsEvents
+!insert (scanningToIdle, timeEventScanningToIdle) into TransitionContainsEvents
+!insert (verifyingToCheckedIn, timeEventVerifyingToCheckedIn) into TransitionContainsEvents
+
+!insert (idle, idleToScanning) into StateTransition
+!insert (idleToScanning, scanning) into TransitionState
+
+!insert (scanning, scanningToVerifying) into StateTransition
+!insert (scanningToVerifying, verifying) into TransitionState
+
+!insert (verifying, verifyingToCheckedIn) into StateTransition
+!insert (verifyingToCheckedIn, checkedIn) into TransitionState
+
+!insert (scanning, scanningToIdle) into StateTransition
+!insert (scanningToIdle, idle) into TransitionState

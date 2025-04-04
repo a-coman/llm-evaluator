@@ -1,0 +1,71 @@
+!new AddressBook('addressBook29')
+
+!new Company('skylineArchitects')
+!skylineArchitects.name := 'Skyline Architects'
+!skylineArchitects.phone := '777-555-1234'
+!skylineArchitects.website := 'www.skylinearchitects.com'
+!skylineArchitects.email := 'contact@skylinearchitects.com'
+!skylineArchitects.industry := 'Architectural Design'
+
+!new Person('michaelStone')
+!michaelStone.name := 'Michael Stone'
+!michaelStone.phone := '111-222-3333'
+!michaelStone.website := 'www.michaelstonearchitecture.com'
+!michaelStone.email := 'michael.stone@skylinearchitects.com'
+!michaelStone.title := 'Principal Architect'
+
+!new Note('designReviewMeetingNote')
+!designReviewMeetingNote.author := 'Michael Stone'
+!designReviewMeetingNote.time := Date('2026-01-10')
+!designReviewMeetingNote.type := #MEETING
+!designReviewMeetingNote.comment := 'Conducted design review meeting for the new skyscraper project'
+
+!new Address('michaelAddress')
+!michaelAddress.city := 'New York'
+!michaelAddress.houseNr := '300'
+!michaelAddress.street := 'Broadway St'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, skylineArchitects) into RelationshipToContact
+!insert (michaelStone, bossRelationship) into ContactToRelationship
+!insert (michaelStone, michaelAddress) into ContactContainsAddress
+!insert (michaelStone, designReviewMeetingNote) into ContactContainsNote
+
+!new Person('isabellaLee')
+!isabellaLee.name := 'Isabella Lee'
+!isabellaLee.phone := '444-333-2222'
+!isabellaLee.website := 'www.isabellaleeinteriors.com'
+!isabellaLee.email := 'isabella.lee@example.com'
+!isabellaLee.title := 'Interior Designer'
+
+!new Note('interiorConceptNote')
+!interiorConceptNote.author := 'Isabella Lee'
+!interiorConceptNote.time := Date('2026-01-17')
+!interiorConceptNote.type := #CALL
+!interiorConceptNote.comment := 'Discussed interior concepts and materials with the client'
+
+!new Address('isabellaAddress')
+!isabellaAddress.city := 'Chicago'
+!isabellaAddress.houseNr := '150'
+!isabellaAddress.street := 'Designer Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, michaelStone) into RelationshipToContact
+!insert (isabellaLee, subdivisionRelationship) into ContactToRelationship
+!insert (isabellaLee, isabellaAddress) into ContactContainsAddress
+!insert (isabellaLee, interiorConceptNote) into ContactContainsNote
+
+!new Address('skylineAddress')
+!skylineAddress.city := 'San Francisco'
+!skylineAddress.houseNr := '850'
+!skylineAddress.street := 'Architecture Drive'
+
+!insert (skylineArchitects, skylineAddress) into ContactContainsAddress
+
+!insert (addressBook29, skylineArchitects) into AddressBookMadeOfContact
+!insert (addressBook29, michaelStone) into AddressBookMadeOfContact
+!insert (addressBook29, isabellaLee) into AddressBookMadeOfContact

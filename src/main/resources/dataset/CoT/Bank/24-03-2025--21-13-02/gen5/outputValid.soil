@@ -1,0 +1,202 @@
+!new Bank('bank21')
+!bank21.country := 'France'
+!bank21.name := 'Crédit Agricole'
+!bank21.bic := 'AGRIFRPPXXX'
+
+!new Account('account47')
+!account47.iban := 'FR7630006000011234567890189'
+!account47.balance := 250
+
+!new Account('account48')
+!account48.iban := 'FR7630006000029876543210123'
+!account48.balance := 9400
+
+!new Person('person64')
+!person64.firstName := 'Marie'
+!person64.lastName := 'Dupont'
+!person64.age := 41
+
+!new Person('person65')
+!person65.firstName := 'Jean'
+!person65.lastName := 'Lefebvre'
+!person65.age := 48
+
+!new Person('person66')
+!person66.firstName := 'Chloé'
+!person66.lastName := 'Blanc'
+!person66.age := 30
+
+!new Person('person67')
+!person67.firstName := 'Théo'
+!person67.lastName := 'De la Tour'
+!person67.age := 35
+
+!new Person('person68')
+!person68.firstName := 'Lucas'
+!person68.lastName := 'Petit'
+!person68.age := 24
+
+!insert (person64, account47) into Ownership
+!insert (person65, account47) into Ownership
+!insert (person66, account48) into Ownership
+!insert (person67, account48) into Ownership
+
+!insert (person64, account47) into Use
+!insert (person65, account47) into Use
+!insert (person64, account48) into Use
+!insert (person65, account48) into Use
+!insert (person66, account47) into Use
+!insert (person66, account48) into Use
+!insert (person67, account48) into Use
+!insert (person68, account47) into Use
+!insert (person68, account48) into Use
+
+!insert (bank21, account47) into AccountOfBanks
+!insert (bank21, account48) into AccountOfBanks
+
+!new Bank('bank24')
+!bank24.country := 'United Arab Emirates'
+!bank24.name := 'Desert Oasis Bank'
+!bank24.bic := 'DOBAAEAD'
+
+!new Account('account55')
+!account55.iban := 'AE99 DOBA 0000 9876 5432 10'
+!account55.balance := 1500000
+
+!new Account('account56')
+!account56.iban := 'AE99 DOBA 1111 2222 3333 44'
+!account56.balance := 0
+
+!new Person('person77')
+!person77.firstName := 'Amal'
+!person77.lastName := 'Al-Farsi'
+!person77.age := 30
+
+!new Person('person78')
+!person78.firstName := 'Fatima'
+!person78.lastName := 'El-Sayed'
+!person78.age := 48
+
+!new Person('person79')
+!person79.firstName := 'Khalid'
+!person79.lastName := 'Bin Rashid'
+!person79.age := 55
+
+!insert (person77, account55) into Ownership
+!insert (person79, account55) into Ownership
+!insert (person78, account56) into Ownership
+
+!insert (person77, account55) into Use
+!insert (person79, account55) into Use
+!insert (person78, account55) into Use
+!insert (person78, account56) into Use
+
+!insert (bank24, account55) into AccountOfBanks
+!insert (bank24, account56) into AccountOfBanks
+
+!new Bank('bank28')
+!bank28.country := 'Japan'
+!bank28.name := 'Sakura Financial Group'
+!bank28.bic := 'SFGTJP77XXX'
+
+!new Account('account62')
+!account62.iban := 'JP6666666666666666'
+!account62.balance := 0
+
+!new Account('account63')
+!account63.iban := 'JP7777777777777777'
+!account63.balance := 1000000000
+
+!new Person('person89')
+!person89.firstName := 'Haruto'
+!person89.lastName := 'Tanaka'
+!person89.age := 24
+
+!new Person('person90')
+!person90.firstName := 'Yuki'
+!person90.lastName := 'Asano'
+!person90.age := 85
+
+!insert (person89, account62) into Ownership
+!insert (person90, account63) into Ownership
+
+!insert (person89, account62) into Use
+!insert (person90, account62) into Use
+!insert (person89, account63) into Use
+
+!insert (bank28, account62) into AccountOfBanks
+!insert (bank28, account63) into AccountOfBanks
+
+!new Bank('bank30')
+!bank30.country := 'South Africa'
+!bank30.name := 'Ubuntu National Bank'
+!bank30.bic := 'UBZNZAJJ'
+
+!new Account('account68')
+!account68.iban := 'ZA653010000000012345'
+!account68.balance := 50000
+
+!new Account('account69')
+!account69.iban := 'ZA653010000000067890'
+!account69.balance := 8000
+
+!new Account('account70')
+!account70.iban := 'ZA653010000000054321'
+!account70.balance := 12000
+
+!new Account('account71')
+!account71.iban := 'ZA653010000000076432'
+!account71.balance := 30000
+
+!new Account('account72')
+!account72.iban := 'ZA653010000000098765'
+!account72.balance := 4500
+
+!new Person('person95')
+!person95.firstName := 'Sipho'
+!person95.lastName := 'Nkosi'
+!person95.age := 35
+
+!new Person('person96')
+!person96.firstName := 'Thandi'
+!person96.lastName := 'Mbeki'
+!person96.age := 28
+
+!new Person('person97')
+!person97.firstName := 'Jabu'
+!person97.lastName := 'Dlamini'
+!person97.age := 40
+
+!new Person('person98')
+!person98.firstName := 'Lesedi'
+!person98.lastName := 'Dube'
+!person98.age := 33
+
+!new Person('person99')
+!person99.firstName := 'Amara'
+!person99.lastName := 'Naidoo'
+!person99.age := 30
+
+!insert (person95, account68) into Ownership
+!insert (person96, account68) into Ownership
+!insert (person97, account69) into Ownership
+!insert (person98, account70) into Ownership
+!insert (person99, account70) into Ownership
+!insert (person95, account71) into Ownership
+!insert (person98, account72) into Ownership
+
+!insert (person95, account68) into Use
+!insert (person96, account68) into Use
+!insert (person97, account68) into Use
+!insert (person97, account69) into Use
+!insert (person98, account70) into Use
+!insert (person99, account70) into Use
+!insert (person95, account71) into Use
+!insert (person98, account72) into Use
+
+!insert (bank30, account68) into AccountOfBanks
+!insert (bank30, account69) into AccountOfBanks
+!insert (bank30, account70) into AccountOfBanks
+!insert (bank30, account71) into AccountOfBanks
+!insert (bank30, account72) into AccountOfBanks
+

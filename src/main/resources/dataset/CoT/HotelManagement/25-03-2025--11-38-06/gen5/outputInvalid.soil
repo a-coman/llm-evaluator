@@ -1,0 +1,51 @@
+!new Customer('customer23')
+!customer23.firstName := 'Priya'
+!customer23.lastName := 'Patel'
+
+!new Booking('booking23')
+!booking23.bookingId := 30518003
+!booking23.startDate := 'August 1, 2024'
+!booking23.endDate := 'August 7, 2024'
+!booking23.canceled := false
+!booking23.confirmed := true
+
+!new RoomReservation('roomreservation37')
+!roomreservation37.checkInDate := 'August 1, 2024'
+!roomreservation37.checkOutDate := 'August 7, 2024'
+
+!new Room('room44')
+!room44.roomNumber := 1201
+!room44.numBeds := 2
+!room44.pricePerNight := 10000
+!room44.occupied := true
+!room44.blocked := false
+
+!new RoomExtra('roomextra53')
+!roomextra53.price := 3000
+!roomextra53.description := 'Guided tour through Mumbai’s historical sites and markets.'
+
+!new RoomExtra('roomextra54')
+!roomextra54.price := 2500
+!roomextra54.description := 'Rejuvenating massage session at the spa.'
+
+!new Bill('bill42')
+!bill42.billId := 305180301
+!bill42.price := 5500
+
+!new Bill('bill43')
+!bill43.billId := 305180302
+!bill43.price := 15000
+
+!insert (booking23, customer23) into BookingCustomer
+!insert (booking23, roomreservation37) into BookingRoomReservation
+
+!insert (roomreservation37, room44) into RoomReservationRoom
+
+!insert (roomreservation37, roomextra53) into RoomReservationExtras
+!insert (roomreservation37, roomextra54) into RoomReservationExtras
+
+!insert (bill42, roomreservation37) into BillRoomReservation
+
+!insert (booking23, bill42) into BookingBill
+!insert (booking23, bill43) into BookingBill
+

@@ -1,0 +1,123 @@
+!new StateMachine('wildlifeTrackingProtocol')
+!wildlifeTrackingProtocol.name := 'wildlifeTrackingProtocol'
+
+!new State('initializeSensors')
+!initializeSensors.name := 'initializeSensors'
+
+!new State('collectData')
+!collectData.name := 'collectData'
+
+!new State('analyzePatterns')
+!analyzePatterns.name := 'analyzePatterns'
+
+!new State('detectThreats')
+!detectThreats.name := 'detectThreats'
+
+!new State('initiateProtection')
+!initiateProtection.name := 'initiateProtection'
+
+!new State('reportFindings')
+!reportFindings.name := 'reportFindings'
+
+!new State('resetSystem')
+!resetSystem.name := 'resetSystem'
+
+!new Transition('activateTracking')
+!activateTracking.name := 'activateTracking'
+
+!new Transition('performAnalysis')
+!performAnalysis.name := 'performAnalysis'
+
+!new Transition('evaluateThreats')
+!evaluateThreats.name := 'evaluateThreats'
+
+!new Transition('raiseAlert')
+!raiseAlert.name := 'raiseAlert'
+
+!new Transition('compileData')
+!compileData.name := 'compileData'
+
+!new Transition('confirmSafety')
+!confirmSafety.name := 'confirmSafety'
+
+!new Transition('cycleReset')
+!cycleReset.name := 'cycleReset'
+
+!new Transition('startOver')
+!startOver.name := 'startOver'
+
+!new TimeEvent('setupTime')
+!setupTime.time := 20
+
+!new TimeEvent('dataCollectionDuration')
+!dataCollectionDuration.time := 200
+
+!new TimeEvent('analysisDuration')
+!analysisDuration.time := 50
+
+!new TimeEvent('threatResponseTime')
+!threatResponseTime.time := 15
+
+!new TimeEvent('reportingTime')
+!reportingTime.time := 30
+
+!new TimeEvent('resetDuration')
+!resetDuration.time := 10
+
+!new TimeEvent('confirmSafetyTime')
+!confirmSafetyTime.time := 10
+
+!new TimeEvent('startOverTime')
+!startOverTime.time := 5
+
+!insert (wildlifeTrackingProtocol, initializeSensors) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, collectData) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, analyzePatterns) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, detectThreats) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, initiateProtection) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, reportFindings) into StateMachineContainsStates
+!insert (wildlifeTrackingProtocol, resetSystem) into StateMachineContainsStates
+
+!insert (wildlifeTrackingProtocol, initializeSensors) into StateMachineStartsStates
+
+!insert (wildlifeTrackingProtocol, activateTracking) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, performAnalysis) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, evaluateThreats) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, raiseAlert) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, compileData) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, confirmSafety) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, cycleReset) into StateMachineContainsTransitions
+!insert (wildlifeTrackingProtocol, startOver) into StateMachineContainsTransitions
+
+!insert (activateTracking, setupTime) into TransitionContainsEvents
+!insert (performAnalysis, dataCollectionDuration) into TransitionContainsEvents
+!insert (evaluateThreats, analysisDuration) into TransitionContainsEvents
+!insert (raiseAlert, threatResponseTime) into TransitionContainsEvents
+!insert (compileData, reportingTime) into TransitionContainsEvents
+!insert (cycleReset, resetDuration) into TransitionContainsEvents
+!insert (confirmSafety, confirmSafetyTime) into TransitionContainsEvents
+!insert (startOver, startOverTime) into TransitionContainsEvents
+
+!insert (initializeSensors, activateTracking) into StateTransition
+!insert (activateTracking, collectData) into TransitionState
+
+!insert (collectData, performAnalysis) into StateTransition
+!insert (performAnalysis, analyzePatterns) into TransitionState
+
+!insert (analyzePatterns, evaluateThreats) into StateTransition
+!insert (evaluateThreats, detectThreats) into TransitionState
+
+!insert (analyzePatterns, compileData) into StateTransition
+!insert (compileData, reportFindings) into TransitionState
+
+!insert (detectThreats, raiseAlert) into StateTransition
+!insert (raiseAlert, initiateProtection) into TransitionState
+
+!insert (initiateProtection, confirmSafety) into StateTransition
+!insert (confirmSafety, reportFindings) into TransitionState
+
+!insert (reportFindings, cycleReset) into StateTransition
+!insert (cycleReset, resetSystem) into TransitionState
+
+!insert (resetSystem, startOver) into StateTransition
+!insert (startOver, initializeSensors) into TransitionState

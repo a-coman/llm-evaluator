@@ -1,0 +1,38 @@
+!new Expense('homeOfficeSetup')
+!homeOfficeSetup.amount := 20000.00
+!homeOfficeSetup.startDate := Date('2023-09-05')
+!homeOfficeSetup.endDate := Date('2023-09-05')
+
+!new Bill('officeFurniture')
+!officeFurniture.amount := 10000.00
+!officeFurniture.category := 'Office Furniture'
+!officeFurniture.date := Date('2023-09-05')
+!officeFurniture.paymentMethod := #CASH
+!officeFurniture.status := #DRAFT
+
+!new Bill('computerAccessories')
+!computerAccessories.amount := 5000.00
+!computerAccessories.category := 'Computer Accessories'
+!computerAccessories.date := Date('2023-09-05')
+!computerAccessories.paymentMethod := #CHECK
+!computerAccessories.status := #PENDING
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!insert (officeFurniture, indianRupee) into BillCurrency
+!insert (computerAccessories, indianRupee) into BillCurrency
+
+!insert (homeOfficeSetup, officeFurniture) into ExpenseContainsBills
+!insert (homeOfficeSetup, computerAccessories) into ExpenseContainsBills
+
+!new Comment('commentErgonomicFurniture')
+!commentErgonomicFurniture.text := 'Investing in ergonomic furniture to boost productivity.'
+
+!new Comment('commentRAM')
+!commentRAM.text := 'Purchased additional RAM for smoother design workflow.'
+
+!insert (homeOfficeSetup, commentErgonomicFurniture) into ExpenseComment
+!insert (homeOfficeSetup, commentRAM) into ExpenseComment
+

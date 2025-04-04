@@ -1,0 +1,108 @@
+!new StateMachine('marineMonitoringProtocol')
+!marineMonitoringProtocol.name := 'marineMonitoringProtocol'
+
+!new State('initialize')
+!initialize.name := 'initialize'
+
+!new State('dataCollection')
+!dataCollection.name := 'dataCollection'
+
+!new State('dataAnalysis')
+!dataAnalysis.name := 'dataAnalysis'
+
+!new State('alertTrigger')
+!alertTrigger.name := 'alertTrigger'
+
+!new State('reporting')
+!reporting.name := 'reporting'
+
+!new State('systemReset')
+!systemReset.name := 'systemReset'
+
+!new Transition('startCollection')
+!startCollection.name := 'startCollection'
+
+!new Transition('processData')
+!processData.name := 'processData'
+
+!new Transition('checkAnomalies')
+!checkAnomalies.name := 'checkAnomalies'
+
+!new Transition('generateReport')
+!generateReport.name := 'generateReport'
+
+!new Transition('finalizeReport')
+!finalizeReport.name := 'finalizeReport'
+
+!new Transition('resetCycle')
+!resetCycle.name := 'resetCycle'
+
+!new Transition('reinitialize')
+!reinitialize.name := 'reinitialize'
+
+!new TimeEvent('initializationTime')
+!initializationTime.time := 15
+
+!new TimeEvent('collectionDuration')
+!collectionDuration.time := 180
+
+!new TimeEvent('analysisTime')
+!analysisTime.time := 45
+
+!new TimeEvent('alertProcessingTime')
+!alertProcessingTime.time := 20
+
+!new TimeEvent('reportCompilationTime')
+!reportCompilationTime.time := 25
+
+!new TimeEvent('resetDuration')
+!resetDuration.time := 10
+
+!new TimeEvent('reinitializeTime')
+!reinitializeTime.time := 5
+
+!insert (marineMonitoringProtocol, initialize) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, dataCollection) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, dataAnalysis) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, alertTrigger) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, reporting) into StateMachineContainsStates
+!insert (marineMonitoringProtocol, systemReset) into StateMachineContainsStates
+
+!insert (marineMonitoringProtocol, initialize) into StateMachineStartsStates
+
+!insert (marineMonitoringProtocol, startCollection) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, processData) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, checkAnomalies) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, generateReport) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, finalizeReport) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, resetCycle) into StateMachineContainsTransitions
+!insert (marineMonitoringProtocol, reinitialize) into StateMachineContainsTransitions
+
+!insert (startCollection, initializationTime) into TransitionContainsEvents
+!insert (processData, collectionDuration) into TransitionContainsEvents
+!insert (checkAnomalies, analysisTime) into TransitionContainsEvents
+!insert (generateReport, alertProcessingTime) into TransitionContainsEvents
+!insert (finalizeReport, reportCompilationTime) into TransitionContainsEvents
+!insert (resetCycle, resetDuration) into TransitionContainsEvents
+!insert (reinitialize, reinitializeTime) into TransitionContainsEvents
+
+!insert (initialize, startCollection) into StateTransition
+!insert (startCollection, dataCollection) into TransitionState
+
+!insert (dataCollection, processData) into StateTransition
+!insert (processData, dataAnalysis) into TransitionState
+
+!insert (dataAnalysis, checkAnomalies) into StateTransition
+!insert (checkAnomalies, alertTrigger) into TransitionState
+
+!insert (dataAnalysis, finalizeReport) into StateTransition
+!insert (finalizeReport, reporting) into TransitionState
+
+!insert (alertTrigger, generateReport) into StateTransition
+!insert (generateReport, reporting) into TransitionState
+
+!insert (reporting, resetCycle) into StateTransition
+!insert (resetCycle, systemReset) into TransitionState
+
+!insert (systemReset, reinitialize) into StateTransition
+!insert (reinitialize, initialize) into TransitionState

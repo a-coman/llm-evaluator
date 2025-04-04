@@ -1,0 +1,71 @@
+!new AddressBook('addressBook12')
+
+!new Company('stellarMediaGroup')
+!stellarMediaGroup.name := 'Stellar Media Group'
+!stellarMediaGroup.phone := '800-555-0000'
+!stellarMediaGroup.website := 'www.stellarmediagroup.com'
+!stellarMediaGroup.email := 'contact@stellarmedia.com'
+!stellarMediaGroup.industry := 'Digital Marketing'
+
+!new Person('oliviaCampbell')
+!oliviaCampbell.name := 'Olivia Campbell'
+!oliviaCampbell.phone := '312-555-2468'
+!oliviaCampbell.website := 'www.oliviacampbellmarketing.com'
+!oliviaCampbell.email := 'olivia.campbell@stellarmedia.com'
+!oliviaCampbell.title := 'Digital Marketing Strategist'
+
+!new Note('campaignLaunchNote')
+!campaignLaunchNote.author := 'Olivia Campbell'
+!campaignLaunchNote.time := Date('2024-08-15')
+!campaignLaunchNote.type := #EMAIL
+!campaignLaunchNote.comment := 'Launched new social media campaign for client engagement'
+
+!new Address('oliviaAddress')
+!oliviaAddress.city := 'Chicago'
+!oliviaAddress.houseNr := '783'
+!oliviaAddress.street := 'Marketing Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, stellarMediaGroup) into RelationshipToContact
+!insert (oliviaCampbell, employeeRelationship) into ContactToRelationship
+!insert (oliviaCampbell, oliviaAddress) into ContactContainsAddress
+!insert (oliviaCampbell, campaignLaunchNote) into ContactContainsNote
+
+!new Person('danielMurphy')
+!danielMurphy.name := 'Daniel Murphy'
+!danielMurphy.phone := '678-555-4321'
+!danielMurphy.website := 'www.danielmurphydesign.com'
+!danielMurphy.email := 'daniel.murphy@example.com'
+!danielMurphy.title := 'Creative Director'
+
+!new Note('creativeDirectionNote')
+!creativeDirectionNote.author := 'Daniel Murphy'
+!creativeDirectionNote.time := Date('2024-08-20')
+!creativeDirectionNote.type := #MEETING
+!creativeDirectionNote.comment := 'Directed brainstorming session for creative content ideas'
+
+!new Address('danielAddress')
+!danielAddress.city := 'Boston'
+!danielAddress.houseNr := '158'
+!danielAddress.street := 'Creative Court'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, oliviaCampbell) into RelationshipToContact
+!insert (danielMurphy, subdivisionRelationship) into ContactToRelationship
+!insert (danielMurphy, danielAddress) into ContactContainsAddress
+!insert (danielMurphy, creativeDirectionNote) into ContactContainsNote
+
+!new Address('stellarMediaAddress')
+!stellarMediaAddress.city := 'San Francisco'
+!stellarMediaAddress.houseNr := '902'
+!stellarMediaAddress.street := 'Media Lane'
+
+!insert (stellarMediaGroup, stellarMediaAddress) into ContactContainsAddress
+
+!insert (addressBook12, stellarMediaGroup) into AddressBookMadeOfContact
+!insert (addressBook12, oliviaCampbell) into AddressBookMadeOfContact
+!insert (addressBook12, danielMurphy) into AddressBookMadeOfContact

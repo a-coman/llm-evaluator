@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice27')
+!rentalOffice27.name := 'Gulf Rentals'
+!rentalOffice27.number := 127
+!rentalOffice27.address := '321 Beach Blvd, Tampa, FL'
+
+!new Vehicle('openTrailer6')
+!openTrailer6.id := 26
+!openTrailer6.registrationState := #FL
+!openTrailer6.licensePlateNumber := 'FL6767'
+!openTrailer6.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer6.registrationLastMaintenanceDate := Date('2023-08-08')
+!openTrailer6.expirationDate := Date('2024-08-08')
+
+!new Individual('individualCustomer14')
+!individualCustomer14.name := 'Carol Williams'
+!individualCustomer14.address := '777 Coastal Rd, Tampa, FL'
+!individualCustomer14.poorRisk := true
+!individualCustomer14.homePhone := '555-2233'
+!individualCustomer14.driverLicenseState := #FL
+!individualCustomer14.driverLicenseNumber := 4455667
+!individualCustomer14.driverLicenseExpirationDate := Date('2028-03-15')
+
+!new RentalAgreement('rentalAgreement26')
+!rentalAgreement26.number := 526
+!rentalAgreement26.rentalDate := Date('2023-12-20')
+!rentalAgreement26.anticipatedDuration := 3
+!rentalAgreement26.depositPaid := 100.0
+!rentalAgreement26.quotedDailyRate := 20.0
+!rentalAgreement26.quotedRatePerMile := 0.1
+
+!insert (rentalOffice27, openTrailer6) into RentalOfficeVehicle
+!insert (rentalOffice27, rentalAgreement26) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice27, rentalAgreement26) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement26, openTrailer6) into RentalAgreementVehicle
+!insert (rentalAgreement26, individualCustomer14) into RentalAgreementCustomer

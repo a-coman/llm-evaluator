@@ -1,0 +1,39 @@
+!new Bank('bank1')
+!bank1.country := 'Germany'
+!bank1.name := 'Deutsche Bank'
+!bank1.bic := 'DEUTDEFFXXX'
+
+!new Account('account1')
+!account1.iban := 'DE89370400440532013000'
+!account1.balance := 1500
+
+!new Account('account2')
+!account2.iban := 'DE44500105175407324931'
+!account2.balance := 7500
+
+!new Person('person1')
+!person1.firstName := 'Anna'
+!person1.lastName := 'Müller'
+!person1.age := 34
+
+!new Person('person2')
+!person2.firstName := 'Lukas'
+!person2.lastName := 'Schmidt'
+!person2.age := 42
+
+!new Person('person3')
+!person3.firstName := 'Klaus'
+!person3.lastName := 'Becker'
+!person3.age := 29
+
+!insert (person1, account1) into Ownership
+!insert (person2, account1) into Ownership
+!insert (person3, account2) into Ownership
+
+!insert (person1, account1) into Use
+!insert (person2, account1) into Use
+!insert (person2, account2) into Use
+!insert (person3, account2) into Use
+
+!insert (bank1, account1) into AccountOfBanks
+!insert (bank1, account2) into AccountOfBanks

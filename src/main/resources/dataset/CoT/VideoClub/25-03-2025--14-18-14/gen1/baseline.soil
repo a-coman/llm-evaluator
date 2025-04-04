@@ -1,0 +1,38 @@
+!new Client('client101')
+!client101.clientId := 101
+!client101.isSuspended := false
+
+!new Client('client102')
+!client102.clientId := 102
+!client102.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-15')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-10-01')
+
+!new Movie('movie1')
+!movie1.title := 'High-Speed Chase'
+!movie1.availableCopies := 3
+!movie1.genre := #Action
+
+!new Series('series1')
+!series1.title := 'The Laughter House'
+!series1.availableCopies := 2
+!series1.episode := 1
+
+!new Actor('actor1')
+!actor1.name := 'John Fast'
+
+!new Actor('actor2')
+!actor2.name := 'Comica Joy'
+
+!insert (client101, rental1) into ClientRental
+!insert (client102, rental2) into ClientRental
+
+!insert (rental1, movie1) into RentalCassette
+!insert (rental2, series1) into RentalCassette
+
+!insert (movie1, actor1) into CassetteActor
+!insert (series1, actor2) into CassetteActor

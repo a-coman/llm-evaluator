@@ -1,0 +1,164 @@
+!new Club('club39')
+!club39.name := 'Panthers FC'
+!club39.homeGround := 'Panther Park'
+!club39.chairman := 'Charles Murphy'
+
+!new Club('club40')
+!club40.name := 'Leopards FC'
+!club40.homeGround := 'Leopard Lair'
+!club40.chairman := 'Diana Collins'
+
+!new Team('team39')
+!team39.name := 'Panther Prowlers'
+!insert (club39, team39) into ClubTeam
+
+!new Team('team40')
+!team40.name := 'Leopard Spots'
+!insert (club40, team40) into ClubTeam
+
+!new Player('player58')
+!player58.name := 'Alex Morgan'
+!player58.age := 26
+!player58.bestFoot := #LEFT
+!player58.phoneNumber := '123-456-7890'
+!insert (team39, player58) into TeamPlayer
+
+!new Player('player59')
+!player59.name := 'Emily Davis'
+!player59.age := 28
+!player59.bestFoot := #RIGHT
+!player59.phoneNumber := '234-567-8901'
+!insert (team39, player59) into TeamPlayer
+
+!new Player('player60')
+!player60.name := 'Ryan Fisher'
+!player60.age := 30
+!player60.bestFoot := #BOTH
+!player60.phoneNumber := '345-678-9012'
+!insert (team40, player60) into TeamPlayer
+
+!new Position('position58')
+!position58.positionName := #DEFENDER
+!insert (player58, position58) into PlayerPositions
+
+!new Position('position59')
+!position59.positionName := #MIDFIELDER
+!insert (player59, position59) into PlayerPositions
+
+!new Position('position60')
+!position60.positionName := #FORWARD
+!insert (player60, position60) into PlayerPositions
+
+!new TrainingSession('training39')
+!training39.date := '2024-05-05'
+!training39.location := 'Panther Arena'
+!training39.purpose := 'Passing and Ball Control'
+!insert (team39, training39) into TeamTraining
+
+!new TrainingSession('training40')
+!training40.date := '2024-05-06'
+!training40.location := 'Leopard Grounds'
+!training40.purpose := 'Shooting Techniques'
+!insert (team40, training40) into TeamTraining
+
+!new TrainingNotes('trainingNotes39')
+!trainingNotes39.note := 'Focused on tight ball control and accurate passing'
+!trainingNotes39.date := '2024-05-05'
+!insert (training39, trainingNotes39) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes40')
+!trainingNotes40.note := 'Worked on various shooting drills for precision'
+!trainingNotes40.date := '2024-05-06'
+!insert (training40, trainingNotes40) into TrainingTrainingNotes
+
+!new TrainingObjective('objective58')
+!objective58.areaToImprove := 'Passing Accuracy'
+!objective58.startDate := '2024-02-01'
+!objective58.endDate := '2024-05-01'
+!objective58.success := true
+!insert (objective58, player58) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective59')
+!objective59.areaToImprove := 'Vision and Creativity'
+!objective59.startDate := '2024-03-10'
+!objective59.endDate := '2024-06-10'
+!objective59.success := false
+!insert (objective59, player59) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective60')
+!objective60.areaToImprove := 'Finishing Skills'
+!objective60.startDate := '2024-01-15'
+!objective60.endDate := '2024-04-15'
+!objective60.success := true
+!insert (objective60, player60) into TrainingObjectivePlayer
+
+!new Competition('competition20')
+!competition20.name := 'Global Trophy'
+!competition20.type := 'Semi-Finals'
+
+!new Match('match20')
+!match20.date := '2024-06-10'
+!match20.homeAway := false
+!insert (competition20, match20) into CompetitionMatch
+!insert (team39, match20) into VisitorMatch
+!insert (team40, match20) into LocalMatch
+
+!new MatchReport('report20')
+!report20.duration := 120
+!report20.scoreVisitor := 2
+!report20.scoreLocal := 3
+!insert (match20, report20) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer58')
+!matchPlayer58.booked := true
+!matchPlayer58.goals := 0
+!matchPlayer58.rating := 7
+!insert (player58, matchPlayer58) into PlayerMatch
+!insert (match20, matchPlayer58) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer60')
+!matchPlayer60.booked := false
+!matchPlayer60.goals := 2
+!matchPlayer60.rating := 9
+!insert (player60, matchPlayer60) into PlayerMatch
+!insert (match20, matchPlayer60) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition58')
+!matchPlayerPosition58.positionName := #DEFENDER
+!matchPlayerPosition58.number := 4
+!insert (matchPlayer58, matchPlayerPosition58) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition60')
+!matchPlayerPosition60.positionName := #FORWARD
+!matchPlayerPosition60.number := 10
+!insert (matchPlayer60, matchPlayerPosition60) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event74')
+!event74.eventType := #GOAL
+!event74.time := 18
+!insert (match20, event74) into MatchMatchEvent
+
+!new MatchEvent('event75')
+!event75.eventType := #GOAL
+!event75.time := 52
+!insert (match20, event75) into MatchMatchEvent
+
+!new MatchEvent('event76')
+!event76.eventType := #GOAL
+!event76.time := 67
+!insert (match20, event76) into MatchMatchEvent
+
+!new MatchEvent('event77')
+!event77.eventType := #GOAL
+!event77.time := 85
+!insert (match20, event77) into MatchMatchEvent
+
+!new MatchEvent('event78')
+!event78.eventType := #GOAL
+!event78.time := 105
+!insert (match20, event78) into MatchMatchEvent
+
+!new MatchNote('matchNote20')
+!matchNote20.note := 'Thrilling semi-final with Leopards FC edging victory in extra time'
+!matchNote20.date := '2024-06-10'
+!insert (match20, matchNote20) into MatchMatchNote

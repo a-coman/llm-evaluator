@@ -1,0 +1,83 @@
+!new Driver('driver28')
+!driver28.id := 'D004'
+!driver28.name := 'Elena Fischer'
+
+!new Shipment('shipment28')
+!shipment28.id := 'SHP005'
+!shipment28.status := #NEW
+
+!new Shipment('shipment29')
+!shipment29.id := 'SHP006'
+!shipment29.status := #UNDERWAY
+
+!new Address('pickupAddress28')
+!pickupAddress28.text := 'TechHub Warehouse, 1005 Innovation Dr, Austin, TX'
+
+!new GeoLocation('pickupGeoLocation28')
+!pickupGeoLocation28.latitude := 30.2672
+!pickupGeoLocation28.longitude := -97.7431
+
+!new Address('deliveryAddress28')
+!deliveryAddress28.text := '999 Startup Alley, Austin, TX'
+
+!new GeoLocation('deliveryGeoLocation28')
+!deliveryGeoLocation28.latitude := 30.2676
+!deliveryGeoLocation28.longitude := -97.7497
+
+!new Address('pickupAddress29')
+!pickupAddress29.text := 'Future Tech Solutions, 2345 Tech Ave, San Jose, CA'
+
+!new GeoLocation('pickupGeoLocation29')
+!pickupGeoLocation29.latitude := 37.3382
+!pickupGeoLocation29.longitude := -121.8863
+
+!new Address('deliveryAddress29')
+!deliveryAddress29.text := '4321 Innovation Blvd, Palo Alto, CA'
+
+!new GeoLocation('deliveryGeoLocation29')
+!deliveryGeoLocation29.latitude := 37.4419
+!deliveryGeoLocation29.longitude := -122.1430
+
+!new Station('station21')
+
+!new Customer('customer28')
+!customer28.id := 'CUST005'
+!customer28.name := 'Nathan Wu'
+!customer28.twitterUserName := '@nate_tech'
+
+!new Customer('customer29')
+!customer29.id := 'CUST006'
+!customer29.name := 'Sophia Turner'
+!customer29.twitterUserName := '@sophia_t_innovate'
+
+!insert (driver28, shipment29) into DriverShipment
+
+!insert (shipment28, pickupAddress28) into ShipmentContainsPickUpAddress
+
+!insert (shipment28, deliveryAddress28) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress28, pickupGeoLocation28) into AddressContainsGeoLocation
+
+!insert (deliveryAddress28, deliveryGeoLocation28) into AddressContainsGeoLocation
+
+!insert (shipment29, pickupAddress29) into ShipmentContainsPickUpAddress
+
+!insert (shipment29, deliveryAddress29) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress29, pickupGeoLocation29) into AddressContainsGeoLocation
+
+!insert (deliveryAddress29, deliveryGeoLocation29) into AddressContainsGeoLocation
+
+!insert (customer28, shipment28) into CustomerConsistsOfShipment
+
+!insert (customer29, shipment29) into CustomerConsistsOfShipment
+
+!insert (station21, customer28) into StationContainsCustomer
+
+!insert (station21, customer29) into StationContainsCustomer
+
+!insert (station21, shipment28) into StationShipment
+
+!insert (station21, shipment29) into StationShipment
+
+!insert (station21, driver28) into StationContainsDriver

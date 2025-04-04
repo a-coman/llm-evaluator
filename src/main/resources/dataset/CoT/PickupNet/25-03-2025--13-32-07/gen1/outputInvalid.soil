@@ -1,0 +1,38 @@
+!new Driver('driver4')
+!driver4.id := 'DRV1001'
+!driver4.name := 'Maria Gonzalez'
+
+!new Shipment('shipment4')
+!shipment4.id := 'SHP5001'
+!shipment4.status := #DELIVERED
+
+!new Address('pickupAddress4')
+!pickupAddress4.text := '123 Market St, San Francisco, CA 94103, USA'
+
+!new GeoLocation('geoLocation4')
+!geoLocation4.latitude := 37.7749
+!geoLocation4.longitude := -122.4194
+
+!new Customer('customer4')
+!customer4.id := 'CUST304'
+!customer4.name := 'Emily Nguyen'
+!customer4.twitterUserName := '@emily_ng'
+
+!new Station('station4')
+
+!insert (driver4, shipment4) into DriverShipment
+
+!insert (shipment4, pickupAddress4) into ShipmentContainsPickUpAddress
+
+!insert (shipment4, pickupAddress4) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress4, geoLocation4) into AddressContainsGeoLocation
+
+!insert (customer4, shipment4) into CustomerConsistsOfShipment
+
+!insert (station4, customer4) into StationContainsCustomer
+
+!insert (station4, shipment4) into StationShipment
+
+!insert (station4, driver4) into StationContainsDriver
+

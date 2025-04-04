@@ -1,0 +1,82 @@
+!new Driver('driver29')
+!driver29.id := 'DL005'
+!driver29.name := 'Sara O\'Connell'
+
+!new Driver('driver30')
+!driver30.id := 'DL006'
+!driver30.name := 'Youssef Ali'
+
+!new Shipment('shipment30')
+!shipment30.id := 'SH6789'
+!shipment30.status := #DELIVERED
+
+!new Shipment('shipment31')
+!shipment31.id := 'SH2468'
+!shipment31.status := #ASSIGNED
+
+!new Address('pickupAddress30')
+!pickupAddress30.text := 'GreenTech Warehouse, Phoenix, Arizona, USA'
+
+!new GeoLocation('pickupGeoLocation30')
+!pickupGeoLocation30.latitude := 33.4484
+!pickupGeoLocation30.longitude := -112.0740
+
+!new Address('pickupAddress31')
+!pickupAddress31.text := 'Solar Innovations, Las Vegas, Nevada, USA'
+
+!new GeoLocation('pickupGeoLocation31')
+!pickupGeoLocation31.latitude := 36.1699
+!pickupGeoLocation31.longitude := -115.1398
+
+!new Address('deliveryAddress30')
+!deliveryAddress30.text := 'Festival Grounds, Black Rock City, Nevada, USA'
+
+!new GeoLocation('deliveryGeoLocation30')
+!deliveryGeoLocation30.latitude := 40.7819
+!deliveryGeoLocation30.longitude := -119.2067
+
+!new Station('station22')
+
+!new Customer('customer30')
+!customer30.id := 'CST5678'
+!customer30.name := 'Desert Eco Solutions'
+!customer30.twitterUserName := '@DesertEco'
+
+!new Customer('customer31')
+!customer31.id := 'CST1357'
+!customer31.name := 'Festival Energy Management'
+!customer31.twitterUserName := '@FestivalEnergy'
+
+!insert (driver29, shipment31) into DriverShipment
+
+!insert (driver30, shipment30) into DriverShipment
+
+!insert (shipment30, pickupAddress30) into ShipmentContainsPickUpAddress
+
+!insert (shipment30, deliveryAddress30) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress30, pickupGeoLocation30) into AddressContainsGeoLocation
+
+!insert (shipment31, pickupAddress31) into ShipmentContainsPickUpAddress
+
+!insert (shipment31, deliveryAddress30) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress31, pickupGeoLocation31) into AddressContainsGeoLocation
+
+!insert (deliveryAddress30, deliveryGeoLocation30) into AddressContainsGeoLocation
+
+!insert (customer30, shipment30) into CustomerConsistsOfShipment
+
+!insert (customer31, shipment31) into CustomerConsistsOfShipment
+
+!insert (station22, customer30) into StationContainsCustomer
+
+!insert (station22, customer31) into StationContainsCustomer
+
+!insert (station22, shipment30) into StationShipment
+
+!insert (station22, shipment31) into StationShipment
+
+!insert (station22, driver29) into StationContainsDriver
+
+!insert (station22, driver30) into StationContainsDriver

@@ -1,0 +1,70 @@
+!new Customer('customer10')
+!customer10.firstName := 'Alejandro'
+!customer10.lastName := 'Muñoz'
+
+!new Booking('booking10')
+!booking10.bookingId := 2002
+!booking10.startDate := 'April 1, 2024'
+!booking10.endDate := 'July 1, 2024'
+!booking10.canceled := false
+!booking10.confirmed := true
+
+!new RoomReservation('roomreservation16')
+!roomreservation16.checkInDate := 'April 1, 2024'
+!roomreservation16.checkOutDate := 'July 1, 2024'
+
+!new RoomReservation('roomreservation17')
+!roomreservation17.checkInDate := 'April 1, 2024'
+!roomreservation17.checkOutDate := 'July 1, 2024'
+
+!new Room('room20')
+!room20.roomNumber := 401
+!room20.numBeds := 10
+!room20.pricePerNight := 500.00
+!room20.occupied := true
+!room20.blocked := false
+
+!new Room('room21')
+!room21.roomNumber := 402
+!room21.numBeds := 1
+!room21.pricePerNight := 180.00
+!room21.occupied := true
+!room21.blocked := false
+
+!new RoomExtra('roomextra23')
+!roomextra23.price := 0.00
+!roomextra23.description := 'Complimentary access to study facilities'
+
+!new RoomExtra('roomextra24')
+!roomextra24.price := 0.00
+!roomextra24.description := 'No-cost laundry service'
+
+!new Bill('bill20')
+!bill20.billId := 5004
+!bill20.price := 40500.00
+
+!new Bill('bill21')
+!bill21.billId := 5005
+!bill21.price := 16200.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto10')
+!freeroomtypesdto10.roomTypeDescription := 'Twin Room'
+!freeroomtypesdto10.numBeds := 2
+!freeroomtypesdto10.pricePerNight := 120.00
+!freeroomtypesdto10.numFreeRooms := 5
+
+!insert (booking10, customer10) into BookingCustomer
+!insert (booking10, roomreservation16) into BookingRoomReservation
+!insert (booking10, roomreservation17) into BookingRoomReservation
+
+!insert (roomreservation16, room20) into RoomReservationRoom
+!insert (roomreservation17, room21) into RoomReservationRoom
+
+!insert (roomreservation16, roomextra23) into RoomReservationExtras
+!insert (roomreservation17, roomextra24) into RoomReservationExtras
+
+!insert (bill20, roomreservation16) into BillRoomReservation
+!insert (bill21, roomreservation17) into BillRoomReservation
+
+!insert (booking10, bill20) into BookingBill
+!insert (booking10, bill21) into BookingBill

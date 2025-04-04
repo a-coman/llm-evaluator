@@ -1,0 +1,46 @@
+!new Expense('summerTravelToItaly')
+!summerTravelToItaly.amount := 1200.00
+!summerTravelToItaly.startDate := Date('2023-06-01')
+!summerTravelToItaly.endDate := Date('2023-06-15')
+
+!new Bill('flightTicket')
+!flightTicket.amount := 600.00
+!flightTicket.category := 'Travel'
+!flightTicket.date := Date('2023-05-25')
+!flightTicket.paymentMethod := #CREDIT_CARD
+!flightTicket.status := #VERIFIED
+
+!new Bill('hotelAccommodation')
+!hotelAccommodation.amount := 400.00
+!hotelAccommodation.category := 'Lodging'
+!hotelAccommodation.date := Date('2023-06-05')
+!hotelAccommodation.paymentMethod := #CHECK
+!hotelAccommodation.status := #VALIDATED
+
+!new Bill('foodAndDining')
+!foodAndDining.amount := 200.00
+!foodAndDining.category := 'Food'
+!foodAndDining.date := Date('2023-06-06')
+!foodAndDining.paymentMethod := #CASH
+!foodAndDining.status := #VERIFIED
+
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!insert (flightTicket, euro) into BillCurrency
+!insert (hotelAccommodation, euro) into BillCurrency
+!insert (foodAndDining, euro) into BillCurrency
+
+!insert (summerTravelToItaly, flightTicket) into ExpenseContainsBills
+!insert (summerTravelToItaly, hotelAccommodation) into ExpenseContainsBills
+!insert (summerTravelToItaly, foodAndDining) into ExpenseContainsBills
+
+!new Comment('comment1')
+!comment1.text := 'Great experience with authentic Italian meals. The bill was well within budget.'
+
+!new Comment('comment2')
+!comment2.text := 'Worth every penny for the ambiance and service provided at the hotel.'
+
+!insert (summerTravelToItaly, comment1) into ExpenseComment
+!insert (summerTravelToItaly, comment2) into ExpenseComment

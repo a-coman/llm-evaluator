@@ -1,0 +1,39 @@
+!new Bank('bank23')
+!bank23.country := 'Denmark'
+!bank23.name := 'Viking Capital Bank'
+!bank23.bic := 'VCBDKDKKXXX'
+
+!new Account('account53')
+!account53.iban := 'DK4444444444444444'
+!account53.balance := 0
+
+!new Account('account54')
+!account54.iban := 'DK5555555555555555'
+!account54.balance := 5000
+
+!new Person('person74')
+!person74.firstName := 'Lars'
+!person74.lastName := 'Nielsen'
+!person74.age := 35
+
+!new Person('person75')
+!person75.firstName := 'Ingrid'
+!person75.lastName := 'Sørensen'
+!person75.age := 19
+
+!new Person('person76')
+!person76.firstName := 'Bjørn'
+!person76.lastName := 'Johansen'
+!person76.age := 16
+
+!insert (person74, account53) into Ownership
+!insert (person74, account54) into Ownership
+!insert (person75, account54) into Ownership
+
+!insert (person74, account53) into Use
+!insert (person75, account53) into Use
+!insert (person76, account53) into Use
+!insert (person75, account54) into Use
+
+!insert (bank23, account53) into AccountOfBanks
+!insert (bank23, account54) into AccountOfBanks

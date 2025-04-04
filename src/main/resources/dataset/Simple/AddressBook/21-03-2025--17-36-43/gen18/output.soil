@@ -1,0 +1,71 @@
+!new AddressBook('addressBook18')
+
+!new Company('ecoTechSolutions')
+!ecoTechSolutions.name := 'EcoTech Solutions'
+!ecoTechSolutions.phone := '888-999-0000'
+!ecoTechSolutions.website := 'www.ecotechsolutions.org'
+!ecoTechSolutions.email := 'info@ecotechsolutions.org'
+!ecoTechSolutions.industry := 'Clean Technology'
+
+!new Person('sophiaLiu')
+!sophiaLiu.name := 'Sophia Liu'
+!sophiaLiu.phone := '333-444-5555'
+!sophiaLiu.website := 'www.sophialiuconsulting.com'
+!sophiaLiu.email := 'sophia.liu@ecotechsolutions.org'
+!sophiaLiu.title := 'Renewable Energy Consultant'
+
+!new Note('sustainabilityMeetingNote')
+!sustainabilityMeetingNote.author := 'Sophia Liu'
+!sustainabilityMeetingNote.time := Date('2025-02-10')
+!sustainabilityMeetingNote.type := #MEETING
+!sustainabilityMeetingNote.comment := 'Led a meeting on sustainable energy practices'
+
+!new Address('sophiaAddress')
+!sophiaAddress.city := 'Seattle'
+!sophiaAddress.houseNr := '220'
+!sophiaAddress.street := 'Green Road'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, ecoTechSolutions) into RelationshipToContact
+!insert (sophiaLiu, employeeRelationship) into ContactToRelationship
+!insert (sophiaLiu, sophiaAddress) into ContactContainsAddress
+!insert (sophiaLiu, sustainabilityMeetingNote) into ContactContainsNote
+
+!new Person('ethanCole')
+!ethanCole.name := 'Ethan Cole'
+!ethanCole.phone := '444-555-6767'
+!ethanCole.website := 'www.ethancoleenergy.com'
+!ethanCole.email := 'ethan.cole@example.com'
+!ethanCole.title := 'Environmental Scientist'
+
+!new Note('researchDiscussionNote')
+!researchDiscussionNote.author := 'Ethan Cole'
+!researchDiscussionNote.time := Date('2025-02-18')
+!researchDiscussionNote.type := #CALL
+!researchDiscussionNote.comment := 'Discussed latest research on eco-friendly technologies'
+
+!new Address('ethanAddress')
+!ethanAddress.city := 'Portland'
+!ethanAddress.houseNr := '309'
+!ethanAddress.street := 'Sustainability Street'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, sophiaLiu) into RelationshipToContact
+!insert (ethanCole, subdivisionRelationship) into ContactToRelationship
+!insert (ethanCole, ethanAddress) into ContactContainsAddress
+!insert (ethanCole, researchDiscussionNote) into ContactContainsNote
+
+!new Address('ecoTechAddress')
+!ecoTechAddress.city := 'San Francisco'
+!ecoTechAddress.houseNr := '900'
+!ecoTechAddress.street := 'Eco Avenue'
+
+!insert (ecoTechSolutions, ecoTechAddress) into ContactContainsAddress
+
+!insert (addressBook18, ecoTechSolutions) into AddressBookMadeOfContact
+!insert (addressBook18, sophiaLiu) into AddressBookMadeOfContact
+!insert (addressBook18, ethanCole) into AddressBookMadeOfContact

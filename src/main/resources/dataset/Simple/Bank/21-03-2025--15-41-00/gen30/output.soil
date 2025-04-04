@@ -1,0 +1,51 @@
+!new Bank('bank31')
+!bank31.country := 'South Korea'
+!bank31.name := 'Woori Bank'
+!bank31.bic := 'HVBKKRSE'
+
+!new Account('account88')
+!account88.iban := 'KR700110000747123456789'
+!account88.balance := 9300
+
+!new Account('account89')
+!account89.iban := 'KR700110000747987654321'
+!account89.balance := 2100
+
+!new Account('account90')
+!account90.iban := 'KR700110000747567890123'
+!account90.balance := 1000
+
+!new Person('person92')
+!person92.firstName := 'Minseo'
+!person92.lastName := 'Park'
+!person92.age := 39
+
+!new Person('person93')
+!person93.firstName := 'Jisoo'
+!person93.lastName := 'Kim'
+!person93.age := 30
+
+!new Person('person94')
+!person94.firstName := 'Sujin'
+!person94.lastName := 'Choi'
+!person94.age := 27
+
+-- Associations
+!insert (bank31, account88) into AccountOfBanks
+!insert (bank31, account89) into AccountOfBanks
+!insert (bank31, account90) into AccountOfBanks
+
+!insert (person92, account88) into Ownership
+!insert (person93, account88) into Ownership
+
+!insert (person93, account89) into Ownership
+!insert (person94, account89) into Ownership
+
+!insert (person94, account90) into Ownership
+!insert (person92, account90) into Ownership
+
+!insert (person92, account89) into Use
+!insert (person93, account90) into Use
+
+!insert (person94, account88) into Use
+!insert (person93, account88) into Use

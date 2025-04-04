@@ -1,0 +1,154 @@
+!new Club('club49')
+!club49.name := 'Wolverines FC'
+!club49.homeGround := 'Wolverine Den'
+!club49.chairman := 'Liam Roberts'
+
+!new Club('club50')
+!club50.name := 'Pythons FC'
+!club50.homeGround := 'Python Pit'
+!club50.chairman := 'Sophia White'
+
+!new Team('team49')
+!team49.name := 'Wolverine Warriors'
+!insert (club49, team49) into ClubTeam
+
+!new Team('team50')
+!team50.name := 'Python Slayers'
+!insert (club50, team50) into ClubTeam
+
+!new Player('player73')
+!player73.name := 'Henry Clarke'
+!player73.age := 29
+!player73.bestFoot := #BOTH
+!player73.phoneNumber := '654-789-3210'
+!insert (team49, player73) into TeamPlayer
+
+!new Player('player74')
+!player74.name := 'Jessica Taylor'
+!player74.age := 26
+!player74.bestFoot := #LEFT
+!player74.phoneNumber := '543-678-2109'
+!insert (team49, player74) into TeamPlayer
+
+!new Player('player75')
+!player75.name := 'Daniel Walker'
+!player75.age := 28
+!player75.bestFoot := #RIGHT
+!player75.phoneNumber := '432-567-1098'
+!insert (team50, player75) into TeamPlayer
+
+!new Position('position73')
+!position73.positionName := #DEFENDER
+!insert (player73, position73) into PlayerPositions
+
+!new Position('position74')
+!position74.positionName := #MIDFIELDER
+!insert (player74, position74) into PlayerPositions
+
+!new Position('position75')
+!position75.positionName := #FORWARD
+!insert (player75, position75) into PlayerPositions
+
+!new TrainingSession('training49')
+!training49.date := '2024-12-01'
+!training49.location := 'Wolverine Arena'
+!training49.purpose := 'Strength and Conditioning'
+!insert (team49, training49) into TeamTraining
+
+!new TrainingSession('training50')
+!training50.date := '2024-12-02'
+!training50.location := 'Python Gym'
+!training50.purpose := 'Advanced Tactics'
+!insert (team50, training50) into TeamTraining
+
+!new TrainingNotes('trainingNotes49')
+!trainingNotes49.note := 'Focused on enhancing player strength and endurance'
+!trainingNotes49.date := '2024-12-01'
+!insert (training49, trainingNotes49) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes50')
+!trainingNotes50.note := 'Reviewed complex offensive and defensive tactics'
+!trainingNotes50.date := '2024-12-02'
+!insert (training50, trainingNotes50) into TrainingTrainingNotes
+
+!new TrainingObjective('objective73')
+!objective73.areaToImprove := 'Defensive Physicality'
+!objective73.startDate := '2024-09-01'
+!objective73.endDate := '2024-12-01'
+!objective73.success := true
+!insert (objective73, player73) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective74')
+!objective74.areaToImprove := 'Creative Playmaking'
+!objective74.startDate := '2024-10-10'
+!objective74.endDate := '2025-01-10'
+!objective74.success := false
+!insert (objective74, player74) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective75')
+!objective75.areaToImprove := 'Finishing Precision'
+!objective75.startDate := '2024-11-15'
+!objective75.endDate := '2025-02-15'
+!objective75.success := true
+!insert (objective75, player75) into TrainingObjectivePlayer
+
+!new Competition('competition25')
+!competition25.name := 'National Super Cup'
+!competition25.type := 'Finals'
+
+!new Match('match25')
+!match25.date := '2024-12-15'
+!match25.homeAway := true
+!insert (competition25, match25) into CompetitionMatch
+!insert (team49, match25) into LocalMatch
+!insert (team50, match25) into VisitorMatch
+
+!new MatchReport('report25')
+!report25.duration := 90
+!report25.scoreVisitor := 1
+!report25.scoreLocal := 2
+!insert (match25, report25) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer73')
+!matchPlayer73.booked := false
+!matchPlayer73.goals := 0
+!matchPlayer73.rating := 7
+!insert (player73, matchPlayer73) into PlayerMatch
+!insert (match25, matchPlayer73) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer75')
+!matchPlayer75.booked := true
+!matchPlayer75.goals := 1
+!matchPlayer75.rating := 8
+!insert (player75, matchPlayer75) into PlayerMatch
+!insert (match25, matchPlayer75) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition73')
+!matchPlayerPosition73.positionName := #DEFENDER
+!matchPlayerPosition73.number := 5
+!insert (matchPlayer73, matchPlayerPosition73) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition75')
+!matchPlayerPosition75.positionName := #FORWARD
+!matchPlayerPosition75.number := 9
+!insert (matchPlayer75, matchPlayerPosition75) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event96')
+!event96.eventType := #GOAL
+!event96.time := 22
+!insert (match25, event96) into MatchMatchEvent
+
+!new MatchEvent('event97')
+!event97.eventType := #GOAL
+!event97.time := 41
+!insert (match25, event97) into MatchMatchEvent
+
+!new MatchEvent('event98')
+!event98.eventType := #GOAL
+!event98.time := 78
+!insert (match25, event98) into MatchMatchEvent
+
+!new MatchNote('matchNote25')
+!matchNote25.note := 'Wolverine Warriors clinched the cup with tactical superiority'
+!matchNote25.date := '2024-12-15'
+!insert (match25, matchNote25) into MatchMatchNote

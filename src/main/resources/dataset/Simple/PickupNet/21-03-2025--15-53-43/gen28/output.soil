@@ -1,0 +1,53 @@
+!new Driver('driver29')
+!driver29.id := 'D029'
+!driver29.name := 'Charlotte Brown'
+
+!new Shipment('shipment51')
+!shipment51.id := 'S051'
+!shipment51.status := #NEW
+
+!new Shipment('shipment52')
+!shipment52.id := 'S052'
+!shipment52.status := #DELIVERED
+
+!new Address('address57')
+!address57.text := '3535 Highland Meadow Circle'
+
+!new Address('address58')
+!address58.text := '3636 Golden Gate Avenue'
+
+!new GeoLocation('geoLocation57')
+!geoLocation57.latitude := 41.3851
+!geoLocation57.longitude := 2.1734
+
+!new GeoLocation('geoLocation58')
+!geoLocation58.latitude := 37.7749
+!geoLocation58.longitude := -122.4194
+
+!new Customer('customer29')
+!customer29.id := 'C029'
+!customer29.name := 'Liam Anderson'
+!customer29.twitterUserName := '@liam_anderson'
+
+!new Station('station28')
+
+!insert (driver29, shipment51) into DriverShipment
+
+!insert (shipment51, address57) into ShipmentContainsPickUpAddress
+!insert (shipment51, address58) into ShipmentContainsDeliveryAddress
+
+!insert (shipment52, address58) into ShipmentContainsPickUpAddress
+!insert (shipment52, address57) into ShipmentContainsDeliveryAddress
+
+!insert (address57, geoLocation57) into AddressContainsGeoLocation
+!insert (address58, geoLocation58) into AddressContainsGeoLocation
+
+!insert (customer29, shipment51) into CustomerConsistsOfShipment
+!insert (customer29, shipment52) into CustomerConsistsOfShipment
+
+!insert (station28, customer29) into StationContainsCustomer
+
+!insert (station28, shipment51) into StationShipment
+!insert (station28, shipment52) into StationShipment
+
+!insert (station28, driver29) into StationContainsDriver

@@ -1,0 +1,53 @@
+!new Bank('bank19')
+!bank19.country := 'Switzerland'
+!bank19.name := 'Alpine Peaks Bank'
+!bank19.bic := 'ALPSCHZH'
+
+!new Account('account42')
+!account42.iban := 'CH93 ALPS 0000 1234 5678 9'
+!account42.balance := 200000
+
+!new Account('account43')
+!account43.iban := 'CH93 ALPS 9876 5432 1098 7'
+!account43.balance := 5
+
+!new Account('account44')
+!account44.iban := 'CH93 ALPS 1111 2222 3333 9'
+!account44.balance := 0
+
+!new Person('person56')
+!person56.firstName := 'Hans'
+!person56.lastName := 'Müller'
+!person56.age := 60
+
+!new Person('person57')
+!person57.firstName := 'Heidi'
+!person57.lastName := 'Fischer'
+!person57.age := 28
+
+!new Person('person58')
+!person58.firstName := 'Pascal'
+!person58.lastName := 'Dubois'
+!person58.age := 40
+
+!new Person('person59')
+!person59.firstName := 'Nathalie'
+!person59.lastName := 'Meier'
+!person59.age := 35
+
+!insert (person56, account42) into Ownership
+!insert (person58, account42) into Ownership
+!insert (person57, account43) into Ownership
+!insert (person59, account44) into Ownership
+!insert (person57, account44) into Ownership
+
+!insert (person56, account42) into Use
+!insert (person58, account42) into Use
+!insert (person57, account43) into Use
+!insert (person59, account43) into Use
+!insert (person58, account43) into Use
+!insert (person59, account44) into Use
+
+!insert (bank19, account42) into AccountOfBanks
+!insert (bank19, account43) into AccountOfBanks
+!insert (bank19, account44) into AccountOfBanks

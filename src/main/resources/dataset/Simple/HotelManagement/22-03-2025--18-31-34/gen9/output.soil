@@ -1,0 +1,55 @@
+!new Booking('booking10')
+!booking10.startDate := '2024-04-10'
+!booking10.endDate := '2024-04-15'
+!booking10.canceled := true
+!booking10.bookingId := 109
+!booking10.confirmed := false
+
+!new Bill('bill10')
+!bill10.price := 0.00
+!bill10.billId := 209
+
+!new FreeRoomTypesDTO('roomType10')
+!roomType10.roomTypeDescription := 'Studio Apartment'
+!roomType10.numBeds := 1
+!roomType10.pricePerNight := 120.00
+!roomType10.numFreeRooms := 5
+
+!new Customer('customer10')
+!customer10.firstName := 'Jack'
+!customer10.lastName := 'Klein'
+
+!new RoomReservation('reservation10')
+!reservation10.checkInDate := '2024-04-10'
+!reservation10.checkOutDate := '2024-04-15'
+
+!new RoomExtra('extra10')
+!extra10.price := 0.00
+!extra10.description := 'Complimentary Shuttle Service'
+
+!new Room('room16')
+!room16.numBeds := 1
+!room16.pricePerNight := 110.00
+!room16.occupied := false
+!room16.blocked := false
+!room16.roomNumber := 116
+
+!new Room('room17')
+!room17.numBeds := 1
+!room17.pricePerNight := 120.00
+!room17.occupied := false
+!room17.blocked := true
+!room17.roomNumber := 117
+
+!insert (booking10, bill10) into BookingBill
+
+!insert (booking10, customer10) into BookingCustomer
+
+!insert (booking10, reservation10) into BookingRoomReservation
+
+!insert (reservation10, extra10) into RoomReservationExtras
+
+!insert (reservation10, room16) into RoomReservationRoom
+!insert (reservation10, room17) into RoomReservationRoom
+
+!insert (bill10, reservation10) into BillRoomReservation

@@ -1,0 +1,97 @@
+!new StateMachine('solarPowerStationController')
+!solarPowerStationController.name := 'solarPowerStationController'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('panelAdjustment')
+!panelAdjustment.name := 'panelAdjustment'
+
+!new State('energyGeneration')
+!energyGeneration.name := 'energyGeneration'
+
+!new State('energyStorage')
+!energyStorage.name := 'energyStorage'
+
+!new State('powerSupply')
+!powerSupply.name := 'powerSupply'
+
+!new State('systemShutdown')
+!systemShutdown.name := 'systemShutdown'
+
+!new Transition('initiatePanelAdjustment')
+!initiatePanelAdjustment.name := 'initiatePanelAdjustment'
+
+!new Transition('startGeneration')
+!startGeneration.name := 'startGeneration'
+
+!new Transition('beginEnergyStorage')
+!beginEnergyStorage.name := 'beginEnergyStorage'
+
+!new Transition('distributePower')
+!distributePower.name := 'distributePower'
+
+!new Transition('revertToStandby')
+!revertToStandby.name := 'revertToStandby'
+
+!new Transition('emergencyShutdown')
+!emergencyShutdown.name := 'emergencyShutdown'
+
+!new TimeEvent('timeEventInitiatePanelAdjustment')
+!timeEventInitiatePanelAdjustment.time := 10
+
+!new TimeEvent('timeEventStartGeneration')
+!timeEventStartGeneration.time := 15
+
+!new TimeEvent('timeEventBeginEnergyStorage')
+!timeEventBeginEnergyStorage.time := 120
+
+!new TimeEvent('timeEventDistributePower')
+!timeEventDistributePower.time := 180
+
+!new TimeEvent('timeEventRevertToStandby')
+!timeEventRevertToStandby.time := 240
+
+!new TimeEvent('timeEventEmergencyShutdown')
+!timeEventEmergencyShutdown.time := 5
+
+!insert (solarPowerStationController, standby) into StateMachineContainsStates
+!insert (solarPowerStationController, panelAdjustment) into StateMachineContainsStates
+!insert (solarPowerStationController, energyGeneration) into StateMachineContainsStates
+!insert (solarPowerStationController, energyStorage) into StateMachineContainsStates
+!insert (solarPowerStationController, powerSupply) into StateMachineContainsStates
+!insert (solarPowerStationController, systemShutdown) into StateMachineContainsStates
+
+!insert (solarPowerStationController, standby) into StateMachineStartsStates
+
+!insert (solarPowerStationController, initiatePanelAdjustment) into StateMachineContainsTransitions
+!insert (solarPowerStationController, startGeneration) into StateMachineContainsTransitions
+!insert (solarPowerStationController, beginEnergyStorage) into StateMachineContainsTransitions
+!insert (solarPowerStationController, distributePower) into StateMachineContainsTransitions
+!insert (solarPowerStationController, revertToStandby) into StateMachineContainsTransitions
+!insert (solarPowerStationController, emergencyShutdown) into StateMachineContainsTransitions
+
+!insert (initiatePanelAdjustment, timeEventInitiatePanelAdjustment) into TransitionContainsEvents
+!insert (startGeneration, timeEventStartGeneration) into TransitionContainsEvents
+!insert (beginEnergyStorage, timeEventBeginEnergyStorage) into TransitionContainsEvents
+!insert (distributePower, timeEventDistributePower) into TransitionContainsEvents
+!insert (revertToStandby, timeEventRevertToStandby) into TransitionContainsEvents
+!insert (emergencyShutdown, timeEventEmergencyShutdown) into TransitionContainsEvents
+
+!insert (standby, initiatePanelAdjustment) into StateTransition
+!insert (initiatePanelAdjustment, panelAdjustment) into TransitionState
+
+!insert (panelAdjustment, startGeneration) into StateTransition
+!insert (startGeneration, energyGeneration) into TransitionState
+
+!insert (energyGeneration, beginEnergyStorage) into StateTransition
+!insert (beginEnergyStorage, energyStorage) into TransitionState
+
+!insert (energyStorage, distributePower) into StateTransition
+!insert (distributePower, powerSupply) into TransitionState
+
+!insert (powerSupply, revertToStandby) into StateTransition
+!insert (revertToStandby, standby) into TransitionState
+
+!insert (energyGeneration, emergencyShutdown) into StateTransition
+!insert (emergencyShutdown, systemShutdown) into TransitionState

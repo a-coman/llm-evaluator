@@ -1,0 +1,56 @@
+!new Bank('bank6')
+!bank6.country := 'Japan'
+!bank6.name := 'Mitsubishi UFJ Financial Group'
+!bank6.bic := 'BOTKJPJTXXX'
+
+!new Bank('bank7')
+!bank7.country := 'Canada'
+!bank7.name := 'Royal Bank of Canada'
+!bank7.bic := 'ROYCCAT2XXX'
+
+!new Account('account12')
+!account12.iban := 'JP234000123456789012345'
+!account12.balance := 10000
+
+!new Account('account13')
+!account13.iban := 'CA000100200300400500600'
+!account13.balance := 5000
+
+!new Account('account14')
+!account14.iban := 'JP098765432109876543210'
+!account14.balance := 200
+
+!new Person('person15')
+!person15.firstName := 'Hiroshi'
+!person15.lastName := 'Tanaka'
+!person15.age := 45
+
+!new Person('person16')
+!person16.firstName := 'Emily'
+!person16.lastName := 'Smith'
+!person16.age := 37
+
+!new Person('person17')
+!person17.firstName := 'Andrea'
+!person17.lastName := 'Lewis'
+!person17.age := 26
+
+!new Person('person18')
+!person18.firstName := 'Jun'
+!person18.lastName := 'Suzuki'
+!person18.age := 32
+
+!insert (person15, account12) into Ownership
+!insert (person16, account13) into Ownership
+!insert (person17, account13) into Ownership
+!insert (person18, account14) into Ownership
+
+!insert (person15, account12) into Use
+!insert (person18, account12) into Use
+!insert (person16, account13) into Use
+!insert (person17, account13) into Use
+!insert (person17, account14) into Use
+
+!insert (bank6, account12) into AccountOfBanks
+!insert (bank6, account14) into AccountOfBanks
+!insert (bank7, account13) into AccountOfBanks

@@ -1,0 +1,80 @@
+!new Client('client500')
+!client500.clientId := 500
+!client500.isSuspended := false
+
+!new Client('client501')
+!client501.clientId := 501
+!client501.isSuspended := false
+
+!new Client('client502')
+!client502.clientId := 502
+!client502.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-08-25')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-08-26')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-08-27')
+
+!new Movie('cassetteJourneyBeyondBorders')
+!cassetteJourneyBeyondBorders.title := 'Journey Beyond Borders'
+!cassetteJourneyBeyondBorders.availableCopies := 0
+!cassetteJourneyBeyondBorders.genre := #Action
+
+!new Movie('cassetteUnitedByLaughter')
+!cassetteUnitedByLaughter.title := 'United by Laughter'
+!cassetteUnitedByLaughter.availableCopies := 2
+!cassetteUnitedByLaughter.genre := #Comedy
+
+!new Series('cassetteParallelEarths')
+!cassetteParallelEarths.title := 'Parallel Earths'
+!cassetteParallelEarths.availableCopies := 0
+!cassetteParallelEarths.episode := 5
+
+!new Series('cassetteClimacticRevelations')
+!cassetteClimacticRevelations.title := 'Climactic Revelations'
+!cassetteClimacticRevelations.availableCopies := 0
+!cassetteClimacticRevelations.episode := 99
+
+!new Actor('actorChiwetelEjiofor')
+!actorChiwetelEjiofor.name := 'Chiwetel Ejiofor'
+
+!new Actor('actorSofiaVergara')
+!actorSofiaVergara.name := 'Sofia Vergara'
+
+!new Actor('actorKenJeong')
+!actorKenJeong.name := 'Ken Jeong'
+
+!new Actor('actorScarlettJohansson')
+!actorScarlettJohansson.name := 'Scarlett Johansson'
+
+!new Actor('actorMahershalaAli')
+!actorMahershalaAli.name := 'Mahershala Ali'
+
+!new Actor('actorViolaDavis')
+!actorViolaDavis.name := 'Viola Davis'
+
+!insert (client500, rental1) into ClientRental
+!insert (client501, rental2) into ClientRental
+!insert (client502, rental3) into ClientRental
+
+!insert (rental1, cassetteJourneyBeyondBorders) into RentalCassette
+!insert (rental1, cassetteUnitedByLaughter) into RentalCassette
+
+!insert (rental2, cassetteUnitedByLaughter) into RentalCassette
+!insert (rental2, cassetteParallelEarths) into RentalCassette
+
+!insert (rental3, cassetteClimacticRevelations) into RentalCassette
+
+!insert (cassetteJourneyBeyondBorders, actorChiwetelEjiofor) into CassetteActor
+
+!insert (cassetteUnitedByLaughter, actorSofiaVergara) into CassetteActor
+!insert (cassetteUnitedByLaughter, actorKenJeong) into CassetteActor
+
+!insert (cassetteParallelEarths, actorScarlettJohansson) into CassetteActor
+
+!insert (cassetteClimacticRevelations, actorMahershalaAli) into CassetteActor
+!insert (cassetteClimacticRevelations, actorViolaDavis) into CassetteActor

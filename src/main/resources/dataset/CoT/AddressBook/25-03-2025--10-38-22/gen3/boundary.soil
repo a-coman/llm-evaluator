@@ -1,0 +1,81 @@
+!new AddressBook('AddressBook_3')
+
+!new Company('GreenLeaf_Publishing_House')
+!GreenLeaf_Publishing_House.name := 'GreenLeaf Publishing House'
+!GreenLeaf_Publishing_House.phone := '+91-22-4091-1560'
+!GreenLeaf_Publishing_House.website := 'www.greenleafindia.com'
+!GreenLeaf_Publishing_House.email := 'contact@greenleafindia.com'
+!GreenLeaf_Publishing_House.industry := 'Publishing'
+
+!new Address('Address_1')
+!Address_1.city := 'Mumbai'
+!Address_1.houseNr := '88'
+!Address_1.street := 'Marine Drive'
+!insert (GreenLeaf_Publishing_House, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'Kavita Sharma'
+!Note_1.time := Date('2023-07-10')
+!Note_1.type := #CALL
+!Note_1.comment := 'Discuss book launch event details.'
+!insert (GreenLeaf_Publishing_House, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #SUBDIVISION
+!insert (GreenLeaf_Publishing_House, Relationship_1) into ContactToRelationship
+
+!new Person('Professor_Erik_Svalberg')
+!Professor_Erik_Svalberg.name := 'Professor Erik Svalberg'
+!Professor_Erik_Svalberg.phone := '+46-8-5592-8450'
+!Professor_Erik_Svalberg.website := 'www.eriksvalbergresearch.se'
+!Professor_Erik_Svalberg.email := 'erik.svalberg@uniuppsala.se'
+!Professor_Erik_Svalberg.title := 'Professor of Linguistics'
+
+!new Address('Address_2')
+!Address_2.city := 'Uppsala'
+!Address_2.houseNr := '17'
+!Address_2.street := 'Stora Torget'
+!insert (Professor_Erik_Svalberg, Address_2) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Johan Lindgren'
+!Note_2.time := Date('2023-06-20')
+!Note_2.type := #EMAIL
+!Note_2.comment := 'Received feedback on linguistic research paper.'
+!insert (Professor_Erik_Svalberg, Note_2) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #COWORKER
+!insert (Professor_Erik_Svalberg, Relationship_2) into ContactToRelationship
+
+!new Person('Dr_Fatima_Abbas')
+!Dr_Fatima_Abbas.name := 'Dr. Fatima Abbas'
+!Dr_Fatima_Abbas.phone := '+966-12-6600-4789'
+!Dr_Fatima_Abbas.website := 'www.fatimaabbasedu.org'
+!Dr_Fatima_Abbas.email := 'fatima.abbas@kinguniversities.sa'
+!Dr_Fatima_Abbas.title := 'Research Fellow'
+
+!new Address('Address_3')
+!Address_3.city := 'Riyadh'
+!Address_3.houseNr := '230'
+!Address_3.street := 'Olaya Street'
+!insert (Dr_Fatima_Abbas, Address_3) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Ahmed Al-Mousa'
+!Note_3.time := Date('2023-09-12')
+!Note_3.type := #MEETING
+!Note_3.comment := 'Collaboration on artificial intelligence project.'
+!insert (Dr_Fatima_Abbas, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_3')
+!Relationship_3.type := #COWORKER
+!insert (Dr_Fatima_Abbas, Relationship_3) into ContactToRelationship
+!insert (Relationship_3, Professor_Erik_Svalberg) into RelationshipToContact
+
+!insert (Relationship_2, Dr_Fatima_Abbas) into RelationshipToContact
+!insert (Relationship_1, Professor_Erik_Svalberg) into RelationshipToContact
+
+!insert (AddressBook_3, GreenLeaf_Publishing_House) into AddressBookMadeOfContact
+!insert (AddressBook_3, Professor_Erik_Svalberg) into AddressBookMadeOfContact
+!insert (AddressBook_3, Dr_Fatima_Abbas) into AddressBookMadeOfContact

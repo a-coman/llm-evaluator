@@ -1,0 +1,51 @@
+!new Bank('bank24')
+!bank24.country := 'United Arab Emirates'
+!bank24.name := 'Emirates NBD'
+!bank24.bic := 'EBILAEAD'
+
+!new Account('account67')
+!account67.iban := 'AE070331234567890123456'
+!account67.balance := 9500
+
+!new Account('account68')
+!account68.iban := 'AE070331234567890123457'
+!account68.balance := 3400
+
+!new Account('account69')
+!account69.iban := 'AE070331234567890123458'
+!account69.balance := 600
+
+!new Person('person71')
+!person71.firstName := 'Fatima'
+!person71.lastName := 'Al Zahara'
+!person71.age := 29
+
+!new Person('person72')
+!person72.firstName := 'Ahmed'
+!person72.lastName := 'Khan'
+!person72.age := 36
+
+!new Person('person73')
+!person73.firstName := 'Sara'
+!person73.lastName := 'Al Mansouri'
+!person73.age := 42
+
+-- Associations
+!insert (bank24, account67) into AccountOfBanks
+!insert (bank24, account68) into AccountOfBanks
+!insert (bank24, account69) into AccountOfBanks
+
+!insert (person71, account67) into Ownership
+!insert (person72, account67) into Ownership
+
+!insert (person72, account68) into Ownership
+!insert (person73, account68) into Ownership
+
+!insert (person73, account69) into Ownership
+!insert (person71, account69) into Ownership
+
+!insert (person71, account68) into Use
+!insert (person72, account69) into Use
+
+!insert (person73, account67) into Use
+!insert (person72, account67) into Use

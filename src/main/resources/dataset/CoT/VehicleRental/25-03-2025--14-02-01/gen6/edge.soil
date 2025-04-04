@@ -1,0 +1,61 @@
+!new RentalOffice('rentalOffice28')
+!rentalOffice28.name := 'Great Plains Rentals'
+!rentalOffice28.number := 66
+!rentalOffice28.address := '300 Prairie Way, Fargo, ND, 58102'
+
+!new Truck('historicalTruck')
+!historicalTruck.id := 57
+!historicalTruck.registrationState := #MD
+!historicalTruck.licensePlateNumber := 'HIST-1930'
+!historicalTruck.vehicleTypeCode := #TRUCK
+!historicalTruck.registrationLastMaintenanceDate := Date('2023-01-15')
+!historicalTruck.expirationDate := Date('2024-01-15')
+!historicalTruck.odometerReading := 1000000
+!historicalTruck.gasTankCapacity := 25.0
+!historicalTruck.workingRadio := false
+!historicalTruck.mileage := 10
+
+!new Vehicle('animalTrailer')
+!animalTrailer.id := 58
+!animalTrailer.registrationState := #MD
+!animalTrailer.licensePlateNumber := 'ANIM-404'
+!animalTrailer.vehicleTypeCode := #OPEN_TRAILER
+!animalTrailer.registrationLastMaintenanceDate := Date('2023-02-05')
+!animalTrailer.expirationDate := Date('2025-02-05')
+
+!new RentalAgreement('rentalAgreement48a')
+!rentalAgreement48a.number := 3738
+!rentalAgreement48a.rentalDate := Date('2024-06-15')
+!rentalAgreement48a.anticipatedDuration := 7
+!rentalAgreement48a.depositPaid := 1.00
+!rentalAgreement48a.quotedDailyRate := 0.00
+!rentalAgreement48a.quotedRatePerMile := 0.00
+
+!new RentalAgreement('rentalAgreement48b')
+!rentalAgreement48b.number := 3739
+!rentalAgreement48b.rentalDate := Date('2024-06-15')
+!rentalAgreement48b.anticipatedDuration := 7
+!rentalAgreement48b.depositPaid := 1.00
+!rentalAgreement48b.quotedDailyRate := 0.00
+!rentalAgreement48b.quotedRatePerMile := 0.00
+
+!new Company('company24')
+!company24.name := 'Fargo Heritage Society'
+!company24.address := '789 History Ave, Fargo, ND, 58103'
+!company24.poorRisk := false
+!company24.idNumber := 2024
+
+!insert (rentalOffice28, historicalTruck) into RentalOfficeVehicle
+!insert (rentalOffice28, animalTrailer) into RentalOfficeVehicle
+
+!insert (rentalOffice28, rentalAgreement48a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice28, rentalAgreement48a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement48a, historicalTruck) into RentalAgreementVehicle
+!insert (rentalAgreement48a, company24) into RentalAgreementCustomer
+
+!insert (rentalOffice28, rentalAgreement48b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice28, rentalAgreement48b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement48b, animalTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement48b, company24) into RentalAgreementCustomer

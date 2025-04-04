@@ -1,0 +1,47 @@
+!new Booking('booking30')
+!booking30.startDate := '2026-03-01'
+!booking30.endDate := '2026-03-06'
+!booking30.canceled := false
+!booking30.bookingId := 129
+!booking30.confirmed := true
+
+!new Bill('bill30')
+!bill30.price := 380.00
+!bill30.billId := 229
+
+!new FreeRoomTypesDTO('roomType30')
+!roomType30.roomTypeDescription := 'Minimalist Pod'
+!roomType30.numBeds := 1
+!roomType30.pricePerNight := 70.00
+!roomType30.numFreeRooms := 5
+
+!new Customer('customer30')
+!customer30.firstName := 'Cameron'
+!customer30.lastName := 'Hart'
+
+!new RoomReservation('reservation30')
+!reservation30.checkInDate := '2026-03-01'
+!reservation30.checkOutDate := '2026-03-06'
+
+!new RoomExtra('extra30')
+!extra30.price := 20.00
+!extra30.description := 'Yoga Mat Rental'
+
+!new Room('room45')
+!room45.numBeds := 1
+!room45.pricePerNight := 65.00
+!room45.occupied := false
+!room45.blocked := false
+!room45.roomNumber := 145
+
+!insert (booking30, bill30) into BookingBill
+
+!insert (booking30, customer30) into BookingCustomer
+
+!insert (booking30, reservation30) into BookingRoomReservation
+
+!insert (reservation30, extra30) into RoomReservationExtras
+
+!insert (reservation30, room45) into RoomReservationRoom
+
+!insert (bill30, reservation30) into BillRoomReservation

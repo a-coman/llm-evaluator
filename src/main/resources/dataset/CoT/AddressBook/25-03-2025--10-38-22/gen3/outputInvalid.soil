@@ -1,0 +1,74 @@
+!new AddressBook('European_Creative_Arts_Directory')
+
+!new Person('Sophie_Duval')
+!Sophie_Duval.name := 'Sophie Duval'
+!Sophie_Duval.phone := '+33-1-2345-6789'
+!Sophie_Duval.website := 'www.sophieduvalartist.com'
+!Sophie_Duval.email := 'contact@sophieduvaldesign.com'
+!Sophie_Duval.title := 'Graphic Designer'
+
+!new Address('Address_Sophie_Duval')
+!Address_Sophie_Duval.city := 'Paris'
+!Address_Sophie_Duval.houseNr := '101'
+!Address_Sophie_Duval.street := 'Rue de Rivoli'
+!insert (Sophie_Duval, Address_Sophie_Duval) into ContactContainsAddress
+
+!new Company('Barcelona_Art_Guild')
+!Barcelona_Art_Guild.name := 'Barcelona Art Guild'
+!Barcelona_Art_Guild.phone := '+34-93-123-4567'
+!Barcelona_Art_Guild.website := 'www.barcelonaartguild.es'
+!Barcelona_Art_Guild.email := 'info@barcelonaartguild.es'
+!Barcelona_Art_Guild.industry := 'Visual Arts'
+
+!new Address('Address_Barcelona_Art_Guild')
+!Address_Barcelona_Art_Guild.city := 'Barcelona'
+!Address_Barcelona_Art_Guild.houseNr := '250'
+!Address_Barcelona_Art_Guild.street := 'Carrer de Mallorca'
+!insert (Barcelona_Art_Guild, Address_Barcelona_Art_Guild) into ContactContainsAddress
+
+!new Note('Note_Barcelona_Art_Guild')
+!Note_Barcelona_Art_Guild.author := 'Carlos Ramirez'
+!Note_Barcelona_Art_Guild.time := Date('2023-09-14 10:00')
+!Note_Barcelona_Art_Guild.type := #MEETING
+!Note_Barcelona_Art_Guild.comment := 'Organized an exhibition featuring European artists.'
+!insert (Barcelona_Art_Guild, Note_Barcelona_Art_Guild) into ContactContainsNote
+
+!new Relationship('Relationship_Sophie_to_Barcelona_Art_Guild')
+!Relationship_Sophie_to_Barcelona_Art_Guild.type := #COWORKER
+!insert (Sophie_Duval, Relationship_Sophie_to_Barcelona_Art_Guild) into ContactToRelationship
+!insert (Relationship_Sophie_to_Barcelona_Art_Guild, Barcelona_Art_Guild) into RelationshipToContact
+
+!new Company('Amsterdam_Arts_Academy')
+!Amsterdam_Arts_Academy.name := 'Amsterdam Arts Academy'
+!Amsterdam_Arts_Academy.phone := '+31-20-123-4567'
+!Amsterdam_Arts_Academy.website := 'www.amsterdamartsacademy.nl'
+!Amsterdam_Arts_Academy.email := 'admin@amsterdamartsacademy.nl'
+!Amsterdam_Arts_Academy.industry := 'Arts Education'
+
+!new Address('Address_Amsterdam_Arts_Academy')
+!Address_Amsterdam_Arts_Academy.city := 'Amsterdam'
+!Address_Amsterdam_Arts_Academy.houseNr := '456'
+!Address_Amsterdam_Arts_Academy.street := 'Keizersgracht'
+!insert (Amsterdam_Arts_Academy, Address_Amsterdam_Arts_Academy) into ContactContainsAddress
+
+!new Note('Note_Amsterdam_Arts_Academy')
+!Note_Amsterdam_Arts_Academy.author := 'Marieke de Vries'
+!Note_Amsterdam_Arts_Academy.time := Date('2023-09-25 13:30')
+!Note_Amsterdam_Arts_Academy.type := #EMAIL
+!Note_Amsterdam_Arts_Academy.comment := 'Sent out invitations for upcoming workshops to participating artists.'
+!insert (Amsterdam_Arts_Academy, Note_Amsterdam_Arts_Academy) into ContactContainsNote
+
+!new Relationship('Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy')
+!Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy.type := #SUBDIVISION
+!insert (Barcelona_Art_Guild, Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy) into ContactToRelationship
+!insert (Relationship_Barcelona_Art_Guild_to_Amsterdam_Arts_Academy, Amsterdam_Arts_Academy) into RelationshipToContact
+
+!new Relationship('Relationship_Amsterdam_Arts_Academy_to_Sophie')
+!Relationship_Amsterdam_Arts_Academy_to_Sophie.type := #BOSS
+!insert (Amsterdam_Arts_Academy, Relationship_Amsterdam_Arts_Academy_to_Sophie) into ContactToRelationship
+!insert (Relationship_Amsterdam_Arts_Academy_to_Sophie, Sophie_Duval) into RelationshipToContact
+
+!insert (European_Creative_Arts_Directory, Sophie_Duval) into AddressBookMadeOfContact
+!insert (European_Creative_Arts_Directory, Barcelona_Art_Guild) into AddressBookMadeOfContact
+!insert (European_Creative_Arts_Directory, Amsterdam_Arts_Academy) into AddressBookMadeOfContact
+

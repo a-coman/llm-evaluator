@@ -1,0 +1,392 @@
+!new Driver('driver17')
+!driver17.id := 'DRV004'
+!driver17.name := 'Chloe Zhang'
+
+!new Driver('driver18')
+!driver18.id := 'DRV005'
+!driver18.name := 'Anwar Saeed'
+
+!new Shipment('shipment14')
+!shipment14.id := 'SHIP003'
+!shipment14.status := #NEW
+
+!new Shipment('shipment15')
+!shipment15.id := 'SHIP004'
+!shipment15.status := #ASSIGNED
+
+!new Address('pickupAddress14')
+!pickupAddress14.text := 'Boulevarden 23, Copenhagen, Denmark'
+
+!new GeoLocation('pickupGeoLocation14')
+!pickupGeoLocation14.latitude := 55.6761
+!pickupGeoLocation14.longitude := 12.5683
+
+!new Address('deliveryAddress14')
+!deliveryAddress14.text := '123 Sakura Lane, Kyoto, Japan'
+
+!new GeoLocation('deliveryGeoLocation14')
+!deliveryGeoLocation14.latitude := 35.0116
+!deliveryGeoLocation14.longitude := 135.7681
+
+!new Address('pickupAddress15')
+!pickupAddress15.text := '789 Des Voeux Road, Hong Kong'
+
+!new GeoLocation('pickupGeoLocation15')
+!pickupGeoLocation15.latitude := 22.3193
+!pickupGeoLocation15.longitude := 114.1694
+
+!new Address('deliveryAddress15')
+!deliveryAddress15.text := '1600 Amphitheatre Parkway, Mountain View, USA'
+
+!new GeoLocation('deliveryGeoLocation15')
+!deliveryGeoLocation15.latitude := 37.422
+!deliveryGeoLocation15.longitude := -122.084
+
+!new Station('station12')
+
+!new Station('station13')
+
+!new Customer('customer16')
+!customer16.id := 'CUST003'
+!customer16.name := 'Lars Svensson'
+!customer16.twitterUserName := '@larsven'
+
+!new Customer('customer17')
+!customer17.id := 'CUST004'
+!customer17.name := 'Mina Kim'
+!customer17.twitterUserName := '@minak'
+
+!insert (shipment14, pickupAddress14) into ShipmentContainsPickUpAddress
+
+!insert (shipment14, deliveryAddress14) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress14, pickupGeoLocation14) into AddressContainsGeoLocation
+
+!insert (deliveryAddress14, deliveryGeoLocation14) into AddressContainsGeoLocation
+
+!insert (shipment15, pickupAddress15) into ShipmentContainsPickUpAddress
+
+!insert (shipment15, deliveryAddress15) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress15, pickupGeoLocation15) into AddressContainsGeoLocation
+
+!insert (deliveryAddress15, deliveryGeoLocation15) into AddressContainsGeoLocation
+
+!insert (customer16, shipment14) into CustomerConsistsOfShipment
+
+!insert (customer17, shipment15) into CustomerConsistsOfShipment
+
+!insert (station12, customer16) into StationContainsCustomer
+
+!insert (station13, customer17) into StationContainsCustomer
+
+!insert (station12, shipment14) into StationShipment
+
+!insert (station13, shipment15) into StationShipment
+
+!insert (station12, driver17) into StationContainsDriver
+
+!insert (station13, driver18) into StationContainsDriver
+
+!insert (driver18, shipment15) into DriverShipment
+
+!new Driver('driver19')
+!driver19.id := 'D003'
+!driver19.name := 'Carlos Rodriguez'
+
+!new Shipment('shipment16')
+!shipment16.id := 'SHP003'
+!shipment16.status := #DELIVERED
+
+!new Shipment('shipment17')
+!shipment17.id := 'SHP004'
+!shipment17.status := #ASSIGNED
+
+!new Address('pickupAddress16')
+!pickupAddress16.text := 'Green Valley Farms, Route 602, Valleyfield, NM'
+
+!new GeoLocation('pickupGeoLocation16')
+!pickupGeoLocation16.latitude := 35.0088
+!pickupGeoLocation16.longitude := -106.9956
+
+!new Address('deliveryAddress16')
+!deliveryAddress16.text := '215 Orchard St, Farmington, NM'
+
+!new GeoLocation('deliveryGeoLocation16')
+!deliveryGeoLocation16.latitude := 36.7281
+!deliveryGeoLocation16.longitude := -108.2187
+
+!new Address('pickupAddress17')
+!pickupAddress17.text := 'Sunrise Organic Gardens, Route 850, Bloomfield, NM'
+
+!new GeoLocation('pickupGeoLocation17')
+!pickupGeoLocation17.latitude := 36.7128
+!pickupGeoLocation17.longitude := -108.1579
+
+!new Address('deliveryAddress17')
+!deliveryAddress17.text := '12314 Main St, Aztec, NM'
+
+!new GeoLocation('deliveryGeoLocation17')
+!deliveryGeoLocation17.latitude := 36.8225
+!deliveryGeoLocation17.longitude := -107.9929
+
+!new Station('station14')
+
+!new Customer('customer18')
+!customer18.id := 'CUST003'
+!customer18.name := 'Linda Perez'
+!customer18.twitterUserName := '@perezLindaNM'
+
+!new Customer('customer19')
+!customer19.id := 'CUST004'
+!customer19.name := 'Martha Thompson'
+!customer19.twitterUserName := '@marthaT_green'
+
+!insert (driver19, shipment17) into DriverShipment
+
+!insert (shipment16, pickupAddress16) into ShipmentContainsPickUpAddress
+
+!insert (shipment16, deliveryAddress16) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress16, pickupGeoLocation16) into AddressContainsGeoLocation
+
+!insert (deliveryAddress16, deliveryGeoLocation16) into AddressContainsGeoLocation
+
+!insert (shipment17, pickupAddress17) into ShipmentContainsPickUpAddress
+
+!insert (shipment17, deliveryAddress17) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress17, pickupGeoLocation17) into AddressContainsGeoLocation
+
+!insert (deliveryAddress17, deliveryGeoLocation17) into AddressContainsGeoLocation
+
+!insert (customer18, shipment16) into CustomerConsistsOfShipment
+
+!insert (customer19, shipment17) into CustomerConsistsOfShipment
+
+!insert (station14, customer18) into StationContainsCustomer
+
+!insert (station14, customer19) into StationContainsCustomer
+
+!insert (station14, shipment16) into StationShipment
+
+!insert (station14, shipment17) into StationShipment
+
+!insert (station14, driver19) into StationContainsDriver
+
+!new Driver('driver20')
+!driver20.id := 'DL004'
+!driver20.name := 'Ake Wolf'
+
+!new Shipment('shipment18')
+!shipment18.id := 'SH9012'
+!shipment18.status := #ASSIGNED
+
+!new Address('pickupAddress18')
+!pickupAddress18.text := 'Marine Logistics Center, Tromsø, Norway'
+
+!new GeoLocation('pickupGeoLocation18')
+!pickupGeoLocation18.latitude := 69.6496
+!pickupGeoLocation18.longitude := 18.9560
+
+!new Address('deliveryAddress18')
+!deliveryAddress18.text := 'Research Base Nord, Svalbard, Norway'
+
+!new GeoLocation('deliveryGeoLocation18')
+!deliveryGeoLocation18.latitude := 79.0039
+!deliveryGeoLocation18.longitude := 16.0160
+
+!new Shipment('shipment19')
+!shipment19.id := 'SH3456'
+!shipment19.status := #NEW
+
+!new Address('pickupAddress19')
+!pickupAddress19.text := 'Electronics Hub, Oslo, Norway'
+
+!new GeoLocation('pickupGeoLocation19')
+!pickupGeoLocation19.latitude := 59.9139
+!pickupGeoLocation19.longitude := 10.7522
+
+!new Address('deliveryAddress19')
+!deliveryAddress19.text := 'Satellite Station, Longyearbyen, Svalbard, Norway'
+
+!new GeoLocation('deliveryGeoLocation19')
+!deliveryGeoLocation19.latitude := 78.2232
+!deliveryGeoLocation19.longitude := 15.6469
+
+!new Station('station15')
+
+!new Customer('customer20')
+!customer20.id := 'CST1234'
+!customer20.name := 'Polar Expeditions Ltd.'
+!customer20.twitterUserName := '@PolarExped'
+
+!insert (driver20, shipment18) into DriverShipment
+
+!insert (shipment18, pickupAddress18) into ShipmentContainsPickUpAddress
+
+!insert (shipment18, deliveryAddress18) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress18, pickupGeoLocation18) into AddressContainsGeoLocation
+
+!insert (deliveryAddress18, deliveryGeoLocation18) into AddressContainsGeoLocation
+
+!insert (shipment19, pickupAddress19) into ShipmentContainsPickUpAddress
+
+!insert (shipment19, deliveryAddress19) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress19, pickupGeoLocation19) into AddressContainsGeoLocation
+
+!insert (deliveryAddress19, deliveryGeoLocation19) into AddressContainsGeoLocation
+
+!insert (customer20, shipment18) into CustomerConsistsOfShipment
+
+!insert (customer20, shipment19) into CustomerConsistsOfShipment
+
+!insert (station15, customer20) into StationContainsCustomer
+
+!insert (station15, shipment18) into StationShipment
+
+!insert (station15, shipment19) into StationShipment
+
+!insert (station15, driver20) into StationContainsDriver
+
+!new Driver('driver22')
+!driver22.id := 'D-201'
+!driver22.name := 'Takashi Yamamoto'
+
+!new Driver('driver23')
+!driver23.id := 'D-202'
+!driver23.name := 'Harpreet Singh'
+
+!new Driver('driver24')
+!driver24.id := 'D-203'
+!driver24.name := 'Siti Nurhaliza'
+
+!new Customer('customer23')
+!customer23.id := 'C-201'
+!customer23.name := 'Li Wei'
+!customer23.twitterUserName := '@liwei_china'
+
+!new Customer('customer24')
+!customer24.id := 'C-202'
+!customer24.name := 'Kang Min Ho'
+!customer24.twitterUserName := '@minho_k'
+
+!new Customer('customer25')
+!customer25.id := 'C-203'
+!customer25.name := 'Amelia Tan'
+!customer25.twitterUserName := '@ameliatan_sg'
+
+!new Shipment('shipment22')
+!shipment22.id := 'S-3001'
+!shipment22.status := #NEW
+
+!new Address('pickupAddress22')
+!pickupAddress22.text := 'Nanjing Road, Shanghai, China'
+
+!new GeoLocation('pickupGeoLocation22')
+!pickupGeoLocation22.latitude := 31.2304
+!pickupGeoLocation22.longitude := 121.4737
+
+!new Address('deliveryAddress22')
+!deliveryAddress22.text := 'Ginza, Tokyo, Japan'
+
+!new GeoLocation('deliveryGeoLocation22')
+!deliveryGeoLocation22.latitude := 35.6895
+!deliveryGeoLocation22.longitude := 139.6917
+
+!new Shipment('shipment23')
+!shipment23.id := 'S-3002'
+!shipment23.status := #UNDERWAY
+
+!new Address('pickupAddress23')
+!pickupAddress23.text := 'Myeong-dong, Seoul, South Korea'
+
+!new GeoLocation('pickupGeoLocation23')
+!pickupGeoLocation23.latitude := 37.5665
+!pickupGeoLocation23.longitude := 126.9780
+
+!new Address('deliveryAddress23')
+!deliveryAddress23.text := 'Connaught Place, New Delhi, India'
+
+!new GeoLocation('deliveryGeoLocation23')
+!deliveryGeoLocation23.latitude := 28.6139
+!deliveryGeoLocation23.longitude := 77.2090
+
+!new Shipment('shipment24')
+!shipment24.id := 'S-3003'
+!shipment24.status := #DELIVERED
+
+!new Address('pickupAddress24')
+!pickupAddress24.text := 'Bugis Junction, Singapore'
+
+!new GeoLocation('pickupGeoLocation24')
+!pickupGeoLocation24.latitude := 1.3521
+!pickupGeoLocation24.longitude := 103.8198
+
+!new Address('deliveryAddress24')
+!deliveryAddress24.text := 'Pitt Street, Sydney, Australia'
+
+!new GeoLocation('deliveryGeoLocation24')
+!deliveryGeoLocation24.latitude := -33.8688
+!deliveryGeoLocation24.longitude := 151.2093
+
+!new Station('station17')
+
+!new Station('station18')
+
+!new Station('station19')
+
+!insert (shipment22, pickupAddress22) into ShipmentContainsPickUpAddress
+
+!insert (shipment22, deliveryAddress22) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress22, pickupGeoLocation22) into AddressContainsGeoLocation
+
+!insert (deliveryAddress22, deliveryGeoLocation22) into AddressContainsGeoLocation
+
+!insert (customer23, shipment22) into CustomerConsistsOfShipment
+
+!insert (station17, shipment22) into StationShipment
+
+!insert (station17, driver22) into StationContainsDriver
+
+!insert (station17, customer23) into StationContainsCustomer
+
+!insert (driver23, shipment23) into DriverShipment
+
+!insert (shipment23, pickupAddress23) into ShipmentContainsPickUpAddress
+
+!insert (shipment23, deliveryAddress23) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress23, pickupGeoLocation23) into AddressContainsGeoLocation
+
+!insert (deliveryAddress23, deliveryGeoLocation23) into AddressContainsGeoLocation
+
+!insert (customer24, shipment23) into CustomerConsistsOfShipment
+
+!insert (station18, shipment23) into StationShipment
+
+!insert (station18, driver23) into StationContainsDriver
+
+!insert (station18, customer24) into StationContainsCustomer
+
+!insert (driver24, shipment24) into DriverShipment
+
+!insert (shipment24, pickupAddress24) into ShipmentContainsPickUpAddress
+
+!insert (shipment24, deliveryAddress24) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress24, pickupGeoLocation24) into AddressContainsGeoLocation
+
+!insert (deliveryAddress24, deliveryGeoLocation24) into AddressContainsGeoLocation
+
+!insert (customer25, shipment24) into CustomerConsistsOfShipment
+
+!insert (station19, shipment24) into StationShipment
+
+!insert (station19, driver24) into StationContainsDriver
+
+!insert (station19, customer25) into StationContainsCustomer
+

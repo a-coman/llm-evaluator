@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_5')
+
+!new Company('Green_Energy_Solutions')
+!Green_Energy_Solutions.name := 'Green Energy Solutions'
+!Green_Energy_Solutions.phone := '+49-30-4500-1234'
+!Green_Energy_Solutions.website := 'www.greenenergy.de'
+!Green_Energy_Solutions.email := 'info@greenenergy.de'
+!Green_Energy_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_Green_Energy')
+!Address_Green_Energy.city := 'Berlin'
+!Address_Green_Energy.houseNr := '256'
+!Address_Green_Energy.street := 'Sonnenallee'
+!insert (Green_Energy_Solutions, Address_Green_Energy) into ContactContainsAddress
+
+!new Note('Note_Green_Energy')
+!Note_Green_Energy.author := 'Hans Müller'
+!Note_Green_Energy.time := Date('2023-03-25')
+!Note_Green_Energy.type := #EMAIL
+!Note_Green_Energy.comment := 'Follow-up on clean energy partnership proposal.'
+!insert (Green_Energy_Solutions, Note_Green_Energy) into ContactContainsNote
+
+!new Person('Maria_Fernandez')
+!Maria_Fernandez.name := 'Maria Fernández'
+!Maria_Fernandez.phone := '+34-93-7654-3210'
+!Maria_Fernandez.website := 'www.mariafernandezmusic.com'
+!Maria_Fernandez.email := 'maria.fernandez@musicmail.es'
+!Maria_Fernandez.title := 'Flamenco Guitarist'
+
+!new Address('Address_Maria_Fernandez')
+!Address_Maria_Fernandez.city := 'Seville'
+!Address_Maria_Fernandez.houseNr := '7'
+!Address_Maria_Fernandez.street := 'Calle Betis'
+!insert (Maria_Fernandez, Address_Maria_Fernandez) into ContactContainsAddress
+
+!new Note('Note_Maria_Fernandez')
+!Note_Maria_Fernandez.author := 'Carlos Herrera'
+!Note_Maria_Fernandez.time := Date('2023-05-15')
+!Note_Maria_Fernandez.type := #MEETING
+!Note_Maria_Fernandez.comment := 'Arranged concert tour dates and venues.'
+!insert (Maria_Fernandez, Note_Maria_Fernandez) into ContactContainsNote
+
+!new Relationship('Relationship_Green_Energy_to_Maria')
+!Relationship_Green_Energy_to_Maria.type := #EMPLOYEE
+!insert (Green_Energy_Solutions, Relationship_Green_Energy_to_Maria) into ContactToRelationship
+!insert (Relationship_Green_Energy_to_Maria, Maria_Fernandez) into RelationshipToContact
+
+!new Company('Iberian_Recordings')
+!Iberian_Recordings.name := 'Iberian Recordings'
+!Iberian_Recordings.phone := '+34-91-8899-1011'
+!Iberian_Recordings.website := 'www.iberianrecordings.com'
+!Iberian_Recordings.email := 'contact@iberianrecordings.es'
+!Iberian_Recordings.industry := 'Music Production'
+
+!new Address('Address_Iberian_Recordings')
+!Address_Iberian_Recordings.city := 'Madrid'
+!Address_Iberian_Recordings.houseNr := '54'
+!Address_Iberian_Recordings.street := 'Calle Mayor'
+!insert (Iberian_Recordings, Address_Iberian_Recordings) into ContactContainsAddress
+
+!new Note('Note_Iberian_Recordings')
+!Note_Iberian_Recordings.author := 'Ana Robles'
+!Note_Iberian_Recordings.time := Date('2023-07-10')
+!Note_Iberian_Recordings.type := #CALL
+!Note_Iberian_Recordings.comment := 'Discussed new album production timelines.'
+!insert (Iberian_Recordings, Note_Iberian_Recordings) into ContactContainsNote
+
+!new Relationship('Relationship_Iberian_to_Maria')
+!Relationship_Iberian_to_Maria.type := #BOSS
+!insert (Iberian_Recordings, Relationship_Iberian_to_Maria) into ContactToRelationship
+!insert (Relationship_Iberian_to_Maria, Maria_Fernandez) into RelationshipToContact
+
+!insert (AddressBook_5, Green_Energy_Solutions) into AddressBookMadeOfContact
+!insert (AddressBook_5, Maria_Fernandez) into AddressBookMadeOfContact
+!insert (AddressBook_5, Iberian_Recordings) into AddressBookMadeOfContact

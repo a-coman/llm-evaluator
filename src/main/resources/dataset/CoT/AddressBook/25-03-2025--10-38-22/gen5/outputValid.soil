@@ -1,0 +1,353 @@
+!new AddressBook('AddressBook_5')
+
+!new Person('Fatima_Jafari')
+!Fatima_Jafari.name := 'Fatima Jafari'
+!Fatima_Jafari.phone := '+212-5-522-3344'
+!Fatima_Jafari.website := 'fatimajcommunity.org'
+!Fatima_Jafari.email := 'fatima.jafari@communityhope.ma'
+!Fatima_Jafari.title := 'Community Leader'
+
+!new Address('Address_13')
+!Address_13.city := 'Casablanca'
+!Address_13.houseNr := '15'
+!Address_13.street := 'Boulevard Anfa'
+!insert (Fatima_Jafari, Address_13) into ContactContainsAddress
+
+!new Note('Note_13')
+!Note_13.author := 'Fatima Jafari'
+!Note_13.time := Date('2024-01-12')
+!Note_13.type := #MEETING
+!Note_13.comment := 'Organized a workshop to support local artisans.'
+!insert (Fatima_Jafari, Note_13) into ContactContainsNote
+
+!new Company('Regional_Development_Trust')
+!Regional_Development_Trust.name := 'Regional Development Trust'
+!Regional_Development_Trust.phone := '+27-11-945-0210'
+!Regional_Development_Trust.website := 'www.rdtrust.co.za'
+!Regional_Development_Trust.email := 'contact@rdtrust.co.za'
+!Regional_Development_Trust.industry := 'Social Development'
+
+!new Address('Address_14')
+!Address_14.city := 'Johannesburg'
+!Address_14.houseNr := '1001'
+!Address_14.street := 'Nelson Mandela Boulevard'
+!insert (Regional_Development_Trust, Address_14) into ContactContainsAddress
+
+!new Note('Note_14')
+!Note_14.author := 'Thabo Ndlovu'
+!Note_14.time := Date('2024-02-20')
+!Note_14.type := #EMAIL
+!Note_14.comment := 'Detailed grant application protocol for community services.'
+!insert (Regional_Development_Trust, Note_14) into ContactContainsNote
+
+!new Person('Lars_Kristoffersen')
+!Lars_Kristoffersen.name := 'Lars Kristoffersen'
+!Lars_Kristoffersen.phone := '+47-21-555-6789'
+!Lars_Kristoffersen.website := 'larsevents.no'
+!Lars_Kristoffersen.email := 'lars.k@eventplanner.no'
+!Lars_Kristoffersen.title := 'Event Coordinator'
+
+!new Address('Address_15')
+!Address_15.city := 'Oslo'
+!Address_15.houseNr := '3'
+!Address_15.street := 'Karl Johans Gate'
+!insert (Lars_Kristoffersen, Address_15) into ContactContainsAddress
+
+!new Note('Note_15')
+!Note_15.author := 'Lars Kristoffersen'
+!Note_15.time := Date('2024-03-10')
+!Note_15.type := #CALL
+!Note_15.comment := 'Planned cultural exchange event involving local communities.'
+!insert (Lars_Kristoffersen, Note_15) into ContactContainsNote
+
+!new Relationship('Relationship_10')
+!Relationship_10.type := #BOSS
+!insert (Lars_Kristoffersen, Relationship_10) into ContactToRelationship
+!insert (Relationship_10, Fatima_Jafari) into RelationshipToContact
+
+!new Relationship('Relationship_11')
+!Relationship_11.type := #COWORKER
+!insert (Lars_Kristoffersen, Relationship_11) into ContactToRelationship
+!insert (Relationship_11, Regional_Development_Trust) into RelationshipToContact
+
+!insert (AddressBook_5, Fatima_Jafari) into AddressBookMadeOfContact
+!insert (AddressBook_5, Regional_Development_Trust) into AddressBookMadeOfContact
+!insert (AddressBook_5, Lars_Kristoffersen) into AddressBookMadeOfContact
+
+!new AddressBook('AddressBook_5')
+
+!new Company('Green_Energy_Solutions')
+!Green_Energy_Solutions.name := 'Green Energy Solutions'
+!Green_Energy_Solutions.phone := '+49-30-4500-1234'
+!Green_Energy_Solutions.website := 'www.greenenergy.de'
+!Green_Energy_Solutions.email := 'info@greenenergy.de'
+!Green_Energy_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_Green_Energy')
+!Address_Green_Energy.city := 'Berlin'
+!Address_Green_Energy.houseNr := '256'
+!Address_Green_Energy.street := 'Sonnenallee'
+!insert (Green_Energy_Solutions, Address_Green_Energy) into ContactContainsAddress
+
+!new Note('Note_Green_Energy')
+!Note_Green_Energy.author := 'Hans Müller'
+!Note_Green_Energy.time := Date('2023-03-25')
+!Note_Green_Energy.type := #EMAIL
+!Note_Green_Energy.comment := 'Follow-up on clean energy partnership proposal.'
+!insert (Green_Energy_Solutions, Note_Green_Energy) into ContactContainsNote
+
+!new Person('Maria_Fernandez')
+!Maria_Fernandez.name := 'Maria Fernández'
+!Maria_Fernandez.phone := '+34-93-7654-3210'
+!Maria_Fernandez.website := 'www.mariafernandezmusic.com'
+!Maria_Fernandez.email := 'maria.fernandez@musicmail.es'
+!Maria_Fernandez.title := 'Flamenco Guitarist'
+
+!new Address('Address_Maria_Fernandez')
+!Address_Maria_Fernandez.city := 'Seville'
+!Address_Maria_Fernandez.houseNr := '7'
+!Address_Maria_Fernandez.street := 'Calle Betis'
+!insert (Maria_Fernandez, Address_Maria_Fernandez) into ContactContainsAddress
+
+!new Note('Note_Maria_Fernandez')
+!Note_Maria_Fernandez.author := 'Carlos Herrera'
+!Note_Maria_Fernandez.time := Date('2023-05-15')
+!Note_Maria_Fernandez.type := #MEETING
+!Note_Maria_Fernandez.comment := 'Arranged concert tour dates and venues.'
+!insert (Maria_Fernandez, Note_Maria_Fernandez) into ContactContainsNote
+
+!new Relationship('Relationship_Green_Energy_to_Maria')
+!Relationship_Green_Energy_to_Maria.type := #EMPLOYEE
+!insert (Green_Energy_Solutions, Relationship_Green_Energy_to_Maria) into ContactToRelationship
+!insert (Relationship_Green_Energy_to_Maria, Maria_Fernandez) into RelationshipToContact
+
+!new Company('Iberian_Recordings')
+!Iberian_Recordings.name := 'Iberian Recordings'
+!Iberian_Recordings.phone := '+34-91-8899-1011'
+!Iberian_Recordings.website := 'www.iberianrecordings.com'
+!Iberian_Recordings.email := 'contact@iberianrecordings.es'
+!Iberian_Recordings.industry := 'Music Production'
+
+!new Address('Address_Iberian_Recordings')
+!Address_Iberian_Recordings.city := 'Madrid'
+!Address_Iberian_Recordings.houseNr := '54'
+!Address_Iberian_Recordings.street := 'Calle Mayor'
+!insert (Iberian_Recordings, Address_Iberian_Recordings) into ContactContainsAddress
+
+!new Note('Note_Iberian_Recordings')
+!Note_Iberian_Recordings.author := 'Ana Robles'
+!Note_Iberian_Recordings.time := Date('2023-07-10')
+!Note_Iberian_Recordings.type := #CALL
+!Note_Iberian_Recordings.comment := 'Discussed new album production timelines.'
+!insert (Iberian_Recordings, Note_Iberian_Recordings) into ContactContainsNote
+
+!new Relationship('Relationship_Iberian_to_Maria')
+!Relationship_Iberian_to_Maria.type := #BOSS
+!insert (Iberian_Recordings, Relationship_Iberian_to_Maria) into ContactToRelationship
+!insert (Relationship_Iberian_to_Maria, Maria_Fernandez) into RelationshipToContact
+
+!insert (AddressBook_5, Green_Energy_Solutions) into AddressBookMadeOfContact
+!insert (AddressBook_5, Maria_Fernandez) into AddressBookMadeOfContact
+!insert (AddressBook_5, Iberian_Recordings) into AddressBookMadeOfContact
+
+!new AddressBook('Horizon_Collaborative_Connections')
+
+!new Person('Fatima_Ahmed')
+!Fatima_Ahmed.name := 'Fatima Ahmed'
+!Fatima_Ahmed.phone := '+971-2-4033-7894'
+!Fatima_Ahmed.website := 'fatimaahmed-innovation.ae'
+!Fatima_Ahmed.email := 'fatima.ahmed@horizoncollaborative.ae'
+!Fatima_Ahmed.title := 'Project Manager'
+
+!new Address('Address_Fatima_Ahmed')
+!Address_Fatima_Ahmed.city := 'Abu Dhabi'
+!Address_Fatima_Ahmed.houseNr := '87'
+!Address_Fatima_Ahmed.street := 'Corniche Road'
+!insert (Fatima_Ahmed, Address_Fatima_Ahmed) into ContactContainsAddress
+
+!new Note('Note_Fatima_Ahmed')
+!Note_Fatima_Ahmed.author := 'Fatima Ahmed'
+!Note_Fatima_Ahmed.time := Date('2023-04-11')
+!Note_Fatima_Ahmed.type := #MEETING
+!Note_Fatima_Ahmed.comment := 'Hosted a regional planning session for the MENA technology summit.'
+!insert (Fatima_Ahmed, Note_Fatima_Ahmed) into ContactContainsNote
+
+!new Company('Baltic_Cyber_Innovations')
+!Baltic_Cyber_Innovations.name := 'Baltic Cyber Innovations'
+!Baltic_Cyber_Innovations.phone := '+371-6-7453-2098'
+!Baltic_Cyber_Innovations.website := 'balticcyber.lv'
+!Baltic_Cyber_Innovations.email := 'contact@balticcyber.lv'
+!Baltic_Cyber_Innovations.industry := 'Information Security'
+
+!new Address('Address_Baltic_Cyber')
+!Address_Baltic_Cyber.city := 'Riga'
+!Address_Baltic_Cyber.houseNr := '22'
+!Address_Baltic_Cyber.street := 'Brivibas Iela'
+!insert (Baltic_Cyber_Innovations, Address_Baltic_Cyber) into ContactContainsAddress
+
+!new Note('Note_Baltic_Cyber')
+!Note_Baltic_Cyber.author := 'IT Director'
+!Note_Baltic_Cyber.time := Date('2023-07-05')
+!Note_Baltic_Cyber.type := #EMAIL
+!Note_Baltic_Cyber.comment := 'Discussed cybersecurity protocols for upcoming EU data protection compliance.'
+!insert (Baltic_Cyber_Innovations, Note_Baltic_Cyber) into ContactContainsNote
+
+!new Person('Amir_Khan')
+!Amir_Khan.name := 'Amir Khan'
+!Amir_Khan.phone := '+92-21-3554-7654'
+!Amir_Khan.website := 'amirkhan-tech.pk'
+!Amir_Khan.email := 'amir.khan@horizoncollaborative.pk'
+!Amir_Khan.title := 'Data Scientist'
+
+!new Address('Address_Amir_Khan')
+!Address_Amir_Khan.city := 'Karachi'
+!Address_Amir_Khan.houseNr := '105'
+!Address_Amir_Khan.street := 'Shahrah-e-Faisal'
+!insert (Amir_Khan, Address_Amir_Khan) into ContactContainsAddress
+
+!new Note('Note_Amir_Khan')
+!Note_Amir_Khan.author := 'Amir Khan'
+!Note_Amir_Khan.time := Date('2023-08-14')
+!Note_Amir_Khan.type := #CALL
+!Note_Amir_Khan.comment := 'Participated in a panel discussion about AI ethics and big data implications.'
+!insert (Amir_Khan, Note_Amir_Khan) into ContactContainsNote
+
+!new Company('Andes_Eco_Tech')
+!Andes_Eco_Tech.name := 'Andes Eco Tech'
+!Andes_Eco_Tech.phone := '+56-2-2955-3620'
+!Andes_Eco_Tech.website := 'andesecotech.cl'
+!Andes_Eco_Tech.email := 'operations@andesecotech.cl'
+!Andes_Eco_Tech.industry := 'Environmental Solutions'
+
+!new Address('Address_Andes_Eco_Tech')
+!Address_Andes_Eco_Tech.city := 'Santiago'
+!Address_Andes_Eco_Tech.houseNr := '68'
+!Address_Andes_Eco_Tech.street := 'Avenida Libertador'
+!insert (Andes_Eco_Tech, Address_Andes_Eco_Tech) into ContactContainsAddress
+
+!new Note('Note_Andes_Eco_Tech')
+!Note_Andes_Eco_Tech.author := 'CTO'
+!Note_Andes_Eco_Tech.time := Date('2023-06-21')
+!Note_Andes_Eco_Tech.type := #MEETING
+!Note_Andes_Eco_Tech.comment := 'Collaborative workshop on sustainable technology integration.'
+!insert (Andes_Eco_Tech, Note_Andes_Eco_Tech) into ContactContainsNote
+
+!new Relationship('Relationship_Fatima_to_Baltic_Cyber')
+!Relationship_Fatima_to_Baltic_Cyber.type := #COWORKER
+!insert (Fatima_Ahmed, Relationship_Fatima_to_Baltic_Cyber) into ContactToRelationship
+!insert (Relationship_Fatima_to_Baltic_Cyber, Baltic_Cyber_Innovations) into RelationshipToContact
+
+!new Relationship('Relationship_Amir_to_Fatima')
+!Relationship_Amir_to_Fatima.type := #EMPLOYEE
+!insert (Amir_Khan, Relationship_Amir_to_Fatima) into ContactToRelationship
+!insert (Relationship_Amir_to_Fatima, Fatima_Ahmed) into RelationshipToContact
+
+!new Relationship('Relationship_Fatima_to_Andes_Eco_Tech')
+!Relationship_Fatima_to_Andes_Eco_Tech.type := #SUBDIVISION
+!insert (Fatima_Ahmed, Relationship_Fatima_to_Andes_Eco_Tech) into ContactToRelationship
+!insert (Relationship_Fatima_to_Andes_Eco_Tech, Andes_Eco_Tech) into RelationshipToContact
+
+!new Relationship('Relationship_Amir_to_Baltic_Cyber')
+!Relationship_Amir_to_Baltic_Cyber.type := #COWORKER
+!insert (Amir_Khan, Relationship_Amir_to_Baltic_Cyber) into ContactToRelationship
+!insert (Relationship_Amir_to_Baltic_Cyber, Baltic_Cyber_Innovations) into RelationshipToContact
+
+!insert (Horizon_Collaborative_Connections, Fatima_Ahmed) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Baltic_Cyber_Innovations) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Amir_Khan) into AddressBookMadeOfContact
+!insert (Horizon_Collaborative_Connections, Andes_Eco_Tech) into AddressBookMadeOfContact
+
+!new AddressBook('Global_Health_Partners_Consortium')
+
+!new Company('BioScience_Research_Institute')
+!BioScience_Research_Institute.name := 'BioScience Research Institute'
+!BioScience_Research_Institute.phone := '+1 212 555 7845'
+!BioScience_Research_Institute.website := 'www.bioscienceresearch.org'
+!BioScience_Research_Institute.email := 'info@bioscienceresearch.org'
+!BioScience_Research_Institute.industry := 'Biotechnology Research'
+
+!new Address('Address_BioScience')
+!Address_BioScience.city := 'New York'
+!Address_BioScience.houseNr := '300'
+!Address_BioScience.street := 'Madison Avenue'
+!insert (BioScience_Research_Institute, Address_BioScience) into ContactContainsAddress
+
+!new Note('Note_BioScience_Research_Institute')
+!Note_BioScience_Research_Institute.author := 'Dr. Alex Jordan'
+!Note_BioScience_Research_Institute.time := Date('2023-08-05')
+!Note_BioScience_Research_Institute.type := #CALL
+!Note_BioScience_Research_Institute.comment := 'Discussed latest developments in gene therapy.'
+!insert (BioScience_Research_Institute, Note_BioScience_Research_Institute) into ContactContainsNote
+
+!new Company('LifeCare_Pharmaceuticals')
+!LifeCare_Pharmaceuticals.name := 'LifeCare Pharmaceuticals'
+!LifeCare_Pharmaceuticals.phone := '+49 69 2108 5456'
+!LifeCare_Pharmaceuticals.website := 'www.lifecarepharma.de'
+!LifeCare_Pharmaceuticals.email := 'contact@lifecarepharma.de'
+!LifeCare_Pharmaceuticals.industry := 'Pharmaceuticals'
+
+!new Address('Address_LifeCare')
+!Address_LifeCare.city := 'Frankfurt'
+!Address_LifeCare.houseNr := '85'
+!Address_LifeCare.street := 'Kaiserstraße'
+!insert (LifeCare_Pharmaceuticals, Address_LifeCare) into ContactContainsAddress
+
+!new Note('Note_LifeCare_Pharmaceuticals')
+!Note_LifeCare_Pharmaceuticals.author := 'Dr. Andrea Schmidt'
+!Note_LifeCare_Pharmaceuticals.time := Date('2023-09-12')
+!Note_LifeCare_Pharmaceuticals.type := #EMAIL
+!Note_LifeCare_Pharmaceuticals.comment := 'Potential collaboration on vaccine research.'
+!insert (LifeCare_Pharmaceuticals, Note_LifeCare_Pharmaceuticals) into ContactContainsNote
+
+!new Person('Sanjay_Patel')
+!Sanjay_Patel.name := 'Sanjay Patel'
+!Sanjay_Patel.phone := '+91 98200 12345'
+!Sanjay_Patel.website := 'www.sanjaypatelhealth.com'
+!Sanjay_Patel.email := 'sanjay.patel@consultant.org'
+!Sanjay_Patel.title := 'Healthcare Advisory Specialist'
+
+!new Address('Address_Mumbai_Sanjay')
+!Address_Mumbai_Sanjay.city := 'Mumbai'
+!Address_Mumbai_Sanjay.houseNr := '47'
+!Address_Mumbai_Sanjay.street := 'Mahatma Gandhi Road'
+!insert (Sanjay_Patel, Address_Mumbai_Sanjay) into ContactContainsAddress
+
+!new Address('Address_London_Sanjay')
+!Address_London_Sanjay.city := 'London'
+!Address_London_Sanjay.houseNr := '220'
+!Address_London_Sanjay.street := 'Harley Street'
+!insert (Sanjay_Patel, Address_London_Sanjay) into ContactContainsAddress
+
+!new Note('Note_1_Sanjay_Patel')
+!Note_1_Sanjay_Patel.author := 'Sanjay Patel'
+!Note_1_Sanjay_Patel.time := Date('2023-07-30')
+!Note_1_Sanjay_Patel.type := #MEETING
+!Note_1_Sanjay_Patel.comment := 'Joint analysis session on international healthcare challenges.'
+!insert (Sanjay_Patel, Note_1_Sanjay_Patel) into ContactContainsNote
+
+!new Note('Note_2_Sanjay_Patel')
+!Note_2_Sanjay_Patel.author := 'Dr. Alex Jordan'
+!Note_2_Sanjay_Patel.time := Date('2023-08-20')
+!Note_2_Sanjay_Patel.type := #EMAIL
+!Note_2_Sanjay_Patel.comment := 'Evaluating research input from BioScience and LifeCare.'
+!insert (Sanjay_Patel, Note_2_Sanjay_Patel) into ContactContainsNote
+
+!new Relationship('Relationship_BioScience_to_LifeCare')
+!Relationship_BioScience_to_LifeCare.type := #SUBDIVISION
+!insert (BioScience_Research_Institute, Relationship_BioScience_to_LifeCare) into ContactToRelationship
+!insert (Relationship_BioScience_to_LifeCare, LifeCare_Pharmaceuticals) into RelationshipToContact
+
+!new Relationship('Relationship_BioScience_to_Sanjay')
+!Relationship_BioScience_to_Sanjay.type := #COWORKER
+!insert (BioScience_Research_Institute, Relationship_BioScience_to_Sanjay) into ContactToRelationship
+!insert (Relationship_BioScience_to_Sanjay, Sanjay_Patel) into RelationshipToContact
+
+!new Relationship('Relationship_LifeCare_to_Sanjay')
+!Relationship_LifeCare_to_Sanjay.type := #BOSS
+!insert (LifeCare_Pharmaceuticals, Relationship_LifeCare_to_Sanjay) into ContactToRelationship
+!insert (Relationship_LifeCare_to_Sanjay, Sanjay_Patel) into RelationshipToContact
+
+!insert (Global_Health_Partners_Consortium, BioScience_Research_Institute) into AddressBookMadeOfContact
+!insert (Global_Health_Partners_Consortium, LifeCare_Pharmaceuticals) into AddressBookMadeOfContact
+!insert (Global_Health_Partners_Consortium, Sanjay_Patel) into AddressBookMadeOfContact
+

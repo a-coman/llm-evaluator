@@ -1,0 +1,85 @@
+!new AddressBook('addressBook1')
+
+!new Person('johnDoe')
+!johnDoe.name := 'John Doe'
+!johnDoe.phone := '123-456-7890'
+!johnDoe.website := 'www.johndoe.com'
+!johnDoe.email := 'john.doe@example.com'
+!johnDoe.title := 'Software Engineer'
+
+!new Company('acmeCorp')
+!acmeCorp.name := 'Acme Corp'
+!acmeCorp.phone := '987-654-3210'
+!acmeCorp.website := 'www.acmecorp.com'
+!acmeCorp.email := 'contact@acmecorp.com'
+!acmeCorp.industry := 'Technology'
+
+!new Person('janeSmith')
+!janeSmith.name := 'Jane Smith'
+!janeSmith.phone := '321-654-9870'
+!janeSmith.website := 'www.janesmith.me'
+!janeSmith.email := 'jane.smith@example.com'
+!janeSmith.title := 'Project Manager'
+
+!new Note('meetingNote')
+!meetingNote.author := 'John Doe'
+!meetingNote.time := Date('2023-11-01')
+!meetingNote.type := #MEETING
+!meetingNote.comment := 'Discuss project milestones'
+
+!new Address('johnAddress')
+!johnAddress.city := 'New York'
+!johnAddress.houseNr := '101'
+!johnAddress.street := 'Broadway'
+
+!new Address('acmeAddress')
+!acmeAddress.city := 'San Francisco'
+!acmeAddress.houseNr := '202'
+!acmeAddress.street := 'Market Street'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, janeSmith) into RelationshipToContact
+!insert (johnDoe, bossRelationship) into ContactToRelationship
+!insert (johnDoe, johnAddress) into ContactContainsAddress
+!insert (acmeCorp, acmeAddress) into ContactContainsAddress
+!insert (janeSmith, meetingNote) into ContactContainsNote
+
+!insert (addressBook1, johnDoe) into AddressBookMadeOfContact
+!insert (addressBook1, acmeCorp) into AddressBookMadeOfContact
+!insert (addressBook1, janeSmith) into AddressBookMadeOfContact
+
+!new Note('callNote')
+!callNote.author := 'Jane Smith'
+!callNote.time := Date('2023-11-05')
+!callNote.type := #CALL
+!callNote.comment := 'Follow-up on proposal'
+
+!new Address('janeAddress')
+!janeAddress.city := 'Chicago'
+!janeAddress.houseNr := '303'
+!janeAddress.street := 'Michigan Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, johnDoe) into RelationshipToContact
+!insert (janeSmith, employeeRelationship) into ContactToRelationship
+!insert (janeSmith, janeAddress) into ContactContainsAddress
+!insert (janeSmith, callNote) into ContactContainsNote
+
+!new Person('markBrown')
+!markBrown.name := 'Mark Brown'
+!markBrown.phone := '555-234-5678'
+!markBrown.website := 'www.markbrown.info'
+!markBrown.email := 'mark.brown@example.com'
+!markBrown.title := 'Marketing Director'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, acmeCorp) into RelationshipToContact
+!insert (markBrown, coworkerRelationship) into ContactToRelationship
+
+!insert (addressBook1, markBrown) into AddressBookMadeOfContact

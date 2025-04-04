@@ -1,0 +1,55 @@
+!new Booking('booking26')
+!booking26.startDate := '2025-08-01'
+!booking26.endDate := '2025-08-10'
+!booking26.canceled := false
+!booking26.bookingId := 125
+!booking26.confirmed := true
+
+!new Bill('bill26')
+!bill26.price := 2000.00
+!bill26.billId := 225
+
+!new FreeRoomTypesDTO('roomType26')
+!roomType26.roomTypeDescription := 'Luxury Penthouse'
+!roomType26.numBeds := 4
+!roomType26.pricePerNight := 500.00
+!roomType26.numFreeRooms := 1
+
+!new Customer('customer26')
+!customer26.firstName := 'Yasmine'
+!customer26.lastName := 'Diaz'
+
+!new RoomReservation('reservation26')
+!reservation26.checkInDate := '2025-08-01'
+!reservation26.checkOutDate := '2025-08-10'
+
+!new RoomExtra('extra26')
+!extra26.price := 200.00
+!extra26.description := 'Private Spa Session'
+
+!new Room('room39')
+!room39.numBeds := 4
+!room39.pricePerNight := 480.00
+!room39.occupied := true
+!room39.blocked := false
+!room39.roomNumber := 139
+
+!new Room('room40')
+!room40.numBeds := 4
+!room40.pricePerNight := 520.00
+!room40.occupied := false
+!room40.blocked := false
+!room40.roomNumber := 140
+
+!insert (booking26, bill26) into BookingBill
+
+!insert (booking26, customer26) into BookingCustomer
+
+!insert (booking26, reservation26) into BookingRoomReservation
+
+!insert (reservation26, extra26) into RoomReservationExtras
+
+!insert (reservation26, room39) into RoomReservationRoom
+!insert (reservation26, room40) into RoomReservationRoom
+
+!insert (bill26, reservation26) into BillRoomReservation

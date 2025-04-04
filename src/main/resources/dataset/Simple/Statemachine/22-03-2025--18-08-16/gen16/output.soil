@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine17')
+!stateMachine17.name := 'authorizationMachine'
+
+!new State('state44')
+!state44.name := 'pendingAuthorization'
+
+!new State('state45')
+!state45.name := 'authorized'
+
+!new State('state46')
+!state46.name := 'rejected'
+
+!new Transition('transition38')
+!transition38.name := 'authorize'
+
+!new Transition('transition39')
+!transition39.name := 'reject'
+
+!new TimeEvent('event38')
+!event38.time := 20
+
+!new TimeEvent('event39')
+!event39.time := 25
+
+!insert (stateMachine17, state44) into StateMachineContainsStates
+!insert (stateMachine17, state45) into StateMachineContainsStates
+!insert (stateMachine17, state46) into StateMachineContainsStates
+
+!insert (stateMachine17, transition38) into StateMachineContainsTransitions
+!insert (stateMachine17, transition39) into StateMachineContainsTransitions
+
+!insert (transition38, event38) into TransitionContainsEvents
+!insert (transition39, event39) into TransitionContainsEvents
+
+!insert (state44, transition38) into StateTransition
+!insert (state44, transition39) into StateTransition
+
+!insert (transition38, state45) into TransitionState
+!insert (transition39, state46) into TransitionState
+
+!insert (stateMachine17, state44) into StateMachineStartsStates

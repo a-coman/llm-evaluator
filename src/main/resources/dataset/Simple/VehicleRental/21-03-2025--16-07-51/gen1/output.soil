@@ -1,0 +1,78 @@
+!new RentalOffice('rentalOffice1')
+!rentalOffice1.name := 'Downtown Rentals'
+!rentalOffice1.number := 101
+!rentalOffice1.address := '123 Main St, Springfield, CA'
+
+!new RentalOffice('rentalOffice2')
+!rentalOffice2.name := 'Airport Rentals'
+!rentalOffice2.number := 102
+!rentalOffice2.address := '456 Airport Blvd, Springfield, CA'
+
+!new Truck('truck1')
+!truck1.id := 1
+!truck1.registrationState := #CA
+!truck1.licensePlateNumber := 'CA1234'
+!truck1.vehicleTypeCode := #TRUCK
+!truck1.registrationLastMaintenanceDate := Date('2023-01-15')
+!truck1.expirationDate := Date('2024-01-15')
+!truck1.odometerReading := 10000
+!truck1.gasTankCapacity := 150.0
+!truck1.workingRadio := true
+!truck1.mileage := 15
+
+!new Individual('individualCustomer1')
+!individualCustomer1.name := 'John Doe'
+!individualCustomer1.address := '789 Elm St, Springfield, CA'
+!individualCustomer1.poorRisk := false
+!individualCustomer1.homePhone := '555-1234'
+!individualCustomer1.driverLicenseState := #CA
+!individualCustomer1.driverLicenseNumber := 9876543
+!individualCustomer1.driverLicenseExpirationDate := Date('2026-05-20')
+
+!new Company('companyCustomer1')
+!companyCustomer1.name := 'Tech Solutions Inc.'
+!companyCustomer1.address := '101 Tech Ave, Springfield, CA'
+!companyCustomer1.poorRisk := false
+!companyCustomer1.idNumber := 2001
+
+!new RentalAgreement('rentalAgreement1')
+!rentalAgreement1.number := 501
+!rentalAgreement1.rentalDate := Date('2023-10-01')
+!rentalAgreement1.anticipatedDuration := 7
+!rentalAgreement1.depositPaid := 100.0
+!rentalAgreement1.quotedDailyRate := 50.0
+!rentalAgreement1.quotedRatePerMile := 0.5
+
+!new RentalAgreement('rentalAgreement2')
+!rentalAgreement2.number := 502
+!rentalAgreement2.rentalDate := Date('2023-10-05')
+!rentalAgreement2.anticipatedDuration := 4
+!rentalAgreement2.depositPaid := 120.0
+!rentalAgreement2.quotedDailyRate := 55.0
+!rentalAgreement2.quotedRatePerMile := 0.4
+
+!insert (rentalOffice1, truck1) into RentalOfficeVehicle
+!insert (rentalOffice1, rentalAgreement1) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice2, rentalAgreement1) into RentalOfficeRentalAgreementDrop
+!insert (rentalOffice2, rentalAgreement2) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice1, rentalAgreement2) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement1, truck1) into RentalAgreementVehicle
+!insert (rentalAgreement2, truck1) into RentalAgreementVehicle
+
+!insert (rentalAgreement1, individualCustomer1) into RentalAgreementCustomer
+!insert (rentalAgreement2, companyCustomer1) into RentalAgreementCustomer
+
+!new Truck('truck2')
+!truck2.id := 2
+!truck2.registrationState := #FL
+!truck2.licensePlateNumber := 'FL5678'
+!truck2.vehicleTypeCode := #TRUCK24
+!truck2.registrationLastMaintenanceDate := Date('2023-02-20')
+!truck2.expirationDate := Date('2024-02-20')
+!truck2.odometerReading := 22000
+!truck2.gasTankCapacity := 120.0
+!truck2.workingRadio := false
+!truck2.mileage := 10
+
+!insert (rentalOffice2, truck2) into RentalOfficeVehicle

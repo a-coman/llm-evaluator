@@ -1,0 +1,24 @@
+!new Expense('expense8')
+!expense8.amount := 0.0
+!expense8.startDate := Date('2023-08-01')
+!expense8.endDate := Date('2023-08-31')
+
+!new Currency('currency6')
+!currency6.name := 'Australian Dollar'
+!currency6.abbreviation := 'AUD'
+
+!new Bill('bill13')
+!bill13.amount := 0.0
+!bill13.category := 'Charity'
+!bill13.date := Date('2023-08-15')
+!bill13.paymentMethod := #CASH
+!bill13.status := #PENDING
+
+!insert (expense8, bill13) into ExpenseContainsBills
+
+!insert (bill13, currency6) into BillCurrency
+
+!new Comment('comment8')
+!comment8.text := 'Planned charity expense for August'
+
+!insert (expense8, comment8) into ExpenseComment

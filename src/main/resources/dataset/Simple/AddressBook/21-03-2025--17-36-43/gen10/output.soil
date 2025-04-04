@@ -1,0 +1,71 @@
+!new AddressBook('addressBook10')
+
+!new Company('futureTechLabs')
+!futureTechLabs.name := 'Future Tech Labs'
+!futureTechLabs.phone := '777-333-1111'
+!futureTechLabs.website := 'www.futuretechlabs.io'
+!futureTechLabs.email := 'contact@futuretech.io'
+!futureTechLabs.industry := 'Artificial Intelligence'
+
+!new Person('jacksonWhite')
+!jacksonWhite.name := 'Jackson White'
+!jacksonWhite.phone := '555-666-7777'
+!jacksonWhite.website := 'www.jacksonwhiteai.com'
+!jacksonWhite.email := 'jackson.white@futuretech.io'
+!jacksonWhite.title := 'Chief AI Strategist'
+
+!new Note('innovationLabNote')
+!innovationLabNote.author := 'Jackson White'
+!innovationLabNote.time := Date('2024-06-15')
+!innovationLabNote.type := #CALL
+!innovationLabNote.comment := 'Discussed AI innovation strategies with lab partners'
+
+!new Address('jacksonAddress')
+!jacksonAddress.city := 'Austin'
+!jacksonAddress.houseNr := '123'
+!jacksonAddress.street := 'Tech Innovation St'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, futureTechLabs) into RelationshipToContact
+!insert (jacksonWhite, subdivisionRelationship) into ContactToRelationship
+!insert (jacksonWhite, jacksonAddress) into ContactContainsAddress
+!insert (jacksonWhite, innovationLabNote) into ContactContainsNote
+
+!new Person('lilyParker')
+!lilyParker.name := 'Lily Parker'
+!lilyParker.phone := '888-999-2222'
+!lilyParker.website := 'www.lilyparkerdesigns.com'
+!lilyParker.email := 'lily.parker@example.com'
+!lilyParker.title := 'AI UX Designer'
+
+!new Note('uiUpdateNote')
+!uiUpdateNote.author := 'Lily Parker'
+!uiUpdateNote.time := Date('2024-06-21')
+!uiUpdateNote.type := #EMAIL
+!uiUpdateNote.comment := 'Provided suggestions for AI application UI updates'
+
+!new Address('lilyAddress')
+!lilyAddress.city := 'Seattle'
+!lilyAddress.houseNr := '456'
+!lilyAddress.street := 'Design Loop'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, jacksonWhite) into RelationshipToContact
+!insert (lilyParker, employeeRelationship) into ContactToRelationship
+!insert (lilyParker, lilyAddress) into ContactContainsAddress
+!insert (lilyParker, uiUpdateNote) into ContactContainsNote
+
+!new Address('futureTechAddress')
+!futureTechAddress.city := 'San Jose'
+!futureTechAddress.houseNr := '890'
+!futureTechAddress.street := 'Innovation Blvd'
+
+!insert (futureTechLabs, futureTechAddress) into ContactContainsAddress
+
+!insert (addressBook10, futureTechLabs) into AddressBookMadeOfContact
+!insert (addressBook10, jacksonWhite) into AddressBookMadeOfContact
+!insert (addressBook10, lilyParker) into AddressBookMadeOfContact

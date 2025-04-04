@@ -1,0 +1,55 @@
+!new Booking('booking13')
+!booking13.startDate := '2024-06-15'
+!booking13.endDate := '2024-06-20'
+!booking13.canceled := false
+!booking13.bookingId := 112
+!booking13.confirmed := true
+
+!new Bill('bill13')
+!bill13.price := 750.00
+!bill13.billId := 212
+
+!new FreeRoomTypesDTO('roomType13')
+!roomType13.roomTypeDescription := 'Luxury King Room'
+!roomType13.numBeds := 1
+!roomType13.pricePerNight := 200.00
+!roomType13.numFreeRooms := 2
+
+!new Customer('customer13')
+!customer13.firstName := 'Nina'
+!customer13.lastName := 'Oliver'
+
+!new RoomReservation('reservation13')
+!reservation13.checkInDate := '2024-06-15'
+!reservation13.checkOutDate := '2024-06-20'
+
+!new RoomExtra('extra13')
+!extra13.price := 100.00
+!extra13.description := 'VIP Lounge Access'
+
+!new Room('room21')
+!room21.numBeds := 1
+!room21.pricePerNight := 195.00
+!room21.occupied := true
+!room21.blocked := false
+!room21.roomNumber := 121
+
+!new Room('room22')
+!room22.numBeds := 1
+!room22.pricePerNight := 220.00
+!room22.occupied := false
+!room22.blocked := false
+!room22.roomNumber := 122
+
+!insert (booking13, bill13) into BookingBill
+
+!insert (booking13, customer13) into BookingCustomer
+
+!insert (booking13, reservation13) into BookingRoomReservation
+
+!insert (reservation13, extra13) into RoomReservationExtras
+
+!insert (reservation13, room21) into RoomReservationRoom
+!insert (reservation13, room22) into RoomReservationRoom
+
+!insert (bill13, reservation13) into BillRoomReservation

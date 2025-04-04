@@ -1,0 +1,101 @@
+!new AddressBook('EastWest_Innovations_Contacts')
+
+!new Person('Akira_Tanaka')
+!Akira_Tanaka.name := 'Akira Tanaka'
+!Akira_Tanaka.phone := '+81-3-5678-1234'
+!Akira_Tanaka.website := 'akiratanaka-dev.jp'
+!Akira_Tanaka.email := 'akira.tanaka@eastwest.co.jp'
+!Akira_Tanaka.title := 'Lead Developer'
+
+!new Address('Address_Akira_Tanaka')
+!Address_Akira_Tanaka.city := 'Tokyo'
+!Address_Akira_Tanaka.houseNr := '11'
+!Address_Akira_Tanaka.street := 'Shibuya Crossing'
+!insert (Akira_Tanaka, Address_Akira_Tanaka) into ContactContainsAddress
+
+!new Note('Note_Akira_Tanaka')
+!Note_Akira_Tanaka.author := 'Akira Tanaka'
+!Note_Akira_Tanaka.time := Date('2023-07-20')
+!Note_Akira_Tanaka.type := #MEETING
+!Note_Akira_Tanaka.comment := 'Project kickoff meeting with new American partners.'
+!insert (Akira_Tanaka, Note_Akira_Tanaka) into ContactContainsNote
+
+!new Person('Emily_Thompson')
+!Emily_Thompson.name := 'Emily Thompson'
+!Emily_Thompson.phone := '+44-20-7946-0958'
+!Emily_Thompson.website := 'emilythompson-design.com'
+!Emily_Thompson.email := 'emily.thompson@eastwest.co.uk'
+!Emily_Thompson.title := 'Creative Director'
+
+!new Address('Address_Emily_Thompson')
+!Address_Emily_Thompson.city := 'London'
+!Address_Emily_Thompson.houseNr := '82'
+!Address_Emily_Thompson.street := 'Oxford Street'
+!insert (Emily_Thompson, Address_Emily_Thompson) into ContactContainsAddress
+
+!new Note('Note_Emily_Thompson')
+!Note_Emily_Thompson.author := 'Emily Thompson'
+!Note_Emily_Thompson.time := Date('2023-09-30')
+!Note_Emily_Thompson.type := #EMAIL
+!Note_Emily_Thompson.comment := 'Sent design drafts and awaiting feedback on branding project.'
+!insert (Emily_Thompson, Note_Emily_Thompson) into ContactContainsNote
+
+!new Company('South_Seas_Communications')
+!South_Seas_Communications.name := 'South Seas Communications'
+!South_Seas_Communications.phone := '+61-7-5674-1234'
+!South_Seas_Communications.website := 'southseascomms.au'
+!South_Seas_Communications.email := 'contact@southseascomms.au'
+!South_Seas_Communications.industry := 'Telecommunications'
+
+!new Address('Address_South_Seas_Communications')
+!Address_South_Seas_Communications.city := 'Brisbane'
+!Address_South_Seas_Communications.houseNr := '256'
+!Address_South_Seas_Communications.street := 'Queen Street'
+!insert (South_Seas_Communications, Address_South_Seas_Communications) into ContactContainsAddress
+
+!new Note('Note_South_Seas_Communications')
+!Note_South_Seas_Communications.author := 'Managing Director'
+!Note_South_Seas_Communications.time := Date('2023-07-10')
+!Note_South_Seas_Communications.type := #CALL
+!Note_South_Seas_Communications.comment := 'Discussed partnership opportunities in the Asia-Pacific region.'
+!insert (South_Seas_Communications, Note_South_Seas_Communications) into ContactContainsNote
+
+!new Company('Alpine_Resort_Group')
+!Alpine_Resort_Group.name := 'Alpine Resort Group'
+!Alpine_Resort_Group.phone := '+41-22-555-6789'
+!Alpine_Resort_Group.website := 'alpineresortgroup.ch'
+!Alpine_Resort_Group.email := 'info@alpineresortgroup.ch'
+!Alpine_Resort_Group.industry := 'Hospitality'
+
+!new Address('Address_Alpine_Resort_Group')
+!Address_Alpine_Resort_Group.city := 'Geneva'
+!Address_Alpine_Resort_Group.houseNr := '74'
+!Address_Alpine_Resort_Group.street := 'Rue du Rhône'
+!insert (Alpine_Resort_Group, Address_Alpine_Resort_Group) into ContactContainsAddress
+
+!new Note('Note_Alpine_Resort_Group')
+!Note_Alpine_Resort_Group.author := 'CEO'
+!Note_Alpine_Resort_Group.time := Date('2023-08-21')
+!Note_Alpine_Resort_Group.type := #MEETING
+!Note_Alpine_Resort_Group.comment := 'Reviewed expansion plans for new ski resorts in the Alps.'
+!insert (Alpine_Resort_Group, Note_Alpine_Resort_Group) into ContactContainsNote
+
+!new Relationship('Relationship_Emily_to_Akira')
+!Relationship_Emily_to_Akira.type := #COWORKER
+!insert (Emily_Thompson, Relationship_Emily_to_Akira) into ContactToRelationship
+!insert (Relationship_Emily_to_Akira, Akira_Tanaka) into RelationshipToContact
+
+!new Relationship('Relationship_Emily_to_South_Seas')
+!Relationship_Emily_to_South_Seas.type := #SUBDIVISION
+!insert (Emily_Thompson, Relationship_Emily_to_South_Seas) into ContactToRelationship
+!insert (Relationship_Emily_to_South_Seas, South_Seas_Communications) into RelationshipToContact
+
+!new Relationship('Relationship_Akira_to_Alpine')
+!Relationship_Akira_to_Alpine.type := #COWORKER
+!insert (Akira_Tanaka, Relationship_Akira_to_Alpine) into ContactToRelationship
+!insert (Relationship_Akira_to_Alpine, Alpine_Resort_Group) into RelationshipToContact
+
+!insert (EastWest_Innovations_Contacts, Akira_Tanaka) into AddressBookMadeOfContact
+!insert (EastWest_Innovations_Contacts, Emily_Thompson) into AddressBookMadeOfContact
+!insert (EastWest_Innovations_Contacts, South_Seas_Communications) into AddressBookMadeOfContact
+!insert (EastWest_Innovations_Contacts, Alpine_Resort_Group) into AddressBookMadeOfContact

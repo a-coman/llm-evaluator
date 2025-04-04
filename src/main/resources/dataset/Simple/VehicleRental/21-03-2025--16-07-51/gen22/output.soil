@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice24')
+!rentalOffice24.name := 'Riverside Rentals'
+!rentalOffice24.number := 124
+!rentalOffice24.address := '987 River Rd, Sacramento, CA'
+
+!new Vehicle('coveredTrailer5')
+!coveredTrailer5.id := 23
+!coveredTrailer5.registrationState := #CA
+!coveredTrailer5.licensePlateNumber := 'CA3434'
+!coveredTrailer5.vehicleTypeCode := #COVERED_TRAILER
+!coveredTrailer5.registrationLastMaintenanceDate := Date('2023-11-01')
+!coveredTrailer5.expirationDate := Date('2024-11-01')
+
+!new Company('companyCustomer11')
+!companyCustomer11.name := 'Sacramento Shippers'
+!companyCustomer11.address := '123 Port Ave, Sacramento, CA'
+!companyCustomer11.poorRisk := false
+!companyCustomer11.idNumber := 12011
+
+!new RentalAgreement('rentalAgreement23')
+!rentalAgreement23.number := 523
+!rentalAgreement23.rentalDate := Date('2023-12-18')
+!rentalAgreement23.anticipatedDuration := 4
+!rentalAgreement23.depositPaid := 135.0
+!rentalAgreement23.quotedDailyRate := 22.0
+!rentalAgreement23.quotedRatePerMile := 0.15
+
+!insert (rentalOffice24, coveredTrailer5) into RentalOfficeVehicle
+!insert (rentalOffice24, rentalAgreement23) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice24, rentalAgreement23) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement23, coveredTrailer5) into RentalAgreementVehicle
+!insert (rentalAgreement23, companyCustomer11) into RentalAgreementCustomer

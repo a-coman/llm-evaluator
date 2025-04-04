@@ -1,0 +1,89 @@
+!new Driver('driver31')
+!driver31.id := 'DRV4010'
+!driver31.name := 'Wei Liu'
+
+!new Driver('driver32')
+!driver32.id := 'DRV4011'
+!driver32.name := 'Xiao Chen'
+
+!new Shipment('shipment32')
+!shipment32.id := 'SHP11007'
+!shipment32.status := #ASSIGNED
+
+!new Shipment('shipment33')
+!shipment33.id := 'SHP11008'
+!shipment33.status := #NEW
+
+!new Address('pickupAddress32')
+!pickupAddress32.text := 'Nanshan Science & Technology Park, Shenzhen, GD 518057, China'
+
+!new GeoLocation('pickupGeoLocation32')
+!pickupGeoLocation32.latitude := 22.5408
+!pickupGeoLocation32.longitude := 113.9523
+
+!new Address('deliveryAddress32')
+!deliveryAddress32.text := 'Huaqiangbei, Shenzhen, GD 518031, China'
+
+!new GeoLocation('deliveryGeoLocation32')
+!deliveryGeoLocation32.latitude := 22.5465
+!deliveryGeoLocation32.longitude := 114.0661
+
+!new Address('pickupAddress33')
+!pickupAddress33.text := 'Shenzhen Bay, Shenzhen, GD 518054, China'
+
+!new GeoLocation('pickupGeoLocation33')
+!pickupGeoLocation33.latitude := 22.5120
+!pickupGeoLocation33.longitude := 113.9294
+
+!new Address('deliveryAddress33')
+!deliveryAddress33.text := 'Lianhuashan Park, Shenzhen, GD 518028, China'
+
+!new GeoLocation('deliveryGeoLocation33')
+!deliveryGeoLocation33.latitude := 22.5481
+!deliveryGeoLocation33.longitude := 114.0579
+
+!new Station('station23')
+
+!new Customer('customer32')
+!customer32.id := 'CUST803'
+!customer32.name := 'Jian Hong'
+!customer32.twitterUserName := '@jianhtech'
+
+!new Customer('customer33')
+!customer33.id := 'CUST804'
+!customer33.name := 'Mei Lin'
+!customer33.twitterUserName := '@meilinnovate'
+
+!insert (driver31, shipment32) into DriverShipment
+
+!insert (shipment32, pickupAddress32) into ShipmentContainsPickUpAddress
+
+!insert (shipment32, deliveryAddress32) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress32, pickupGeoLocation32) into AddressContainsGeoLocation
+
+!insert (deliveryAddress32, deliveryGeoLocation32) into AddressContainsGeoLocation
+
+!insert (shipment33, pickupAddress33) into ShipmentContainsPickUpAddress
+
+!insert (shipment33, deliveryAddress33) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress33, pickupGeoLocation33) into AddressContainsGeoLocation
+
+!insert (deliveryAddress33, deliveryGeoLocation33) into AddressContainsGeoLocation
+
+!insert (customer32, shipment32) into CustomerConsistsOfShipment
+
+!insert (customer33, shipment33) into CustomerConsistsOfShipment
+
+!insert (station23, customer32) into StationContainsCustomer
+
+!insert (station23, customer33) into StationContainsCustomer
+
+!insert (station23, shipment32) into StationShipment
+
+!insert (station23, shipment33) into StationShipment
+
+!insert (station23, driver31) into StationContainsDriver
+
+!insert (station23, driver32) into StationContainsDriver

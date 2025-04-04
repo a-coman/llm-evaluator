@@ -1,0 +1,134 @@
+!new Club('club1')
+!club1.name := 'Northern Eagles FC'
+!club1.homeGround := 'Eagle Stadium'
+!club1.chairman := 'Jonathan High'
+
+!new Team('teamA')
+!teamA.name := 'Eagles First'
+
+!new Team('teamB')
+!teamB.name := 'Eagles Reserve'
+
+!insert (club1, teamA) into ClubTeam
+!insert (club1, teamB) into ClubTeam
+
+!new Player('player1')
+!player1.name := 'Alice Swift'
+!player1.age := 18
+!player1.bestFoot := #LEFT
+!player1.phoneNumber := '+447700900123'
+
+!insert (teamA, player1) into TeamPlayer
+
+!new Position('position1')
+!position1.positionName := #GOALKEEPER
+
+!new Position('position2')
+!position2.positionName := #DEFENDER
+
+!insert (player1, position1) into PlayerPositions
+!insert (player1, position2) into PlayerPositions
+
+!new PlayerNotes('playerNote1')
+!playerNote1.note := 'Excellent reflexes'
+!playerNote1.date := '2023-02-02'
+
+!insert (player1, playerNote1) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective1')
+!trainingObjective1.areaToImprove := 'Goalkeeping skills'
+!trainingObjective1.startDate := '2023-02-01'
+!trainingObjective1.endDate := '2023-02-28'
+!trainingObjective1.success := false
+
+!new TrainingObjective('trainingObjective2')
+!trainingObjective2.areaToImprove := 'Passing accuracy'
+!trainingObjective2.startDate := '2023-03-01'
+!trainingObjective2.endDate := '2023-03-31'
+!trainingObjective2.success := true
+
+!insert (trainingObjective1, player1) into TrainingObjectivePlayer
+!insert (trainingObjective2, player1) into TrainingObjectivePlayer
+
+!new Competition('competition1')
+!competition1.name := 'National League'
+!competition1.type := 'League'
+
+!new Match('match1')
+!match1.date := '2023-05-28'
+!match1.homeAway := true
+
+!insert (competition1, match1) into CompetitionMatch
+
+!insert (teamA, match1) into LocalMatch
+
+!new Team('teamVisitor')
+!teamVisitor.name := 'Southern Hawks'
+
+!new Club('clubVisitor')
+!clubVisitor.name := 'Southern Hawks Club'
+!clubVisitor.homeGround := 'Hawks Ground'
+!clubVisitor.chairman := 'John Doe'
+
+!insert (clubVisitor, teamVisitor) into ClubTeam
+
+!new Player('visitorPlayer1')
+!visitorPlayer1.name := 'John Smith'
+!visitorPlayer1.age := 22
+!visitorPlayer1.bestFoot := #RIGHT
+!visitorPlayer1.phoneNumber := '+447700900000'
+
+!insert (teamVisitor, visitorPlayer1) into TeamPlayer
+
+!new Position('visitorPosition1')
+!visitorPosition1.positionName := #FORWARD
+
+!insert (visitorPlayer1, visitorPosition1) into PlayerPositions
+
+!insert (teamVisitor, match1) into VisitorMatch
+
+!new MatchReport('matchReport1')
+!matchReport1.duration := 90
+!matchReport1.scoreVisitor := 0
+!matchReport1.scoreLocal := 0
+
+!insert (match1, matchReport1) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer1')
+!matchPlayer1.booked := false
+!matchPlayer1.goals := 0
+!matchPlayer1.rating := 7
+
+!insert (player1, matchPlayer1) into PlayerMatch
+!insert (match1, matchPlayer1) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition1')
+!matchPlayerPosition1.positionName := #GOALKEEPER
+!matchPlayerPosition1.number := 1
+
+!insert (matchPlayer1, matchPlayerPosition1) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession1')
+!trainingSession1.date := '2023-05-26'
+!trainingSession1.location := 'Eagles Training Ground'
+!trainingSession1.purpose := 'Pre-match preparation'
+
+!insert (teamA, trainingSession1) into TeamTraining
+
+!insert (teamB, trainingSession1) into TeamTraining
+
+!insert (teamVisitor, trainingSession1) into TeamTraining
+
+!new TrainingNotes('trainingNote1')
+!trainingNote1.note := 'Light workout focused on agility'
+!trainingNote1.date := '2023-05-26'
+
+!insert (trainingSession1, trainingNote1) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjectiveVisitor1')
+!trainingObjectiveVisitor1.areaToImprove := 'Speed'
+!trainingObjectiveVisitor1.startDate := '2023-04-01'
+!trainingObjectiveVisitor1.endDate := '2023-04-30'
+!trainingObjectiveVisitor1.success := false
+
+!insert (trainingObjectiveVisitor1, visitorPlayer1) into TrainingObjectivePlayer

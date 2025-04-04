@@ -1,0 +1,71 @@
+!new AddressBook('addressBook7')
+
+!new Company('healthyLivingCorp')
+!healthyLivingCorp.name := 'Healthy Living Corp'
+!healthyLivingCorp.phone := '555-999-3333'
+!healthyLivingCorp.website := 'www.healthylivingcorp.com'
+!healthyLivingCorp.email := 'contact@healthyliving.com'
+!healthyLivingCorp.industry := 'Health & Wellness'
+
+!new Person('ameliaClark')
+!ameliaClark.name := 'Amelia Clark'
+!ameliaClark.phone := '444-555-6666'
+!ameliaClark.website := 'www.ameliaclarkfitness.com'
+!ameliaClark.email := 'amelia.clark@healthyliving.com'
+!ameliaClark.title := 'Nutritionist'
+
+!new Note('nutritionConsultationNote')
+!nutritionConsultationNote.author := 'Amelia Clark'
+!nutritionConsultationNote.time := Date('2024-03-02')
+!nutritionConsultationNote.type := #MEETING
+!nutritionConsultationNote.comment := 'Conducted dietary consultation with corporate clients'
+
+!new Address('ameliaAddress')
+!ameliaAddress.city := 'Orlando'
+!ameliaAddress.houseNr := '1234'
+!ameliaAddress.street := 'Health Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, healthyLivingCorp) into RelationshipToContact
+!insert (ameliaClark, employeeRelationship) into ContactToRelationship
+!insert (ameliaClark, ameliaAddress) into ContactContainsAddress
+!insert (ameliaClark, nutritionConsultationNote) into ContactContainsNote
+
+!new Person('liamJohnson')
+!liamJohnson.name := 'Liam Johnson'
+!liamJohnson.phone := '333-222-1111'
+!liamJohnson.website := 'www.liamjohnsontherapy.com'
+!liamJohnson.email := 'liam.johnson@example.com'
+!liamJohnson.title := 'Wellness Coach'
+
+!new Note('wellnessProgramNote')
+!wellnessProgramNote.author := 'Liam Johnson'
+!wellnessProgramNote.time := Date('2024-03-15')
+!wellnessProgramNote.type := #EMAIL
+!wellnessProgramNote.comment := 'Emailed new wellness program details to participants'
+
+!new Address('liamAddress')
+!liamAddress.city := 'Atlanta'
+!liamAddress.houseNr := '5678'
+!liamAddress.street := 'Peach Street'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, ameliaClark) into RelationshipToContact
+!insert (liamJohnson, bossRelationship) into ContactToRelationship
+!insert (liamJohnson, liamAddress) into ContactContainsAddress
+!insert (liamJohnson, wellnessProgramNote) into ContactContainsNote
+
+!new Address('healthyLivingAddress')
+!healthyLivingAddress.city := 'Miami'
+!healthyLivingAddress.houseNr := '789'
+!healthyLivingAddress.street := 'Wellness Blvd'
+
+!insert (healthyLivingCorp, healthyLivingAddress) into ContactContainsAddress
+
+!insert (addressBook7, healthyLivingCorp) into AddressBookMadeOfContact
+!insert (addressBook7, ameliaClark) into AddressBookMadeOfContact
+!insert (addressBook7, liamJohnson) into AddressBookMadeOfContact

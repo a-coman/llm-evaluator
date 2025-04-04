@@ -1,0 +1,47 @@
+!new Booking('booking21')
+!booking21.startDate := '2025-02-14'
+!booking21.endDate := '2025-02-21'
+!booking21.canceled := false
+!booking21.bookingId := 120
+!booking21.confirmed := true
+
+!new Bill('bill21')
+!bill21.price := 550.00
+!bill21.billId := 220
+
+!new FreeRoomTypesDTO('roomType21')
+!roomType21.roomTypeDescription := 'Romantic Getaway Suite'
+!roomType21.numBeds := 1
+!roomType21.pricePerNight := 200.00
+!roomType21.numFreeRooms := 1
+
+!new Customer('customer21')
+!customer21.firstName := 'Rachel'
+!customer21.lastName := 'Young'
+
+!new RoomReservation('reservation21')
+!reservation21.checkInDate := '2025-02-14'
+!reservation21.checkOutDate := '2025-02-21'
+
+!new RoomExtra('extra21')
+!extra21.price := 100.00
+!extra21.description := 'Champagne and Strawberries Package'
+
+!new Room('room33')
+!room33.numBeds := 1
+!room33.pricePerNight := 190.00
+!room33.occupied := true
+!room33.blocked := false
+!room33.roomNumber := 133
+
+!insert (booking21, bill21) into BookingBill
+
+!insert (booking21, customer21) into BookingCustomer
+
+!insert (booking21, reservation21) into BookingRoomReservation
+
+!insert (reservation21, extra21) into RoomReservationExtras
+
+!insert (reservation21, room33) into RoomReservationRoom
+
+!insert (bill21, reservation21) into BillRoomReservation

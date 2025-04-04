@@ -1,0 +1,149 @@
+!new Club('club29')
+!club29.name := 'Warriors FC'
+!club29.homeGround := 'Warrior Arena'
+!club29.chairman := 'Steven Adams'
+
+!new Club('club30')
+!club30.name := 'Monarchs FC'
+!club30.homeGround := 'Monarch Stadium'
+!club30.chairman := 'Susan Carter'
+
+!new Team('team29')
+!team29.name := 'Warrior Kings'
+!insert (club29, team29) into ClubTeam
+
+!new Team('team30')
+!team30.name := 'Monarch Lions'
+!insert (club30, team30) into ClubTeam
+
+!new Player('player43')
+!player43.name := 'Zachary White'
+!player43.age := 27
+!player43.bestFoot := #BOTH
+!player43.phoneNumber := '567-890-1234'
+!insert (team29, player43) into TeamPlayer
+
+!new Player('player44')
+!player44.name := 'Lily Johnson'
+!player44.age := 26
+!player44.bestFoot := #LEFT
+!player44.phoneNumber := '678-901-2345'
+!insert (team29, player44) into TeamPlayer
+
+!new Player('player45')
+!player45.name := 'Nathan Wilson'
+!player45.age := 28
+!player45.bestFoot := #RIGHT
+!player45.phoneNumber := '789-012-3456'
+!insert (team30, player45) into TeamPlayer
+
+!new Position('position43')
+!position43.positionName := #GOALKEEPER
+!insert (player43, position43) into PlayerPositions
+
+!new Position('position44')
+!position44.positionName := #MIDFIELDER
+!insert (player44, position44) into PlayerPositions
+
+!new Position('position45')
+!position45.positionName := #FORWARD
+!insert (player45, position45) into PlayerPositions
+
+!new TrainingSession('training29')
+!training29.date := '2024-01-12'
+!training29.location := 'Warrior Field'
+!training29.purpose := 'Reflex Training'
+!insert (team29, training29) into TeamTraining
+
+!new TrainingSession('training30')
+!training30.date := '2024-01-13'
+!training30.location := 'Monarch Grounds'
+!training30.purpose := 'Offensive Formations'
+!insert (team30, training30) into TeamTraining
+
+!new TrainingNotes('trainingNotes29')
+!trainingNotes29.note := 'Worked on improving goalkeeper reflexes with rapid-fire drills'
+!trainingNotes29.date := '2024-01-12'
+!insert (training29, trainingNotes29) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes30')
+!trainingNotes30.note := 'Drilled various attacking formations and finishing moves'
+!trainingNotes30.date := '2024-01-13'
+!insert (training30, trainingNotes30) into TrainingTrainingNotes
+
+!new TrainingObjective('objective43')
+!objective43.areaToImprove := 'Reflexes'
+!objective43.startDate := '2023-11-01'
+!objective43.endDate := '2024-01-15'
+!objective43.success := true
+!insert (objective43, player43) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective44')
+!objective44.areaToImprove := 'Playmaking Vision'
+!objective44.startDate := '2023-09-20'
+!objective44.endDate := '2023-12-20'
+!objective44.success := false
+!insert (objective44, player44) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective45')
+!objective45.areaToImprove := 'Shooting Accuracy'
+!objective45.startDate := '2023-08-10'
+!objective45.endDate := '2023-11-10'
+!objective45.success := true
+!insert (objective45, player45) into TrainingObjectivePlayer
+
+!new Competition('competition15')
+!competition15.name := 'Ultimate Championship'
+!competition15.type := 'Finals'
+
+!new Match('match15')
+!match15.date := '2024-01-20'
+!match15.homeAway := false
+!insert (competition15, match15) into CompetitionMatch
+!insert (team29, match15) into VisitorMatch
+!insert (team30, match15) into LocalMatch
+
+!new MatchReport('report15')
+!report15.duration := 90
+!report15.scoreVisitor := 1
+!report15.scoreLocal := 1
+!insert (match15, report15) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer43')
+!matchPlayer43.booked := true
+!matchPlayer43.goals := 0
+!matchPlayer43.rating := 8
+!insert (player43, matchPlayer43) into PlayerMatch
+!insert (match15, matchPlayer43) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer45')
+!matchPlayer45.booked := false
+!matchPlayer45.goals := 1
+!matchPlayer45.rating := 9
+!insert (player45, matchPlayer45) into PlayerMatch
+!insert (match15, matchPlayer45) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition43')
+!matchPlayerPosition43.positionName := #GOALKEEPER
+!matchPlayerPosition43.number := 1
+!insert (matchPlayer43, matchPlayerPosition43) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition45')
+!matchPlayerPosition45.positionName := #FORWARD
+!matchPlayerPosition45.number := 7
+!insert (matchPlayer45, matchPlayerPosition45) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event57')
+!event57.eventType := #GOAL
+!event57.time := 33
+!insert (match15, event57) into MatchMatchEvent
+
+!new MatchEvent('event58')
+!event58.eventType := #GOAL
+!event58.time := 76
+!insert (match15, event58) into MatchMatchEvent
+
+!new MatchNote('matchNote15')
+!matchNote15.note := 'Intense final match with teams evenly matched, ending in a draw'
+!matchNote15.date := '2024-01-20'
+!insert (match15, matchNote15) into MatchMatchNote

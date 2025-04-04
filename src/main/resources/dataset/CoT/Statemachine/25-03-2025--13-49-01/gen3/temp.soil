@@ -1,0 +1,97 @@
+!new StateMachine('internationalFlightController')
+!internationalFlightController.name := 'internationalFlightController'
+
+!new State('boarding')
+!boarding.name := 'boarding'
+
+!new State('takeoff')
+!takeoff.name := 'takeoff'
+
+!new State('cruise')
+!cruise.name := 'cruise'
+
+!new State('layover')
+!layover.name := 'layover'
+
+!new State('landing')
+!landing.name := 'landing'
+
+!new State('taxiing')
+!taxiing.name := 'taxiing'
+
+!new Transition('initiateTakeoff')
+!initiateTakeoff.name := 'initiateTakeoff'
+
+!new Transition('ascendToCruise')
+!ascendToCruise.name := 'ascendToCruise'
+
+!new Transition('enterLayover')
+!enterLayover.name := 'enterLayover'
+
+!new Transition('resumeCruise')
+!resumeCruise.name := 'resumeCruise'
+
+!new Transition('beginLanding')
+!beginLanding.name := 'beginLanding'
+
+!new Transition('taxiAfterLanding')
+!taxiAfterLanding.name := 'taxiAfterLanding'
+
+!new TimeEvent('timeEventInitiateTakeoff')
+!timeEventInitiateTakeoff.time := 10
+
+!new TimeEvent('timeEventAscendToCruise')
+!timeEventAscendToCruise.time := 15
+
+!new TimeEvent('timeEventEnterLayover')
+!timeEventEnterLayover.time := 360
+
+!new TimeEvent('timeEventResumeCruise')
+!timeEventResumeCruise.time := 120
+
+!new TimeEvent('timeEventBeginLanding')
+!timeEventBeginLanding.time := 30
+
+!new TimeEvent('timeEventTaxiAfterLanding')
+!timeEventTaxiAfterLanding.time := 20
+
+!insert (internationalFlightController, boarding) into StateMachineContainsStates
+!insert (internationalFlightController, takeoff) into StateMachineContainsStates
+!insert (internationalFlightController, cruise) into StateMachineContainsStates
+!insert (internationalFlightController, layover) into StateMachineContainsStates
+!insert (internationalFlightController, landing) into StateMachineContainsStates
+!insert (internationalFlightController, taxiing) into StateMachineContainsStates
+
+!insert (internationalFlightController, boarding) into StateMachineStartsStates
+
+!insert (internationalFlightController, initiateTakeoff) into StateMachineContainsTransitions
+!insert (internationalFlightController, ascendToCruise) into StateMachineContainsTransitions
+!insert (internationalFlightController, enterLayover) into StateMachineContainsTransitions
+!insert (internationalFlightController, resumeCruise) into StateMachineContainsTransitions
+!insert (internationalFlightController, beginLanding) into StateMachineContainsTransitions
+!insert (internationalFlightController, taxiAfterLanding) into StateMachineContainsTransitions
+
+!insert (initiateTakeoff, timeEventInitiateTakeoff) into TransitionContainsEvents
+!insert (ascendToCruise, timeEventAscendToCruise) into TransitionContainsEvents
+!insert (enterLayover, timeEventEnterLayover) into TransitionContainsEvents
+!insert (resumeCruise, timeEventResumeCruise) into TransitionContainsEvents
+!insert (beginLanding, timeEventBeginLanding) into TransitionContainsEvents
+!insert (taxiAfterLanding, timeEventTaxiAfterLanding) into TransitionContainsEvents
+
+!insert (boarding, initiateTakeoff) into StateTransition
+!insert (initiateTakeoff, takeoff) into TransitionState
+
+!insert (takeoff, ascendToCruise) into StateTransition
+!insert (ascendToCruise, cruise) into TransitionState
+
+!insert (cruise, enterLayover) into StateTransition
+!insert (enterLayover, layover) into TransitionState
+
+!insert (layover, resumeCruise) into StateTransition
+!insert (resumeCruise, cruise) into TransitionState
+
+!insert (cruise, beginLanding) into StateTransition
+!insert (beginLanding, landing) into TransitionState
+
+!insert (landing, taxiAfterLanding) into StateTransition
+!insert (taxiAfterLanding, taxiing) into TransitionState

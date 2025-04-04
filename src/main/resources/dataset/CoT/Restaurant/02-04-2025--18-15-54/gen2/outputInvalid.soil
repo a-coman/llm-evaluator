@@ -1,0 +1,69 @@
+!new Restaurant('restaurant8')
+!restaurant8.name := 'The Traditional Inn'
+
+!new Owner('owner17')
+!owner17.name := 'Rajesh Patel'
+!owner17.percentageShares := 40
+
+!new Owner('owner18')
+!owner18.name := 'Emily Rivera'
+!owner18.percentageShares := 70
+
+!insert (restaurant8, owner17) into RestaurantOwner
+!insert (restaurant8, owner18) into RestaurantOwner
+
+!new Table('table18')
+!table18.number := 201
+!table18.description := 'Cozy corner table'
+!table18.capacity := 2
+
+!new Table('table19')
+!table19.number := 202
+!table19.description := 'Patio table for an outdoor experience'
+!table19.capacity := 0  -- Violates Table::PositiveCapacity invariant
+
+!new Table('table20')
+!table20.number := 203
+!table20.description := 'Family-sized dining table with a rustic appeal'
+!table20.capacity := 8
+
+!new Individual('individualReservation5')
+!individualReservation5.time := Time('20:00')
+!individualReservation5.date := Date('2023-12-01')
+!individualReservation5.numberPeople := 1
+!individualReservation5.name := 'Daniel Thompson'
+!individualReservation5.phoneNumber := '+1-202-555-0173'
+!individualReservation5.number := 1
+!individualReservation5.seating := #Inside
+!individualReservation5.smoking := #NonSmoking
+
+!insert (restaurant8, individualReservation5) into RestaurantReservation
+!insert (individualReservation5, table18) into ReservationTable
+
+!new Waiter('waiter14')
+!waiter14.name := 'Lucía Hernández'
+!waiter14.dateOfBirth := Date('1995-02-26')
+!waiter14.phoneNumber := '+1-202-555-0194'
+
+!insert (individualReservation5, waiter14) into ReservationWaiter
+
+!new HeadWaiter('headWaiter7')
+!headWaiter7.name := 'Benji Wong'
+!headWaiter7.dateOfBirth := Date('1985-09-10')
+!headWaiter7.phoneNumber := '+1-202-555-0235'
+
+!insert (headWaiter7, waiter14) into HeadWaiterWaiter
+
+!new Chef('chef12')
+!chef12.name := 'Fatima Amin'
+!chef12.dateOfBirth := Date('1983-01-30')
+!chef12.phoneNumber := '+1-202-555-0456'
+
+!new Cook('cook13')
+!cook13.name := 'Ariella Goldstein'
+!cook13.dateOfBirth := Date('1999-10-15')
+!cook13.phoneNumber := '+1-202-555-0654'
+!cook13.yearsOfExperience := 0  -- Violates Cook::PositiveExperience invariant
+
+!insert (chef12, cook13) into ChefCook
+

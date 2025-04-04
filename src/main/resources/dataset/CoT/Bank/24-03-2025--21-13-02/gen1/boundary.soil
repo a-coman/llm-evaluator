@@ -1,0 +1,33 @@
+!new Bank('bank2')
+!bank2.country := 'Greenland'
+!bank2.name := 'Arctica Bank'
+!bank2.bic := 'ARCTGLBX'
+
+!new Account('account3')
+!account3.iban := 'GL57 ARCT 0000 0000000001'
+!account3.balance := 0
+
+!new Account('account4')
+!account4.iban := 'GL57 ARCT 0000 0000000002'
+!account4.balance := 1
+
+!new Person('person4')
+!person4.firstName := 'Annalisa'
+!person4.lastName := 'Hansen'
+!person4.age := 18
+
+!new Person('person5')
+!person5.firstName := 'Ian'
+!person5.lastName := 'Frederiksen'
+!person5.age := 40
+
+!insert (person4, account3) into Ownership
+!insert (person4, account4) into Ownership
+!insert (person5, account4) into Ownership
+
+!insert (person4, account3) into Use
+!insert (person4, account4) into Use
+!insert (person5, account4) into Use
+
+!insert (bank2, account3) into AccountOfBanks
+!insert (bank2, account4) into AccountOfBanks

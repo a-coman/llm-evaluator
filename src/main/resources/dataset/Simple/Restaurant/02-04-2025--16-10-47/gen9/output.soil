@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant9')
+!restaurant9.name := 'Forest Feast'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner17')
+!owner17.name := 'Benjamin Foster'
+!owner17.percentageShares := 50
+
+!new Owner('owner18')
+!owner18.name := 'Olivia Hart'
+!owner18.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant9, owner17) into RestaurantOwner
+!insert (restaurant9, owner18) into RestaurantOwner
+
+-- Creating a variety of Tables
+!new Table('table17')
+!table17.number := 901
+!table17.description := 'Nature Table'
+!table17.capacity := 5
+
+!new Table('table18')
+!table18.number := 902
+!table18.description := 'Fireplace Spot'
+!table18.capacity := 3
+
+-- Creating a team of workers
+!new HeadWaiter('headwaiter9')
+!headwaiter9.name := 'Sophia Wells'
+!headwaiter9.dateOfBirth := Date('1987-07-08')
+!headwaiter9.phoneNumber := '555-6542'
+
+!new Waiter('waiter13')
+!waiter13.name := 'Ethan Wright'
+!waiter13.dateOfBirth := Date('1990-03-15')
+!waiter13.phoneNumber := '555-7891'
+!waiter13.spokenLanguage := #Spanish
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter9, waiter13) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a small group
+!new Individual('reservation9')
+!reservation9.time := Time('19:00')
+!reservation9.date := Date('2024-05-10')
+!reservation9.numberPeople := 4
+!reservation9.name := 'Friends Gathering'
+!reservation9.phoneNumber := '555-4321'
+!reservation9.number := 207
+!reservation9.seating := #Patio
+!reservation9.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant9, reservation9) into RestaurantReservation
+!insert (reservation9, waiter13) into ReservationWaiter
+!insert (reservation9, table17) into ReservationTable
+!insert (reservation9, table18) into ReservationTable
+
+-- Adding a unique MenuItem for the evening
+!new MenuItem('menuItem9')
+!menuItem9.description := 'Wood-Fired Pizza'
+!menuItem9.prepTime := 20.0
+!menuItem9.classification := #Main
+
+-- Associating MenuItem with a new Chef
+!new Chef('chef9')
+!chef9.name := 'Jamie Oliver'
+!chef9.dateOfBirth := Date('1975-05-27')
+!chef9.phoneNumber := '555-9990'
+
+!insert (menuItem9, chef9) into MenuItemChef
+
+-- Creating Cook under the supervision of Chef
+!new Cook('cook9')
+!cook9.name := 'Martha Stewart'
+!cook9.dateOfBirth := Date('1941-08-03')
+!cook9.phoneNumber := '555-1110'
+!cook9.yearsOfExperience := 40
+
+-- Establishing association between Chef and Cook
+!insert (chef9, cook9) into ChefCook
+
+-- Creating ItemOrder for the group gathering
+!new ItemOrder('order9')
+!order9.time := Time('19:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order9, menuItem9) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation9, order9) into ReservationItemOrdered

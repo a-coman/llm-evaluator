@@ -1,0 +1,114 @@
+!new Restaurant('restaurant6')
+!restaurant6.name := 'The Cozy Corner Tavern'
+
+!new Owner('owner13')
+!owner13.name := 'Margaret O\'Connell'
+!owner13.percentageShares := 65
+
+!new Owner('owner14')
+!owner14.name := 'Liam Byrne'
+!owner14.percentageShares := 35
+
+!insert (restaurant6, owner13) into RestaurantOwner
+!insert (restaurant6, owner14) into RestaurantOwner
+
+!new Table('table15')
+!table15.number := 4
+!table15.description := 'Intimate Corner Table'
+!table15.capacity := 4
+
+!new Individual('individualReservation3')
+!individualReservation3.time := Time('17:00')
+!individualReservation3.date := Date('2023-10-10')
+!individualReservation3.numberPeople := 1
+!individualReservation3.name := 'Patrick Finnigan'
+!individualReservation3.phoneNumber := '+353 123 456789'
+!individualReservation3.number := 1
+!individualReservation3.seating := #Inside
+!individualReservation3.smoking := #NonSmoking
+
+!insert (restaurant6, individualReservation3) into RestaurantReservation
+!insert (individualReservation3, table15) into ReservationTable
+
+!new Waiter('waiter11')
+!waiter11.name := 'Sean Kelly'
+!waiter11.dateOfBirth := Date('1992-01-15')
+!waiter11.phoneNumber := '+353 456 789012'
+
+!new HeadWaiter('headWaiter5')
+!headWaiter5.name := 'Unknown Waiter'
+!headWaiter5.dateOfBirth := Date('1970-01-01')  -- Placeholder data
+!headWaiter5.phoneNumber := '+353 000 0000000'  -- Placeholder data
+
+!insert (headWaiter5, waiter11) into HeadWaiterWaiter
+!insert (individualReservation3, waiter11) into ReservationWaiter
+
+!new ItemOrder('itemOrder5')
+!itemOrder5.time := Time('17:10')
+!insert (individualReservation3, itemOrder5) into ReservationItemOrdered
+
+!new MenuItem('menuItem8')
+!menuItem8.description := 'Traditional Irish Stew'
+!menuItem8.prepTime := 20.0
+!menuItem8.classification := #Main
+
+!insert (itemOrder5, menuItem8) into ItemOrderMenuItem
+
+!new MenuItem('menuItem9')
+!menuItem9.description := 'Brown Soda Bread'
+!menuItem9.prepTime := 10.0
+!menuItem9.classification := #Dessert -- Placeholder as Side is not defined
+!new ItemOrder('itemOrder6')
+!itemOrder6.time := Time('17:20')
+!insert (individualReservation3, itemOrder6) into ReservationItemOrdered
+!insert (itemOrder6, menuItem9) into ItemOrderMenuItem
+
+!new Chef('chef9')
+!chef9.name := 'Aoife Doran'
+
+!new Chef('chef10')
+!chef10.name := 'John McGowan'
+
+!insert (menuItem8, chef9) into MenuItemChef
+!insert (menuItem9, chef10) into MenuItemChef
+
+!new Cook('cook10')
+!cook10.name := 'Fiona O\'Reilly'
+!cook10.dateOfBirth := Date('1980-08-03')
+!cook10.yearsOfExperience := 15
+
+!new Cook('cook11')
+!cook11.name := 'Placeholder Cook'
+!cook11.dateOfBirth := Date('1980-01-01') -- Placeholder data
+!cook11.yearsOfExperience := 5
+
+!insert (chef9, cook10) into ChefCook
+!insert (chef10, cook11) into ChefCook
+
+!new FoodItem('foodItem16')
+!foodItem16.number := 16
+!foodItem16.description := 'Lamb'
+!foodItem16.purchaseFlag := true
+!foodItem16.unit := #Pound  -- Placeholder since Kilograms isn't defined
+
+!new FoodItem('foodItem17')
+!foodItem17.number := 17
+!foodItem17.description := 'Butter'
+!foodItem17.purchaseFlag := true
+!foodItem17.unit := #Gram
+
+!new Allergen('allergen9')
+!allergen9.type := #Lactose
+
+!insert (foodItem17, allergen9) into FoodItemAllergen
+
+!new FoodItem('foodItem18')
+!foodItem18.number := 18
+!foodItem18.description := 'Flour'
+!foodItem18.purchaseFlag := true
+!foodItem18.unit := #Pound  -- Placeholder since Bags isn't defined
+
+!new Allergen('allergen10')
+!allergen10.type := #Gluten
+
+!insert (foodItem18, allergen10) into FoodItemAllergen

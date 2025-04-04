@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice21')
+!rentalOffice21.name := 'Seaside Express Rentals'
+!rentalOffice21.number := 121
+!rentalOffice21.address := '202 Ocean Blvd, Jacksonville, FL'
+
+!new Truck('truck12')
+!truck12.id := 20
+!truck12.registrationState := #FL
+!truck12.licensePlateNumber := 'FL1001'
+!truck12.vehicleTypeCode := #TRUCK24
+!truck12.registrationLastMaintenanceDate := Date('2023-08-20')
+!truck12.expirationDate := Date('2024-08-20')
+!truck12.odometerReading := 15000
+!truck12.gasTankCapacity := 165.0
+!truck12.workingRadio := false
+!truck12.mileage := 14
+
+!new Individual('individualCustomer11')
+!individualCustomer11.name := 'Robert Davis'
+!individualCustomer11.address := '101 Palm St, Jacksonville, FL'
+!individualCustomer11.poorRisk := false
+!individualCustomer11.homePhone := '555-6677'
+!individualCustomer11.driverLicenseState := #FL
+!individualCustomer11.driverLicenseNumber := 9900112
+!individualCustomer11.driverLicenseExpirationDate := Date('2027-02-28')
+
+!new RentalAgreement('rentalAgreement20')
+!rentalAgreement20.number := 520
+!rentalAgreement20.rentalDate := Date('2023-12-25')
+!rentalAgreement20.anticipatedDuration := 7
+!rentalAgreement20.depositPaid := 180.0
+!rentalAgreement20.quotedDailyRate := 45.0
+!rentalAgreement20.quotedRatePerMile := 0.35
+
+!insert (rentalOffice21, truck12) into RentalOfficeVehicle
+!insert (rentalOffice21, rentalAgreement20) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice21, rentalAgreement20) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement20, truck12) into RentalAgreementVehicle
+!insert (rentalAgreement20, individualCustomer11) into RentalAgreementCustomer

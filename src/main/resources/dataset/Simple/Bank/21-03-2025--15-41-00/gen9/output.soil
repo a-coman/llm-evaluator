@@ -1,0 +1,51 @@
+!new Bank('bank10')
+!bank10.country := 'Canada'
+!bank10.name := 'Scotiabank'
+!bank10.bic := 'NOSCCATT'
+
+!new Account('account25')
+!account25.iban := 'CA000123450067890'
+!account25.balance := 2500
+
+!new Account('account26')
+!account26.iban := 'CA000987650032165'
+!account26.balance := 4000
+
+!new Account('account27')
+!account27.iban := 'CA000555550012345'
+!account27.balance := 0
+
+!new Person('person29')
+!person29.firstName := 'Ava'
+!person29.lastName := 'Johnson'
+!person29.age := 45
+
+!new Person('person30')
+!person30.firstName := 'Ethan'
+!person30.lastName := 'Williams'
+!person30.age := 30
+
+!new Person('person31')
+!person31.firstName := 'Olivia'
+!person31.lastName := 'Brown'
+!person31.age := 27
+
+-- Associations
+!insert (bank10, account25) into AccountOfBanks
+!insert (bank10, account26) into AccountOfBanks
+!insert (bank10, account27) into AccountOfBanks
+
+!insert (person29, account25) into Ownership
+!insert (person30, account25) into Ownership
+
+!insert (person30, account26) into Ownership
+!insert (person31, account26) into Ownership
+
+!insert (person31, account27) into Ownership
+!insert (person29, account27) into Ownership
+
+!insert (person29, account26) into Use
+!insert (person30, account27) into Use
+
+!insert (person31, account25) into Use
+!insert (person30, account25) into Use

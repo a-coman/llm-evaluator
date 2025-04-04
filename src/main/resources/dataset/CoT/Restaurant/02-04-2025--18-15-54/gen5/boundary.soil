@@ -1,0 +1,119 @@
+!new Restaurant('restaurant17')
+!restaurant17.name := 'Sky High Elegance'
+
+!new Owner('owner37')
+!owner37.name := 'Isabella Martinez'
+!owner37.percentageShares := 45
+
+!new Owner('owner38')
+!owner38.name := 'Thomas Elliott'
+!owner38.percentageShares := 40
+
+!new Owner('owner39')
+!owner39.name := 'Chen Wei'
+!owner39.percentageShares := 15
+
+!insert (restaurant17, owner37) into RestaurantOwner
+!insert (restaurant17, owner38) into RestaurantOwner
+!insert (restaurant17, owner39) into RestaurantOwner
+
+!new Table('table38')
+!table38.number := 10
+!table38.description := 'Private Rooftop View'
+!table38.capacity := 2
+
+!new Individual('individualReservation11')
+!individualReservation11.time := Time('20:00')
+!individualReservation11.date := Date('2023-09-30')
+!individualReservation11.numberPeople := 1
+!individualReservation11.name := 'Ava Thompson'
+!individualReservation11.phoneNumber := '+44 701 234 5678'
+!individualReservation11.number := 2023093002
+!individualReservation11.seating := #Inside  -- Using #Inside as placeholder for VIP
+!individualReservation11.smoking := #NonSmoking
+
+!insert (restaurant17, individualReservation11) into RestaurantReservation
+!insert (individualReservation11, table38) into ReservationTable
+
+!new HeadWaiter('headWaiter16')
+!headWaiter16.name := 'Oliver James'
+!headWaiter16.dateOfBirth := Date('1982-11-08')
+!headWaiter16.phoneNumber := '+44 701 345 6789'
+
+!new Waiter('waiter34')
+!waiter34.name := 'Lucy Carter'
+!waiter34.dateOfBirth := Date('1990-02-12')
+!waiter34.phoneNumber := '+44 701 456 7890'
+
+!insert (headWaiter16, waiter34) into HeadWaiterWaiter
+!insert (individualReservation11, waiter34) into ReservationWaiter
+
+!new ItemOrder('itemOrder22')
+!itemOrder22.time := Time('20:15')
+!insert (individualReservation11, itemOrder22) into ReservationItemOrdered
+
+!new MenuItem('menuItem27')
+!menuItem27.description := 'Truffle Risotto'
+!menuItem27.prepTime := 30.0
+!menuItem27.classification := #Main
+
+!insert (itemOrder22, menuItem27) into ItemOrderMenuItem
+
+!new MenuItem('menuItem28')
+!menuItem28.description := 'Filet Mignon'
+!menuItem28.prepTime := 25.0
+!menuItem28.classification := #Main
+
+!new ItemOrder('itemOrder23')
+!itemOrder23.time := Time('20:25')  -- Separate ItemOrder for the second menu item
+!insert (individualReservation11, itemOrder23) into ReservationItemOrdered
+!insert (itemOrder23, menuItem28) into ItemOrderMenuItem
+
+!new Chef('chef23')
+!chef23.name := 'Giorgio Russo'
+
+!new Chef('chef24')
+!chef24.name := 'Sophie Beaumont'
+
+!insert (menuItem27, chef23) into MenuItemChef
+!insert (menuItem28, chef24) into MenuItemChef
+
+!new Cook('cook28')
+!cook28.name := 'Marco Bellini'
+!cook28.dateOfBirth := Date('1985-11-21')
+!cook28.yearsOfExperience := 12
+
+!new Cook('cook29')
+!cook29.name := 'Alessandro Bianchi'  -- Dummy cook for chef24
+!cook29.dateOfBirth := Date('1990-03-15') -- Dummy date of birth
+!cook29.yearsOfExperience := 8  -- Dummy years of experience
+
+!insert (chef23, cook28) into ChefCook
+!insert (chef24, cook29) into ChefCook
+
+!new FoodItem('foodItem49')
+!foodItem49.number := 9001
+!foodItem49.description := 'Black Truffles'
+!foodItem49.purchaseFlag := true
+!foodItem49.unit := #Ounce
+
+!insert (menuItem27, foodItem49) into MenuItemFoodItem
+
+!new FoodItem('foodItem50')
+!foodItem50.number := 9002
+!foodItem50.description := 'Cream'
+!foodItem50.purchaseFlag := true
+!foodItem50.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!new Allergen('allergen24')
+!allergen24.type := #Lactose
+
+!insert (foodItem50, allergen24) into FoodItemAllergen
+
+!new FoodItem('foodItem51')
+!foodItem51.number := 9003
+!foodItem51.description := 'Beef Filet'
+!foodItem51.purchaseFlag := true
+!foodItem51.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!insert (menuItem28, foodItem51) into MenuItemFoodItem

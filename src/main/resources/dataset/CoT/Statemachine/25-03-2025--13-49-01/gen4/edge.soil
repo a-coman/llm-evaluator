@@ -1,0 +1,82 @@
+!new StateMachine('virtualConcertScheduler')
+!virtualConcertScheduler.name := 'virtualConcertScheduler'
+
+!new State('setup')
+!setup.name := 'setup'
+
+!new State('soundCheck')
+!soundCheck.name := 'soundCheck'
+
+!new State('livePerformance')
+!livePerformance.name := 'livePerformance'
+
+!new State('intermission')
+!intermission.name := 'intermission'
+
+!new State('postEvent')
+!postEvent.name := 'postEvent'
+
+!new Transition('completeSetup')
+!completeSetup.name := 'completeSetup'
+
+!new Transition('startPerformance')
+!startPerformance.name := 'startPerformance'
+
+!new Transition('beginIntermission')
+!beginIntermission.name := 'beginIntermission'
+
+!new Transition('resumePerformance')
+!resumePerformance.name := 'resumePerformance'
+
+!new Transition('endConcert')
+!endConcert.name := 'endConcert'
+
+!new TimeEvent('timeEventCompleteSetup')
+!timeEventCompleteSetup.time := 180
+
+!new TimeEvent('timeEventStartPerformance')
+!timeEventStartPerformance.time := 60
+
+!new TimeEvent('timeEventBeginIntermission')
+!timeEventBeginIntermission.time := 75
+
+!new TimeEvent('timeEventResumePerformance')
+!timeEventResumePerformance.time := 20
+
+!new TimeEvent('timeEventEndConcert')
+!timeEventEndConcert.time := 120
+
+!insert (virtualConcertScheduler, setup) into StateMachineContainsStates
+!insert (virtualConcertScheduler, soundCheck) into StateMachineContainsStates
+!insert (virtualConcertScheduler, livePerformance) into StateMachineContainsStates
+!insert (virtualConcertScheduler, intermission) into StateMachineContainsStates
+!insert (virtualConcertScheduler, postEvent) into StateMachineContainsStates
+
+!insert (virtualConcertScheduler, setup) into StateMachineStartsStates
+
+!insert (virtualConcertScheduler, completeSetup) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, startPerformance) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, beginIntermission) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, resumePerformance) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, endConcert) into StateMachineContainsTransitions
+
+!insert (completeSetup, timeEventCompleteSetup) into TransitionContainsEvents
+!insert (startPerformance, timeEventStartPerformance) into TransitionContainsEvents
+!insert (beginIntermission, timeEventBeginIntermission) into TransitionContainsEvents
+!insert (resumePerformance, timeEventResumePerformance) into TransitionContainsEvents
+!insert (endConcert, timeEventEndConcert) into TransitionContainsEvents
+
+!insert (setup, completeSetup) into StateTransition
+!insert (completeSetup, soundCheck) into TransitionState
+
+!insert (soundCheck, startPerformance) into StateTransition
+!insert (startPerformance, livePerformance) into TransitionState
+
+!insert (livePerformance, beginIntermission) into StateTransition
+!insert (beginIntermission, intermission) into TransitionState
+
+!insert (intermission, resumePerformance) into StateTransition
+!insert (resumePerformance, livePerformance) into TransitionState
+
+!insert (livePerformance, endConcert) into StateTransition
+!insert (endConcert, postEvent) into TransitionState

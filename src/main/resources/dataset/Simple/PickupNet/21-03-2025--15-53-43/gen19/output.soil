@@ -1,0 +1,44 @@
+!new Driver('driver20')
+!driver20.id := 'D020'
+!driver20.name := 'Oliver Garcia'
+
+!new Shipment('shipment34')
+!shipment34.id := 'S034'
+!shipment34.status := #DELIVERED
+
+!new Address('address39')
+!address39.text := '1616 Emerald Glade'
+
+!new Address('address40')
+!address40.text := '1717 Mystic Falls Way'
+
+!new GeoLocation('geoLocation39')
+!geoLocation39.latitude := 45.4215
+!geoLocation39.longitude := -75.6972
+
+!new GeoLocation('geoLocation40')
+!geoLocation40.latitude := 53.3498
+!geoLocation40.longitude := -6.2603
+
+!new Customer('customer20')
+!customer20.id := 'C020'
+!customer20.name := 'Grace Martinez'
+!customer20.twitterUserName := '@grace_martinez'
+
+!new Station('station19')
+
+!insert (driver20, shipment34) into DriverShipment
+
+!insert (shipment34, address39) into ShipmentContainsPickUpAddress
+!insert (shipment34, address40) into ShipmentContainsDeliveryAddress
+
+!insert (address39, geoLocation39) into AddressContainsGeoLocation
+!insert (address40, geoLocation40) into AddressContainsGeoLocation
+
+!insert (customer20, shipment34) into CustomerConsistsOfShipment
+
+!insert (station19, customer20) into StationContainsCustomer
+
+!insert (station19, shipment34) into StationShipment
+
+!insert (station19, driver20) into StationContainsDriver

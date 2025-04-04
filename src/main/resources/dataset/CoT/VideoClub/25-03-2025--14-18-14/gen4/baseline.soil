@@ -1,0 +1,60 @@
+!new Client('client401')
+!client401.clientId := 401
+!client401.isSuspended := false
+
+!new Client('client402')
+!client402.clientId := 402
+!client402.isSuspended := false
+
+!new Client('client403')
+!client403.clientId := 403
+!client403.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-11-22')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-11-05')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-11-12')
+
+!new Movie('cassetteKilimanjaroChronicles')
+!cassetteKilimanjaroChronicles.title := 'Kilimanjaro Chronicles'
+!cassetteKilimanjaroChronicles.availableCopies := 3
+!cassetteKilimanjaroChronicles.genre := #Action
+
+!new Series('cassetteEveningTalksVenice')
+!cassetteEveningTalksVenice.title := 'Evening Talks in Venice'
+!cassetteEveningTalksVenice.availableCopies := 2
+!cassetteEveningTalksVenice.episode := 10
+
+!new Series('cassetteFuturesFolly')
+!cassetteFuturesFolly.title := 'Future\'s Folly'
+!cassetteFuturesFolly.availableCopies := 5
+!cassetteFuturesFolly.episode := 2
+
+!new Actor('actorDayoAkin')
+!actorDayoAkin.name := 'Dayo Akin'
+
+!new Actor('actorGiuliaRizzo')
+!actorGiuliaRizzo.name := 'Giulia Rizzo'
+
+!new Actor('actorMarcoLombardi')
+!actorMarcoLombardi.name := 'Marco Lombardi'
+
+!new Actor('actorZaraKim')
+!actorZaraKim.name := 'Zara Kim'
+
+!insert (client401, rental1) into ClientRental
+!insert (client401, rental3) into ClientRental
+!insert (client402, rental2) into ClientRental
+
+!insert (rental1, cassetteKilimanjaroChronicles) into RentalCassette
+!insert (rental2, cassetteEveningTalksVenice) into RentalCassette
+!insert (rental3, cassetteKilimanjaroChronicles) into RentalCassette
+
+!insert (cassetteKilimanjaroChronicles, actorDayoAkin) into CassetteActor
+!insert (cassetteEveningTalksVenice, actorGiuliaRizzo) into CassetteActor
+!insert (cassetteEveningTalksVenice, actorMarcoLombardi) into CassetteActor
+!insert (cassetteFuturesFolly, actorZaraKim) into CassetteActor

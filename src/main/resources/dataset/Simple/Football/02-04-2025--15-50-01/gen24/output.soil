@@ -1,0 +1,164 @@
+!new Club('club47')
+!club47.name := 'Ravens FC'
+!club47.homeGround := 'Raven Roost'
+!club47.chairman := 'Jessica Hill'
+
+!new Club('club48')
+!club48.name := 'Cobras FC'
+!club48.homeGround := 'Cobra Den'
+!club48.chairman := 'Matthew Evans'
+
+!new Team('team47')
+!team47.name := 'Raven Talons'
+!insert (club47, team47) into ClubTeam
+
+!new Team('team48')
+!team48.name := 'Cobra Strike'
+!insert (club48, team48) into ClubTeam
+
+!new Player('player70')
+!player70.name := 'Olivia Clarke'
+!player70.age := 26
+!player70.bestFoot := #RIGHT
+!player70.phoneNumber := '987-654-3210'
+!insert (team47, player70) into TeamPlayer
+
+!new Player('player71')
+!player71.name := 'Lucas Martin'
+!player71.age := 27
+!player71.bestFoot := #LEFT
+!player71.phoneNumber := '876-543-2109'
+!insert (team47, player71) into TeamPlayer
+
+!new Player('player72')
+!player72.name := 'Amelia Johnson'
+!player72.age := 28
+!player72.bestFoot := #BOTH
+!player72.phoneNumber := '765-432-1098'
+!insert (team48, player72) into TeamPlayer
+
+!new Position('position70')
+!position70.positionName := #MIDFIELDER
+!insert (player70, position70) into PlayerPositions
+
+!new Position('position71')
+!position71.positionName := #FORWARD
+!insert (player71, position71) into PlayerPositions
+
+!new Position('position72')
+!position72.positionName := #DEFENDER
+!insert (player72, position72) into PlayerPositions
+
+!new TrainingSession('training47')
+!training47.date := '2024-11-05'
+!training47.location := 'Raven Nest'
+!training47.purpose := 'Dynamic Drills and Set Pieces'
+!insert (team47, training47) into TeamTraining
+
+!new TrainingSession('training48')
+!training48.date := '2024-11-06'
+!training48.location := 'Cobra Training Ground'
+!training48.purpose := 'Counter-Attack Strategies'
+!insert (team48, training48) into TeamTraining
+
+!new TrainingNotes('trainingNotes47')
+!trainingNotes47.note := 'Improved set-piece execution and dynamic plays'
+!trainingNotes47.date := '2024-11-05'
+!insert (training47, trainingNotes47) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes48')
+!trainingNotes48.note := 'Emphasized quick transitions and counter-attacks'
+!trainingNotes48.date := '2024-11-06'
+!insert (training48, trainingNotes48) into TrainingTrainingNotes
+
+!new TrainingObjective('objective70')
+!objective70.areaToImprove := 'Set-Piece Efficiency'
+!objective70.startDate := '2024-08-01'
+!objective70.endDate := '2024-11-01'
+!objective70.success := true
+!insert (objective70, player70) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective71')
+!objective71.areaToImprove := 'Goal Scoring Techniques'
+!objective71.startDate := '2024-08-15'
+!objective71.endDate := '2024-11-15'
+!objective71.success := false
+!insert (objective71, player71) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective72')
+!objective72.areaToImprove := 'Defensive Stability'
+!objective72.startDate := '2024-07-10'
+!objective72.endDate := '2024-10-10'
+!objective72.success := true
+!insert (objective72, player72) into TrainingObjectivePlayer
+
+!new Competition('competition24')
+!competition24.name := 'Oceanic League Final'
+!competition24.type := 'Championship Match'
+
+!new Match('match24')
+!match24.date := '2024-11-20'
+!match24.homeAway := true
+!insert (competition24, match24) into CompetitionMatch
+!insert (team47, match24) into LocalMatch
+!insert (team48, match24) into VisitorMatch
+
+!new MatchReport('report24')
+!report24.duration := 90
+!report24.scoreVisitor := 2
+!report24.scoreLocal := 3
+!insert (match24, report24) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer70')
+!matchPlayer70.booked := true
+!matchPlayer70.goals := 1
+!matchPlayer70.rating := 8
+!insert (player70, matchPlayer70) into PlayerMatch
+!insert (match24, matchPlayer70) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer72')
+!matchPlayer72.booked := false
+!matchPlayer72.goals := 0
+!matchPlayer72.rating := 7
+!insert (player72, matchPlayer72) into PlayerMatch
+!insert (match24, matchPlayer72) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition70')
+!matchPlayerPosition70.positionName := #MIDFIELDER
+!matchPlayerPosition70.number := 6
+!insert (matchPlayer70, matchPlayerPosition70) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition72')
+!matchPlayerPosition72.positionName := #DEFENDER
+!matchPlayerPosition72.number := 3
+!insert (matchPlayer72, matchPlayerPosition72) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event91')
+!event91.eventType := #GOAL
+!event91.time := 12
+!insert (match24, event91) into MatchMatchEvent
+
+!new MatchEvent('event92')
+!event92.eventType := #GOAL
+!event92.time := 30
+!insert (match24, event92) into MatchMatchEvent
+
+!new MatchEvent('event93')
+!event93.eventType := #GOAL
+!event93.time := 47
+!insert (match24, event93) into MatchMatchEvent
+
+!new MatchEvent('event94')
+!event94.eventType := #GOAL
+!event94.time := 69
+!insert (match24, event94) into MatchMatchEvent
+
+!new MatchEvent('event95')
+!event95.eventType := #GOAL
+!event95.time := 85
+!insert (match24, event95) into MatchMatchEvent
+
+!new MatchNote('matchNote24')
+!matchNote24.note := 'Raven Talons edged out a victory in a high-intensity match'
+!matchNote24.date := '2024-11-20'
+!insert (match24, matchNote24) into MatchMatchNote

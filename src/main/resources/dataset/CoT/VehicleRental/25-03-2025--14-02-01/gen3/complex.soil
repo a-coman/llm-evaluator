@@ -1,0 +1,93 @@
+!new RentalOffice('rentalOffice17')
+!rentalOffice17.name := 'Urban Mobility Rentals – Downtown Branch'
+!rentalOffice17.number := 401
+!rentalOffice17.address := '500 Michigan Ave, Chicago, IL, 60611'
+
+!new Truck('truck15')
+!truck15.id := 32
+!truck15.registrationState := #CO
+!truck15.licensePlateNumber := 'CHI5890'
+!truck15.vehicleTypeCode := #TRUCK
+!truck15.registrationLastMaintenanceDate := Date('2023-04-25')
+!truck15.expirationDate := Date('2024-04-24')
+!truck15.odometerReading := 22000
+!truck15.gasTankCapacity := 24.0
+!truck15.workingRadio := true
+!truck15.mileage := 14
+
+!new Vehicle('vehicle18')
+!vehicle18.id := 33
+!vehicle18.registrationState := #CO
+!vehicle18.licensePlateNumber := 'CHICAR21'
+!vehicle18.vehicleTypeCode := #TRUCK10
+!vehicle18.registrationLastMaintenanceDate := Date('2023-08-05')
+!vehicle18.expirationDate := Date('2024-08-04')
+
+!new Vehicle('vehicle19')
+!vehicle19.id := 34
+!vehicle19.registrationState := #CO
+!vehicle19.licensePlateNumber := 'ILES304'
+!vehicle19.vehicleTypeCode := #OPEN_TRAILER
+!vehicle19.registrationLastMaintenanceDate := Date('2023-06-15')
+!vehicle19.expirationDate := Date('2024-06-14')
+
+!new Individual('individualCustomer12')
+!individualCustomer12.name := 'Jamal Carter'
+!individualCustomer12.address := '905 W Jackson Blvd, Chicago, IL, 60607'
+!individualCustomer12.poorRisk := false
+!individualCustomer12.homePhone := '312-555-0294'
+!individualCustomer12.driverLicenseState := #CO
+!individualCustomer12.driverLicenseNumber := 9087654
+!individualCustomer12.driverLicenseExpirationDate := Date('2026-05-05')
+
+!new Company('company14')
+!company14.name := 'Midtown Delivery Services'
+!company14.address := '1500 State St, Chicago, IL, 60610'
+!company14.poorRisk := false
+!company14.idNumber := 776543210
+
+!new RentalAgreement('rentalAgreement26')
+!rentalAgreement26.number := 30501
+!rentalAgreement26.rentalDate := Date('2023-10-03')
+!rentalAgreement26.anticipatedDuration := 2
+!rentalAgreement26.depositPaid := 150.00
+!rentalAgreement26.quotedDailyRate := 65.00
+!rentalAgreement26.quotedRatePerMile := 0.35
+
+!new RentalAgreement('rentalAgreement27')
+!rentalAgreement27.number := 30502
+!rentalAgreement27.rentalDate := Date('2023-10-05')
+!rentalAgreement27.anticipatedDuration := 5
+!rentalAgreement27.depositPaid := 250.00
+!rentalAgreement27.quotedDailyRate := 45.00
+!rentalAgreement27.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement28')
+!rentalAgreement28.number := 30503
+!rentalAgreement28.rentalDate := Date('2023-10-07')
+!rentalAgreement28.anticipatedDuration := 3
+!rentalAgreement28.depositPaid := 100.00
+!rentalAgreement28.quotedDailyRate := 60.00
+!rentalAgreement28.quotedRatePerMile := 0.40
+
+!insert (rentalOffice17, truck15) into RentalOfficeVehicle
+!insert (rentalOffice17, vehicle18) into RentalOfficeVehicle
+!insert (rentalOffice17, vehicle19) into RentalOfficeVehicle
+
+!insert (rentalOffice17, rentalAgreement26) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice17, rentalAgreement26) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement26, truck15) into RentalAgreementVehicle
+!insert (rentalAgreement26, individualCustomer12) into RentalAgreementCustomer
+
+!insert (rentalOffice17, rentalAgreement27) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice17, rentalAgreement27) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement27, vehicle18) into RentalAgreementVehicle
+!insert (rentalAgreement27, company14) into RentalAgreementCustomer
+
+!insert (rentalOffice17, rentalAgreement28) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice17, rentalAgreement28) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement28, vehicle19) into RentalAgreementVehicle
+!insert (rentalAgreement28, individualCustomer12) into RentalAgreementCustomer

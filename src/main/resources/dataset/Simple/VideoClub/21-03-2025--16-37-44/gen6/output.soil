@@ -1,0 +1,35 @@
+-- New Client instance with different attributes
+!new Client('client8')
+!client8.clientId := 8
+!client8.isSuspended := false
+
+-- New Rental instance with a unique date
+!new Rental('rental7')
+!rental7.date := Date('2023-08-20')
+
+-- New Movie instance with a distinctive title and genre
+!new Movie('movie7')
+!movie7.title := 'Journey Beyond'
+!movie7.availableCopies := 5
+!movie7.genre := #Action
+
+-- New Series instance with unique combinations of episodes and copies
+!new Series('series8')
+!series8.title := 'The Forgotten Era'
+!series8.availableCopies := 8
+!series8.episode := 6
+
+-- New Actor instance with a new name
+!new Actor('actor7')
+!actor7.name := 'Sophia Blue'
+
+-- Establishing relationships between the client and the rental
+!insert (client8, rental7) into ClientRental
+
+-- Associating the rental with the new movie and series
+!insert (rental7, movie7) into RentalCassette
+!insert (rental7, series8) into RentalCassette
+
+-- Associating the new movie and series with the actor
+!insert (movie7, actor7) into CassetteActor
+!insert (series8, actor7) into CassetteActor

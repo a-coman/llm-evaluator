@@ -1,0 +1,142 @@
+!new Restaurant('restaurant10')
+!restaurant10.name := 'Mediterranean Memories Bistro'
+
+!new Owner('owner22')
+!owner22.name := 'Sophia Xenides'
+!owner22.percentageShares := 40
+
+!new Owner('owner23')
+!owner23.name := 'Kostas Pappas'
+!owner23.percentageShares := 30
+
+!new Owner('owner24')
+!owner24.name := 'Eleni Petrou'
+!owner24.percentageShares := 30
+
+!insert (restaurant10, owner22) into RestaurantOwner
+!insert (restaurant10, owner23) into RestaurantOwner
+!insert (restaurant10, owner24) into RestaurantOwner
+
+!new Table('table24')
+!table24.number := 5
+!table24.description := 'Sunlit Terrace Long Table'
+!table24.capacity := 20
+
+!new Banquet('banquet8')
+!banquet8.date := Date('2023-12-24')
+!banquet8.time := Time('13:00')
+!banquet8.numberPeople := 20
+!banquet8.name := 'Papadakis Family Reunion'
+!banquet8.phoneNumber := '+30 210 9876543'
+!banquet8.number := 20231224
+!banquet8.groupName := 'Papadakis Family'
+!banquet8.paymentMethod := #Cash
+!banquet8.busService := true
+
+!insert (restaurant10, banquet8) into RestaurantReservation
+!insert (banquet8, table24) into ReservationTable
+
+!new ItemOrder('itemOrder10')
+!itemOrder10.time := Time('13:15')
+!insert (banquet8, itemOrder10) into ReservationItemOrdered
+
+!new MenuItem('menuItem14')
+!menuItem14.description := 'Grilled Octopus'
+!menuItem14.prepTime := 25.0
+!menuItem14.classification := #Main
+
+!insert (itemOrder10, menuItem14) into ItemOrderMenuItem
+!insert (menuItem14, chef14) into MenuItemChef
+
+!new ItemOrder('itemOrder11')
+!itemOrder11.time := Time('13:16')  -- A separate order for the second item
+!insert (banquet8, itemOrder11) into ReservationItemOrdered
+
+!new MenuItem('menuItem15')
+!menuItem15.description := 'Spanakopita'
+!menuItem15.prepTime := 15.0
+!menuItem15.classification := #Apetizer
+
+!insert (itemOrder11, menuItem15) into ItemOrderMenuItem
+
+!new Chef('chef14')
+!chef14.name := 'Maria Eleftheriou'
+
+!new Chef('chef15')
+!chef15.name := 'Nikos Souvlakis'
+
+!insert (menuItem14, chef14) into MenuItemChef
+!insert (menuItem15, chef15) into MenuItemChef
+
+!new Cook('cook16')
+!cook16.name := 'Thanos Marinakis'
+!cook16.dateOfBirth := Date('1980-07-12')
+!cook16.yearsOfExperience := 15
+
+!new Cook('cook17')
+!cook17.name := 'Demo Cook for Souvlakis'
+!cook17.dateOfBirth := Date('1985-01-01')  -- Placeholder date of birth
+!cook17.yearsOfExperience := 5  -- Placeholder years of experience
+
+!insert (chef14, cook16) into ChefCook
+!insert (chef15, cook17) into ChefCook
+
+!new FoodItem('foodItem24')
+!foodItem24.number := 501
+!foodItem24.description := 'Octopus'
+!foodItem24.purchaseFlag := true
+!foodItem24.unit := #Pound  -- Using #Pound as placeholder
+
+!new Allergen('allergen13')
+!allergen13.type := #Seafood
+
+!insert (foodItem24, allergen13) into FoodItemAllergen
+
+!new FoodItem('foodItem25')
+!foodItem25.number := 502
+!foodItem25.description := 'Feta Cheese'
+!foodItem25.purchaseFlag := true
+!foodItem25.unit := #Dozen  -- Using #Dozen as placeholder for Blocks
+
+!new Allergen('allergen14')
+!allergen14.type := #Lactose
+
+!insert (foodItem25, allergen14) into FoodItemAllergen
+
+!new FoodItem('foodItem26')
+!foodItem26.number := 503
+!foodItem26.description := 'Phyllo Dough'
+!foodItem26.purchaseFlag := true
+!foodItem26.unit := #Sheet
+
+!new Allergen('allergen15')
+!allergen15.type := #Gluten
+
+!insert (foodItem26, allergen15) into FoodItemAllergen
+
+!new HeadWaiter('headWaiter9')
+!headWaiter9.name := 'Giorgos Laskaris'
+!headWaiter9.dateOfBirth := Date('1978-10-05')
+!headWaiter9.phoneNumber := '+30 694 1234567'
+
+!new Waiter('waiter17')
+!waiter17.name := 'Mario Spiros'
+!waiter17.dateOfBirth := Date('1985-12-14')
+!waiter17.phoneNumber := '+30 697 8901234'
+
+!new Waiter('waiter18')
+!waiter18.name := 'Eleni Vasilikou'
+!waiter18.dateOfBirth := Date('1992-04-03')
+!waiter18.phoneNumber := '+30 695 1237890'
+
+!insert (headWaiter9, waiter17) into HeadWaiterWaiter
+!insert (headWaiter9, waiter18) into HeadWaiterWaiter
+!insert (banquet8, waiter17) into ReservationWaiter
+!insert (banquet8, waiter18) into ReservationWaiter
+
+!new BusDriver('busdriver9')
+!busdriver9.name := 'Andreas Kostopoulos'
+!busdriver9.dateOfBirth := Date('1965-05-19')
+!busdriver9.phoneNumber := '+30 699 5678901'
+
+!insert (banquet8, busdriver9) into BanquetBusDriver

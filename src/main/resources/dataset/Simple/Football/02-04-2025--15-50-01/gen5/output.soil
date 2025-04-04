@@ -1,0 +1,159 @@
+!new Club('club9')
+!club9.name := 'Sharks United'
+!club9.homeGround := 'Shark Bay Stadium'
+!club9.chairman := 'George Harris'
+
+!new Club('club10')
+!club10.name := 'Rhinos FC'
+!club10.homeGround := 'Rhino Dome'
+!club10.chairman := 'Catherine Lewis'
+
+!new Team('team9')
+!team9.name := 'Shark Strikers'
+!insert (club9, team9) into ClubTeam
+
+!new Team('team10')
+!team10.name := 'Rhino Rampage'
+!insert (club10, team10) into ClubTeam
+
+!new Player('player13')
+!player13.name := 'Chris Baker'
+!player13.age := 32
+!player13.bestFoot := #BOTH
+!player13.phoneNumber := '010-123-4567'
+!insert (team9, player13) into TeamPlayer
+
+!new Player('player14')
+!player14.name := 'Alex Hunter'
+!player14.age := 27
+!player14.bestFoot := #LEFT
+!player14.phoneNumber := '020-234-5678'
+!insert (team9, player14) into TeamPlayer
+
+!new Player('player15')
+!player15.name := 'Sandra Black'
+!player15.age := 22
+!player15.bestFoot := #RIGHT
+!player15.phoneNumber := '030-345-6789'
+!insert (team10, player15) into TeamPlayer
+
+!new Position('position13')
+!position13.positionName := #GOALKEEPER
+!insert (player13, position13) into PlayerPositions
+
+!new Position('position14')
+!position14.positionName := #MIDFIELDER
+!insert (player14, position14) into PlayerPositions
+
+!new Position('position15')
+!position15.positionName := #DEFENDER
+!insert (player15, position15) into PlayerPositions
+
+!new TrainingSession('training9')
+!training9.date := '2023-11-05'
+!training9.location := 'Shark Training Grounds'
+!training9.purpose := 'Team Coordination'
+!insert (team9, training9) into TeamTraining
+
+!new TrainingSession('training10')
+!training10.date := '2023-11-06'
+!training10.location := 'Rhino Training Complex'
+!training10.purpose := 'Strength Conditioning'
+!insert (team10, training10) into TeamTraining
+
+!new TrainingNotes('trainingNotes9')
+!trainingNotes9.note := 'Improved synchronization among teammates'
+!trainingNotes9.date := '2023-11-05'
+!insert (training9, trainingNotes9) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes10')
+!trainingNotes10.note := 'Focused on building physical strength'
+!trainingNotes10.date := '2023-11-06'
+!insert (training10, trainingNotes10) into TrainingTrainingNotes
+
+!new TrainingObjective('objective13')
+!objective13.areaToImprove := 'Coordination'
+!objective13.startDate := '2023-10-15'
+!objective13.endDate := '2023-12-15'
+!objective13.success := true
+!insert (objective13, player13) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective14')
+!objective14.areaToImprove := 'Ball Handling'
+!objective14.startDate := '2023-09-10'
+!objective14.endDate := '2023-11-10'
+!objective14.success := false
+!insert (objective14, player14) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective15')
+!objective15.areaToImprove := 'Defensive Agility'
+!objective15.startDate := '2023-08-01'
+!objective15.endDate := '2023-10-30'
+!objective15.success := true
+!insert (objective15, player15) into TrainingObjectivePlayer
+
+!new Competition('competition5')
+!competition5.name := 'Intercontinental Cup'
+!competition5.type := 'Knockout Stage'
+
+!new Match('match5')
+!match5.date := '2023-12-01'
+!match5.homeAway := false
+!insert (competition5, match5) into CompetitionMatch
+!insert (team9, match5) into LocalMatch
+!insert (team10, match5) into VisitorMatch
+
+!new MatchReport('report5')
+!report5.duration := 120
+!report5.scoreVisitor := 2
+!report5.scoreLocal := 2
+!insert (match5, report5) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer13')
+!matchPlayer13.booked := true
+!matchPlayer13.goals := 0
+!matchPlayer13.rating := 6
+!insert (player13, matchPlayer13) into PlayerMatch
+!insert (match5, matchPlayer13) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer15')
+!matchPlayer15.booked := false
+!matchPlayer15.goals := 1
+!matchPlayer15.rating := 8
+!insert (player15, matchPlayer15) into PlayerMatch
+!insert (match5, matchPlayer15) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition13')
+!matchPlayerPosition13.positionName := #GOALKEEPER
+!matchPlayerPosition13.number := 1
+!insert (matchPlayer13, matchPlayerPosition13) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition15')
+!matchPlayerPosition15.positionName := #DEFENDER
+!matchPlayerPosition15.number := 3
+!insert (matchPlayer15, matchPlayerPosition15) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event16')
+!event16.eventType := #GOAL
+!event16.time := 30
+!insert (match5, event16) into MatchMatchEvent
+
+!new MatchEvent('event17')
+!event17.eventType := #GOAL
+!event17.time := 70
+!insert (match5, event17) into MatchMatchEvent
+
+!new MatchEvent('event18')
+!event18.eventType := #GOAL
+!event18.time := 95
+!insert (match5, event18) into MatchMatchEvent
+
+!new MatchEvent('event19')
+!event19.eventType := #GOAL
+!event19.time := 115
+!insert (match5, event19) into MatchMatchEvent
+
+!new MatchNote('matchNote5')
+!matchNote5.note := 'Intense match ending in penalty shootout'
+!matchNote5.date := '2023-12-01'
+!insert (match5, matchNote5) into MatchMatchNote

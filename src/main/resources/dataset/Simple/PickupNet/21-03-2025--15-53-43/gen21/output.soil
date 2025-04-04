@@ -1,0 +1,53 @@
+!new Driver('driver22')
+!driver22.id := 'D022'
+!driver22.name := 'Liam Adams'
+
+!new Shipment('shipment37')
+!shipment37.id := 'S037'
+!shipment37.status := #NEW
+
+!new Shipment('shipment38')
+!shipment38.id := 'S038'
+!shipment38.status := #DELIVERED
+
+!new Address('address43')
+!address43.text := '2020 Elmwood Lane'
+
+!new Address('address44')
+!address44.text := '2121 Whispering Pines Path'
+
+!new GeoLocation('geoLocation43')
+!geoLocation43.latitude := 35.2271
+!geoLocation43.longitude := -80.8431
+
+!new GeoLocation('geoLocation44')
+!geoLocation44.latitude := 43.651070
+!geoLocation44.longitude := -79.347015
+
+!new Customer('customer22')
+!customer22.id := 'C022'
+!customer22.name := 'Mia Hughes'
+!customer22.twitterUserName := '@mia_hughes'
+
+!new Station('station21')
+
+!insert (driver22, shipment38) into DriverShipment
+
+!insert (shipment37, address43) into ShipmentContainsPickUpAddress
+!insert (shipment37, address44) into ShipmentContainsDeliveryAddress
+
+!insert (shipment38, address44) into ShipmentContainsPickUpAddress
+!insert (shipment38, address43) into ShipmentContainsDeliveryAddress
+
+!insert (address43, geoLocation43) into AddressContainsGeoLocation
+!insert (address44, geoLocation44) into AddressContainsGeoLocation
+
+!insert (customer22, shipment37) into CustomerConsistsOfShipment
+!insert (customer22, shipment38) into CustomerConsistsOfShipment
+
+!insert (station21, customer22) into StationContainsCustomer
+
+!insert (station21, shipment37) into StationShipment
+!insert (station21, shipment38) into StationShipment
+
+!insert (station21, driver22) into StationContainsDriver

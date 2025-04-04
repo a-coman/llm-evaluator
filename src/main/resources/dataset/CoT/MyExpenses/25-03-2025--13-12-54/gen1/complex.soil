@@ -1,0 +1,64 @@
+!new Expense('octoberMonthlyExpense')
+!octoberMonthlyExpense.amount := 800.00
+!octoberMonthlyExpense.startDate := Date('2023-10-01')
+!octoberMonthlyExpense.endDate := Date('2023-10-31')
+
+!new Bill('groceryShopping')
+!groceryShopping.amount := 250.00
+!groceryShopping.category := 'Groceries'
+!groceryShopping.date := Date('2023-10-02')
+!groceryShopping.paymentMethod := #CREDIT_CARD
+!groceryShopping.status := #VERIFIED
+
+!new Bill('utilityPayment')
+!utilityPayment.amount := 150.00
+!utilityPayment.category := 'Utilities'
+!utilityPayment.date := Date('2023-10-05')
+!utilityPayment.paymentMethod := #CHECK
+!utilityPayment.status := #PENDING
+
+!new Bill('diningOut')
+!diningOut.amount := 100.00
+!diningOut.category := 'Entertainment'
+!diningOut.date := Date('2023-10-15')
+!diningOut.paymentMethod := #CASH
+!diningOut.status := #VERIFIED
+
+!new Bill('internetSubscription')
+!internetSubscription.amount := 100.00
+!internetSubscription.category := 'Internet and Communication'
+!internetSubscription.date := Date('2023-10-20')
+!internetSubscription.paymentMethod := #CREDIT_CARD
+!internetSubscription.status := #VALIDATED
+
+!new Bill('publicTransportRefill')
+!publicTransportRefill.amount := 200.00
+!publicTransportRefill.category := 'Transportation'
+!publicTransportRefill.date := Date('2023-10-28')
+!publicTransportRefill.paymentMethod := #CREDIT_CARD
+!publicTransportRefill.status := #VERIFIED
+
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!insert (groceryShopping, australianDollar) into BillCurrency
+!insert (utilityPayment, australianDollar) into BillCurrency
+!insert (diningOut, australianDollar) into BillCurrency
+!insert (internetSubscription, australianDollar) into BillCurrency
+!insert (publicTransportRefill, australianDollar) into BillCurrency
+
+!insert (octoberMonthlyExpense, groceryShopping) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, utilityPayment) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, diningOut) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, internetSubscription) into ExpenseContainsBills
+!insert (octoberMonthlyExpense, publicTransportRefill) into ExpenseContainsBills
+
+!new Comment('comment1')
+!comment1.text := 'Reviewed and approved all transactions for groceries. Need to adjust expenditure next month.'
+
+!new Comment('comment2')
+!comment2.text := 'Utility payment pending confirmation from the service provider. Awaiting bill status update.'
+
+!insert (octoberMonthlyExpense, comment1) into ExpenseComment
+!insert (octoberMonthlyExpense, comment2) into ExpenseComment

@@ -1,0 +1,52 @@
+!new Driver('driver40')
+!driver40.id := 'D005'
+!driver40.name := 'Liam O\'Brien'
+
+!new Driver('driver41')
+!driver41.id := 'D006'
+!driver41.name := 'Yasmin Khan'
+
+!new Shipment('shipment42')
+!shipment42.id := 'SHP007'
+!shipment42.status := #DELIVERED
+
+!new Address('pickupAddress42')
+!pickupAddress42.text := 'The Louvre Museum, Rue de Rivoli, 75001 Paris, France'
+
+!new GeoLocation('pickupGeoLocation42')
+!pickupGeoLocation42.latitude := 48.8606
+!pickupGeoLocation42.longitude := 2.3376
+
+!new Address('deliveryAddress42')
+!deliveryAddress42.text := 'Metropolitan Museum of Art, 1000 5th Ave, New York, NY'
+
+!new GeoLocation('deliveryGeoLocation42')
+!deliveryGeoLocation42.latitude := 40.7794
+!deliveryGeoLocation42.longitude := -73.9632
+
+!new Station('station29')
+
+!new Customer('customer42')
+!customer42.id := 'CUST007'
+!customer42.name := 'Global Art Consortium'
+!customer42.twitterUserName := '@globalartnetwork'
+
+!insert (driver40, shipment42) into DriverShipment
+
+!insert (shipment42, pickupAddress42) into ShipmentContainsPickUpAddress
+
+!insert (shipment42, deliveryAddress42) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress42, pickupGeoLocation42) into AddressContainsGeoLocation
+
+!insert (deliveryAddress42, deliveryGeoLocation42) into AddressContainsGeoLocation
+
+!insert (customer42, shipment42) into CustomerConsistsOfShipment
+
+!insert (station29, customer42) into StationContainsCustomer
+
+!insert (station29, shipment42) into StationShipment
+
+!insert (station29, driver40) into StationContainsDriver
+
+!insert (station29, driver41) into StationContainsDriver

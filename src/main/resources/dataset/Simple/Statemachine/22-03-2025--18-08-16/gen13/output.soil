@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine14')
+!stateMachine14.name := 'auditMachine'
+
+!new State('state36')
+!state36.name := 'preAudit'
+
+!new State('state37')
+!state37.name := 'auditInProgress'
+
+!new State('state38')
+!state38.name := 'postAudit'
+
+!new Transition('transition31')
+!transition31.name := 'preToInProgress'
+
+!new Transition('transition32')
+!transition32.name := 'inProgressToPost'
+
+!new TimeEvent('event31')
+!event31.time := 18
+
+!new TimeEvent('event32')
+!event32.time := 28
+
+!insert (stateMachine14, state36) into StateMachineContainsStates
+!insert (stateMachine14, state37) into StateMachineContainsStates
+!insert (stateMachine14, state38) into StateMachineContainsStates
+
+!insert (stateMachine14, transition31) into StateMachineContainsTransitions
+!insert (stateMachine14, transition32) into StateMachineContainsTransitions
+
+!insert (transition31, event31) into TransitionContainsEvents
+!insert (transition32, event32) into TransitionContainsEvents
+
+!insert (state36, transition31) into StateTransition
+!insert (state37, transition32) into StateTransition
+
+!insert (transition31, state37) into TransitionState
+!insert (transition32, state38) into TransitionState
+
+!insert (stateMachine14, state36) into StateMachineStartsStates

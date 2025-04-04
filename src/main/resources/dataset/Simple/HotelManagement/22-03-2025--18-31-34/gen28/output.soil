@@ -1,0 +1,47 @@
+!new Booking('booking29')
+!booking29.startDate := '2026-01-15'
+!booking29.endDate := '2026-01-22'
+!booking29.canceled := false
+!booking29.bookingId := 128
+!booking29.confirmed := true
+
+!new Bill('bill29')
+!bill29.price := 1450.00
+!bill29.billId := 228
+
+!new FreeRoomTypesDTO('roomType29')
+!roomType29.roomTypeDescription := 'Jungle Treehouse'
+!roomType29.numBeds := 2
+!roomType29.pricePerNight := 200.00
+!roomType29.numFreeRooms := 2
+
+!new Customer('customer29')
+!customer29.firstName := 'Belle'
+!customer29.lastName := 'Green'
+
+!new RoomReservation('reservation29')
+!reservation29.checkInDate := '2026-01-15'
+!reservation29.checkOutDate := '2026-01-22'
+
+!new RoomExtra('extra29')
+!extra29.price := 100.00
+!extra29.description := 'Jungle Safari Tour'
+
+!new Room('room44')
+!room44.numBeds := 2
+!room44.pricePerNight := 190.00
+!room44.occupied := false
+!room44.blocked := false
+!room44.roomNumber := 144
+
+!insert (booking29, bill29) into BookingBill
+
+!insert (booking29, customer29) into BookingCustomer
+
+!insert (booking29, reservation29) into BookingRoomReservation
+
+!insert (reservation29, extra29) into RoomReservationExtras
+
+!insert (reservation29, room44) into RoomReservationRoom
+
+!insert (bill29, reservation29) into BillRoomReservation

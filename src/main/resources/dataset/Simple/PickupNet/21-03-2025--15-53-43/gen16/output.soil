@@ -1,0 +1,53 @@
+!new Driver('driver17')
+!driver17.id := 'D017'
+!driver17.name := 'Sophia Anderson'
+
+!new Shipment('shipment28')
+!shipment28.id := 'S028'
+!shipment28.status := #NEW
+
+!new Shipment('shipment29')
+!shipment29.id := 'S029'
+!shipment29.status := #DELIVERED
+
+!new Address('address33')
+!address33.text := '9999 Sandy Beach Path'
+
+!new Address('address34')
+!address34.text := '1010 Desert Boulevard'
+
+!new GeoLocation('geoLocation33')
+!geoLocation33.latitude := 40.4168
+!geoLocation33.longitude := -3.7038
+
+!new GeoLocation('geoLocation34')
+!geoLocation34.latitude := 55.7558
+!geoLocation34.longitude := 37.6173
+
+!new Customer('customer17')
+!customer17.id := 'C017'
+!customer17.name := 'Liam Walker'
+!customer17.twitterUserName := '@liam_walker'
+
+!new Station('station16')
+
+!insert (driver17, shipment28) into DriverShipment
+
+!insert (shipment28, address33) into ShipmentContainsPickUpAddress
+!insert (shipment28, address34) into ShipmentContainsDeliveryAddress
+
+!insert (shipment29, address34) into ShipmentContainsPickUpAddress
+!insert (shipment29, address33) into ShipmentContainsDeliveryAddress
+
+!insert (address33, geoLocation33) into AddressContainsGeoLocation
+!insert (address34, geoLocation34) into AddressContainsGeoLocation
+
+!insert (customer17, shipment28) into CustomerConsistsOfShipment
+!insert (customer17, shipment29) into CustomerConsistsOfShipment
+
+!insert (station16, customer17) into StationContainsCustomer
+
+!insert (station16, shipment28) into StationShipment
+!insert (station16, shipment29) into StationShipment
+
+!insert (station16, driver17) into StationContainsDriver

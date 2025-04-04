@@ -1,0 +1,36 @@
+!new Client('client11')
+!client11.clientId := 6
+!client11.isSuspended := false
+
+!new Client('client12')
+!client12.clientId := 2147483646
+!client12.isSuspended := true
+
+!new Rental('rental6')
+!rental6.date := Date('2023-07-01')
+
+!new Movie('cassetteDarkNights')
+!cassetteDarkNights.title := 'Dark Nights'
+!cassetteDarkNights.availableCopies := 2
+!cassetteDarkNights.genre := #Comedy
+
+!new Series('cassetteSpaceFrontier')
+!cassetteSpaceFrontier.title := 'Space Frontier Ep.50'
+!cassetteSpaceFrontier.availableCopies := 8
+!cassetteSpaceFrontier.episode := 50
+
+!new Actor('actorFatimaAlHussein')
+!actorFatimaAlHussein.name := 'Fatima Al-Hussein'
+
+!new Actor('actorJeanLucPicard')
+!actorJeanLucPicard.name := 'Jean-Luc Picard'
+
+!insert (client11, rental6) into ClientRental
+
+!insert (rental6, cassetteDarkNights) into RentalCassette
+!insert (rental6, cassetteSpaceFrontier) into RentalCassette
+
+!insert (cassetteDarkNights, actorFatimaAlHussein) into CassetteActor
+!insert (cassetteDarkNights, actorJeanLucPicard) into CassetteActor
+!insert (cassetteSpaceFrontier, actorJeanLucPicard) into CassetteActor
+!insert (cassetteSpaceFrontier, actorFatimaAlHussein) into CassetteActor

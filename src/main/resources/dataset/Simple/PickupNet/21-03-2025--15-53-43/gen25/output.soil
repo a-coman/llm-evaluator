@@ -1,0 +1,53 @@
+!new Driver('driver26')
+!driver26.id := 'D026'
+!driver26.name := 'Daniel Martinez'
+
+!new Shipment('shipment45')
+!shipment45.id := 'S045'
+!shipment45.status := #NEW
+
+!new Shipment('shipment46')
+!shipment46.id := 'S046'
+!shipment46.status := #ASSIGNED
+
+!new Address('address51')
+!address51.text := '2828 Riverbank Close'
+
+!new Address('address52')
+!address52.text := '2929 Shadow Mountain Drive'
+
+!new GeoLocation('geoLocation51')
+!geoLocation51.latitude := -37.8136
+!geoLocation51.longitude := 144.9631
+
+!new GeoLocation('geoLocation52')
+!geoLocation52.latitude := 37.9838
+!geoLocation52.longitude := 23.7275
+
+!new Customer('customer26')
+!customer26.id := 'C026'
+!customer26.name := 'Sophia Evans'
+!customer26.twitterUserName := '@sophia_evans'
+
+!new Station('station25')
+
+!insert (driver26, shipment46) into DriverShipment
+
+!insert (shipment45, address51) into ShipmentContainsPickUpAddress
+!insert (shipment45, address52) into ShipmentContainsDeliveryAddress
+
+!insert (shipment46, address52) into ShipmentContainsPickUpAddress
+!insert (shipment46, address51) into ShipmentContainsDeliveryAddress
+
+!insert (address51, geoLocation51) into AddressContainsGeoLocation
+!insert (address52, geoLocation52) into AddressContainsGeoLocation
+
+!insert (customer26, shipment45) into CustomerConsistsOfShipment
+!insert (customer26, shipment46) into CustomerConsistsOfShipment
+
+!insert (station25, customer26) into StationContainsCustomer
+
+!insert (station25, shipment45) into StationShipment
+!insert (station25, shipment46) into StationShipment
+
+!insert (station25, driver26) into StationContainsDriver

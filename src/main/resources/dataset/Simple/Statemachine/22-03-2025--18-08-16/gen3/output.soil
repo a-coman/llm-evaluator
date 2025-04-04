@@ -1,0 +1,27 @@
+!new StateMachine('stateMachine4')
+!stateMachine4.name := 'backupMachine'
+
+!new State('state8')
+!state8.name := 'booting'
+
+!new State('state9')
+!state9.name := 'operational'
+
+!new Transition('transition7')
+!transition7.name := 'bootToOperational'
+
+!new TimeEvent('event7')
+!event7.time := 30
+
+!insert (stateMachine4, state8) into StateMachineContainsStates
+!insert (stateMachine4, state9) into StateMachineContainsStates
+
+!insert (stateMachine4, transition7) into StateMachineContainsTransitions
+
+!insert (transition7, event7) into TransitionContainsEvents
+
+!insert (state8, transition7) into StateTransition
+
+!insert (transition7, state9) into TransitionState
+
+!insert (stateMachine4, state8) into StateMachineStartsStates

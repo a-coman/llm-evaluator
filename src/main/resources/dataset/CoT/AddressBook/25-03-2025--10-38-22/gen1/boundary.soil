@@ -1,0 +1,91 @@
+!new AddressBook('AddressBook_1')
+
+!new Company('Company_1')
+!Company_1.name := 'Global Tech Corp'
+!Company_1.phone := '+1-555-0110'
+!Company_1.website := 'www.globaltechcorp.com'
+!Company_1.email := 'contact@globaltechcorp.com'
+!Company_1.industry := 'Technology'
+
+!new Address('Address_1')
+!Address_1.city := 'New York'
+!Address_1.houseNr := '42'
+!Address_1.street := 'Wall Street'
+!insert (Company_1, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'Emily Fisher'
+!Note_1.time := Date('2023-10-15')
+!Note_1.type := #MEETING
+!Note_1.comment := 'Discussed upcoming software project.'
+!insert (Company_1, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #BOSS
+!insert (Company_1, Relationship_1) into ContactToRelationship
+
+!new Person('Person_1')
+!Person_1.name := 'John Doe'
+!Person_1.phone := '+1-555-0199'
+!Person_1.website := 'www.johndoeconsulting.com'
+!Person_1.email := 'john.doe@johndoeconsulting.com'
+!Person_1.title := 'Senior Consultant'
+
+!new Address('Address_2')
+!Address_2.city := 'Boston'
+!Address_2.houseNr := '11'
+!Address_2.street := 'Beacon Street'
+!insert (Person_1, Address_2) into ContactContainsAddress
+
+!new Address('Address_3')
+!Address_3.city := 'Chicago'
+!Address_3.houseNr := '203'
+!Address_3.street := 'Lake Shore Dr'
+!insert (Person_1, Address_3) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Sarah Lane'
+!Note_2.time := Date('2023-08-05')
+!Note_2.type := #CALL
+!Note_2.comment := 'Follow-up on consulting engagement.'
+!insert (Person_1, Note_2) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #EMPLOYEE
+!insert (Person_1, Relationship_2) into ContactToRelationship
+!insert (Relationship_1, Person_1) into RelationshipToContact
+!insert (Relationship_2, Company_1) into RelationshipToContact
+
+!new Person('Person_2')
+!Person_2.name := 'Alice Smith'
+!Person_2.phone := '+1-555-0355'
+!Person_2.website := 'www.alicesmithphotography.com'
+!Person_2.email := 'alice@smithphotos.com'
+!Person_2.title := 'Photographer'
+
+!new Address('Address_4')
+!Address_4.city := 'Los Angeles'
+!Address_4.houseNr := '2590'
+!Address_4.street := 'Sunset Blvd'
+!insert (Person_2, Address_4) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Michael Brown'
+!Note_3.time := Date('2023-12-22')
+!Note_3.type := #EMAIL
+!Note_3.comment := 'Discussed photo shoot scheduling.'
+!insert (Person_2, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_3')
+!Relationship_3.type := #COWORKER
+!insert (Person_1, Relationship_3) into ContactToRelationship
+!insert (Relationship_3, Person_2) into RelationshipToContact
+
+!new Relationship('Relationship_4')
+!Relationship_4.type := #COWORKER
+!insert (Person_2, Relationship_4) into ContactToRelationship
+!insert (Relationship_4, Person_1) into RelationshipToContact
+
+!insert (AddressBook_1, Company_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_2) into AddressBookMadeOfContact

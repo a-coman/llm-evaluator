@@ -1,0 +1,71 @@
+!new AddressBook('addressBook19')
+
+!new Company('artisanBakes')
+!artisanBakes.name := 'Artisan Bakes'
+!artisanBakes.phone := '123-456-7890'
+!artisanBakes.website := 'www.artisanbakes.com'
+!artisanBakes.email := 'contact@artisanbakes.com'
+!artisanBakes.industry := 'Bakery'
+
+!new Person('claraJenkins')
+!claraJenkins.name := 'Clara Jenkins'
+!claraJenkins.phone := '321-654-9870'
+!claraJenkins.website := 'www.clarajenkinsbakery.com'
+!claraJenkins.email := 'clara.jenkins@artisanbakes.com'
+!claraJenkins.title := 'Master Baker'
+
+!new Note('menuPlanningNote')
+!menuPlanningNote.author := 'Clara Jenkins'
+!menuPlanningNote.time := Date('2025-03-12')
+!menuPlanningNote.type := #MEETING
+!menuPlanningNote.comment := 'Planned new menu items for the spring season'
+
+!new Address('claraAddress')
+!claraAddress.city := 'Boston'
+!claraAddress.houseNr := '456'
+!claraAddress.street := 'Baker Street'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, artisanBakes) into RelationshipToContact
+!insert (claraJenkins, employeeRelationship) into ContactToRelationship
+!insert (claraJenkins, claraAddress) into ContactContainsAddress
+!insert (claraJenkins, menuPlanningNote) into ContactContainsNote
+
+!new Person('henryWilliams')
+!henryWilliams.name := 'Henry Williams'
+!henryWilliams.phone := '456-789-0123'
+!henryWilliams.website := 'www.henrywilliamsrecipes.com'
+!henryWilliams.email := 'henry.williams@example.com'
+!henryWilliams.title := 'Pastry Chef'
+
+!new Note('recipeInnovationNote')
+!recipeInnovationNote.author := 'Henry Williams'
+!recipeInnovationNote.time := Date('2025-03-20')
+!recipeInnovationNote.type := #CALL
+!recipeInnovationNote.comment := 'Explored innovative pastry recipes with the team'
+
+!new Address('henryAddress')
+!henryAddress.city := 'Chicago'
+!henryAddress.houseNr := '789'
+!henryAddress.street := 'Pastry Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, claraJenkins) into RelationshipToContact
+!insert (henryWilliams, subdivisionRelationship) into ContactToRelationship
+!insert (henryWilliams, henryAddress) into ContactContainsAddress
+!insert (henryWilliams, recipeInnovationNote) into ContactContainsNote
+
+!new Address('artisanBakesAddress')
+!artisanBakesAddress.city := 'New York'
+!artisanBakesAddress.houseNr := '234'
+!artisanBakesAddress.street := 'Gourmet Way'
+
+!insert (artisanBakes, artisanBakesAddress) into ContactContainsAddress
+
+!insert (addressBook19, artisanBakes) into AddressBookMadeOfContact
+!insert (addressBook19, claraJenkins) into AddressBookMadeOfContact
+!insert (addressBook19, henryWilliams) into AddressBookMadeOfContact

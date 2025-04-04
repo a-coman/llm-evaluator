@@ -1,0 +1,59 @@
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Expense('scienceFairProjectExpenses')
+!scienceFairProjectExpenses.amount := 600.00
+!scienceFairProjectExpenses.startDate := Date('2023-03-01')
+!scienceFairProjectExpenses.endDate := Date('2023-03-15')
+
+!new Bill('materialsAndSupplies')
+!materialsAndSupplies.amount := 250.00
+!materialsAndSupplies.category := 'Supplies'
+!materialsAndSupplies.date := Date('2023-02-20')
+!materialsAndSupplies.paymentMethod := #CREDIT_CARD
+!materialsAndSupplies.status := #VERIFIED
+
+!new Bill('printingAndPosters')
+!printingAndPosters.amount := 100.00
+!printingAndPosters.category := 'Stationery'
+!printingAndPosters.date := Date('2023-02-25')
+!printingAndPosters.paymentMethod := #CASH
+!printingAndPosters.status := #VERIFIED
+
+!new Bill('entryFee')
+!entryFee.amount := 50.00
+!entryFee.category := 'Event'
+!entryFee.date := Date('2023-03-01')
+!entryFee.paymentMethod := #CHECK
+!entryFee.status := #VALIDATED
+
+!new Bill('refreshmentsForPresenters')
+!refreshmentsForPresenters.amount := 200.00
+!refreshmentsForPresenters.category := 'Food'
+!refreshmentsForPresenters.date := Date('2023-03-10')
+!refreshmentsForPresenters.paymentMethod := #CREDIT_CARD
+!refreshmentsForPresenters.status := #PENDING
+
+!insert (materialsAndSupplies, australianDollar) into BillCurrency
+!insert (printingAndPosters, australianDollar) into BillCurrency
+!insert (entryFee, australianDollar) into BillCurrency
+!insert (refreshmentsForPresenters, australianDollar) into BillCurrency
+
+!insert (scienceFairProjectExpenses, materialsAndSupplies) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, printingAndPosters) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, entryFee) into ExpenseContainsBills
+!insert (scienceFairProjectExpenses, refreshmentsForPresenters) into ExpenseContainsBills
+
+!new Comment('commentEcoFriendlyMaterials')
+!commentEcoFriendlyMaterials.text := 'Managed to get all required materials within budget with an emphasis on sustainability.'
+
+!new Comment('commentPosters')
+!commentPosters.text := 'The design and print quality of the posters drew in a lot of attention from attendees.'
+
+!new Comment('commentFeedback')
+!commentFeedback.text := 'The project presentation was well-received, with positive feedback on both content and delivery.'
+
+!insert (scienceFairProjectExpenses, commentEcoFriendlyMaterials) into ExpenseComment
+!insert (scienceFairProjectExpenses, commentPosters) into ExpenseComment
+!insert (scienceFairProjectExpenses, commentFeedback) into ExpenseComment

@@ -1,0 +1,76 @@
+-- Creating instances of Clients
+!new Client('client1')
+!client1.clientId := 1
+!client1.isSuspended := false
+
+!new Client('client2')
+!client2.clientId := 2
+!client2.isSuspended := true
+
+-- Creating instances of Rentals with Dates
+!new Rental('rental1')
+!rental1.date := Date('2023-10-01')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-10-02')
+
+-- Creating instances of Movies, a subclass of Cassette
+!new Movie('movie1')
+!movie1.title := 'Action Movie'
+!movie1.availableCopies := 5
+!movie1.genre := #Action
+
+!new Movie('movie2')
+!movie2.title := 'Comedy Flick'
+!movie2.availableCopies := 3
+!movie2.genre := #Comedy
+
+-- Creating instances of Series, a subclass of Cassette
+!new Series('series1')
+!series1.title := 'Drama Series'
+!series1.availableCopies := 2
+!series1.episode := 1
+
+!new Series('series2')
+!series2.title := 'Adventure Series'
+!series2.availableCopies := 1
+!series2.episode := 5
+
+-- Creating instances of Actors
+!new Actor('actor1')
+!actor1.name := 'John Doe'
+
+!new Actor('actor2')
+!actor2.name := 'Jane Smith'
+
+-- Establishing associations between Clients and Rentals
+!insert (client1, rental1) into ClientRental
+!insert (client2, rental2) into ClientRental
+
+-- Establishing associations between Rentals and Cassettes
+!insert (rental1, movie1) into RentalCassette
+!insert (rental1, series1) into RentalCassette
+!insert (rental2, movie2) into RentalCassette
+!insert (rental2, series2) into RentalCassette
+
+-- Establishing associations between Cassettes and Actors
+!insert (movie1, actor1) into CassetteActor
+!insert (movie2, actor2) into CassetteActor
+!insert (series1, actor2) into CassetteActor
+!insert (series2, actor1) into CassetteActor
+
+-- Corner cases
+
+-- Client with the minimum positive clientId value
+!new Client('client3')
+!client3.clientId := 3
+!client3.isSuspended := false
+
+-- Series with the minimum allowed episode number
+!new Series('series3')
+!series3.title := 'Minimal Episode Series'
+!series3.availableCopies := 1
+!series3.episode := 1
+
+-- Establishing association between series3 and an actor to satisfy the constraint
+!insert (series3, actor1) into CassetteActor

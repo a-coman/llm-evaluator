@@ -1,0 +1,251 @@
+!new RentalOffice('rentalOffice2')
+!rentalOffice2.name := 'CityCenter Rentals'
+!rentalOffice2.number := 101
+!rentalOffice2.address := '123 Main Street, Columbus, OH, 43215'
+
+!new Vehicle('vehicle1')
+!vehicle1.id := 1
+!vehicle1.registrationState := #CO
+!vehicle1.licensePlateNumber := 'OH1234XYZ'
+!vehicle1.vehicleTypeCode := #TRUCK10
+!vehicle1.registrationLastMaintenanceDate := Date('2023-01-15')
+!vehicle1.expirationDate := Date('2023-12-31')
+
+!new Truck('truck1')
+!truck1.id := 2
+!truck1.registrationState := #CO
+!truck1.licensePlateNumber := 'OH5678ABC'
+!truck1.vehicleTypeCode := #TRUCK
+!truck1.registrationLastMaintenanceDate := Date('2023-01-10')
+!truck1.expirationDate := Date('2023-11-30')
+!truck1.odometerReading := 123456
+!truck1.gasTankCapacity := 30.0
+!truck1.workingRadio := true
+!truck1.mileage := 15
+
+!new Individual('individualCustomer2')
+!individualCustomer2.name := 'John Doe'
+!individualCustomer2.address := '789 Elm Street, Dayton, OH, 45402'
+!individualCustomer2.poorRisk := false
+!individualCustomer2.homePhone := '555-123-4567'
+!individualCustomer2.driverLicenseState := #CO
+!individualCustomer2.driverLicenseNumber := 1234567
+!individualCustomer2.driverLicenseExpirationDate := Date('2026-05-22')
+
+!new Company('company1')
+!company1.name := 'TechSolutions Inc.'
+!company1.address := '456 Innovation Park, Cincinnati, OH, 45202'
+!company1.poorRisk := false
+!company1.idNumber := 285
+
+!new RentalAgreement('rentalAgreement1')
+!rentalAgreement1.number := 3001
+!rentalAgreement1.rentalDate := Date('2023-08-01')
+!rentalAgreement1.anticipatedDuration := 7
+!rentalAgreement1.depositPaid := 250.00
+!rentalAgreement1.quotedDailyRate := 45.00
+!rentalAgreement1.quotedRatePerMile := 0.20
+
+!new RentalAgreement('rentalAgreement2')
+!rentalAgreement2.number := 3002
+!rentalAgreement2.rentalDate := Date('2023-09-15')
+!rentalAgreement2.anticipatedDuration := 14
+!rentalAgreement2.depositPaid := 500.00
+!rentalAgreement2.quotedDailyRate := 85.00
+!rentalAgreement2.quotedRatePerMile := 0.40
+
+!insert (rentalOffice2, vehicle1) into RentalOfficeVehicle
+!insert (rentalOffice2, truck1) into RentalOfficeVehicle
+!insert (rentalOffice2, rentalAgreement1) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice2, rentalAgreement1) into RentalOfficeRentalAgreementDrop
+!insert (rentalOffice2, rentalAgreement2) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice2, rentalAgreement2) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement1, vehicle1) into RentalAgreementVehicle
+!insert (rentalAgreement1, individualCustomer2) into RentalAgreementCustomer
+
+!insert (rentalAgreement2, truck1) into RentalAgreementVehicle
+!insert (rentalAgreement2, company1) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice3')
+!rentalOffice3.name := 'Deserts Edge Rentals'
+!rentalOffice3.number := 001
+!rentalOffice3.address := '789 Dry Sands Ave, Mojave, CA 93501'
+
+!new Truck('truck2')
+!truck2.id := 3
+!truck2.registrationState := #CA
+!truck2.licensePlateNumber := 'DES127S'
+!truck2.vehicleTypeCode := #TRUCK
+!truck2.registrationLastMaintenanceDate := Date('2023-01-10')
+!truck2.expirationDate := Date('2025-01-10')
+!truck2.odometerReading := 100000
+!truck2.gasTankCapacity := 150.0
+!truck2.workingRadio := true
+!truck2.mileage := 8
+
+!new Vehicle('vehicle2')
+!vehicle2.id := 4
+!vehicle2.registrationState := #CA
+!vehicle2.licensePlateNumber := 'DES128S'
+!vehicle2.vehicleTypeCode := #OPEN_TRAILER
+!vehicle2.registrationLastMaintenanceDate := Date('2023-03-05')
+!vehicle2.expirationDate := Date('2025-03-05')
+
+!new RentalAgreement('rentalAgreement3')
+!rentalAgreement3.number := 4001
+!rentalAgreement3.rentalDate := Date('2023-09-01')
+!rentalAgreement3.anticipatedDuration := 0
+!rentalAgreement3.depositPaid := 0.00
+!rentalAgreement3.quotedDailyRate := 0.00
+!rentalAgreement3.quotedRatePerMile := 0.00
+
+!new Company('company2')
+!company2.name := 'Mojave Construction, Inc.'
+!company2.address := '101 Stoneway Blvd, Lancaster, CA 93536'
+!company2.poorRisk := false
+!company2.idNumber := 92021
+
+!insert (rentalOffice3, truck2) into RentalOfficeVehicle
+!insert (rentalOffice3, vehicle2) into RentalOfficeVehicle
+!insert (rentalOffice3, rentalAgreement3) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice3, rentalAgreement3) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement3, truck2) into RentalAgreementVehicle
+!insert (rentalAgreement3, company2) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice4')
+!rentalOffice4.name := 'Arctic Rentals'
+!rentalOffice4.number := 007
+!rentalOffice4.address := '123 Polar Road, Barrow, AK, 99723'
+
+!new Vehicle('vehicle3')
+!vehicle3.id := 5
+!vehicle3.registrationState := #AK
+!vehicle3.licensePlateNumber := 'TRL-90787'
+!vehicle3.vehicleTypeCode := #OPEN_TRAILER
+!vehicle3.registrationLastMaintenanceDate := Date('2021-02-20')
+!vehicle3.expirationDate := Date('2023-02-19')
+
+!new Truck('truck3')
+!truck3.id := 6
+!truck3.registrationState := #AK
+!truck3.licensePlateNumber := 'TRK-29486'
+!truck3.vehicleTypeCode := #TRUCK
+!truck3.registrationLastMaintenanceDate := Date('2020-11-30')
+!truck3.expirationDate := Date('2023-01-01')
+!truck3.odometerReading := 0
+!truck3.gasTankCapacity := 0.1
+!truck3.workingRadio := true
+!truck3.mileage := 0
+
+!new RentalAgreement('rentalAgreement4')
+!rentalAgreement4.number := 13
+!rentalAgreement4.rentalDate := Date('2023-02-28')
+!rentalAgreement4.anticipatedDuration := 0
+!rentalAgreement4.depositPaid := 0.01
+!rentalAgreement4.quotedDailyRate := 0.01
+!rentalAgreement4.quotedRatePerMile := 0.01
+
+!new Individual('individualCustomer3')
+!individualCustomer3.name := 'Jane Doe'
+!individualCustomer3.address := '456 Frost Street, Nome, AK, 99762'
+!individualCustomer3.poorRisk := false
+!individualCustomer3.homePhone := '+1-907-555-0136'
+!individualCustomer3.driverLicenseState := #AK
+!individualCustomer3.driverLicenseNumber := 987654
+!individualCustomer3.driverLicenseExpirationDate := Date('2034-02-27')
+
+!insert (rentalOffice4, vehicle3) into RentalOfficeVehicle
+!insert (rentalOffice4, truck3) into RentalOfficeVehicle
+!insert (rentalOffice4, rentalAgreement4) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice4, rentalAgreement4) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement4, truck3) into RentalAgreementVehicle
+!insert (rentalAgreement4, individualCustomer3) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice5')
+!rentalOffice5.name := 'Pacific Wheels Rental – Beachside'
+!rentalOffice5.number := 102
+!rentalOffice5.address := '123 Ocean Drive, Santa Monica, CA, 90401'
+
+!new Truck('truck4')
+!truck4.id := 7
+!truck4.registrationState := #CA
+!truck4.licensePlateNumber := 'SMK0921'
+!truck4.vehicleTypeCode := #TRUCK
+!truck4.registrationLastMaintenanceDate := Date('2023-05-15')
+!truck4.expirationDate := Date('2024-05-14')
+!truck4.odometerReading := 45300
+!truck4.gasTankCapacity := 26.0
+!truck4.workingRadio := true
+!truck4.mileage := 12
+
+!new Vehicle('vehicle4')
+!vehicle4.id := 8
+!vehicle4.registrationState := #AK
+!vehicle4.licensePlateNumber := 'NVTR501'
+!vehicle4.vehicleTypeCode := #OPEN_TRAILER
+!vehicle4.registrationLastMaintenanceDate := Date('2023-07-22')
+!vehicle4.expirationDate := Date('2024-07-21')
+
+!new Individual('individualCustomer4')
+!individualCustomer4.name := 'Emily Rodriguez'
+!individualCustomer4.address := '456 Sunset Ave, Los Angeles, CA, 90028'
+!individualCustomer4.poorRisk := false
+!individualCustomer4.homePhone := '323-555-0198'
+!individualCustomer4.driverLicenseState := #CA
+!individualCustomer4.driverLicenseNumber := 1234567
+!individualCustomer4.driverLicenseExpirationDate := Date('2025-10-03')
+
+!new Company('company3')
+!company3.name := 'Ocean Breeze Events'
+!company3.address := 'Pier 7, San Francisco, CA, 94133'
+!company3.poorRisk := false
+!company3.idNumber := 987654321
+
+!new RentalAgreement('rentalAgreement5')
+!rentalAgreement5.number := 155
+!rentalAgreement5.rentalDate := Date('2023-08-01')
+!rentalAgreement5.anticipatedDuration := 5
+!rentalAgreement5.depositPaid := 200.00
+!rentalAgreement5.quotedDailyRate := 75.00
+!rentalAgreement5.quotedRatePerMile := 0.50
+
+!new RentalAgreement('rentalAgreement6')
+!rentalAgreement6.number := 156
+!rentalAgreement6.rentalDate := Date('2023-08-05')
+!rentalAgreement6.anticipatedDuration := 10
+!rentalAgreement6.depositPaid := 300.00
+!rentalAgreement6.quotedDailyRate := 100.00
+!rentalAgreement6.quotedRatePerMile := 0.65
+
+!new RentalAgreement('rentalAgreement7')
+!rentalAgreement7.number := 157
+!rentalAgreement7.rentalDate := Date('2023-08-15')
+!rentalAgreement7.anticipatedDuration := 3
+!rentalAgreement7.depositPaid := 250.00
+!rentalAgreement7.quotedDailyRate := 60.00
+!rentalAgreement7.quotedRatePerMile := 0.55
+
+!insert (rentalOffice5, truck4) into RentalOfficeVehicle
+!insert (rentalOffice5, vehicle4) into RentalOfficeVehicle
+
+!insert (rentalOffice5, rentalAgreement5) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice5, rentalAgreement5) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement5, truck4) into RentalAgreementVehicle
+!insert (rentalAgreement5, individualCustomer4) into RentalAgreementCustomer
+
+!insert (rentalOffice5, rentalAgreement6) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice5, rentalAgreement6) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement6, vehicle4) into RentalAgreementVehicle
+!insert (rentalAgreement6, company3) into RentalAgreementCustomer
+
+!insert (rentalOffice5, rentalAgreement7) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice5, rentalAgreement7) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement7, truck4) into RentalAgreementVehicle
+!insert (rentalAgreement7, company3) into RentalAgreementCustomer
+

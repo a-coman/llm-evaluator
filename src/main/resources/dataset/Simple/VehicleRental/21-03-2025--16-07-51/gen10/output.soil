@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice12')
+!rentalOffice12.name := 'Tech Rentals'
+!rentalOffice12.number := 112
+!rentalOffice12.address := '123 Silicon Ave, San Jose, CA'
+
+!new Truck('truck8')
+!truck8.id := 11
+!truck8.registrationState := #CA
+!truck8.licensePlateNumber := 'CA1111'
+!truck8.vehicleTypeCode := #TRUCK10
+!truck8.registrationLastMaintenanceDate := Date('2023-07-14')
+!truck8.expirationDate := Date('2024-07-14')
+!truck8.odometerReading := 18000
+!truck8.gasTankCapacity := 145.0
+!truck8.workingRadio := true
+!truck8.mileage := 19
+
+!new Company('companyCustomer5')
+!companyCustomer5.name := 'Innovatech Inc.'
+!companyCustomer5.address := '456 Innovation Dr, San Jose, CA'
+!companyCustomer5.poorRisk := false
+!companyCustomer5.idNumber := 6005
+
+!new RentalAgreement('rentalAgreement11')
+!rentalAgreement11.number := 511
+!rentalAgreement11.rentalDate := Date('2023-11-25')
+!rentalAgreement11.anticipatedDuration := 14
+!rentalAgreement11.depositPaid := 500.0
+!rentalAgreement11.quotedDailyRate := 55.0
+!rentalAgreement11.quotedRatePerMile := 0.6
+
+!insert (rentalOffice12, truck8) into RentalOfficeVehicle
+!insert (rentalOffice12, rentalAgreement11) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice12, rentalAgreement11) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement11, truck8) into RentalAgreementVehicle
+!insert (rentalAgreement11, companyCustomer5) into RentalAgreementCustomer

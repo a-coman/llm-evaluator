@@ -1,0 +1,233 @@
+!new Club('club41')
+!club41.name := 'Riyadh Royals'
+!club41.homeGround := 'King Fahd Stadium'
+!club41.chairman := 'Khalid Al-Mansoor'
+
+!new Team('teamAS')
+!teamAS.name := 'Riyadh Falcons'
+
+!insert (club41, teamAS) into ClubTeam
+
+!new Player('player47')
+!player47.name := 'Salim Al-Farsi'
+!player47.age := 30
+!player47.bestFoot := #RIGHT
+!player47.phoneNumber := '+966-55-1234567'
+
+!new Player('player48')
+!player48.name := 'Yusuf Arif'
+!player48.age := 27
+!player48.bestFoot := #LEFT
+!player48.phoneNumber := '+966-55-7654321'
+
+!insert (teamAS, player47) into TeamPlayer
+!insert (teamAS, player48) into TeamPlayer
+
+!new Position('position67')
+!position67.positionName := #MIDFIELDER
+
+!new Position('position68')
+!position68.positionName := #DEFENDER
+
+!insert (player47, position67) into PlayerPositions
+!insert (player48, position68) into PlayerPositions
+
+!new TrainingObjective('trainingObjective51')
+!trainingObjective51.areaToImprove := 'Passing Accuracy'
+!trainingObjective51.startDate := '2023-03-01'
+!trainingObjective51.endDate := '2023-05-01'
+!trainingObjective51.success := true
+
+!insert (trainingObjective51, player47) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective49')
+!trainingObjective49.areaToImprove := 'Stamina'
+!trainingObjective49.startDate := '2023-03-01'
+!trainingObjective49.endDate := '2023-05-01'
+!trainingObjective49.success := true
+
+!insert (trainingObjective49, player48) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession37')
+!trainingSession37.date := '2023-03-10'
+!trainingSession37.location := 'Royals Training Ground'
+!trainingSession37.purpose := 'Midfield Coordination'
+
+!insert (teamAS, trainingSession37) into TeamTraining
+
+!new TrainingNotes('trainingNote38')
+!trainingNote38.note := 'Emphasized on quick playmaking and transitions.'
+!trainingNote38.date := '2023-03-10'
+
+!insert (trainingSession37, trainingNote38) into TrainingTrainingNotes
+
+!new Competition('competition21')
+!competition21.name := 'Middle Eastern Super Cup'
+!competition21.type := 'Regional Championship'
+
+!new Match('match21')
+!match21.date := '2023-05-22'
+!match21.homeAway := false
+
+!insert (competition21, match21) into CompetitionMatch
+
+!insert (teamAS, match21) into VisitorMatch
+
+!new Team('teamAT')
+!teamAT.name := 'Doha Dragons'
+
+!new Club('club42')
+!club42.name := 'Doha Football Club'
+!club42.homeGround := 'Doha Stadium'
+!club42.chairman := 'Amir Khan'
+
+!insert (club42, teamAT) into ClubTeam
+
+!insert (teamAT, match21) into LocalMatch
+
+!new MatchReport('matchReport21')
+!matchReport21.duration := 90
+!matchReport21.scoreVisitor := 2
+!matchReport21.scoreLocal := 2
+
+!insert (match21, matchReport21) into MatchMatchReport
+
+!new MatchEvent('matchEvent83')
+!matchEvent83.eventType := #GOAL
+!matchEvent83.time := 18
+
+!new MatchEvent('matchEvent84')
+!matchEvent84.eventType := #FOUL
+!matchEvent84.time := 25
+
+!new MatchEvent('matchEvent85')
+!matchEvent85.eventType := #GOAL
+!matchEvent85.time := 42
+
+!new MatchEvent('matchEvent86')
+!matchEvent86.eventType := #GOAL
+!matchEvent86.time := 58
+
+!new MatchEvent('matchEvent87')
+!matchEvent87.eventType := #FOUL
+!matchEvent87.time := 67
+
+!new MatchEvent('matchEvent88')
+!matchEvent88.eventType := #GOAL
+!matchEvent88.time := 77
+
+!insert (match21, matchEvent83) into MatchMatchEvent
+!insert (match21, matchEvent84) into MatchMatchEvent
+!insert (match21, matchEvent85) into MatchMatchEvent
+!insert (match21, matchEvent86) into MatchMatchEvent
+!insert (match21, matchEvent87) into MatchMatchEvent
+!insert (match21, matchEvent88) into MatchMatchEvent
+
+!new MatchNote('matchNote16')
+!matchNote16.note := 'The match was a thrilling tie with strategic plays from both teams.'
+!matchNote16.date := '2023-05-22'
+
+!insert (match21, matchNote16) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer29')
+!matchPlayer29.booked := false
+!matchPlayer29.goals := 1
+!matchPlayer29.rating := 8
+
+!insert (player47, matchPlayer29) into PlayerMatch
+!insert (match21, matchPlayer29) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition30')
+!matchPlayerPosition30.positionName := #MIDFIELDER
+!matchPlayerPosition30.number := 10
+
+!insert (matchPlayer29, matchPlayerPosition30) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer30')
+!matchPlayer30.booked := true
+!matchPlayer30.goals := 0
+!matchPlayer30.rating := 7
+
+!insert (player48, matchPlayer30) into PlayerMatch
+!insert (match21, matchPlayer30) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition31')
+!matchPlayerPosition31.positionName := #DEFENDER
+!matchPlayerPosition31.number := 3
+
+!insert (matchPlayer30, matchPlayerPosition31) into MatchPlayerMatchPlayerPosition
+
+!new Player('player45')
+!player45.name := 'Ahmed Zahir'
+!player45.age := 25
+!player45.bestFoot := #RIGHT
+!player45.phoneNumber := '+974-44-567890'
+
+!new Player('player46')
+!player46.name := 'Leila Nassif'
+!player46.age := 28
+!player46.bestFoot := #LEFT
+!player46.phoneNumber := '+974-44-098765'
+
+!insert (teamAT, player45) into TeamPlayer
+!insert (teamAT, player46) into TeamPlayer
+
+!new Position('position64')
+!position64.positionName := #MIDFIELDER
+
+!new Position('position65')
+!position65.positionName := #FORWARD
+
+!new Position('position66')
+!position66.positionName := #GOALKEEPER
+
+!insert (player45, position64) into PlayerPositions
+!insert (player45, position65) into PlayerPositions
+!insert (player46, position66) into PlayerPositions
+
+!new PlayerNotes('playerNote32')
+!playerNote32.note := 'Tactical genius known for assisting and creating goal opportunities.'
+!playerNote32.date := '2023-05-01'
+
+!insert (player45, playerNote32) into PlayerPlayerNotes
+
+!new PlayerNotes('playerNote33')
+!playerNote33.note := 'Renowned for her steadfast presence and saves under pressure.'
+!playerNote33.date := '2023-04-20'
+
+!insert (player46, playerNote33) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective48')
+!trainingObjective48.areaToImprove := 'Dribbling'
+!trainingObjective48.startDate := '2023-04-01'
+!trainingObjective48.endDate := '2023-06-01'
+!trainingObjective48.success := true
+
+!insert (trainingObjective48, player45) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective50')
+!trainingObjective50.areaToImprove := 'Reflexes'
+!trainingObjective50.startDate := '2023-03-01'
+!trainingObjective50.endDate := '2023-05-01'
+!trainingObjective50.success := false
+
+!insert (trainingObjective50, player46) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession36')
+!trainingSession36.date := '2023-04-15'
+!trainingSession36.location := 'Doha Football Academy'
+!trainingSession36.purpose := 'Advanced Defensive Tactics'
+
+!insert (teamAT, trainingSession36) into TeamTraining
+
+!new TrainingNotes('trainingNote37')
+!trainingNote37.note := 'Emphasized mastering defensive formations and counter-attack responses.'
+!trainingNote37.date := '2023-04-15'
+
+!insert (trainingSession36, trainingNote37) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend15')
+!failedAttend15.reason := 'Injury'
+
+!insert (trainingSession36, failedAttend15) into TrainingFailded
+!insert (failedAttend15, player46) into FailedPlayer

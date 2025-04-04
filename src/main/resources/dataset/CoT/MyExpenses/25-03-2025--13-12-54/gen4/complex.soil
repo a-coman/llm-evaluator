@@ -1,0 +1,59 @@
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Expense('weddingAnniversaryCelebrationExpense')
+!weddingAnniversaryCelebrationExpense.amount := 75000.00
+!weddingAnniversaryCelebrationExpense.startDate := Date('2023-11-05')
+!weddingAnniversaryCelebrationExpense.endDate := Date('2023-11-30')
+
+!new Bill('anniversaryDinnerAtTaj')
+!anniversaryDinnerAtTaj.amount := 25000.00
+!anniversaryDinnerAtTaj.category := 'Dining'
+!anniversaryDinnerAtTaj.date := Date('2023-11-09')
+!anniversaryDinnerAtTaj.paymentMethod := #CREDIT_CARD
+!anniversaryDinnerAtTaj.status := #VALIDATED
+
+!new Bill('weekendGetawayToKerala')
+!weekendGetawayToKerala.amount := 30000.00
+!weekendGetawayToKerala.category := 'Travel'
+!weekendGetawayToKerala.date := Date('2023-11-15')
+!weekendGetawayToKerala.paymentMethod := #CHECK
+!weekendGetawayToKerala.status := #VERIFIED
+
+!new Bill('jewelryGiftForSpouse')
+!jewelryGiftForSpouse.amount := 15000.00
+!jewelryGiftForSpouse.category := 'Gifts'
+!jewelryGiftForSpouse.date := Date('2023-11-10')
+!jewelryGiftForSpouse.paymentMethod := #CASH
+!jewelryGiftForSpouse.status := #VERIFIED
+
+!new Bill('romanticPhotoshoot')
+!romanticPhotoshoot.amount := 5000.00
+!romanticPhotoshoot.category := 'Photography'
+!romanticPhotoshoot.date := Date('2023-11-20')
+!romanticPhotoshoot.paymentMethod := #CREDIT_CARD
+!romanticPhotoshoot.status := #VERIFIED
+
+!insert (anniversaryDinnerAtTaj, indianRupee) into BillCurrency
+!insert (weekendGetawayToKerala, indianRupee) into BillCurrency
+!insert (jewelryGiftForSpouse, indianRupee) into BillCurrency
+!insert (romanticPhotoshoot, indianRupee) into BillCurrency
+
+!insert (weddingAnniversaryCelebrationExpense, anniversaryDinnerAtTaj) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, weekendGetawayToKerala) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, jewelryGiftForSpouse) into ExpenseContainsBills
+!insert (weddingAnniversaryCelebrationExpense, romanticPhotoshoot) into ExpenseContainsBills
+
+!new Comment('commentTajDinner')
+!commentTajDinner.text := 'Taj dinner exceeded expectations; ambiance was superb, a night to remember.'
+
+!new Comment('commentGetaway')
+!commentGetaway.text := 'Getaway was relaxing and picturesque, great choice for celebrating a milestone.'
+
+!new Comment('commentPhotoshoot')
+!commentPhotoshoot.text := 'Photoshoot captured unforgettable moments, a perfect keepsake.'
+
+!insert (weddingAnniversaryCelebrationExpense, commentTajDinner) into ExpenseComment
+!insert (weddingAnniversaryCelebrationExpense, commentGetaway) into ExpenseComment
+!insert (weddingAnniversaryCelebrationExpense, commentPhotoshoot) into ExpenseComment

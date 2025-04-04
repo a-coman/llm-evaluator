@@ -1,0 +1,159 @@
+!new Club('club11')
+!club11.name := 'Dragons FC'
+!club11.homeGround := 'Dragon Lair Stadium'
+!club11.chairman := 'Victoria Clark'
+
+!new Club('club12')
+!club12.name := 'Phoenix FC'
+!club12.homeGround := 'Phoenix Nest'
+!club12.chairman := 'Daniel Edwards'
+
+!new Team('team11')
+!team11.name := 'Dragon Flames'
+!insert (club11, team11) into ClubTeam
+
+!new Team('team12')
+!team12.name := 'Phoenix Wings'
+!insert (club12, team12) into ClubTeam
+
+!new Player('player16')
+!player16.name := 'Jordan Miles'
+!player16.age := 30
+!player16.bestFoot := #RIGHT
+!player16.phoneNumber := '045-678-9101'
+!insert (team11, player16) into TeamPlayer
+
+!new Player('player17')
+!player17.name := 'Blake Foster'
+!player17.age := 25
+!player17.bestFoot := #BOTH
+!player17.phoneNumber := '056-789-0112'
+!insert (team11, player17) into TeamPlayer
+
+!new Player('player18')
+!player18.name := 'Taylor Kim'
+!player18.age := 28
+!player18.bestFoot := #LEFT
+!player18.phoneNumber := '067-890-1234'
+!insert (team12, player18) into TeamPlayer
+
+!new Position('position16')
+!position16.positionName := #FORWARD
+!insert (player16, position16) into PlayerPositions
+
+!new Position('position17')
+!position17.positionName := #MIDFIELDER
+!insert (player17, position17) into PlayerPositions
+
+!new Position('position18')
+!position18.positionName := #GOALKEEPER
+!insert (player18, position18) into PlayerPositions
+
+!new TrainingSession('training11')
+!training11.date := '2023-11-10'
+!training11.location := 'Dragon Training Grounds'
+!training11.purpose := 'Speed Drills'
+!insert (team11, training11) into TeamTraining
+
+!new TrainingSession('training12')
+!training12.date := '2023-11-11'
+!training12.location := 'Phoenix Practice Arena'
+!training12.purpose := 'Team Dynamics'
+!insert (team12, training12) into TeamTraining
+
+!new TrainingNotes('trainingNotes11')
+!trainingNotes11.note := 'Focused on improving sprint times'
+!trainingNotes11.date := '2023-11-10'
+!insert (training11, trainingNotes11) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes12')
+!trainingNotes12.note := 'Emphasized on cohesive team play'
+!trainingNotes12.date := '2023-11-11'
+!insert (training12, trainingNotes12) into TrainingTrainingNotes
+
+!new TrainingObjective('objective16')
+!objective16.areaToImprove := 'Sprint Speed'
+!objective16.startDate := '2023-09-01'
+!objective16.endDate := '2023-11-30'
+!objective16.success := false
+!insert (objective16, player16) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective17')
+!objective17.areaToImprove := 'Tactical Awareness'
+!objective17.startDate := '2023-08-15'
+!objective17.endDate := '2023-10-15'
+!objective17.success := true
+!insert (objective17, player17) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective18')
+!objective18.areaToImprove := 'Reaction Time'
+!objective18.startDate := '2023-07-10'
+!objective18.endDate := '2023-10-10'
+!objective18.success := false
+!insert (objective18, player18) into TrainingObjectivePlayer
+
+!new Competition('competition6')
+!competition6.name := 'Continental Cup'
+!competition6.type := 'Group Stage'
+
+!new Match('match6')
+!match6.date := '2023-11-21'
+!match6.homeAway := true
+!insert (competition6, match6) into CompetitionMatch
+!insert (team11, match6) into LocalMatch
+!insert (team12, match6) into VisitorMatch
+
+!new MatchReport('report6')
+!report6.duration := 90
+!report6.scoreVisitor := 1
+!report6.scoreLocal := 3
+!insert (match6, report6) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer16')
+!matchPlayer16.booked := false
+!matchPlayer16.goals := 1
+!matchPlayer16.rating := 8
+!insert (player16, matchPlayer16) into PlayerMatch
+!insert (match6, matchPlayer16) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer18')
+!matchPlayer18.booked := true
+!matchPlayer18.goals := 1
+!matchPlayer18.rating := 7
+!insert (player18, matchPlayer18) into PlayerMatch
+!insert (match6, matchPlayer18) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition16')
+!matchPlayerPosition16.positionName := #FORWARD
+!matchPlayerPosition16.number := 9
+!insert (matchPlayer16, matchPlayerPosition16) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition18')
+!matchPlayerPosition18.positionName := #GOALKEEPER
+!matchPlayerPosition18.number := 1
+!insert (matchPlayer18, matchPlayerPosition18) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event20')
+!event20.eventType := #GOAL
+!event20.time := 10
+!insert (match6, event20) into MatchMatchEvent
+
+!new MatchEvent('event21')
+!event21.eventType := #GOAL
+!event21.time := 35
+!insert (match6, event21) into MatchMatchEvent
+
+!new MatchEvent('event22')
+!event22.eventType := #GOAL
+!event22.time := 67
+!insert (match6, event22) into MatchMatchEvent
+
+!new MatchEvent('event23')
+!event23.eventType := #GOAL
+!event23.time := 80
+!insert (match6, event23) into MatchMatchEvent
+
+!new MatchNote('matchNote6')
+!matchNote6.note := 'Dragons FC showed excellent performance with quick goals'
+!matchNote6.date := '2023-11-21'
+!insert (match6, matchNote6) into MatchMatchNote

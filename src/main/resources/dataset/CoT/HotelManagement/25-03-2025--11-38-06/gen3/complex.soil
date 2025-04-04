@@ -1,0 +1,86 @@
+!new Customer('customer14')
+!customer14.firstName := 'Sofia'
+!customer14.lastName := 'Müller'
+
+!new Booking('booking14')
+!booking14.bookingId := 345
+!booking14.startDate := 'December 5, 2024'
+!booking14.endDate := 'December 10, 2024'
+!booking14.canceled := false
+!booking14.confirmed := true
+
+!new RoomReservation('roomreservation22')
+!roomreservation22.checkInDate := 'December 5, 2024'
+!roomreservation22.checkOutDate := 'December 8, 2024'
+
+!new RoomReservation('roomreservation23')
+!roomreservation23.checkInDate := 'December 8, 2024'
+!roomreservation23.checkOutDate := 'December 10, 2024'
+
+!new Room('room27')
+!room27.roomNumber := 201
+!room27.numBeds := 1
+!room27.pricePerNight := 130.00
+!room27.occupied := true
+!room27.blocked := false
+
+!new Room('room28')
+!room28.roomNumber := 305
+!room28.numBeds := 2
+!room28.pricePerNight := 160.00
+!room28.occupied := true
+!room28.blocked := false
+
+!new RoomExtra('roomextra32')
+!roomextra32.price := 80.00
+!roomextra32.description := 'A guided tour of the local vineyards with exclusive wine tastings and cheese pairing.'
+
+!new RoomExtra('roomextra33')
+!roomextra33.price := 40.00
+!roomextra33.description := 'Assorted local cheeses and meats served in the room.'
+
+!new RoomExtra('roomextra34')
+!roomextra34.price := 60.00
+!roomextra34.description := 'An evening event showcasing the finest selections from the vineyard’s collection.'
+
+!new RoomExtra('roomextra35')
+!roomextra35.price := 110.00
+!roomextra35.description := 'Includes a multi-course dinner at the inn’s acclaimed restaurant paired with curated wines.'
+
+!new Bill('bill28')
+!bill28.billId := 56789
+!bill28.price := 530.00
+
+!new Bill('bill29')
+!bill29.billId := 56790
+!bill29.price := 490.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto13')
+!freeroomtypesdto13.roomTypeDescription := 'Opulent suite with breathtaking views of the vineyard, private terrace, and elegant décor.'
+!freeroomtypesdto13.numBeds := 2
+!freeroomtypesdto13.pricePerNight := 280.00
+!freeroomtypesdto13.numFreeRooms := 3
+
+!new FreeRoomTypesDTO('freeroomtypesdto14')
+!freeroomtypesdto14.roomTypeDescription := 'Comfortable double room featuring rustic charm and modern amenities.'
+!freeroomtypesdto14.numBeds := 2
+!freeroomtypesdto14.pricePerNight := 190.00
+!freeroomtypesdto14.numFreeRooms := 4
+
+!insert (booking14, customer14) into BookingCustomer
+!insert (booking14, roomreservation22) into BookingRoomReservation
+!insert (booking14, roomreservation23) into BookingRoomReservation
+
+!insert (roomreservation22, room27) into RoomReservationRoom
+!insert (roomreservation23, room28) into RoomReservationRoom
+
+!insert (roomreservation22, roomextra32) into RoomReservationExtras
+!insert (roomreservation22, roomextra33) into RoomReservationExtras
+!insert (roomreservation23, roomextra34) into RoomReservationExtras
+!insert (roomreservation23, roomextra35) into RoomReservationExtras
+
+!insert (bill28, roomreservation22) into BillRoomReservation
+!insert (bill29, roomreservation23) into BillRoomReservation
+
+!insert (booking14, bill28) into BookingBill
+!insert (booking14, bill29) into BookingBill

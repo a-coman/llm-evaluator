@@ -1,0 +1,235 @@
+!new Client('client9')
+!client9.clientId := 5
+!client9.isSuspended := true
+
+!new Client('client10')
+!client10.clientId := 999999999
+!client10.isSuspended := false
+
+!new Rental('rental5')
+!rental5.date := Date('2023-06-30')
+
+!new Movie('cassetteGreatEscape')
+!cassetteGreatEscape.title := 'The Great Escape'
+!cassetteGreatEscape.availableCopies := 50
+!cassetteGreatEscape.genre := #Action
+
+!new Series('cassetteEpicOdyssey')
+!cassetteEpicOdyssey.title := 'Epic Odyssey Ep.100'
+!cassetteEpicOdyssey.availableCopies := 0
+!cassetteEpicOdyssey.episode := 100
+
+!new Actor('actorSamanthaONeill')
+!actorSamanthaONeill.name := 'Samantha O\'Neill'
+
+!new Actor('actorHirokiYamamoto')
+!actorHirokiYamamoto.name := 'Hiroki Yamamoto'
+
+!insert (client9, rental5) into ClientRental
+
+!insert (rental5, cassetteGreatEscape) into RentalCassette
+
+!insert (cassetteGreatEscape, actorSamanthaONeill) into CassetteActor
+!insert (cassetteGreatEscape, actorHirokiYamamoto) into CassetteActor
+!insert (cassetteEpicOdyssey, actorHirokiYamamoto) into CassetteActor
+!insert (cassetteEpicOdyssey, actorSamanthaONeill) into CassetteActor
+
+!new Client('client501')
+!client501.clientId := 501
+!client501.isSuspended := false
+
+!new Client('client502')
+!client502.clientId := 502
+!client502.isSuspended := true
+
+!new Client('client503')
+!client503.clientId := 503
+!client503.isSuspended := false
+
+!new Client('client504')
+!client504.clientId := 504
+!client504.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-07-18')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-12-01')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-11-02')
+
+!new Movie('cassetteMediterraneanWhisper')
+!cassetteMediterraneanWhisper.title := 'The Mediterranean Whisper'
+!cassetteMediterraneanWhisper.availableCopies := 4
+!cassetteMediterraneanWhisper.genre := #Comedy
+
+!new Series('cassetteTalesOfTimbuktu')
+!cassetteTalesOfTimbuktu.title := 'Tales of Timbuktu'
+!cassetteTalesOfTimbuktu.availableCopies := 2
+!cassetteTalesOfTimbuktu.episode := 4
+
+!new Movie('cassetteNorthernLights')
+!cassetteNorthernLights.title := 'Through the Northern Lights'
+!cassetteNorthernLights.availableCopies := 0
+!cassetteNorthernLights.genre := #Action
+
+!new Series('cassetteDigitalDreamscapes')
+!cassetteDigitalDreamscapes.title := 'Digital Dreamscapes'
+!cassetteDigitalDreamscapes.availableCopies := 1
+!cassetteDigitalDreamscapes.episode := 7
+
+!new Actor('actorSophiaValdez')
+!actorSophiaValdez.name := 'Sophia Valdez'
+
+!new Actor('actorMaliKeita')
+!actorMaliKeita.name := 'Mali Keita'
+
+!new Actor('actorNinaKoulibaly')
+!actorNinaKoulibaly.name := 'Nina Koulibaly'
+
+!new Actor('actorErikNyman')
+!actorErikNyman.name := 'Erik Nyman'
+
+!new Actor('actorLianChen')
+!actorLianChen.name := 'Lian Chen'
+
+!insert (client501, rental1) into ClientRental
+!insert (client503, rental2) into ClientRental
+!insert (client504, rental3) into ClientRental
+
+!insert (rental1, cassetteMediterraneanWhisper) into RentalCassette
+!insert (rental2, cassetteTalesOfTimbuktu) into RentalCassette
+!insert (rental3, cassetteNorthernLights) into RentalCassette
+
+!insert (cassetteMediterraneanWhisper, actorSophiaValdez) into CassetteActor
+!insert (cassetteTalesOfTimbuktu, actorMaliKeita) into CassetteActor
+!insert (cassetteTalesOfTimbuktu, actorNinaKoulibaly) into CassetteActor
+!insert (cassetteNorthernLights, actorErikNyman) into CassetteActor
+!insert (cassetteDigitalDreamscapes, actorLianChen) into CassetteActor
+
+!new Client('client400')
+!client400.clientId := 400
+!client400.isSuspended := false
+
+!new Client('client401')
+!client401.clientId := 401
+!client401.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-18')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-19')
+
+!new Movie('cassetteTimelessAdventure')
+!cassetteTimelessAdventure.title := 'Timeless Adventure'
+!cassetteTimelessAdventure.availableCopies := 0
+!cassetteTimelessAdventure.genre := #Action
+
+!new Movie('cassetteLaughingMatters')
+!cassetteLaughingMatters.title := 'Laughing Matters'
+!cassetteLaughingMatters.availableCopies := 1
+!cassetteLaughingMatters.genre := #Comedy
+
+!new Series('cassetteTwilightTales')
+!cassetteTwilightTales.title := 'Twilight Tales'
+!cassetteTwilightTales.availableCopies := 0
+!cassetteTwilightTales.episode := 13
+
+!new Series('cassetteTomorrowsQuest')
+!cassetteTomorrowsQuest.title := 'Tomorrow\'s Quest'
+!cassetteTomorrowsQuest.availableCopies := 0
+!cassetteTomorrowsQuest.episode := 22
+
+!new Actor('actorMerylStreep')
+!actorMerylStreep.name := 'Meryl Streep'
+
+!new Actor('actorKevinHart')
+!actorKevinHart.name := 'Kevin Hart'
+
+!new Actor('actorZoeSaldana')
+!actorZoeSaldana.name := 'Zoe Saldana'
+
+!new Actor('actorKeanuReeves')
+!actorKeanuReeves.name := 'Keanu Reeves'
+
+!new Actor('actorNataliePortman')
+!actorNataliePortman.name := 'Natalie Portman'
+
+!insert (client400, rental1) into ClientRental
+!insert (client401, rental2) into ClientRental
+
+!insert (rental1, cassetteTimelessAdventure) into RentalCassette
+!insert (rental1, cassetteLaughingMatters) into RentalCassette
+!insert (rental1, cassetteTwilightTales) into RentalCassette
+
+!insert (rental2, cassetteLaughingMatters) into RentalCassette
+!insert (rental2, cassetteTomorrowsQuest) into RentalCassette
+
+!insert (cassetteTimelessAdventure, actorMerylStreep) into CassetteActor
+!insert (cassetteLaughingMatters, actorKevinHart) into CassetteActor
+!insert (cassetteTwilightTales, actorZoeSaldana) into CassetteActor
+!insert (cassetteTwilightTales, actorKeanuReeves) into CassetteActor
+!insert (cassetteTomorrowsQuest, actorNataliePortman) into CassetteActor
+
+!new Client('chineduOkeke')
+!chineduOkeke.clientId := 501
+!chineduOkeke.isSuspended := false
+
+!new Client('aishaMusa')
+!aishaMusa.clientId := 502
+!aishaMusa.isSuspended := false
+
+!new Rental('rentalChinedu')
+!rentalChinedu.date := Date('2023-07-21')
+
+!new Rental('rentalAisha1')
+!rentalAisha1.date := Date('2023-07-15')
+
+!new Rental('rentalAisha2')
+!rentalAisha2.date := Date('2023-07-28')
+
+!new Movie('cassetteLionheartWarriors')
+!cassetteLionheartWarriors.title := 'Lionheart Warriors'
+!cassetteLionheartWarriors.availableCopies := 10
+!cassetteLionheartWarriors.genre := #Action
+
+!new Movie('cassetteWeddingBellsLagos')
+!cassetteWeddingBellsLagos.title := 'Wedding Bells in Lagos'
+!cassetteWeddingBellsLagos.availableCopies := 5
+!cassetteWeddingBellsLagos.genre := #Comedy
+
+!new Series('cassetteLagosLoveStories')
+!cassetteLagosLoveStories.title := 'Lagos Love Stories'
+!cassetteLagosLoveStories.availableCopies := 3
+!cassetteLagosLoveStories.episode := 15
+
+!new Actor('actorGenevieveNnaji')
+!actorGenevieveNnaji.name := 'Genevieve Nnaji'
+
+!new Actor('actorOluJacobs')
+!actorOluJacobs.name := 'Olu Jacobs'
+
+!new Actor('actorRichardMofeDamijo')
+!actorRichardMofeDamijo.name := 'Richard Mofe-Damijo'
+
+!new Actor('actorOmotolaJaladeEkeinde')
+!actorOmotolaJaladeEkeinde.name := 'Omotola Jalade Ekeinde'
+
+!insert (chineduOkeke, rentalChinedu) into ClientRental
+!insert (aishaMusa, rentalAisha1) into ClientRental
+!insert (aishaMusa, rentalAisha2) into ClientRental
+
+!insert (rentalChinedu, cassetteLionheartWarriors) into RentalCassette
+!insert (rentalAisha1, cassetteWeddingBellsLagos) into RentalCassette
+!insert (rentalAisha2, cassetteLagosLoveStories) into RentalCassette
+
+!insert (cassetteLionheartWarriors, actorGenevieveNnaji) into CassetteActor
+!insert (cassetteLionheartWarriors, actorOluJacobs) into CassetteActor
+
+!insert (cassetteWeddingBellsLagos, actorRichardMofeDamijo) into CassetteActor
+!insert (cassetteWeddingBellsLagos, actorOmotolaJaladeEkeinde) into CassetteActor
+
+!insert (cassetteLagosLoveStories, actorOmotolaJaladeEkeinde) into CassetteActor
+

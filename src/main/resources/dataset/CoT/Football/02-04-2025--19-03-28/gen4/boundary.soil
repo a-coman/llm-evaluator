@@ -1,0 +1,143 @@
+!new Club('club28')
+!club28.name := 'Central Stars FC'
+!club28.homeGround := 'Star Field'
+!club28.chairman := 'Margaret Faulkner'
+
+!new Team('teamAD')
+!teamAD.name := 'Stars Juniors'
+
+!insert (club28, teamAD) into ClubTeam
+
+!new Player('player29')
+!player29.name := 'Konstantinos Georgiou'
+!player29.age := 29
+!player29.bestFoot := #BOTH
+!player29.phoneNumber := '+302109876543'
+
+!insert (teamAD, player29) into TeamPlayer
+
+!new Position('position41')
+!position41.positionName := #MIDFIELDER
+
+!new Position('position42')
+!position42.positionName := #FORWARD
+
+!insert (player29, position41) into PlayerPositions
+!insert (player29, position42) into PlayerPositions
+
+!new PlayerNotes('playerNote20')
+!playerNote20.note := 'Creative playmaker, excellent vision on the field.'
+!playerNote20.date := '2023-01-10'
+
+!new PlayerNotes('playerNote21')
+!playerNote21.note := 'Needs improvement on physical endurance.'
+!playerNote21.date := '2023-05-05'
+
+!insert (player29, playerNote20) into PlayerPlayerNotes
+!insert (player29, playerNote21) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective29')
+!trainingObjective29.areaToImprove := 'Tactical awareness'
+!trainingObjective29.startDate := '2023-02-01'
+!trainingObjective29.endDate := '2023-03-01'
+!trainingObjective29.success := true
+
+!new TrainingObjective('trainingObjective30')
+!trainingObjective30.areaToImprove := 'Dribbling under pressure'
+!trainingObjective30.startDate := '2023-03-02'
+!trainingObjective30.endDate := '2023-04-02'
+!trainingObjective30.success := false
+
+!insert (trainingObjective29, player29) into TrainingObjectivePlayer
+!insert (trainingObjective30, player29) into TrainingObjectivePlayer
+
+!new Competition('competition14')
+!competition14.name := 'Regional Friendship Cup'
+!competition14.type := 'Friendly'
+
+!new Match('match14')
+!match14.date := '2023-08-14'
+!match14.homeAway := false
+
+!insert (competition14, match14) into CompetitionMatch
+
+!new Team('teamAE')
+!teamAE.name := 'Northern Pirates'
+
+!new Club('club29')
+!club29.name := 'Northern Club'
+!club29.homeGround := 'Northern Stadium'
+!club29.chairman := 'John Smith'
+
+!insert (club29, teamAE) into ClubTeam
+
+!new Player('player30')
+!player30.name := 'Victor Sanchez'
+!player30.age := 28
+!player30.bestFoot := #RIGHT
+!player30.phoneNumber := '+341234567890'
+
+!insert (teamAE, player30) into TeamPlayer
+
+!new Position('position43')
+!position43.positionName := #DEFENDER
+
+!insert (player30, position43) into PlayerPositions
+
+!new TrainingObjective('trainingObjective31')
+!trainingObjective31.areaToImprove := 'Positional Awareness'
+!trainingObjective31.startDate := '2023-07-01'
+!trainingObjective31.endDate := '2023-08-01'
+!trainingObjective31.success := false
+
+!insert (trainingObjective31, player30) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession26')
+!trainingSession26.date := '2023-08-10'
+!trainingSession26.location := 'Northern Stadium Practice Area'
+!trainingSession26.purpose := 'Defensive coordination session'
+
+!insert (teamAE, trainingSession26) into TeamTraining
+
+!new TrainingNotes('trainingNote27')
+!trainingNote27.note := 'Working on player positioning in defensive scenarios.'
+!trainingNote27.date := '2023-08-10'
+
+!insert (trainingSession26, trainingNote27) into TrainingTrainingNotes
+
+!insert (teamAE, match14) into LocalMatch
+!insert (teamAD, match14) into VisitorMatch
+
+!new MatchReport('matchReport14')
+!matchReport14.duration := 90
+!matchReport14.scoreVisitor := 0
+!matchReport14.scoreLocal := 0
+
+!insert (match14, matchReport14) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer20')
+!matchPlayer20.booked := true
+!matchPlayer20.goals := 0
+!matchPlayer20.rating := 6
+
+!insert (player29, matchPlayer20) into PlayerMatch
+!insert (match14, matchPlayer20) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition21')
+!matchPlayerPosition21.positionName := #MIDFIELDER
+!matchPlayerPosition21.number := 10
+
+!insert (matchPlayer20, matchPlayerPosition21) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession25')
+!trainingSession25.date := '2023-08-12'
+!trainingSession25.location := 'Star Field Annex'
+!trainingSession25.purpose := 'Strategic planning for upcoming matches'
+
+!insert (teamAD, trainingSession25) into TeamTraining
+
+!new TrainingNotes('trainingNote26')
+!trainingNote26.note := 'Detailed analysis of opponents strategy.'
+!trainingNote26.date := '2023-08-12'
+
+!insert (trainingSession25, trainingNote26) into TrainingTrainingNotes

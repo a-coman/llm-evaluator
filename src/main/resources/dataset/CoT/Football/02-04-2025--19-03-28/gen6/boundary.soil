@@ -1,0 +1,152 @@
+!new Club('club43')
+!club43.name := 'South Coast Sharks'
+!club43.homeGround := 'Shark Park'
+!club43.chairman := 'Diego Marquez'
+
+!new Team('teamAU')
+!teamAU.name := 'Sharks Reserves'
+
+!insert (club43, teamAU) into ClubTeam
+
+!new Player('player49')
+!player49.name := 'Ling Zhang'
+!player49.age := 24
+!player49.bestFoot := #LEFT
+!player49.phoneNumber := '+8613800001111'
+
+!insert (teamAU, player49) into TeamPlayer
+
+!new Position('position69')
+!position69.positionName := #DEFENDER
+
+!new Position('position70')
+!position70.positionName := #MIDFIELDER
+
+!insert (player49, position69) into PlayerPositions
+!insert (player49, position70) into PlayerPositions
+
+!new PlayerNotes('playerNote34')
+!playerNote34.note := 'Outstanding defensive capabilities.'
+!playerNote34.date := '2023-04-12'
+
+!new PlayerNotes('playerNote35')
+!playerNote35.note := 'Prone to late game fatigue.'
+!playerNote35.date := '2023-05-22'
+
+!insert (player49, playerNote34) into PlayerPlayerNotes
+!insert (player49, playerNote35) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective52')
+!trainingObjective52.areaToImprove := 'Stamina during matches'
+!trainingObjective52.startDate := '2023-06-01'
+!trainingObjective52.endDate := '2023-06-30'
+!trainingObjective52.success := false
+
+!insert (trainingObjective52, player49) into TrainingObjectivePlayer
+
+!new Competition('competition22')
+!competition22.name := 'Local Derby Championship'
+!competition22.type := 'League'
+
+!new Team('teamAV')
+!teamAV.name := 'Capital Comets'
+
+!new Club('club44')
+!club44.name := 'Capital Football Club'
+!club44.homeGround := 'Capital Arena'
+!club44.chairman := 'Richard Cometman'
+
+!insert (club44, teamAV) into ClubTeam
+
+!new Player('player50')
+!player50.name := 'Ali Zaid'
+!player50.age := 26
+!player50.bestFoot := #RIGHT
+!player50.phoneNumber := '+8613888888888'
+
+!insert (teamAV, player50) into TeamPlayer
+
+!new Position('position71')
+!position71.positionName := #MIDFIELDER
+
+!insert (player50, position71) into PlayerPositions
+
+!new TrainingObjective('trainingObjective53')
+!trainingObjective53.areaToImprove := 'Ball Control'
+!trainingObjective53.startDate := '2023-09-01'
+!trainingObjective53.endDate := '2023-09-30'
+!trainingObjective53.success := true
+
+!insert (trainingObjective53, player50) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession39')
+!trainingSession39.date := '2023-09-28'
+!trainingSession39.location := 'Capital Arena Training Ground'
+!trainingSession39.purpose := 'Offensive Drills'
+
+!insert (teamAV, trainingSession39) into TeamTraining
+
+!new TrainingNotes('trainingNote40')
+!trainingNote40.note := 'Focus on quick transition plays and maintaining possession.'
+!trainingNote40.date := '2023-09-28'
+
+!insert (trainingSession39, trainingNote40) into TrainingTrainingNotes
+
+!new Match('match22')
+!match22.date := '2023-10-05'
+!match22.homeAway := false
+
+!insert (competition22, match22) into CompetitionMatch
+
+!insert (teamAV, match22) into LocalMatch
+!insert (teamAU, match22) into VisitorMatch
+
+!new MatchReport('matchReport22')
+!matchReport22.duration := 90
+!matchReport22.scoreVisitor := 2
+!matchReport22.scoreLocal := 1
+
+!insert (match22, matchReport22) into MatchMatchReport
+
+!new MatchEvent('matchEvent89')
+!matchEvent89.eventType := #GOAL
+!matchEvent89.time := 15
+
+!new MatchEvent('matchEvent90')
+!matchEvent90.eventType := #GOAL
+!matchEvent90.time := 45
+
+!new MatchEvent('matchEvent91')
+!matchEvent91.eventType := #GOAL
+!matchEvent91.time := 75
+
+!insert (match22, matchEvent89) into MatchMatchEvent
+!insert (match22, matchEvent90) into MatchMatchEvent
+!insert (match22, matchEvent91) into MatchMatchEvent
+
+!new MatchPlayer('matchPlayer31')
+!matchPlayer31.booked := true
+!matchPlayer31.goals := 1
+!matchPlayer31.rating := 8
+
+!insert (player49, matchPlayer31) into PlayerMatch
+!insert (match22, matchPlayer31) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition32')
+!matchPlayerPosition32.positionName := #DEFENDER
+!matchPlayerPosition32.number := 3
+
+!insert (matchPlayer31, matchPlayerPosition32) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession38')
+!trainingSession38.date := '2023-10-03'
+!trainingSession38.location := 'Shark Park Training Grounds'
+!trainingSession38.purpose := 'Preparing for critical match'
+
+!insert (teamAU, trainingSession38) into TeamTraining
+
+!new TrainingNotes('trainingNote39')
+!trainingNote39.note := 'Tactical setup focusing on counter-attacks.'
+!trainingNote39.date := '2023-10-03'
+
+!insert (trainingSession38, trainingNote39) into TrainingTrainingNotes

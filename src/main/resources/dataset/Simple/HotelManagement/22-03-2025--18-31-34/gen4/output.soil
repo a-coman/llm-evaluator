@@ -1,0 +1,55 @@
+!new Booking('booking5')
+!booking5.startDate := '2023-10-15'
+!booking5.endDate := '2023-10-20'
+!booking5.canceled := true
+!booking5.bookingId := 104
+!booking5.confirmed := false
+
+!new Bill('bill5')
+!bill5.price := 0.00
+!bill5.billId := 204
+
+!new FreeRoomTypesDTO('roomType5')
+!roomType5.roomTypeDescription := 'Economy Room'
+!roomType5.numBeds := 1
+!roomType5.pricePerNight := 50.00
+!roomType5.numFreeRooms := 8
+
+!new Customer('customer5')
+!customer5.firstName := 'Ethan'
+!customer5.lastName := 'Fletcher'
+
+!new RoomReservation('reservation5')
+!reservation5.checkInDate := '2023-10-15'
+!reservation5.checkOutDate := '2023-10-20'
+
+!new RoomExtra('extra5')
+!extra5.price := 0.00
+!extra5.description := 'Complimentary Service'
+
+!new Room('room7')
+!room7.numBeds := 1
+!room7.pricePerNight := 45.00
+!room7.occupied := false
+!room7.blocked := false
+!room7.roomNumber := 107
+
+!new Room('room8')
+!room8.numBeds := 1
+!room8.pricePerNight := 50.00
+!room8.occupied := false
+!room8.blocked := false
+!room8.roomNumber := 108
+
+!insert (booking5, bill5) into BookingBill
+
+!insert (booking5, customer5) into BookingCustomer
+
+!insert (booking5, reservation5) into BookingRoomReservation
+
+!insert (reservation5, extra5) into RoomReservationExtras
+
+!insert (reservation5, room7) into RoomReservationRoom
+!insert (reservation5, room8) into RoomReservationRoom
+
+!insert (bill5, reservation5) into BillRoomReservation

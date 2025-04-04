@@ -1,0 +1,73 @@
+!new Customer('customer7')
+!customer7.firstName := 'Lin'
+!customer7.lastName := 'Nguyen'
+
+!new Booking('booking7')
+!booking7.bookingId := 2
+!booking7.startDate := '2025-08-15'
+!booking7.endDate := '2025-08-15'
+!booking7.canceled := false
+!booking7.confirmed := true
+
+!new Bill('bill12')
+!bill12.billId := 3
+!bill12.price := 0.01
+
+!new Bill('bill13')
+!bill13.billId := 4
+!bill13.price := 9999.98
+
+!new RoomReservation('roomreservation11')
+!roomreservation11.checkInDate := '2025-08-15'
+!roomreservation11.checkOutDate := '2025-08-15'
+
+!new Room('room15')
+!room15.roomNumber := 202
+!room15.numBeds := 1
+!room15.pricePerNight := 5.00
+!room15.occupied := true
+!room15.blocked := false
+
+!new Room('room16')
+!room16.roomNumber := 303
+!room16.numBeds := 2
+!room16.pricePerNight := 50.00
+!room16.occupied := false
+!room16.blocked := false
+
+!new RoomExtra('roomextra15')
+!roomextra15.price := 30.00
+!roomextra15.description := 'Traditional Vietnamese Dinner Experience'
+
+!new RoomExtra('roomextra16')
+!roomextra16.price := 20.00
+!roomextra16.description := 'Tai Chi Session at the Park'
+
+!new FreeRoomTypesDTO('freeroomtypesdto7')
+!freeroomtypesdto7.roomTypeDescription := 'Standard Family Room'
+!freeroomtypesdto7.numBeds := 4
+!freeroomtypesdto7.pricePerNight := 100.00
+!freeroomtypesdto7.numFreeRooms := 3
+
+!insert (booking7, customer7) into BookingCustomer
+!insert (booking7, roomreservation11) into BookingRoomReservation
+!insert (booking7, bill12) into BookingBill
+!insert (booking7, bill13) into BookingBill
+
+!insert (roomreservation11, room15) into RoomReservationRoom
+!insert (roomreservation11, room16) into RoomReservationRoom
+
+!insert (roomreservation11, roomextra15) into RoomReservationExtras
+!insert (roomreservation11, roomextra16) into RoomReservationExtras
+
+!insert (bill12, roomreservation11) into BillRoomReservation
+
+!new RoomReservation('roomreservation12')
+!roomreservation12.checkInDate := '2025-08-15'
+!roomreservation12.checkOutDate := '2025-08-15'
+!insert (booking7, roomreservation12) into BookingRoomReservation
+!insert (roomreservation12, room15) into RoomReservationRoom
+!insert (roomreservation12, room16) into RoomReservationRoom
+!insert (roomreservation12, roomextra15) into RoomReservationExtras
+!insert (roomreservation12, roomextra16) into RoomReservationExtras
+!insert (bill13, roomreservation12) into BillRoomReservation

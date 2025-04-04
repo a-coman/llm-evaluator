@@ -1,0 +1,35 @@
+-- New Client instance with a unique client ID and different suspension status
+!new Client('client12')
+!client12.clientId := 12
+!client12.isSuspended := false
+
+-- New Rental instance with an additional unique date
+!new Rental('rental11')
+!rental11.date := Date('2024-03-17')
+
+-- New Movie instance with diverse title, genre, and a generous number of copies
+!new Movie('movie11')
+!movie11.title := 'Comedy of Errors'
+!movie11.availableCopies := 9
+!movie11.genre := #Comedy
+
+-- New Series instance with many episodes and available copies
+!new Series('series12')
+!series12.title := 'Epic Journey'
+!series12.availableCopies := 10
+!series12.episode := 20
+
+-- New Actor instance with a distinctive name
+!new Actor('actor11')
+!actor11.name := 'Noah Grey'
+
+-- Establishing a distinct client-rental association
+!insert (client12, rental11) into ClientRental
+
+-- Associating the rental with the new movie and series
+!insert (rental11, movie11) into RentalCassette
+!insert (rental11, series12) into RentalCassette
+
+-- Associating the movie and series with the new actor
+!insert (movie11, actor11) into CassetteActor
+!insert (series12, actor11) into CassetteActor

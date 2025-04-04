@@ -1,0 +1,53 @@
+!new Driver('driver14')
+!driver14.id := 'D014'
+!driver14.name := 'Thomas Wright'
+
+!new Shipment('shipment23')
+!shipment23.id := 'S023'
+!shipment23.status := #NEW
+
+!new Shipment('shipment24')
+!shipment24.id := 'S024'
+!shipment24.status := #ASSIGNED
+
+!new Address('address27')
+!address27.text := '3333 River Bend Road'
+
+!new Address('address28')
+!address28.text := '4444 Ocean Breeze Drive'
+
+!new GeoLocation('geoLocation27')
+!geoLocation27.latitude := 35.6710
+!geoLocation27.longitude := 139.7645
+
+!new GeoLocation('geoLocation28')
+!geoLocation28.latitude := 55.7558
+!geoLocation28.longitude := 37.6173
+
+!new Customer('customer14')
+!customer14.id := 'C014'
+!customer14.name := 'Lucas Brown'
+!customer14.twitterUserName := '@lucas_brown'
+
+!new Station('station13')
+
+!insert (driver14, shipment24) into DriverShipment
+
+!insert (shipment23, address27) into ShipmentContainsPickUpAddress
+!insert (shipment23, address28) into ShipmentContainsDeliveryAddress
+
+!insert (shipment24, address28) into ShipmentContainsPickUpAddress
+!insert (shipment24, address27) into ShipmentContainsDeliveryAddress
+
+!insert (address27, geoLocation27) into AddressContainsGeoLocation
+!insert (address28, geoLocation28) into AddressContainsGeoLocation
+
+!insert (customer14, shipment23) into CustomerConsistsOfShipment
+!insert (customer14, shipment24) into CustomerConsistsOfShipment
+
+!insert (station13, customer14) into StationContainsCustomer
+
+!insert (station13, shipment23) into StationShipment
+!insert (station13, shipment24) into StationShipment
+
+!insert (station13, driver14) into StationContainsDriver

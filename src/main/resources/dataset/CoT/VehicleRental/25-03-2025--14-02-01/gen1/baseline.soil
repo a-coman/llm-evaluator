@@ -1,0 +1,68 @@
+!new RentalOffice('rentalOffice2')
+!rentalOffice2.name := 'CityCenter Rentals'
+!rentalOffice2.number := 101
+!rentalOffice2.address := '123 Main Street, Columbus, OH, 43215'
+
+!new Vehicle('vehicle1')
+!vehicle1.id := 1
+!vehicle1.registrationState := #CO
+!vehicle1.licensePlateNumber := 'OH1234XYZ'
+!vehicle1.vehicleTypeCode := #TRUCK10
+!vehicle1.registrationLastMaintenanceDate := Date('2023-01-15')
+!vehicle1.expirationDate := Date('2023-12-31')
+
+!new Truck('truck1')
+!truck1.id := 2
+!truck1.registrationState := #CO
+!truck1.licensePlateNumber := 'OH5678ABC'
+!truck1.vehicleTypeCode := #TRUCK
+!truck1.registrationLastMaintenanceDate := Date('2023-01-10')
+!truck1.expirationDate := Date('2023-11-30')
+!truck1.odometerReading := 123456
+!truck1.gasTankCapacity := 30.0
+!truck1.workingRadio := true
+!truck1.mileage := 15
+
+!new Individual('individualCustomer2')
+!individualCustomer2.name := 'John Doe'
+!individualCustomer2.address := '789 Elm Street, Dayton, OH, 45402'
+!individualCustomer2.poorRisk := false
+!individualCustomer2.homePhone := '555-123-4567'
+!individualCustomer2.driverLicenseState := #CO
+!individualCustomer2.driverLicenseNumber := 1234567
+!individualCustomer2.driverLicenseExpirationDate := Date('2026-05-22')
+
+!new Company('company1')
+!company1.name := 'TechSolutions Inc.'
+!company1.address := '456 Innovation Park, Cincinnati, OH, 45202'
+!company1.poorRisk := false
+!company1.idNumber := 285
+
+!new RentalAgreement('rentalAgreement1')
+!rentalAgreement1.number := 3001
+!rentalAgreement1.rentalDate := Date('2023-08-01')
+!rentalAgreement1.anticipatedDuration := 7
+!rentalAgreement1.depositPaid := 250.00
+!rentalAgreement1.quotedDailyRate := 45.00
+!rentalAgreement1.quotedRatePerMile := 0.20
+
+!new RentalAgreement('rentalAgreement2')
+!rentalAgreement2.number := 3002
+!rentalAgreement2.rentalDate := Date('2023-09-15')
+!rentalAgreement2.anticipatedDuration := 14
+!rentalAgreement2.depositPaid := 500.00
+!rentalAgreement2.quotedDailyRate := 85.00
+!rentalAgreement2.quotedRatePerMile := 0.40
+
+!insert (rentalOffice2, vehicle1) into RentalOfficeVehicle
+!insert (rentalOffice2, truck1) into RentalOfficeVehicle
+!insert (rentalOffice2, rentalAgreement1) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice2, rentalAgreement1) into RentalOfficeRentalAgreementDrop
+!insert (rentalOffice2, rentalAgreement2) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice2, rentalAgreement2) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement1, vehicle1) into RentalAgreementVehicle
+!insert (rentalAgreement1, individualCustomer2) into RentalAgreementCustomer
+
+!insert (rentalAgreement2, truck1) into RentalAgreementVehicle
+!insert (rentalAgreement2, company1) into RentalAgreementCustomer

@@ -1,0 +1,154 @@
+!new Club('club13')
+!club13.name := 'Heroes United'
+!club13.homeGround := 'Heroes Stadium'
+!club13.chairman := 'Nancy King'
+
+!new Club('club14')
+!club14.name := 'Titans FC'
+!club14.homeGround := 'Titan Fortress'
+!club14.chairman := 'Andrew Stone'
+
+!new Team('team13')
+!team13.name := 'Heroic Squad'
+!insert (club13, team13) into ClubTeam
+
+!new Team('team14')
+!team14.name := 'Titan Warriors'
+!insert (club14, team14) into ClubTeam
+
+!new Player('player19')
+!player19.name := 'Zara Patel'
+!player19.age := 23
+!player19.bestFoot := #LEFT
+!player19.phoneNumber := '123-678-9012'
+!insert (team13, player19) into TeamPlayer
+
+!new Player('player20')
+!player20.name := 'Lucas Green'
+!player20.age := 31
+!player20.bestFoot := #BOTH
+!player20.phoneNumber := '234-789-0123'
+!insert (team13, player20) into TeamPlayer
+
+!new Player('player21')
+!player21.name := 'Maya Spencer'
+!player21.age := 27
+!player21.bestFoot := #RIGHT
+!player21.phoneNumber := '345-890-1234'
+!insert (team14, player21) into TeamPlayer
+
+!new Position('position19')
+!position19.positionName := #DEFENDER
+!insert (player19, position19) into PlayerPositions
+
+!new Position('position20')
+!position20.positionName := #FORWARD
+!insert (player20, position20) into PlayerPositions
+
+!new Position('position21')
+!position21.positionName := #MIDFIELDER
+!insert (player21, position21) into PlayerPositions
+
+!new TrainingSession('training13')
+!training13.date := '2023-11-07'
+!training13.location := 'Hero Training Zone'
+!training13.purpose := 'Passing Efficiency'
+!insert (team13, training13) into TeamTraining
+
+!new TrainingSession('training14')
+!training14.date := '2023-11-08'
+!training14.location := 'Titan Gym'
+!training14.purpose := 'Strength Building'
+!insert (team14, training14) into TeamTraining
+
+!new TrainingNotes('trainingNotes13')
+!trainingNotes13.note := 'Players focused on improving pass accuracy'
+!trainingNotes13.date := '2023-11-07'
+!insert (training13, trainingNotes13) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes14')
+!trainingNotes14.note := 'Strength and conditioning were the key focus areas'
+!trainingNotes14.date := '2023-11-08'
+!insert (training14, trainingNotes14) into TrainingTrainingNotes
+
+!new TrainingObjective('objective19')
+!objective19.areaToImprove := 'Pass Accuracy'
+!objective19.startDate := '2023-10-05'
+!objective19.endDate := '2023-12-05'
+!objective19.success := false
+!insert (objective19, player19) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective20')
+!objective20.areaToImprove := 'Scoring'
+!objective20.startDate := '2023-09-20'
+!objective20.endDate := '2023-11-20'
+!objective20.success := true
+!insert (objective20, player20) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective21')
+!objective21.areaToImprove := 'Stamina'
+!objective21.startDate := '2023-08-12'
+!objective21.endDate := '2023-10-25'
+!objective21.success := true
+!insert (objective21, player21) into TrainingObjectivePlayer
+
+!new Competition('competition7')
+!competition7.name := 'Galaxy League'
+!competition7.type := 'League'
+
+!new Match('match7')
+!match7.date := '2023-11-28'
+!match7.homeAway := true
+!insert (competition7, match7) into CompetitionMatch
+!insert (team13, match7) into LocalMatch
+!insert (team14, match7) into VisitorMatch
+
+!new MatchReport('report7')
+!report7.duration := 90
+!report7.scoreVisitor := 1
+!report7.scoreLocal := 2
+!insert (match7, report7) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer19')
+!matchPlayer19.booked := false
+!matchPlayer19.goals := 1
+!matchPlayer19.rating := 8
+!insert (player19, matchPlayer19) into PlayerMatch
+!insert (match7, matchPlayer19) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer20')
+!matchPlayer20.booked := false
+!matchPlayer20.goals := 1
+!matchPlayer20.rating := 9
+!insert (player20, matchPlayer20) into PlayerMatch
+!insert (match7, matchPlayer20) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition19')
+!matchPlayerPosition19.positionName := #DEFENDER
+!matchPlayerPosition19.number := 4
+!insert (matchPlayer19, matchPlayerPosition19) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition20')
+!matchPlayerPosition20.positionName := #FORWARD
+!matchPlayerPosition20.number := 10
+!insert (matchPlayer20, matchPlayerPosition20) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event24')
+!event24.eventType := #GOAL
+!event24.time := 15
+!insert (match7, event24) into MatchMatchEvent
+
+!new MatchEvent('event25')
+!event25.eventType := #GOAL
+!event25.time := 50
+!insert (match7, event25) into MatchMatchEvent
+
+!new MatchEvent('event26')
+!event26.eventType := #GOAL
+!event26.time := 70
+!insert (match7, event26) into MatchMatchEvent
+
+!new MatchNote('matchNote7')
+!matchNote7.note := 'Heroic Squad showed resilience and strong defense'
+!matchNote7.date := '2023-11-28'
+!insert (match7, matchNote7) into MatchMatchNote

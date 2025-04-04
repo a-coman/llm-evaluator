@@ -1,0 +1,35 @@
+-- New Client instance with a unique client ID and suspension status
+!new Client('client32')
+!client32.clientId := 32
+!client32.isSuspended := false
+
+-- New Rental instance with a different unique date
+!new Rental('rental31')
+!rental31.date := Date('2025-11-25')
+
+-- New Movie instance with a unique title, genre, and specific available copies
+!new Movie('movie31')
+!movie31.title := 'Whispers of the Past'
+!movie31.availableCopies := 2
+!movie31.genre := #Action
+
+-- New Series instance with distinct episodes and a particular number of copies
+!new Series('series32')
+!series32.title := 'Kingdoms and Empires'
+!series32.availableCopies := 10
+!series32.episode := 12
+
+-- New Actor instance with a different name
+!new Actor('actor31')
+!actor31.name := 'Liam Collins'
+
+-- Establishing a unique client-rental association
+!insert (client32, rental31) into ClientRental
+
+-- Associating the rental with the new movie and series
+!insert (rental31, movie31) into RentalCassette
+!insert (rental31, series32) into RentalCassette
+
+-- Associating the movie and series with the new actor
+!insert (movie31, actor31) into CassetteActor
+!insert (series32, actor31) into CassetteActor

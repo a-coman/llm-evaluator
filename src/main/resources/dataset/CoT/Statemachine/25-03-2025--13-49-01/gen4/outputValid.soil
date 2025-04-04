@@ -1,0 +1,339 @@
+!new StateMachine('smartIrrigationControl')
+!smartIrrigationControl.name := 'smartIrrigationControl'
+
+!new State('systemIdle')
+!systemIdle.name := 'systemIdle'
+
+!new State('irrigating')
+!irrigating.name := 'irrigating'
+
+!new State('maintenanceMode')
+!maintenanceMode.name := 'maintenanceMode'
+
+!new State('weatherMonitoring')
+!weatherMonitoring.name := 'weatherMonitoring'
+
+!new Transition('startIrrigation')
+!startIrrigation.name := 'startIrrigation'
+
+!new Transition('pauseForMaintenance')
+!pauseForMaintenance.name := 'pauseForMaintenance'
+
+!new Transition('resumeIrrigation')
+!resumeIrrigation.name := 'resumeIrrigation'
+
+!new Transition('handleRainEvent')
+!handleRainEvent.name := 'handleRainEvent'
+
+!new Transition('completeCycle')
+!completeCycle.name := 'completeCycle'
+
+!new TimeEvent('timeEventStartIrrigation')
+!timeEventStartIrrigation.time := 10
+
+!new TimeEvent('timeEventPauseForMaintenance')
+!timeEventPauseForMaintenance.time := 5
+
+!new TimeEvent('timeEventResumeIrrigation')
+!timeEventResumeIrrigation.time := 15
+
+!new TimeEvent('timeEventHandleRainEvent')
+!timeEventHandleRainEvent.time := 2
+
+!new TimeEvent('timeEventCompleteCycle')
+!timeEventCompleteCycle.time := 30
+
+!insert (smartIrrigationControl, systemIdle) into StateMachineContainsStates
+!insert (smartIrrigationControl, irrigating) into StateMachineContainsStates
+!insert (smartIrrigationControl, maintenanceMode) into StateMachineContainsStates
+!insert (smartIrrigationControl, weatherMonitoring) into StateMachineContainsStates
+
+!insert (smartIrrigationControl, systemIdle) into StateMachineStartsStates
+
+!insert (smartIrrigationControl, startIrrigation) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, pauseForMaintenance) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, resumeIrrigation) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, handleRainEvent) into StateMachineContainsTransitions
+!insert (smartIrrigationControl, completeCycle) into StateMachineContainsTransitions
+
+!insert (startIrrigation, timeEventStartIrrigation) into TransitionContainsEvents
+!insert (pauseForMaintenance, timeEventPauseForMaintenance) into TransitionContainsEvents
+!insert (resumeIrrigation, timeEventResumeIrrigation) into TransitionContainsEvents
+!insert (handleRainEvent, timeEventHandleRainEvent) into TransitionContainsEvents
+!insert (completeCycle, timeEventCompleteCycle) into TransitionContainsEvents
+
+!insert (systemIdle, startIrrigation) into StateTransition
+!insert (startIrrigation, irrigating) into TransitionState
+
+!insert (irrigating, pauseForMaintenance) into StateTransition
+!insert (pauseForMaintenance, maintenanceMode) into TransitionState
+
+!insert (irrigating, handleRainEvent) into StateTransition
+!insert (handleRainEvent, weatherMonitoring) into TransitionState
+
+!insert (maintenanceMode, resumeIrrigation) into StateTransition
+!insert (resumeIrrigation, irrigating) into TransitionState
+
+!insert (weatherMonitoring, completeCycle) into StateTransition
+!insert (completeCycle, systemIdle) into TransitionState
+
+!new StateMachine('libraryBookHandler')
+!libraryBookHandler.name := 'libraryBookHandler'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('scanning')
+!scanning.name := 'scanning'
+
+!new State('verifying')
+!verifying.name := 'verifying'
+
+!new State('checkedIn')
+!checkedIn.name := 'checkedIn'
+
+!new Transition('idleToScanning')
+!idleToScanning.name := 'idleToScanning'
+
+!new Transition('scanningToVerifying')
+!scanningToVerifying.name := 'scanningToVerifying'
+
+!new Transition('verifyingToCheckedIn')
+!verifyingToCheckedIn.name := 'verifyingToCheckedIn'
+
+!new Transition('scanningToIdle')
+!scanningToIdle.name := 'scanningToIdle'
+
+!new TimeEvent('timeEventIdleToScanning')
+!timeEventIdleToScanning.time := 5
+
+!new TimeEvent('timeEventScanningToVerifying')
+!timeEventScanningToVerifying.time := 10
+
+!new TimeEvent('timeEventScanningToIdle')
+!timeEventScanningToIdle.time := 10
+
+!new TimeEvent('timeEventVerifyingToCheckedIn')
+!timeEventVerifyingToCheckedIn.time := 15
+
+!insert (libraryBookHandler, idle) into StateMachineContainsStates
+!insert (libraryBookHandler, scanning) into StateMachineContainsStates
+!insert (libraryBookHandler, verifying) into StateMachineContainsStates
+!insert (libraryBookHandler, checkedIn) into StateMachineContainsStates
+
+!insert (libraryBookHandler, idle) into StateMachineStartsStates
+
+!insert (libraryBookHandler, idleToScanning) into StateMachineContainsTransitions
+!insert (libraryBookHandler, scanningToVerifying) into StateMachineContainsTransitions
+!insert (libraryBookHandler, verifyingToCheckedIn) into StateMachineContainsTransitions
+!insert (libraryBookHandler, scanningToIdle) into StateMachineContainsTransitions
+
+!insert (idleToScanning, timeEventIdleToScanning) into TransitionContainsEvents
+!insert (scanningToVerifying, timeEventScanningToVerifying) into TransitionContainsEvents
+!insert (scanningToIdle, timeEventScanningToIdle) into TransitionContainsEvents
+!insert (verifyingToCheckedIn, timeEventVerifyingToCheckedIn) into TransitionContainsEvents
+
+!insert (idle, idleToScanning) into StateTransition
+!insert (idleToScanning, scanning) into TransitionState
+
+!insert (scanning, scanningToVerifying) into StateTransition
+!insert (scanningToVerifying, verifying) into TransitionState
+
+!insert (verifying, verifyingToCheckedIn) into StateTransition
+!insert (verifyingToCheckedIn, checkedIn) into TransitionState
+
+!insert (scanning, scanningToIdle) into StateTransition
+!insert (scanningToIdle, idle) into TransitionState
+
+!new StateMachine('virtualConcertScheduler')
+!virtualConcertScheduler.name := 'virtualConcertScheduler'
+
+!new State('setup')
+!setup.name := 'setup'
+
+!new State('soundCheck')
+!soundCheck.name := 'soundCheck'
+
+!new State('livePerformance')
+!livePerformance.name := 'livePerformance'
+
+!new State('intermission')
+!intermission.name := 'intermission'
+
+!new State('postEvent')
+!postEvent.name := 'postEvent'
+
+!new Transition('completeSetup')
+!completeSetup.name := 'completeSetup'
+
+!new Transition('startPerformance')
+!startPerformance.name := 'startPerformance'
+
+!new Transition('beginIntermission')
+!beginIntermission.name := 'beginIntermission'
+
+!new Transition('resumePerformance')
+!resumePerformance.name := 'resumePerformance'
+
+!new Transition('endConcert')
+!endConcert.name := 'endConcert'
+
+!new TimeEvent('timeEventCompleteSetup')
+!timeEventCompleteSetup.time := 180
+
+!new TimeEvent('timeEventStartPerformance')
+!timeEventStartPerformance.time := 60
+
+!new TimeEvent('timeEventBeginIntermission')
+!timeEventBeginIntermission.time := 75
+
+!new TimeEvent('timeEventResumePerformance')
+!timeEventResumePerformance.time := 20
+
+!new TimeEvent('timeEventEndConcert')
+!timeEventEndConcert.time := 120
+
+!insert (virtualConcertScheduler, setup) into StateMachineContainsStates
+!insert (virtualConcertScheduler, soundCheck) into StateMachineContainsStates
+!insert (virtualConcertScheduler, livePerformance) into StateMachineContainsStates
+!insert (virtualConcertScheduler, intermission) into StateMachineContainsStates
+!insert (virtualConcertScheduler, postEvent) into StateMachineContainsStates
+
+!insert (virtualConcertScheduler, setup) into StateMachineStartsStates
+
+!insert (virtualConcertScheduler, completeSetup) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, startPerformance) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, beginIntermission) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, resumePerformance) into StateMachineContainsTransitions
+!insert (virtualConcertScheduler, endConcert) into StateMachineContainsTransitions
+
+!insert (completeSetup, timeEventCompleteSetup) into TransitionContainsEvents
+!insert (startPerformance, timeEventStartPerformance) into TransitionContainsEvents
+!insert (beginIntermission, timeEventBeginIntermission) into TransitionContainsEvents
+!insert (resumePerformance, timeEventResumePerformance) into TransitionContainsEvents
+!insert (endConcert, timeEventEndConcert) into TransitionContainsEvents
+
+!insert (setup, completeSetup) into StateTransition
+!insert (completeSetup, soundCheck) into TransitionState
+
+!insert (soundCheck, startPerformance) into StateTransition
+!insert (startPerformance, livePerformance) into TransitionState
+
+!insert (livePerformance, beginIntermission) into StateTransition
+!insert (beginIntermission, intermission) into TransitionState
+
+!insert (intermission, resumePerformance) into StateTransition
+!insert (resumePerformance, livePerformance) into TransitionState
+
+!insert (livePerformance, endConcert) into StateTransition
+!insert (endConcert, postEvent) into TransitionState
+
+!new StateMachine('metroOperationCycle')
+!metroOperationCycle.name := 'metroOperationCycle'
+
+!new State('stationIdle')
+!stationIdle.name := 'stationIdle'
+
+!new State('boarding')
+!boarding.name := 'boarding'
+
+!new State('inTransit')
+!inTransit.name := 'inTransit'
+
+!new State('arriveStation')
+!arriveStation.name := 'arriveStation'
+
+!new State('disembark')
+!disembark.name := 'disembark'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('openDoors')
+!openDoors.name := 'openDoors'
+
+!new Transition('startTransit')
+!startTransit.name := 'startTransit'
+
+!new Transition('stationArrival')
+!stationArrival.name := 'stationArrival'
+
+!new Transition('exitPassengers')
+!exitPassengers.name := 'exitPassengers'
+
+!new Transition('prepareDeparture')
+!prepareDeparture.name := 'prepareDeparture'
+
+!new Transition('serviceCheck')
+!serviceCheck.name := 'serviceCheck'
+
+!new Transition('completeMaintenance')
+!completeMaintenance.name := 'completeMaintenance'
+
+!new TimeEvent('doorOpeningDuration')
+!doorOpeningDuration.time := 1
+
+!new TimeEvent('boardingDuration')
+!boardingDuration.time := 5
+
+!new TimeEvent('transitTime')
+!transitTime.time := 12
+
+!new TimeEvent('disembarkDuration')
+!disembarkDuration.time := 3
+
+!new TimeEvent('preparationTime')
+!preparationTime.time := 2
+
+!new TimeEvent('maintenanceInterval')
+!maintenanceInterval.time := 10
+
+!new TimeEvent('timeEventCompleteMaintenance')
+!timeEventCompleteMaintenance.time := 5 -- Added to comply with constraint
+
+!insert (metroOperationCycle, stationIdle) into StateMachineContainsStates
+!insert (metroOperationCycle, boarding) into StateMachineContainsStates
+!insert (metroOperationCycle, inTransit) into StateMachineContainsStates
+!insert (metroOperationCycle, arriveStation) into StateMachineContainsStates
+!insert (metroOperationCycle, disembark) into StateMachineContainsStates
+!insert (metroOperationCycle, maintenance) into StateMachineContainsStates
+
+!insert (metroOperationCycle, stationIdle) into StateMachineStartsStates
+
+!insert (metroOperationCycle, openDoors) into StateMachineContainsTransitions
+!insert (metroOperationCycle, startTransit) into StateMachineContainsTransitions
+!insert (metroOperationCycle, stationArrival) into StateMachineContainsTransitions
+!insert (metroOperationCycle, exitPassengers) into StateMachineContainsTransitions
+!insert (metroOperationCycle, prepareDeparture) into StateMachineContainsTransitions
+!insert (metroOperationCycle, serviceCheck) into StateMachineContainsTransitions
+!insert (metroOperationCycle, completeMaintenance) into StateMachineContainsTransitions
+
+!insert (openDoors, doorOpeningDuration) into TransitionContainsEvents
+!insert (startTransit, boardingDuration) into TransitionContainsEvents
+!insert (stationArrival, transitTime) into TransitionContainsEvents
+!insert (exitPassengers, disembarkDuration) into TransitionContainsEvents
+!insert (prepareDeparture, preparationTime) into TransitionContainsEvents
+!insert (serviceCheck, maintenanceInterval) into TransitionContainsEvents
+!insert (completeMaintenance, timeEventCompleteMaintenance) into TransitionContainsEvents
+
+!insert (stationIdle, openDoors) into StateTransition
+!insert (openDoors, boarding) into TransitionState
+
+!insert (boarding, startTransit) into StateTransition
+!insert (startTransit, inTransit) into TransitionState
+
+!insert (inTransit, stationArrival) into StateTransition
+!insert (stationArrival, arriveStation) into TransitionState
+
+!insert (arriveStation, exitPassengers) into StateTransition
+!insert (exitPassengers, disembark) into TransitionState
+
+!insert (disembark, prepareDeparture) into StateTransition
+!insert (prepareDeparture, stationIdle) into TransitionState
+
+!insert (stationIdle, serviceCheck) into StateTransition
+!insert (serviceCheck, maintenance) into TransitionState
+
+!insert (maintenance, completeMaintenance) into StateTransition
+!insert (completeMaintenance, stationIdle) into TransitionState
+

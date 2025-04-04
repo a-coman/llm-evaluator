@@ -1,0 +1,56 @@
+!new Client('anaDeSouza')
+!anaDeSouza.clientId := 345
+!anaDeSouza.isSuspended := true
+
+!new Client('pedroGomez')
+!pedroGomez.clientId := 346
+!pedroGomez.isSuspended := false
+
+!new Rental('rentalSaoPauloShowcase')
+!rentalSaoPauloShowcase.date := Date('2023-08-18')
+
+!new Rental('rentalFestivalCinemaBrasileiro')
+!rentalFestivalCinemaBrasileiro.date := Date('2023-09-05')
+
+!new Series('cassetteSambaRhythm')
+!cassetteSambaRhythm.title := 'Samba and Rhythm Series'
+!cassetteSambaRhythm.availableCopies := 10
+!cassetteSambaRhythm.episode := 12
+
+!new Movie('cassetteTangoInAction')
+!cassetteTangoInAction.title := 'Tango in Action'
+!cassetteTangoInAction.availableCopies := 2
+!cassetteTangoInAction.genre := #Action
+
+!new Series('cassetteBrazilianClassics')
+!cassetteBrazilianClassics.title := 'Brazilian Classics: The Golden Age'
+!cassetteBrazilianClassics.availableCopies := 0
+!cassetteBrazilianClassics.episode := 6
+
+!new Movie('cassetteMysteryAmazonRainforest')
+!cassetteMysteryAmazonRainforest.title := 'Mystery of the Amazon Rainforest'
+!cassetteMysteryAmazonRainforest.availableCopies := 3
+!cassetteMysteryAmazonRainforest.genre := #Action
+
+!new Actor('actorSoniaBraga')
+!actorSoniaBraga.name := 'Sonia Braga'
+
+!new Actor('actorRicardoDarin')
+!actorRicardoDarin.name := 'Ricardo Darín'
+
+!new Actor('actorWagnerMoura')
+!actorWagnerMoura.name := 'Wagner Moura'
+
+!insert (pedroGomez, rentalSaoPauloShowcase) into ClientRental
+!insert (anaDeSouza, rentalFestivalCinemaBrasileiro) into ClientRental
+
+!insert (rentalSaoPauloShowcase, cassetteSambaRhythm) into RentalCassette
+!insert (rentalSaoPauloShowcase, cassetteTangoInAction) into RentalCassette
+
+!insert (rentalFestivalCinemaBrasileiro, cassetteBrazilianClassics) into RentalCassette
+!insert (rentalFestivalCinemaBrasileiro, cassetteMysteryAmazonRainforest) into RentalCassette
+
+!insert (cassetteBrazilianClassics, actorSoniaBraga) into CassetteActor
+!insert (cassetteTangoInAction, actorRicardoDarin) into CassetteActor
+!insert (cassetteMysteryAmazonRainforest, actorWagnerMoura) into CassetteActor
+

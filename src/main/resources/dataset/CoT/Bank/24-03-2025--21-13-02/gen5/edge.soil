@@ -1,0 +1,32 @@
+!new Bank('bank28')
+!bank28.country := 'Japan'
+!bank28.name := 'Sakura Financial Group'
+!bank28.bic := 'SFGTJP77XXX'
+
+!new Account('account62')
+!account62.iban := 'JP6666666666666666'
+!account62.balance := 0
+
+!new Account('account63')
+!account63.iban := 'JP7777777777777777'
+!account63.balance := 1000000000
+
+!new Person('person89')
+!person89.firstName := 'Haruto'
+!person89.lastName := 'Tanaka'
+!person89.age := 24
+
+!new Person('person90')
+!person90.firstName := 'Yuki'
+!person90.lastName := 'Asano'
+!person90.age := 85
+
+!insert (person89, account62) into Ownership
+!insert (person90, account63) into Ownership
+
+!insert (person89, account62) into Use
+!insert (person90, account62) into Use
+!insert (person89, account63) into Use
+
+!insert (bank28, account62) into AccountOfBanks
+!insert (bank28, account63) into AccountOfBanks

@@ -1,0 +1,33 @@
+!new Expense('expense4')
+!expense4.amount := 450.0
+!expense4.startDate := Date('2023-04-01')
+!expense4.endDate := Date('2023-04-30')
+
+!new Currency('currency2')
+!currency2.name := 'Euro'
+!currency2.abbreviation := 'EUR'
+
+!new Bill('bill6')
+!bill6.amount := 150.0
+!bill6.category := 'Utilities'
+!bill6.date := Date('2023-04-05')
+!bill6.paymentMethod := #CHECK
+!bill6.status := #VALIDATED
+
+!new Bill('bill7')
+!bill7.amount := 300.0
+!bill7.category := 'Rent'
+!bill7.date := Date('2023-04-01')
+!bill7.paymentMethod := #CASH
+!bill7.status := #PENDING
+
+!insert (expense4, bill6) into ExpenseContainsBills
+!insert (expense4, bill7) into ExpenseContainsBills
+
+!insert (bill6, currency2) into BillCurrency
+!insert (bill7, currency2) into BillCurrency
+
+!new Comment('comment4')
+!comment4.text := 'April household expenses'
+
+!insert (expense4, comment4) into ExpenseComment

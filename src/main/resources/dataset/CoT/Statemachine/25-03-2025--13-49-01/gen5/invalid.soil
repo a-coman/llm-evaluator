@@ -1,0 +1,76 @@
+!new StateMachine('trafficControlSM')
+!trafficControlSM.name := 'trafficControlSM'
+
+!new State('green')
+!green.name := 'green'
+
+!new State('amber')
+!amber.name := 'amber'
+
+!new State('red')
+!red.name := 'red'
+
+!new State('flashingAmber')
+!flashingAmber.name := 'flashingAmber'
+
+!new Transition('greenToAmber')
+!greenToAmber.name := 'greenToAmber'
+
+!new Transition('amberToRed')
+!amberToRed.name := 'amberToRed'
+
+!new Transition('redToGreen')
+!redToGreen.name := 'redToGreen'
+
+!new Transition('emergencyFromGreen')
+!emergencyFromGreen.name := 'emergency'
+
+!new Transition('emergencyFromAmber')
+!emergencyFromAmber.name := 'emergency'
+
+!new TimeEvent('timeEventGreenToAmber')
+!timeEventGreenToAmber.time := 30
+
+!new TimeEvent('timeEventAmberToRed')
+!timeEventAmberToRed.time := 5
+
+!new TimeEvent('timeEventRedToGreen')
+!timeEventRedToGreen.time := 60
+
+!new TimeEvent('timeEventEmergencyFromGreen')
+!timeEventEmergencyFromGreen.time := 1 -- Adjusted from 0 to positive
+
+!new TimeEvent('timeEventEmergencyFromAmber')
+!timeEventEmergencyFromAmber.time := 1 -- Adjusted from 0 to positive
+
+!insert (trafficControlSM, green) into StateMachineContainsStates
+!insert (trafficControlSM, amber) into StateMachineContainsStates
+!insert (trafficControlSM, red) into StateMachineContainsStates
+!insert (trafficControlSM, flashingAmber) into StateMachineContainsStates
+
+!insert (trafficControlSM, greenToAmber) into StateMachineContainsTransitions
+!insert (trafficControlSM, amberToRed) into StateMachineContainsTransitions
+!insert (trafficControlSM, redToGreen) into StateMachineContainsTransitions
+!insert (trafficControlSM, emergencyFromGreen) into StateMachineContainsTransitions
+!insert (trafficControlSM, emergencyFromAmber) into StateMachineContainsTransitions
+
+!insert (greenToAmber, timeEventGreenToAmber) into TransitionContainsEvents
+!insert (amberToRed, timeEventAmberToRed) into TransitionContainsEvents
+!insert (redToGreen, timeEventRedToGreen) into TransitionContainsEvents
+!insert (emergencyFromGreen, timeEventEmergencyFromGreen) into TransitionContainsEvents
+!insert (emergencyFromAmber, timeEventEmergencyFromAmber) into TransitionContainsEvents
+
+!insert (green, greenToAmber) into StateTransition
+!insert (greenToAmber, amber) into TransitionState
+
+!insert (amber, amberToRed) into StateTransition
+!insert (amberToRed, red) into TransitionState
+
+!insert (red, redToGreen) into StateTransition
+!insert (redToGreen, green) into TransitionState
+
+!insert (green, emergencyFromGreen) into StateTransition
+!insert (emergencyFromGreen, flashingAmber) into TransitionState
+
+!insert (amber, emergencyFromAmber) into StateTransition
+!insert (emergencyFromAmber, flashingAmber) into TransitionState

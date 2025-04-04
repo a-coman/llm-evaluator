@@ -1,0 +1,311 @@
+!new Customer('customer16')
+!customer16.firstName := 'Vijay'
+!customer16.lastName := 'Patel'
+
+!new Booking('booking16')
+!booking16.bookingId := 89012
+!booking16.startDate := 'October 15, 2023'
+!booking16.endDate := 'October 18, 2023'
+!booking16.canceled := false
+!booking16.confirmed := true
+
+!new RoomReservation('roomreservation26')
+!roomreservation26.checkInDate := 'October 15, 2023'
+!roomreservation26.checkOutDate := 'October 18, 2023'
+
+!new Room('room31')
+!room31.roomNumber := 102
+!room31.numBeds := 2
+!room31.pricePerNight := 160.00
+!room31.occupied := true
+!room31.blocked := false
+
+!new Room('room32')
+!room32.roomNumber := 204
+!room32.numBeds := 1
+!room32.pricePerNight := 110.00
+!room32.occupied := false
+!room32.blocked := true
+
+!new RoomExtra('roomextra38')
+!roomextra38.price := 25.00
+!roomextra38.description := 'Airport shuttle service'
+
+!new Bill('bill32')
+!bill32.billId := 234567
+!bill32.price := 505.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto16')
+!freeroomtypesdto16.roomTypeDescription := 'Luxury King Room'
+!freeroomtypesdto16.numBeds := 1
+!freeroomtypesdto16.pricePerNight := 300.00
+!freeroomtypesdto16.numFreeRooms := 2
+
+!insert (booking16, customer16) into BookingCustomer
+!insert (booking16, roomreservation26) into BookingRoomReservation
+!insert (booking16, bill32) into BookingBill
+
+!insert (roomreservation26, room31) into RoomReservationRoom
+
+!insert (roomreservation26, roomextra38) into RoomReservationExtras
+
+!insert (bill32, roomreservation26) into BillRoomReservation
+
+!insert (roomreservation26, room32) into RoomReservationRoom
+
+!new Customer('customer17')
+!customer17.firstName := 'Sven'
+!customer17.lastName := 'Bjorklund'
+
+!new Booking('booking17')
+!booking17.bookingId := 4
+!booking17.startDate := '2024-03-15'
+!booking17.endDate := '2024-03-16'
+!booking17.canceled := false
+!booking17.confirmed := true
+
+!new Bill('bill33')
+!bill33.billId := 6
+!bill33.price := 50.00
+
+!new RoomReservation('roomreservation27')
+!roomreservation27.checkInDate := '2024-03-15'
+!roomreservation27.checkOutDate := '2024-03-16'
+
+!new Room('room33')
+!room33.roomNumber := 7
+!room33.numBeds := 1
+!room33.pricePerNight := 45.00
+!room33.occupied := true
+!room33.blocked := false
+
+!new RoomExtra('roomextra39')
+!roomextra39.price := 5.00
+!roomextra39.description := '24-hour Internet Access'
+
+!new FreeRoomTypesDTO('freeroomtypesdto17')
+!freeroomtypesdto17.roomTypeDescription := 'Economy Single Room'
+!freeroomtypesdto17.numBeds := 1
+!freeroomtypesdto17.pricePerNight := 40.00
+!freeroomtypesdto17.numFreeRooms := 5
+
+!insert (booking17, customer17) into BookingCustomer
+!insert (booking17, roomreservation27) into BookingRoomReservation
+!insert (booking17, bill33) into BookingBill
+
+!insert (roomreservation27, room33) into RoomReservationRoom
+
+!insert (roomreservation27, roomextra39) into RoomReservationExtras
+
+!insert (bill33, roomreservation27) into BillRoomReservation
+
+!new Customer('customer18')
+!customer18.firstName := 'Hiroshi'
+!customer18.lastName := 'Tanaka'
+
+!new Booking('booking18')
+!booking18.bookingId := 456
+!booking18.startDate := 'June 21, 2024'
+!booking18.endDate := 'June 26, 2024'
+!booking18.canceled := false
+!booking18.confirmed := true
+
+!new RoomReservation('roomreservation28')
+!roomreservation28.checkInDate := 'June 21, 2024'
+!roomreservation28.checkOutDate := 'June 26, 2024'
+
+!new Room('room34')
+!room34.roomNumber := 707
+!room34.numBeds := 1
+!room34.pricePerNight := 20000
+!room34.occupied := true
+!room34.blocked := false
+
+!new RoomExtra('roomextra40')
+!roomextra40.price := 15000
+!roomextra40.description := 'Includes access to meeting rooms with conference facilities and in-house catering services.'
+
+!new RoomExtra('roomextra41')
+!roomextra41.price := 5000
+!roomextra41.description := 'Daily laundry service for business attire with same-day delivery.'
+
+!new RoomExtra('roomextra42')
+!roomextra42.price := 8000
+!roomextra42.description := 'Private car transfer from Narita International Airport to the hotel.'
+
+!new Bill('bill34')
+!bill34.billId := 67890
+!bill34.price := 123000
+
+!new FreeRoomTypesDTO('freeroomtypesdto18')
+!freeroomtypesdto18.roomTypeDescription := 'Spacious suite with separate living area, ideal for business travelers seeking comfort and convenience.'
+!freeroomtypesdto18.numBeds := 1
+!freeroomtypesdto18.pricePerNight := 35000
+!freeroomtypesdto18.numFreeRooms := 2
+
+!new FreeRoomTypesDTO('freeroomtypesdto19')
+!freeroomtypesdto19.roomTypeDescription := 'Comfortable twin room suitable for colleagues traveling together.'
+!freeroomtypesdto19.numBeds := 2
+!freeroomtypesdto19.pricePerNight := 22000
+!freeroomtypesdto19.numFreeRooms := 5
+
+!insert (booking18, customer18) into BookingCustomer
+!insert (booking18, roomreservation28) into BookingRoomReservation
+!insert (booking18, bill34) into BookingBill
+
+!insert (roomreservation28, room34) into RoomReservationRoom
+
+!insert (roomreservation28, roomextra40) into RoomReservationExtras
+!insert (roomreservation28, roomextra41) into RoomReservationExtras
+!insert (roomreservation28, roomextra42) into RoomReservationExtras
+
+!insert (bill34, roomreservation28) into BillRoomReservation
+
+!new Customer('customer19')
+!customer19.firstName := 'René'
+!customer19.lastName := 'Dubois'
+
+!new Booking('booking19')
+!booking19.bookingId := 122007
+!booking19.startDate := 'December 18, 2024'
+!booking19.endDate := 'December 22, 2024'
+!booking19.canceled := false
+!booking19.confirmed := true
+
+!new RoomReservation('roomreservation29')
+!roomreservation29.checkInDate := 'December 18, 2024'
+!roomreservation29.checkOutDate := 'December 22, 2024'
+
+!new RoomReservation('roomreservation30')
+!roomreservation30.checkInDate := 'December 20, 2024'
+!roomreservation30.checkOutDate := 'December 24, 2024'
+
+!new Room('room35')
+!room35.roomNumber := 305
+!room35.numBeds := 1
+!room35.pricePerNight := 250
+!room35.occupied := true
+!room35.blocked := false
+
+!new RoomExtra('roomextra43')
+!roomextra43.price := 70
+!roomextra43.description := 'Traditional Swiss fondue dining evening.'
+
+!new RoomExtra('roomextra44')
+!roomextra44.price := 120
+!roomextra44.description := 'Complete ski gear set for full snow sport enjoyment.'
+
+!new Bill('bill35')
+!bill35.billId := 1220071
+!bill35.price := 1000
+
+!insert (booking19, customer19) into BookingCustomer
+!insert (booking19, roomreservation29) into BookingRoomReservation
+!insert (booking19, roomreservation30) into BookingRoomReservation
+
+!insert (roomreservation29, room35) into RoomReservationRoom
+!insert (roomreservation30, room35) into RoomReservationRoom
+
+!insert (roomreservation29, roomextra43) into RoomReservationExtras
+!insert (roomreservation30, roomextra44) into RoomReservationExtras
+
+!insert (bill35, roomreservation29) into BillRoomReservation
+!insert (bill35, roomreservation30) into BillRoomReservation
+
+!insert (booking19, bill35) into BookingBill
+
+!new Customer('customer21')
+!customer21.firstName := 'Emily'
+!customer21.lastName := 'Thompson'
+
+!new Booking('booking21')
+!booking21.bookingId := 4004
+!booking21.startDate := 'October 15, 2024'
+!booking21.endDate := 'October 18, 2024'
+!booking21.canceled := false
+!booking21.confirmed := true
+
+!new RoomReservation('roomreservation33')
+!roomreservation33.checkInDate := 'October 15, 2024'
+!roomreservation33.checkOutDate := 'October 18, 2024'
+
+!new RoomReservation('roomreservation34')
+!roomreservation34.checkInDate := 'October 15, 2024'
+!roomreservation34.checkOutDate := 'October 18, 2024'
+
+!new RoomReservation('roomreservation35')
+!roomreservation35.checkInDate := 'October 16, 2024'
+!roomreservation35.checkOutDate := 'October 17, 2024'
+
+!new Room('room38')
+!room38.roomNumber := 601
+!room38.numBeds := 2
+!room38.pricePerNight := 500.00
+!room38.occupied := true
+!room38.blocked := false
+
+!new Room('room39')
+!room39.roomNumber := 602
+!room39.numBeds := 2
+!room39.pricePerNight := 500.00
+!room39.occupied := true
+!room39.blocked := false
+
+!new Room('room40')
+!room40.roomNumber := 700
+!room40.numBeds := 1  -- Adjusted to comply with the positive number of beds invariant
+!room40.pricePerNight := 400.00
+!room40.occupied := true
+!room40.blocked := false
+
+!new RoomExtra('roomextra47')
+!roomextra47.price := 500.00
+!roomextra47.description := 'Private Chef Service'
+
+!new RoomExtra('roomextra48')
+!roomextra48.price := 400.00
+!roomextra48.description := 'In-room Spa Treatment'
+
+!new RoomExtra('roomextra49')
+!roomextra49.price := 300.00
+!roomextra49.description := 'Advanced Audio-Visual Setup'
+
+!new Bill('bill38')
+!bill38.billId := 9008
+!bill38.price := 2000.00
+
+!new Bill('bill39')
+!bill39.billId := 9009
+!bill39.price := 2000.00
+
+!new Bill('bill40')
+!bill40.billId := 9010
+!bill40.price := 1100.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto21')
+!freeroomtypesdto21.roomTypeDescription := 'Standard Room'
+!freeroomtypesdto21.numBeds := 1
+!freeroomtypesdto21.pricePerNight := 200.00
+!freeroomtypesdto21.numFreeRooms := 3
+
+!insert (booking21, customer21) into BookingCustomer
+!insert (booking21, roomreservation33) into BookingRoomReservation
+!insert (booking21, roomreservation34) into BookingRoomReservation
+!insert (booking21, roomreservation35) into BookingRoomReservation
+
+!insert (roomreservation33, room38) into RoomReservationRoom
+!insert (roomreservation34, room39) into RoomReservationRoom
+!insert (roomreservation35, room40) into RoomReservationRoom
+
+!insert (roomreservation33, roomextra47) into RoomReservationExtras
+!insert (roomreservation34, roomextra48) into RoomReservationExtras
+!insert (roomreservation35, roomextra49) into RoomReservationExtras
+
+!insert (bill38, roomreservation33) into BillRoomReservation
+!insert (bill39, roomreservation34) into BillRoomReservation
+!insert (bill40, roomreservation35) into BillRoomReservation
+
+!insert (booking21, bill38) into BookingBill
+!insert (booking21, bill39) into BookingBill
+!insert (booking21, bill40) into BookingBill
+

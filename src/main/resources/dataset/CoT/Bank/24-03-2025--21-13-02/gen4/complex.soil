@@ -1,0 +1,65 @@
+!new Bank('bank22')
+!bank22.country := 'Australia'
+!bank22.name := 'Bluestone Atlantic Bank'
+!bank22.bic := 'BLUAAU2S'
+
+!new Account('account49')
+!account49.iban := 'AU132962003000123456'
+!account49.balance := 120000
+
+!new Account('account50')
+!account50.iban := 'AU132962003000654321'
+!account50.balance := 3500
+
+!new Account('account51')
+!account51.iban := 'AU132962003000987654'
+!account51.balance := 23950
+
+!new Account('account52')
+!account52.iban := 'AU132962003000543210'
+!account52.balance := 47000
+
+!new Person('person69')
+!person69.firstName := 'Olivia'
+!person69.lastName := 'Wilson'
+!person69.age := 48
+
+!new Person('person70')
+!person70.firstName := 'Ethan'
+!person70.lastName := 'McCarthy'
+!person70.age := 37
+
+!new Person('person71')
+!person71.firstName := 'Mia'
+!person71.lastName := 'Nguyen'
+!person71.age := 29
+
+!new Person('person72')
+!person72.firstName := 'Jack'
+!person72.lastName := 'Patel'
+!person72.age := 41
+
+!new Person('person73')
+!person73.firstName := 'Aisha'
+!person73.lastName := 'Bennet'
+!person73.age := 33
+
+!insert (person69, account49) into Ownership
+!insert (person70, account49) into Ownership
+!insert (person73, account50) into Ownership
+!insert (person71, account51) into Ownership
+!insert (person72, account51) into Ownership
+!insert (person69, account52) into Ownership
+
+!insert (person69, account49) into Use
+!insert (person70, account49) into Use
+!insert (person72, account49) into Use
+!insert (person73, account50) into Use
+!insert (person71, account51) into Use
+!insert (person72, account51) into Use
+!insert (person69, account52) into Use
+
+!insert (bank22, account49) into AccountOfBanks
+!insert (bank22, account50) into AccountOfBanks
+!insert (bank22, account51) into AccountOfBanks
+!insert (bank22, account52) into AccountOfBanks

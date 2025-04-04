@@ -1,0 +1,145 @@
+!new Club('club6')
+!club6.name := 'Manchester Celts'
+!club6.homeGround := 'Celt Park'
+!club6.chairman := 'Eamon Gallagher'
+
+!new Club('club7')
+!club7.name := 'Liverpool Warriors'
+!club7.homeGround := 'Redstone Arena'
+!club7.chairman := 'Sophie Elissade'
+
+!new Club('club8')
+!club8.name := 'London Knights'
+!club8.homeGround := 'King’s Field'
+!club8.chairman := 'Oliver Smith'
+
+!new Team('teamG')
+!teamG.name := 'Celts United'
+
+!new Team('teamH')
+!teamH.name := 'Warriors FC'
+
+!new Team('teamI')
+!teamI.name := 'Knights Elite'
+
+!insert (club6, teamG) into ClubTeam
+!insert (club7, teamH) into ClubTeam
+!insert (club8, teamI) into ClubTeam
+
+!new Player('player7')
+!player7.name := 'John Brogan'
+!player7.age := 25
+!player7.bestFoot := #RIGHT
+!player7.phoneNumber := '+44123456789'
+
+!new Player('player8')
+!player8.name := 'Liam Hart'
+!player8.age := 28
+!player8.bestFoot := #LEFT
+!player8.phoneNumber := '+44987654321'
+
+!insert (teamG, player7) into TeamPlayer
+!insert (teamH, player8) into TeamPlayer
+
+!new Position('position8')
+!position8.positionName := #GOALKEEPER
+
+!new Position('position9')
+!position9.positionName := #DEFENDER
+
+!insert (player7, position8) into PlayerPositions
+!insert (player8, position9) into PlayerPositions
+
+!new Competition('competition4')
+!competition4.name := 'British Isles Cup'
+!competition4.type := 'Knockout'
+
+!new Match('match4')
+!match4.date := '2023-05-10'
+!match4.homeAway := false
+
+!insert (competition4, match4) into CompetitionMatch
+
+!insert (teamG, match4) into LocalMatch
+!insert (teamG, match4) into VisitorMatch
+
+!new MatchReport('matchReport4')
+!matchReport4.duration := 90
+!matchReport4.scoreVisitor := 0
+!matchReport4.scoreLocal := 0
+
+!insert (match4, matchReport4) into MatchMatchReport
+
+!new MatchEvent('matchEvent9')
+!matchEvent9.eventType := #FOUL
+!matchEvent9.time := 45
+
+!insert (match4, matchEvent9) into MatchMatchEvent
+
+!new MatchNote('matchNote3')
+!matchNote3.note := 'Both teams displayed poor sportsmanship.'
+!matchNote3.date := '2023-05-11'
+
+!insert (match4, matchNote3) into MatchMatchNote
+
+!new TrainingSession('trainingSession6')
+!trainingSession6.date := '2023-03-12'
+!trainingSession6.location := 'Celt Park Training Grounds'
+!trainingSession6.purpose := 'To strengthen the defensive strategy'
+
+!insert (teamG, trainingSession6) into TeamTraining
+
+!new TrainingNotes('trainingNote8')
+!trainingNote8.note := 'Incorporate new defensive plays into upcoming match strategy.'
+!trainingNote8.date := '2023-03-13'
+
+!insert (trainingSession6, trainingNote8) into TrainingTrainingNotes
+
+!new TrainingSession('trainingSession7')
+!trainingSession7.date := '2023-03-15'
+!trainingSession7.location := 'King’s Field Training Center'
+!trainingSession7.purpose := 'To enhance goalkeeping reflexes'
+
+!insert (teamI, trainingSession7) into TeamTraining
+
+!new TrainingSession('trainingSession8')
+!trainingSession8.date := '2023-03-18'
+!trainingSession8.location := 'Redstone Arena Training Facility'
+!trainingSession8.purpose := 'Precision shooting and placement'
+
+!insert (teamH, trainingSession8) into TeamTraining
+
+!new TrainingFailedToAttend('failedAttend3')
+!failedAttend3.reason := 'Injury recovery in progress.'
+
+!insert (trainingSession6, failedAttend3) into TrainingFailded
+!insert (failedAttend3, player7) into FailedPlayer
+
+!new TrainingObjective('trainingObjective8')
+!trainingObjective8.areaToImprove := 'Tackling Techniques'
+!trainingObjective8.startDate := '2023-02-01'
+!trainingObjective8.endDate := '2023-06-01'
+!trainingObjective8.success := false
+
+!insert (trainingObjective8, player8) into TrainingObjectivePlayer
+
+!new PlayerNotes('playerNote5')
+!playerNote5.note := 'Considered for Captaincy next season.'
+!playerNote5.date := '2023-02-15'
+
+!insert (player7, playerNote5) into PlayerPlayerNotes
+
+!new MatchPlayer('matchPlayer6')
+!matchPlayer6.booked := false
+!matchPlayer6.goals := 0
+!matchPlayer6.rating := 7
+
+!insert (player7, matchPlayer6) into PlayerMatch
+!insert (match4, matchPlayer6) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition6')
+!matchPlayerPosition6.positionName := #GOALKEEPER
+!matchPlayerPosition6.number := 1
+
+!insert (matchPlayer6, matchPlayerPosition6) into MatchPlayerMatchPlayerPosition
+

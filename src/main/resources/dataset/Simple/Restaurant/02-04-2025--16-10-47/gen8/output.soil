@@ -1,0 +1,104 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant8')
+!restaurant8.name := 'The Artisan Café'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner15')
+!owner15.name := 'Ava Green'
+!owner15.percentageShares := 60
+
+!new Owner('owner16')
+!owner16.name := 'Liam Cooper'
+!owner16.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant8, owner15) into RestaurantOwner
+!insert (restaurant8, owner16) into RestaurantOwner
+
+-- Creating distinct tables
+!new Table('table15')
+!table15.number := 801
+!table15.description := 'Artistic Nook'
+!table15.capacity := 2
+
+!new Table('table16')
+!table16.number := 802
+!table16.description := 'Sunlit Veranda'
+!table16.capacity := 4
+
+-- Creating a staff team
+!new HeadWaiter('headwaiter8')
+!headwaiter8.name := 'Emma Roberts'
+!headwaiter8.dateOfBirth := Date('1982-08-15')
+!headwaiter8.phoneNumber := '555-7777'
+
+!new Waiter('waiter12')
+!waiter12.name := 'Samuel King'
+!waiter12.dateOfBirth := Date('1996-01-22')
+!waiter12.phoneNumber := '555-8888'
+!waiter12.spokenLanguage := #English
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter8, waiter12) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a family reunion
+!new Banquet('reservation8')
+!reservation8.time := Time('13:00')
+!reservation8.date := Date('2024-04-20')
+!reservation8.numberPeople := 6
+!reservation8.name := 'Family Reunion Luncheon'
+!reservation8.phoneNumber := '555-9999'
+!reservation8.number := 206
+!reservation8.groupName := 'Johnson Family'
+!reservation8.paymentMethod := #CreditCard
+!reservation8.busService := true
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant8, reservation8) into RestaurantReservation
+!insert (reservation8, waiter12) into ReservationWaiter
+!insert (reservation8, table15) into ReservationTable
+!insert (reservation8, table16) into ReservationTable
+
+-- Creating a BusDriver for the family reunion
+!new BusDriver('busdriver3')
+!busdriver3.name := 'Clark Kent'
+!busdriver3.dateOfBirth := Date('1985-10-11')
+!busdriver3.phoneNumber := '555-3210'
+!busdriver3.driverLicenseNr := 'DL654321'
+
+-- Establish BanquetBusDriver association
+!insert (reservation8, busdriver3) into BanquetBusDriver
+
+-- Adding a special MenuItem for the family event
+!new MenuItem('menuItem8')
+!menuItem8.description := 'BBQ Chicken & Coleslaw'
+!menuItem8.prepTime := 15.5
+!menuItem8.classification := #Main
+
+-- Associating MenuItem with a newly appointed Chef
+!new Chef('chef8')
+!chef8.name := 'Catherine Holmes'
+!chef8.dateOfBirth := Date('1980-12-25')
+!chef8.phoneNumber := '555-5432'
+
+!insert (menuItem8, chef8) into MenuItemChef
+
+-- Creating Cook under the new Chef
+!new Cook('cook8')
+!cook8.name := 'Sophie Williams'
+!cook8.dateOfBirth := Date('1990-05-18')
+!cook8.phoneNumber := '555-8765'
+!cook8.yearsOfExperience := 10
+
+-- Establishing association between Chef and Cook
+!insert (chef8, cook8) into ChefCook
+
+-- Creating an ItemOrder for the family event
+!new ItemOrder('order8')
+!order8.time := Time('13:30')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order8, menuItem8) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation8, order8) into ReservationItemOrdered

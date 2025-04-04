@@ -1,0 +1,76 @@
+!new StateMachine('elevatorControlSM')
+!elevatorControlSM.name := 'elevatorControlSM'
+
+!new State('stationary')
+!stationary.name := 'stationary'
+
+!new State('ascending')
+!ascending.name := 'ascending'
+
+!new State('descending')
+!descending.name := 'descending'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('startAscend')
+!startAscend.name := 'startAscend'
+
+!new Transition('startDescend')
+!startDescend.name := 'startDescend'
+
+!new Transition('haltAscend')
+!haltAscend.name := 'haltAscend'
+
+!new Transition('haltDescend')
+!haltDescend.name := 'haltDescend'
+
+!new Transition('initiateMaintenance')
+!initiateMaintenance.name := 'initiateMaintenance'
+
+!new TimeEvent('timeEventStartAscend')
+!timeEventStartAscend.time := 10
+
+!new TimeEvent('timeEventStartDescend')
+!timeEventStartDescend.time := 15
+
+!new TimeEvent('timeEventHaltAscend')
+!timeEventHaltAscend.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!new TimeEvent('timeEventHaltDescend')
+!timeEventHaltDescend.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!new TimeEvent('timeEventInitiateMaintenance')
+!timeEventInitiateMaintenance.time := 20
+
+!insert (elevatorControlSM, stationary) into StateMachineContainsStates
+!insert (elevatorControlSM, ascending) into StateMachineContainsStates
+!insert (elevatorControlSM, descending) into StateMachineContainsStates
+!insert (elevatorControlSM, maintenance) into StateMachineContainsStates
+
+!insert (elevatorControlSM, startAscend) into StateMachineContainsTransitions
+!insert (elevatorControlSM, startDescend) into StateMachineContainsTransitions
+!insert (elevatorControlSM, haltAscend) into StateMachineContainsTransitions
+!insert (elevatorControlSM, haltDescend) into StateMachineContainsTransitions
+!insert (elevatorControlSM, initiateMaintenance) into StateMachineContainsTransitions
+
+!insert (startAscend, timeEventStartAscend) into TransitionContainsEvents
+!insert (startDescend, timeEventStartDescend) into TransitionContainsEvents
+!insert (haltAscend, timeEventHaltAscend) into TransitionContainsEvents
+!insert (haltDescend, timeEventHaltDescend) into TransitionContainsEvents
+!insert (initiateMaintenance, timeEventInitiateMaintenance) into TransitionContainsEvents
+
+!insert (stationary, startAscend) into StateTransition
+!insert (startAscend, ascending) into TransitionState
+
+!insert (stationary, startDescend) into StateTransition
+!insert (startDescend, descending) into TransitionState
+
+!insert (ascending, haltAscend) into StateTransition
+!insert (haltAscend, stationary) into TransitionState
+
+!insert (descending, haltDescend) into StateTransition
+!insert (haltDescend, stationary) into TransitionState
+
+!insert (stationary, initiateMaintenance) into StateTransition
+!insert (initiateMaintenance, maintenance) into TransitionState

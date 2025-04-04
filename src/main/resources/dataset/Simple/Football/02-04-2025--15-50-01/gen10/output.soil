@@ -1,0 +1,159 @@
+!new Club('club19')
+!club19.name := 'Falcons FC'
+!club19.homeGround := 'Falcon Grounds'
+!club19.chairman := 'Richard Harris'
+
+!new Club('club20')
+!club20.name := 'Hawks FC'
+!club20.homeGround := 'Hawk Nest Stadium'
+!club20.chairman := 'Grace Evans'
+
+!new Team('team19')
+!team19.name := 'Falcon Flyers'
+!insert (club19, team19) into ClubTeam
+
+!new Team('team20')
+!team20.name := 'Hawk Hunters'
+!insert (club20, team20) into ClubTeam
+
+!new Player('player28')
+!player28.name := 'Liam Howard'
+!player28.age := 24
+!player28.bestFoot := #RIGHT
+!player28.phoneNumber := '404-567-8901'
+!insert (team19, player28) into TeamPlayer
+
+!new Player('player29')
+!player29.name := 'Emma Johnson'
+!player29.age := 22
+!player29.bestFoot := #BOTH
+!player29.phoneNumber := '505-678-9012'
+!insert (team19, player29) into TeamPlayer
+
+!new Player('player30')
+!player30.name := 'Ethan Richards'
+!player30.age := 31
+!player30.bestFoot := #LEFT
+!player30.phoneNumber := '606-789-0123'
+!insert (team20, player30) into TeamPlayer
+
+!new Position('position28')
+!position28.positionName := #MIDFIELDER
+!insert (player28, position28) into PlayerPositions
+
+!new Position('position29')
+!position29.positionName := #FORWARD
+!insert (player29, position29) into PlayerPositions
+
+!new Position('position30')
+!position30.positionName := #DEFENDER
+!insert (player30, position30) into PlayerPositions
+
+!new TrainingSession('training19')
+!training19.date := '2023-11-25'
+!training19.location := 'Falcon Training Facility'
+!training19.purpose := 'Tactical Analysis'
+!insert (team19, training19) into TeamTraining
+
+!new TrainingSession('training20')
+!training20.date := '2023-11-26'
+!training20.location := 'Hawk Flight Academy'
+!training20.purpose := 'Speed Endurance'
+!insert (team20, training20) into TeamTraining
+
+!new TrainingNotes('trainingNotes19')
+!trainingNotes19.note := 'Reviewed match strategies and defensive formations'
+!trainingNotes19.date := '2023-11-25'
+!insert (training19, trainingNotes19) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes20')
+!trainingNotes20.note := 'Focused on long-distance sprints and recovery'
+!trainingNotes20.date := '2023-11-26'
+!insert (training20, trainingNotes20) into TrainingTrainingNotes
+
+!new TrainingObjective('objective28')
+!objective28.areaToImprove := 'Game Vision'
+!objective28.startDate := '2023-09-05'
+!objective28.endDate := '2023-11-25'
+!objective28.success := true
+!insert (objective28, player28) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective29')
+!objective29.areaToImprove := 'Attacking Prowess'
+!objective29.startDate := '2023-08-20'
+!objective29.endDate := '2023-10-20'
+!objective29.success := false
+!insert (objective29, player29) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective30')
+!objective30.areaToImprove := 'Defensive Skills'
+!objective30.startDate := '2023-07-15'
+!objective30.endDate := '2023-10-15'
+!objective30.success := true
+!insert (objective30, player30) into TrainingObjectivePlayer
+
+!new Competition('competition10')
+!competition10.name := 'International Club Cup'
+!competition10.type := 'Group Stage'
+
+!new Match('match10')
+!match10.date := '2023-12-15'
+!match10.homeAway := false
+!insert (competition10, match10) into CompetitionMatch
+!insert (team19, match10) into VisitorMatch
+!insert (team20, match10) into LocalMatch
+
+!new MatchReport('report10')
+!report10.duration := 90
+!report10.scoreVisitor := 2
+!report10.scoreLocal := 2
+!insert (match10, report10) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer28')
+!matchPlayer28.booked := true
+!matchPlayer28.goals := 1
+!matchPlayer28.rating := 8
+!insert (player28, matchPlayer28) into PlayerMatch
+!insert (match10, matchPlayer28) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer30')
+!matchPlayer30.booked := false
+!matchPlayer30.goals := 0
+!matchPlayer30.rating := 7
+!insert (player30, matchPlayer30) into PlayerMatch
+!insert (match10, matchPlayer30) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition28')
+!matchPlayerPosition28.positionName := #MIDFIELDER
+!matchPlayerPosition28.number := 8
+!insert (matchPlayer28, matchPlayerPosition28) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition30')
+!matchPlayerPosition30.positionName := #DEFENDER
+!matchPlayerPosition30.number := 4
+!insert (matchPlayer30, matchPlayerPosition30) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event36')
+!event36.eventType := #GOAL
+!event36.time := 22
+!insert (match10, event36) into MatchMatchEvent
+
+!new MatchEvent('event37')
+!event37.eventType := #GOAL
+!event37.time := 47
+!insert (match10, event37) into MatchMatchEvent
+
+!new MatchEvent('event38')
+!event38.eventType := #GOAL
+!event38.time := 65
+!insert (match10, event38) into MatchMatchEvent
+
+!new MatchEvent('event39')
+!event39.eventType := #GOAL
+!event39.time := 85
+!insert (match10, event39) into MatchMatchEvent
+
+!new MatchNote('matchNote10')
+!matchNote10.note := 'Thrilling match with both teams showing strong form'
+!matchNote10.date := '2023-12-15'
+!insert (match10, matchNote10) into MatchMatchNote

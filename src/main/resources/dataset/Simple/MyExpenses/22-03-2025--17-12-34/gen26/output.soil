@@ -1,0 +1,33 @@
+!new Expense('expense28')
+!expense28.amount := 950.0
+!expense28.startDate := Date('2025-04-01')
+!expense28.endDate := Date('2025-04-30')
+
+!new Currency('currency26')
+!currency26.name := 'Hungarian Forint'
+!currency26.abbreviation := 'HUF'
+
+!new Bill('bill50')
+!bill50.amount := 500.0
+!bill50.category := 'Workshop'
+!bill50.date := Date('2025-04-10')
+!bill50.paymentMethod := #CHECK
+!bill50.status := #VERIFIED
+
+!new Bill('bill51')
+!bill51.amount := 450.0
+!bill51.category := 'Office Supplies'
+!bill51.date := Date('2025-04-20')
+!bill51.paymentMethod := #CREDIT_CARD
+!bill51.status := #DRAFT
+
+!insert (expense28, bill50) into ExpenseContainsBills
+!insert (expense28, bill51) into ExpenseContainsBills
+
+!insert (bill50, currency26) into BillCurrency
+!insert (bill51, currency26) into BillCurrency
+
+!new Comment('comment28')
+!comment28.text := 'April expenses for a workshop and office supplies'
+
+!insert (expense28, comment28) into ExpenseComment

@@ -1,0 +1,51 @@
+!new Bank('bank7')
+!bank7.country := 'Brazil'
+!bank7.name := 'Banco do Brasil'
+!bank7.bic := 'BRASBRRJ'
+
+!new Account('account16')
+!account16.iban := 'BR1800000000000012345678901'
+!account16.balance := 4500
+
+!new Account('account17')
+!account17.iban := 'BR1900000000000012345678902'
+!account17.balance := 600
+
+!new Account('account18')
+!account18.iban := 'BR2000000000000012345678903'
+!account18.balance := 10000
+
+!new Person('person20')
+!person20.firstName := 'Carlos'
+!person20.lastName := 'Silva'
+!person20.age := 42
+
+!new Person('person21')
+!person21.firstName := 'Maria'
+!person21.lastName := 'Fernandes'
+!person21.age := 31
+
+!new Person('person22')
+!person22.firstName := 'João'
+!person22.lastName := 'Pereira'
+!person22.age := 28
+
+-- Associations
+!insert (bank7, account16) into AccountOfBanks
+!insert (bank7, account17) into AccountOfBanks
+!insert (bank7, account18) into AccountOfBanks
+
+!insert (person20, account16) into Ownership
+!insert (person21, account16) into Ownership
+
+!insert (person21, account17) into Ownership
+!insert (person22, account17) into Ownership
+
+!insert (person22, account18) into Ownership
+!insert (person20, account18) into Ownership
+
+!insert (person20, account17) into Use
+!insert (person21, account18) into Use
+
+!insert (person21, account16) into Use
+!insert (person22, account16) into Use

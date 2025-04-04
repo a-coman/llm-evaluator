@@ -1,0 +1,76 @@
+!new Driver('driver20')
+!driver20.id := 'DL004'
+!driver20.name := 'Ake Wolf'
+
+!new Shipment('shipment18')
+!shipment18.id := 'SH9012'
+!shipment18.status := #ASSIGNED
+
+!new Address('pickupAddress18')
+!pickupAddress18.text := 'Marine Logistics Center, Tromsø, Norway'
+
+!new GeoLocation('pickupGeoLocation18')
+!pickupGeoLocation18.latitude := 69.6496
+!pickupGeoLocation18.longitude := 18.9560
+
+!new Address('deliveryAddress18')
+!deliveryAddress18.text := 'Research Base Nord, Svalbard, Norway'
+
+!new GeoLocation('deliveryGeoLocation18')
+!deliveryGeoLocation18.latitude := 79.0039
+!deliveryGeoLocation18.longitude := 16.0160
+
+!new Shipment('shipment19')
+!shipment19.id := 'SH3456'
+!shipment19.status := #NEW
+
+!new Address('pickupAddress19')
+!pickupAddress19.text := 'Electronics Hub, Oslo, Norway'
+
+!new GeoLocation('pickupGeoLocation19')
+!pickupGeoLocation19.latitude := 59.9139
+!pickupGeoLocation19.longitude := 10.7522
+
+!new Address('deliveryAddress19')
+!deliveryAddress19.text := 'Satellite Station, Longyearbyen, Svalbard, Norway'
+
+!new GeoLocation('deliveryGeoLocation19')
+!deliveryGeoLocation19.latitude := 78.2232
+!deliveryGeoLocation19.longitude := 15.6469
+
+!new Station('station15')
+
+!new Customer('customer20')
+!customer20.id := 'CST1234'
+!customer20.name := 'Polar Expeditions Ltd.'
+!customer20.twitterUserName := '@PolarExped'
+
+!insert (driver20, shipment18) into DriverShipment
+
+!insert (shipment18, pickupAddress18) into ShipmentContainsPickUpAddress
+
+!insert (shipment18, deliveryAddress18) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress18, pickupGeoLocation18) into AddressContainsGeoLocation
+
+!insert (deliveryAddress18, deliveryGeoLocation18) into AddressContainsGeoLocation
+
+!insert (shipment19, pickupAddress19) into ShipmentContainsPickUpAddress
+
+!insert (shipment19, deliveryAddress19) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress19, pickupGeoLocation19) into AddressContainsGeoLocation
+
+!insert (deliveryAddress19, deliveryGeoLocation19) into AddressContainsGeoLocation
+
+!insert (customer20, shipment18) into CustomerConsistsOfShipment
+
+!insert (customer20, shipment19) into CustomerConsistsOfShipment
+
+!insert (station15, customer20) into StationContainsCustomer
+
+!insert (station15, shipment18) into StationShipment
+
+!insert (station15, shipment19) into StationShipment
+
+!insert (station15, driver20) into StationContainsDriver

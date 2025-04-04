@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice23')
+!rentalOffice23.name := 'Southwest Rentals'
+!rentalOffice23.number := 123
+!rentalOffice23.address := '654 Desert Hwy, Tucson, AZ'
+
+!new Truck('truck13')
+!truck13.id := 22
+!truck13.registrationState := #AZ
+!truck13.licensePlateNumber := 'AZ2323'
+!truck13.vehicleTypeCode := #TRUCK10
+!truck13.registrationLastMaintenanceDate := Date('2023-09-10')
+!truck13.expirationDate := Date('2024-09-10')
+!truck13.odometerReading := 18000
+!truck13.gasTankCapacity := 175.0
+!truck13.workingRadio := true
+!truck13.mileage := 16
+
+!new Individual('individualCustomer12')
+!individualCustomer12.name := 'Lisa Moore'
+!individualCustomer12.address := '450 Sunflower Lane, Tucson, AZ'
+!individualCustomer12.poorRisk := false
+!individualCustomer12.homePhone := '555-7788'
+!individualCustomer12.driverLicenseState := #AZ
+!individualCustomer12.driverLicenseNumber := 2233445
+!individualCustomer12.driverLicenseExpirationDate := Date('2029-01-01')
+
+!new RentalAgreement('rentalAgreement22')
+!rentalAgreement22.number := 522
+!rentalAgreement22.rentalDate := Date('2023-12-01')
+!rentalAgreement22.anticipatedDuration := 8
+!rentalAgreement22.depositPaid := 250.0
+!rentalAgreement22.quotedDailyRate := 30.0
+!rentalAgreement22.quotedRatePerMile := 0.2
+
+!insert (rentalOffice23, truck13) into RentalOfficeVehicle
+!insert (rentalOffice23, rentalAgreement22) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement22) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement22, truck13) into RentalAgreementVehicle
+!insert (rentalAgreement22, individualCustomer12) into RentalAgreementCustomer

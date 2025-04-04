@@ -1,0 +1,159 @@
+!new Club('club7')
+!club7.name := 'Eagles FC'
+!club7.homeGround := 'Eagle Nest Stadium'
+!club7.chairman := 'James Perry'
+
+!new Club('club8')
+!club8.name := 'Panthers Club'
+!club8.homeGround := 'Panther Park'
+!club8.chairman := 'Laura Bennett'
+
+!new Team('team7')
+!team7.name := 'Eagle Grasp'
+!insert (club7, team7) into ClubTeam
+
+!new Team('team8')
+!team8.name := 'Panther Pounce'
+!insert (club8, team8) into ClubTeam
+
+!new Player('player10')
+!player10.name := 'Liam Johnson'
+!player10.age := 29
+!player10.bestFoot := #BOTH
+!player10.phoneNumber := '112-334-5566'
+!insert (team7, player10) into TeamPlayer
+
+!new Player('player11')
+!player11.name := 'Emma Wilson'
+!player11.age := 24
+!player11.bestFoot := #LEFT
+!player11.phoneNumber := '223-445-6677'
+!insert (team7, player11) into TeamPlayer
+
+!new Player('player12')
+!player12.name := 'Olivia Jones'
+!player12.age := 25
+!player12.bestFoot := #RIGHT
+!player12.phoneNumber := '334-556-7788'
+!insert (team8, player12) into TeamPlayer
+
+!new Position('position10')
+!position10.positionName := #FORWARD
+!insert (player10, position10) into PlayerPositions
+
+!new Position('position11')
+!position11.positionName := #DEFENDER
+!insert (player11, position11) into PlayerPositions
+
+!new Position('position12')
+!position12.positionName := #MIDFIELDER
+!insert (player12, position12) into PlayerPositions
+
+!new TrainingSession('training7')
+!training7.date := '2023-11-03'
+!training7.location := 'Eagle Training Complex'
+!training7.purpose := 'Stamina Building'
+!insert (team7, training7) into TeamTraining
+
+!new TrainingSession('training8')
+!training8.date := '2023-11-04'
+!training8.location := 'Panther Development Ground'
+!training8.purpose := 'Tactical Awareness'
+!insert (team8, training8) into TeamTraining
+
+!new TrainingNotes('trainingNotes7')
+!trainingNotes7.note := 'Endurance and stamina were the main focus'
+!trainingNotes7.date := '2023-11-03'
+!insert (training7, trainingNotes7) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes8')
+!trainingNotes8.note := 'Worked on improving tactical decision-making'
+!trainingNotes8.date := '2023-11-04'
+!insert (training8, trainingNotes8) into TrainingTrainingNotes
+
+!new TrainingObjective('objective10')
+!objective10.areaToImprove := 'Endurance'
+!objective10.startDate := '2023-10-01'
+!objective10.endDate := '2023-12-01'
+!objective10.success := true
+!insert (objective10, player10) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective11')
+!objective11.areaToImprove := 'Defensive Strategy'
+!objective11.startDate := '2023-09-20'
+!objective11.endDate := '2023-11-20'
+!objective11.success := false
+!insert (objective11, player11) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective12')
+!objective12.areaToImprove := 'Speed'
+!objective12.startDate := '2023-08-10'
+!objective12.endDate := '2023-11-10'
+!objective12.success := true
+!insert (objective12, player12) into TrainingObjectivePlayer
+
+!new Competition('competition4')
+!competition4.name := 'Super Cup'
+!competition4.type := 'Tournament'
+
+!new Match('match4')
+!match4.date := '2023-11-25'
+!match4.homeAway := true
+!insert (competition4, match4) into CompetitionMatch
+!insert (team7, match4) into LocalMatch
+!insert (team8, match4) into VisitorMatch
+
+!new MatchReport('report4')
+!report4.duration := 90
+!report4.scoreVisitor := 1
+!report4.scoreLocal := 3
+!insert (match4, report4) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer10')
+!matchPlayer10.booked := false
+!matchPlayer10.goals := 2
+!matchPlayer10.rating := 9
+!insert (player10, matchPlayer10) into PlayerMatch
+!insert (match4, matchPlayer10) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer12')
+!matchPlayer12.booked := true
+!matchPlayer12.goals := 1
+!matchPlayer12.rating := 7
+!insert (player12, matchPlayer12) into PlayerMatch
+!insert (match4, matchPlayer12) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition10')
+!matchPlayerPosition10.positionName := #FORWARD
+!matchPlayerPosition10.number := 10
+!insert (matchPlayer10, matchPlayerPosition10) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition12')
+!matchPlayerPosition12.positionName := #MIDFIELDER
+!matchPlayerPosition12.number := 8
+!insert (matchPlayer12, matchPlayerPosition12) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event12')
+!event12.eventType := #GOAL
+!event12.time := 20
+!insert (match4, event12) into MatchMatchEvent
+
+!new MatchEvent('event13')
+!event13.eventType := #GOAL
+!event13.time := 40
+!insert (match4, event13) into MatchMatchEvent
+
+!new MatchEvent('event14')
+!event14.eventType := #GOAL
+!event14.time := 65
+!insert (match4, event14) into MatchMatchEvent
+
+!new MatchEvent('event15')
+!event15.eventType := #GOAL
+!event15.time := 88
+!insert (match4, event15) into MatchMatchEvent
+
+!new MatchNote('matchNote4')
+!matchNote4.note := 'Eagles FC displayed dominant offensive play'
+!matchNote4.date := '2023-11-25'
+!insert (match4, matchNote4) into MatchMatchNote

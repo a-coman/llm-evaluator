@@ -1,0 +1,93 @@
+!new AddressBook('Global_Networks')
+
+!new Company('GlobalTech_Solutions')
+!GlobalTech_Solutions.name := 'GlobalTech Solutions'
+!GlobalTech_Solutions.phone := '+44 20 7946 0958'
+!GlobalTech_Solutions.website := 'www.globaltechsolutions.co.uk'
+!GlobalTech_Solutions.email := 'contact@globaltechsolutions.co.uk'
+!GlobalTech_Solutions.industry := 'Information Technology'
+
+!new Address('Address_GlobalTech_London')
+!Address_GlobalTech_London.city := 'London'
+!Address_GlobalTech_London.houseNr := '101'
+!Address_GlobalTech_London.street := 'Tech Lane'
+!insert (GlobalTech_Solutions, Address_GlobalTech_London) into ContactContainsAddress
+
+!new Note('Note_GlobalTech')
+!Note_GlobalTech.author := 'Jonathan Ivy'
+!Note_GlobalTech.time := Date('2023-09-15')
+!Note_GlobalTech.type := #EMAIL
+!Note_GlobalTech.comment := 'Confirmed merger with EuroSoft GmbH.'
+!insert (GlobalTech_Solutions, Note_GlobalTech) into ContactContainsNote
+
+!new Company('EuroSoft_GmbH')
+!EuroSoft_GmbH.name := 'EuroSoft GmbH'
+!EuroSoft_GmbH.phone := '+49 30 567 88 100'
+!EuroSoft_GmbH.website := 'www.eurosoft.de'
+!EuroSoft_GmbH.email := 'info@eurosoft.de'
+!EuroSoft_GmbH.industry := 'Software Development'
+
+!new Address('Address_EuroSoft_Berlin')
+!Address_EuroSoft_Berlin.city := 'Berlin'
+!Address_EuroSoft_Berlin.houseNr := '23'
+!Address_EuroSoft_Berlin.street := 'Innovation Way'
+!insert (EuroSoft_GmbH, Address_EuroSoft_Berlin) into ContactContainsAddress
+
+!new Note('Note_EuroSoft')
+!Note_EuroSoft.author := 'Klaus Meier'
+!Note_EuroSoft.time := Date('2023-10-01')
+!Note_EuroSoft.type := #MEETING
+!Note_EuroSoft.comment := 'Discussing project timelines with GlobalTech.'
+!insert (EuroSoft_GmbH, Note_EuroSoft) into ContactContainsNote
+
+!new Person('Maria_Garcia')
+!Maria_Garcia.name := 'Maria Garcia'
+!Maria_Garcia.phone := '+34 645 78 9032'
+!Maria_Garcia.website := 'www.mariagarcia.com'
+!Maria_Garcia.email := 'maria.garcia@globaltechsolutions.co.uk'
+!Maria_Garcia.title := 'International Liaison'
+
+!new Address('Address_Maria_Madrid')
+!Address_Maria_Madrid.city := 'Madrid'
+!Address_Maria_Madrid.houseNr := '7'
+!Address_Maria_Madrid.street := 'Gran Via'
+!insert (Maria_Garcia, Address_Maria_Madrid) into ContactContainsAddress
+
+!new Address('Address_Maria_Berlin')
+!Address_Maria_Berlin.city := 'Berlin'
+!Address_Maria_Berlin.houseNr := '24'
+!Address_Maria_Berlin.street := 'Innovation Way'
+!insert (Maria_Garcia, Address_Maria_Berlin) into ContactContainsAddress
+
+!new Note('Note_Maria_1')
+!Note_Maria_1.author := 'Maria Garcia'
+!Note_Maria_1.time := Date('2023-10-02')
+!Note_Maria_1.type := #CALL
+!Note_Maria_1.comment := 'Coordinating meeting schedules across different time zones.'
+!insert (Maria_Garcia, Note_Maria_1) into ContactContainsNote
+
+!new Note('Note_Maria_2')
+!Note_Maria_2.author := 'Klaus Meier'
+!Note_Maria_2.time := Date('2023-10-05')
+!Note_Maria_2.type := #EMAIL
+!Note_Maria_2.comment := 'Feedback on legal documents for the merger.'
+!insert (Maria_Garcia, Note_Maria_2) into ContactContainsNote
+
+!new Relationship('Relationship_GlobalTech_to_EuroSoft')
+!Relationship_GlobalTech_to_EuroSoft.type := #SUBDIVISION
+!insert (GlobalTech_Solutions, Relationship_GlobalTech_to_EuroSoft) into ContactToRelationship
+!insert (Relationship_GlobalTech_to_EuroSoft, EuroSoft_GmbH) into RelationshipToContact
+
+!new Relationship('Relationship_GlobalTech_to_Maria')
+!Relationship_GlobalTech_to_Maria.type := #EMPLOYEE
+!insert (GlobalTech_Solutions, Relationship_GlobalTech_to_Maria) into ContactToRelationship
+!insert (Relationship_GlobalTech_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!new Relationship('Relationship_EuroSoft_to_Maria')
+!Relationship_EuroSoft_to_Maria.type := #COWORKER
+!insert (EuroSoft_GmbH, Relationship_EuroSoft_to_Maria) into ContactToRelationship
+!insert (Relationship_EuroSoft_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!insert (Global_Networks, GlobalTech_Solutions) into AddressBookMadeOfContact
+!insert (Global_Networks, EuroSoft_GmbH) into AddressBookMadeOfContact
+!insert (Global_Networks, Maria_Garcia) into AddressBookMadeOfContact

@@ -1,0 +1,35 @@
+!new Client('client9')
+!client9.clientId := 5
+!client9.isSuspended := true
+
+!new Client('client10')
+!client10.clientId := 999999999
+!client10.isSuspended := false
+
+!new Rental('rental5')
+!rental5.date := Date('2023-06-30')
+
+!new Movie('cassetteGreatEscape')
+!cassetteGreatEscape.title := 'The Great Escape'
+!cassetteGreatEscape.availableCopies := 50
+!cassetteGreatEscape.genre := #Action
+
+!new Series('cassetteEpicOdyssey')
+!cassetteEpicOdyssey.title := 'Epic Odyssey Ep.100'
+!cassetteEpicOdyssey.availableCopies := 0
+!cassetteEpicOdyssey.episode := 100
+
+!new Actor('actorSamanthaONeill')
+!actorSamanthaONeill.name := 'Samantha O\'Neill'
+
+!new Actor('actorHirokiYamamoto')
+!actorHirokiYamamoto.name := 'Hiroki Yamamoto'
+
+!insert (client9, rental5) into ClientRental
+
+!insert (rental5, cassetteGreatEscape) into RentalCassette
+
+!insert (cassetteGreatEscape, actorSamanthaONeill) into CassetteActor
+!insert (cassetteGreatEscape, actorHirokiYamamoto) into CassetteActor
+!insert (cassetteEpicOdyssey, actorHirokiYamamoto) into CassetteActor
+!insert (cassetteEpicOdyssey, actorSamanthaONeill) into CassetteActor

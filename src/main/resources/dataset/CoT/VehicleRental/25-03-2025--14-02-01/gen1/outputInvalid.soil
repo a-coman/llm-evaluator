@@ -1,0 +1,25 @@
+!new RentalOffice('rentalOffice1')
+!rentalOffice1.name := 'Solo Wheels Rental'
+!rentalOffice1.number := 001
+!rentalOffice1.address := '123 Main Street, Chico, CA'
+
+!new RentalAgreement('rentalAgreement1001')
+!rentalAgreement1001.number := 1001
+!rentalAgreement1001.rentalDate := Date('Previous summer')
+!rentalAgreement1001.anticipatedDuration := 7
+!rentalAgreement1001.depositPaid := 250.00
+!rentalAgreement1001.quotedDailyRate := 40.00
+!rentalAgreement1001.quotedRatePerMile := 0.15
+
+!new Individual('individualCustomer1')
+!individualCustomer1.name := 'John Doe'
+!individualCustomer1.address := '456 South Street, Chico, CA'
+!individualCustomer1.poorRisk := false
+!individualCustomer1.homePhone := '530-555-0101'
+!individualCustomer1.driverLicenseState := #CA
+!individualCustomer1.driverLicenseNumber := 1234567
+!individualCustomer1.driverLicenseExpirationDate := Date('2025-08-15')
+
+!insert (rentalAgreement1001, individualCustomer1) into RentalAgreementCustomer
+!insert (rentalOffice1, rentalAgreement1001) into RentalOfficeRentalAgreementOrigin
+

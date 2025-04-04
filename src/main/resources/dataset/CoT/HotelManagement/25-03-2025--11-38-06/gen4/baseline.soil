@@ -1,0 +1,54 @@
+!new Customer('customer16')
+!customer16.firstName := 'Vijay'
+!customer16.lastName := 'Patel'
+
+!new Booking('booking16')
+!booking16.bookingId := 89012
+!booking16.startDate := 'October 15, 2023'
+!booking16.endDate := 'October 18, 2023'
+!booking16.canceled := false
+!booking16.confirmed := true
+
+!new RoomReservation('roomreservation26')
+!roomreservation26.checkInDate := 'October 15, 2023'
+!roomreservation26.checkOutDate := 'October 18, 2023'
+
+!new Room('room31')
+!room31.roomNumber := 102
+!room31.numBeds := 2
+!room31.pricePerNight := 160.00
+!room31.occupied := true
+!room31.blocked := false
+
+!new Room('room32')
+!room32.roomNumber := 204
+!room32.numBeds := 1
+!room32.pricePerNight := 110.00
+!room32.occupied := false
+!room32.blocked := true
+
+!new RoomExtra('roomextra38')
+!roomextra38.price := 25.00
+!roomextra38.description := 'Airport shuttle service'
+
+!new Bill('bill32')
+!bill32.billId := 234567
+!bill32.price := 505.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto16')
+!freeroomtypesdto16.roomTypeDescription := 'Luxury King Room'
+!freeroomtypesdto16.numBeds := 1
+!freeroomtypesdto16.pricePerNight := 300.00
+!freeroomtypesdto16.numFreeRooms := 2
+
+!insert (booking16, customer16) into BookingCustomer
+!insert (booking16, roomreservation26) into BookingRoomReservation
+!insert (booking16, bill32) into BookingBill
+
+!insert (roomreservation26, room31) into RoomReservationRoom
+
+!insert (roomreservation26, roomextra38) into RoomReservationExtras
+
+!insert (bill32, roomreservation26) into BillRoomReservation
+
+!insert (roomreservation26, room32) into RoomReservationRoom

@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine8')
+!stateMachine8.name := 'workflowMachine'
+
+!new State('state18')
+!state18.name := 'initialized'
+
+!new State('state19')
+!state19.name := 'processing'
+
+!new State('state20')
+!state20.name := 'completed'
+
+!new Transition('transition15')
+!transition15.name := 'initToProcess'
+
+!new Transition('transition16')
+!transition16.name := 'processToComplete'
+
+!new TimeEvent('event15')
+!event15.time := 100
+
+!new TimeEvent('event16')
+!event16.time := 110
+
+!insert (stateMachine8, state18) into StateMachineContainsStates
+!insert (stateMachine8, state19) into StateMachineContainsStates
+!insert (stateMachine8, state20) into StateMachineContainsStates
+
+!insert (stateMachine8, transition15) into StateMachineContainsTransitions
+!insert (stateMachine8, transition16) into StateMachineContainsTransitions
+
+!insert (transition15, event15) into TransitionContainsEvents
+!insert (transition16, event16) into TransitionContainsEvents
+
+!insert (state18, transition15) into StateTransition
+!insert (state19, transition16) into StateTransition
+
+!insert (transition15, state19) into TransitionState
+!insert (transition16, state20) into TransitionState
+
+!insert (stateMachine8, state18) into StateMachineStartsStates

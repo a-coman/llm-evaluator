@@ -1,0 +1,244 @@
+!new Expense('crossCountryFamilyVacation')
+!crossCountryFamilyVacation.amount := 1850.00
+!crossCountryFamilyVacation.startDate := Date('2023-07-20')
+!crossCountryFamilyVacation.endDate := Date('2023-08-05')
+
+!new Bill('gasolineAndTollFees')
+!gasolineAndTollFees.amount := 400.00
+!gasolineAndTollFees.category := 'Transportation'
+!gasolineAndTollFees.date := Date('2023-07-21')
+!gasolineAndTollFees.paymentMethod := #CASH
+!gasolineAndTollFees.status := #VERIFIED
+
+!new Bill('campgroundFees')
+!campgroundFees.amount := 200.00
+!campgroundFees.category := 'Accommodations'
+!campgroundFees.date := Date('2023-07-23')
+!campgroundFees.paymentMethod := #CREDIT_CARD
+!campgroundFees.status := #REFUNDED
+
+!new Bill('nationalParkEntryFee')
+!nationalParkEntryFee.amount := 150.00
+!nationalParkEntryFee.category := 'Entertainment'
+!nationalParkEntryFee.date := Date('2023-07-27')
+!nationalParkEntryFee.paymentMethod := #CHECK
+!nationalParkEntryFee.status := #VALIDATED
+
+!new Bill('familyDiningOut')
+!familyDiningOut.amount := 350.00
+!familyDiningOut.category := 'Food'
+!familyDiningOut.date := Date('2023-07-30')
+!familyDiningOut.paymentMethod := #CREDIT_CARD
+!familyDiningOut.status := #VERIFIED
+
+!new Bill('souvenirsAndGifts')
+!souvenirsAndGifts.amount := 750.00
+!souvenirsAndGifts.category := 'Shopping'
+!souvenirsAndGifts.date := Date('2023-08-01')
+!souvenirsAndGifts.paymentMethod := #CHECK
+!souvenirsAndGifts.status := #PENDING
+
+!new Currency('usDollar')
+!usDollar.name := 'United States Dollar'
+!usDollar.abbreviation := 'USD'
+
+!insert (gasolineAndTollFees, usDollar) into BillCurrency
+!insert (campgroundFees, usDollar) into BillCurrency
+!insert (nationalParkEntryFee, usDollar) into BillCurrency
+!insert (familyDiningOut, usDollar) into BillCurrency
+!insert (souvenirsAndGifts, usDollar) into BillCurrency
+
+!insert (crossCountryFamilyVacation, gasolineAndTollFees) into ExpenseContainsBills
+!insert (crossCountryFamilyVacation, campgroundFees) into ExpenseContainsBills
+!insert (crossCountryFamilyVacation, nationalParkEntryFee) into ExpenseContainsBills
+!insert (crossCountryFamilyVacation, familyDiningOut) into ExpenseContainsBills
+!insert (crossCountryFamilyVacation, souvenirsAndGifts) into ExpenseContainsBills
+
+!new Comment('commentCampfire')
+!commentCampfire.text := 'The kids loved the outdoor cooking and stargazing during our camping stops.'
+
+!new Comment('commentFoodCulture')
+!commentFoodCulture.text := 'Exploring local cuisines at various states added a rich flavor to our journey.'
+
+!new Comment('commentDriving')
+!commentDriving.text := 'Minimal hassle with the vehicle and service stations were incredibly friendly.'
+
+!insert (crossCountryFamilyVacation, commentCampfire) into ExpenseComment
+!insert (crossCountryFamilyVacation, commentFoodCulture) into ExpenseComment
+!insert (crossCountryFamilyVacation, commentDriving) into ExpenseComment
+
+!new Currency('chineseYuan')
+!chineseYuan.name := 'Chinese Yuan'
+!chineseYuan.abbreviation := 'CNY'
+
+!new Expense('lunarNewYearCelebrationExpense')
+!lunarNewYearCelebrationExpense.amount := 5000.00
+!lunarNewYearCelebrationExpense.startDate := Date('2023-01-10')
+!lunarNewYearCelebrationExpense.endDate := Date('2023-01-30')
+
+!new Bill('newYearDecorations')
+!newYearDecorations.amount := 800.00
+!newYearDecorations.category := 'Decoration'
+!newYearDecorations.date := Date('2023-01-12')
+!newYearDecorations.paymentMethod := #CASH
+!newYearDecorations.status := #VERIFIED
+
+!new Bill('familyReunionDinner')
+!familyReunionDinner.amount := 2000.00
+!familyReunionDinner.category := 'Meals'
+!familyReunionDinner.date := Date('2023-01-21')
+!familyReunionDinner.paymentMethod := #CREDIT_CARD
+!familyReunionDinner.status := #VALIDATED
+
+!new Bill('traditionalClothesPurchase')
+!traditionalClothesPurchase.amount := 1200.00
+!traditionalClothesPurchase.category := 'Clothing'
+!traditionalClothesPurchase.date := Date('2023-01-15')
+!traditionalClothesPurchase.paymentMethod := #CREDIT_CARD
+!traditionalClothesPurchase.status := #VERIFIED
+
+!new Bill('redEnvelopes')
+!redEnvelopes.amount := 1000.00
+!redEnvelopes.category := 'Gifts'
+!redEnvelopes.date := Date('2023-01-22')
+!redEnvelopes.paymentMethod := #CHECK
+!redEnvelopes.status := #DRAFT
+
+!insert (newYearDecorations, chineseYuan) into BillCurrency
+!insert (familyReunionDinner, chineseYuan) into BillCurrency
+!insert (traditionalClothesPurchase, chineseYuan) into BillCurrency
+!insert (redEnvelopes, chineseYuan) into BillCurrency
+
+!insert (lunarNewYearCelebrationExpense, newYearDecorations) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, familyReunionDinner) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, traditionalClothesPurchase) into ExpenseContainsBills
+!insert (lunarNewYearCelebrationExpense, redEnvelopes) into ExpenseContainsBills
+
+!new Comment('commentDecorations')
+!commentDecorations.text := 'All decorations followed traditional designs, added a special touch to the home.'
+
+!new Comment('commentDinner')
+!commentDinner.text := 'The family dinner was a success, everyone enjoyed the meal and ambiance.'
+
+!new Comment('commentClothes')
+!commentClothes.text := 'Shopping for clothes during the festival was vibrant but crowded, need to plan better next year.'
+
+!insert (lunarNewYearCelebrationExpense, commentDecorations) into ExpenseComment
+!insert (lunarNewYearCelebrationExpense, commentDinner) into ExpenseComment
+!insert (lunarNewYearCelebrationExpense, commentClothes) into ExpenseComment
+
+!new Expense('minimalTransactionExpense')
+!minimalTransactionExpense.amount := 0.01
+!minimalTransactionExpense.startDate := Date('2023-11-15')
+!minimalTransactionExpense.endDate := Date('2023-11-15')
+
+!new Bill('minimalAmountBill')
+!minimalAmountBill.amount := 0.01
+!minimalAmountBill.category := 'Digital Services'
+!minimalAmountBill.date := Date('2023-11-15')
+!minimalAmountBill.paymentMethod := #CASH
+!minimalAmountBill.status := #REFUSED
+
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!insert (minimalAmountBill, canadianDollar) into BillCurrency
+
+!insert (minimalTransactionExpense, minimalAmountBill) into ExpenseContainsBills
+
+!new Comment('commentMinimalTransaction')
+!commentMinimalTransaction.text := 'Minimal Transaction Test'
+
+!new Comment('commentRefusedTransaction')
+!commentRefusedTransaction.text := 'Refused Due to Insufficient Funds'
+
+!new Comment('commentTimestampAudit')
+!commentTimestampAudit.text := 'Timestamped for Audit'
+
+!insert (minimalTransactionExpense, commentMinimalTransaction) into ExpenseComment
+!insert (minimalTransactionExpense, commentRefusedTransaction) into ExpenseComment
+!insert (minimalTransactionExpense, commentTimestampAudit) into ExpenseComment
+
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Bill('workshopVenueHire')
+!workshopVenueHire.amount := 1000.00
+!workshopVenueHire.category := 'Workshop Venue Hire'
+!workshopVenueHire.date := Date('2023-03-15')
+!workshopVenueHire.paymentMethod := #CREDIT_CARD
+!workshopVenueHire.status := #DRAFT
+
+!new Bill('educationalMaterials')
+!educationalMaterials.amount := 150.00
+!educationalMaterials.category := 'Educational Materials'
+!educationalMaterials.date := Date('2023-03-15')
+!educationalMaterials.paymentMethod := #CASH
+!educationalMaterials.status := #PENDING
+
+!new Bill('volunteerAccommodation')
+!volunteerAccommodation.amount := 200.00
+!volunteerAccommodation.category := 'Volunteer Accommodation'
+!volunteerAccommodation.date := Date('2023-03-15')
+!volunteerAccommodation.paymentMethod := #CREDIT_CARD
+!volunteerAccommodation.status := #REFUSED
+
+!new Bill('localCateringServices')
+!localCateringServices.amount := 15000.00
+!localCateringServices.category := 'Local Catering Services'
+!localCateringServices.date := Date('2023-03-15')
+!localCateringServices.paymentMethod := #CASH
+!localCateringServices.status := #PENDING
+
+!new Bill('transportationParticipants')
+!transportationParticipants.amount := 300.00
+!transportationParticipants.category := 'Transportation for Participants'
+!transportationParticipants.date := Date('2023-03-15')
+!transportationParticipants.paymentMethod := #CREDIT_CARD
+!transportationParticipants.status := #DRAFT
+
+!insert (workshopVenueHire, canadianDollar) into BillCurrency
+!insert (educationalMaterials, australianDollar) into BillCurrency
+!insert (volunteerAccommodation, canadianDollar) into BillCurrency
+!insert (localCateringServices, indianRupee) into BillCurrency
+!insert (transportationParticipants, australianDollar) into BillCurrency
+
+!new Expense('workshopExpenses')
+-- Converting amounts to a common currency and ensuring the total amount is correct
+!workshopExpenses.amount := 16650.00
+!workshopExpenses.startDate := Date('2023-03-15')
+!workshopExpenses.endDate := Date('2023-06-20')
+
+!insert (workshopExpenses, workshopVenueHire) into ExpenseContainsBills
+!insert (workshopExpenses, educationalMaterials) into ExpenseContainsBills
+!insert (workshopExpenses, volunteerAccommodation) into ExpenseContainsBills
+!insert (workshopExpenses, localCateringServices) into ExpenseContainsBills
+!insert (workshopExpenses, transportationParticipants) into ExpenseContainsBills
+
+!new Comment('commentVenueBoardApproval')
+!commentVenueBoardApproval.text := 'Venue expenses awaiting board approval.'
+
+!new Comment('commentMaterialsReview')
+!commentMaterialsReview.text := 'Review pending materials expenditure.'
+
+!new Comment('commentAccommodationBudget')
+!commentAccommodationBudget.text := 'Accommodation costs exceeding budget needs.'
+
+!new Comment('commentCateringPartners')
+!commentCateringPartners.text := 'Catering handled by local partners, currency fluctuations noted.'
+
+!insert (workshopExpenses, commentVenueBoardApproval) into ExpenseComment
+!insert (workshopExpenses, commentMaterialsReview) into ExpenseComment
+!insert (workshopExpenses, commentAccommodationBudget) into ExpenseComment
+!insert (workshopExpenses, commentCateringPartners) into ExpenseComment
+

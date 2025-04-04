@@ -1,0 +1,63 @@
+!new Currency('mexicanPeso')
+!mexicanPeso.name := 'Mexican Peso'
+!mexicanPeso.abbreviation := 'MXN'
+
+!new Expense('homeRenovationProjectExpense')
+!homeRenovationProjectExpense.amount := 250000.00
+!homeRenovationProjectExpense.startDate := Date('2023-03-01')
+!homeRenovationProjectExpense.endDate := Date('2023-03-31')
+
+!new Bill('constructionMaterials')
+!constructionMaterials.amount := 100000.00
+!constructionMaterials.category := 'Construction'
+!constructionMaterials.date := Date('2023-03-05')
+!constructionMaterials.paymentMethod := #CHECK
+!constructionMaterials.status := #VERIFIED
+
+!new Bill('interiorDesignServices')
+!interiorDesignServices.amount := 50000.00
+!interiorDesignServices.category := 'Design'
+!interiorDesignServices.date := Date('2023-03-10')
+!interiorDesignServices.paymentMethod := #CREDIT_CARD
+!interiorDesignServices.status := #VALIDATED
+
+!new Bill('furniturePurchase')
+!furniturePurchase.amount := 60000.00
+!furniturePurchase.category := 'Furnishing'
+!furniturePurchase.date := Date('2023-03-15')
+!furniturePurchase.paymentMethod := #CASH
+!furniturePurchase.status := #VERIFIED
+
+!new Bill('landscapingGardenSetup')
+!landscapingGardenSetup.amount := 40000.00
+!landscapingGardenSetup.category := 'Landscaping'
+!landscapingGardenSetup.date := Date('2023-03-25')
+!landscapingGardenSetup.paymentMethod := #CREDIT_CARD
+!landscapingGardenSetup.status := #VERIFIED
+
+!insert (constructionMaterials, mexicanPeso) into BillCurrency
+!insert (interiorDesignServices, mexicanPeso) into BillCurrency
+!insert (furniturePurchase, mexicanPeso) into BillCurrency
+!insert (landscapingGardenSetup, mexicanPeso) into BillCurrency
+
+!insert (homeRenovationProjectExpense, constructionMaterials) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, interiorDesignServices) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, furniturePurchase) into ExpenseContainsBills
+!insert (homeRenovationProjectExpense, landscapingGardenSetup) into ExpenseContainsBills
+
+!new Comment('commentConstructionPhase')
+!commentConstructionPhase.text := 'Construction phase progressed smoothly, materials were top quality.'
+
+!new Comment('commentDesignServices')
+!commentDesignServices.text := 'Design services added a modern touch, very satisfied with the aesthetics.'
+
+!new Comment('commentFurnitureDelivery')
+!commentFurnitureDelivery.text := 'Furniture delivery was timely, fits perfectly with the new interiors.'
+
+!new Comment('commentLandscapingTransformation')
+!commentLandscapingTransformation.text := 'Landscaping transformed the exterior, received numerous compliments from neighbors.'
+
+!insert (homeRenovationProjectExpense, commentConstructionPhase) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentDesignServices) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentFurnitureDelivery) into ExpenseComment
+!insert (homeRenovationProjectExpense, commentLandscapingTransformation) into ExpenseComment

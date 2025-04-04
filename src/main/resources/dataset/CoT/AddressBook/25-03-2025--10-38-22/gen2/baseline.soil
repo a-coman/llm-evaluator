@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_2')
+
+!new Person('Person_3')
+!Person_3.name := 'Carlos Mendoza'
+!Person_3.phone := '+52-55-99887766'
+!Person_3.website := 'carlosm-art.com'
+!Person_3.email := 'carlos.mendoza@artshow.com'
+!Person_3.title := 'Art Curator'
+
+!new Address('Address_4')
+!Address_4.city := 'Mexico City'
+!Address_4.houseNr := '789'
+!Address_4.street := 'Avenida Reforma'
+!insert (Person_3, Address_4) into ContactContainsAddress
+
+!new Note('Note_4')
+!Note_4.author := 'Carlos Mendoza'
+!Note_4.time := Date('2023-04-20')
+!Note_4.type := #MEETING
+!Note_4.comment := 'Planning exhibition logistics with art suppliers.'
+!insert (Person_3, Note_4) into ContactContainsNote
+
+!new Company('Company_2')
+!Company_2.name := 'Global Ventures Ltd.'
+!Company_2.phone := '+61-3-1234-5678'
+!Company_2.website := 'www.globalventures.com.au'
+!Company_2.email := 'info@globalventures.com.au'
+!Company_2.industry := 'Consulting'
+
+!new Address('Address_5')
+!Address_5.city := 'Melbourne'
+!Address_5.houseNr := '250'
+!Address_5.street := 'Collins Street'
+!insert (Company_2, Address_5) into ContactContainsAddress
+
+!new Note('Note_5')
+!Note_5.author := 'Richard Bales'
+!Note_5.time := Date('2023-05-18')
+!Note_5.type := #CALL
+!Note_5.comment := 'Client feedback session following project completion.'
+!insert (Company_2, Note_5) into ContactContainsNote
+
+!new Person('Person_4')
+!Person_4.name := 'Akiko Takahashi'
+!Person_4.phone := '+81-3-5555-4444'
+!Person_4.website := 'akikotakahashi.jp'
+!Person_4.email := 'akiko.t@innovations.jp'
+!Person_4.title := 'Business Analyst'
+
+!new Address('Address_6')
+!Address_6.city := 'Tokyo'
+!Address_6.houseNr := '1120'
+!Address_6.street := 'Shinjuku-dori'
+!insert (Person_4, Address_6) into ContactContainsAddress
+
+!new Note('Note_6')
+!Note_6.author := 'Akiko Takahashi'
+!Note_6.time := Date('2023-06-12')
+!Note_6.type := #EMAIL
+!Note_6.comment := 'Sent market analysis and projections for Q2.'
+!insert (Person_4, Note_6) into ContactContainsNote
+
+!new Relationship('Relationship_4')
+!Relationship_4.type := #SUBDIVISION
+!insert (Person_4, Relationship_4) into ContactToRelationship
+!insert (Relationship_4, Company_2) into RelationshipToContact
+
+!new Relationship('Relationship_5')
+!Relationship_5.type := #COWORKER
+!insert (Person_4, Relationship_5) into ContactToRelationship
+!insert (Relationship_5, Person_3) into RelationshipToContact
+
+!insert (AddressBook_2, Person_3) into AddressBookMadeOfContact
+!insert (AddressBook_2, Company_2) into AddressBookMadeOfContact
+!insert (AddressBook_2, Person_4) into AddressBookMadeOfContact

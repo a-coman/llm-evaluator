@@ -1,0 +1,51 @@
+!new Bank('bank27')
+!bank27.country := 'China'
+!bank27.name := 'Industrial and Commercial Bank of China'
+!bank27.bic := 'ICBKCNBJ'
+
+!new Account('account76')
+!account76.iban := 'CN123456789012345678901'
+!account76.balance := 8900
+
+!new Account('account77')
+!account77.iban := 'CN987654321098765432109'
+!account77.balance := 3200
+
+!new Account('account78')
+!account78.iban := 'CN192837465091827364550'
+!account78.balance := 700
+
+!new Person('person80')
+!person80.firstName := 'Wei'
+!person80.lastName := 'Zhang'
+!person80.age := 50
+
+!new Person('person81')
+!person81.firstName := 'Lina'
+!person81.lastName := 'Wang'
+!person81.age := 27
+
+!new Person('person82')
+!person82.firstName := 'Hao'
+!person82.lastName := 'Li'
+!person82.age := 35
+
+-- Associations
+!insert (bank27, account76) into AccountOfBanks
+!insert (bank27, account77) into AccountOfBanks
+!insert (bank27, account78) into AccountOfBanks
+
+!insert (person80, account76) into Ownership
+!insert (person81, account76) into Ownership
+
+!insert (person81, account77) into Ownership
+!insert (person82, account77) into Ownership
+
+!insert (person82, account78) into Ownership
+!insert (person80, account78) into Ownership
+
+!insert (person80, account77) into Use
+!insert (person81, account78) into Use
+
+!insert (person82, account76) into Use
+!insert (person81, account76) into Use

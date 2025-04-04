@@ -1,0 +1,99 @@
+!new AddressBook('World_Heritage_Preservation_Consortium')
+
+!new Company('World_Heritage_Trust')
+!World_Heritage_Trust.name := 'World Heritage Trust'
+!World_Heritage_Trust.phone := '+44 20 7890 1234'
+!World_Heritage_Trust.website := 'www.worldheritagetrust.org'
+!World_Heritage_Trust.email := 'contact@worldheritagetrust.org'
+!World_Heritage_Trust.industry := 'Cultural Preservation'
+
+!new Address('Address_Edinburgh_Trust')
+!Address_Edinburgh_Trust.city := 'Edinburgh'
+!Address_Edinburgh_Trust.houseNr := '10'
+!Address_Edinburgh_Trust.street := 'Castle Hill'
+!insert (World_Heritage_Trust, Address_Edinburgh_Trust) into ContactContainsAddress
+
+!new Address('Address_Rome_Trust')
+!Address_Rome_Trust.city := 'Rome'
+!Address_Rome_Trust.houseNr := '50'
+!Address_Rome_Trust.street := 'Via del Corso'
+!insert (World_Heritage_Trust, Address_Rome_Trust) into ContactContainsAddress
+
+!new Note('Note_World_Heritage_Trust')
+!Note_World_Heritage_Trust.author := 'Catherine Grey'
+!Note_World_Heritage_Trust.time := Date('2023-04-22')
+!Note_World_Heritage_Trust.type := #MEETING
+!Note_World_Heritage_Trust.comment := 'Strategic meeting for funding of new restoration projects.'
+!insert (World_Heritage_Trust, Note_World_Heritage_Trust) into ContactContainsNote
+
+!new Company('Preservation_Architects_Inc')
+!Preservation_Architects_Inc.name := 'Preservation Architects Inc.'
+!Preservation_Architects_Inc.phone := '+1 312 555 6789'
+!Preservation_Architects_Inc.website := 'www.preservationarchitects.com'
+!Preservation_Architects_Inc.email := 'info@preservationarchitects.com'
+!Preservation_Architects_Inc.industry := 'Architecture and Restoration'
+
+!new Address('Address_Chicago_Architects')
+!Address_Chicago_Architects.city := 'Chicago'
+!Address_Chicago_Architects.houseNr := '210'
+!Address_Chicago_Architects.street := 'N Michigan Avenue'
+!insert (Preservation_Architects_Inc, Address_Chicago_Architects) into ContactContainsAddress
+
+!new Note('Note_Preservation_Architects_Inc')
+!Note_Preservation_Architects_Inc.author := 'Michael D\'Arcy'
+!Note_Preservation_Architects_Inc.time := Date('2023-05-15')
+!Note_Preservation_Architects_Inc.type := #EMAIL
+!Note_Preservation_Architects_Inc.comment := 'Proposal for architectural input in UNESCO heritage sites.'
+!insert (Preservation_Architects_Inc, Note_Preservation_Architects_Inc) into ContactContainsNote
+
+!new Person('Min_Jae_Lee')
+!Min_Jae_Lee.name := 'Min-Jae Lee'
+!Min_Jae_Lee.phone := '+82 2 555 7890'
+!Min_Jae_Lee.website := 'www.minjaeconsulting.com'
+!Min_Jae_Lee.email := 'minjae.lee@advisor.com'
+!Min_Jae_Lee.title := 'Heritage Conservation Specialist'
+
+!new Address('Address_Seoul_Lee')
+!Address_Seoul_Lee.city := 'Seoul'
+!Address_Seoul_Lee.houseNr := '99'
+!Address_Seoul_Lee.street := 'Insa-dong'
+!insert (Min_Jae_Lee, Address_Seoul_Lee) into ContactContainsAddress
+
+!new Address('Address_Edinburgh_Lee')
+!Address_Edinburgh_Lee.city := 'Edinburgh'
+!Address_Edinburgh_Lee.houseNr := '15'
+!Address_Edinburgh_Lee.street := 'Castle Hill'
+!insert (Min_Jae_Lee, Address_Edinburgh_Lee) into ContactContainsAddress
+
+!new Note('Note_1_Min_Jae_Lee')
+!Note_1_Min_Jae_Lee.author := 'Min-Jae Lee'
+!Note_1_Min_Jae_Lee.time := Date('2023-03-10')
+!Note_1_Min_Jae_Lee.type := #CALL
+!Note_1_Min_Jae_Lee.comment := 'Evaluated potential sites in Korea for collaboration.'
+!insert (Min_Jae_Lee, Note_1_Min_Jae_Lee) into ContactContainsNote
+
+!new Note('Note_2_Min_Jae_Lee')
+!Note_2_Min_Jae_Lee.author := 'Catherine Grey'
+!Note_2_Min_Jae_Lee.time := Date('2023-06-05')
+!Note_2_Min_Jae_Lee.type := #EMAIL
+!Note_2_Min_Jae_Lee.comment := 'Agreed upon conservation techniques and resource sharing.'
+!insert (Min_Jae_Lee, Note_2_Min_Jae_Lee) into ContactContainsNote
+
+!new Relationship('Relationship_Trust_to_Architects')
+!Relationship_Trust_to_Architects.type := #EMPLOYEE
+!insert (World_Heritage_Trust, Relationship_Trust_to_Architects) into ContactToRelationship
+!insert (Relationship_Trust_to_Architects, Preservation_Architects_Inc) into RelationshipToContact
+
+!new Relationship('Relationship_Trust_to_Min_Jae_Lee')
+!Relationship_Trust_to_Min_Jae_Lee.type := #SUBDIVISION
+!insert (World_Heritage_Trust, Relationship_Trust_to_Min_Jae_Lee) into ContactToRelationship
+!insert (Relationship_Trust_to_Min_Jae_Lee, Min_Jae_Lee) into RelationshipToContact
+
+!new Relationship('Relationship_Architects_to_Min_Jae_Lee')
+!Relationship_Architects_to_Min_Jae_Lee.type := #COWORKER
+!insert (Preservation_Architects_Inc, Relationship_Architects_to_Min_Jae_Lee) into ContactToRelationship
+!insert (Relationship_Architects_to_Min_Jae_Lee, Min_Jae_Lee) into RelationshipToContact
+
+!insert (World_Heritage_Preservation_Consortium, World_Heritage_Trust) into AddressBookMadeOfContact
+!insert (World_Heritage_Preservation_Consortium, Preservation_Architects_Inc) into AddressBookMadeOfContact
+!insert (World_Heritage_Preservation_Consortium, Min_Jae_Lee) into AddressBookMadeOfContact

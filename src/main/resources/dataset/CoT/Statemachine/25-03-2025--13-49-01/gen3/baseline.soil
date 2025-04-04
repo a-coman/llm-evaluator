@@ -1,0 +1,97 @@
+!new StateMachine('grapeHarvestCycle')
+!grapeHarvestCycle.name := 'grapeHarvestCycle'
+
+!new State('ready')
+!ready.name := 'ready'
+
+!new State('detectRipeVines')
+!detectRipeVines.name := 'detectRipeVines'
+
+!new State('collectGrapes')
+!collectGrapes.name := 'collectGrapes'
+
+!new State('transport')
+!transport.name := 'transport'
+
+!new State('cleanupRow')
+!cleanupRow.name := 'cleanupRow'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('beginHarvest')
+!beginHarvest.name := 'beginHarvest'
+
+!new Transition('verifyRipe')
+!verifyRipe.name := 'verifyRipe'
+
+!new Transition('startTransport')
+!startTransport.name := 'startTransport'
+
+!new Transition('finalizeTransport')
+!finalizeTransport.name := 'finalizeTransport'
+
+!new Transition('finishCleanup')
+!finishCleanup.name := 'finishCleanup'
+
+!new Transition('resetMachine')
+!resetMachine.name := 'resetMachine'
+
+!new TimeEvent('initialWait')
+!initialWait.time := 5
+
+!new TimeEvent('detectionDuration')
+!detectionDuration.time := 25
+
+!new TimeEvent('collectionTime')
+!collectionTime.time := 60
+
+!new TimeEvent('transportTime')
+!transportTime.time := 15
+
+!new TimeEvent('cleaningTime')
+!cleaningTime.time := 20
+
+!new TimeEvent('maintenanceCheck')
+!maintenanceCheck.time := 30
+
+!insert (grapeHarvestCycle, ready) into StateMachineContainsStates
+!insert (grapeHarvestCycle, detectRipeVines) into StateMachineContainsStates
+!insert (grapeHarvestCycle, collectGrapes) into StateMachineContainsStates
+!insert (grapeHarvestCycle, transport) into StateMachineContainsStates
+!insert (grapeHarvestCycle, cleanupRow) into StateMachineContainsStates
+!insert (grapeHarvestCycle, maintenance) into StateMachineContainsStates
+
+!insert (grapeHarvestCycle, ready) into StateMachineStartsStates
+
+!insert (grapeHarvestCycle, beginHarvest) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, verifyRipe) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, startTransport) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, finalizeTransport) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, finishCleanup) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, resetMachine) into StateMachineContainsTransitions
+
+!insert (beginHarvest, initialWait) into TransitionContainsEvents
+!insert (verifyRipe, detectionDuration) into TransitionContainsEvents
+!insert (startTransport, collectionTime) into TransitionContainsEvents
+!insert (finalizeTransport, transportTime) into TransitionContainsEvents
+!insert (finishCleanup, cleaningTime) into TransitionContainsEvents
+!insert (resetMachine, maintenanceCheck) into TransitionContainsEvents
+
+!insert (ready, beginHarvest) into StateTransition
+!insert (beginHarvest, detectRipeVines) into TransitionState
+
+!insert (detectRipeVines, verifyRipe) into StateTransition
+!insert (verifyRipe, collectGrapes) into TransitionState
+
+!insert (collectGrapes, startTransport) into StateTransition
+!insert (startTransport, transport) into TransitionState
+
+!insert (transport, finalizeTransport) into StateTransition
+!insert (finalizeTransport, cleanupRow) into TransitionState
+
+!insert (cleanupRow, finishCleanup) into StateTransition
+!insert (finishCleanup, maintenance) into TransitionState
+
+!insert (maintenance, resetMachine) into StateTransition
+!insert (resetMachine, ready) into TransitionState

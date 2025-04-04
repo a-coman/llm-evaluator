@@ -1,0 +1,260 @@
+!new Restaurant('restaurant19')
+!restaurant19.name := 'Skald\'s Hall'
+
+!new Owner('owner42')
+!owner42.name := 'Ingrid Svendsen'
+!owner42.percentageShares := 70
+
+!new Owner('owner43')
+!owner43.name := 'Erik Johansson'
+!owner43.percentageShares := 30
+
+!insert (restaurant19, owner42) into RestaurantOwner
+!insert (restaurant19, owner43) into RestaurantOwner
+
+!new RegularCustomer('customer11')
+!customer11.name := 'Leif Andersson'
+!customer11.prefferedLanguage := #English  -- Using #English as placeholder for Swedish
+
+!new RegularCustomer('customer12')
+!customer12.name := 'Bjorn Bergen'
+!customer12.prefferedLanguage := #English  -- Using #English as placeholder for Norwegian
+
+!new HeadWaiter('headWaiter18')
+!headWaiter18.name := 'Lovisa Nilsen'
+!headWaiter18.dateOfBirth := Date('1976-09-19')
+!headWaiter18.phoneNumber := '+47 755 667 233'
+
+!new Waiter('waiter38')
+!waiter38.name := 'Sanna Olsson'
+!waiter38.dateOfBirth := Date('1988-03-22')
+!waiter38.phoneNumber := '+47 755 667 211'
+
+!new Waiter('waiter39')
+!waiter39.name := 'Elias Hansen'
+!waiter39.dateOfBirth := Date('1992-11-09')
+!waiter39.phoneNumber := '+47 755 667 199'
+
+!insert (headWaiter18, waiter38) into HeadWaiterWaiter
+!insert (headWaiter18, waiter39) into HeadWaiterWaiter
+
+!new Manager('manager7')
+!manager7.name := 'Johanna Berg'
+!manager7.dateOfBirth := Date('1980-05-10')
+!manager7.phoneNumber := '+47 755 667 100'
+
+!new Chef('chef26')
+!chef26.name := 'Knut Eriksen'
+!chef26.dateOfBirth := Date('1975-07-15')
+!chef26.phoneNumber := '+47 755 667 123'
+
+!new Cook('cook32')
+!cook32.name := 'Magnus Lars'
+!cook32.dateOfBirth := Date('1985-08-08')
+!cook32.phoneNumber := '+47 755 667 345'
+!cook32.yearsOfExperience := 7
+
+!new Cook('cook33')
+!cook33.name := 'Anette Strom'
+!cook33.dateOfBirth := Date('1987-12-01')
+!cook33.phoneNumber := '+47 755 667 456'
+!cook33.yearsOfExperience := 10
+
+!insert (chef26, cook32) into ChefCook
+!insert (chef26, cook33) into ChefCook
+
+!new BusDriver('busdriver18')
+!busdriver18.name := 'Jens Olesen'
+!busdriver18.dateOfBirth := Date('1970-01-29')
+!busdriver18.phoneNumber := '+47 755 667 789'
+
+!new Table('table43')
+!table43.number := 7
+!table43.description := 'Fireplace nook, intimate'
+!table43.capacity := 2
+
+!new Table('table44')
+!table44.number := 8
+!table44.description := 'Heritage tapestry, spacious'
+!table44.capacity := 6
+
+!new Table('table45')
+!table45.number := 9
+!table45.description := 'Grand hall, banquet style'
+!table45.capacity := 22  -- Adjust this to ensure the banquet reservation tables' total capacity matches or exceeds the people reserved.
+
+!new Individual('individualReservation13')
+!individualReservation13.time := Time('19:45')
+!individualReservation13.date := Date('2023-10-25')
+!individualReservation13.numberPeople := 1
+!individualReservation13.name := 'Leif Andersson'
+!individualReservation13.phoneNumber := '+46 555 6789'
+!individualReservation13.number := 67890
+!individualReservation13.seating := #Inside  -- Using #Inside as placeholder for Fireplace Nook
+!individualReservation13.smoking := #NonSmoking
+
+!insert (restaurant19, individualReservation13) into RestaurantReservation
+!insert (individualReservation13, table43) into ReservationTable
+!insert (individualReservation13, waiter38) into ReservationWaiter
+
+!insert (individualReservation13, customer11) into ReservationCustomer
+
+!new Banquet('banquet16')
+!banquet16.date := Date('2023-10-28')
+!banquet16.time := Time('16:30')
+!banquet16.numberPeople := 20
+!banquet16.name := 'Nordic Heritage Celebration'
+!banquet16.paymentMethod := #CreditCard  -- Using placeholder for Bank Transfer
+!banquet16.busService := true
+
+!insert (restaurant19, banquet16) into RestaurantReservation
+!insert (banquet16, table44) into ReservationTable
+!insert (banquet16, table45) into ReservationTable
+
+!insert (banquet16, waiter39) into ReservationWaiter
+!insert (banquet16, waiter38) into ReservationWaiter
+
+!insert (banquet16, busdriver18) into BanquetBusDriver
+
+!new ItemOrder('itemOrder26')
+!itemOrder26.time := Time('20:00')
+!insert (individualReservation13, itemOrder26) into ReservationItemOrdered
+
+!new MenuItem('menuItem31')
+!menuItem31.description := 'Nordic Smorrebrod'
+!menuItem31.prepTime := 15.0
+!menuItem31.classification := #Apetizer
+
+!insert (itemOrder26, menuItem31) into ItemOrderMenuItem
+!insert (menuItem31, chef26) into MenuItemChef
+
+!new MenuItem('menuItem32')
+!menuItem32.description := 'Reindeer Stew'
+!menuItem32.prepTime := 40.0
+!menuItem32.classification := #Main
+
+!new ItemOrder('itemOrder27')
+!itemOrder27.time := Time('20:15')
+!insert (individualReservation13, itemOrder27) into ReservationItemOrdered
+!insert (itemOrder27, menuItem32) into ItemOrderMenuItem
+!insert (menuItem32, chef26) into MenuItemChef
+
+!new ItemOrder('itemOrder28')
+!itemOrder28.time := Time('17:00')
+!insert (banquet16, itemOrder28) into ReservationItemOrdered
+
+!new MenuItem('menuItem33')
+!menuItem33.description := 'Swedish Meatballs'
+!menuItem33.prepTime := 25.0
+!menuItem33.classification := #Main
+
+!insert (itemOrder28, menuItem33) into ItemOrderMenuItem
+!insert (menuItem33, chef26) into MenuItemChef
+
+!new MenuItem('menuItem34')
+!menuItem34.description := 'Norwegian Salmon'
+!menuItem34.prepTime := 30.0
+!menuItem34.classification := #Main
+
+!new ItemOrder('itemOrder29')
+!itemOrder29.time := Time('17:15')
+!insert (banquet16, itemOrder29) into ReservationItemOrdered
+!insert (itemOrder29, menuItem34) into ItemOrderMenuItem
+!insert (menuItem34, chef26) into MenuItemChef
+
+!new FoodItem('foodItem54')
+!foodItem54.number := 10001
+!foodItem54.description := 'Rye Bread'
+!foodItem54.purchaseFlag := true
+!foodItem54.unit := #Pound  -- Using #Pound as placeholder for Loaves
+
+!new FoodItem('foodItem55')
+!foodItem55.number := 10002
+!foodItem55.description := 'Cured Meats'
+!foodItem55.purchaseFlag := true
+!foodItem55.unit := #Gram
+
+!new FoodItem('foodItem56')
+!foodItem56.number := 10003
+!foodItem56.description := 'Pickled Herring'
+!foodItem56.purchaseFlag := true
+!foodItem56.unit := #Ounce  -- Using #Ounce as placeholder for Jars
+
+!insert (menuItem31, foodItem54) into MenuItemFoodItem
+!insert (menuItem31, foodItem55) into MenuItemFoodItem
+!insert (menuItem31, foodItem56) into MenuItemFoodItem
+
+!new FoodItem('foodItem57')
+!foodItem57.number := 10004
+!foodItem57.description := 'Reindeer Meat'
+!foodItem57.purchaseFlag := false
+!foodItem57.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem58')
+!foodItem58.number := 10005
+!foodItem58.description := 'Carrots'
+!foodItem58.purchaseFlag := true
+!foodItem58.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem59')
+!foodItem59.number := 10006
+!foodItem59.description := 'Potatoes'
+!foodItem59.purchaseFlag := true
+!foodItem59.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!insert (menuItem32, foodItem57) into MenuItemFoodItem
+!insert (menuItem32, foodItem58) into MenuItemFoodItem
+!insert (menuItem32, foodItem59) into MenuItemFoodItem
+
+!new FoodItem('foodItem60')
+!foodItem60.number := 10007
+!foodItem60.description := 'Minced Meat'
+!foodItem60.purchaseFlag := true
+!foodItem60.unit := #Pound  -- Using #Pound as placeholder for Kilograms
+
+!new FoodItem('foodItem61')
+!foodItem61.number := 10008
+!foodItem61.description := 'Lingonberry'
+!foodItem61.purchaseFlag := true
+!foodItem61.unit := #Ounce  -- Using #Ounce as placeholder for Jars
+
+!new FoodItem('foodItem62')
+!foodItem62.number := 10009
+!foodItem62.description := 'Cream'
+!foodItem62.purchaseFlag := true
+!foodItem62.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!insert (menuItem33, foodItem60) into MenuItemFoodItem
+!insert (menuItem33, foodItem61) into MenuItemFoodItem
+!insert (menuItem33, foodItem62) into MenuItemFoodItem
+
+!new FoodItem('foodItem63')
+!foodItem63.number := 10010
+!foodItem63.description := 'Salmon'
+!foodItem63.purchaseFlag := false
+!foodItem63.unit := #Gram
+
+!new FoodItem('foodItem64')
+!foodItem64.number := 10011
+!foodItem64.description := 'Dill'
+!foodItem64.purchaseFlag := true
+!foodItem64.unit := #Dozen  -- Using #Dozen as placeholder for Bunches
+
+!new FoodItem('foodItem65')
+!foodItem65.number := 10012
+!foodItem65.description := 'Lemon'
+!foodItem65.purchaseFlag := true
+!foodItem65.unit := #Pound  -- Using #Pound as placeholder
+
+!insert (menuItem34, foodItem63) into MenuItemFoodItem
+!insert (menuItem34, foodItem64) into MenuItemFoodItem
+!insert (menuItem34, foodItem65) into MenuItemFoodItem
+
+!new Allergen('allergen27')
+!allergen27.type := #Lactose  -- Using #Lactose as placeholder for Fish
+
+!new Allergen('allergen28')
+!allergen28.type := #Lactose
+
+!insert (foodItem63, allergen27) into FoodItemAllergen
+!insert (foodItem62, allergen28) into FoodItemAllergen

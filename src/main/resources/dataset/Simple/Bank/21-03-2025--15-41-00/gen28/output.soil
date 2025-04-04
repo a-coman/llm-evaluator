@@ -1,0 +1,51 @@
+!new Bank('bank29')
+!bank29.country := 'Argentina'
+!bank29.name := 'Banco Galicia'
+!bank29.bic := 'GALICARX'
+
+!new Account('account82')
+!account82.iban := 'AR123456789012345678901'
+!account82.balance := 5600
+
+!new Account('account83')
+!account83.iban := 'AR987654321098765432101'
+!account83.balance := 1200
+
+!new Account('account84')
+!account84.iban := 'AR192837465091827364501'
+!account84.balance := 3600
+
+!new Person('person86')
+!person86.firstName := 'Diego'
+!person86.lastName := 'Fernandez'
+!person86.age := 44
+
+!new Person('person87')
+!person87.firstName := 'Lucia'
+!person87.lastName := 'Gonzalez'
+!person87.age := 29
+
+!new Person('person88')
+!person88.firstName := 'Mateo'
+!person88.lastName := 'Rodriguez'
+!person88.age := 33
+
+-- Associations
+!insert (bank29, account82) into AccountOfBanks
+!insert (bank29, account83) into AccountOfBanks
+!insert (bank29, account84) into AccountOfBanks
+
+!insert (person86, account82) into Ownership
+!insert (person87, account82) into Ownership
+
+!insert (person87, account83) into Ownership
+!insert (person88, account83) into Ownership
+
+!insert (person88, account84) into Ownership
+!insert (person86, account84) into Ownership
+
+!insert (person86, account83) into Use
+!insert (person87, account84) into Use
+
+!insert (person88, account82) into Use
+!insert (person87, account82) into Use

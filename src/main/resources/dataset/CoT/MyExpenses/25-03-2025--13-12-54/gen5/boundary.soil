@@ -1,0 +1,41 @@
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Expense('decemberExpense')
+!decemberExpense.amount := 250.75
+!decemberExpense.startDate := Date('2023-12-01')
+!decemberExpense.endDate := Date('2023-12-31')
+
+!new Bill('entertainmentEvent')
+!entertainmentEvent.amount := 75.25
+!entertainmentEvent.category := 'Entertainment'
+!entertainmentEvent.date := Date('2023-12-10')
+!entertainmentEvent.paymentMethod := #CASH
+!entertainmentEvent.status := #DRAFT
+
+!new Bill('holidayGifts')
+!holidayGifts.amount := 175.50
+!holidayGifts.category := 'Gifts'
+!holidayGifts.date := Date('2023-12-20')
+!holidayGifts.paymentMethod := #CREDIT_CARD
+!holidayGifts.status := #VALIDATED
+
+!insert (entertainmentEvent, australianDollar) into BillCurrency
+!insert (holidayGifts, australianDollar) into BillCurrency
+
+!insert (decemberExpense, entertainmentEvent) into ExpenseContainsBills
+!insert (decemberExpense, holidayGifts) into ExpenseContainsBills
+
+!new Comment('commentEntertainmentGiftsPlanning')
+!commentEntertainmentGiftsPlanning.text := 'December entertainment and gift planning'
+
+!new Comment('commentClubMembershipGifts')
+!commentClubMembershipGifts.text := 'Expenses include annual club membership and gift purchases'
+
+!new Comment('commentYearEndBudget')
+!commentYearEndBudget.text := 'Monitored year-end budget constraints'
+
+!insert (decemberExpense, commentEntertainmentGiftsPlanning) into ExpenseComment
+!insert (decemberExpense, commentClubMembershipGifts) into ExpenseComment
+!insert (decemberExpense, commentYearEndBudget) into ExpenseComment

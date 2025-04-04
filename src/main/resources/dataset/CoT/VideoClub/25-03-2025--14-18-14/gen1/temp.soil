@@ -1,0 +1,50 @@
+!new Client('mariaAlvarez')
+!mariaAlvarez.clientId := 203
+!mariaAlvarez.isSuspended := false
+
+!new Client('zhangWei')
+!zhangWei.clientId := 204
+!zhangWei.isSuspended := false
+
+!new Rental('rentalTorontoEvening')
+!rentalTorontoEvening.date := Date('2023-09-15')
+
+!new Rental('rentalCulturalDiscoveries')
+!rentalCulturalDiscoveries.date := Date('2023-09-20')
+
+!new Series('cassetteAlmodovarMasterpieces')
+!cassetteAlmodovarMasterpieces.title := 'Almodóvar Masterpieces'
+!cassetteAlmodovarMasterpieces.availableCopies := 5
+!cassetteAlmodovarMasterpieces.episode := 3
+
+!new Movie('cassetteJackieChanClassics')
+!cassetteJackieChanClassics.title := 'Jackie Chan Classics'
+!cassetteJackieChanClassics.availableCopies := 2
+!cassetteJackieChanClassics.genre := #Action
+
+!new Series('cassetteCulturalSeriesVolume1')
+!cassetteCulturalSeriesVolume1.title := 'Cultural Series: Volume 1'
+!cassetteCulturalSeriesVolume1.availableCopies := 3
+!cassetteCulturalSeriesVolume1.episode := 1
+
+!new Actor('actorPenelopeCruz')
+!actorPenelopeCruz.name := 'Penélope Cruz'
+
+!new Actor('actorJackieChan')
+!actorJackieChan.name := 'Jackie Chan'
+
+!new Actor('actorVariousArtists')
+!actorVariousArtists.name := 'Various Artists'
+
+!insert (mariaAlvarez, rentalTorontoEvening) into ClientRental
+!insert (zhangWei, rentalCulturalDiscoveries) into ClientRental
+
+!insert (rentalTorontoEvening, cassetteAlmodovarMasterpieces) into RentalCassette
+!insert (rentalTorontoEvening, cassetteJackieChanClassics) into RentalCassette
+
+!insert (rentalCulturalDiscoveries, cassetteJackieChanClassics) into RentalCassette
+!insert (rentalCulturalDiscoveries, cassetteCulturalSeriesVolume1) into RentalCassette
+
+!insert (cassetteAlmodovarMasterpieces, actorPenelopeCruz) into CassetteActor
+!insert (cassetteJackieChanClassics, actorJackieChan) into CassetteActor
+!insert (cassetteCulturalSeriesVolume1, actorVariousArtists) into CassetteActor

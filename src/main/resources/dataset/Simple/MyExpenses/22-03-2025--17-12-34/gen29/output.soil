@@ -1,0 +1,33 @@
+!new Expense('expense31')
+!expense31.amount := 430.0
+!expense31.startDate := Date('2025-07-01')
+!expense31.endDate := Date('2025-07-31')
+
+!new Currency('currency29')
+!currency29.name := 'Czech Koruna'
+!currency29.abbreviation := 'CZK'
+
+!new Bill('bill56')
+!bill56.amount := 200.0
+!bill56.category := 'Local Tours'
+!bill56.date := Date('2025-07-10')
+!bill56.paymentMethod := #CASH
+!bill56.status := #VERIFIED
+
+!new Bill('bill57')
+!bill57.amount := 230.0
+!bill57.category := 'Craft Supplies'
+!bill57.date := Date('2025-07-20')
+!bill57.paymentMethod := #CREDIT_CARD
+!bill57.status := #REFUNDED
+
+!insert (expense31, bill56) into ExpenseContainsBills
+!insert (expense31, bill57) into ExpenseContainsBills
+
+!insert (bill56, currency29) into BillCurrency
+!insert (bill57, currency29) into BillCurrency
+
+!new Comment('comment31')
+!comment31.text := 'July expenses for local tours and craft supplies'
+
+!insert (expense31, comment31) into ExpenseComment

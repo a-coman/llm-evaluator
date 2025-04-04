@@ -1,0 +1,101 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant3')
+!restaurant3.name := 'Seaside Bistro'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner5')
+!owner5.name := 'Sophia Green'
+!owner5.percentageShares := 50
+
+!new Owner('owner6')
+!owner6.name := 'Henry White'
+!owner6.percentageShares := 50
+
+-- Establish RestaurantOwner association
+!insert (restaurant3, owner5) into RestaurantOwner
+!insert (restaurant3, owner6) into RestaurantOwner
+
+-- Creating Tables with different settings
+!new Table('table5')
+!table5.number := 301
+!table5.description := 'Ocean View Table'
+!table5.capacity := 2
+
+!new Table('table6')
+!table6.number := 302
+!table6.description := 'Garden Patio'
+!table6.capacity := 4
+
+-- Create a HeadWaiter and Waiter instances
+!new HeadWaiter('headwaiter3')
+!headwaiter3.name := 'Olivia Black'
+!headwaiter3.dateOfBirth := Date('1975-11-22')
+!headwaiter3.phoneNumber := '555-5670'
+
+!new Waiter('waiter4')
+!waiter4.name := 'Lucas Miller'
+!waiter4.dateOfBirth := Date('1994-10-10')
+!waiter4.phoneNumber := '555-8765'
+!waiter4.spokenLanguage := #German
+
+-- Establish association between HeadWaiter and Waiter
+!insert (headwaiter3, waiter4) into HeadWaiterWaiter
+
+-- New RegularCustomer instance
+!new RegularCustomer('customer2')
+!customer2.name := 'Diana Moore'
+!customer2.prefferedLanguage := #Italian
+
+-- An Individual reservation with customer for a special dinner
+!new Individual('reservation3')
+!reservation3.time := Time('19:00')
+!reservation3.date := Date('2023-12-15')
+!reservation3.numberPeople := 2
+!reservation3.name := 'John Williams'
+!reservation3.phoneNumber := '555-3333'
+!reservation3.number := 102
+!reservation3.seating := #Patio
+!reservation3.smoking := #NonSmoking
+
+-- Establish associations for Individual Reservation
+!insert (restaurant3, reservation3) into RestaurantReservation
+!insert (reservation3, waiter4) into ReservationWaiter
+!insert (reservation3, table5) into ReservationTable
+!insert (reservation3, table6) into ReservationTable
+
+-- Associate RegularCustomer with the Reservation
+!insert (reservation3, customer2) into ReservationCustomer
+
+-- Create new MenuItem for the special dinner
+!new MenuItem('menuItem3')
+!menuItem3.description := 'Truffle Risotto'
+!menuItem3.prepTime := 25.0
+!menuItem3.classification := #Main
+
+-- Assign MenuItem to a new Chef
+!new Chef('chef3')
+!chef3.name := 'Thomas Keller'
+!chef3.dateOfBirth := Date('1955-10-14')
+!chef3.phoneNumber := '555-6578'
+
+!insert (menuItem3, chef3) into MenuItemChef
+
+-- Creating Cooks supervised by the new Chef
+!new Cook('cook3')
+!cook3.name := 'Rachael Ray'
+!cook3.dateOfBirth := Date('1968-08-25')
+!cook3.phoneNumber := '555-2413'
+!cook3.yearsOfExperience := 8
+
+-- Establish association between Chef and Cook
+!insert (chef3, cook3) into ChefCook
+
+-- Create an ItemOrder for the dinner reservation
+!new ItemOrder('order3')
+!order3.time := Time('19:00')
+
+-- Establish ItemOrderMenuItem association
+!insert (order3, menuItem3) into ItemOrderMenuItem
+
+-- Associate the ItemOrder with the Individual Reservation
+!insert (reservation3, order3) into ReservationItemOrdered

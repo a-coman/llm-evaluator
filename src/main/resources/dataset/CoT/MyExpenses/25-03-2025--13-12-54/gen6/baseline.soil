@@ -1,0 +1,59 @@
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Expense('creativePaintingWorkshop')
+!creativePaintingWorkshop.amount := 400.00
+!creativePaintingWorkshop.startDate := Date('2023-04-08')
+!creativePaintingWorkshop.endDate := Date('2023-04-09')
+
+!new Bill('workshopVenueRental')
+!workshopVenueRental.amount := 150.00
+!workshopVenueRental.category := 'Event'
+!workshopVenueRental.date := Date('2023-03-15')
+!workshopVenueRental.paymentMethod := #CHECK
+!workshopVenueRental.status := #VERIFIED
+
+!new Bill('artSupplies')
+!artSupplies.amount := 100.00
+!artSupplies.category := 'Materials'
+!artSupplies.date := Date('2023-03-20')
+!artSupplies.paymentMethod := #CREDIT_CARD
+!artSupplies.status := #REFUNDED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 100.00
+!cateringServices.category := 'Food'
+!cateringServices.date := Date('2023-04-08')
+!cateringServices.paymentMethod := #CASH
+!cateringServices.status := #PENDING
+
+!new Bill('promotionAndAdvertising')
+!promotionAndAdvertising.amount := 50.00
+!promotionAndAdvertising.category := 'Marketing'
+!promotionAndAdvertising.date := Date('2023-03-25')
+!promotionAndAdvertising.paymentMethod := #CREDIT_CARD
+!promotionAndAdvertising.status := #VERIFIED
+
+!insert (workshopVenueRental, euro) into BillCurrency
+!insert (artSupplies, euro) into BillCurrency
+!insert (cateringServices, euro) into BillCurrency
+!insert (promotionAndAdvertising, euro) into BillCurrency
+
+!insert (creativePaintingWorkshop, workshopVenueRental) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, artSupplies) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, cateringServices) into ExpenseContainsBills
+!insert (creativePaintingWorkshop, promotionAndAdvertising) into ExpenseContainsBills
+
+!new Comment('commentVenue')
+!commentVenue.text := 'Participants appreciated the calm and inspiring environment for the workshop.'
+
+!new Comment('commentArtSupplies')
+!commentArtSupplies.text := 'High-quality paints and brushes enhanced the workshop experience.'
+
+!new Comment('commentCatering')
+!commentCatering.text := 'The refreshments were well-received, keeping energy levels high throughout.'
+
+!insert (creativePaintingWorkshop, commentVenue) into ExpenseComment
+!insert (creativePaintingWorkshop, commentArtSupplies) into ExpenseComment
+!insert (creativePaintingWorkshop, commentCatering) into ExpenseComment

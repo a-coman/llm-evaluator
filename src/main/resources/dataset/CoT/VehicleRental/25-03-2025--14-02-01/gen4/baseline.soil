@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice16')
+!rentalOffice16.name := 'DesertDune Rentals'
+!rentalOffice16.number := 404
+!rentalOffice16.address := '158 Cactus Road, Phoenix, AZ, 85001'
+
+!new Vehicle('vehicle17')
+!vehicle17.id := 30
+!vehicle17.registrationState := #DE
+!vehicle17.licensePlateNumber := 'AZ4590CVC'
+!vehicle17.vehicleTypeCode := #TRUCK10
+!vehicle17.registrationLastMaintenanceDate := Date('2023-04-18')
+!vehicle17.expirationDate := Date('2024-04-17')
+
+!new Truck('truck14')
+!truck14.id := 31
+!truck14.registrationState := #DE
+!truck14.licensePlateNumber := 'AZ5512TOW'
+!truck14.vehicleTypeCode := #TRUCK
+!truck14.registrationLastMaintenanceDate := Date('2023-08-20')
+!truck14.expirationDate := Date('2024-03-05')
+!truck14.odometerReading := 230000
+!truck14.gasTankCapacity := 45.0
+!truck14.workingRadio := true
+!truck14.mileage := 12
+
+!new Individual('individualCustomer11')
+!individualCustomer11.name := 'Rachel Lim'
+!individualCustomer11.address := '321 West Palm Lane, Scottsdale, AZ, 85251'
+!individualCustomer11.poorRisk := false
+!individualCustomer11.homePhone := '480-678-4321'
+!individualCustomer11.driverLicenseState := #AZ
+!individualCustomer11.driverLicenseNumber := 4321981
+!individualCustomer11.driverLicenseExpirationDate := Date('2028-01-14')
+
+!new Company('company13')
+!company13.name := 'Cacti Event Planning'
+!company13.address := '456 Event Drive, Tucson, AZ, 85701'
+!company13.poorRisk := false
+!company13.idNumber := 404012
+
+!new RentalAgreement('rentalAgreement24')
+!rentalAgreement24.number := 3007
+!rentalAgreement24.rentalDate := Date('2023-11-05')
+!rentalAgreement24.anticipatedDuration := 10
+!rentalAgreement24.depositPaid := 200.00
+!rentalAgreement24.quotedDailyRate := 55.00
+!rentalAgreement24.quotedRatePerMile := 0.18
+
+!new RentalAgreement('rentalAgreement25')
+!rentalAgreement25.number := 3008
+!rentalAgreement25.rentalDate := Date('2023-12-15')
+!rentalAgreement25.anticipatedDuration := 7
+!rentalAgreement25.depositPaid := 300.00
+!rentalAgreement25.quotedDailyRate := 95.00
+!rentalAgreement25.quotedRatePerMile := 0.45
+
+!insert (rentalOffice16, vehicle17) into RentalOfficeVehicle
+!insert (rentalOffice16, truck14) into RentalOfficeVehicle
+
+!insert (rentalOffice16, rentalAgreement24) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice16, rentalAgreement24) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement24, vehicle17) into RentalAgreementVehicle
+!insert (rentalAgreement24, individualCustomer11) into RentalAgreementCustomer
+
+!insert (rentalOffice16, rentalAgreement25) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice16, rentalAgreement25) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement25, truck14) into RentalAgreementVehicle
+!insert (rentalAgreement25, company13) into RentalAgreementCustomer

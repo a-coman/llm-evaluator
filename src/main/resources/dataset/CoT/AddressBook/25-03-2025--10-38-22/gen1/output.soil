@@ -1,0 +1,415 @@
+!new AddressBook('AddressBook_1')
+
+!new Person('Person_1')
+!Person_1.name := 'John Doe'
+!Person_1.phone := '+1-555-0123'
+!Person_1.website := 'www.johndoe.com'
+!Person_1.email := 'john.doe@example.com'
+!Person_1.title := 'Software Engineer'
+
+!new Address('Address_1')
+!Address_1.city := 'San Francisco'
+!Address_1.houseNr := '123'
+!Address_1.street := 'Market Street'
+!insert (Person_1, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'John Doe'
+!Note_1.time := Date('2023-01-15')
+!Note_1.type := #EMAIL
+!Note_1.comment := 'Follow up with client about software updates.'
+!insert (Person_1, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #EMPLOYEE
+!insert (Person_1, Relationship_1) into ContactToRelationship
+
+!new Company('Company_1')
+!Company_1.name := 'Tech Innovations Inc.'
+!Company_1.phone := '+1-555-5678'
+!Company_1.website := 'www.techinnovations.com'
+!Company_1.email := 'contact@techinnovations.com'
+!Company_1.industry := 'Information Technology'
+
+!new Address('Address_2')
+!Address_2.city := 'New York'
+!Address_2.houseNr := '456'
+!Address_2.street := '5th Avenue'
+!insert (Company_1, Address_2) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Sarah Mills'
+!Note_2.time := Date('2023-02-10')
+!Note_2.type := #MEETING
+!Note_2.comment := 'Annual budget discussion scheduled.'
+!insert (Company_1, Note_2) into ContactContainsNote
+
+!insert (Relationship_1, Company_1) into RelationshipToContact
+
+!new Person('Person_2')
+!Person_2.name := 'Emily Zhang'
+!Person_2.phone := '+44-7777-9988'
+!Person_2.website := 'emilyzhangdesign.com'
+!Person_2.email := 'e.zhang@designbliss.com'
+!Person_2.title := 'Creative Director'
+
+!new Address('Address_3')
+!Address_3.city := 'London'
+!Address_3.houseNr := '221B'
+!Address_3.street := 'Baker Street'
+!insert (Person_2, Address_3) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Emily Zhang'
+!Note_3.time := Date('2023-03-01')
+!Note_3.type := #CALL
+!Note_3.comment := 'Discussed quarterly design themes with marketing.'
+!insert (Person_2, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #COWORKER
+!insert (Person_2, Relationship_2) into ContactToRelationship
+!insert (Relationship_2, Person_1) into RelationshipToContact
+
+!insert (AddressBook_1, Person_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Company_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_2) into AddressBookMadeOfContact
+
+!new AddressBook('GlobalTechAddressBook')
+
+!new Person('Maria_Garcia')
+!Maria_Garcia.name := 'María García'
+!Maria_Garcia.phone := '+34-612-345-678'
+!Maria_Garcia.website := 'maria-garcia-professional.com'
+!Maria_Garcia.email := 'maria.garcia@globaltech.es'
+!Maria_Garcia.title := 'Senior Software Engineer'
+
+!new Address('Address_Maria_Garcia')
+!Address_Maria_Garcia.city := 'Barcelona'
+!Address_Maria_Garcia.houseNr := '24'
+!Address_Maria_Garcia.street := 'Gran Via de les Corts Catalanes'
+!insert (Maria_Garcia, Address_Maria_Garcia) into ContactContainsAddress
+
+!new Note('Note_Maria_Garcia')
+!Note_Maria_Garcia.author := 'María García'
+!Note_Maria_Garcia.time := Date('2023-09-15')
+!Note_Maria_Garcia.type := #MEETING
+!Note_Maria_Garcia.comment := 'Meeting with the client to discuss new software requirements.'
+!insert (Maria_Garcia, Note_Maria_Garcia) into ContactContainsNote
+
+!new Person('John_Smith')
+!John_Smith.name := 'John Smith'
+!John_Smith.phone := '+1-202-555-0143'
+!John_Smith.website := 'john-smith.biz'
+!John_Smith.email := 'john.smith@globaltech.com'
+!John_Smith.title := 'Director of Operations'
+
+!new Address('Address_John_Smith')
+!Address_John_Smith.city := 'New York'
+!Address_John_Smith.houseNr := '50'
+!Address_John_Smith.street := 'Fifth Avenue'
+!insert (John_Smith, Address_John_Smith) into ContactContainsAddress
+
+!new Note('Note_John_Smith')
+!Note_John_Smith.author := 'John Smith'
+!Note_John_Smith.time := Date('2023-10-05')
+!Note_John_Smith.type := #CALL
+!Note_John_Smith.comment := 'Follow-up call with suppliers in Asia.'
+!insert (John_Smith, Note_John_Smith) into ContactContainsNote
+
+!new Company('Nihao_Logistics')
+!Nihao_Logistics.name := 'Nihao Logistics'
+!Nihao_Logistics.phone := '+86-10-5554-6789'
+!Nihao_Logistics.website := 'nihaologistics.cn'
+!Nihao_Logistics.email := 'contact@nihaologistics.cn'
+!Nihao_Logistics.industry := 'Logistics'
+
+!new Address('Address_Nihao_Logistics')
+!Address_Nihao_Logistics.city := 'Beijing'
+!Address_Nihao_Logistics.houseNr := '908'
+!Address_Nihao_Logistics.street := 'Zhongguancun Ave'
+!insert (Nihao_Logistics, Address_Nihao_Logistics) into ContactContainsAddress
+
+!new Note('Note_Nihao_Logistics')
+!Note_Nihao_Logistics.author := 'Zhang Wei'
+!Note_Nihao_Logistics.time := Date('2023-10-01')
+!Note_Nihao_Logistics.type := #EMAIL
+!Note_Nihao_Logistics.comment := 'Received shipment tracking numbers.'
+!insert (Nihao_Logistics, Note_Nihao_Logistics) into ContactContainsNote
+
+!new Relationship('Relationship_John_to_Maria')
+!Relationship_John_to_Maria.type := #BOSS
+!insert (John_Smith, Relationship_John_to_Maria) into ContactToRelationship
+!insert (Relationship_John_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!new Relationship('Relationship_Maria_to_John')
+!Relationship_Maria_to_John.type := #EMPLOYEE
+!insert (Maria_Garcia, Relationship_Maria_to_John) into ContactToRelationship
+!insert (Relationship_Maria_to_John, John_Smith) into RelationshipToContact
+
+!new Relationship('Relationship_John_to_Nihao')
+!Relationship_John_to_Nihao.type := #COWORKER
+!insert (John_Smith, Relationship_John_to_Nihao) into ContactToRelationship
+!insert (Relationship_John_to_Nihao, Nihao_Logistics) into RelationshipToContact
+
+!insert (GlobalTechAddressBook, Maria_Garcia) into AddressBookMadeOfContact
+!insert (GlobalTechAddressBook, John_Smith) into AddressBookMadeOfContact
+!insert (GlobalTechAddressBook, Nihao_Logistics) into AddressBookMadeOfContact
+
+!new AddressBook('AddressBook_1')
+
+!new Company('Company_1')
+!Company_1.name := 'Global Tech Corp'
+!Company_1.phone := '+1-555-0110'
+!Company_1.website := 'www.globaltechcorp.com'
+!Company_1.email := 'contact@globaltechcorp.com'
+!Company_1.industry := 'Technology'
+
+!new Address('Address_1')
+!Address_1.city := 'New York'
+!Address_1.houseNr := '42'
+!Address_1.street := 'Wall Street'
+!insert (Company_1, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'Emily Fisher'
+!Note_1.time := Date('2023-10-15')
+!Note_1.type := #MEETING
+!Note_1.comment := 'Discussed upcoming software project.'
+!insert (Company_1, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #BOSS
+!insert (Company_1, Relationship_1) into ContactToRelationship
+
+!new Person('Person_1')
+!Person_1.name := 'John Doe'
+!Person_1.phone := '+1-555-0199'
+!Person_1.website := 'www.johndoeconsulting.com'
+!Person_1.email := 'john.doe@johndoeconsulting.com'
+!Person_1.title := 'Senior Consultant'
+
+!new Address('Address_2')
+!Address_2.city := 'Boston'
+!Address_2.houseNr := '11'
+!Address_2.street := 'Beacon Street'
+!insert (Person_1, Address_2) into ContactContainsAddress
+
+!new Address('Address_3')
+!Address_3.city := 'Chicago'
+!Address_3.houseNr := '203'
+!Address_3.street := 'Lake Shore Dr'
+!insert (Person_1, Address_3) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Sarah Lane'
+!Note_2.time := Date('2023-08-05')
+!Note_2.type := #CALL
+!Note_2.comment := 'Follow-up on consulting engagement.'
+!insert (Person_1, Note_2) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #EMPLOYEE
+!insert (Person_1, Relationship_2) into ContactToRelationship
+!insert (Relationship_1, Person_1) into RelationshipToContact
+!insert (Relationship_2, Company_1) into RelationshipToContact
+
+!new Person('Person_2')
+!Person_2.name := 'Alice Smith'
+!Person_2.phone := '+1-555-0355'
+!Person_2.website := 'www.alicesmithphotography.com'
+!Person_2.email := 'alice@smithphotos.com'
+!Person_2.title := 'Photographer'
+
+!new Address('Address_4')
+!Address_4.city := 'Los Angeles'
+!Address_4.houseNr := '2590'
+!Address_4.street := 'Sunset Blvd'
+!insert (Person_2, Address_4) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Michael Brown'
+!Note_3.time := Date('2023-12-22')
+!Note_3.type := #EMAIL
+!Note_3.comment := 'Discussed photo shoot scheduling.'
+!insert (Person_2, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_3')
+!Relationship_3.type := #COWORKER
+!insert (Person_1, Relationship_3) into ContactToRelationship
+!insert (Relationship_3, Person_2) into RelationshipToContact
+
+!new Relationship('Relationship_4')
+!Relationship_4.type := #COWORKER
+!insert (Person_2, Relationship_4) into ContactToRelationship
+!insert (Relationship_4, Person_1) into RelationshipToContact
+
+!insert (AddressBook_1, Company_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_2) into AddressBookMadeOfContact
+
+!new AddressBook('Tokyo_Corporate_Network_Contacts')
+
+!new Company('Sakura_Technologies')
+!Sakura_Technologies.name := 'Sakura Technologies'
+!Sakura_Technologies.phone := '+81-3-1234-5678'
+!Sakura_Technologies.website := 'www.sakura-tech.jp'
+!Sakura_Technologies.email := 'contact@sakura-tech.jp'
+!Sakura_Technologies.industry := 'Information Technology'
+
+!new Address('Address_Sakura_Technologies')
+!Address_Sakura_Technologies.city := 'Tokyo'
+!Address_Sakura_Technologies.street := 'Shinagawa-ku, 5th Avenue'
+!Address_Sakura_Technologies.houseNr := '22'
+!insert (Sakura_Technologies, Address_Sakura_Technologies) into ContactContainsAddress
+
+!new Note('Note_Sakura_Technologies')
+!Note_Sakura_Technologies.author := 'Hana Yamada'
+!Note_Sakura_Technologies.time := Date('2023-09-15 10:00')
+!Note_Sakura_Technologies.type := #MEETING
+!Note_Sakura_Technologies.comment := 'Discussed potential partnership projects with regional AI startups.'
+!insert (Sakura_Technologies, Note_Sakura_Technologies) into ContactContainsNote
+
+!new Relationship('Relationship_Sakura_to_Tsukasa')
+!Relationship_Sakura_to_Tsukasa.type := #SUBDIVISION
+!insert (Sakura_Technologies, Relationship_Sakura_to_Tsukasa) into ContactToRelationship
+
+!new Company('Tsukasa_Robotics_Ltd')
+!Tsukasa_Robotics_Ltd.name := 'Tsukasa Robotics Ltd.'
+!Tsukasa_Robotics_Ltd.phone := '+81-3-8765-4321'
+!Tsukasa_Robotics_Ltd.website := 'www.tsukasarobotics.jp'
+!Tsukasa_Robotics_Ltd.email := 'info@tsukasarobotics.jp'
+!Tsukasa_Robotics_Ltd.industry := 'Robotics'
+
+!new Address('Address_Tsukasa_Robotics')
+!Address_Tsukasa_Robotics.city := 'Tokyo'
+!Address_Tsukasa_Robotics.street := 'Minato-ku, Robot Street'
+!Address_Tsukasa_Robotics.houseNr := '10'
+!insert (Tsukasa_Robotics_Ltd, Address_Tsukasa_Robotics) into ContactContainsAddress
+
+!new Note('Note_Tsukasa_Robotics')
+!Note_Tsukasa_Robotics.author := 'Mai Tanaka'
+!Note_Tsukasa_Robotics.time := Date('2023-09-18 15:30')
+!Note_Tsukasa_Robotics.type := #CALL
+!Note_Tsukasa_Robotics.comment := 'Phone call regarding the new humanoid robot prototype.'
+!insert (Tsukasa_Robotics_Ltd, Note_Tsukasa_Robotics) into ContactContainsNote
+
+!new Relationship('Relationship_Tsukasa_to_Kenji')
+!Relationship_Tsukasa_to_Kenji.type := #EMPLOYEE
+!insert (Tsukasa_Robotics_Ltd, Relationship_Tsukasa_to_Kenji) into ContactToRelationship
+
+!new Person('Kenji_Yamamoto')
+!Kenji_Yamamoto.name := 'Kenji Yamamoto'
+!Kenji_Yamamoto.phone := '+81-90-9876-5432'
+!Kenji_Yamamoto.website := 'www.kenjiyamamoto.jp'
+!Kenji_Yamamoto.email := 'kyamamoto@individual.jp'
+!Kenji_Yamamoto.title := 'Chief Robotics Engineer'
+
+!new Note('Note_Kenji_Yamamoto')
+!Note_Kenji_Yamamoto.author := 'Kenji Yamamoto'
+!Note_Kenji_Yamamoto.time := Date('2023-09-19 12:15')
+!Note_Kenji_Yamamoto.type := #EMAIL
+!Note_Kenji_Yamamoto.comment := 'Sent concept designs to the engineering team.'
+!insert (Kenji_Yamamoto, Note_Kenji_Yamamoto) into ContactContainsNote
+
+!insert (Relationship_Sakura_to_Tsukasa, Tsukasa_Robotics_Ltd) into RelationshipToContact
+!insert (Relationship_Tsukasa_to_Kenji, Kenji_Yamamoto) into RelationshipToContact
+
+!insert (Tokyo_Corporate_Network_Contacts, Sakura_Technologies) into AddressBookMadeOfContact
+!insert (Tokyo_Corporate_Network_Contacts, Tsukasa_Robotics_Ltd) into AddressBookMadeOfContact
+!insert (Tokyo_Corporate_Network_Contacts, Kenji_Yamamoto) into AddressBookMadeOfContact
+
+!new AddressBook('Global_Networks')
+
+!new Company('GlobalTech_Solutions')
+!GlobalTech_Solutions.name := 'GlobalTech Solutions'
+!GlobalTech_Solutions.phone := '+44 20 7946 0958'
+!GlobalTech_Solutions.website := 'www.globaltechsolutions.co.uk'
+!GlobalTech_Solutions.email := 'contact@globaltechsolutions.co.uk'
+!GlobalTech_Solutions.industry := 'Information Technology'
+
+!new Address('Address_GlobalTech_London')
+!Address_GlobalTech_London.city := 'London'
+!Address_GlobalTech_London.houseNr := '101'
+!Address_GlobalTech_London.street := 'Tech Lane'
+!insert (GlobalTech_Solutions, Address_GlobalTech_London) into ContactContainsAddress
+
+!new Note('Note_GlobalTech')
+!Note_GlobalTech.author := 'Jonathan Ivy'
+!Note_GlobalTech.time := Date('2023-09-15')
+!Note_GlobalTech.type := #EMAIL
+!Note_GlobalTech.comment := 'Confirmed merger with EuroSoft GmbH.'
+!insert (GlobalTech_Solutions, Note_GlobalTech) into ContactContainsNote
+
+!new Company('EuroSoft_GmbH')
+!EuroSoft_GmbH.name := 'EuroSoft GmbH'
+!EuroSoft_GmbH.phone := '+49 30 567 88 100'
+!EuroSoft_GmbH.website := 'www.eurosoft.de'
+!EuroSoft_GmbH.email := 'info@eurosoft.de'
+!EuroSoft_GmbH.industry := 'Software Development'
+
+!new Address('Address_EuroSoft_Berlin')
+!Address_EuroSoft_Berlin.city := 'Berlin'
+!Address_EuroSoft_Berlin.houseNr := '23'
+!Address_EuroSoft_Berlin.street := 'Innovation Way'
+!insert (EuroSoft_GmbH, Address_EuroSoft_Berlin) into ContactContainsAddress
+
+!new Note('Note_EuroSoft')
+!Note_EuroSoft.author := 'Klaus Meier'
+!Note_EuroSoft.time := Date('2023-10-01')
+!Note_EuroSoft.type := #MEETING
+!Note_EuroSoft.comment := 'Discussing project timelines with GlobalTech.'
+!insert (EuroSoft_GmbH, Note_EuroSoft) into ContactContainsNote
+
+!new Person('Maria_Garcia')
+!Maria_Garcia.name := 'Maria Garcia'
+!Maria_Garcia.phone := '+34 645 78 9032'
+!Maria_Garcia.website := 'www.mariagarcia.com'
+!Maria_Garcia.email := 'maria.garcia@globaltechsolutions.co.uk'
+!Maria_Garcia.title := 'International Liaison'
+
+!new Address('Address_Maria_Madrid')
+!Address_Maria_Madrid.city := 'Madrid'
+!Address_Maria_Madrid.houseNr := '7'
+!Address_Maria_Madrid.street := 'Gran Via'
+!insert (Maria_Garcia, Address_Maria_Madrid) into ContactContainsAddress
+
+!new Address('Address_Maria_Berlin')
+!Address_Maria_Berlin.city := 'Berlin'
+!Address_Maria_Berlin.houseNr := '24'
+!Address_Maria_Berlin.street := 'Innovation Way'
+!insert (Maria_Garcia, Address_Maria_Berlin) into ContactContainsAddress
+
+!new Note('Note_Maria_1')
+!Note_Maria_1.author := 'Maria Garcia'
+!Note_Maria_1.time := Date('2023-10-02')
+!Note_Maria_1.type := #CALL
+!Note_Maria_1.comment := 'Coordinating meeting schedules across different time zones.'
+!insert (Maria_Garcia, Note_Maria_1) into ContactContainsNote
+
+!new Note('Note_Maria_2')
+!Note_Maria_2.author := 'Klaus Meier'
+!Note_Maria_2.time := Date('2023-10-05')
+!Note_Maria_2.type := #EMAIL
+!Note_Maria_2.comment := 'Feedback on legal documents for the merger.'
+!insert (Maria_Garcia, Note_Maria_2) into ContactContainsNote
+
+!new Relationship('Relationship_GlobalTech_to_EuroSoft')
+!Relationship_GlobalTech_to_EuroSoft.type := #SUBDIVISION
+!insert (GlobalTech_Solutions, Relationship_GlobalTech_to_EuroSoft) into ContactToRelationship
+!insert (Relationship_GlobalTech_to_EuroSoft, EuroSoft_GmbH) into RelationshipToContact
+
+!new Relationship('Relationship_GlobalTech_to_Maria')
+!Relationship_GlobalTech_to_Maria.type := #EMPLOYEE
+!insert (GlobalTech_Solutions, Relationship_GlobalTech_to_Maria) into ContactToRelationship
+!insert (Relationship_GlobalTech_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!new Relationship('Relationship_EuroSoft_to_Maria')
+!Relationship_EuroSoft_to_Maria.type := #COWORKER
+!insert (EuroSoft_GmbH, Relationship_EuroSoft_to_Maria) into ContactToRelationship
+!insert (Relationship_EuroSoft_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!insert (Global_Networks, GlobalTech_Solutions) into AddressBookMadeOfContact
+!insert (Global_Networks, EuroSoft_GmbH) into AddressBookMadeOfContact
+!insert (Global_Networks, Maria_Garcia) into AddressBookMadeOfContact
+

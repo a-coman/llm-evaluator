@@ -1,0 +1,51 @@
+!new Bank('bank23')
+!bank23.country := 'Nigeria'
+!bank23.name := 'Zenith Bank'
+!bank23.bic := 'ZEIBNGLA'
+
+!new Account('account64')
+!account64.iban := 'NG1234567890123456789012'
+!account64.balance := 3000
+
+!new Account('account65')
+!account65.iban := 'NG0987654321098765432101'
+!account65.balance := 4500
+
+!new Account('account66')
+!account66.iban := 'NG1122334455667788990000'
+!account66.balance := 0
+
+!new Person('person68')
+!person68.firstName := 'Chinwe'
+!person68.lastName := 'Okeke'
+!person68.age := 40
+
+!new Person('person69')
+!person69.firstName := 'Ibrahim'
+!person69.lastName := 'Mohammed'
+!person69.age := 45
+
+!new Person('person70')
+!person70.firstName := 'Amina'
+!person70.lastName := 'Bello'
+!person70.age := 33
+
+-- Associations
+!insert (bank23, account64) into AccountOfBanks
+!insert (bank23, account65) into AccountOfBanks
+!insert (bank23, account66) into AccountOfBanks
+
+!insert (person68, account64) into Ownership
+!insert (person69, account64) into Ownership
+
+!insert (person69, account65) into Ownership
+!insert (person70, account65) into Ownership
+
+!insert (person70, account66) into Ownership
+!insert (person68, account66) into Ownership
+
+!insert (person68, account65) into Use
+!insert (person69, account66) into Use
+
+!insert (person70, account64) into Use
+!insert (person69, account64) into Use

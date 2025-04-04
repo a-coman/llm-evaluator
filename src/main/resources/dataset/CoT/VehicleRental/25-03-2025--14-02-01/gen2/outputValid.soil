@@ -1,0 +1,301 @@
+!new RentalOffice('rentalOffice7')
+!rentalOffice7.name := 'Beachside Rentals'
+!rentalOffice7.number := 202
+!rentalOffice7.address := '321 Ocean Avenue, Miami, FL, 33139'
+
+!new Vehicle('vehicle6')
+!vehicle6.id := 11
+!vehicle6.registrationState := #FL
+!vehicle6.licensePlateNumber := 'FL7896MOT'
+!vehicle6.vehicleTypeCode := #OPEN_TRAILER
+!vehicle6.registrationLastMaintenanceDate := Date('2023-06-12')
+!vehicle6.expirationDate := Date('2024-06-12')
+
+!new Truck('truck6')
+!truck6.id := 12
+!truck6.registrationState := #FL
+!truck6.licensePlateNumber := 'FL3421BOX'
+!truck6.vehicleTypeCode := #TRUCK
+!truck6.registrationLastMaintenanceDate := Date('2023-05-05')
+!truck6.expirationDate := Date('2023-12-15')
+!truck6.odometerReading := 255000
+!truck6.gasTankCapacity := 60.0
+!truck6.workingRadio := false
+!truck6.mileage := 10
+
+!new Individual('individualCustomer5')
+!individualCustomer5.name := 'Maria Garcia'
+!individualCustomer5.address := '101 Cypress Street, Orlando, FL, 32801'
+!individualCustomer5.poorRisk := false
+!individualCustomer5.homePhone := '305-987-6543'
+!individualCustomer5.driverLicenseState := #FL
+!individualCustomer5.driverLicenseNumber := 6543210
+!individualCustomer5.driverLicenseExpirationDate := Date('2025-09-12')
+
+!new Company('company5')
+!company5.name := 'Sunshine Logistics'
+!company5.address := '789 Coastline Boulevard, Fort Lauderdale, FL, 33301'
+!company5.poorRisk := false
+!company5.idNumber := 202345
+
+!new RentalAgreement('rentalAgreement9')
+!rentalAgreement9.number := 3003
+!rentalAgreement9.rentalDate := Date('2023-10-05')
+!rentalAgreement9.anticipatedDuration := 3
+!rentalAgreement9.depositPaid := 100.00
+!rentalAgreement9.quotedDailyRate := 25.00
+!rentalAgreement9.quotedRatePerMile := 0.15
+
+!new RentalAgreement('rentalAgreement10')
+!rentalAgreement10.number := 3004
+!rentalAgreement10.rentalDate := Date('2023-11-01')
+!rentalAgreement10.anticipatedDuration := 30
+!rentalAgreement10.depositPaid := 750.00
+!rentalAgreement10.quotedDailyRate := 120.00
+!rentalAgreement10.quotedRatePerMile := 0.35
+
+!insert (rentalOffice7, vehicle6) into RentalOfficeVehicle
+!insert (rentalOffice7, truck6) into RentalOfficeVehicle
+
+!insert (rentalOffice7, rentalAgreement9) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice7, rentalAgreement9) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement9, vehicle6) into RentalAgreementVehicle
+!insert (rentalAgreement9, individualCustomer5) into RentalAgreementCustomer
+
+!insert (rentalOffice7, rentalAgreement10) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice7, rentalAgreement10) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement10, truck6) into RentalAgreementVehicle
+!insert (rentalAgreement10, company5) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice8')
+!rentalOffice8.name := 'Pine Ridge Mobilities'
+!rentalOffice8.number := 45
+!rentalOffice8.address := '234 Evergreen Lane, Boise, ID 83706'
+
+!new Truck('truck7')
+!truck7.id := 13
+!truck7.registrationState := #CO
+!truck7.licensePlateNumber := 'PRID123F'
+!truck7.vehicleTypeCode := #TRUCK
+!truck7.registrationLastMaintenanceDate := Date('2023-07-15')
+!truck7.expirationDate := Date('2025-07-15')
+!truck7.odometerReading := 1000000
+!truck7.gasTankCapacity := 150.0
+!truck7.workingRadio := true
+!truck7.mileage := 5
+
+!new Vehicle('vehicle7')
+!vehicle7.id := 14
+!vehicle7.registrationState := #CO
+!vehicle7.licensePlateNumber := 'PRID124T'
+!vehicle7.vehicleTypeCode := #OPEN_TRAILER
+!vehicle7.registrationLastMaintenanceDate := Date('2022-12-01')
+!vehicle7.expirationDate := Date('2024-12-01')
+
+!new Vehicle('vehicle8')
+!vehicle8.id := 15
+!vehicle8.registrationState := #CO
+!vehicle8.licensePlateNumber := 'PRID125C'
+!vehicle8.vehicleTypeCode := #OPEN_TRAILER
+!vehicle8.registrationLastMaintenanceDate := Date('2023-05-05')
+!vehicle8.expirationDate := Date('2025-05-05')
+
+!new RentalAgreement('rentalAgreement11')
+!rentalAgreement11.number := 987
+!rentalAgreement11.rentalDate := Date('2023-10-20')
+!rentalAgreement11.anticipatedDuration := 1
+!rentalAgreement11.depositPaid := 100.00
+!rentalAgreement11.quotedDailyRate := 150.00
+!rentalAgreement11.quotedRatePerMile := 0.10
+
+!new RentalAgreement('rentalAgreement12')
+!rentalAgreement12.number := 988
+!rentalAgreement12.rentalDate := Date('2023-11-15')
+!rentalAgreement12.anticipatedDuration := 0
+!rentalAgreement12.depositPaid := 0.00
+!rentalAgreement12.quotedDailyRate := 0.00
+!rentalAgreement12.quotedRatePerMile := 0.0
+
+!new Individual('individualCustomer6')
+!individualCustomer6.name := 'Blake Jensen'
+!individualCustomer6.address := '789 Pine St, Boise, ID 83702'
+!individualCustomer6.poorRisk := true
+!individualCustomer6.homePhone := '(208) 555-6789'
+!individualCustomer6.driverLicenseState := #CO
+!individualCustomer6.driverLicenseNumber := 98
+!individualCustomer6.driverLicenseExpirationDate := Date('2034-05-10')
+
+!insert (rentalOffice8, truck7) into RentalOfficeVehicle
+!insert (rentalOffice8, vehicle7) into RentalOfficeVehicle
+!insert (rentalOffice8, vehicle8) into RentalOfficeVehicle
+
+!insert (rentalOffice8, rentalAgreement11) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice8, rentalAgreement11) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement11, truck7) into RentalAgreementVehicle
+!insert (rentalAgreement11, individualCustomer6) into RentalAgreementCustomer
+
+!insert (rentalOffice8, rentalAgreement12) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice8, rentalAgreement12) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement12, vehicle8) into RentalAgreementVehicle
+!insert (rentalAgreement12, individualCustomer6) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice9')
+!rentalOffice9.name := 'Sun-Sand Rentals'
+!rentalOffice9.number := 21
+!rentalOffice9.address := '456 Seaside Blvd, Key West, FL, 33040'
+
+!new Vehicle('vehicle9')
+!vehicle9.id := 16
+!vehicle9.registrationState := #FL
+!vehicle9.licensePlateNumber := 'TRL-444KU'
+!vehicle9.vehicleTypeCode := #OPEN_TRAILER
+!vehicle9.registrationLastMaintenanceDate := Date('2023-04-01')
+!vehicle9.expirationDate := Date('2025-04-02')
+
+!new Truck('truck8')
+!truck8.id := 17
+!truck8.registrationState := #FL
+!truck8.licensePlateNumber := 'TRK-556LW'
+!truck8.vehicleTypeCode := #TRUCK
+!truck8.registrationLastMaintenanceDate := Date('2022-12-15')
+!truck8.expirationDate := Date('2025-12-20')
+!truck8.odometerReading := 150000
+!truck8.gasTankCapacity := 100.0
+!truck8.workingRadio := false
+!truck8.mileage := 1
+
+!new RentalAgreement('rentalAgreement13a')
+!rentalAgreement13a.number := 9999
+!rentalAgreement13a.rentalDate := Date('2023-06-01')
+!rentalAgreement13a.anticipatedDuration := 365
+!rentalAgreement13a.depositPaid := 5.00
+!rentalAgreement13a.quotedDailyRate := 75.00
+!rentalAgreement13a.quotedRatePerMile := 0.75
+
+!new RentalAgreement('rentalAgreement13b')
+!rentalAgreement13b.number := 10000
+!rentalAgreement13b.rentalDate := Date('2023-06-01')
+!rentalAgreement13b.anticipatedDuration := 365
+!rentalAgreement13b.depositPaid := 5.00
+!rentalAgreement13b.quotedDailyRate := 75.00
+!rentalAgreement13b.quotedRatePerMile := 0.75
+
+!new Company('company6')
+!company6.name := 'Coral Reef Expeditions, Inc.'
+!company6.address := '230 Ocean Way, Miami, FL, 33139'
+!company6.poorRisk := true
+!company6.idNumber := 91923
+
+!insert (rentalOffice9, vehicle9) into RentalOfficeVehicle
+!insert (rentalOffice9, truck8) into RentalOfficeVehicle
+
+!insert (rentalOffice9, rentalAgreement13a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice9, rentalAgreement13a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement13a, truck8) into RentalAgreementVehicle
+!insert (rentalAgreement13a, company6) into RentalAgreementCustomer
+
+!insert (rentalOffice9, rentalAgreement13b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice9, rentalAgreement13b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement13b, vehicle9) into RentalAgreementVehicle
+!insert (rentalAgreement13b, company6) into RentalAgreementCustomer
+
+!new RentalOffice('rentalOffice11')
+!rentalOffice11.name := 'Desert Adventures Rentals'
+!rentalOffice11.number := 211
+!rentalOffice11.address := '789 Cactus Way, Scottsdale, AZ, 85251'
+
+!new Truck('truck9')
+!truck9.id := 20
+!truck9.registrationState := #AZ
+!truck9.licensePlateNumber := 'DSR7620'
+!truck9.vehicleTypeCode := #TRUCK
+!truck9.registrationLastMaintenanceDate := Date('2023-06-20')
+!truck9.expirationDate := Date('2024-06-19')
+!truck9.odometerReading := 30120
+!truck9.gasTankCapacity := 30.0
+!truck9.workingRadio := false
+!truck9.mileage := 10
+
+!new Vehicle('vehicle12')
+!vehicle12.id := 21
+!vehicle12.registrationState := #AZ
+!vehicle12.licensePlateNumber := 'AZTR609'
+!vehicle12.vehicleTypeCode := #OPEN_TRAILER
+!vehicle12.registrationLastMaintenanceDate := Date('2023-05-18')
+!vehicle12.expirationDate := Date('2024-05-17')
+
+!new Vehicle('vehicle13')
+!vehicle13.id := 22
+!vehicle13.registrationState := #AZ
+!vehicle13.licensePlateNumber := 'AZATV123'
+!vehicle13.vehicleTypeCode := #COVERED_TRAILER
+!vehicle13.registrationLastMaintenanceDate := Date('2023-07-10')
+!vehicle13.expirationDate := Date('2024-07-09')
+
+!new Individual('individualCustomer7')
+!individualCustomer7.name := 'Derek Nguyen'
+!individualCustomer7.address := '321 Mesa St, Mesa, AZ, 85201'
+!individualCustomer7.poorRisk := false
+!individualCustomer7.homePhone := '480-555-0345'
+!individualCustomer7.driverLicenseState := #AZ
+!individualCustomer7.driverLicenseNumber := 7845621
+!individualCustomer7.driverLicenseExpirationDate := Date('2025-06-11')
+
+!new Company('company9')
+!company9.name := 'Desert Safari Tours, Inc.'
+!company9.address := '45 Desert Rd, Glendale, AZ, 85301'
+!company9.poorRisk := true
+!company9.idNumber := 302145678
+
+!new RentalAgreement('rentalAgreement15')
+!rentalAgreement15.number := 20034
+!rentalAgreement15.rentalDate := Date('2023-09-12')
+!rentalAgreement15.anticipatedDuration := 7
+!rentalAgreement15.depositPaid := 500.00
+!rentalAgreement15.quotedDailyRate := 90.00
+!rentalAgreement15.quotedRatePerMile := 0.60
+
+!new RentalAgreement('rentalAgreement16')
+!rentalAgreement16.number := 20035
+!rentalAgreement16.rentalDate := Date('2023-09-15')
+!rentalAgreement16.anticipatedDuration := 12
+!rentalAgreement16.depositPaid := 700.00
+!rentalAgreement16.quotedDailyRate := 110.00
+!rentalAgreement16.quotedRatePerMile := 0.75
+
+!new RentalAgreement('rentalAgreement17')
+!rentalAgreement17.number := 20036
+!rentalAgreement17.rentalDate := Date('2023-09-18')
+!rentalAgreement17.anticipatedDuration := 5
+!rentalAgreement17.depositPaid := 300.00
+!rentalAgreement17.quotedDailyRate := 50.00
+!rentalAgreement17.quotedRatePerMile := 0.40
+
+!insert (rentalOffice11, truck9) into RentalOfficeVehicle
+!insert (rentalOffice11, vehicle12) into RentalOfficeVehicle
+!insert (rentalOffice11, vehicle13) into RentalOfficeVehicle
+
+!insert (rentalOffice11, rentalAgreement15) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement15) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement15, truck9) into RentalAgreementVehicle
+!insert (rentalAgreement15, individualCustomer7) into RentalAgreementCustomer
+
+!insert (rentalOffice11, rentalAgreement16) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement16) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement16, vehicle12) into RentalAgreementVehicle
+!insert (rentalAgreement16, company9) into RentalAgreementCustomer
+
+!insert (rentalOffice11, rentalAgreement17) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement17) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement17, vehicle13) into RentalAgreementVehicle
+!insert (rentalAgreement17, individualCustomer7) into RentalAgreementCustomer
+

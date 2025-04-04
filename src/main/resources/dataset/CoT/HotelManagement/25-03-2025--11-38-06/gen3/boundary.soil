@@ -1,0 +1,63 @@
+!new Customer('customer12')
+!customer12.firstName := 'Fatima'
+!customer12.lastName := 'Al-Maari'
+
+!new Booking('booking12')
+!booking12.bookingId := 3
+!booking12.startDate := '2024-10-01'
+!booking12.endDate := '2024-10-15'
+!booking12.canceled := false
+!booking12.confirmed := true
+
+!new Bill('bill24')
+!bill24.billId := 5
+!bill24.price := 4000.00
+
+!new RoomReservation('roomreservation20')
+!roomreservation20.checkInDate := '2024-10-01'
+!roomreservation20.checkOutDate := '2024-10-15'
+
+!new Room('room24')
+!room24.roomNumber := 501
+!room24.numBeds := 3
+!room24.pricePerNight := 300.00
+!room24.occupied := true
+!room24.blocked := false
+
+!new Room('room25')
+!room25.roomNumber := 123
+!room25.numBeds := 2
+!room25.pricePerNight := 150.00
+!room25.occupied := false
+!room25.blocked := false
+
+!new RoomExtra('roomextra27')
+!roomextra27.price := 100.00
+!roomextra27.description := 'Arabian Nights Dance Performance'
+
+!new RoomExtra('roomextra28')
+!roomextra28.price := 250.00
+!roomextra28.description := 'All-day Desert Tour with Dune Bashing'
+
+!new RoomExtra('roomextra29')
+!roomextra29.price := 200.00
+!roomextra29.description := 'Full-day Relaxation and Wellness'
+
+!new FreeRoomTypesDTO('freeroomtypesdto12')
+!freeroomtypesdto12.roomTypeDescription := 'Family Bungalow'
+!freeroomtypesdto12.numBeds := 5
+!freeroomtypesdto12.pricePerNight := 450.00
+!freeroomtypesdto12.numFreeRooms := 2
+
+!insert (booking12, customer12) into BookingCustomer
+!insert (booking12, roomreservation20) into BookingRoomReservation
+!insert (booking12, bill24) into BookingBill
+
+!insert (roomreservation20, room24) into RoomReservationRoom
+!insert (roomreservation20, room25) into RoomReservationRoom
+
+!insert (roomreservation20, roomextra27) into RoomReservationExtras
+!insert (roomreservation20, roomextra28) into RoomReservationExtras
+!insert (roomreservation20, roomextra29) into RoomReservationExtras
+
+!insert (bill24, roomreservation20) into BillRoomReservation

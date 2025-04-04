@@ -1,0 +1,33 @@
+!new Expense('expense21')
+!expense21.amount := 925.0
+!expense21.startDate := Date('2024-09-01')
+!expense21.endDate := Date('2024-09-30')
+
+!new Currency('currency19')
+!currency19.name := 'Turkish Lira'
+!currency19.abbreviation := 'TRY'
+
+!new Bill('bill36')
+!bill36.amount := 450.0
+!bill36.category := 'Car Maintenance'
+!bill36.date := Date('2024-09-10')
+!bill36.paymentMethod := #CHECK
+!bill36.status := #REFUNDED
+
+!new Bill('bill37')
+!bill37.amount := 475.0
+!bill37.category := 'Home Repair'
+!bill37.date := Date('2024-09-20')
+!bill37.paymentMethod := #CREDIT_CARD
+!bill37.status := #VALIDATED
+
+!insert (expense21, bill36) into ExpenseContainsBills
+!insert (expense21, bill37) into ExpenseContainsBills
+
+!insert (bill36, currency19) into BillCurrency
+!insert (bill37, currency19) into BillCurrency
+
+!new Comment('comment21')
+!comment21.text := 'September expenses for car maintenance and home repair'
+
+!insert (expense21, comment21) into ExpenseComment

@@ -1,0 +1,333 @@
+!new AddressBook('AddressBook_4')
+
+!new Person('Mei_Ling')
+!Mei_Ling.name := 'Mei Ling'
+!Mei_Ling.phone := '+86-10-5555-6666'
+!Mei_Ling.website := 'meilingspace.cn'
+!Mei_Ling.email := 'mei.ling@creativelabs.cn'
+!Mei_Ling.title := 'CEO'
+
+!new Address('Address_10')
+!Address_10.city := 'Beijing'
+!Address_10.houseNr := '88'
+!Address_10.street := 'Wangfujing Street'
+!insert (Mei_Ling, Address_10) into ContactContainsAddress
+
+!new Note('Note_10')
+!Note_10.author := 'Mei Ling'
+!Note_10.time := Date('2023-10-08')
+!Note_10.type := #EMAIL
+!Note_10.comment := 'Sent strategic partnership proposal to local tech hubs.'
+!insert (Mei_Ling, Note_10) into ContactContainsNote
+
+!new Company('DigiArt_cro')
+!DigiArt_cro.name := 'DigiArt c.r.o.'
+!DigiArt_cro.phone := '+420-2-1234-5678'
+!DigiArt_cro.website := 'digiart.cat'
+!DigiArt_cro.email := 'gallery@digiart.cat'
+!DigiArt_cro.industry := 'Digital Arts'
+
+!new Address('Address_11')
+!Address_11.city := 'Prague'
+!Address_11.houseNr := '29'
+!Address_11.street := 'Karlova Street'
+!insert (DigiArt_cro, Address_11) into ContactContainsAddress
+
+!new Note('Note_11')
+!Note_11.author := 'Tomáš Havel'
+!Note_11.time := Date('2023-11-05')
+!Note_11.type := #MEETING
+!Note_11.comment := 'Collaboration with European artists for digital art gallery.'
+!insert (DigiArt_cro, Note_11) into ContactContainsNote
+
+!new Person('Elena_Rossi')
+!Elena_Rossi.name := 'Elena Rossi'
+!Elena_Rossi.phone := '+39-06-555-1112'
+!Elena_Rossi.website := 'elenarossiinnovation.it'
+!Elena_Rossi.email := 'elena@innovates.it'
+!Elena_Rossi.title := 'Product Manager'
+
+!new Address('Address_12')
+!Address_12.city := 'Rome'
+!Address_12.houseNr := '45'
+!Address_12.street := 'Via Appia Nuova'
+!insert (Elena_Rossi, Address_12) into ContactContainsAddress
+
+!new Note('Note_12')
+!Note_12.author := 'Elena Rossi'
+!Note_12.time := Date('2023-12-03')
+!Note_12.type := #CALL
+!Note_12.comment := 'Resolved technical issues with current design software.'
+!insert (Elena_Rossi, Note_12) into ContactContainsNote
+
+!new Relationship('Relationship_8')
+!Relationship_8.type := #COWORKER
+!insert (Elena_Rossi, Relationship_8) into ContactToRelationship
+!insert (Relationship_8, Mei_Ling) into RelationshipToContact
+
+!new Relationship('Relationship_9')
+!Relationship_9.type := #SUBDIVISION
+!insert (Elena_Rossi, Relationship_9) into ContactToRelationship
+!insert (Relationship_9, DigiArt_cro) into RelationshipToContact
+
+!insert (AddressBook_4, Mei_Ling) into AddressBookMadeOfContact
+!insert (AddressBook_4, DigiArt_cro) into AddressBookMadeOfContact
+!insert (AddressBook_4, Elena_Rossi) into AddressBookMadeOfContact
+
+!new AddressBook('AddressBook_4')
+
+!new Company('Artisanal_Foundation')
+!Artisanal_Foundation.name := 'Artisanal Foundation'
+!Artisanal_Foundation.phone := '+81-3-1234-5678'
+!Artisanal_Foundation.website := 'www.artisanalfoundation.jp'
+!Artisanal_Foundation.email := 'info@artisanal.jp'
+!Artisanal_Foundation.industry := 'Non-profit'
+
+!new Address('Address_Artisanal_Foundation')
+!Address_Artisanal_Foundation.city := 'Tokyo'
+!Address_Artisanal_Foundation.houseNr := '101'
+!Address_Artisanal_Foundation.street := 'Ginza'
+!insert (Artisanal_Foundation, Address_Artisanal_Foundation) into ContactContainsAddress
+
+!new Note('Note_Artisanal_Foundation')
+!Note_Artisanal_Foundation.author := 'Akira Tanaka'
+!Note_Artisanal_Foundation.time := Date('2023-04-10')
+!Note_Artisanal_Foundation.type := #MEETING
+!Note_Artisanal_Foundation.comment := 'Planning cultural heritage workshop.'
+!insert (Artisanal_Foundation, Note_Artisanal_Foundation) into ContactContainsNote
+
+!new Relationship('Relationship_Artisanal_to_Sofia')
+!Relationship_Artisanal_to_Sofia.type := #COWORKER
+!insert (Artisanal_Foundation, Relationship_Artisanal_to_Sofia) into ContactToRelationship
+
+!new Person('Sofia_Martinez')
+!Sofia_Martinez.name := 'Sofia Martínez'
+!Sofia_Martinez.phone := '+52-55-9876-5432'
+!Sofia_Martinez.website := 'www.sofiamartinezcontemporary.mx'
+!Sofia_Martinez.email := 'sofia@martinezart.mx'
+!Sofia_Martinez.title := 'Contemporary Artist'
+
+!new Address('Address_Sofia_Martinez')
+!Address_Sofia_Martinez.city := 'Mexico City'
+!Address_Sofia_Martinez.houseNr := '23'
+!Address_Sofia_Martinez.street := 'Paseo de la Reforma'
+!insert (Sofia_Martinez, Address_Sofia_Martinez) into ContactContainsAddress
+
+!new Note('Note_Sofia_Martinez')
+!Note_Sofia_Martinez.author := 'Diego Luna'
+!Note_Sofia_Martinez.time := Date('2023-01-17')
+!Note_Sofia_Martinez.type := #CALL
+!Note_Sofia_Martinez.comment := 'Discussed details for a collaborative art project.'
+!insert (Sofia_Martinez, Note_Sofia_Martinez) into ContactContainsNote
+
+!new Relationship('Relationship_Sofia_to_Artisanal')
+!Relationship_Sofia_to_Artisanal.type := #COWORKER
+!insert (Sofia_Martinez, Relationship_Sofia_to_Artisanal) into ContactToRelationship
+!insert (Relationship_Sofia_to_Artisanal, Artisanal_Foundation) into RelationshipToContact
+
+!insert (Relationship_Artisanal_to_Sofia, Sofia_Martinez) into RelationshipToContact
+
+!insert (AddressBook_4, Artisanal_Foundation) into AddressBookMadeOfContact
+!insert (AddressBook_4, Sofia_Martinez) into AddressBookMadeOfContact
+
+!new AddressBook('Innovatech_Global_Network')
+
+!new Person('Chen_Mingyu')
+!Chen_Mingyu.name := 'Chen Mingyu'
+!Chen_Mingyu.phone := '+86-21-5558-7845'
+!Chen_Mingyu.website := 'mingyu-innovations.cn'
+!Chen_Mingyu.email := 'chen.mingyu@innovatech.cn'
+!Chen_Mingyu.title := 'Chief Technology Officer'
+
+!new Address('Address_Chen_Mingyu')
+!Address_Chen_Mingyu.city := 'Shanghai'
+!Address_Chen_Mingyu.houseNr := '128'
+!Address_Chen_Mingyu.street := 'Nanjing Road'
+!insert (Chen_Mingyu, Address_Chen_Mingyu) into ContactContainsAddress
+
+!new Note('Note_Chen_Mingyu')
+!Note_Chen_Mingyu.author := 'Chen Mingyu'
+!Note_Chen_Mingyu.time := Date('2023-07-14')
+!Note_Chen_Mingyu.type := #EMAIL
+!Note_Chen_Mingyu.comment := 'Presented the latest AI technology development strategy to European partners.'
+!insert (Chen_Mingyu, Note_Chen_Mingyu) into ContactContainsNote
+
+!new Company('Green_Energy_Solutions')
+!Green_Energy_Solutions.name := 'Green Energy Solutions'
+!Green_Energy_Solutions.phone := '+49-30-4356-7890'
+!Green_Energy_Solutions.website := 'greenenergysolutions.de'
+!Green_Energy_Solutions.email := 'info@greenenergysolutions.de'
+!Green_Energy_Solutions.industry := 'Renewable Energy'
+
+!new Address('Address_Green_Energy_Solutions')
+!Address_Green_Energy_Solutions.city := 'Berlin'
+!Address_Green_Energy_Solutions.houseNr := '34'
+!Address_Green_Energy_Solutions.street := 'Unter den Linden'
+!insert (Green_Energy_Solutions, Address_Green_Energy_Solutions) into ContactContainsAddress
+
+!new Note('Note_Green_Energy_Solutions')
+!Note_Green_Energy_Solutions.author := 'CEO'
+!Note_Green_Energy_Solutions.time := Date('2023-08-22')
+!Note_Green_Energy_Solutions.type := #MEETING
+!Note_Green_Energy_Solutions.comment := 'Negotiated joint venture terms for solar panel technology exchange.'
+!insert (Green_Energy_Solutions, Note_Green_Energy_Solutions) into ContactContainsNote
+
+!new Person('Priya_Ramesh')
+!Priya_Ramesh.name := 'Priya Ramesh'
+!Priya_Ramesh.phone := '+91-22-6734-7650'
+!Priya_Ramesh.website := 'priyaramesh-consulting.in'
+!Priya_Ramesh.email := 'priya.ramesh@innovatech.in'
+!Priya_Ramesh.title := 'Strategic Business Consultant'
+
+!new Address('Address_Priya_Ramesh')
+!Address_Priya_Ramesh.city := 'Mumbai'
+!Address_Priya_Ramesh.houseNr := '563'
+!Address_Priya_Ramesh.street := 'Marine Drive'
+!insert (Priya_Ramesh, Address_Priya_Ramesh) into ContactContainsAddress
+
+!new Note('Note_Priya_Ramesh')
+!Note_Priya_Ramesh.author := 'Priya Ramesh'
+!Note_Priya_Ramesh.time := Date('2023-09-16')
+!Note_Priya_Ramesh.type := #CALL
+!Note_Priya_Ramesh.comment := 'Held strategic meeting on market entry strategy for the Southeast Asian market.'
+!insert (Priya_Ramesh, Note_Priya_Ramesh) into ContactContainsNote
+
+!new Company('Arctic_Tech_Research')
+!Arctic_Tech_Research.name := 'Arctic Tech Research'
+!Arctic_Tech_Research.phone := '+47-23-656-9832'
+!Arctic_Tech_Research.website := 'arctictechresearch.no'
+!Arctic_Tech_Research.email := 'enquiries@arctictechresearch.no'
+!Arctic_Tech_Research.industry := 'Environmental Research'
+
+!new Address('Address_Arctic_Tech_Research')
+!Address_Arctic_Tech_Research.city := 'Oslo'
+!Address_Arctic_Tech_Research.houseNr := '15'
+!Address_Arctic_Tech_Research.street := 'Karl Johans gate'
+!insert (Arctic_Tech_Research, Address_Arctic_Tech_Research) into ContactContainsAddress
+
+!new Note('Note_Arctic_Tech_Research')
+!Note_Arctic_Tech_Research.author := 'Lead Researcher'
+!Note_Arctic_Tech_Research.time := Date('2023-10-02')
+!Note_Arctic_Tech_Research.type := #EMAIL
+!Note_Arctic_Tech_Research.comment := 'Coordinated international symposium on polar climate change impacts.'
+!insert (Arctic_Tech_Research, Note_Arctic_Tech_Research) into ContactContainsNote
+
+!new Relationship('Relationship_Chen_to_Green_Energy')
+!Relationship_Chen_to_Green_Energy.type := #BOSS
+!insert (Chen_Mingyu, Relationship_Chen_to_Green_Energy) into ContactToRelationship
+!insert (Relationship_Chen_to_Green_Energy, Green_Energy_Solutions) into RelationshipToContact
+
+!new Relationship('Relationship_Priya_to_Chen')
+!Relationship_Priya_to_Chen.type := #COWORKER
+!insert (Priya_Ramesh, Relationship_Priya_to_Chen) into ContactToRelationship
+!insert (Relationship_Priya_to_Chen, Chen_Mingyu) into RelationshipToContact
+
+!new Relationship('Relationship_Green_Energy_to_Arctic_Tech')
+!Relationship_Green_Energy_to_Arctic_Tech.type := #SUBDIVISION
+!insert (Green_Energy_Solutions, Relationship_Green_Energy_to_Arctic_Tech) into ContactToRelationship
+!insert (Relationship_Green_Energy_to_Arctic_Tech, Arctic_Tech_Research) into RelationshipToContact
+
+!new Relationship('Relationship_Priya_to_Arctic_Tech')
+!Relationship_Priya_to_Arctic_Tech.type := #COWORKER
+!insert (Priya_Ramesh, Relationship_Priya_to_Arctic_Tech) into ContactToRelationship
+!insert (Relationship_Priya_to_Arctic_Tech, Arctic_Tech_Research) into RelationshipToContact
+
+!insert (Innovatech_Global_Network, Chen_Mingyu) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Green_Energy_Solutions) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Priya_Ramesh) into AddressBookMadeOfContact
+!insert (Innovatech_Global_Network, Arctic_Tech_Research) into AddressBookMadeOfContact
+
+!new AddressBook('Tech_Innovators_Network')
+
+!new Company('FutureTech_Labs')
+!FutureTech_Labs.name := 'FutureTech Labs'
+!FutureTech_Labs.phone := '+1 415 555 3399'
+!FutureTech_Labs.website := 'www.futuretechlabs.com'
+!FutureTech_Labs.email := 'info@futuretechlabs.com'
+!FutureTech_Labs.industry := 'Software Development'
+
+!new Address('Address_FutureTech_Labs')
+!Address_FutureTech_Labs.city := 'San Francisco'
+!Address_FutureTech_Labs.houseNr := '75'
+!Address_FutureTech_Labs.street := 'Market Street'
+!insert (FutureTech_Labs, Address_FutureTech_Labs) into ContactContainsAddress
+
+!new Note('Note_FutureTech_Labs')
+!Note_FutureTech_Labs.author := 'Sophie Turner'
+!Note_FutureTech_Labs.time := Date('2023-06-17')
+!Note_FutureTech_Labs.type := #CALL
+!Note_FutureTech_Labs.comment := 'Brainstorming session on next-gen AI tools.'
+!insert (FutureTech_Labs, Note_FutureTech_Labs) into ContactContainsNote
+
+!new Company('GreenSphere_Technologies')
+!GreenSphere_Technologies.name := 'GreenSphere Technologies'
+!GreenSphere_Technologies.phone := '+33 1 4770 3399'
+!GreenSphere_Technologies.website := 'www.greenspheretech.fr'
+!GreenSphere_Technologies.email := 'contact@greenspheretech.fr'
+!GreenSphere_Technologies.industry := 'Environmental Research'
+
+!new Address('Address_GreenSphere_Technologies')
+!Address_GreenSphere_Technologies.city := 'Paris'
+!Address_GreenSphere_Technologies.houseNr := '200'
+!Address_GreenSphere_Technologies.street := 'Rue de Rivoli'
+!insert (GreenSphere_Technologies, Address_GreenSphere_Technologies) into ContactContainsAddress
+
+!new Note('Note_GreenSphere_Technologies')
+!Note_GreenSphere_Technologies.author := 'Lucas Debois'
+!Note_GreenSphere_Technologies.time := Date('2023-07-01')
+!Note_GreenSphere_Technologies.type := #EMAIL
+!Note_GreenSphere_Technologies.comment := 'Proposal to collaborate on eco-friendly tech solutions.'
+!insert (GreenSphere_Technologies, Note_GreenSphere_Technologies) into ContactContainsNote
+
+!new Person('Naomi_Okada')
+!Naomi_Okada.name := 'Naomi Okada'
+!Naomi_Okada.phone := '+81 90 3456 7890'
+!Naomi_Okada.website := 'www.naomiokada.com'
+!Naomi_Okada.email := 'naomi@innovate.jp'
+!Naomi_Okada.title := 'Tech Consultant'
+
+!new Address('Address_Tokyo_Naomi')
+!Address_Tokyo_Naomi.city := 'Tokyo'
+!Address_Tokyo_Naomi.houseNr := '18'
+!Address_Tokyo_Naomi.street := 'Shibuya Crossing'
+!insert (Naomi_Okada, Address_Tokyo_Naomi) into ContactContainsAddress
+
+!new Address('Address_SanFrancisco_Naomi')
+!Address_SanFrancisco_Naomi.city := 'San Francisco'
+!Address_SanFrancisco_Naomi.houseNr := '85'
+!Address_SanFrancisco_Naomi.street := 'Market Street'
+!insert (Naomi_Okada, Address_SanFrancisco_Naomi) into ContactContainsAddress
+
+!new Note('Note_1_Naomi_Okada')
+!Note_1_Naomi_Okada.author := 'Naomi Okada'
+!Note_1_Naomi_Okada.time := Date('2023-06-25')
+!Note_1_Naomi_Okada.type := #MEETING
+!Note_1_Naomi_Okada.comment := 'Reviewing tech sustainability models with GreenSphere.'
+!insert (Naomi_Okada, Note_1_Naomi_Okada) into ContactContainsNote
+
+!new Note('Note_2_Naomi_Okada')
+!Note_2_Naomi_Okada.author := 'Sophie Turner'
+!Note_2_Naomi_Okada.time := Date('2023-07-15')
+!Note_2_Naomi_Okada.type := #EMAIL
+!Note_2_Naomi_Okada.comment := 'Initiating joint project between FutureTech and Naomi.'
+!insert (Naomi_Okada, Note_2_Naomi_Okada) into ContactContainsNote
+
+!new Relationship('Relationship_FutureTech_to_GreenSphere')
+!Relationship_FutureTech_to_GreenSphere.type := #COWORKER
+!insert (FutureTech_Labs, Relationship_FutureTech_to_GreenSphere) into ContactToRelationship
+!insert (Relationship_FutureTech_to_GreenSphere, GreenSphere_Technologies) into RelationshipToContact
+
+!new Relationship('Relationship_FutureTech_to_Naomi')
+!Relationship_FutureTech_to_Naomi.type := #EMPLOYEE
+!insert (FutureTech_Labs, Relationship_FutureTech_to_Naomi) into ContactToRelationship
+!insert (Relationship_FutureTech_to_Naomi, Naomi_Okada) into RelationshipToContact
+
+!new Relationship('Relationship_GreenSphere_to_Naomi')
+!Relationship_GreenSphere_to_Naomi.type := #BOSS
+!insert (GreenSphere_Technologies, Relationship_GreenSphere_to_Naomi) into ContactToRelationship
+!insert (Relationship_GreenSphere_to_Naomi, Naomi_Okada) into RelationshipToContact
+
+!insert (Tech_Innovators_Network, FutureTech_Labs) into AddressBookMadeOfContact
+!insert (Tech_Innovators_Network, GreenSphere_Technologies) into AddressBookMadeOfContact
+!insert (Tech_Innovators_Network, Naomi_Okada) into AddressBookMadeOfContact
+

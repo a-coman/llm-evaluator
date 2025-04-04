@@ -1,0 +1,33 @@
+!new Expense('expense27')
+!expense27.amount := 800.0
+!expense27.startDate := Date('2025-03-01')
+!expense27.endDate := Date('2025-03-31')
+
+!new Currency('currency25')
+!currency25.name := 'Vietnamese Dong'
+!currency25.abbreviation := 'VND'
+
+!new Bill('bill48')
+!bill48.amount := 300.0
+!bill48.category := 'Tech Gadgets'
+!bill48.date := Date('2025-03-05')
+!bill48.paymentMethod := #CASH
+!bill48.status := #VALIDATED
+
+!new Bill('bill49')
+!bill49.amount := 500.0
+!bill49.category := 'Photography Equipment'
+!bill49.date := Date('2025-03-15')
+!bill49.paymentMethod := #CHECK
+!bill49.status := #REFUNDED
+
+!insert (expense27, bill48) into ExpenseContainsBills
+!insert (expense27, bill49) into ExpenseContainsBills
+
+!insert (bill48, currency25) into BillCurrency
+!insert (bill49, currency25) into BillCurrency
+
+!new Comment('comment27')
+!comment27.text := 'March purchases for tech gadgets and photography equipment'
+
+!insert (expense27, comment27) into ExpenseComment

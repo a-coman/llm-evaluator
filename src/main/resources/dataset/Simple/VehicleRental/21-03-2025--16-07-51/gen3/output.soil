@@ -1,0 +1,33 @@
+!new RentalOffice('rentalOffice5')
+!rentalOffice5.name := 'Mountain Rentals'
+!rentalOffice5.number := 105
+!rentalOffice5.address := '333 Alpine Rd, Aspen, CO'
+
+!new Vehicle('trailer1')
+!trailer1.id := 4
+!trailer1.registrationState := #CO
+!trailer1.licensePlateNumber := 'CO7890'
+!trailer1.vehicleTypeCode := #COVERED_TRAILER
+!trailer1.registrationLastMaintenanceDate := Date('2023-06-10')
+!trailer1.expirationDate := Date('2024-06-10')
+
+!new Company('companyCustomer2')
+!companyCustomer2.name := 'Mountain Adventures Co.'
+!companyCustomer2.address := '555 Snow St, Aspen, CO'
+!companyCustomer2.poorRisk := false
+!companyCustomer2.idNumber := 3002
+
+!new RentalAgreement('rentalAgreement4')
+!rentalAgreement4.number := 504
+!rentalAgreement4.rentalDate := Date('2023-12-01')
+!rentalAgreement4.anticipatedDuration := 10
+!rentalAgreement4.depositPaid := 200.0
+!rentalAgreement4.quotedDailyRate := 30.0
+!rentalAgreement4.quotedRatePerMile := 0.3
+
+!insert (rentalOffice5, trailer1) into RentalOfficeVehicle
+!insert (rentalOffice5, rentalAgreement4) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice5, rentalAgreement4) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement4, trailer1) into RentalAgreementVehicle
+!insert (rentalAgreement4, companyCustomer2) into RentalAgreementCustomer

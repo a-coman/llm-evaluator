@@ -1,0 +1,145 @@
+!new Restaurant('restaurant11')
+!restaurant11.name := 'Casa de Tapas'
+
+!new Owner('owner25')
+!owner25.name := 'Juan Torres'
+!owner25.percentageShares := 60
+
+!new Owner('owner26')
+!owner26.name := 'Carmen Ruiz'
+!owner26.percentageShares := 40
+
+!insert (restaurant11, owner25) into RestaurantOwner
+!insert (restaurant11, owner26) into RestaurantOwner
+
+!new Table('table25')
+!table25.number := 3  -- Using an ordinal form
+!table25.description := 'Small private booth with limited view.'
+!table25.capacity := 2
+
+!new Table('table26')
+!table26.number := 4  -- Using an ordinal form
+!table26.description := 'Communal table for larger group gatherings.'
+!table26.capacity := 10
+
+!new Individual('individualReservation7')
+!individualReservation7.time := Time('20:00')
+!individualReservation7.date := Date('2023-10-17')
+!individualReservation7.numberPeople := 1
+!individualReservation7.name := 'Rashid Khan'
+!individualReservation7.phoneNumber := '555-3210'
+!individualReservation7.number := 5003
+!individualReservation7.seating := #Inside
+!individualReservation7.smoking := #NonSmoking
+
+!insert (restaurant11, individualReservation7) into RestaurantReservation
+!insert (individualReservation7, table25) into ReservationTable
+
+!new RegularCustomer('customer5')
+!customer5.name := 'Rashid Khan'
+!customer5.prefferedLanguage := #English
+
+!insert (individualReservation7, customer5) into ReservationCustomer
+
+!new Waiter('waiter19')
+!waiter19.name := 'Ana López'
+!waiter19.dateOfBirth := Date('1994-01-10')
+!waiter19.phoneNumber := '555-4687'
+
+!insert (individualReservation7, waiter19) into ReservationWaiter
+
+!new ItemOrder('itemOrder12')
+!itemOrder12.time := Time('20:10')
+!insert (individualReservation7, itemOrder12) into ReservationItemOrdered
+
+!new MenuItem('menuItem16')
+!menuItem16.description := 'Patatas Bravas'
+!menuItem16.prepTime := 12.0
+!menuItem16.classification := #Apetizer
+
+!insert (itemOrder12, menuItem16) into ItemOrderMenuItem
+
+!new Chef('chef16')
+!chef16.name := 'Luis Martín'
+!chef16.dateOfBirth := Date('1987-11-20')
+!chef16.phoneNumber := '555-4578'
+
+!insert (menuItem16, chef16) into MenuItemChef
+
+!new Cook('cook18')
+!cook18.name := 'Manuel Fernández'
+!cook18.dateOfBirth := Date('1979-04-18')
+!cook18.phoneNumber := '555-4245'
+!cook18.yearsOfExperience := 15
+
+!insert (chef16, cook18) into ChefCook
+
+!new Banquet('banquet9')
+!banquet9.date := Date('2023-10-17')
+!banquet9.time := Time('21:30')
+!banquet9.numberPeople := 9
+!banquet9.groupName := 'Salsa Night Crew'
+!banquet9.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Digital Wallet
+!banquet9.busService := true
+
+!insert (restaurant11, banquet9) into RestaurantReservation
+!insert (banquet9, table26) into ReservationTable
+
+!insert (banquet9, waiter19) into ReservationWaiter
+
+!new Waiter('waiter20')
+!waiter20.name := 'Carlos Ramos'
+!waiter20.dateOfBirth := Date('1986-12-25')
+!waiter20.phoneNumber := '555-3729'
+
+!insert (banquet9, waiter20) into ReservationWaiter
+
+!new HeadWaiter('headWaiter10')
+!headWaiter10.name := 'Marta González'
+!headWaiter10.dateOfBirth := Date('1980-09-06')
+!headWaiter10.phoneNumber := '555-3896'
+
+!insert (headWaiter10, waiter19) into HeadWaiterWaiter
+!insert (headWaiter10, waiter20) into HeadWaiterWaiter
+
+!new BusDriver('busdriver10')
+!busdriver10.name := 'Alejandro Peña'
+!busdriver10.dateOfBirth := Date('1983-07-14')
+!busdriver10.phoneNumber := '555-3975'
+
+!insert (banquet9, busdriver10) into BanquetBusDriver
+
+!new FoodItem('foodItem27')
+!foodItem27.number := 6001
+!foodItem27.description := 'Potatoes'
+!foodItem27.purchaseFlag := true
+!foodItem27.unit := #Pound  -- Using #Pound as placeholder for Kg
+
+!new FoodItem('foodItem28')
+!foodItem28.number := 6002
+!foodItem28.description := 'Aioli Sauce'
+!foodItem28.purchaseFlag := false
+!foodItem28.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!new Allergen('allergen16')
+!allergen16.type := #Lactose  -- Using #Lactose as placeholder for Eggs
+
+!insert (foodItem28, allergen16) into FoodItemAllergen
+
+!new FoodItem('foodItem29')
+!foodItem29.number := 6003
+!foodItem29.description := 'Tomato Sauce'
+!foodItem29.purchaseFlag := true
+!foodItem29.unit := #Ounce
+
+!insert (menuItem16, foodItem27) into MenuItemFoodItem
+!insert (menuItem16, foodItem28) into MenuItemFoodItem
+!insert (menuItem16, foodItem29) into MenuItemFoodItem
+
+!new DietaryRequirement('dietary5')
+!dietary5.diet := #Vegan  -- Using #Vegan as placeholder for Vegetarian
+
+!new Manager('manager4')
+!manager4.name := 'Pablo Santacruz'
+!manager4.dateOfBirth := Date('1973-05-03')
+!manager4.phoneNumber := '555-5587'

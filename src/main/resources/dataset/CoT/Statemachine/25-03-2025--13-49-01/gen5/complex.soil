@@ -1,0 +1,93 @@
+!new StateMachine('cinematicLightControl')
+!cinematicLightControl.name := 'cinematicLightControl'
+
+!new State('lightsOff')
+!lightsOff.name := 'lightsOff'
+
+!new State('introductionScene')
+!introductionScene.name := 'introductionScene'
+
+!new State('actionScene')
+!actionScene.name := 'actionScene'
+
+!new State('romanticScene')
+!romanticScene.name := 'romanticScene'
+
+!new State('intermission')
+!intermission.name := 'intermission'
+
+!new Transition('beginIntroScene')
+!beginIntroScene.name := 'beginIntroScene'
+
+!new Transition('switchToAction')
+!switchToAction.name := 'switchToAction'
+
+!new Transition('switchToRomantic')
+!switchToRomantic.name := 'switchToRomantic'
+
+!new Transition('startIntermissionFromAction')
+!startIntermissionFromAction.name := 'startIntermission'
+
+!new Transition('startIntermissionFromRomantic')
+!startIntermissionFromRomantic.name := 'startIntermission'
+
+!new Transition('resumeFromIntermission')
+!resumeFromIntermission.name := 'resumeFromIntermission'
+
+!new TimeEvent('timeEventBeginIntroScene')
+!timeEventBeginIntroScene.time := 5
+
+!new TimeEvent('timeEventSwitchToAction')
+!timeEventSwitchToAction.time := 10
+
+!new TimeEvent('timeEventSwitchToRomantic')
+!timeEventSwitchToRomantic.time := 7
+
+!new TimeEvent('timeEventStartIntermissionFromAction')
+!timeEventStartIntermissionFromAction.time := 20
+
+!new TimeEvent('timeEventStartIntermissionFromRomantic')
+!timeEventStartIntermissionFromRomantic.time := 20
+
+!new TimeEvent('timeEventResumeFromIntermission')
+!timeEventResumeFromIntermission.time := 15
+
+!insert (cinematicLightControl, lightsOff) into StateMachineContainsStates
+!insert (cinematicLightControl, introductionScene) into StateMachineContainsStates
+!insert (cinematicLightControl, actionScene) into StateMachineContainsStates
+!insert (cinematicLightControl, romanticScene) into StateMachineContainsStates
+!insert (cinematicLightControl, intermission) into StateMachineContainsStates
+
+!insert (cinematicLightControl, lightsOff) into StateMachineStartsStates
+
+!insert (cinematicLightControl, beginIntroScene) into StateMachineContainsTransitions
+!insert (cinematicLightControl, switchToAction) into StateMachineContainsTransitions
+!insert (cinematicLightControl, switchToRomantic) into StateMachineContainsTransitions
+!insert (cinematicLightControl, startIntermissionFromAction) into StateMachineContainsTransitions
+!insert (cinematicLightControl, startIntermissionFromRomantic) into StateMachineContainsTransitions
+!insert (cinematicLightControl, resumeFromIntermission) into StateMachineContainsTransitions
+
+!insert (beginIntroScene, timeEventBeginIntroScene) into TransitionContainsEvents
+!insert (switchToAction, timeEventSwitchToAction) into TransitionContainsEvents
+!insert (switchToRomantic, timeEventSwitchToRomantic) into TransitionContainsEvents
+!insert (startIntermissionFromAction, timeEventStartIntermissionFromAction) into TransitionContainsEvents
+!insert (startIntermissionFromRomantic, timeEventStartIntermissionFromRomantic) into TransitionContainsEvents
+!insert (resumeFromIntermission, timeEventResumeFromIntermission) into TransitionContainsEvents
+
+!insert (lightsOff, beginIntroScene) into StateTransition
+!insert (beginIntroScene, introductionScene) into TransitionState
+
+!insert (introductionScene, switchToAction) into StateTransition
+!insert (switchToAction, actionScene) into TransitionState
+
+!insert (actionScene, switchToRomantic) into StateTransition
+!insert (switchToRomantic, romanticScene) into TransitionState
+
+!insert (actionScene, startIntermissionFromAction) into StateTransition
+!insert (startIntermissionFromAction, intermission) into TransitionState
+
+!insert (romanticScene, startIntermissionFromRomantic) into StateTransition
+!insert (startIntermissionFromRomantic, intermission) into TransitionState
+
+!insert (intermission, resumeFromIntermission) into StateTransition
+!insert (resumeFromIntermission, introductionScene) into TransitionState

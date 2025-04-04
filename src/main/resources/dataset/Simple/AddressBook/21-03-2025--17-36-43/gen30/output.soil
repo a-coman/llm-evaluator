@@ -1,0 +1,71 @@
+!new AddressBook('addressBook30')
+
+!new Company('stellarAIResearch')
+!stellarAIResearch.name := 'Stellar AI Research'
+!stellarAIResearch.phone := '999-888-5555'
+!stellarAIResearch.website := 'www.stellarairesearch.com'
+!stellarAIResearch.email := 'info@stellarairesearch.com'
+!stellarAIResearch.industry := 'Artificial Intelligence'
+
+!new Person('jasonClark')
+!jasonClark.name := 'Jason Clark'
+!jasonClark.phone := '555-666-7777'
+!jasonClark.website := 'www.jasonclarkai.com'
+!jasonClark.email := 'jason.clark@stellarairesearch.com'
+!jasonClark.title := 'AI Research Scientist'
+
+!new Note('aiDevelopmentConferenceNote')
+!aiDevelopmentConferenceNote.author := 'Jason Clark'
+!aiDevelopmentConferenceNote.time := Date('2026-02-20')
+!aiDevelopmentConferenceNote.type := #MEETING
+!aiDevelopmentConferenceNote.comment := 'Presented recent AI development advancements at industry conference'
+
+!new Address('jasonAddress')
+!jasonAddress.city := 'Cambridge'
+!jasonAddress.houseNr := '210'
+!jasonAddress.street := 'Innovation Blvd'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, stellarAIResearch) into RelationshipToContact
+!insert (jasonClark, employeeRelationship) into ContactToRelationship
+!insert (jasonClark, jasonAddress) into ContactContainsAddress
+!insert (jasonClark, aiDevelopmentConferenceNote) into ContactContainsNote
+
+!new Person('lilaNguyen')
+!lilaNguyen.name := 'Lila Nguyen'
+!lilaNguyen.phone := '666-777-8888'
+!lilaNguyen.website := 'www.lilanguyenanalytics.com'
+!lilaNguyen.email := 'lila.nguyen@example.com'
+!lilaNguyen.title := 'Data Scientist'
+
+!new Note('dataAnalysisNote')
+!dataAnalysisNote.author := 'Lila Nguyen'
+!dataAnalysisNote.time := Date('2026-02-28')
+!dataAnalysisNote.type := #CALL
+!dataAnalysisNote.comment := 'Analyzed large datasets to uncover key insights for AI model training'
+
+!new Address('lilaAddress')
+!lilaAddress.city := 'San Jose'
+!lilaAddress.houseNr := '321'
+!lilaAddress.street := 'Data Drive'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, jasonClark) into RelationshipToContact
+!insert (lilaNguyen, subdivisionRelationship) into ContactToRelationship
+!insert (lilaNguyen, lilaAddress) into ContactContainsAddress
+!insert (lilaNguyen, dataAnalysisNote) into ContactContainsNote
+
+!new Address('stellarAIAddress')
+!stellarAIAddress.city := 'Boston'
+!stellarAIAddress.houseNr := '500'
+!stellarAIAddress.street := 'Research Road'
+
+!insert (stellarAIResearch, stellarAIAddress) into ContactContainsAddress
+
+!insert (addressBook30, stellarAIResearch) into AddressBookMadeOfContact
+!insert (addressBook30, jasonClark) into AddressBookMadeOfContact
+!insert (addressBook30, lilaNguyen) into AddressBookMadeOfContact

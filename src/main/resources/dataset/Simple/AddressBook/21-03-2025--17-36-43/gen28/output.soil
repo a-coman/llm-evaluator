@@ -1,0 +1,71 @@
+!new AddressBook('addressBook28')
+
+!new Company('aquaWaveTech')
+!aquaWaveTech.name := 'AquaWave Tech'
+!aquaWaveTech.phone := '123-789-4560'
+!aquaWaveTech.website := 'www.aquawavetech.com'
+!aquaWaveTech.email := 'info@aquawavetech.com'
+!aquaWaveTech.industry := 'Water Purification Technology'
+
+!new Person('liamBrown')
+!liamBrown.name := 'Liam Brown'
+!liamBrown.phone := '555-999-8888'
+!liamBrown.website := 'www.liambrowninnovations.com'
+!liamBrown.email := 'liam.brown@aquawavetech.com'
+!liamBrown.title := 'Research and Development Lead'
+
+!new Note('labResearchNote')
+!labResearchNote.author := 'Liam Brown'
+!labResearchNote.time := Date('2025-12-05')
+!labResearchNote.type := #MEETING
+!labResearchNote.comment := 'Discussed progress on new water filtration prototype in lab meeting'
+
+!new Address('liamAddress')
+!liamAddress.city := 'San Francisco'
+!liamAddress.houseNr := '789'
+!liamAddress.street := 'Ocean Drive'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, aquaWaveTech) into RelationshipToContact
+!insert (liamBrown, employeeRelationship) into ContactToRelationship
+!insert (liamBrown, liamAddress) into ContactContainsAddress
+!insert (liamBrown, labResearchNote) into ContactContainsNote
+
+!new Person('sophiaWang')
+!sophiaWang.name := 'Sophia Wang'
+!sophiaWang.phone := '444-667-8899'
+!sophiaWang.website := 'www.sophiawangwater.com'
+!sophiaWang.email := 'sophia.wang@example.com'
+!sophiaWang.title := 'Environmental Consultant'
+
+!new Note('clientConsultationNote')
+!clientConsultationNote.author := 'Sophia Wang'
+!clientConsultationNote.time := Date('2025-12-12')
+!clientConsultationNote.type := #CALL
+!clientConsultationNote.comment := 'Held a consultation with clients on sustainable water practices'
+
+!new Address('sophiaAddress')
+!sophiaAddress.city := 'Miami'
+!sophiaAddress.houseNr := '123'
+!sophiaAddress.street := 'Blue Water Road'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, liamBrown) into RelationshipToContact
+!insert (sophiaWang, subdivisionRelationship) into ContactToRelationship
+!insert (sophiaWang, sophiaAddress) into ContactContainsAddress
+!insert (sophiaWang, clientConsultationNote) into ContactContainsNote
+
+!new Address('aquaWaveAddress')
+!aquaWaveAddress.city := 'Houston'
+!aquaWaveAddress.houseNr := '100'
+!aquaWaveAddress.street := 'Innovation Dr'
+
+!insert (aquaWaveTech, aquaWaveAddress) into ContactContainsAddress
+
+!insert (addressBook28, aquaWaveTech) into AddressBookMadeOfContact
+!insert (addressBook28, liamBrown) into AddressBookMadeOfContact
+!insert (addressBook28, sophiaWang) into AddressBookMadeOfContact

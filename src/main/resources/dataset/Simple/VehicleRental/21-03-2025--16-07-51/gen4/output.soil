@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice6')
+!rentalOffice6.name := 'Seaside Rentals'
+!rentalOffice6.number := 106
+!rentalOffice6.address := '888 Ocean Blvd, Miami, FL'
+
+!new Vehicle('openTrailer1')
+!openTrailer1.id := 5
+!openTrailer1.registrationState := #FL
+!openTrailer1.licensePlateNumber := 'FL1234'
+!openTrailer1.vehicleTypeCode := #OPEN_TRAILER
+!openTrailer1.registrationLastMaintenanceDate := Date('2023-08-15')
+!openTrailer1.expirationDate := Date('2024-08-15')
+
+!new Individual('individualCustomer3')
+!individualCustomer3.name := 'Alice Johnson'
+!individualCustomer3.address := '999 Beach St, Miami, FL'
+!individualCustomer3.poorRisk := false
+!individualCustomer3.homePhone := '555-4321'
+!individualCustomer3.driverLicenseState := #FL
+!individualCustomer3.driverLicenseNumber := 6789012
+!individualCustomer3.driverLicenseExpirationDate := Date('2027-08-30')
+
+!new RentalAgreement('rentalAgreement5')
+!rentalAgreement5.number := 505
+!rentalAgreement5.rentalDate := Date('2023-11-20')
+!rentalAgreement5.anticipatedDuration := 14
+!rentalAgreement5.depositPaid := 150.0
+!rentalAgreement5.quotedDailyRate := 25.0
+!rentalAgreement5.quotedRatePerMile := 0.2
+
+!insert (rentalOffice6, openTrailer1) into RentalOfficeVehicle
+!insert (rentalOffice6, rentalAgreement5) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice6, rentalAgreement5) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement5, openTrailer1) into RentalAgreementVehicle
+!insert (rentalAgreement5, individualCustomer3) into RentalAgreementCustomer

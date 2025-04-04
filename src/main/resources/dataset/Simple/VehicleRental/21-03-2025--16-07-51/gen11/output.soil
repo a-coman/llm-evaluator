@@ -1,0 +1,36 @@
+!new RentalOffice('rentalOffice13')
+!rentalOffice13.name := 'Highland Rentals'
+!rentalOffice13.number := 113
+!rentalOffice13.address := '789 Mountain Rd, Boulder, CO'
+
+!new Vehicle('coveredTrailer2')
+!coveredTrailer2.id := 12
+!coveredTrailer2.registrationState := #CO
+!coveredTrailer2.licensePlateNumber := 'CO2222'
+!coveredTrailer2.vehicleTypeCode := #COVERED_TRAILER
+!coveredTrailer2.registrationLastMaintenanceDate := Date('2023-08-15')
+!coveredTrailer2.expirationDate := Date('2024-08-15')
+
+!new Individual('individualCustomer7')
+!individualCustomer7.name := 'Sara Thompson'
+!individualCustomer7.address := '357 Pine St, Boulder, CO'
+!individualCustomer7.poorRisk := false
+!individualCustomer7.homePhone := '555-2233'
+!individualCustomer7.driverLicenseState := #CO
+!individualCustomer7.driverLicenseNumber := 4455667
+!individualCustomer7.driverLicenseExpirationDate := Date('2026-06-30')
+
+!new RentalAgreement('rentalAgreement12')
+!rentalAgreement12.number := 512
+!rentalAgreement12.rentalDate := Date('2023-12-12')
+!rentalAgreement12.anticipatedDuration := 5
+!rentalAgreement12.depositPaid := 50.0
+!rentalAgreement12.quotedDailyRate := 20.0
+!rentalAgreement12.quotedRatePerMile := 0.1
+
+!insert (rentalOffice13, coveredTrailer2) into RentalOfficeVehicle
+!insert (rentalOffice13, rentalAgreement12) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice13, rentalAgreement12) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement12, coveredTrailer2) into RentalAgreementVehicle
+!insert (rentalAgreement12, individualCustomer7) into RentalAgreementCustomer

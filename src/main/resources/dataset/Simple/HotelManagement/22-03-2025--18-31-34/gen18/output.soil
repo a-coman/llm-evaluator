@@ -1,0 +1,47 @@
+!new Booking('booking19')
+!booking19.startDate := '2024-12-01'
+!booking19.endDate := '2024-12-08'
+!booking19.canceled := true
+!booking19.bookingId := 118
+!booking19.confirmed := false
+
+!new Bill('bill19')
+!bill19.price := 0.00
+!bill19.billId := 218
+
+!new FreeRoomTypesDTO('roomType19')
+!roomType19.roomTypeDescription := 'Economy Double Room'
+!roomType19.numBeds := 2
+!roomType19.pricePerNight := 75.00
+!roomType19.numFreeRooms := 5
+
+!new Customer('customer19')
+!customer19.firstName := 'Patricia'
+!customer19.lastName := 'Watson'
+
+!new RoomReservation('reservation19')
+!reservation19.checkInDate := '2024-12-01'
+!reservation19.checkOutDate := '2024-12-08'
+
+!new RoomExtra('extra19')
+!extra19.price := 0.00
+!extra19.description := 'Complimentary WiFi'
+
+!new Room('room30')
+!room30.numBeds := 2
+!room30.pricePerNight := 70.00
+!room30.occupied := false
+!room30.blocked := false
+!room30.roomNumber := 130
+
+!insert (booking19, bill19) into BookingBill
+
+!insert (booking19, customer19) into BookingCustomer
+
+!insert (booking19, reservation19) into BookingRoomReservation
+
+!insert (reservation19, extra19) into RoomReservationExtras
+
+!insert (reservation19, room30) into RoomReservationRoom
+
+!insert (bill19, reservation19) into BillRoomReservation

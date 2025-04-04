@@ -1,0 +1,189 @@
+!new Club('club58')
+!set club58.name := 'Cultural Exchange FC'
+!set club58.homeGround := 'Harmony Stadium'
+!set club58.chairman := 'Mr. Luis Fernández'
+
+!new Team('teamBJ')
+!set teamBJ.name := 'Global Harmony'
+
+!new Team('teamBK')
+!set teamBK.name := 'World Diplomats'
+
+!insert (club58, teamBJ) into ClubTeam
+
+!new Club('club59')
+!set club59.name := 'World Football Union'
+!set club59.homeGround := 'Diplomacy Dome'
+!set club59.chairman := 'Ms. Emilia Russo'
+
+!insert (club59, teamBK) into ClubTeam
+
+!new Competition('competition29')
+!set competition29.name := 'International Friendship Cup'
+!set competition29.type := 'Exhibition'
+
+!new TrainingSession('trainingSession50')
+!set trainingSession50.date := '2023-03-01'
+!set trainingSession50.location := 'Diversity Sports Complex'
+!set trainingSession50.purpose := 'Cultural Adaptability and Technique Sharing'
+
+!new TrainingNotes('trainingNote53')
+!set trainingNote53.note := 'Encourage exchange of cultural play styles'
+!set trainingNote53.date := '2023-03-01'
+
+!new TrainingNotes('trainingNote54')
+!set trainingNote54.note := 'Focus on building international camaraderie'
+!set trainingNote54.date := '2023-03-01'
+
+!insert (trainingSession50, trainingNote53) into TrainingTrainingNotes
+!insert (trainingSession50, trainingNote54) into TrainingTrainingNotes
+
+!insert (teamBJ, trainingSession50) into TeamTraining
+
+!new Player('player65')
+!set player65.name := 'Akira Tanaka'
+!set player65.age := 25
+!set player65.bestFoot := #BOTH
+!set player65.phoneNumber := '+81345678901'
+
+!insert (teamBJ, player65) into TeamPlayer
+
+!new Player('player66')
+!set player66.name := 'Liam Smith'
+!set player66.age := 26
+!set player66.bestFoot := #RIGHT
+!set player66.phoneNumber := '+441234567890'
+
+!insert (teamBK, player66) into TeamPlayer
+
+!new Position('position91')
+!set position91.positionName := #MIDFIELDER
+
+!new Position('position93')
+!set position93.positionName := #FORWARD
+
+!insert (player65, position91) into PlayerPositions
+!insert (player65, position93) into PlayerPositions
+
+!new Position('position94')
+!set position94.positionName := #DEFENDER
+
+!insert (player66, position94) into PlayerPositions
+
+!new TrainingObjective('trainingObjective68')
+!set trainingObjective68.areaToImprove := 'Cross-cultural communication on-field'
+!set trainingObjective68.startDate := '2023-02-01'
+!set trainingObjective68.endDate := '2023-03-01'
+!set trainingObjective68.success := true
+
+!new TrainingObjective('trainingObjective69')
+!set trainingObjective69.areaToImprove := 'Technique versatility'
+!set trainingObjective69.startDate := '2023-02-10'
+!set trainingObjective69.endDate := '2023-03-10'
+!set trainingObjective69.success := true
+
+!insert (trainingObjective68, player65) into TrainingObjectivePlayer
+!insert (trainingObjective69, player65) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession51')
+!set trainingSession51.date := '2023-03-02'
+!set trainingSession51.location := 'Harmony Training Grounds'
+!set trainingSession51.purpose := 'Advanced Defensive Tactics'
+
+!insert (teamBK, trainingSession51) into TeamTraining
+
+!new TrainingNotes('trainingNote55')
+!set trainingNote55.note := 'Enhanced focus on defensive coordination'
+!set trainingNote55.date := '2023-03-02'
+
+!insert (trainingSession51, trainingNote55) into TrainingTrainingNotes
+
+!new TrainingObjective('trainingObjective70')
+!set trainingObjective70.areaToImprove := 'Positional Awareness'
+!set trainingObjective70.startDate := '2023-01-15'
+!set trainingObjective70.endDate := '2023-03-30'
+!set trainingObjective70.success := true
+
+!insert (trainingObjective70, player66) into TrainingObjectivePlayer
+
+!new Match('match29')
+!set match29.date := '2023-04-05'
+!set match29.homeAway := false
+
+!insert (competition29, match29) into CompetitionMatch
+
+!insert (teamBK, match29) into LocalMatch
+!insert (teamBJ, match29) into VisitorMatch
+
+!new MatchReport('matchReport29')
+!set matchReport29.duration := 90
+!set matchReport29.scoreVisitor := 5
+!set matchReport29.scoreLocal := 4
+
+!insert (match29, matchReport29) into MatchMatchReport
+
+!new MatchEvent('matchEvent122')
+!set matchEvent122.eventType := #GOAL
+!set matchEvent122.time := 10
+
+!new MatchEvent('matchEvent123')
+!set matchEvent123.eventType := #GOAL
+!set matchEvent123.time := 15
+
+!new MatchEvent('matchEvent124')
+!set matchEvent124.eventType := #GOAL
+!set matchEvent124.time := 30
+
+!new MatchEvent('matchEvent125')
+!set matchEvent125.eventType := #GOAL
+!set matchEvent125.time := 35
+
+!new MatchEvent('matchEvent127')
+!set matchEvent127.eventType := #GOAL
+!set matchEvent127.time := 60
+
+!new MatchEvent('matchEvent128')
+!set matchEvent128.eventType := #GOAL
+!set matchEvent128.time := 75
+
+!new MatchEvent('matchEvent129')
+!set matchEvent129.eventType := #FOUL
+!set matchEvent129.time := 80
+
+!new MatchEvent('matchEvent130')
+!set matchEvent130.eventType := #GOAL
+!set matchEvent130.time := 85
+
+!new MatchEvent('matchEvent131')
+!set matchEvent131.eventType := #GOAL
+!set matchEvent131.time := 88
+
+!insert (match29, matchEvent122) into MatchMatchEvent
+!insert (match29, matchEvent123) into MatchMatchEvent
+!insert (match29, matchEvent124) into MatchMatchEvent
+!insert (match29, matchEvent125) into MatchMatchEvent
+!insert (match29, matchEvent127) into MatchMatchEvent
+!insert (match29, matchEvent128) into MatchMatchEvent
+!insert (match29, matchEvent129) into MatchMatchEvent
+!insert (match29, matchEvent130) into MatchMatchEvent
+!insert (match29, matchEvent131) into MatchMatchEvent
+
+!new MatchNote('matchNote23')
+!set matchNote23.note := 'A dynamic display of football and cultural unity, with balanced efforts from both teams'
+!set matchNote23.date := '2023-04-05'
+
+!insert (match29, matchNote23) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer40')
+!set matchPlayer40.booked := false
+!set matchPlayer40.goals := 2
+!set matchPlayer40.rating := 9
+
+!insert (player65, matchPlayer40) into PlayerMatch
+!insert (match29, matchPlayer40) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition41')
+!set matchPlayerPosition41.positionName := #MIDFIELDER
+!set matchPlayerPosition41.number := 11
+
+!insert (matchPlayer40, matchPlayerPosition41) into MatchPlayerMatchPlayerPosition

@@ -1,0 +1,103 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant2')
+!restaurant2.name := 'Gourmet Delights'
+
+-- Creating Owners for the new Restaurant
+!new Owner('owner3')
+!owner3.name := 'Emily Jones'
+!owner3.percentageShares := 70
+
+!new Owner('owner4')
+!owner4.name := 'Liam Brown'
+!owner4.percentageShares := 30
+
+-- Establish RestaurantOwner association
+!insert (restaurant2, owner3) into RestaurantOwner
+!insert (restaurant2, owner4) into RestaurantOwner
+
+-- Creating Tables with different descriptions and capacities
+!new Table('table3')
+!table3.number := 201
+!table3.description := 'By the Fireplace'
+!table3.capacity := 12
+
+!new Table('table4')
+!table4.number := 202
+!table4.description := 'Private Booth'
+!table4.capacity := 8
+
+-- Creating a different HeadWaiter and Waiter
+!new HeadWaiter('headwaiter2')
+!headwaiter2.name := 'Olivia Stone'
+!headwaiter2.dateOfBirth := Date('1987-11-30')
+!headwaiter2.phoneNumber := '555-1234'
+
+!new Waiter('waiter3')
+!waiter3.name := 'Sophia Hill'
+!waiter3.dateOfBirth := Date('1995-03-19')
+!waiter3.phoneNumber := '555-5678'
+!waiter3.spokenLanguage := #Italian
+
+!insert (headwaiter2, waiter3) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation
+!new Banquet('reservation2')
+!reservation2.time := Time('20:00')
+!reservation2.date := Date('2023-11-02')
+!reservation2.numberPeople := 20
+!reservation2.name := 'Lex Luthor Enterprise'
+!reservation2.phoneNumber := '555-2222'
+!reservation2.number := 101
+!reservation2.groupName := 'Corporate Event'
+!reservation2.paymentMethod := #CreditCard
+!reservation2.busService := true
+
+-- Establish associations for Banquet
+!insert (restaurant2, reservation2) into RestaurantReservation
+!insert (reservation2, waiter3) into ReservationWaiter
+!insert (reservation2, table3) into ReservationTable
+!insert (reservation2, table4) into ReservationTable
+
+-- Create a BusDriver for Banquet Bus Service
+!new BusDriver('busdriver1')
+!busdriver1.name := 'Max Verstappen'
+!busdriver1.dateOfBirth := Date('1998-09-30')
+!busdriver1.phoneNumber := '555-3456'
+!busdriver1.driverLicenseNr := 'DL987654'
+
+-- Establish BanquetBusDriver association
+!insert (reservation2, busdriver1) into BanquetBusDriver
+
+-- MenuItem for the Banquet
+!new MenuItem('menuItem2')
+!menuItem2.description := 'Veggie Lasagna'
+!menuItem2.prepTime := 30.0
+!menuItem2.classification := #Main
+
+-- Assign MenuItem to a new Chef
+!new Chef('chef2')
+!chef2.name := 'Marco Pierre'
+!chef2.dateOfBirth := Date('1961-12-11')
+!chef2.phoneNumber := '555-6789'
+
+!insert (menuItem2, chef2) into MenuItemChef
+
+-- Creating Cook associated with the new Chef
+!new Cook('cook2')
+!cook2.name := 'Nigella Lawson'
+!cook2.dateOfBirth := Date('1960-01-06')
+!cook2.phoneNumber := '555-9876'
+!cook2.yearsOfExperience := 10
+
+-- Establish association between Chef and Cook
+!insert (chef2, cook2) into ChefCook
+
+-- Create an ItemOrder linked with the Banquet reservation
+!new ItemOrder('order2')
+!order2.time := Time('20:00')
+
+-- Establish ItemOrderMenuItem association
+!insert (order2, menuItem2) into ItemOrderMenuItem
+
+-- Associate the ItemOrder with the Banquet Reservation
+!insert (reservation2, order2) into ReservationItemOrdered

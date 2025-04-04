@@ -1,0 +1,93 @@
+!new RentalOffice('rentalOffice23')
+!rentalOffice23.name := 'New England Fleet Rentals'
+!rentalOffice23.number := 502
+!rentalOffice23.address := '200 Beacon St, Boston, MA, 02116'
+
+!new Truck('truck22')
+!truck22.id := 44
+!truck22.registrationState := #CO
+!truck22.licensePlateNumber := 'BOS1987'
+!truck22.vehicleTypeCode := #TRUCK
+!truck22.registrationLastMaintenanceDate := Date('2023-07-14')
+!truck22.expirationDate := Date('2024-07-13')
+!truck22.odometerReading := 58000
+!truck22.gasTankCapacity := 32.0
+!truck22.workingRadio := false
+!truck22.mileage := 11
+
+!new Vehicle('vehicle23')
+!vehicle23.id := 45
+!vehicle23.registrationState := #CO
+!vehicle23.licensePlateNumber := 'MAFL459'
+!vehicle23.vehicleTypeCode := #OPEN_TRAILER
+!vehicle23.registrationLastMaintenanceDate := Date('2023-06-10')
+!vehicle23.expirationDate := Date('2024-06-09')
+
+!new Vehicle('vehicle24')
+!vehicle24.id := 46
+!vehicle24.registrationState := #CO
+!vehicle24.licensePlateNumber := 'MAVAN345'
+!vehicle24.vehicleTypeCode := #TRUCK10
+!vehicle24.registrationLastMaintenanceDate := Date('2023-05-20')
+!vehicle24.expirationDate := Date('2024-05-19')
+
+!new Individual('individualCustomer17')
+!individualCustomer17.name := 'Sarah Palmer'
+!individualCustomer17.address := '789 Commonwealth Ave, Boston, MA, 02215'
+!individualCustomer17.poorRisk := true
+!individualCustomer17.homePhone := '617-555-0467'
+!individualCustomer17.driverLicenseState := #CO
+!individualCustomer17.driverLicenseNumber := 2398456
+!individualCustomer17.driverLicenseExpirationDate := Date('2027-03-23')
+
+!new Company('company20')
+!company20.name := 'Boston Build Solutions, Inc.'
+!company20.address := '645 Industrial Rd, Cambridge, MA, 02138'
+!company20.poorRisk := false
+!company20.idNumber := 215846372
+
+!new RentalAgreement('rentalAgreement37')
+!rentalAgreement37.number := 40876
+!rentalAgreement37.rentalDate := Date('2023-11-01')
+!rentalAgreement37.anticipatedDuration := 3
+!rentalAgreement37.depositPaid := 400.00
+!rentalAgreement37.quotedDailyRate := 90.00
+!rentalAgreement37.quotedRatePerMile := 0.50
+
+!new RentalAgreement('rentalAgreement38')
+!rentalAgreement38.number := 40877
+!rentalAgreement38.rentalDate := Date('2023-11-03')
+!rentalAgreement38.anticipatedDuration := 10
+!rentalAgreement38.depositPaid := 350.00
+!rentalAgreement38.quotedDailyRate := 70.00
+!rentalAgreement38.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement39')
+!rentalAgreement39.number := 40878
+!rentalAgreement39.rentalDate := Date('2023-11-04')
+!rentalAgreement39.anticipatedDuration := 2
+!rentalAgreement39.depositPaid := 100.00
+!rentalAgreement39.quotedDailyRate := 60.00
+!rentalAgreement39.quotedRatePerMile := 0.20
+
+!insert (rentalOffice23, truck22) into RentalOfficeVehicle
+!insert (rentalOffice23, vehicle23) into RentalOfficeVehicle
+!insert (rentalOffice23, vehicle24) into RentalOfficeVehicle
+
+!insert (rentalOffice23, rentalAgreement37) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement37) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement37, truck22) into RentalAgreementVehicle
+!insert (rentalAgreement37, company20) into RentalAgreementCustomer
+
+!insert (rentalOffice23, rentalAgreement38) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement38) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement38, vehicle23) into RentalAgreementVehicle
+!insert (rentalAgreement38, company20) into RentalAgreementCustomer
+
+!insert (rentalOffice23, rentalAgreement39) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice23, rentalAgreement39) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement39, vehicle24) into RentalAgreementVehicle
+!insert (rentalAgreement39, individualCustomer17) into RentalAgreementCustomer

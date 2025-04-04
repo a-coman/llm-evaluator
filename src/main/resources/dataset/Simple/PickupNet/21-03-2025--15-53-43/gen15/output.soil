@@ -1,0 +1,53 @@
+!new Driver('driver16')
+!driver16.id := 'D016'
+!driver16.name := 'Ethan Clark'
+
+!new Shipment('shipment26')
+!shipment26.id := 'S026'
+!shipment26.status := #ASSIGNED
+
+!new Shipment('shipment27')
+!shipment27.id := 'S027'
+!shipment27.status := #UNDERWAY
+
+!new Address('address31')
+!address31.text := '7777 Pine Meadow Drive'
+
+!new Address('address32')
+!address32.text := '8888 Birchwood Avenue'
+
+!new GeoLocation('geoLocation31')
+!geoLocation31.latitude := 52.3676
+!geoLocation31.longitude := 4.9041
+
+!new GeoLocation('geoLocation32')
+!geoLocation32.latitude := 41.9028
+!geoLocation32.longitude := 12.4964
+
+!new Customer('customer16')
+!customer16.id := 'C016'
+!customer16.name := 'Avery Lee'
+!customer16.twitterUserName := '@avery_lee'
+
+!new Station('station15')
+
+!insert (driver16, shipment27) into DriverShipment
+
+!insert (shipment26, address31) into ShipmentContainsPickUpAddress
+!insert (shipment26, address32) into ShipmentContainsDeliveryAddress
+
+!insert (shipment27, address32) into ShipmentContainsPickUpAddress
+!insert (shipment27, address31) into ShipmentContainsDeliveryAddress
+
+!insert (address31, geoLocation31) into AddressContainsGeoLocation
+!insert (address32, geoLocation32) into AddressContainsGeoLocation
+
+!insert (customer16, shipment26) into CustomerConsistsOfShipment
+!insert (customer16, shipment27) into CustomerConsistsOfShipment
+
+!insert (station15, customer16) into StationContainsCustomer
+
+!insert (station15, shipment26) into StationShipment
+!insert (station15, shipment27) into StationShipment
+
+!insert (station15, driver16) into StationContainsDriver

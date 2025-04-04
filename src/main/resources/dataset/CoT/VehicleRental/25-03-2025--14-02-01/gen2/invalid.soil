@@ -1,0 +1,49 @@
+!new RentalOffice('rentalOffice6')
+!rentalOffice6.name := 'Hollywood Wheels Rentals'
+!rentalOffice6.number := 102
+!rentalOffice6.address := '456 Studio Drive, Los Angeles, CA'
+
+!new Truck('truck5')
+!truck5.id := 9
+!truck5.registrationState := #CA
+!truck5.licensePlateNumber := 'MOV123'
+!truck5.vehicleTypeCode := #TRUCK
+!truck5.registrationLastMaintenanceDate := Date('2023-09-01')
+!truck5.expirationDate := Date('2024-01-01')
+!truck5.odometerReading := 0
+!truck5.gasTankCapacity := 0
+!truck5.workingRadio := true
+!truck5.mileage := 0
+
+!new Vehicle('vehicle5')
+!vehicle5.id := 10
+!vehicle5.registrationState := #AK
+!vehicle5.licensePlateNumber := 'TRAILER1'
+!vehicle5.vehicleTypeCode := #OPEN_TRAILER
+!vehicle5.registrationLastMaintenanceDate := Date('2023-08-15')
+!vehicle5.expirationDate := Date('2024-04-01')
+
+!new RentalAgreement('rentalAgreement8')
+!rentalAgreement8.number := 2001
+!rentalAgreement8.rentalDate := Date('2023-10-15')
+!rentalAgreement8.anticipatedDuration := 30
+!rentalAgreement8.depositPaid := 5000.00
+!rentalAgreement8.quotedDailyRate := 120.00
+!rentalAgreement8.quotedRatePerMile := 0.10
+
+!new Company('company4')
+!company4.name := 'Cinematic Productions Inc.'
+!company4.address := '789 Film Lane, Burbank, CA'
+!company4.poorRisk := false
+!company4.idNumber := 890
+
+!insert (rentalOffice6, truck5) into RentalOfficeVehicle
+!insert (rentalOffice6, vehicle5) into RentalOfficeVehicle
+
+!insert (rentalOffice6, rentalAgreement8) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice6, rentalAgreement8) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement8, truck5) into RentalAgreementVehicle
+!insert (rentalAgreement8, vehicle5) into RentalAgreementVehicle
+
+!insert (rentalAgreement8, company4) into RentalAgreementCustomer

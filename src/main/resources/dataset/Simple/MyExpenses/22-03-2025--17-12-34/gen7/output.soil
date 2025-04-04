@@ -1,0 +1,33 @@
+!new Expense('expense9')
+!expense9.amount := 1200.0
+!expense9.startDate := Date('2023-09-01')
+!expense9.endDate := Date('2023-09-30')
+
+!new Currency('currency7')
+!currency7.name := 'Swiss Franc'
+!currency7.abbreviation := 'CHF'
+
+!new Bill('bill14')
+!bill14.amount := 800.0
+!bill14.category := 'Travel'
+!bill14.date := Date('2023-09-10')
+!bill14.paymentMethod := #CHECK
+!bill14.status := #VERIFIED
+
+!new Bill('bill15')
+!bill15.amount := 400.0
+!bill15.category := 'Dining'
+!bill15.date := Date('2023-09-20')
+!bill15.paymentMethod := #CREDIT_CARD
+!bill15.status := #VALIDATED
+
+!insert (expense9, bill14) into ExpenseContainsBills
+!insert (expense9, bill15) into ExpenseContainsBills
+
+!insert (bill14, currency7) into BillCurrency
+!insert (bill15, currency7) into BillCurrency
+
+!new Comment('comment9')
+!comment9.text := 'Travel and dining expenses for September'
+
+!insert (expense9, comment9) into ExpenseComment

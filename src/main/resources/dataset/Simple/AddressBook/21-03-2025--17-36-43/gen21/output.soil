@@ -1,0 +1,71 @@
+!new AddressBook('addressBook21')
+
+!new Company('skyHighAdventures')
+!skyHighAdventures.name := 'Sky High Adventures'
+!skyHighAdventures.phone := '444-555-6666'
+!skyHighAdventures.website := 'www.skyhighadventures.com'
+!skyHighAdventures.email := 'info@skyhighadventures.com'
+!skyHighAdventures.industry := 'Adventure Tourism'
+
+!new Person('miaSullivan')
+!miaSullivan.name := 'Mia Sullivan'
+!miaSullivan.phone := '222-333-1234'
+!miaSullivan.website := 'www.miasullivanadventures.com'
+!miaSullivan.email := 'mia.sullivan@skyhighadventures.com'
+!miaSullivan.title := 'Adventure Coordinator'
+
+!new Note('expeditionPlanningNote')
+!expeditionPlanningNote.author := 'Mia Sullivan'
+!expeditionPlanningNote.time := Date('2025-05-12')
+!expeditionPlanningNote.type := #MEETING
+!expeditionPlanningNote.comment := 'Planned next quarter expedition routes and logistics'
+
+!new Address('miaAddress')
+!miaAddress.city := 'Denver'
+!miaAddress.houseNr := '458'
+!miaAddress.street := 'Adventure Rd'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, skyHighAdventures) into RelationshipToContact
+!insert (miaSullivan, employeeRelationship) into ContactToRelationship
+!insert (miaSullivan, miaAddress) into ContactContainsAddress
+!insert (miaSullivan, expeditionPlanningNote) into ContactContainsNote
+
+!new Person('simonCarter')
+!simonCarter.name := 'Simon Carter'
+!simonCarter.phone := '555-789-6789'
+!simonCarter.website := 'www.simoncartertrips.com'
+!simonCarter.email := 'simon.carter@example.com'
+!simonCarter.title := 'Outdoor Guide'
+
+!new Note('clientSafetyBriefingNote')
+!clientSafetyBriefingNote.author := 'Simon Carter'
+!clientSafetyBriefingNote.time := Date('2025-05-20')
+!clientSafetyBriefingNote.type := #CALL
+!clientSafetyBriefingNote.comment := 'Conducted safety briefing for upcoming alpine tours'
+
+!new Address('simonAddress')
+!simonAddress.city := 'Boulder'
+!simonAddress.houseNr := '112'
+!simonAddress.street := 'Trailhead St'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, miaSullivan) into RelationshipToContact
+!insert (simonCarter, subdivisionRelationship) into ContactToRelationship
+!insert (simonCarter, simonAddress) into ContactContainsAddress
+!insert (simonCarter, clientSafetyBriefingNote) into ContactContainsNote
+
+!new Address('skyHighAdventuresAddress')
+!skyHighAdventuresAddress.city := 'San Francisco'
+!skyHighAdventuresAddress.houseNr := '321'
+!skyHighAdventuresAddress.street := 'Expedition Blvd'
+
+!insert (skyHighAdventures, skyHighAdventuresAddress) into ContactContainsAddress
+
+!insert (addressBook21, skyHighAdventures) into AddressBookMadeOfContact
+!insert (addressBook21, miaSullivan) into AddressBookMadeOfContact
+!insert (addressBook21, simonCarter) into AddressBookMadeOfContact

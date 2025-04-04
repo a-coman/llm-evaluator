@@ -1,0 +1,71 @@
+!new AddressBook('addressBook6')
+
+!new Company('ecoFriendlySolutions')
+!ecoFriendlySolutions.name := 'Eco Friendly Solutions'
+!ecoFriendlySolutions.phone := '333-888-7777'
+!ecoFriendlySolutions.website := 'www.ecofriendlysolutions.org'
+!ecoFriendlySolutions.email := 'support@ecofriendly.org'
+!ecoFriendlySolutions.industry := 'Environmental Services'
+
+!new Person('lucasGreen')
+!lucasGreen.name := 'Lucas Green'
+!lucasGreen.phone := '777-888-9999'
+!lucasGreen.website := 'www.lucasgreenconsultant.com'
+!lucasGreen.email := 'lucas.green@ecofriendly.org'
+!lucasGreen.title := 'Environmental Scientist'
+
+!new Note('environmentalReportNote')
+!environmentalReportNote.author := 'Lucas Green'
+!environmentalReportNote.time := Date('2024-01-20')
+!environmentalReportNote.type := #EMAIL
+!environmentalReportNote.comment := 'Submitted annual environmental impact report'
+
+!new Address('lucasAddress')
+!lucasAddress.city := 'Portland'
+!lucasAddress.houseNr := '1011'
+!lucasAddress.street := 'Forest Avenue'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, ecoFriendlySolutions) into RelationshipToContact
+!insert (lucasGreen, employeeRelationship) into ContactToRelationship
+!insert (lucasGreen, lucasAddress) into ContactContainsAddress
+!insert (lucasGreen, environmentalReportNote) into ContactContainsNote
+
+!new Person('noraBaker')
+!noraBaker.name := 'Nora Baker'
+!noraBaker.phone := '555-444-3333'
+!noraBaker.website := 'www.norabakerlandscape.com'
+!noraBaker.email := 'nora.baker@example.com'
+!noraBaker.title := 'Landscape Architect'
+
+!new Note('landscapePlanNote')
+!landscapePlanNote.author := 'Nora Baker'
+!landscapePlanNote.time := Date('2024-02-10')
+!landscapePlanNote.type := #CALL
+!landscapePlanNote.comment := 'Discuss landscape plans for urban renewal project'
+
+!new Address('noraAddress')
+!noraAddress.city := 'Denver'
+!noraAddress.houseNr := '1420'
+!noraAddress.street := 'Cedar Lane'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, lucasGreen) into RelationshipToContact
+!insert (noraBaker, subdivisionRelationship) into ContactToRelationship
+!insert (noraBaker, noraAddress) into ContactContainsAddress
+!insert (noraBaker, landscapePlanNote) into ContactContainsNote
+
+!new Address('ecoFriendlyAddress')
+!ecoFriendlyAddress.city := 'Boulder'
+!ecoFriendlyAddress.houseNr := '322'
+!ecoFriendlyAddress.street := 'Green Street'
+
+!insert (ecoFriendlySolutions, ecoFriendlyAddress) into ContactContainsAddress
+
+!insert (addressBook6, ecoFriendlySolutions) into AddressBookMadeOfContact
+!insert (addressBook6, lucasGreen) into AddressBookMadeOfContact
+!insert (addressBook6, noraBaker) into AddressBookMadeOfContact

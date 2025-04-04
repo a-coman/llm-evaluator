@@ -1,0 +1,89 @@
+!new Booking('booking1')
+!booking1.startDate := '2023-10-01'
+!booking1.endDate := '2023-10-05'
+!booking1.canceled := false
+!booking1.bookingId := 100
+!booking1.confirmed := true
+
+!new Booking('booking2')
+!booking2.startDate := '2023-09-15'
+!booking2.endDate := '2023-09-18'
+!booking2.canceled := true
+!booking2.bookingId := 101
+!booking2.confirmed := false
+
+!new Bill('bill1')
+!bill1.price := 350.75
+!bill1.billId := 200
+
+!new Bill('bill2')
+!bill2.price := 100.00
+!bill2.billId := 201
+
+!new FreeRoomTypesDTO('roomType1')
+!roomType1.roomTypeDescription := 'Deluxe Room'
+!roomType1.numBeds := 2
+!roomType1.pricePerNight := 180.50
+!roomType1.numFreeRooms := 5
+
+!new FreeRoomTypesDTO('roomType2')
+!roomType2.roomTypeDescription := 'Single Room'
+!roomType2.numBeds := 1
+!roomType2.pricePerNight := 90.00
+!roomType2.numFreeRooms := 10
+
+!new Customer('customer1')
+!customer1.firstName := 'Alice'
+!customer1.lastName := 'Johnson'
+
+!new Customer('customer2')
+!customer2.firstName := 'Bob'
+!customer2.lastName := 'Smith'
+
+!new RoomReservation('reservation1')
+!reservation1.checkInDate := '2023-10-01'
+!reservation1.checkOutDate := '2023-10-05'
+
+!new RoomReservation('reservation2')
+!reservation2.checkInDate := '2023-09-15'
+!reservation2.checkOutDate := '2023-09-18'
+
+!new RoomExtra('extra1')
+!extra1.price := 20.00
+!extra1.description := 'Breakfast'
+
+!new RoomExtra('extra2')
+!extra2.price := 30.00
+!extra2.description := 'Parking'
+
+!new Room('room1')
+!room1.numBeds := 2
+!room1.pricePerNight := 200.00
+!room1.occupied := true
+!room1.blocked := false
+!room1.roomNumber := 101
+
+!new Room('room2')
+!room2.numBeds := 1
+!room2.pricePerNight := 100.00
+!room2.occupied := false
+!room2.blocked := false
+!room2.roomNumber := 102
+
+!insert (booking1, bill1) into BookingBill
+!insert (booking2, bill2) into BookingBill
+
+!insert (booking1, customer1) into BookingCustomer
+!insert (booking2, customer2) into BookingCustomer
+
+!insert (booking1, reservation1) into BookingRoomReservation
+!insert (booking2, reservation2) into BookingRoomReservation
+
+!insert (reservation1, extra1) into RoomReservationExtras
+!insert (reservation2, extra2) into RoomReservationExtras
+
+!insert (reservation1, room1) into RoomReservationRoom
+!insert (reservation2, room2) into RoomReservationRoom
+
+!insert (bill1, reservation1) into BillRoomReservation
+!insert (bill2, reservation2) into BillRoomReservation

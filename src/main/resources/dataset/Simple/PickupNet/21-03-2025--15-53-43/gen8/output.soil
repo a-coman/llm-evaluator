@@ -1,0 +1,44 @@
+!new Driver('driver9')
+!driver9.id := 'D009'
+!driver9.name := 'Rachel Brooks'
+
+!new Shipment('shipment15')
+!shipment15.id := 'S015'
+!shipment15.status := #ASSIGNED
+
+!new Address('address17')
+!address17.text := '2020 Broadway Street'
+
+!new Address('address18')
+!address18.text := '3030 Hilltop Terrace'
+
+!new GeoLocation('geoLocation17')
+!geoLocation17.latitude := 60.1699
+!geoLocation17.longitude := 24.9384
+
+!new GeoLocation('geoLocation18')
+!geoLocation18.latitude := 35.6895
+!geoLocation18.longitude := 139.6917
+
+!new Customer('customer9')
+!customer9.id := 'C009'
+!customer9.name := 'Sam Taylor'
+!customer9.twitterUserName := '@sam_taylor'
+
+!new Station('station8')
+
+!insert (driver9, shipment15) into DriverShipment
+
+!insert (shipment15, address17) into ShipmentContainsPickUpAddress
+!insert (shipment15, address18) into ShipmentContainsDeliveryAddress
+
+!insert (address17, geoLocation17) into AddressContainsGeoLocation
+!insert (address18, geoLocation18) into AddressContainsGeoLocation
+
+!insert (customer9, shipment15) into CustomerConsistsOfShipment
+
+!insert (station8, customer9) into StationContainsCustomer
+
+!insert (station8, shipment15) into StationShipment
+
+!insert (station8, driver9) into StationContainsDriver

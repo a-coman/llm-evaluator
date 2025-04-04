@@ -1,0 +1,33 @@
+!new Expense('expense16')
+!expense16.amount := 950.0
+!expense16.startDate := Date('2024-04-01')
+!expense16.endDate := Date('2024-04-30')
+
+!new Currency('currency14')
+!currency14.name := 'Thai Baht'
+!currency14.abbreviation := 'THB'
+
+!new Bill('bill26')
+!bill26.amount := 500.0
+!bill26.category := 'Rent'
+!bill26.date := Date('2024-04-03')
+!bill26.paymentMethod := #CASH
+!bill26.status := #VERIFIED
+
+!new Bill('bill27')
+!bill27.amount := 450.0
+!bill27.category := 'Groceries'
+!bill27.date := Date('2024-04-15')
+!bill27.paymentMethod := #CHECK
+!bill27.status := #REFUNDED
+
+!insert (expense16, bill26) into ExpenseContainsBills
+!insert (expense16, bill27) into ExpenseContainsBills
+
+!insert (bill26, currency14) into BillCurrency
+!insert (bill27, currency14) into BillCurrency
+
+!new Comment('comment16')
+!comment16.text := 'April rent and groceries expenses'
+
+!insert (expense16, comment16) into ExpenseComment

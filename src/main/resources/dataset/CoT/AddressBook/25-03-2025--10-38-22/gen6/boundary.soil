@@ -1,0 +1,80 @@
+!new AddressBook('AddressBook_6')
+
+!new Company('Culinary_Innovations_Inc')
+!Culinary_Innovations_Inc.name := 'Culinary Innovations Inc.'
+!Culinary_Innovations_Inc.phone := '+65-6571-4001'
+!Culinary_Innovations_Inc.website := 'www.culinaryinnovations.sg'
+!Culinary_Innovations_Inc.email := 'support@culinaryinnovations.sg'
+!Culinary_Innovations_Inc.industry := 'Food Technology'
+
+!new Address('Address_Culinary_Innovations')
+!Address_Culinary_Innovations.city := 'Singapore'
+!Address_Culinary_Innovations.houseNr := '50'
+!Address_Culinary_Innovations.street := 'Orchard Road'
+!insert (Culinary_Innovations_Inc, Address_Culinary_Innovations) into ContactContainsAddress
+
+!new Note('Note_Culinary_Innovations')
+!Note_Culinary_Innovations.author := 'Jasmine Lee'
+!Note_Culinary_Innovations.time := Date('2023-08-11')
+!Note_Culinary_Innovations.type := #CALL
+!Note_Culinary_Innovations.comment := 'Discussed integration of AI in recipe development.'
+!insert (Culinary_Innovations_Inc, Note_Culinary_Innovations) into ContactContainsNote
+
+!new Person('Chef_Lian_Wei')
+!Chef_Lian_Wei.name := 'Chef Lian Wei'
+!Chef_Lian_Wei.phone := '+852-2891-1234'
+!Chef_Lian_Wei.website := 'www.chefwei.hk'
+!Chef_Lian_Wei.email := 'liaowei@chefwei.hk'
+!Chef_Lian_Wei.title := 'Executive Chef'
+
+!new Address('Address_Chef_Lian_Wei')
+!Address_Chef_Lian_Wei.city := 'Hong Kong'
+!Address_Chef_Lian_Wei.houseNr := '88'
+!Address_Chef_Lian_Wei.street := 'Victoria Street'
+!insert (Chef_Lian_Wei, Address_Chef_Lian_Wei) into ContactContainsAddress
+
+!new Note('Note_Chef_Lian_Wei')
+!Note_Chef_Lian_Wei.author := 'Ming Zhao'
+!Note_Chef_Lian_Wei.time := Date('2023-02-20')
+!Note_Chef_Lian_Wei.type := #EMAIL
+!Note_Chef_Lian_Wei.comment := 'Invitation to the International Culinary Symposium.'
+!insert (Chef_Lian_Wei, Note_Chef_Lian_Wei) into ContactContainsNote
+
+!new Person('Elena_Costa')
+!Elena_Costa.name := 'Elena Costa'
+!Elena_Costa.phone := '+39-06-1234-5678'
+!Elena_Costa.website := 'www.elenacostaart.it'
+!Elena_Costa.email := 'elenacosta@artmail.it'
+!Elena_Costa.title := 'Digital Artist'
+
+!new Address('Address_Elena_Costa')
+!Address_Elena_Costa.city := 'Rome'
+!Address_Elena_Costa.houseNr := '22'
+!Address_Elena_Costa.street := 'Via Condotti'
+!insert (Elena_Costa, Address_Elena_Costa) into ContactContainsAddress
+
+!new Note('Note_Elena_Costa')
+!Note_Elena_Costa.author := 'Mario Rossi'
+!Note_Elena_Costa.time := Date('2023-03-16')
+!Note_Elena_Costa.type := #MEETING
+!Note_Elena_Costa.comment := 'Collaborated on a virtual art exhibition.'
+!insert (Elena_Costa, Note_Elena_Costa) into ContactContainsNote
+
+!new Relationship('Relationship_Culinary_Subdivision_Chef_Wei')
+!Relationship_Culinary_Subdivision_Chef_Wei.type := #SUBDIVISION
+!insert (Culinary_Innovations_Inc, Relationship_Culinary_Subdivision_Chef_Wei) into ContactToRelationship
+!insert (Relationship_Culinary_Subdivision_Chef_Wei, Chef_Lian_Wei) into RelationshipToContact
+
+!new Relationship('Relationship_Chef_Wei_to_Culinary_Innovations')
+!Relationship_Chef_Wei_to_Culinary_Innovations.type := #EMPLOYEE
+!insert (Chef_Lian_Wei, Relationship_Chef_Wei_to_Culinary_Innovations) into ContactToRelationship
+!insert (Relationship_Chef_Wei_to_Culinary_Innovations, Culinary_Innovations_Inc) into RelationshipToContact
+
+!new Relationship('Relationship_Elena_to_Chef_Wei')
+!Relationship_Elena_to_Chef_Wei.type := #COWORKER
+!insert (Elena_Costa, Relationship_Elena_to_Chef_Wei) into ContactToRelationship
+!insert (Relationship_Elena_to_Chef_Wei, Chef_Lian_Wei) into RelationshipToContact
+
+!insert (AddressBook_6, Culinary_Innovations_Inc) into AddressBookMadeOfContact
+!insert (AddressBook_6, Chef_Lian_Wei) into AddressBookMadeOfContact
+!insert (AddressBook_6, Elena_Costa) into AddressBookMadeOfContact

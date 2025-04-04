@@ -1,0 +1,41 @@
+!new StateMachine('stateMachine5')
+!stateMachine5.name := 'emergencyMachine'
+
+!new State('state10')
+!state10.name := 'standby'
+
+!new State('state11')
+!state11.name := 'alert'
+
+!new State('state12')
+!state12.name := 'shutdown'
+
+!new Transition('transition8')
+!transition8.name := 'standbyToAlert'
+
+!new Transition('transition9')
+!transition9.name := 'alertToShutdown'
+
+!new TimeEvent('event8')
+!event8.time := 35
+
+!new TimeEvent('event9')
+!event9.time := 45
+
+!insert (stateMachine5, state10) into StateMachineContainsStates
+!insert (stateMachine5, state11) into StateMachineContainsStates
+!insert (stateMachine5, state12) into StateMachineContainsStates
+
+!insert (stateMachine5, transition8) into StateMachineContainsTransitions
+!insert (stateMachine5, transition9) into StateMachineContainsTransitions
+
+!insert (transition8, event8) into TransitionContainsEvents
+!insert (transition9, event9) into TransitionContainsEvents
+
+!insert (state10, transition8) into StateTransition
+!insert (state11, transition9) into StateTransition
+
+!insert (transition8, state11) into TransitionState
+!insert (transition9, state12) into TransitionState
+
+!insert (stateMachine5, state10) into StateMachineStartsStates

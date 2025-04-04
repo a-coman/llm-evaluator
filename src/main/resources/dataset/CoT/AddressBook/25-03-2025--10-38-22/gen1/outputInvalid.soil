@@ -1,0 +1,71 @@
+!new AddressBook('Tokyo_Corporate_Network_Contacts')
+
+!new Company('Sakura_Technologies')
+!Sakura_Technologies.name := 'Sakura Technologies'
+!Sakura_Technologies.phone := '+81-3-1234-5678'
+!Sakura_Technologies.website := 'www.sakura-tech.jp'
+!Sakura_Technologies.email := 'contact@sakura-tech.jp'
+!Sakura_Technologies.industry := 'Information Technology'
+
+!new Address('Address_Sakura_Technologies')
+!Address_Sakura_Technologies.city := 'Tokyo'
+!Address_Sakura_Technologies.street := 'Shinagawa-ku, 5th Avenue'
+!Address_Sakura_Technologies.houseNr := '22'
+!insert (Sakura_Technologies, Address_Sakura_Technologies) into ContactContainsAddress
+
+!new Note('Note_Sakura_Technologies')
+!Note_Sakura_Technologies.author := 'Hana Yamada'
+!Note_Sakura_Technologies.time := Date('2023-09-15 10:00')
+!Note_Sakura_Technologies.type := #MEETING
+!Note_Sakura_Technologies.comment := 'Discussed potential partnership projects with regional AI startups.'
+!insert (Sakura_Technologies, Note_Sakura_Technologies) into ContactContainsNote
+
+!new Relationship('Relationship_Sakura_to_Tsukasa')
+!Relationship_Sakura_to_Tsukasa.type := #SUBDIVISION
+!insert (Sakura_Technologies, Relationship_Sakura_to_Tsukasa) into ContactToRelationship
+
+!new Company('Tsukasa_Robotics_Ltd')
+!Tsukasa_Robotics_Ltd.name := 'Tsukasa Robotics Ltd.'
+!Tsukasa_Robotics_Ltd.phone := '+81-3-8765-4321'
+!Tsukasa_Robotics_Ltd.website := 'www.tsukasarobotics.jp'
+!Tsukasa_Robotics_Ltd.email := 'info@tsukasarobotics.jp'
+!Tsukasa_Robotics_Ltd.industry := 'Robotics'
+
+!new Address('Address_Tsukasa_Robotics')
+!Address_Tsukasa_Robotics.city := 'Tokyo'
+!Address_Tsukasa_Robotics.street := 'Minato-ku, Robot Street'
+!Address_Tsukasa_Robotics.houseNr := '10'
+!insert (Tsukasa_Robotics_Ltd, Address_Tsukasa_Robotics) into ContactContainsAddress
+
+!new Note('Note_Tsukasa_Robotics')
+!Note_Tsukasa_Robotics.author := 'Mai Tanaka'
+!Note_Tsukasa_Robotics.time := Date('2023-09-18 15:30')
+!Note_Tsukasa_Robotics.type := #CALL
+!Note_Tsukasa_Robotics.comment := 'Phone call regarding the new humanoid robot prototype.'
+!insert (Tsukasa_Robotics_Ltd, Note_Tsukasa_Robotics) into ContactContainsNote
+
+!new Relationship('Relationship_Tsukasa_to_Kenji')
+!Relationship_Tsukasa_to_Kenji.type := #EMPLOYEE
+!insert (Tsukasa_Robotics_Ltd, Relationship_Tsukasa_to_Kenji) into ContactToRelationship
+
+!new Person('Kenji_Yamamoto')
+!Kenji_Yamamoto.name := 'Kenji Yamamoto'
+!Kenji_Yamamoto.phone := '+81-90-9876-5432'
+!Kenji_Yamamoto.website := 'www.kenjiyamamoto.jp'
+!Kenji_Yamamoto.email := 'kyamamoto@individual.jp'
+!Kenji_Yamamoto.title := 'Chief Robotics Engineer'
+
+!new Note('Note_Kenji_Yamamoto')
+!Note_Kenji_Yamamoto.author := 'Kenji Yamamoto'
+!Note_Kenji_Yamamoto.time := Date('2023-09-19 12:15')
+!Note_Kenji_Yamamoto.type := #EMAIL
+!Note_Kenji_Yamamoto.comment := 'Sent concept designs to the engineering team.'
+!insert (Kenji_Yamamoto, Note_Kenji_Yamamoto) into ContactContainsNote
+
+!insert (Relationship_Sakura_to_Tsukasa, Tsukasa_Robotics_Ltd) into RelationshipToContact
+!insert (Relationship_Tsukasa_to_Kenji, Kenji_Yamamoto) into RelationshipToContact
+
+!insert (Tokyo_Corporate_Network_Contacts, Sakura_Technologies) into AddressBookMadeOfContact
+!insert (Tokyo_Corporate_Network_Contacts, Tsukasa_Robotics_Ltd) into AddressBookMadeOfContact
+!insert (Tokyo_Corporate_Network_Contacts, Kenji_Yamamoto) into AddressBookMadeOfContact
+

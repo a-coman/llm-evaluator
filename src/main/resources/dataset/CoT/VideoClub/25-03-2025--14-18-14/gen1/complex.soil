@@ -1,0 +1,49 @@
+!new Client('martaLopez')
+!martaLopez.clientId := 101
+!martaLopez.isSuspended := false
+
+!new Client('giorgioDiLuca')
+!giorgioDiLuca.clientId := 102
+!giorgioDiLuca.isSuspended := true
+
+!new Rental('rentalMarta')
+!rentalMarta.date := Date('2023-09-15')
+
+!new Rental('rentalGiorgio')
+!rentalGiorgio.date := Date('2023-09-12')
+
+!new Movie('movieLaViaLactea')
+!movieLaViaLactea.title := 'La Vía Láctea'
+!movieLaViaLactea.availableCopies := 5
+!movieLaViaLactea.genre := #Comedy
+
+!new Movie('movieDesperadoAction')
+!movieDesperadoAction.title := 'Desperado in Action'
+!movieDesperadoAction.availableCopies := 3
+!movieDesperadoAction.genre := #Action
+
+!new Series('seriesBCChronicles')
+!seriesBCChronicles.title := 'Barcelona Chronicles'
+!seriesBCChronicles.availableCopies := 2
+!seriesBCChronicles.episode := 4
+
+!new Actor('actorJavierBardem')
+!actorJavierBardem.name := 'Javier Bardem'
+
+!new Actor('actorPenelopeCruz')
+!actorPenelopeCruz.name := 'Penelope Cruz'
+
+!new Actor('actorChloeZhang')
+!actorChloeZhang.name := 'Chloe Zhang'
+
+!insert (martaLopez, rentalMarta) into ClientRental
+!insert (giorgioDiLuca, rentalGiorgio) into ClientRental
+
+!insert (rentalMarta, movieLaViaLactea) into RentalCassette
+!insert (rentalMarta, seriesBCChronicles) into RentalCassette
+!insert (rentalGiorgio, movieDesperadoAction) into RentalCassette
+
+!insert (movieLaViaLactea, actorJavierBardem) into CassetteActor
+!insert (movieLaViaLactea, actorPenelopeCruz) into CassetteActor
+!insert (movieDesperadoAction, actorJavierBardem) into CassetteActor
+!insert (seriesBCChronicles, actorChloeZhang) into CassetteActor

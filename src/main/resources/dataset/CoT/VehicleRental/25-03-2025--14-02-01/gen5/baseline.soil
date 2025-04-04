@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice20')
+!rentalOffice20.name := 'BayArea Rentals'
+!rentalOffice20.number := 505
+!rentalOffice20.address := '742 Bay Street, San Francisco, CA, 94109'
+
+!new Vehicle('vehicle21')
+!vehicle21.id := 38
+!vehicle21.registrationState := #CA
+!vehicle21.licensePlateNumber := 'CA9910HYB'
+!vehicle21.vehicleTypeCode := #TRUCK10
+!vehicle21.registrationLastMaintenanceDate := Date('2023-03-22')
+!vehicle21.expirationDate := Date('2024-03-21')
+
+!new Truck('truck18')
+!truck18.id := 39
+!truck18.registrationState := #CA
+!truck18.licensePlateNumber := 'CA7810RFT'
+!truck18.vehicleTypeCode := #TRUCK
+!truck18.registrationLastMaintenanceDate := Date('2023-09-05')
+!truck18.expirationDate := Date('2024-05-01')
+!truck18.odometerReading := 160000
+!truck18.gasTankCapacity := 55.0
+!truck18.workingRadio := true
+!truck18.mileage := 9
+
+!new Individual('individualCustomer14')
+!individualCustomer14.name := 'Jorge Hernandez'
+!individualCustomer14.address := '100 Forest Hill Drive, Palo Alto, CA, 94301'
+!individualCustomer14.poorRisk := true
+!individualCustomer14.homePhone := '650-321-5678'
+!individualCustomer14.driverLicenseState := #CA
+!individualCustomer14.driverLicenseNumber := 8765432
+!individualCustomer14.driverLicenseExpirationDate := Date('2029-08-30')
+
+!new Company('company17')
+!company17.name := 'FreshFoods Suppliers'
+!company17.address := '888 Market Lane, Oakland, CA, 94607'
+!company17.poorRisk := false
+!company17.idNumber := 505900
+
+!new RentalAgreement('rentalAgreement32')
+!rentalAgreement32.number := 3009
+!rentalAgreement32.rentalDate := Date('2023-09-25')
+!rentalAgreement32.anticipatedDuration := 2
+!rentalAgreement32.depositPaid := 300.00
+!rentalAgreement32.quotedDailyRate := 75.00
+!rentalAgreement32.quotedRatePerMile := 0.22
+
+!new RentalAgreement('rentalAgreement33')
+!rentalAgreement33.number := 3010
+!rentalAgreement33.rentalDate := Date('2023-10-10')
+!rentalAgreement33.anticipatedDuration := 5
+!rentalAgreement33.depositPaid := 1000.00
+!rentalAgreement33.quotedDailyRate := 130.00
+!rentalAgreement33.quotedRatePerMile := 0.55
+
+!insert (rentalOffice20, vehicle21) into RentalOfficeVehicle
+!insert (rentalOffice20, truck18) into RentalOfficeVehicle
+
+!insert (rentalOffice20, rentalAgreement32) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice20, rentalAgreement32) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement32, vehicle21) into RentalAgreementVehicle
+!insert (rentalAgreement32, individualCustomer14) into RentalAgreementCustomer
+
+!insert (rentalOffice20, rentalAgreement33) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice20, rentalAgreement33) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement33, truck18) into RentalAgreementVehicle
+!insert (rentalAgreement33, company17) into RentalAgreementCustomer

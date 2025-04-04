@@ -1,0 +1,53 @@
+!new Client('clientEdge101')
+!clientEdge101.clientId := 101
+!clientEdge101.isSuspended := false
+
+!new Client('clientEdge102')
+!clientEdge102.clientId := 102
+!clientEdge102.isSuspended := true
+
+!new Rental('rentalEdge1')
+!rentalEdge1.date := Date('2023-10-01')
+
+!new Rental('rentalEdge2')
+!rentalEdge2.date := Date('2023-10-01')
+
+!new Movie('cassetteCrouchingTiger')
+!cassetteCrouchingTiger.title := 'Crouching Tiger'
+!cassetteCrouchingTiger.availableCopies := 3
+!cassetteCrouchingTiger.genre := #Action
+
+!new Series('cassetteFinaleFrenzy')
+!cassetteFinaleFrenzy.title := 'Finale Frenzy'
+!cassetteFinaleFrenzy.availableCopies := 1
+!cassetteFinaleFrenzy.episode := 48
+
+!new Movie('cassetteSilentComedy')
+!cassetteSilentComedy.title := 'Silent Comedy'
+!cassetteSilentComedy.availableCopies := 2
+!cassetteSilentComedy.genre := #Comedy
+
+!new Actor('actorJetLi')
+!actorJetLi.name := 'Jet Li'
+
+!new Actor('actorTomHanks')
+!actorTomHanks.name := 'Tom Hanks'
+
+!new Actor('actorJessicaAlba')
+!actorJessicaAlba.name := 'Jessica Alba'
+
+!new Actor('actorCharlieChaplin')
+!actorCharlieChaplin.name := 'Charlie Chaplin'
+
+!insert (clientEdge101, rentalEdge1) into ClientRental
+!insert (clientEdge102, rentalEdge2) into ClientRental
+
+!insert (rentalEdge1, cassetteCrouchingTiger) into RentalCassette
+!insert (rentalEdge1, cassetteFinaleFrenzy) into RentalCassette
+
+!insert (rentalEdge2, cassetteSilentComedy) into RentalCassette
+
+!insert (cassetteCrouchingTiger, actorJetLi) into CassetteActor
+!insert (cassetteFinaleFrenzy, actorTomHanks) into CassetteActor
+!insert (cassetteFinaleFrenzy, actorJessicaAlba) into CassetteActor
+!insert (cassetteSilentComedy, actorCharlieChaplin) into CassetteActor

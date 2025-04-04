@@ -1,0 +1,83 @@
+!new RentalOffice('rentalOffice29')
+!rentalOffice29.name := 'Coastal Rental Solutions'
+!rentalOffice29.number := 212
+!rentalOffice29.address := '321 Ocean Front Walk, Santa Monica, CA 90401'
+
+!new Truck('truck30')
+!truck30.id := 59
+!truck30.registrationState := #CO
+!truck30.licensePlateNumber := 'CRSCA123'
+!truck30.vehicleTypeCode := #TRUCK
+!truck30.registrationLastMaintenanceDate := Date('2023-10-05')
+!truck30.expirationDate := Date('2024-10-05')
+!truck30.odometerReading := 5000
+!truck30.gasTankCapacity := 140.0
+!truck30.workingRadio := true
+!truck30.mileage := 9
+
+!new Vehicle('vehicle30')
+!vehicle30.id := 60
+!vehicle30.registrationState := #CO
+!vehicle30.licensePlateNumber := 'CRSCA456'
+!vehicle30.vehicleTypeCode := #OPEN_TRAILER
+!vehicle30.registrationLastMaintenanceDate := Date('2023-02-14')
+!vehicle30.expirationDate := Date('2025-02-14')
+
+!new Truck('truck31')
+!truck31.id := 61
+!truck31.registrationState := #CO
+!truck31.licensePlateNumber := 'CRSCA789'
+!truck31.vehicleTypeCode := #TRUCK
+!truck31.registrationLastMaintenanceDate := Date('2023-05-20')
+!truck31.expirationDate := Date('2025-05-20')
+!truck31.odometerReading := 0
+!truck31.gasTankCapacity := 130.0
+!truck31.workingRadio := true
+!truck31.mileage := 11
+
+!new RentalAgreement('rentalAgreement49')
+!rentalAgreement49.number := 4001
+!rentalAgreement49.rentalDate := Date('2023-11-10')
+!rentalAgreement49.anticipatedDuration := 7
+!rentalAgreement49.depositPaid := 0.00
+!rentalAgreement49.quotedDailyRate := 90.00
+!rentalAgreement49.quotedRatePerMile := 0.15
+
+!new RentalAgreement('rentalAgreement50')
+!rentalAgreement50.number := 4002
+!rentalAgreement50.rentalDate := Date('2023-12-05')
+!rentalAgreement50.anticipatedDuration := 0
+!rentalAgreement50.depositPaid := 0.00
+!rentalAgreement50.quotedDailyRate := 0.00
+!rentalAgreement50.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer22')
+!individualCustomer22.name := 'Miguel Fernández'
+!individualCustomer22.address := '102 Sunset Strip, Santa Monica, CA 90405'
+!individualCustomer22.poorRisk := false
+!individualCustomer22.homePhone := '(424) 555-0090'
+!individualCustomer22.driverLicenseState := #CO
+!individualCustomer22.driverLicenseNumber := 4501
+!individualCustomer22.driverLicenseExpirationDate := Date('2030-12-01')
+
+!new Company('company25')
+!company25.name := 'Pacific International Shipping'
+!company25.address := '4100 Marina Blvd, Long Beach, CA 90803'
+!company25.poorRisk := false
+!company25.idNumber := 671004
+
+!insert (rentalOffice29, truck30) into RentalOfficeVehicle
+!insert (rentalOffice29, vehicle30) into RentalOfficeVehicle
+!insert (rentalOffice29, truck31) into RentalOfficeVehicle
+
+!insert (rentalOffice29, rentalAgreement49) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice29, rentalAgreement49) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement49, truck30) into RentalAgreementVehicle
+!insert (rentalAgreement49, individualCustomer22) into RentalAgreementCustomer
+
+!insert (rentalOffice29, rentalAgreement50) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice29, rentalAgreement50) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement50, truck31) into RentalAgreementVehicle
+!insert (rentalAgreement50, company25) into RentalAgreementCustomer

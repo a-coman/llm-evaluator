@@ -1,0 +1,80 @@
+!new Restaurant('restaurant2')
+!restaurant2.name := 'Gourmet Feast'
+
+!new Owner('owner3')
+!owner3.name := 'Sophia Chang'
+!owner3.percentageShares := 60
+
+!new Owner('owner4')
+!owner4.name := 'Liam O\'Connor'
+!owner4.percentageShares := 60
+
+!insert (restaurant2, owner3) into RestaurantOwner
+!insert (restaurant2, owner4) into RestaurantOwner
+
+!new Banquet('banquet2')
+!banquet2.date := Date('2023-11-20')
+!banquet2.time := Time('18:00')
+!banquet2.numberPeople := 50
+!banquet2.name := 'The Smiths Celebration'
+!banquet2.phoneNumber := '+44 7911 123456'
+!banquet2.number := 2
+!banquet2.groupName := 'Smith Family'
+!banquet2.paymentMethod := #CreditCard
+!banquet2.busService := true
+
+!insert (restaurant2, banquet2) into RestaurantReservation 
+
+!new Table('table4')
+!table4.number := 101
+!table4.description := 'Large banquet table with oak finish'
+!table4.capacity := 10
+
+!new Table('table5')
+!table5.number := 102
+!table5.description := 'Medium round table near the window'
+!table5.capacity := 8
+
+!insert (banquet2, table4) into ReservationTable
+!insert (banquet2, table5) into ReservationTable
+
+!new BusDriver('busdriver1')
+!busdriver1.name := 'Ahmed Ali'
+!busdriver1.dateOfBirth := Date('1980-07-15')
+!busdriver1.phoneNumber := '+44 7911 109876'
+
+!new BusDriver('busdriver2')
+!busdriver2.name := 'Elena Morales'
+!busdriver2.dateOfBirth := Date('1992-03-22')
+!busdriver2.phoneNumber := '+44 7911 304987'
+
+!new Waiter('waiter3')
+!waiter3.name := 'Carlos Rivera'
+!waiter3.dateOfBirth := Date('1989-05-05')
+!waiter3.phoneNumber := '+44 7911 203456'
+
+!insert (banquet2, waiter3) into ReservationWaiter
+
+!new Chef('chef5')
+!chef5.name := 'Giovanni Russo'
+!chef5.dateOfBirth := Date('1975-12-20')
+!chef5.phoneNumber := '+44 7911 404455'
+
+!new Cook('cook3')
+!cook3.name := 'Marina Kovac'
+!cook3.dateOfBirth := Date('1982-11-15')
+!cook3.phoneNumber := '+44 7911 502432'
+!cook3.yearsOfExperience := 5
+
+!new Cook('cook4')
+!cook4.name := 'Owen Sinclair'
+!cook4.dateOfBirth := Date('1990-08-12')
+!cook4.phoneNumber := '+44 7911 643221'
+!cook4.yearsOfExperience := 3
+
+!insert (chef5, cook3) into ChefCook
+!insert (chef5, cook4) into ChefCook
+
+!insert (banquet2, busdriver1) into BanquetBusDriver
+!insert (banquet2, busdriver2) into BanquetBusDriver
+

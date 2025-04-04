@@ -1,0 +1,71 @@
+!new AddressBook('addressBook4')
+
+!new Company('urbanDevelopersLtd')
+!urbanDevelopersLtd.name := 'Urban Developers Ltd.'
+!urbanDevelopersLtd.phone := '212-555-9000'
+!urbanDevelopersLtd.website := 'www.urbandev.com'
+!urbanDevelopersLtd.email := 'info@urbandev.com'
+!urbanDevelopersLtd.industry := 'Real Estate'
+
+!new Person('michaelJones')
+!michaelJones.name := 'Michael Jones'
+!michaelJones.phone := '555-0123-567'
+!michaelJones.website := 'www.michaeljonesadvisor.com'
+!michaelJones.email := 'michael.jones@urbandev.com'
+!michaelJones.title := 'Senior Real Estate Advisor'
+
+!new Note('propertyMeetingNote')
+!propertyMeetingNote.author := 'Michael Jones'
+!propertyMeetingNote.time := Date('2023-12-28')
+!propertyMeetingNote.type := #MEETING
+!propertyMeetingNote.comment := 'Discuss future property developments in downtown area'
+
+!new Address('michaelAddress')
+!michaelAddress.city := 'Phoenix'
+!michaelAddress.houseNr := '1206'
+!michaelAddress.street := 'Desert Drive'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, urbanDevelopersLtd) into RelationshipToContact
+!insert (michaelJones, bossRelationship) into ContactToRelationship
+!insert (michaelJones, michaelAddress) into ContactContainsAddress
+!insert (michaelJones, propertyMeetingNote) into ContactContainsNote
+
+!new Person('sarahWilson')
+!sarahWilson.name := 'Sarah Wilson'
+!sarahWilson.phone := '666-321-9876'
+!sarahWilson.website := 'www.sarahwilsonconsultancy.com'
+!sarahWilson.email := 'sarah.wilson@example.com'
+!sarahWilson.title := 'Architect'
+
+!new Note('designPresentationNote')
+!designPresentationNote.author := 'Sarah Wilson'
+!designPresentationNote.time := Date('2024-01-05')
+!designPresentationNote.type := #EMAIL
+!designPresentationNote.comment := 'Sent architectural design drafts for the new business park'
+
+!new Address('sarahAddress')
+!sarahAddress.city := 'Charlotte'
+!sarahAddress.houseNr := '389'
+!sarahAddress.street := 'Elm Street'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, michaelJones) into RelationshipToContact
+!insert (sarahWilson, subdivisionRelationship) into ContactToRelationship
+!insert (sarahWilson, sarahAddress) into ContactContainsAddress
+!insert (sarahWilson, designPresentationNote) into ContactContainsNote
+
+!new Address('urbanDevelopersAddress')
+!urbanDevelopersAddress.city := 'Houston'
+!urbanDevelopersAddress.houseNr := '789'
+!urbanDevelopersAddress.street := 'Construction Road'
+
+!insert (urbanDevelopersLtd, urbanDevelopersAddress) into ContactContainsAddress
+
+!insert (addressBook4, urbanDevelopersLtd) into AddressBookMadeOfContact
+!insert (addressBook4, michaelJones) into AddressBookMadeOfContact
+!insert (addressBook4, sarahWilson) into AddressBookMadeOfContact

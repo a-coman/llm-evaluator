@@ -1,0 +1,51 @@
+!new Bank('bank22')
+!bank22.country := 'Spain'
+!bank22.name := 'Santander Bank'
+!bank22.bic := 'BSCHESMM'
+
+!new Account('account61')
+!account61.iban := 'ES9121000418450200051332'
+!account61.balance := 5200
+
+!new Account('account62')
+!account62.iban := 'ES9121000418450200051333'
+!account62.balance := 1800
+
+!new Account('account63')
+!account63.iban := 'ES9121000418450200051334'
+!account63.balance := 7700
+
+!new Person('person65')
+!person65.firstName := 'Antonio'
+!person65.lastName := 'García'
+!person65.age := 36
+
+!new Person('person66')
+!person66.firstName := 'Sofia'
+!person66.lastName := 'Martinez'
+!person66.age := 31
+
+!new Person('person67')
+!person67.firstName := 'Miguel'
+!person67.lastName := 'Torres'
+!person67.age := 39
+
+-- Associations
+!insert (bank22, account61) into AccountOfBanks
+!insert (bank22, account62) into AccountOfBanks
+!insert (bank22, account63) into AccountOfBanks
+
+!insert (person65, account61) into Ownership
+!insert (person66, account61) into Ownership
+
+!insert (person66, account62) into Ownership
+!insert (person67, account62) into Ownership
+
+!insert (person67, account63) into Ownership
+!insert (person65, account63) into Ownership
+
+!insert (person65, account62) into Use
+!insert (person66, account63) into Use
+
+!insert (person67, account61) into Use
+!insert (person66, account61) into Use

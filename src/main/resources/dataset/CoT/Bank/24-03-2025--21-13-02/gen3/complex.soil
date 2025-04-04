@@ -1,0 +1,72 @@
+!new Bank('bank18')
+!bank18.country := 'Canada'
+!bank18.name := 'Maple Leaf Financial'
+!bank18.bic := 'MLFCANCAXXXX'
+
+!new Account('account37')
+!account37.iban := 'CA951234000000045267'
+!account37.balance := 4000
+
+!new Account('account38')
+!account38.iban := 'CA951234000000076543'
+!account38.balance := 15000
+
+!new Account('account39')
+!account39.iban := 'CA951234000000065432'
+!account39.balance := 1000
+
+!new Account('account40')
+!account40.iban := 'CA951234000000098765'
+!account40.balance := 8000
+
+!new Account('account41')
+!account41.iban := 'CA951234000000032176'
+!account41.balance := 25000
+
+!new Person('person51')
+!person51.firstName := 'David'
+!person51.lastName := 'Thompson'
+!person51.age := 50
+
+!new Person('person52')
+!person52.firstName := 'Li'
+!person52.lastName := 'Zhang'
+!person52.age := 27
+
+!new Person('person53')
+!person53.firstName := 'Sofia'
+!person53.lastName := 'Hernandez'
+!person53.age := 32
+
+!new Person('person54')
+!person54.firstName := 'Noah'
+!person54.lastName := 'Smith'
+!person54.age := 22
+
+!new Person('person55')
+!person55.firstName := 'Emily'
+!person55.lastName := 'Jones'
+!person55.age := 45
+
+!insert (person51, account37) into Ownership
+!insert (person53, account37) into Ownership
+!insert (person55, account38) into Ownership
+!insert (person52, account39) into Ownership
+!insert (person53, account40) into Ownership
+!insert (person54, account40) into Ownership
+!insert (person51, account41) into Ownership
+
+!insert (person51, account37) into Use
+!insert (person53, account37) into Use
+!insert (person55, account37) into Use
+!insert (person55, account38) into Use
+!insert (person52, account39) into Use
+!insert (person53, account40) into Use
+!insert (person54, account40) into Use
+!insert (person51, account41) into Use
+
+!insert (bank18, account37) into AccountOfBanks
+!insert (bank18, account38) into AccountOfBanks
+!insert (bank18, account39) into AccountOfBanks
+!insert (bank18, account40) into AccountOfBanks
+!insert (bank18, account41) into AccountOfBanks

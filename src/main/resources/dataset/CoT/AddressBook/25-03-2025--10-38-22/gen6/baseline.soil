@@ -1,0 +1,75 @@
+!new AddressBook('AddressBook_6')
+
+!new Person('Laura_Espinoza')
+!Laura_Espinoza.name := 'Laura Espinoza'
+!Laura_Espinoza.phone := '+34-93-555-3344'
+!Laura_Espinoza.website := 'lauraresearch.net'
+!Laura_Espinoza.email := 'laura.espinoza@barcelonainnovate.es'
+!Laura_Espinoza.title := 'Research Scientist'
+
+!new Address('Address_16')
+!Address_16.city := 'Barcelona'
+!Address_16.houseNr := '76'
+!Address_16.street := 'Gran Via de les Corts Catalanes'
+!insert (Laura_Espinoza, Address_16) into ContactContainsAddress
+
+!new Note('Note_16')
+!Note_16.author := 'Laura Espinoza'
+!Note_16.time := Date('2024-04-15')
+!Note_16.type := #MEETING
+!Note_16.comment := 'Presented findings at the annual renewable energy conference.'
+!insert (Laura_Espinoza, Note_16) into ContactContainsNote
+
+!new Company('Fintech_Innovators')
+!Fintech_Innovators.name := 'Fintech Innovators'
+!Fintech_Innovators.phone := '+65-6222-8899'
+!Fintech_Innovators.website := 'www.fintechinnovators.sg'
+!Fintech_Innovators.email := 'hello@fintechinnovators.sg'
+!Fintech_Innovators.industry := 'Financial Technology'
+
+!new Address('Address_17')
+!Address_17.city := 'Singapore'
+!Address_17.houseNr := '10'
+!Address_17.street := 'Marina Bay Sands'
+!insert (Fintech_Innovators, Address_17) into ContactContainsAddress
+
+!new Note('Note_17')
+!Note_17.author := 'Rohan Kapoor'
+!Note_17.time := Date('2024-05-22')
+!Note_17.type := #CALL
+!Note_17.comment := 'Discussed strategies for implementing blockchain solutions.'
+!insert (Fintech_Innovators, Note_17) into ContactContainsNote
+
+!new Person('Zoe_Ndlovu')
+!Zoe_Ndlovu.name := 'Zoe Ndlovu'
+!Zoe_Ndlovu.phone := '+263-4-777-8888'
+!Zoe_Ndlovu.website := 'zoetechconsulting.co.zw'
+!Zoe_Ndlovu.email := 'zoe.ndlovu@consultingafrica.com'
+!Zoe_Ndlovu.title := 'Technology Consultant'
+
+!new Address('Address_18')
+!Address_18.city := 'Harare'
+!Address_18.houseNr := '101'
+!Address_18.street := 'Samora Machel Avenue'
+!insert (Zoe_Ndlovu, Address_18) into ContactContainsAddress
+
+!new Note('Note_18')
+!Note_18.author := 'Zoe Ndlovu'
+!Note_18.time := Date('2024-06-30')
+!Note_18.type := #EMAIL
+!Note_18.comment := 'Sent a proposal for integrating AI tools in financial services.'
+!insert (Zoe_Ndlovu, Note_18) into ContactContainsNote
+
+!new Relationship('Relationship_12')
+!Relationship_12.type := #COWORKER
+!insert (Zoe_Ndlovu, Relationship_12) into ContactToRelationship
+!insert (Relationship_12, Laura_Espinoza) into RelationshipToContact
+
+!new Relationship('Relationship_13')
+!Relationship_13.type := #SUBDIVISION
+!insert (Zoe_Ndlovu, Relationship_13) into ContactToRelationship
+!insert (Relationship_13, Fintech_Innovators) into RelationshipToContact
+
+!insert (AddressBook_6, Laura_Espinoza) into AddressBookMadeOfContact
+!insert (AddressBook_6, Fintech_Innovators) into AddressBookMadeOfContact
+!insert (AddressBook_6, Zoe_Ndlovu) into AddressBookMadeOfContact

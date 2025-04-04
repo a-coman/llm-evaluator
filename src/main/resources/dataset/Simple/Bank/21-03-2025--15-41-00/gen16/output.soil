@@ -1,0 +1,51 @@
+!new Bank('bank17')
+!bank17.country := 'South Korea'
+!bank17.name := 'Kookmin Bank'
+!bank17.bic := 'KOOKKRSE'
+
+!new Account('account46')
+!account46.iban := 'KR12345678901234567890'
+!account46.balance := 2400
+
+!new Account('account47')
+!account47.iban := 'KR09876543210987654321'
+!account47.balance := 5400
+
+!new Account('account48')
+!account48.iban := 'KR56789012345678901234'
+!account48.balance := 100
+
+!new Person('person50')
+!person50.firstName := 'Hyun'
+!person50.lastName := 'Kim'
+!person50.age := 50
+
+!new Person('person51')
+!person51.firstName := 'Minji'
+!person51.lastName := 'Park'
+!person51.age := 29
+
+!new Person('person52')
+!person52.firstName := 'Jisoo'
+!person52.lastName := 'Lee'
+!person52.age := 41
+
+-- Associations
+!insert (bank17, account46) into AccountOfBanks
+!insert (bank17, account47) into AccountOfBanks
+!insert (bank17, account48) into AccountOfBanks
+
+!insert (person50, account46) into Ownership
+!insert (person51, account46) into Ownership
+
+!insert (person51, account47) into Ownership
+!insert (person52, account47) into Ownership
+
+!insert (person52, account48) into Ownership
+!insert (person50, account48) into Ownership
+
+!insert (person50, account47) into Use
+!insert (person51, account48) into Use
+
+!insert (person52, account46) into Use
+!insert (person51, account46) into Use

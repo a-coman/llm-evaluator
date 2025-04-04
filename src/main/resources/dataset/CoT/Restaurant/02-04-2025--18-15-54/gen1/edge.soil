@@ -1,0 +1,159 @@
+!new Restaurant('restaurant4')
+!restaurant4.name := 'Culinary Mosaic'
+
+!new Owner('owner7')
+!owner7.name := 'Sophia Mendez'
+!owner7.percentageShares := 50
+
+!new Owner('owner8')
+!owner8.name := 'Arjun Patel'
+!owner8.percentageShares := 30
+
+!new Owner('owner9')
+!owner9.name := 'Lina Rossi'
+!owner9.percentageShares := 20
+
+!insert (restaurant4, owner7) into RestaurantOwner
+!insert (restaurant4, owner8) into RestaurantOwner
+!insert (restaurant4, owner9) into RestaurantOwner
+
+!new Table('table9')
+!table9.number := 101
+!table9.description := 'Cozy Corner with a view'
+!table9.capacity := 4
+
+!new Table('table10')
+!table10.number := 102
+!table10.description := 'Open Terrace Seating'
+!table10.capacity := 6
+
+!new Table('table11')
+!table11.number := 103
+!table11.description := 'Private Dining Room'
+!table11.capacity := 40  -- Adjusted to ensure total capacity meets requirement
+
+!new RegularCustomer('customer2')
+!customer2.name := 'Ming Zhao'
+!customer2.prefferedLanguage := #English  -- Assuming #Mandarin is not defined, using #English as a placeholder
+
+!new Chef('chef7')
+!chef7.name := 'Jean-Luc Girard'
+
+!new Cook('cook6')
+!cook6.name := 'Hasan Yilmaz'
+!cook6.dateOfBirth := Date('1980-05-14')  -- Dummy date of birth
+!cook6.yearsOfExperience := 5
+
+!new Cook('cook7')
+!cook7.name := 'Nia Ogawa'
+!cook7.dateOfBirth := Date('1979-02-22')  -- Dummy date of birth
+!cook7.yearsOfExperience := 7
+
+!insert (chef7, cook6) into ChefCook
+!insert (chef7, cook7) into ChefCook
+
+!new MenuItem('menuItem2')
+!menuItem2.description := 'Spicy Tofu Stir-Fry'
+!menuItem2.prepTime := 15.0
+!menuItem2.classification := #Main
+
+!new MenuItem('menuItem3')
+!menuItem3.description := 'Taste of Italy Appetizer Platter'
+!menuItem3.prepTime := 20.0
+!menuItem3.classification := #Apetizer
+
+!insert (menuItem2, chef7) into MenuItemChef
+!insert (menuItem3, chef7) into MenuItemChef
+
+!new FoodItem('foodItem3')
+!foodItem3.number := 301
+!foodItem3.description := 'Chicken Breast'
+!foodItem3.purchaseFlag := true
+!foodItem3.unit := #Pound  -- Assuming #Kilogram is not defined, using #Pound as a placeholder
+
+!new FoodItem('foodItem4')
+!foodItem4.number := 302
+!foodItem4.description := 'Red Chili'
+!foodItem4.purchaseFlag := false
+!foodItem4.unit := #Gram
+
+!new FoodItem('foodItem5')
+!foodItem5.number := 303
+!foodItem5.description := 'Italian Salami'
+!foodItem5.purchaseFlag := true
+!foodItem5.unit := #Gram
+
+!new Allergen('allergen6')
+!allergen6.type := #Gluten
+
+!insert (menuItem2, foodItem3) into MenuItemFoodItem
+!insert (menuItem2, foodItem4) into MenuItemFoodItem
+!insert (menuItem3, foodItem5) into MenuItemFoodItem
+
+!insert (foodItem5, allergen6) into FoodItemAllergen
+
+!new Banquet('banquet4')
+!banquet4.date := Date('2024-05-15')
+!banquet4.time := Time('18:00')
+!banquet4.numberPeople := 50
+!banquet4.name := 'Dr. Emma Wilson'
+!banquet4.phoneNumber := '+44 7123 456789'
+!banquet4.number := 20240515
+!banquet4.paymentMethod := #CreditCard
+!banquet4.busService := true
+
+!insert (restaurant4, banquet4) into RestaurantReservation
+!insert (banquet4, table9) into ReservationTable
+!insert (banquet4, table10) into ReservationTable
+!insert (banquet4, table11) into ReservationTable
+
+!new ItemOrder('itemOrder2')
+!itemOrder2.time := Time('18:30')
+!insert (banquet4, itemOrder2) into ReservationItemOrdered
+
+!insert (itemOrder2, menuItem3) into ItemOrderMenuItem
+
+!new HeadWaiter('headWaiter3')
+!headWaiter3.name := 'Alessio Vitale'
+!headWaiter3.dateOfBirth := Date('1983-04-18')  -- Dummy date of birth
+
+!new Waiter('waiter6')
+!waiter6.name := 'Maria Gonzales'
+!waiter6.dateOfBirth := Date('1991-07-30')  -- Dummy date of birth
+
+!new Waiter('waiter7')
+!waiter7.name := 'Ahmed Khan'
+!waiter7.dateOfBirth := Date('1988-11-05')  -- Dummy date of birth
+
+!new Waiter('waiter8')
+!waiter8.name := 'Lucy Robertson'
+!waiter8.dateOfBirth := Date('1990-02-10')  -- Dummy date of birth
+
+!insert (banquet4, waiter6) into ReservationWaiter
+!insert (banquet4, waiter7) into ReservationWaiter
+!insert (banquet4, waiter8) into ReservationWaiter
+
+!insert (headWaiter3, waiter6) into HeadWaiterWaiter
+!insert (headWaiter3, waiter7) into HeadWaiterWaiter
+!insert (headWaiter3, waiter8) into HeadWaiterWaiter
+
+!new BusDriver('busdriver4')
+!busdriver4.name := 'Ravi Kumar'
+!busdriver4.dateOfBirth := Date('1978-06-09')  -- Dummy date of birth
+
+!new BusDriver('busdriver5')
+!busdriver5.name := 'Nina Forte'
+!busdriver5.dateOfBirth := Date('1982-12-14')  -- Dummy date of birth
+
+!new BusDriver('busdriver6')
+!busdriver6.name := 'Zidane Mohammed'
+!busdriver6.dateOfBirth := Date('1990-03-09')  -- Dummy date of birth
+
+!insert (banquet4, busdriver4) into BanquetBusDriver
+!insert (banquet4, busdriver5) into BanquetBusDriver
+!insert (banquet4, busdriver6) into BanquetBusDriver
+
+!new DietaryRequirement('dietary2')
+!dietary2.diet := #Vegan
+
+!insert (banquet4, customer2) into ReservationCustomer

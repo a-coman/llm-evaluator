@@ -1,0 +1,53 @@
+!new Driver('driver8')
+!driver8.id := 'D008'
+!driver8.name := 'Paul Martinez'
+
+!new Shipment('shipment13')
+!shipment13.id := 'S013'
+!shipment13.status := #UNDERWAY
+
+!new Shipment('shipment14')
+!shipment14.id := 'S014'
+!shipment14.status := #NEW
+
+!new Address('address15')
+!address15.text := '999 Sunset Boulevard'
+
+!new Address('address16')
+!address16.text := '1010 Mountain Path'
+
+!new GeoLocation('geoLocation15')
+!geoLocation15.latitude := 37.7749
+!geoLocation15.longitude := -122.4194
+
+!new GeoLocation('geoLocation16')
+!geoLocation16.latitude := 51.1657
+!geoLocation16.longitude := 10.4515
+
+!new Customer('customer8')
+!customer8.id := 'C008'
+!customer8.name := 'Quinn Perez'
+!customer8.twitterUserName := '@quinn_p'
+
+!new Station('station7')
+
+!insert (driver8, shipment13) into DriverShipment
+
+!insert (shipment13, address15) into ShipmentContainsPickUpAddress
+!insert (shipment13, address16) into ShipmentContainsDeliveryAddress
+
+!insert (shipment14, address16) into ShipmentContainsPickUpAddress
+!insert (shipment14, address15) into ShipmentContainsDeliveryAddress
+
+!insert (address15, geoLocation15) into AddressContainsGeoLocation
+!insert (address16, geoLocation16) into AddressContainsGeoLocation
+
+!insert (customer8, shipment13) into CustomerConsistsOfShipment
+!insert (customer8, shipment14) into CustomerConsistsOfShipment
+
+!insert (station7, customer8) into StationContainsCustomer
+
+!insert (station7, shipment13) into StationShipment
+!insert (station7, shipment14) into StationShipment
+
+!insert (station7, driver8) into StationContainsDriver

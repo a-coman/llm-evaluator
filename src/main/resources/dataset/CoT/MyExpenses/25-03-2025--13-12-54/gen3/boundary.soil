@@ -1,0 +1,32 @@
+!new Expense('minimalTransactionExpense')
+!minimalTransactionExpense.amount := 0.01
+!minimalTransactionExpense.startDate := Date('2023-11-15')
+!minimalTransactionExpense.endDate := Date('2023-11-15')
+
+!new Bill('minimalAmountBill')
+!minimalAmountBill.amount := 0.01
+!minimalAmountBill.category := 'Digital Services'
+!minimalAmountBill.date := Date('2023-11-15')
+!minimalAmountBill.paymentMethod := #CASH
+!minimalAmountBill.status := #REFUSED
+
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!insert (minimalAmountBill, canadianDollar) into BillCurrency
+
+!insert (minimalTransactionExpense, minimalAmountBill) into ExpenseContainsBills
+
+!new Comment('commentMinimalTransaction')
+!commentMinimalTransaction.text := 'Minimal Transaction Test'
+
+!new Comment('commentRefusedTransaction')
+!commentRefusedTransaction.text := 'Refused Due to Insufficient Funds'
+
+!new Comment('commentTimestampAudit')
+!commentTimestampAudit.text := 'Timestamped for Audit'
+
+!insert (minimalTransactionExpense, commentMinimalTransaction) into ExpenseComment
+!insert (minimalTransactionExpense, commentRefusedTransaction) into ExpenseComment
+!insert (minimalTransactionExpense, commentTimestampAudit) into ExpenseComment

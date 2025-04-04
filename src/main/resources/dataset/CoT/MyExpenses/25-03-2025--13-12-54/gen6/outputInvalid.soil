@@ -1,0 +1,47 @@
+!new Currency('euro') 
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Expense('renaissanceArtWorkshopExpense')
+!renaissanceArtWorkshopExpense.amount := 700.00
+!renaissanceArtWorkshopExpense.startDate := Date('2023-10-10')
+!renaissanceArtWorkshopExpense.endDate := Date('2023-10-12')
+
+!new Bill('venueRental')
+!venueRental.amount := 450.00
+!venueRental.category := 'Venue Rental'
+!venueRental.date := Date('2023-10-10')
+!venueRental.paymentMethod := #CHECK
+!venueRental.status := #VERIFIED
+
+!new Bill('promotionalMaterials')
+!promotionalMaterials.amount := 150.00
+!promotionalMaterials.category := 'Promotional Materials'
+!promotionalMaterials.date := Date('2023-10-11')
+!promotionalMaterials.paymentMethod := #CREDIT_CARD
+!promotionalMaterials.status := #REFUNDED
+
+!new Bill('catering')
+!catering.amount := 100.00
+!catering.category := 'Catering'
+!catering.date := Date('2023-10-12')
+!catering.paymentMethod := #CASH
+!catering.status := #PENDING
+
+!insert (venueRental, euro) into BillCurrency
+!insert (promotionalMaterials, euro) into BillCurrency
+!insert (catering, euro) into BillCurrency
+
+!insert (renaissanceArtWorkshopExpense, venueRental) into ExpenseContainsBills
+!insert (renaissanceArtWorkshopExpense, promotionalMaterials) into ExpenseContainsBills
+!insert (renaissanceArtWorkshopExpense, catering) into ExpenseContainsBills
+
+!new Comment('commentVenueAmbiance')
+!commentVenueAmbiance.text := 'Venue choice was exceptional for the ambiance of the period.'
+
+!new Comment('commentPromotionalMaterials')
+!commentPromotionalMaterials.text := 'Promotional materials needed adjustments – refund facilitated revising strategy.'
+
+!insert (renaissanceArtWorkshopExpense, commentVenueAmbiance) into ExpenseComment
+!insert (renaissanceArtWorkshopExpense, commentPromotionalMaterials) into ExpenseComment
+

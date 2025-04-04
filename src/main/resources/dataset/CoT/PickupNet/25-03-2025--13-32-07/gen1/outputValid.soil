@@ -1,0 +1,229 @@
+!new Driver('driver1')
+!driver1.id := 'D001'
+!driver1.name := 'John Martinez'
+
+!new Shipment('shipment1')
+!shipment1.id := 'SHP001'
+!shipment1.status := #ASSIGNED
+
+!new Address('pickupAddress')
+!pickupAddress.text := '123 Elm St, Springfield, IL'
+
+!new GeoLocation('pickupGeoLocation')
+!pickupGeoLocation.latitude := 39.7817
+!pickupGeoLocation.longitude := -89.6501
+
+!new Address('deliveryAddress')
+!deliveryAddress.text := '789 Maple Ave, Chicago, IL'
+
+!new GeoLocation('deliveryGeoLocation')
+!deliveryGeoLocation.latitude := 41.8781
+!deliveryGeoLocation.longitude := -87.6298
+
+!new Station('station1')
+
+!new Customer('customer1')
+!customer1.id := 'CUST001'
+!customer1.name := 'Alice French'
+!customer1.twitterUserName := '@aliceFrenchChi'
+
+!insert (driver1, shipment1) into DriverShipment
+
+!insert (shipment1, pickupAddress) into ShipmentContainsPickUpAddress
+
+!insert (shipment1, deliveryAddress) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress, pickupGeoLocation) into AddressContainsGeoLocation
+
+!insert (deliveryAddress, deliveryGeoLocation) into AddressContainsGeoLocation
+
+!insert (customer1, shipment1) into CustomerConsistsOfShipment
+
+!insert (station1, customer1) into StationContainsCustomer
+
+!insert (station1, shipment1) into StationShipment
+
+!insert (station1, driver1) into StationContainsDriver
+
+!new Driver('driver2')
+!driver2.id := 'DL001'
+!driver2.name := 'Leonie Schmidt'
+
+!new Shipment('shipment2')
+!shipment2.id := 'SH7890'
+!shipment2.status := #NEW
+
+!new Address('pickupAddressEco')
+!pickupAddressEco.text := 'Farmer\'s Market, Ashoka Road, Delhi, India'
+
+!new GeoLocation('pickupGeoLocationEco')
+!pickupGeoLocationEco.latitude := 28.6139
+!pickupGeoLocationEco.longitude := 77.2090
+
+!new Address('deliveryAddressEco')
+!deliveryAddressEco.text := 'O\'Hare International Airport Cargo Terminal, Chicago, Illinois, USA'
+
+!new GeoLocation('deliveryGeoLocationEco')
+!deliveryGeoLocationEco.latitude := 41.9742
+!deliveryGeoLocationEco.longitude := -87.9073
+
+!new Station('station2')
+
+!new Customer('customer2')
+!customer2.id := 'CST345'
+!customer2.name := 'BioGreen International Ltd.'
+!customer2.twitterUserName := '@BioGreenIntl'
+
+!insert (shipment2, pickupAddressEco) into ShipmentContainsPickUpAddress
+
+!insert (shipment2, deliveryAddressEco) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddressEco, pickupGeoLocationEco) into AddressContainsGeoLocation
+
+!insert (deliveryAddressEco, deliveryGeoLocationEco) into AddressContainsGeoLocation
+
+!insert (customer2, shipment2) into CustomerConsistsOfShipment
+
+!insert (station2, customer2) into StationContainsCustomer
+
+!insert (station2, shipment2) into StationShipment
+
+!insert (station2, driver2) into StationContainsDriver
+
+!new Driver('driver3')
+!driver3.id := 'DRV0001'
+!driver3.name := 'Isabela Fernandez'
+
+!new Shipment('shipment3')
+!shipment3.id := 'SHIP001'
+!shipment3.status := #DELIVERED
+
+!new Address('pickupAddress3')
+!pickupAddress3.text := '123 Orchard Avenue, Wellington, New Zealand'
+
+!new GeoLocation('pickupGeoLocation3')
+!pickupGeoLocation3.latitude := -41.28664
+!pickupGeoLocation3.longitude := 174.77557
+
+!new Address('deliveryAddress3')
+!deliveryAddress3.text := '456 Maple Street, Toronto, Canada'
+
+!new GeoLocation('deliveryGeoLocation3')
+!deliveryGeoLocation3.latitude := 43.65107
+!deliveryGeoLocation3.longitude := -79.347015
+
+!new Station('station3')
+
+!new Customer('customer3')
+!customer3.id := 'CUST001'
+!customer3.name := 'Sophia Liang'
+!customer3.twitterUserName := '@sophiaL'
+
+!insert (driver3, shipment3) into DriverShipment
+
+!insert (shipment3, pickupAddress3) into ShipmentContainsPickUpAddress
+
+!insert (shipment3, deliveryAddress3) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress3, pickupGeoLocation3) into AddressContainsGeoLocation
+
+!insert (deliveryAddress3, deliveryGeoLocation3) into AddressContainsGeoLocation
+
+!insert (customer3, shipment3) into CustomerConsistsOfShipment
+
+!insert (station3, customer3) into StationContainsCustomer
+
+!insert (station3, shipment3) into StationShipment
+
+!insert (station3, driver3) into StationContainsDriver
+
+!new Driver('driver5')
+!driver5.id := 'D-001'
+!driver5.name := 'Emma Johnson'
+
+!new Driver('driver6')
+!driver6.id := 'D-002'
+!driver6.name := 'Lucas Garcia'
+
+!new Customer('customer5')
+!customer5.id := 'C-001'
+!customer5.name := 'Olivia Chan'
+!customer5.twitterUserName := '@oliviaC_global'
+
+!new Customer('customer6')
+!customer6.id := 'C-002'
+!customer6.name := 'Rajesh Patel'
+!customer6.twitterUserName := '@rajpatel_ekart'
+
+!new Shipment('shipment5')
+!shipment5.id := 'S-1001'
+!shipment5.status := #NEW
+
+!new Address('pickupAddress5')
+!pickupAddress5.text := '123 Market St, San Francisco, CA, USA'
+
+!new GeoLocation('pickupGeoLocation5')
+!pickupGeoLocation5.latitude := 37.7749
+!pickupGeoLocation5.longitude := -122.4194
+
+!new Address('deliveryAddress5')
+!deliveryAddress5.text := '456 Queen St W, Toronto, ON, Canada'
+
+!new GeoLocation('deliveryGeoLocation5')
+!deliveryGeoLocation5.latitude := 43.6510
+!deliveryGeoLocation5.longitude := -79.3470
+
+!new Shipment('shipment6')
+!shipment6.id := 'S-1002'
+!shipment6.status := #ASSIGNED
+
+!new Address('pickupAddress6')
+!pickupAddress6.text := '789 Park Ave, New York, NY, USA'
+
+!new GeoLocation('pickupGeoLocation6')
+!pickupGeoLocation6.latitude := 40.7128
+!pickupGeoLocation6.longitude := -74.0060
+
+!new Address('deliveryAddress6')
+!deliveryAddress6.text := '65 Oxford Cir, Birmingham, UK'
+
+!new GeoLocation('deliveryGeoLocation6')
+!deliveryGeoLocation6.latitude := 52.4862
+!deliveryGeoLocation6.longitude := -1.8904
+
+!new Station('station5')
+
+!insert (shipment5, pickupAddress5) into ShipmentContainsPickUpAddress
+
+!insert (shipment5, deliveryAddress5) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress5, pickupGeoLocation5) into AddressContainsGeoLocation
+
+!insert (deliveryAddress5, deliveryGeoLocation5) into AddressContainsGeoLocation
+
+!insert (shipment6, pickupAddress6) into ShipmentContainsPickUpAddress
+
+!insert (shipment6, deliveryAddress6) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress6, pickupGeoLocation6) into AddressContainsGeoLocation
+
+!insert (deliveryAddress6, deliveryGeoLocation6) into AddressContainsGeoLocation
+
+!insert (customer5, shipment5) into CustomerConsistsOfShipment
+
+!insert (customer6, shipment6) into CustomerConsistsOfShipment
+
+!insert (driver5, shipment6) into DriverShipment
+
+!insert (station5, shipment5) into StationShipment
+
+!insert (station5, shipment6) into StationShipment
+
+!insert (station5, driver5) into StationContainsDriver
+
+!insert (station5, driver6) into StationContainsDriver
+
+!insert (station5, customer5) into StationContainsCustomer
+
+!insert (station5, customer6) into StationContainsCustomer
+

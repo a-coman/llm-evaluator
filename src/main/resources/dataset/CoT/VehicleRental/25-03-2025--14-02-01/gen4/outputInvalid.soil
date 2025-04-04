@@ -1,0 +1,62 @@
+!new RentalOffice('rentalOffice13')
+!rentalOffice13.name := 'Rapid Response Rentals'
+!rentalOffice13.number := 309
+!rentalOffice13.address := '789 Quick St, Miami, FL'
+
+!new Truck('truck11')
+!truck11.id := 25
+!truck11.registrationState := #FL
+!truck11.licensePlateNumber := 'EMRG001'
+!truck11.vehicleTypeCode := #TRUCK
+!truck11.registrationLastMaintenanceDate := Date('2023-10-05')
+!truck11.expirationDate := Date('2024-03-01')
+!truck11.odometerReading := 0
+!truck11.gasTankCapacity := 0
+!truck11.workingRadio := true
+!truck11.mileage := 0
+
+!new RentalAgreement('rentalAgreement20')
+!rentalAgreement20.number := 4020
+!rentalAgreement20.rentalDate := Date('2023-10-20')
+!rentalAgreement20.anticipatedDuration := 14
+!rentalAgreement20.depositPaid := 1000.00
+!rentalAgreement20.quotedDailyRate := 100.00
+!rentalAgreement20.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement21')
+!rentalAgreement21.number := 4021
+!rentalAgreement21.rentalDate := Date('2023-10-21')
+!rentalAgreement21.anticipatedDuration := 3
+!rentalAgreement21.depositPaid := 500.00
+!rentalAgreement21.quotedDailyRate := 120.00
+!rentalAgreement21.quotedRatePerMile := 0.30
+
+!new Individual('individualCustomer9')
+!individualCustomer9.name := 'Maria Gonzalez'
+!individualCustomer9.address := '123 Bayside Ln, Miami, FL'
+!individualCustomer9.poorRisk := true
+!individualCustomer9.homePhone := '305-555-0111'
+!individualCustomer9.driverLicenseState := #FL
+!individualCustomer9.driverLicenseNumber := 876543
+!individualCustomer9.driverLicenseExpirationDate := Date('2026-02-11')
+
+!new Company('company11')
+!company11.name := 'Event Services Inc.'
+!company11.address := '456 Fest St, Miami, FL'
+!company11.poorRisk := false
+!company11.idNumber := 909
+
+!insert (rentalOffice13, truck11) into RentalOfficeVehicle
+
+!insert (rentalOffice13, rentalAgreement20) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice13, rentalAgreement20) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement20, truck11) into RentalAgreementVehicle
+!insert (rentalAgreement20, individualCustomer9) into RentalAgreementCustomer
+
+!insert (rentalOffice13, rentalAgreement21) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice13, rentalAgreement21) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement21, truck11) into RentalAgreementVehicle
+!insert (rentalAgreement21, company11) into RentalAgreementCustomer
+

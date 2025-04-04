@@ -1,0 +1,46 @@
+!new RentalOffice('rentalOffice3')
+!rentalOffice3.name := 'Deserts Edge Rentals'
+!rentalOffice3.number := 001
+!rentalOffice3.address := '789 Dry Sands Ave, Mojave, CA 93501'
+
+!new Truck('truck2')
+!truck2.id := 3
+!truck2.registrationState := #CA
+!truck2.licensePlateNumber := 'DES127S'
+!truck2.vehicleTypeCode := #TRUCK
+!truck2.registrationLastMaintenanceDate := Date('2023-01-10')
+!truck2.expirationDate := Date('2025-01-10')
+!truck2.odometerReading := 100000
+!truck2.gasTankCapacity := 150.0
+!truck2.workingRadio := true
+!truck2.mileage := 8
+
+!new Vehicle('vehicle2')
+!vehicle2.id := 4
+!vehicle2.registrationState := #CA
+!vehicle2.licensePlateNumber := 'DES128S'
+!vehicle2.vehicleTypeCode := #OPEN_TRAILER
+!vehicle2.registrationLastMaintenanceDate := Date('2023-03-05')
+!vehicle2.expirationDate := Date('2025-03-05')
+
+!new RentalAgreement('rentalAgreement3')
+!rentalAgreement3.number := 4001
+!rentalAgreement3.rentalDate := Date('2023-09-01')
+!rentalAgreement3.anticipatedDuration := 0
+!rentalAgreement3.depositPaid := 0.00
+!rentalAgreement3.quotedDailyRate := 0.00
+!rentalAgreement3.quotedRatePerMile := 0.00
+
+!new Company('company2')
+!company2.name := 'Mojave Construction, Inc.'
+!company2.address := '101 Stoneway Blvd, Lancaster, CA 93536'
+!company2.poorRisk := false
+!company2.idNumber := 92021
+
+!insert (rentalOffice3, truck2) into RentalOfficeVehicle
+!insert (rentalOffice3, vehicle2) into RentalOfficeVehicle
+!insert (rentalOffice3, rentalAgreement3) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice3, rentalAgreement3) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement3, truck2) into RentalAgreementVehicle
+!insert (rentalAgreement3, company2) into RentalAgreementCustomer

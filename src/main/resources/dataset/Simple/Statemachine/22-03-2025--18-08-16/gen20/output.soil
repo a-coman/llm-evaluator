@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine21')
+!stateMachine21.name := 'resourceAllocationMachine'
+
+!new State('state59')
+!state59.name := 'notAllocated'
+
+!new State('state60')
+!state60.name := 'allocated'
+
+!new State('state61')
+!state61.name := 'inUse'
+
+!new State('state62')
+!state62.name := 'released'
+
+!new Transition('transition52')
+!transition52.name := 'allocateResource'
+
+!new Transition('transition53')
+!transition53.name := 'startUsingResource'
+
+!new Transition('transition54')
+!transition54.name := 'releaseResource'
+
+!new Transition('transition55')
+!transition55.name := 'deallocateResource'
+
+!new TimeEvent('event52')
+!event52.time := 8
+
+!new TimeEvent('event53')
+!event53.time := 12
+
+!new TimeEvent('event54')
+!event54.time := 18
+
+!new TimeEvent('event55')
+!event55.time := 25
+
+!insert (stateMachine21, state59) into StateMachineContainsStates
+!insert (stateMachine21, state60) into StateMachineContainsStates
+!insert (stateMachine21, state61) into StateMachineContainsStates
+!insert (stateMachine21, state62) into StateMachineContainsStates
+
+!insert (stateMachine21, transition52) into StateMachineContainsTransitions
+!insert (stateMachine21, transition53) into StateMachineContainsTransitions
+!insert (stateMachine21, transition54) into StateMachineContainsTransitions
+!insert (stateMachine21, transition55) into StateMachineContainsTransitions
+
+!insert (transition52, event52) into TransitionContainsEvents
+!insert (transition53, event53) into TransitionContainsEvents
+!insert (transition54, event54) into TransitionContainsEvents
+!insert (transition55, event55) into TransitionContainsEvents
+
+!insert (state59, transition52) into StateTransition
+!insert (state60, transition53) into StateTransition
+!insert (state61, transition54) into StateTransition
+!insert (state62, transition55) into StateTransition
+
+!insert (transition52, state60) into TransitionState
+!insert (transition53, state61) into TransitionState
+!insert (transition54, state62) into TransitionState
+!insert (transition55, state59) into TransitionState
+
+!insert (stateMachine21, state59) into StateMachineStartsStates

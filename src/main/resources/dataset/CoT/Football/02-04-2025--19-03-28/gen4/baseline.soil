@@ -1,0 +1,212 @@
+!new Club('club31')
+!club31.name := 'Cape Town Eagles'
+!club31.homeGround := 'Cape Town Stadium'
+!club31.chairman := 'Thandiwe Ntuli'
+
+!new Team('teamAH')
+!teamAH.name := 'Cape Town Falcons'
+
+!insert (club31, teamAH) into ClubTeam
+
+!new Player('player35')
+!player35.name := 'Mbulelo Khumalo'
+!player35.age := 24
+!player35.bestFoot := #RIGHT
+!player35.phoneNumber := '+27-21-1234567'
+
+!insert (teamAH, player35) into TeamPlayer
+
+!new Player('player36')
+!player36.name := 'Thando Mokoena'
+!player36.age := 26
+!player36.bestFoot := #LEFT
+!player36.phoneNumber := '+27-21-7654321'
+
+!insert (teamAH, player36) into TeamPlayer
+
+!new Position('position50')
+!position50.positionName := #FORWARD
+
+!new Position('position51')
+!position51.positionName := #MIDFIELDER
+
+!insert (player35, position50) into PlayerPositions
+!insert (player36, position51) into PlayerPositions
+
+!new Competition('competition16')
+!competition16.name := 'African Nations League'
+!competition16.type := 'National Tournament'
+
+!new Match('match16')
+!match16.date := '2023-07-18'
+!match16.homeAway := false
+
+!insert (competition16, match16) into CompetitionMatch
+
+!insert (teamAH, match16) into VisitorMatch
+
+!new Team('teamAI')
+!teamAI.name := 'Lagos Lions'
+
+!new Club('club32')
+!club32.name := 'Lagos Football Club'
+!club32.homeGround := 'Lagos National Stadium'
+!club32.chairman := 'Olusegun Adebayo'
+
+!insert (club32, teamAI) into ClubTeam
+
+!insert (teamAI, match16) into LocalMatch
+
+!new MatchReport('matchReport16')
+!matchReport16.duration := 120
+!matchReport16.scoreVisitor := 3
+!matchReport16.scoreLocal := 3
+
+!insert (match16, matchReport16) into MatchMatchReport
+
+!new MatchEvent('matchEvent59')
+!matchEvent59.eventType := #GOAL
+!matchEvent59.time := 12
+
+!new MatchEvent('matchEvent60')
+!matchEvent60.eventType := #GOAL
+!matchEvent60.time := 25
+
+!new MatchEvent('matchEvent61')
+!matchEvent61.eventType := #GOAL
+!matchEvent61.time := 47
+
+!new MatchEvent('matchEvent62')
+!matchEvent62.eventType := #FOUL
+!matchEvent62.time := 60
+
+!new MatchEvent('matchEvent63')
+!matchEvent63.eventType := #GOAL
+!matchEvent63.time := 90
+
+!new MatchEvent('matchEvent64')
+!matchEvent64.eventType := #GOAL
+!matchEvent64.time := 105
+
+!new MatchEvent('matchEvent65')
+!matchEvent65.eventType := #GOAL
+!matchEvent65.time := 115
+
+!insert (match16, matchEvent59) into MatchMatchEvent
+!insert (match16, matchEvent60) into MatchMatchEvent
+!insert (match16, matchEvent61) into MatchMatchEvent
+!insert (match16, matchEvent62) into MatchMatchEvent
+!insert (match16, matchEvent63) into MatchMatchEvent
+!insert (match16, matchEvent64) into MatchMatchEvent
+!insert (match16, matchEvent65) into MatchMatchEvent
+
+!new MatchNote('matchNote12')
+!matchNote12.note := 'Exciting match that extended to extra time with dramatic goals.'
+!matchNote12.date := '2023-07-18'
+
+!insert (match16, matchNote12) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer22')
+!matchPlayer22.booked := true
+!matchPlayer22.goals := 1
+!matchPlayer22.rating := 8
+
+!insert (player35, matchPlayer22) into PlayerMatch
+!insert (match16, matchPlayer22) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition23')
+!matchPlayerPosition23.positionName := #FORWARD
+!matchPlayerPosition23.number := 7
+
+!insert (matchPlayer22, matchPlayerPosition23) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayer('matchPlayer23')
+!matchPlayer23.booked := false
+!matchPlayer23.goals := 1
+!matchPlayer23.rating := 9
+
+!insert (player36, matchPlayer23) into PlayerMatch
+!insert (match16, matchPlayer23) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition24')
+!matchPlayerPosition24.positionName := #MIDFIELDER
+!matchPlayerPosition24.number := 6
+
+!insert (matchPlayer23, matchPlayerPosition24) into MatchPlayerMatchPlayerPosition
+
+!new Player('player33')
+!player33.name := 'Oluwaseun Adeyemi'
+!player33.age := 29
+!player33.bestFoot := #BOTH
+!player33.phoneNumber := '+234-1-987123'
+
+!new Player('player34')
+!player34.name := 'Nia Amara'
+!player34.age := 22
+!player34.bestFoot := #RIGHT
+!player34.phoneNumber := '+234-1-654321'
+
+!insert (teamAI, player33) into TeamPlayer
+!insert (teamAI, player34) into TeamPlayer
+
+!new Position('position47')
+!position47.positionName := #FORWARD
+
+!new Position('position48')
+!position48.positionName := #MIDFIELDER
+
+!new Position('position49')
+!position49.positionName := #DEFENDER
+
+!insert (player33, position47) into PlayerPositions
+!insert (player33, position48) into PlayerPositions
+!insert (player34, position49) into PlayerPositions
+
+!new PlayerNotes('playerNote23')
+!playerNote23.note := 'Known for strategic play and leadership.'
+!playerNote23.date := '2023-06-15'
+
+!insert (player33, playerNote23) into PlayerPlayerNotes
+
+!new PlayerNotes('playerNote24')
+!playerNote24.note := 'Strong defensive skills with agility on the field.'
+!playerNote24.date := '2023-06-20'
+
+!insert (player34, playerNote24) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective36')
+!trainingObjective36.areaToImprove := 'Passing Accuracy'
+!trainingObjective36.startDate := '2023-05-10'
+!trainingObjective36.endDate := '2023-08-10'
+!trainingObjective36.success := true
+
+!insert (trainingObjective36, player33) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective37')
+!trainingObjective37.areaToImprove := 'Tactical Awareness'
+!trainingObjective37.startDate := '2023-07-01'
+!trainingObjective37.endDate := '2023-09-01'
+!trainingObjective37.success := false
+
+!insert (trainingObjective37, player34) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession28')
+!trainingSession28.date := '2023-06-01'
+!trainingSession28.location := 'Lagos Sports Complex'
+!trainingSession28.purpose := 'Team Coordination'
+
+!insert (teamAI, trainingSession28) into TeamTraining
+
+!insert (teamAH, trainingSession28) into TeamTraining
+
+!new TrainingNotes('trainingNote30')
+!trainingNote30.note := 'Focused on developing team chemistry and intricate passing drills.'
+!trainingNote30.date := '2023-06-01'
+
+!insert (trainingSession28, trainingNote30) into TrainingTrainingNotes
+
+!new TrainingFailedToAttend('failedAttend11')
+!failedAttend11.reason := 'Travel Delay'
+
+!insert (trainingSession28, failedAttend11) into TrainingFailded
+!insert (failedAttend11, player34) into FailedPlayer

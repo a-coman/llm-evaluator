@@ -1,0 +1,154 @@
+!new Club('club33')
+!club33.name := 'Eastern Dragons FC'
+!club33.homeGround := 'Dragon Den'
+!club33.chairman := 'Hiroshi Tanaka'
+
+!new Team('teamAJ')
+!teamAJ.name := 'Dragons Primary'
+
+!insert (club33, teamAJ) into ClubTeam
+
+!new Player('player37')
+!player37.name := 'Amelia Brighton'
+!player37.age := 27
+!player37.bestFoot := #RIGHT
+!player37.phoneNumber := '+61730001010'
+
+!insert (teamAJ, player37) into TeamPlayer
+
+!new Position('position52')
+!position52.positionName := #GOALKEEPER
+
+!new Position('position53')
+!position53.positionName := #MIDFIELDER
+
+!new Position('position54')
+!position54.positionName := #FORWARD
+
+!insert (player37, position52) into PlayerPositions
+!insert (player37, position53) into PlayerPositions
+!insert (player37, position54) into PlayerPositions
+
+!new PlayerNotes('playerNote25')
+!playerNote25.note := 'Exceptional footwork and versatility in positions.'
+!playerNote25.date := '2023-06-15'
+
+!new PlayerNotes('playerNote26')
+!playerNote26.note := 'Recommended for leadership roles on the field.'
+!playerNote26.date := '2023-06-30'
+
+!new PlayerNotes('playerNote27')
+!playerNote27.note := 'Needs to develop defensive skills.'
+!playerNote27.date := '2023-07-01'
+
+!insert (player37, playerNote25) into PlayerPlayerNotes
+!insert (player37, playerNote26) into PlayerPlayerNotes
+!insert (player37, playerNote27) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective38')
+!trainingObjective38.areaToImprove := 'Passing accuracy'
+!trainingObjective38.startDate := '2023-05-01'
+!trainingObjective38.endDate := '2023-06-01'
+!trainingObjective38.success := true
+
+!new TrainingObjective('trainingObjective39')
+!trainingObjective39.areaToImprove := 'Shooting technique'
+!trainingObjective39.startDate := '2023-06-02'
+!trainingObjective39.endDate := '2023-07-02'
+!trainingObjective39.success := false
+
+!new TrainingObjective('trainingObjective40')
+!trainingObjective40.areaToImprove := 'Endurance under fatigue'
+!trainingObjective40.startDate := '2023-07-03'
+!trainingObjective40.endDate := '2023-08-03'
+!trainingObjective40.success := true
+
+!insert (trainingObjective38, player37) into TrainingObjectivePlayer
+!insert (trainingObjective39, player37) into TrainingObjectivePlayer
+!insert (trainingObjective40, player37) into TrainingObjectivePlayer
+
+!new Competition('competition17')
+!competition17.name := 'Summer Invitational'
+!competition17.type := 'Exhibition'
+
+!new Match('match17')
+!match17.date := '2023-09-10'
+!match17.homeAway := true
+
+!insert (competition17, match17) into CompetitionMatch
+
+!insert (teamAJ, match17) into LocalMatch
+
+!new Team('teamAK')
+!teamAK.name := 'Western Wolves'
+
+!new Club('club34')
+!club34.name := 'Wolves United'
+!club34.homeGround := 'Wolf Arena'
+!club34.chairman := 'Liam Howl'
+
+!insert (club34, teamAK) into ClubTeam
+
+!new Player('player38')
+!player38.name := 'Jordan Chase'
+!player38.age := 28
+!player38.bestFoot := #LEFT
+!player38.phoneNumber := '+61740002222'
+
+!insert (teamAK, player38) into TeamPlayer
+
+!new Position('position55')
+!position55.positionName := #DEFENDER
+
+!insert (player38, position55) into PlayerPositions
+
+!new TrainingObjective('trainingObjective41')
+!trainingObjective41.areaToImprove := 'Tactical Defense'
+!trainingObjective41.startDate := '2023-04-01'
+!trainingObjective41.endDate := '2023-04-30'
+!trainingObjective41.success := false
+
+!insert (trainingObjective41, player38) into TrainingObjectivePlayer
+
+!new TrainingSession('trainingSession30')
+!trainingSession30.date := '2023-08-20'
+!trainingSession30.location := 'Wolf Arena Training Grounds'
+!trainingSession30.purpose := 'Defensive Formations'
+
+!insert (teamAK, trainingSession30) into TeamTraining
+
+!insert (teamAK, match17) into VisitorMatch
+
+!new MatchReport('matchReport17')
+!matchReport17.duration := 90
+!matchReport17.scoreVisitor := 0
+!matchReport17.scoreLocal := 0
+
+!insert (match17, matchReport17) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer24')
+!matchPlayer24.booked := false
+!matchPlayer24.goals := 0
+!matchPlayer24.rating := 7
+
+!insert (player37, matchPlayer24) into PlayerMatch
+!insert (match17, matchPlayer24) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition25')
+!matchPlayerPosition25.positionName := #MIDFIELDER
+!matchPlayerPosition25.number := 6
+
+!insert (matchPlayer24, matchPlayerPosition25) into MatchPlayerMatchPlayerPosition
+
+!new TrainingSession('trainingSession29')
+!trainingSession29.date := '2023-09-08'
+!trainingSession29.location := 'Dragon Den Training Facility'
+!trainingSession29.purpose := 'Focus on team cohesion'
+
+!insert (teamAJ, trainingSession29) into TeamTraining
+
+!new TrainingNotes('trainingNote31')
+!trainingNote31.note := 'Worked on team dynamics, practice drills emphasizing speed.'
+!trainingNote31.date := '2023-09-08'
+
+!insert (trainingSession29, trainingNote31) into TrainingTrainingNotes

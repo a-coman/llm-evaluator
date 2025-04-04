@@ -1,0 +1,59 @@
+!new Client('carlosDaSilva')
+!carlosDaSilva.clientId := 601
+!carlosDaSilva.isSuspended := false
+
+!new Client('marianaOliveira')
+!marianaOliveira.clientId := 602
+!marianaOliveira.isSuspended := true
+
+!new Rental('rentalCarlos1')
+!rentalCarlos1.date := Date('2023-06-10')
+
+!new Rental('rentalCarlos2')
+!rentalCarlos2.date := Date('2023-06-15')
+
+!new Rental('rentalMariana')
+!rentalMariana.date := Date('2023-06-20')
+
+!new Movie('cassetteCidadeDasLuzes')
+!cassetteCidadeDasLuzes.title := 'Cidade das Luzes'
+!cassetteCidadeDasLuzes.availableCopies := 7
+!cassetteCidadeDasLuzes.genre := #Action
+
+!new Movie('cassetteCarnavalCarioca')
+!cassetteCarnavalCarioca.title := 'Carnaval Carioca'
+!cassetteCarnavalCarioca.availableCopies := 6
+!cassetteCarnavalCarioca.genre := #Comedy
+
+!new Series('cassetteAmazonChronicles')
+!cassetteAmazonChronicles.title := 'The Amazon Chronicles'
+!cassetteAmazonChronicles.availableCopies := 3
+!cassetteAmazonChronicles.episode := 12
+
+!new Actor('actorWagnerMoura')
+!actorWagnerMoura.name := 'Wagner Moura'
+
+!new Actor('actorFernandaMontenegro')
+!actorFernandaMontenegro.name := 'Fernanda Montenegro'
+
+!new Actor('actorAliceBraga')
+!actorAliceBraga.name := 'Alice Braga'
+
+!new Actor('actorRodrigoSantoro')
+!actorRodrigoSantoro.name := 'Rodrigo Santoro'
+
+!insert (carlosDaSilva, rentalCarlos1) into ClientRental
+!insert (carlosDaSilva, rentalCarlos2) into ClientRental
+!insert (marianaOliveira, rentalMariana) into ClientRental
+
+!insert (rentalCarlos1, cassetteCidadeDasLuzes) into RentalCassette
+!insert (rentalCarlos2, cassetteAmazonChronicles) into RentalCassette
+!insert (rentalMariana, cassetteCarnavalCarioca) into RentalCassette
+
+!insert (cassetteCidadeDasLuzes, actorWagnerMoura) into CassetteActor
+!insert (cassetteCidadeDasLuzes, actorAliceBraga) into CassetteActor
+
+!insert (cassetteCarnavalCarioca, actorRodrigoSantoro) into CassetteActor
+!insert (cassetteCarnavalCarioca, actorFernandaMontenegro) into CassetteActor
+
+!insert (cassetteAmazonChronicles, actorFernandaMontenegro) into CassetteActor

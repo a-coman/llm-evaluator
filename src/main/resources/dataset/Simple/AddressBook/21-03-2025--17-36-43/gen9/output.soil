@@ -1,0 +1,71 @@
+!new AddressBook('addressBook9')
+
+!new Company('digitalArtsCo')
+!digitalArtsCo.name := 'Digital Arts Co'
+!digitalArtsCo.phone := '888-444-2222'
+!digitalArtsCo.website := 'www.digitalartsco.com'
+!digitalArtsCo.email := 'info@digitalarts.com'
+!digitalArtsCo.industry := 'Creative Design'
+
+!new Person('sophieAnderson')
+!sophieAnderson.name := 'Sophie Anderson'
+!sophieAnderson.phone := '101-202-3030'
+!sophieAnderson.website := 'www.sophieandersondesigns.com'
+!sophieAnderson.email := 'sophie.anderson@digitalarts.com'
+!sophieAnderson.title := 'Art Director'
+
+!new Note('artReviewNote')
+!artReviewNote.author := 'Sophie Anderson'
+!artReviewNote.time := Date('2024-05-05')
+!artReviewNote.type := #MEETING
+!artReviewNote.comment := 'Conducted art strategy review with design team'
+
+!new Address('sophieAddress')
+!sophieAddress.city := 'San Francisco'
+!sophieAddress.houseNr := '4567'
+!sophieAddress.street := 'Creative Way'
+
+!new Relationship('bossRelationship')
+!bossRelationship.type := #BOSS
+
+!insert (bossRelationship, digitalArtsCo) into RelationshipToContact
+!insert (sophieAnderson, bossRelationship) into ContactToRelationship
+!insert (sophieAnderson, sophieAddress) into ContactContainsAddress
+!insert (sophieAnderson, artReviewNote) into ContactContainsNote
+
+!new Person('ethanMartinez')
+!ethanMartinez.name := 'Ethan Martinez'
+!ethanMartinez.phone := '404-505-6060'
+!ethanMartinez.website := 'www.ethanmartinezgraphics.com'
+!ethanMartinez.email := 'ethan.martinez@example.com'
+!ethanMartinez.title := 'Graphic Illustrator'
+
+!new Note('projectUpdateNote')
+!projectUpdateNote.author := 'Ethan Martinez'
+!projectUpdateNote.time := Date('2024-05-10')
+!projectUpdateNote.type := #EMAIL
+!projectUpdateNote.comment := 'Sent project update to stakeholders'
+
+!new Address('ethanAddress')
+!ethanAddress.city := 'Los Angeles'
+!ethanAddress.houseNr := '7890'
+!ethanAddress.street := 'Artistic Avenue'
+
+!new Relationship('coworkerRelationship')
+!coworkerRelationship.type := #COWORKER
+
+!insert (coworkerRelationship, sophieAnderson) into RelationshipToContact
+!insert (ethanMartinez, coworkerRelationship) into ContactToRelationship
+!insert (ethanMartinez, ethanAddress) into ContactContainsAddress
+!insert (ethanMartinez, projectUpdateNote) into ContactContainsNote
+
+!new Address('digitalArtsAddress')
+!digitalArtsAddress.city := 'New York'
+!digitalArtsAddress.houseNr := '222'
+!digitalArtsAddress.street := 'Design Blvd'
+
+!insert (digitalArtsCo, digitalArtsAddress) into ContactContainsAddress
+
+!insert (addressBook9, digitalArtsCo) into AddressBookMadeOfContact
+!insert (addressBook9, sophieAnderson) into AddressBookMadeOfContact
+!insert (addressBook9, ethanMartinez) into AddressBookMadeOfContact

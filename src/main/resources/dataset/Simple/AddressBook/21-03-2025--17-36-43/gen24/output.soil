@@ -1,0 +1,71 @@
+!new AddressBook('addressBook24')
+
+!new Company('nextGenRobotics')
+!nextGenRobotics.name := 'NextGen Robotics'
+!nextGenRobotics.phone := '777-888-9990'
+!nextGenRobotics.website := 'www.nextgenrobotics.com'
+!nextGenRobotics.email := 'info@nextgenrobotics.com'
+!nextGenRobotics.industry := 'Robotics & Automation'
+
+!new Person('oliverJames')
+!oliverJames.name := 'Oliver James'
+!oliverJames.phone := '888-444-1122'
+!oliverJames.website := 'www.oliverjamesengineering.com'
+!oliverJames.email := 'oliver.james@nextgenrobotics.com'
+!oliverJames.title := 'Robotics Engineer'
+
+!new Note('innovationWorkshopNote')
+!innovationWorkshopNote.author := 'Oliver James'
+!innovationWorkshopNote.time := Date('2025-08-05')
+!innovationWorkshopNote.type := #MEETING
+!innovationWorkshopNote.comment := 'Conducted a workshop on the latest robotics innovations'
+
+!new Address('oliverAddress')
+!oliverAddress.city := 'San Jose'
+!oliverAddress.houseNr := '156'
+!oliverAddress.street := 'Innovation Drive'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, nextGenRobotics) into RelationshipToContact
+!insert (oliverJames, employeeRelationship) into ContactToRelationship
+!insert (oliverJames, oliverAddress) into ContactContainsAddress
+!insert (oliverJames, innovationWorkshopNote) into ContactContainsNote
+
+!new Person('sarahLee')
+!sarahLee.name := 'Sarah Lee'
+!sarahLee.phone := '444-555-6677'
+!sarahLee.website := 'www.sarahleedevelopment.com'
+!sarahLee.email := 'sarah.lee@example.com'
+!sarahLee.title := 'Software Developer'
+
+!new Note('codingSprintNote')
+!codingSprintNote.author := 'Sarah Lee'
+!codingSprintNote.time := Date('2025-08-12')
+!codingSprintNote.type := #CALL
+!codingSprintNote.comment := 'Led a coding sprint for the new robotics software platform'
+
+!new Address('sarahAddress')
+!sarahAddress.city := 'Palo Alto'
+!sarahAddress.houseNr := '321'
+!sarahAddress.street := 'Tech Valley Rd'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, oliverJames) into RelationshipToContact
+!insert (sarahLee, subdivisionRelationship) into ContactToRelationship
+!insert (sarahLee, sarahAddress) into ContactContainsAddress
+!insert (sarahLee, codingSprintNote) into ContactContainsNote
+
+!new Address('nextGenAddress')
+!nextGenAddress.city := 'Mountain View'
+!nextGenAddress.houseNr := '404'
+!nextGenAddress.street := 'Automation Lane'
+
+!insert (nextGenRobotics, nextGenAddress) into ContactContainsAddress
+
+!insert (addressBook24, nextGenRobotics) into AddressBookMadeOfContact
+!insert (addressBook24, oliverJames) into AddressBookMadeOfContact
+!insert (addressBook24, sarahLee) into AddressBookMadeOfContact

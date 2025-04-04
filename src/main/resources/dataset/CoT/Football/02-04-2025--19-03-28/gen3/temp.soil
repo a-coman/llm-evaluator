@@ -1,0 +1,188 @@
+!new Club('club38')
+!club38.name := 'Global Rangers FC'
+!club38.homeGround := 'Universal Dome'
+!club38.chairman := 'Dr. Lydia Globetrotter'
+
+!new Team('teamAO')
+!teamAO.name := 'Rangers Elite'
+
+!new Team('teamAP')
+!teamAP.name := 'Globetrot Warriors'
+
+!insert (club38, teamAO) into ClubTeam
+!insert (club38, teamAP) into ClubTeam
+
+!new Competition('competition19')
+!competition19.name := 'World Club Championship'
+!competition19.type := 'International'
+
+!new TrainingSession('trainingSession33')
+!trainingSession33.date := '2023-07-10'
+!trainingSession33.location := 'Globetrot Training Complex'
+!trainingSession33.purpose := 'Emergency Strategy Assessment'
+
+!new TrainingNotes('trainingNote33')
+!trainingNote33.note := 'Simulate unexpected match disruptions'
+!trainingNote33.date := '2023-07-10'
+
+!new TrainingNotes('trainingNote34')
+!trainingNote34.note := 'Evaluate team response to incomplete drills'
+!trainingNote34.date := '2023-07-10'
+
+!insert (trainingSession33, trainingNote33) into TrainingTrainingNotes
+!insert (trainingSession33, trainingNote34) into TrainingTrainingNotes
+
+!insert (teamAO, trainingSession33) into TeamTraining
+!insert (teamAP, trainingSession33) into TeamTraining
+
+!new TrainingFailedToAttend('failedAttend13')
+!failedAttend13.reason := 'Unexpected team emergency exercise invoked'
+
+!insert (trainingSession33, failedAttend13) into TrainingFailded
+
+!new Player('player41')
+!player41.name := 'Max Venture'
+!player41.age := 29
+!player41.bestFoot := #LEFT
+!player41.phoneNumber := '+447654321098'
+
+!insert (teamAO, player41) into TeamPlayer
+
+!new Player('player42')
+!player42.name := 'Sam Journey'
+!player42.age := 25
+!player42.bestFoot := #RIGHT
+!player42.phoneNumber := '+447655443322'
+
+!insert (teamAP, player42) into TeamPlayer
+
+!new PlayerNotes('playerNote29')
+!playerNote29.note := 'Demonstrated exceptional crisis management skills'
+!playerNote29.date := '2023-06-25'
+
+!insert (player41, playerNote29) into PlayerPlayerNotes
+
+!new TrainingObjective('trainingObjective43')
+!trainingObjective43.areaToImprove := 'Penalty kicks under stress'
+!trainingObjective43.startDate := '2023-06-01'
+!trainingObjective43.endDate := '2023-06-30'
+!trainingObjective43.success := false
+
+!new TrainingObjective('trainingObjective44')
+!trainingObjective44.areaToImprove := 'Midfield coordination'
+!trainingObjective44.startDate := '2023-06-15'
+!trainingObjective44.endDate := '2023-07-15'
+!trainingObjective44.success := true
+
+!insert (trainingObjective43, player41) into TrainingObjectivePlayer
+!insert (trainingObjective44, player41) into TrainingObjectivePlayer
+
+!new TrainingObjective('trainingObjective45')
+!trainingObjective45.areaToImprove := 'Defensive positioning'
+!trainingObjective45.startDate := '2023-06-01'
+!trainingObjective45.endDate := '2023-06-30'
+!trainingObjective45.success := true
+
+!insert (trainingObjective45, player42) into TrainingObjectivePlayer
+
+!new Position('position59')
+!position59.positionName := #DEFENDER
+
+!new Position('position60')
+!position60.positionName := #MIDFIELDER
+
+!new Position('position61')
+!position61.positionName := #FORWARD
+
+!insert (player41, position59) into PlayerPositions
+!insert (player41, position60) into PlayerPositions
+!insert (player42, position61) into PlayerPositions
+
+!new Match('match19')
+!match19.date := '2023-08-05'
+!match19.homeAway := true
+
+!insert (competition19, match19) into CompetitionMatch
+
+!insert (teamAO, match19) into LocalMatch
+!insert (teamAP, match19) into VisitorMatch
+
+!new MatchReport('matchReport19')
+!matchReport19.duration := 90
+!matchReport19.scoreVisitor := 2
+!matchReport19.scoreLocal := 2
+
+!insert (match19, matchReport19) into MatchMatchReport
+
+!new MatchEvent('matchEvent68')
+!matchEvent68.eventType := #GOAL
+!matchEvent68.time := 12
+
+!new MatchEvent('matchEvent69')
+!matchEvent69.eventType := #FOUL
+!matchEvent69.time := 22
+
+!new MatchEvent('matchEvent70')
+!matchEvent70.eventType := #CAUTION
+!matchEvent70.time := 28
+
+!new MatchEvent('matchEvent71')
+!matchEvent71.eventType := #CAUTION
+!matchEvent71.time := 33
+
+!new MatchEvent('matchEvent72')
+!matchEvent72.eventType := #CAUTION
+!matchEvent72.time := 42
+
+!new MatchEvent('matchEvent73')
+!matchEvent73.eventType := #GOAL
+!matchEvent73.time := 44
+
+!new MatchEvent('matchEvent74')
+!matchEvent74.eventType := #CAUTION
+!matchEvent74.time := 50
+
+!new MatchEvent('matchEvent75')
+!matchEvent75.eventType := #SUBSTITUTE
+!matchEvent75.time := 60
+
+!new MatchEvent('matchEvent76')
+!matchEvent76.eventType := #FOUL
+!matchEvent76.time := 68
+
+!new MatchEvent('matchEvent77')
+!matchEvent77.eventType := #CAUTION
+!matchEvent77.time := 78
+
+!insert (match19, matchEvent68) into MatchMatchEvent
+!insert (match19, matchEvent69) into MatchMatchEvent
+!insert (match19, matchEvent70) into MatchMatchEvent
+!insert (match19, matchEvent71) into MatchMatchEvent
+!insert (match19, matchEvent72) into MatchMatchEvent
+!insert (match19, matchEvent73) into MatchMatchEvent
+!insert (match19, matchEvent74) into MatchMatchEvent
+!insert (match19, matchEvent75) into MatchMatchEvent
+!insert (match19, matchEvent76) into MatchMatchEvent
+!insert (match19, matchEvent77) into MatchMatchEvent
+
+!new MatchNote('matchNote14')
+!matchNote14.note := 'Intense match with record-breaking number of bookings'
+!matchNote14.date := '2023-08-05'
+
+!insert (match19, matchNote14) into MatchMatchNote
+
+!new MatchPlayer('matchPlayer26')
+!matchPlayer26.booked := true
+!matchPlayer26.goals := 1
+!matchPlayer26.rating := 6
+
+!insert (player41, matchPlayer26) into PlayerMatch
+!insert (match19, matchPlayer26) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition27')
+!matchPlayerPosition27.positionName := #DEFENDER
+!matchPlayerPosition27.number := 4
+
+!insert (matchPlayer26, matchPlayerPosition27) into MatchPlayerMatchPlayerPosition
+
+!insert (failedAttend13, player41) into FailedPlayer

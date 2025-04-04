@@ -1,0 +1,48 @@
+!new Bank('bank5')
+!bank5.country := 'Japan'
+!bank5.name := 'Mitsubishi UFJ Financial Group'
+!bank5.bic := 'BOTKJPJT'
+
+!new Account('account11')
+!account11.iban := 'JP123456789012345'
+!account11.balance := 3500
+
+!new Account('account12')
+!account12.iban := 'JP543210987654321'
+!account12.balance := 500
+
+!new Person('person13')
+!person13.firstName := 'Yuuto'
+!person13.lastName := 'Tanaka'
+!person13.age := 33
+
+!new Person('person14')
+!person14.firstName := 'Hana'
+!person14.lastName := 'Sato'
+!person14.age := 21
+
+!new Person('person15')
+!person15.firstName := 'Kaito'
+!person15.lastName := 'Matsumoto'
+!person15.age := 45
+
+!new Person('person16')
+!person16.firstName := 'Yuki'
+!person16.lastName := 'Miyazaki'
+!person16.age := 38
+
+-- Associations
+!insert (bank5, account11) into AccountOfBanks
+!insert (bank5, account12) into AccountOfBanks
+
+!insert (person13, account11) into Ownership
+!insert (person14, account11) into Ownership
+
+!insert (person15, account12) into Ownership
+
+!insert (person16, account12) into Ownership
+
+!insert (person13, account12) into Use
+!insert (person14, account12) into Use
+!insert (person15, account11) into Use
+!insert (person16, account11) into Use

@@ -1,0 +1,55 @@
+!new Client('client301')
+!client301.clientId := 301
+!client301.isSuspended := false
+
+!new Client('client302')
+!client302.clientId := 302
+!client302.isSuspended := true
+
+!new Client('client303')
+!client303.clientId := 303
+!client303.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-08-12')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-25')
+
+!new Movie('movieEspionajeLluvia')
+!movieEspionajeLluvia.title := 'El Espionaje en la Lluvia'
+!movieEspionajeLluvia.availableCopies := 2
+!movieEspionajeLluvia.genre := #Action
+
+!new Series('seriesFablesFarEast')
+!seriesFablesFarEast.title := 'Fables of the Far East'
+!seriesFablesFarEast.availableCopies := 4
+!seriesFablesFarEast.episode := 5
+
+!new Movie('movieVintageLaughter')
+!movieVintageLaughter.title := 'Vintage Laughter'
+!movieVintageLaughter.availableCopies := 10
+!movieVintageLaughter.genre := #Comedy
+
+!new Actor('actorLolaEstrada')
+!actorLolaEstrada.name := 'Lola Estrada'
+
+!new Actor('actorCarlosMartinez')
+!actorCarlosMartinez.name := 'Carlos Martinez'
+
+!new Actor('actorAkiraYamato')
+!actorAkiraYamato.name := 'Akira Yamato'
+
+!new Actor('actorMonaHalden')
+!actorMonaHalden.name := 'Mona Halden'
+
+!insert (client301, rental1) into ClientRental
+!insert (client303, rental2) into ClientRental
+
+!insert (rental1, movieEspionajeLluvia) into RentalCassette
+!insert (rental2, seriesFablesFarEast) into RentalCassette
+
+!insert (movieEspionajeLluvia, actorLolaEstrada) into CassetteActor
+!insert (movieEspionajeLluvia, actorCarlosMartinez) into CassetteActor
+!insert (seriesFablesFarEast, actorAkiraYamato) into CassetteActor
+!insert (movieVintageLaughter, actorMonaHalden) into CassetteActor

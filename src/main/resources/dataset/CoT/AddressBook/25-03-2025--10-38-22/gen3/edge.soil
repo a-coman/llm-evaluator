@@ -1,0 +1,106 @@
+!new AddressBook('Education_Exchange_Program')
+
+!new Company('Oxford_International_University')
+!Oxford_International_University.name := 'Oxford International University'
+!Oxford_International_University.phone := '+44 1865 270000'
+!Oxford_International_University.website := 'www.oxfordintuni.edu'
+!Oxford_International_University.email := 'contact@oxfordintuni.edu'
+!Oxford_International_University.industry := 'Higher Education'
+
+!new Address('Address_Oxford')
+!Address_Oxford.city := 'Oxford'
+!Address_Oxford.houseNr := '1'
+!Address_Oxford.street := 'High Street'
+!insert (Oxford_International_University, Address_Oxford) into ContactContainsAddress
+
+!new Address('Address_Dubai')
+!Address_Dubai.city := 'Dubai'
+!Address_Dubai.houseNr := '45'
+!Address_Dubai.street := 'Education City'
+!insert (Oxford_International_University, Address_Dubai) into ContactContainsAddress
+
+!new Note('Note_1_Oxford_International_University')
+!Note_1_Oxford_International_University.author := 'Dr. Emily Watson'
+!Note_1_Oxford_International_University.time := Date('2023-07-12')
+!Note_1_Oxford_International_University.type := #EMAIL
+!Note_1_Oxford_International_University.comment := 'Discuss collaborations for international student exchange.'
+!insert (Oxford_International_University, Note_1_Oxford_International_University) into ContactContainsNote
+
+!new Note('Note_2_Oxford_International_University')
+!Note_2_Oxford_International_University.author := 'Ali Hussain'
+!Note_2_Oxford_International_University.time := Date('2023-09-05')
+!Note_2_Oxford_International_University.type := #CALL
+!Note_2_Oxford_International_University.comment := 'Details of the scholarship program for the new academic year.'
+!insert (Oxford_International_University, Note_2_Oxford_International_University) into ContactContainsNote
+
+!new Company('Shanghai_High_School_of_Arts')
+!Shanghai_High_School_of_Arts.name := 'Shanghai High School of Arts'
+!Shanghai_High_School_of_Arts.phone := '+86 21 6789 1011'
+!Shanghai_High_School_of_Arts.website := 'www.shanghaiarts.edu.cn'
+!Shanghai_High_School_of_Arts.email := 'info@shanghaiarts.edu.cn'
+!Shanghai_High_School_of_Arts.industry := 'Secondary Education'
+
+!new Address('Address_Shanghai')
+!Address_Shanghai.city := 'Shanghai'
+!Address_Shanghai.houseNr := '128'
+!Address_Shanghai.street := 'Future Avenue'
+!insert (Shanghai_High_School_of_Arts, Address_Shanghai) into ContactContainsAddress
+
+!new Note('Note_Shanghai_High_School_of_Arts')
+!Note_Shanghai_High_School_of_Arts.author := 'Liu Chen'
+!Note_Shanghai_High_School_of_Arts.time := Date('2023-08-10')
+!Note_Shanghai_High_School_of_Arts.type := #MEETING
+!Note_Shanghai_High_School_of_Arts.comment := 'Organizing a joint cultural festival with Oxford International University.'
+!insert (Shanghai_High_School_of_Arts, Note_Shanghai_High_School_of_Arts) into ContactContainsNote
+
+!new Person('Federico_Gillespie')
+!Federico_Gillespie.name := 'Federico Gillespie'
+!Federico_Gillespie.phone := '+54 11 2345 6789'
+!Federico_Gillespie.website := 'www.federicogillespie.com'
+!Federico_Gillespie.email := 'federico.gillespie@oxfordintuni.edu'
+!Federico_Gillespie.title := 'Coordinator of International Partnerships'
+
+!new Address('Address_Buenos_Aires')
+!Address_Buenos_Aires.city := 'Buenos Aires'
+!Address_Buenos_Aires.houseNr := '230'
+!Address_Buenos_Aires.street := 'Knowledge Lane'
+!insert (Federico_Gillespie, Address_Buenos_Aires) into ContactContainsAddress
+
+!new Address('Address_Oxford_Coordinator')
+!Address_Oxford_Coordinator.city := 'Oxford'
+!Address_Oxford_Coordinator.houseNr := '2'
+!Address_Oxford_Coordinator.street := 'Scholar\'s Ct'
+!insert (Federico_Gillespie, Address_Oxford_Coordinator) into ContactContainsAddress
+
+!new Note('Note_1_Federico_Gillespie')
+!Note_1_Federico_Gillespie.author := 'Federico Gillespie'
+!Note_1_Federico_Gillespie.time := Date('2023-08-20')
+!Note_1_Federico_Gillespie.type := #EMAIL
+!Note_1_Federico_Gillespie.comment := 'Proposal for curriculum alignment between partner institutions.'
+!insert (Federico_Gillespie, Note_1_Federico_Gillespie) into ContactContainsNote
+
+!new Note('Note_2_Federico_Gillespie')
+!Note_2_Federico_Gillespie.author := 'Liu Chen'
+!Note_2_Federico_Gillespie.time := Date('2023-09-15')
+!Note_2_Federico_Gillespie.type := #MEETING
+!Note_2_Federico_Gillespie.comment := 'Competency framework for exchange students discussed.'
+!insert (Federico_Gillespie, Note_2_Federico_Gillespie) into ContactContainsNote
+
+!new Relationship('Relationship_Oxford_to_Shanghai')
+!Relationship_Oxford_to_Shanghai.type := #SUBDIVISION
+!insert (Oxford_International_University, Relationship_Oxford_to_Shanghai) into ContactToRelationship
+!insert (Relationship_Oxford_to_Shanghai, Shanghai_High_School_of_Arts) into RelationshipToContact
+
+!new Relationship('Relationship_Oxford_to_Federico')
+!Relationship_Oxford_to_Federico.type := #EMPLOYEE
+!insert (Oxford_International_University, Relationship_Oxford_to_Federico) into ContactToRelationship
+!insert (Relationship_Oxford_to_Federico, Federico_Gillespie) into RelationshipToContact
+
+!new Relationship('Relationship_Shanghai_to_Federico')
+!Relationship_Shanghai_to_Federico.type := #COWORKER
+!insert (Shanghai_High_School_of_Arts, Relationship_Shanghai_to_Federico) into ContactToRelationship
+!insert (Relationship_Shanghai_to_Federico, Federico_Gillespie) into RelationshipToContact
+
+!insert (Education_Exchange_Program, Oxford_International_University) into AddressBookMadeOfContact
+!insert (Education_Exchange_Program, Shanghai_High_School_of_Arts) into AddressBookMadeOfContact
+!insert (Education_Exchange_Program, Federico_Gillespie) into AddressBookMadeOfContact

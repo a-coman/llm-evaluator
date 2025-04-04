@@ -1,0 +1,93 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant13')
+!restaurant13.name := 'Mountain Delights'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner25')
+!owner25.name := 'Oliver Hill'
+!owner25.percentageShares := 45
+
+!new Owner('owner26')
+!owner26.name := 'Sophia Barnes'
+!owner26.percentageShares := 55
+
+-- Establish RestaurantOwner association
+!insert (restaurant13, owner25) into RestaurantOwner
+!insert (restaurant13, owner26) into RestaurantOwner
+
+-- Creating various tables
+!new Table('table25')
+!table25.number := 1301
+!table25.description := 'Peak View'
+!table25.capacity := 6
+
+!new Table('table26')
+!table26.number := 1302
+!table26.description := 'Forest Edge'
+!table26.capacity := 4
+
+-- Establishing staff for service
+!new HeadWaiter('headwaiter13')
+!headwaiter13.name := 'Linda Collins'
+!headwaiter13.dateOfBirth := Date('1978-09-22')
+!headwaiter13.phoneNumber := '555-1212'
+
+!new Waiter('waiter17')
+!waiter17.name := 'Gregory Sanders'
+!waiter17.dateOfBirth := Date('1991-12-11')
+!waiter17.phoneNumber := '555-6868'
+!waiter17.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter13, waiter17) into HeadWaiterWaiter
+
+-- Creating an Individual Reservation for a romantic dinner
+!new Individual('reservation13')
+!reservation13.time := Time('19:30')
+!reservation13.date := Date('2024-09-15')
+!reservation13.numberPeople := 2
+!reservation13.name := 'Romantic Dinner'
+!reservation13.phoneNumber := '555-4747'
+!reservation13.number := 211
+!reservation13.seating := #Patio
+!reservation13.smoking := #NonSmoking
+
+-- Establishing associations for Individual Reservation
+!insert (restaurant13, reservation13) into RestaurantReservation
+!insert (reservation13, waiter17) into ReservationWaiter
+!insert (reservation13, table25) into ReservationTable
+!insert (reservation13, table26) into ReservationTable
+
+-- Adding a unique MenuItem for the romantic dinner
+!new MenuItem('menuItem13')
+!menuItem13.description := 'Filet Mignon with Truffle Sauce'
+!menuItem13.prepTime := 40.0
+!menuItem13.classification := #Main
+
+-- Associating MenuItem with a newly appointed Chef
+!new Chef('chef13')
+!chef13.name := 'Vera Court'
+!chef13.dateOfBirth := Date('1980-03-10')
+!chef13.phoneNumber := '555-7575'
+
+!insert (menuItem13, chef13) into MenuItemChef
+
+-- Creating Cook under Chef supervision
+!new Cook('cook13')
+!cook13.name := 'Marco Rossi'
+!cook13.dateOfBirth := Date('1985-01-05')
+!cook13.phoneNumber := '555-8484'
+!cook13.yearsOfExperience := 12
+
+-- Establishing association between Chef and Cook
+!insert (chef13, cook13) into ChefCook
+
+-- Creating an ItemOrder for the romantic dinner
+!new ItemOrder('order13')
+!order13.time := Time('20:00')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order13, menuItem13) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Individual Reservation
+!insert (reservation13, order13) into ReservationItemOrdered

@@ -1,0 +1,164 @@
+!new Club('club27')
+!club27.name := 'Eagles FC'
+!club27.homeGround := 'Eagle Nest Stadium'
+!club27.chairman := 'Peter Collins'
+
+!new Club('club28')
+!club28.name := 'Sharks FC'
+!club28.homeGround := 'Shark Arena'
+!club28.chairman := 'Linda Parker'
+
+!new Team('team27')
+!team27.name := 'Eagle Soar'
+!insert (club27, team27) into ClubTeam
+
+!new Team('team28')
+!team28.name := 'Shark Attack'
+!insert (club28, team28) into ClubTeam
+
+!new Player('player40')
+!player40.name := 'Ethan Coleman'
+!player40.age := 30
+!player40.bestFoot := #RIGHT
+!player40.phoneNumber := '234-567-8901'
+!insert (team27, player40) into TeamPlayer
+
+!new Player('player41')
+!player41.name := 'Sophie Bennett'
+!player41.age := 24
+!player41.bestFoot := #LEFT
+!player41.phoneNumber := '345-678-9012'
+!insert (team27, player41) into TeamPlayer
+
+!new Player('player42')
+!player42.name := 'Henry Mitchell'
+!player42.age := 28
+!player42.bestFoot := #BOTH
+!player42.phoneNumber := '456-789-0123'
+!insert (team28, player42) into TeamPlayer
+
+!new Position('position40')
+!position40.positionName := #MIDFIELDER
+!insert (player40, position40) into PlayerPositions
+
+!new Position('position41')
+!position41.positionName := #FORWARD
+!insert (player41, position41) into PlayerPositions
+
+!new Position('position42')
+!position42.positionName := #DEFENDER
+!insert (player42, position42) into PlayerPositions
+
+!new TrainingSession('training27')
+!training27.date := '2024-01-08'
+!training27.location := 'Eagle Flight Field'
+!training27.purpose := 'Ball Control'
+!insert (team27, training27) into TeamTraining
+
+!new TrainingSession('training28')
+!training28.date := '2024-01-09'
+!training28.location := 'Shark Training Grounds'
+!training28.purpose := 'Defensive Tactics'
+!insert (team28, training28) into TeamTraining
+
+!new TrainingNotes('trainingNotes27')
+!trainingNotes27.note := 'Improved dribbling and close ball skills'
+!trainingNotes27.date := '2024-01-08'
+!insert (training27, trainingNotes27) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes28')
+!trainingNotes28.note := 'Focused on blocking and intercepting strategies'
+!trainingNotes28.date := '2024-01-09'
+!insert (training28, trainingNotes28) into TrainingTrainingNotes
+
+!new TrainingObjective('objective40')
+!objective40.areaToImprove := 'Pass Precision'
+!objective40.startDate := '2023-11-10'
+!objective40.endDate := '2024-01-10'
+!objective40.success := true
+!insert (objective40, player40) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective41')
+!objective41.areaToImprove := 'Finishing Under Pressure'
+!objective41.startDate := '2023-09-05'
+!objective41.endDate := '2023-12-05'
+!objective41.success := false
+!insert (objective41, player41) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective42')
+!objective42.areaToImprove := 'Tackling'
+!objective42.startDate := '2023-08-20'
+!objective42.endDate := '2023-11-20'
+!objective42.success := true
+!insert (objective42, player42) into TrainingObjectivePlayer
+
+!new Competition('competition14')
+!competition14.name := 'Super League Finals'
+!competition14.type := 'One-off'
+
+!new Match('match14')
+!match14.date := '2024-01-15'
+!match14.homeAway := true
+!insert (competition14, match14) into CompetitionMatch
+!insert (team27, match14) into LocalMatch
+!insert (team28, match14) into VisitorMatch
+
+!new MatchReport('report14')
+!report14.duration := 90
+!report14.scoreVisitor := 2
+!report14.scoreLocal := 3
+!insert (match14, report14) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer40')
+!matchPlayer40.booked := false
+!matchPlayer40.goals := 1
+!matchPlayer40.rating := 8
+!insert (player40, matchPlayer40) into PlayerMatch
+!insert (match14, matchPlayer40) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer42')
+!matchPlayer42.booked := false
+!matchPlayer42.goals := 1
+!matchPlayer42.rating := 7
+!insert (player42, matchPlayer42) into PlayerMatch
+!insert (match14, matchPlayer42) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition40')
+!matchPlayerPosition40.positionName := #MIDFIELDER
+!matchPlayerPosition40.number := 8
+!insert (matchPlayer40, matchPlayerPosition40) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition42')
+!matchPlayerPosition42.positionName := #DEFENDER
+!matchPlayerPosition42.number := 4
+!insert (matchPlayer42, matchPlayerPosition42) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event52')
+!event52.eventType := #GOAL
+!event52.time := 14
+!insert (match14, event52) into MatchMatchEvent
+
+!new MatchEvent('event53')
+!event53.eventType := #GOAL
+!event53.time := 29
+!insert (match14, event53) into MatchMatchEvent
+
+!new MatchEvent('event54')
+!event54.eventType := #GOAL
+!event54.time := 41
+!insert (match14, event54) into MatchMatchEvent
+
+!new MatchEvent('event55')
+!event55.eventType := #GOAL
+!event55.time := 63
+!insert (match14, event55) into MatchMatchEvent
+
+!new MatchEvent('event56')
+!event56.eventType := #GOAL
+!event56.time := 87
+!insert (match14, event56) into MatchMatchEvent
+
+!new MatchNote('matchNote14')
+!matchNote14.note := 'Thrilling match with Eagles FC edging out in a nail-biter'
+!matchNote14.date := '2024-01-15'
+!insert (match14, matchNote14) into MatchMatchNote

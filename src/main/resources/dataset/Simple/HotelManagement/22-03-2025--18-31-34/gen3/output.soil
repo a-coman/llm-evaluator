@@ -1,0 +1,55 @@
+!new Booking('booking4')
+!booking4.startDate := '2023-12-01'
+!booking4.endDate := '2023-12-10'
+!booking4.canceled := false
+!booking4.bookingId := 103
+!booking4.confirmed := false
+
+!new Bill('bill4')
+!bill4.price := 1500.50
+!bill4.billId := 203
+
+!new FreeRoomTypesDTO('roomType4')
+!roomType4.roomTypeDescription := 'Family Suite'
+!roomType4.numBeds := 4
+!roomType4.pricePerNight := 400.00
+!roomType4.numFreeRooms := 3
+
+!new Customer('customer4')
+!customer4.firstName := 'Diana'
+!customer4.lastName := 'Evans'
+
+!new RoomReservation('reservation4')
+!reservation4.checkInDate := '2023-12-01'
+!reservation4.checkOutDate := '2023-12-10'
+
+!new RoomExtra('extra4')
+!extra4.price := 15.00
+!extra4.description := 'Daily Newspaper'
+
+!new Room('room5')
+!room5.numBeds := 4
+!room5.pricePerNight := 350.00
+!room5.occupied := false
+!room5.blocked := true
+!room5.roomNumber := 105
+
+!new Room('room6')
+!room6.numBeds := 4
+!room6.pricePerNight := 400.00
+!room6.occupied := true
+!room6.blocked := false
+!room6.roomNumber := 106
+
+!insert (booking4, bill4) into BookingBill
+
+!insert (booking4, customer4) into BookingCustomer
+
+!insert (booking4, reservation4) into BookingRoomReservation
+
+!insert (reservation4, extra4) into RoomReservationExtras
+
+!insert (reservation4, room5) into RoomReservationRoom
+!insert (reservation4, room6) into RoomReservationRoom
+
+!insert (bill4, reservation4) into BillRoomReservation

@@ -1,0 +1,71 @@
+!new AddressBook('addressBook8')
+
+!new Company('innovativeEnterprises')
+!innovativeEnterprises.name := 'Innovative Enterprises'
+!innovativeEnterprises.phone := '321-555-8765'
+!innovativeEnterprises.website := 'www.innovativeenterprises.biz'
+!innovativeEnterprises.email := 'info@innovative.biz'
+!innovativeEnterprises.industry := 'Technology Consulting'
+
+!new Person('hannahMoore')
+!hannahMoore.name := 'Hannah Moore'
+!hannahMoore.phone := '678-555-4343'
+!hannahMoore.website := 'www.hannahmooreconsulting.com'
+!hannahMoore.email := 'hannah.moore@innovative.biz'
+!hannahMoore.title := 'Chief Technology Officer'
+
+!new Note('strategySessionNote')
+!strategySessionNote.author := 'Hannah Moore'
+!strategySessionNote.time := Date('2024-04-10')
+!strategySessionNote.type := #MEETING
+!strategySessionNote.comment := 'Led technology strategy session with potential clients'
+
+!new Address('hannahAddress')
+!hannahAddress.city := 'Chicago'
+!hannahAddress.houseNr := '3579'
+!hannahAddress.street := 'Innovation Drive'
+
+!new Relationship('subdivisionRelationship')
+!subdivisionRelationship.type := #SUBDIVISION
+
+!insert (subdivisionRelationship, innovativeEnterprises) into RelationshipToContact
+!insert (hannahMoore, subdivisionRelationship) into ContactToRelationship
+!insert (hannahMoore, hannahAddress) into ContactContainsAddress
+!insert (hannahMoore, strategySessionNote) into ContactContainsNote
+
+!new Person('noahBennett')
+!noahBennett.name := 'Noah Bennett'
+!noahBennett.phone := '765-555-1234'
+!noahBennett.website := 'www.noahbennettsolutions.com'
+!noahBennett.email := 'noah.bennett@example.com'
+!noahBennett.title := 'Business Analyst'
+
+!new Note('clientFeedbackNote')
+!clientFeedbackNote.author := 'Noah Bennett'
+!clientFeedbackNote.time := Date('2024-04-22')
+!clientFeedbackNote.type := #CALL
+!clientFeedbackNote.comment := 'Gathered client feedback for upcoming project proposals'
+
+!new Address('noahAddress')
+!noahAddress.city := 'New Orleans'
+!noahAddress.houseNr := '963'
+!noahAddress.street := 'Jazz Lane'
+
+!new Relationship('employeeRelationship')
+!employeeRelationship.type := #EMPLOYEE
+
+!insert (employeeRelationship, hannahMoore) into RelationshipToContact
+!insert (noahBennett, employeeRelationship) into ContactToRelationship
+!insert (noahBennett, noahAddress) into ContactContainsAddress
+!insert (noahBennett, clientFeedbackNote) into ContactContainsNote
+
+!new Address('innovativeEnterprisesAddress')
+!innovativeEnterprisesAddress.city := 'Dallas'
+!innovativeEnterprisesAddress.houseNr := '482'
+!innovativeEnterprisesAddress.street := 'Tech Park'
+
+!insert (innovativeEnterprises, innovativeEnterprisesAddress) into ContactContainsAddress
+
+!insert (addressBook8, innovativeEnterprises) into AddressBookMadeOfContact
+!insert (addressBook8, hannahMoore) into AddressBookMadeOfContact
+!insert (addressBook8, noahBennett) into AddressBookMadeOfContact

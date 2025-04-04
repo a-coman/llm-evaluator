@@ -1,0 +1,55 @@
+!new Booking('booking17')
+!booking17.startDate := '2024-10-10'
+!booking17.endDate := '2024-10-15'
+!booking17.canceled := false
+!booking17.bookingId := 116
+!booking17.confirmed := true
+
+!new Bill('bill17')
+!bill17.price := 850.00
+!bill17.billId := 216
+
+!new FreeRoomTypesDTO('roomType17')
+!roomType17.roomTypeDescription := 'City Center Suite'
+!roomType17.numBeds := 3
+!roomType17.pricePerNight := 300.00
+!roomType17.numFreeRooms := 2
+
+!new Customer('customer17')
+!customer17.firstName := 'Tiffany'
+!customer17.lastName := 'Underwood'
+
+!new RoomReservation('reservation17')
+!reservation17.checkInDate := '2024-10-10'
+!reservation17.checkOutDate := '2024-10-15'
+
+!new RoomExtra('extra17')
+!extra17.price := 85.00
+!extra17.description := 'City Tour Package'
+
+!new Room('room27')
+!room27.numBeds := 3
+!room27.pricePerNight := 290.00
+!room27.occupied := true
+!room27.blocked := false
+!room27.roomNumber := 127
+
+!new Room('room28')
+!room28.numBeds := 3
+!room28.pricePerNight := 310.00
+!room28.occupied := false
+!room28.blocked := true
+!room28.roomNumber := 128
+
+!insert (booking17, bill17) into BookingBill
+
+!insert (booking17, customer17) into BookingCustomer
+
+!insert (booking17, reservation17) into BookingRoomReservation
+
+!insert (reservation17, extra17) into RoomReservationExtras
+
+!insert (reservation17, room27) into RoomReservationRoom
+!insert (reservation17, room28) into RoomReservationRoom
+
+!insert (bill17, reservation17) into BillRoomReservation

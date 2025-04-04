@@ -1,0 +1,47 @@
+!new Bank('bank8')
+!bank8.country := 'Australia'
+!bank8.name := 'Southern Stars Bank'
+!bank8.bic := 'SSBUAU2S'
+
+!new Account('account15')
+!account15.iban := 'AU45 SSBU 1234 5678 9012 34'
+!account15.balance := 10000
+
+!new Account('account16')
+!account16.iban := 'AU45 SSBU 2345 6789 0123 45'
+!account16.balance := 5000
+
+!new Account('account17')
+!account17.iban := 'AU45 SSBU 3456 7890 1234 56'
+!account17.balance := 25000
+
+!new Person('person19')
+!person19.firstName := 'Emily'
+!person19.lastName := 'Nguyen'
+!person19.age := 32
+
+!new Person('person20')
+!person20.firstName := 'Jack'
+!person20.lastName := 'Ahmed'
+!person20.age := 50
+
+!new Person('person21')
+!person21.firstName := 'Wilma'
+!person21.lastName := 'Zhao'
+!person21.age := 29
+
+!insert (person19, account15) into Ownership
+!insert (person21, account15) into Ownership
+!insert (person20, account16) into Ownership
+!insert (person19, account17) into Ownership
+
+!insert (person19, account15) into Use
+!insert (person21, account15) into Use
+!insert (person20, account15) into Use
+!insert (person20, account16) into Use
+!insert (person19, account17) into Use
+!insert (person21, account17) into Use
+
+!insert (bank8, account15) into AccountOfBanks
+!insert (bank8, account16) into AccountOfBanks
+!insert (bank8, account17) into AccountOfBanks

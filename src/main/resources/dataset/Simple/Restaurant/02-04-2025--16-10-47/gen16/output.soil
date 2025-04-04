@@ -1,0 +1,94 @@
+-- Creating a new Restaurant instance
+!new Restaurant('restaurant16')
+!restaurant16.name := 'Bistro Bliss'
+
+-- Creating new Owners for the Restaurant
+!new Owner('owner31')
+!owner31.name := 'Sophie Turner'
+!owner31.percentageShares := 60
+
+!new Owner('owner32')
+!owner32.name := 'Lucas Moreno'
+!owner32.percentageShares := 40
+
+-- Establish RestaurantOwner association
+!insert (restaurant16, owner31) into RestaurantOwner
+!insert (restaurant16, owner32) into RestaurantOwner
+
+-- Creating tables with unique designs
+!new Table('table31')
+!table31.number := 1601
+!table31.description := 'Rustic Setting'
+!table31.capacity := 2
+
+!new Table('table32')
+!table32.number := 1602
+!table32.description := 'Modern Booth'
+!table32.capacity := 4
+
+-- Establishing staff for personalized service
+!new HeadWaiter('headwaiter16')
+!headwaiter16.name := 'Anna Bell'
+!headwaiter16.dateOfBirth := Date('1984-08-02')
+!headwaiter16.phoneNumber := '555-3030'
+
+!new Waiter('waiter20')
+!waiter20.name := 'Dylan Young'
+!waiter20.dateOfBirth := Date('1991-04-14')
+!waiter20.phoneNumber := '555-7070'
+!waiter20.spokenLanguage := #German
+
+-- Establishing association between HeadWaiter and Waiter
+!insert (headwaiter16, waiter20) into HeadWaiterWaiter
+
+-- Creating a Banquet Reservation for a milestone celebration
+!new Banquet('reservation16')
+!reservation16.time := Time('19:00')
+!reservation16.date := Date('2024-12-15')
+!reservation16.numberPeople := 6
+!reservation16.name := 'Milestone Celebration'
+!reservation16.phoneNumber := '555-8585'
+!reservation16.number := 214
+!reservation16.groupName := 'Achievement Event'
+!reservation16.paymentMethod := #CreditCard
+!reservation16.busService := false
+
+-- Establishing associations for Banquet Reservation
+!insert (restaurant16, reservation16) into RestaurantReservation
+!insert (reservation16, waiter20) into ReservationWaiter
+!insert (reservation16, table31) into ReservationTable
+!insert (reservation16, table32) into ReservationTable
+
+-- Adding a MenuItem for the celebration
+!new MenuItem('menuItem16')
+!menuItem16.description := 'Signature Beef Wellington'
+!menuItem16.prepTime := 50.0
+!menuItem16.classification := #Main
+
+-- Associating MenuItem with a distinguished Chef
+!new Chef('chef16')
+!chef16.name := 'Alain Ducasse'
+!chef16.dateOfBirth := Date('1956-09-13')
+!chef16.phoneNumber := '555-9191'
+
+!insert (menuItem16, chef16) into MenuItemChef
+
+-- Creating Cook under the Chef's guidance
+!new Cook('cook16')
+!cook16.name := 'Heston Blumenthal'
+!cook16.dateOfBirth := Date('1966-05-27')
+!cook16.phoneNumber := '555-6262'
+!cook16.yearsOfExperience := 25
+
+-- Establishing association between Chef and Cook
+!insert (chef16, cook16) into ChefCook
+
+-- Creating an ItemOrder for the celebration
+!new ItemOrder('order16')
+!order16.time := Time('19:40')
+
+-- Establishing ItemOrderMenuItem association
+!insert (order16, menuItem16) into ItemOrderMenuItem
+
+-- Linking the ItemOrder with the Banquet Reservation
+!insert (reservation16, order16) into ReservationItemOrdered

@@ -1,0 +1,82 @@
+!new StateMachine('airQualityControl')
+!airQualityControl.name := 'airQualityControl'
+
+!new State('standby')
+!standby.name := 'standby'
+
+!new State('sensing')
+!sensing.name := 'sensing'
+
+!new State('analyzing')
+!analyzing.name := 'analyzing'
+
+!new State('alert')
+!alert.name := 'alert'
+
+!new State('reporting')
+!reporting.name := 'reporting'
+
+!new Transition('standbyToSensing')
+!standbyToSensing.name := 'standbyToSensing'
+
+!new Transition('sensingToAnalyzing')
+!sensingToAnalyzing.name := 'sensingToAnalyzing'
+
+!new Transition('analyzingToAlert')
+!analyzingToAlert.name := 'analyzingToAlert'
+
+!new Transition('alertToReporting')
+!alertToReporting.name := 'alertToReporting'
+
+!new Transition('analyzingToReporting')
+!analyzingToReporting.name := 'analyzingToReporting'
+
+!new TimeEvent('timeEventStandbyToSensing')
+!timeEventStandbyToSensing.time := 60
+
+!new TimeEvent('timeEventSensingToAnalyzing')
+!timeEventSensingToAnalyzing.time := 60
+
+!new TimeEvent('timeEventAnalyzingToAlert')
+!timeEventAnalyzingToAlert.time := 15
+
+!new TimeEvent('timeEventAnalyzingToReporting')
+!timeEventAnalyzingToReporting.time := 15
+
+!new TimeEvent('timeEventAlertToReporting')
+!timeEventAlertToReporting.time := 10
+
+!insert (airQualityControl, standby) into StateMachineContainsStates
+!insert (airQualityControl, sensing) into StateMachineContainsStates
+!insert (airQualityControl, analyzing) into StateMachineContainsStates
+!insert (airQualityControl, alert) into StateMachineContainsStates
+!insert (airQualityControl, reporting) into StateMachineContainsStates
+
+!insert (airQualityControl, standby) into StateMachineStartsStates
+
+!insert (airQualityControl, standbyToSensing) into StateMachineContainsTransitions
+!insert (airQualityControl, sensingToAnalyzing) into StateMachineContainsTransitions
+!insert (airQualityControl, analyzingToAlert) into StateMachineContainsTransitions
+!insert (airQualityControl, alertToReporting) into StateMachineContainsTransitions
+!insert (airQualityControl, analyzingToReporting) into StateMachineContainsTransitions
+
+!insert (standbyToSensing, timeEventStandbyToSensing) into TransitionContainsEvents
+!insert (sensingToAnalyzing, timeEventSensingToAnalyzing) into TransitionContainsEvents
+!insert (analyzingToAlert, timeEventAnalyzingToAlert) into TransitionContainsEvents
+!insert (analyzingToReporting, timeEventAnalyzingToReporting) into TransitionContainsEvents
+!insert (alertToReporting, timeEventAlertToReporting) into TransitionContainsEvents
+
+!insert (standby, standbyToSensing) into StateTransition
+!insert (standbyToSensing, sensing) into TransitionState
+
+!insert (sensing, sensingToAnalyzing) into StateTransition
+!insert (sensingToAnalyzing, analyzing) into TransitionState
+
+!insert (analyzing, analyzingToAlert) into StateTransition
+!insert (analyzingToAlert, alert) into TransitionState
+
+!insert (analyzing, analyzingToReporting) into StateTransition
+!insert (analyzingToReporting, reporting) into TransitionState
+
+!insert (alert, alertToReporting) into StateTransition
+!insert (alertToReporting, reporting) into TransitionState

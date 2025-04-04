@@ -1,0 +1,67 @@
+!new StateMachine('emergencyManager')
+!emergencyManager.name := 'emergencyManager'
+
+!new State('ready')
+!ready.name := 'ready'
+
+!new State('alerted')
+!alerted.name := 'alerted'
+
+!new State('dispatching')
+!dispatching.name := 'dispatching'
+
+!new State('resolved')
+!resolved.name := 'resolved'
+
+!new Transition('readyToAlerted')
+!readyToAlerted.name := 'readyToAlerted'
+
+!new Transition('alertedToDispatching')
+!alertedToDispatching.name := 'alertedToDispatching'
+
+!new Transition('dispatchingToResolved')
+!dispatchingToResolved.name := 'dispatchingToResolved'
+
+!new Transition('alertedToReady')
+!alertedToReady.name := 'alertedToReady'
+
+!new TimeEvent('timeEventReadyToAlerted')
+!timeEventReadyToAlerted.time := 2
+
+!new TimeEvent('timeEventAlertedToReady')
+!timeEventAlertedToReady.time := 5
+
+!new TimeEvent('timeEventAlertedToDispatching')
+!timeEventAlertedToDispatching.time := 20
+
+!new TimeEvent('timeEventDispatchingToResolved')
+!timeEventDispatchingToResolved.time := 40
+
+!insert (emergencyManager, ready) into StateMachineContainsStates
+!insert (emergencyManager, alerted) into StateMachineContainsStates
+!insert (emergencyManager, dispatching) into StateMachineContainsStates
+!insert (emergencyManager, resolved) into StateMachineContainsStates
+
+!insert (emergencyManager, ready) into StateMachineStartsStates
+
+!insert (emergencyManager, readyToAlerted) into StateMachineContainsTransitions
+!insert (emergencyManager, alertedToDispatching) into StateMachineContainsTransitions
+!insert (emergencyManager, dispatchingToResolved) into StateMachineContainsTransitions
+!insert (emergencyManager, alertedToReady) into StateMachineContainsTransitions
+
+!insert (readyToAlerted, timeEventReadyToAlerted) into TransitionContainsEvents
+!insert (alertedToReady, timeEventAlertedToReady) into TransitionContainsEvents
+!insert (alertedToDispatching, timeEventAlertedToDispatching) into TransitionContainsEvents
+!insert (dispatchingToResolved, timeEventDispatchingToResolved) into TransitionContainsEvents
+
+!insert (ready, readyToAlerted) into StateTransition
+!insert (readyToAlerted, alerted) into TransitionState
+
+!insert (alerted, alertedToDispatching) into StateTransition
+!insert (alertedToDispatching, dispatching) into TransitionState
+
+!insert (dispatching, dispatchingToResolved) into StateTransition
+!insert (dispatchingToResolved, resolved) into TransitionState
+
+!insert (alerted, alertedToReady) into StateTransition
+!insert (alertedToReady, ready) into TransitionState

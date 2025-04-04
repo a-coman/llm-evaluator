@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine7')
+!stateMachine7.name := 'maintenanceMachine'
+
+!new State('state15')
+!state15.name := 'off'
+
+!new State('state16')
+!state16.name := 'maintaining'
+
+!new State('state17')
+!state17.name := 'resetting'
+
+!new Transition('transition12')
+!transition12.name := 'offToMaintain'
+
+!new Transition('transition13')
+!transition13.name := 'maintainToReset'
+
+!new Transition('transition14')
+!transition14.name := 'resetToOff'
+
+!new TimeEvent('event12')
+!event12.time := 70
+
+!new TimeEvent('event13')
+!event13.time := 80
+
+!new TimeEvent('event14')
+!event14.time := 90
+
+!insert (stateMachine7, state15) into StateMachineContainsStates
+!insert (stateMachine7, state16) into StateMachineContainsStates
+!insert (stateMachine7, state17) into StateMachineContainsStates
+
+!insert (stateMachine7, transition12) into StateMachineContainsTransitions
+!insert (stateMachine7, transition13) into StateMachineContainsTransitions
+!insert (stateMachine7, transition14) into StateMachineContainsTransitions
+
+!insert (transition12, event12) into TransitionContainsEvents
+!insert (transition13, event13) into TransitionContainsEvents
+!insert (transition14, event14) into TransitionContainsEvents
+
+!insert (state15, transition12) into StateTransition
+!insert (state16, transition13) into StateTransition
+!insert (state17, transition14) into StateTransition
+
+!insert (transition12, state16) into TransitionState
+!insert (transition13, state17) into TransitionState
+!insert (transition14, state15) into TransitionState
+
+!insert (stateMachine7, state15) into StateMachineStartsStates

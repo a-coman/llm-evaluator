@@ -1,0 +1,42 @@
+!new Bank('bank25')
+!bank25.country := 'Italy'
+!bank25.name := 'Tuscan Union Bank'
+!bank25.bic := 'TUSBIT22'
+
+!new Account('account57')
+!account57.iban := 'IT6012345678901234567890'
+!account57.balance := 12000
+
+!new Account('account58')
+!account58.iban := 'IT8098765432109876543210'
+!account58.balance := 200
+
+!new Person('person80')
+!person80.firstName := 'Marco'
+!person80.lastName := 'Romano'
+!person80.age := 52
+
+!new Person('person81')
+!person81.firstName := 'Chiara'
+!person81.lastName := 'Romano'
+!person81.age := 50
+
+!new Person('person82')
+!person82.firstName := 'Giulia'
+!person82.lastName := 'Romano'
+!person82.age := 17
+
+!new Person('person83')
+!person83.firstName := 'Ji-Ho'
+!person83.lastName := 'Kim'
+!person83.age := 20
+
+!insert (person80, account57) into Ownership
+!insert (person81, account57) into Ownership
+!insert (person83, account58) into Ownership
+
+!insert (person82, account57) into Use
+!insert (person83, account58) into Use
+
+!insert (bank25, account57) into AccountOfBanks
+!insert (bank25, account58) into AccountOfBanks

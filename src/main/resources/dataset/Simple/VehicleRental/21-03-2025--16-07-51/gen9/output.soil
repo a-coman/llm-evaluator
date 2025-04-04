@@ -1,0 +1,40 @@
+!new RentalOffice('rentalOffice11')
+!rentalOffice11.name := 'Sunshine Rentals'
+!rentalOffice11.number := 111
+!rentalOffice11.address := '111 Sunny Ln, Orlando, FL'
+
+!new Truck('truck7')
+!truck7.id := 10
+!truck7.registrationState := #FL
+!truck7.licensePlateNumber := 'FL9876'
+!truck7.vehicleTypeCode := #TRUCK24
+!truck7.registrationLastMaintenanceDate := Date('2023-04-10')
+!truck7.expirationDate := Date('2024-04-10')
+!truck7.odometerReading := 25000
+!truck7.gasTankCapacity := 130.0
+!truck7.workingRadio := false
+!truck7.mileage := 22
+
+!new Individual('individualCustomer6')
+!individualCustomer6.name := 'Tom Green'
+!individualCustomer6.address := '222 Greenway Dr, Orlando, FL'
+!individualCustomer6.poorRisk := true
+!individualCustomer6.homePhone := '555-1122'
+!individualCustomer6.driverLicenseState := #FL
+!individualCustomer6.driverLicenseNumber := 3344556
+!individualCustomer6.driverLicenseExpirationDate := Date('2027-11-30')
+
+!new RentalAgreement('rentalAgreement10')
+!rentalAgreement10.number := 510
+!rentalAgreement10.rentalDate := Date('2023-12-05')
+!rentalAgreement10.anticipatedDuration := 6
+!rentalAgreement10.depositPaid := 100.0
+!rentalAgreement10.quotedDailyRate := 48.0
+!rentalAgreement10.quotedRatePerMile := 0.5
+
+!insert (rentalOffice11, truck7) into RentalOfficeVehicle
+!insert (rentalOffice11, rentalAgreement10) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice11, rentalAgreement10) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement10, truck7) into RentalAgreementVehicle
+!insert (rentalAgreement10, individualCustomer6) into RentalAgreementCustomer

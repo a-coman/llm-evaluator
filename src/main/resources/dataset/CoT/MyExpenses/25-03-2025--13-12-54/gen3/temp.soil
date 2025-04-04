@@ -1,0 +1,81 @@
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!new Currency('australianDollar')
+!australianDollar.name := 'Australian Dollar'
+!australianDollar.abbreviation := 'AUD'
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!new Bill('workshopVenueHire')
+!workshopVenueHire.amount := 1000.00
+!workshopVenueHire.category := 'Workshop Venue Hire'
+!workshopVenueHire.date := Date('2023-03-15')
+!workshopVenueHire.paymentMethod := #CREDIT_CARD
+!workshopVenueHire.status := #DRAFT
+
+!new Bill('educationalMaterials')
+!educationalMaterials.amount := 150.00
+!educationalMaterials.category := 'Educational Materials'
+!educationalMaterials.date := Date('2023-03-15')
+!educationalMaterials.paymentMethod := #CASH
+!educationalMaterials.status := #PENDING
+
+!new Bill('volunteerAccommodation')
+!volunteerAccommodation.amount := 200.00
+!volunteerAccommodation.category := 'Volunteer Accommodation'
+!volunteerAccommodation.date := Date('2023-03-15')
+!volunteerAccommodation.paymentMethod := #CREDIT_CARD
+!volunteerAccommodation.status := #REFUSED
+
+!new Bill('localCateringServices')
+!localCateringServices.amount := 15000.00
+!localCateringServices.category := 'Local Catering Services'
+!localCateringServices.date := Date('2023-03-15')
+!localCateringServices.paymentMethod := #CASH
+!localCateringServices.status := #PENDING
+
+!new Bill('transportationParticipants')
+!transportationParticipants.amount := 300.00
+!transportationParticipants.category := 'Transportation for Participants'
+!transportationParticipants.date := Date('2023-03-15')
+!transportationParticipants.paymentMethod := #CREDIT_CARD
+!transportationParticipants.status := #DRAFT
+
+!insert (workshopVenueHire, canadianDollar) into BillCurrency
+!insert (educationalMaterials, australianDollar) into BillCurrency
+!insert (volunteerAccommodation, canadianDollar) into BillCurrency
+!insert (localCateringServices, indianRupee) into BillCurrency
+!insert (transportationParticipants, australianDollar) into BillCurrency
+
+!new Expense('workshopExpenses')
+-- Converting amounts to a common currency and ensuring the total amount is correct
+!workshopExpenses.amount := 16650.00
+!workshopExpenses.startDate := Date('2023-03-15')
+!workshopExpenses.endDate := Date('2023-06-20')
+
+!insert (workshopExpenses, workshopVenueHire) into ExpenseContainsBills
+!insert (workshopExpenses, educationalMaterials) into ExpenseContainsBills
+!insert (workshopExpenses, volunteerAccommodation) into ExpenseContainsBills
+!insert (workshopExpenses, localCateringServices) into ExpenseContainsBills
+!insert (workshopExpenses, transportationParticipants) into ExpenseContainsBills
+
+!new Comment('commentVenueBoardApproval')
+!commentVenueBoardApproval.text := 'Venue expenses awaiting board approval.'
+
+!new Comment('commentMaterialsReview')
+!commentMaterialsReview.text := 'Review pending materials expenditure.'
+
+!new Comment('commentAccommodationBudget')
+!commentAccommodationBudget.text := 'Accommodation costs exceeding budget needs.'
+
+!new Comment('commentCateringPartners')
+!commentCateringPartners.text := 'Catering handled by local partners, currency fluctuations noted.'
+
+!insert (workshopExpenses, commentVenueBoardApproval) into ExpenseComment
+!insert (workshopExpenses, commentMaterialsReview) into ExpenseComment
+!insert (workshopExpenses, commentAccommodationBudget) into ExpenseComment
+!insert (workshopExpenses, commentCateringPartners) into ExpenseComment

@@ -1,0 +1,49 @@
+!new RentalOffice('rentalOffice4')
+!rentalOffice4.name := 'Arctic Rentals'
+!rentalOffice4.number := 007
+!rentalOffice4.address := '123 Polar Road, Barrow, AK, 99723'
+
+!new Vehicle('vehicle3')
+!vehicle3.id := 5
+!vehicle3.registrationState := #AK
+!vehicle3.licensePlateNumber := 'TRL-90787'
+!vehicle3.vehicleTypeCode := #OPEN_TRAILER
+!vehicle3.registrationLastMaintenanceDate := Date('2021-02-20')
+!vehicle3.expirationDate := Date('2023-02-19')
+
+!new Truck('truck3')
+!truck3.id := 6
+!truck3.registrationState := #AK
+!truck3.licensePlateNumber := 'TRK-29486'
+!truck3.vehicleTypeCode := #TRUCK
+!truck3.registrationLastMaintenanceDate := Date('2020-11-30')
+!truck3.expirationDate := Date('2023-01-01')
+!truck3.odometerReading := 0
+!truck3.gasTankCapacity := 0.1
+!truck3.workingRadio := true
+!truck3.mileage := 0
+
+!new RentalAgreement('rentalAgreement4')
+!rentalAgreement4.number := 13
+!rentalAgreement4.rentalDate := Date('2023-02-28')
+!rentalAgreement4.anticipatedDuration := 0
+!rentalAgreement4.depositPaid := 0.01
+!rentalAgreement4.quotedDailyRate := 0.01
+!rentalAgreement4.quotedRatePerMile := 0.01
+
+!new Individual('individualCustomer3')
+!individualCustomer3.name := 'Jane Doe'
+!individualCustomer3.address := '456 Frost Street, Nome, AK, 99762'
+!individualCustomer3.poorRisk := false
+!individualCustomer3.homePhone := '+1-907-555-0136'
+!individualCustomer3.driverLicenseState := #AK
+!individualCustomer3.driverLicenseNumber := 987654
+!individualCustomer3.driverLicenseExpirationDate := Date('2034-02-27')
+
+!insert (rentalOffice4, vehicle3) into RentalOfficeVehicle
+!insert (rentalOffice4, truck3) into RentalOfficeVehicle
+!insert (rentalOffice4, rentalAgreement4) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice4, rentalAgreement4) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement4, truck3) into RentalAgreementVehicle
+!insert (rentalAgreement4, individualCustomer3) into RentalAgreementCustomer

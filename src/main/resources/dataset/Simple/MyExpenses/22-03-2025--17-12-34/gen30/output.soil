@@ -1,0 +1,33 @@
+!new Expense('expense32')
+!expense32.amount := 580.0
+!expense32.startDate := Date('2025-08-01')
+!expense32.endDate := Date('2025-08-31')
+
+!new Currency('currency30')
+!currency30.name := 'Danish Krone'
+!currency30.abbreviation := 'DKK'
+
+!new Bill('bill58')
+!bill58.amount := 180.0
+!bill58.category := 'Fitness Equipment'
+!bill58.date := Date('2025-08-05')
+!bill58.paymentMethod := #CHECK
+!bill58.status := #DRAFT
+
+!new Bill('bill59')
+!bill59.amount := 400.0
+!bill59.category := 'Cooking Classes'
+!bill59.date := Date('2025-08-15')
+!bill59.paymentMethod := #CREDIT_CARD
+!bill59.status := #VERIFIED
+
+!insert (expense32, bill58) into ExpenseContainsBills
+!insert (expense32, bill59) into ExpenseContainsBills
+
+!insert (bill58, currency30) into BillCurrency
+!insert (bill59, currency30) into BillCurrency
+
+!new Comment('comment32')
+!comment32.text := 'August expenses for fitness equipment and cooking classes'
+
+!insert (expense32, comment32) into ExpenseComment

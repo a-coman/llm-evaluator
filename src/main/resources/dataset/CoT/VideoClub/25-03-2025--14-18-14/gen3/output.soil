@@ -1,0 +1,272 @@
+!new Client('clientBoundary5')
+!clientBoundary5.clientId := 3
+!clientBoundary5.isSuspended := true
+
+!new Client('clientBoundary6')
+!clientBoundary6.clientId := 123456789
+!clientBoundary6.isSuspended := false
+
+!new Rental('rentalBoundary3')
+!rentalBoundary3.date := Date('2023-12-31')
+
+!new Movie('cassetteLegendsOfTheFall')
+!cassetteLegendsOfTheFall.title := 'Legends of the Fall'
+!cassetteLegendsOfTheFall.availableCopies := 1
+!cassetteLegendsOfTheFall.genre := #Action
+
+!new Series('cassetteMysteryInTheNorth')
+!cassetteMysteryInTheNorth.title := 'Mystery in the North Ep.20'
+!cassetteMysteryInTheNorth.availableCopies := 2
+!cassetteMysteryInTheNorth.episode := 20
+
+!new Actor('actorAnnaMuller')
+!actorAnnaMuller.name := 'Anna Müller'
+
+!new Actor('actorRajeshKumar')
+!actorRajeshKumar.name := 'Rajesh Kumar'
+
+!insert (clientBoundary5, rentalBoundary3) into ClientRental
+
+!insert (rentalBoundary3, cassetteLegendsOfTheFall) into RentalCassette
+!insert (rentalBoundary3, cassetteMysteryInTheNorth) into RentalCassette
+
+!insert (cassetteLegendsOfTheFall, actorAnnaMuller) into CassetteActor
+!insert (cassetteLegendsOfTheFall, actorRajeshKumar) into CassetteActor
+!insert (cassetteMysteryInTheNorth, actorRajeshKumar) into CassetteActor
+!insert (cassetteMysteryInTheNorth, actorAnnaMuller) into CassetteActor
+
+!new Client('client301')
+!client301.clientId := 301
+!client301.isSuspended := false
+
+!new Client('client302')
+!client302.clientId := 302
+!client302.isSuspended := true
+
+!new Client('client303')
+!client303.clientId := 303
+!client303.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-08-12')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-25')
+
+!new Movie('movieEspionajeLluvia')
+!movieEspionajeLluvia.title := 'El Espionaje en la Lluvia'
+!movieEspionajeLluvia.availableCopies := 2
+!movieEspionajeLluvia.genre := #Action
+
+!new Series('seriesFablesFarEast')
+!seriesFablesFarEast.title := 'Fables of the Far East'
+!seriesFablesFarEast.availableCopies := 4
+!seriesFablesFarEast.episode := 5
+
+!new Movie('movieVintageLaughter')
+!movieVintageLaughter.title := 'Vintage Laughter'
+!movieVintageLaughter.availableCopies := 10
+!movieVintageLaughter.genre := #Comedy
+
+!new Actor('actorLolaEstrada')
+!actorLolaEstrada.name := 'Lola Estrada'
+
+!new Actor('actorCarlosMartinez')
+!actorCarlosMartinez.name := 'Carlos Martinez'
+
+!new Actor('actorAkiraYamato')
+!actorAkiraYamato.name := 'Akira Yamato'
+
+!new Actor('actorMonaHalden')
+!actorMonaHalden.name := 'Mona Halden'
+
+!insert (client301, rental1) into ClientRental
+!insert (client303, rental2) into ClientRental
+
+!insert (rental1, movieEspionajeLluvia) into RentalCassette
+!insert (rental2, seriesFablesFarEast) into RentalCassette
+
+!insert (movieEspionajeLluvia, actorLolaEstrada) into CassetteActor
+!insert (movieEspionajeLluvia, actorCarlosMartinez) into CassetteActor
+!insert (seriesFablesFarEast, actorAkiraYamato) into CassetteActor
+!insert (movieVintageLaughter, actorMonaHalden) into CassetteActor
+
+!new Client('priyaSharma')
+!priyaSharma.clientId := 301
+!priyaSharma.isSuspended := false
+
+!new Client('arjunNair')
+!arjunNair.clientId := 302
+!arjunNair.isSuspended := true
+
+!new Rental('rentalPriya')
+!rentalPriya.date := Date('2023-11-05')
+
+!new Rental('rentalArjun')
+!rentalArjun.date := Date('2023-10-25')
+
+!new Movie('movieDanceOfTheTigers')
+!movieDanceOfTheTigers.title := 'Dance of the Tigers'
+!movieDanceOfTheTigers.availableCopies := 8
+!movieDanceOfTheTigers.genre := #Action
+
+!new Movie('movieChaiAndChatter')
+!movieChaiAndChatter.title := 'Chai & Chatter'
+!movieChaiAndChatter.availableCopies := 6
+!movieChaiAndChatter.genre := #Comedy
+
+!new Series('seriesSpiceRoutes')
+!seriesSpiceRoutes.title := 'Spice Routes'
+!seriesSpiceRoutes.availableCopies := 3
+!seriesSpiceRoutes.episode := 7
+
+!new Actor('actorAmitabhBachchan')
+!actorAmitabhBachchan.name := 'Amitabh Bachchan'
+
+!new Actor('actorDeepikaPadukone')
+!actorDeepikaPadukone.name := 'Deepika Padukone'
+
+!new Actor('actorRanveerSingh')
+!actorRanveerSingh.name := 'Ranveer Singh'
+
+!new Actor('actorPriyankaChopra')
+!actorPriyankaChopra.name := 'Priyanka Chopra'
+
+!insert (priyaSharma, rentalPriya) into ClientRental
+!insert (arjunNair, rentalArjun) into ClientRental
+
+!insert (rentalPriya, movieDanceOfTheTigers) into RentalCassette
+!insert (rentalPriya, seriesSpiceRoutes) into RentalCassette
+
+!insert (rentalArjun, movieChaiAndChatter) into RentalCassette
+
+!insert (movieDanceOfTheTigers, actorAmitabhBachchan) into CassetteActor
+!insert (movieDanceOfTheTigers, actorDeepikaPadukone) into CassetteActor
+!insert (movieChaiAndChatter, actorRanveerSingh) into CassetteActor
+!insert (movieChaiAndChatter, actorPriyankaChopra) into CassetteActor
+!insert (seriesSpiceRoutes, actorDeepikaPadukone) into CassetteActor
+
+!new Client('client200')
+!client200.clientId := 200
+!client200.isSuspended := false
+
+!new Client('client201')
+!client201.clientId := 201
+!client201.isSuspended := false
+
+!new Client('client202')
+!client202.clientId := 202
+!client202.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-15')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-16')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-09-17')
+
+!new Movie('cassetteDirectorsVision')
+!cassetteDirectorsVision.title := 'Director’s Vision'
+!cassetteDirectorsVision.availableCopies := 0
+!cassetteDirectorsVision.genre := #Action
+
+!new Series('cassetteEpicConclusion')
+!cassetteEpicConclusion.title := 'Epic Conclusion'
+!cassetteEpicConclusion.availableCopies := 1
+!cassetteEpicConclusion.episode := 30
+
+!new Movie('cassetteEveningLaughs')
+!cassetteEveningLaughs.title := 'Evening Laughs'
+!cassetteEveningLaughs.availableCopies := 2
+!cassetteEveningLaughs.genre := #Comedy
+
+!new Actor('actorCateBlanchett')
+!actorCateBlanchett.name := 'Cate Blanchett'
+
+!new Actor('actorDenzelWashington')
+!actorDenzelWashington.name := 'Denzel Washington'
+
+!new Actor('actorEmmaWatson')
+!actorEmmaWatson.name := 'Emma Watson'
+
+!new Actor('actorRyanReynolds')
+!actorRyanReynolds.name := 'Ryan Reynolds'
+
+!insert (client200, rental1) into ClientRental
+!insert (client201, rental2) into ClientRental
+!insert (client202, rental3) into ClientRental
+
+!insert (rental1, cassetteDirectorsVision) into RentalCassette
+!insert (rental1, cassetteEpicConclusion) into RentalCassette
+
+!insert (rental2, cassetteEpicConclusion) into RentalCassette
+!insert (rental2, cassetteEveningLaughs) into RentalCassette
+
+!insert (rental3, cassetteDirectorsVision) into RentalCassette
+!insert (rental3, cassetteEveningLaughs) into RentalCassette
+
+!insert (cassetteDirectorsVision, actorCateBlanchett) into CassetteActor
+!insert (cassetteDirectorsVision, actorDenzelWashington) into CassetteActor
+
+!insert (cassetteEpicConclusion, actorEmmaWatson) into CassetteActor
+
+!insert (cassetteEveningLaughs, actorRyanReynolds) into CassetteActor
+
+!new Client('anaDeSouza')
+!anaDeSouza.clientId := 345
+!anaDeSouza.isSuspended := true
+
+!new Client('pedroGomez')
+!pedroGomez.clientId := 346
+!pedroGomez.isSuspended := false
+
+!new Rental('rentalSaoPauloShowcase')
+!rentalSaoPauloShowcase.date := Date('2023-08-18')
+
+!new Rental('rentalFestivalCinemaBrasileiro')
+!rentalFestivalCinemaBrasileiro.date := Date('2023-09-05')
+
+!new Series('cassetteSambaRhythm')
+!cassetteSambaRhythm.title := 'Samba and Rhythm Series'
+!cassetteSambaRhythm.availableCopies := 10
+!cassetteSambaRhythm.episode := 12
+
+!new Movie('cassetteTangoInAction')
+!cassetteTangoInAction.title := 'Tango in Action'
+!cassetteTangoInAction.availableCopies := 2
+!cassetteTangoInAction.genre := #Action
+
+!new Series('cassetteBrazilianClassics')
+!cassetteBrazilianClassics.title := 'Brazilian Classics: The Golden Age'
+!cassetteBrazilianClassics.availableCopies := 0
+!cassetteBrazilianClassics.episode := 6
+
+!new Movie('cassetteMysteryAmazonRainforest')
+!cassetteMysteryAmazonRainforest.title := 'Mystery of the Amazon Rainforest'
+!cassetteMysteryAmazonRainforest.availableCopies := 3
+!cassetteMysteryAmazonRainforest.genre := #Action
+
+!new Actor('actorSoniaBraga')
+!actorSoniaBraga.name := 'Sonia Braga'
+
+!new Actor('actorRicardoDarin')
+!actorRicardoDarin.name := 'Ricardo Darín'
+
+!new Actor('actorWagnerMoura')
+!actorWagnerMoura.name := 'Wagner Moura'
+
+!insert (pedroGomez, rentalSaoPauloShowcase) into ClientRental
+!insert (anaDeSouza, rentalFestivalCinemaBrasileiro) into ClientRental
+
+!insert (rentalSaoPauloShowcase, cassetteSambaRhythm) into RentalCassette
+!insert (rentalSaoPauloShowcase, cassetteTangoInAction) into RentalCassette
+
+!insert (rentalFestivalCinemaBrasileiro, cassetteBrazilianClassics) into RentalCassette
+!insert (rentalFestivalCinemaBrasileiro, cassetteMysteryAmazonRainforest) into RentalCassette
+
+!insert (cassetteBrazilianClassics, actorSoniaBraga) into CassetteActor
+!insert (cassetteTangoInAction, actorRicardoDarin) into CassetteActor
+!insert (cassetteMysteryAmazonRainforest, actorWagnerMoura) into CassetteActor
+

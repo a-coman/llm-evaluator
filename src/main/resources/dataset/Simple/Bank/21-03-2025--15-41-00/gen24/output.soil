@@ -1,0 +1,51 @@
+!new Bank('bank25')
+!bank25.country := 'Switzerland'
+!bank25.name := 'Credit Suisse'
+!bank25.bic := 'CRESCHZZ80A'
+
+!new Account('account70')
+!account70.iban := 'CH5604835012345678009'
+!account70.balance := 7800
+
+!new Account('account71')
+!account71.iban := 'CH5604835012345678010'
+!account71.balance := 150
+
+!new Account('account72')
+!account72.iban := 'CH5604835012345678011'
+!account72.balance := 5000
+
+!new Person('person74')
+!person74.firstName := 'Lukas'
+!person74.lastName := 'Müller'
+!person74.age := 48
+
+!new Person('person75')
+!person75.firstName := 'Nina'
+!person75.lastName := 'Schneider'
+!person75.age := 33
+
+!new Person('person76')
+!person76.firstName := 'Fabian'
+!person76.lastName := 'Bernhard'
+!person76.age := 29
+
+-- Associations
+!insert (bank25, account70) into AccountOfBanks
+!insert (bank25, account71) into AccountOfBanks
+!insert (bank25, account72) into AccountOfBanks
+
+!insert (person74, account70) into Ownership
+!insert (person75, account70) into Ownership
+
+!insert (person75, account71) into Ownership
+!insert (person76, account71) into Ownership
+
+!insert (person76, account72) into Ownership
+!insert (person74, account72) into Ownership
+
+!insert (person74, account71) into Use
+!insert (person75, account72) into Use
+
+!insert (person76, account70) into Use
+!insert (person75, account70) into Use

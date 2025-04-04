@@ -1,0 +1,76 @@
+!new Currency('euro')
+!euro.name := 'Euro'
+!euro.abbreviation := 'EUR'
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!new Currency('swissFranc')
+!swissFranc.name := 'Swiss Franc'
+!swissFranc.abbreviation := 'CHF'
+
+!new Bill('monthlyHostelRent')
+!monthlyHostelRent.amount := 350.00
+!monthlyHostelRent.category := 'Monthly Hostel Rent'
+!monthlyHostelRent.date := Date('2023-05-01')
+!monthlyHostelRent.paymentMethod := #CASH
+!monthlyHostelRent.status := #PENDING
+
+!new Bill('textbooks')
+!textbooks.amount := 60.00
+!textbooks.category := 'Textbooks'
+!textbooks.date := Date('2023-05-01')
+!textbooks.paymentMethod := #CREDIT_CARD
+!textbooks.status := #DRAFT
+
+!new Bill('cafeteriaMeals')
+!cafeteriaMeals.amount := 25.00
+!cafeteriaMeals.category := 'Cafeteria Meals'
+!cafeteriaMeals.date := Date('2023-05-01')
+!cafeteriaMeals.paymentMethod := #CASH
+!cafeteriaMeals.status := #VALIDATED
+
+!new Bill('localTransport')
+!localTransport.amount := 15.00
+!localTransport.category := 'Local Transport'
+!localTransport.date := Date('2023-05-01')
+!localTransport.paymentMethod := #CREDIT_CARD
+!localTransport.status := #VALIDATED
+
+!new Bill('scholarshipGrant')
+!scholarshipGrant.amount := 0.00
+!scholarshipGrant.category := 'Scholarship Grant'
+!scholarshipGrant.date := Date('2023-05-01')
+!scholarshipGrant.paymentMethod := #CREDIT_CARD
+!scholarshipGrant.status := #VALIDATED
+
+!insert (monthlyHostelRent, euro) into BillCurrency
+!insert (textbooks, britishPound) into BillCurrency
+!insert (cafeteriaMeals, britishPound) into BillCurrency
+!insert (localTransport, swissFranc) into BillCurrency
+!insert (scholarshipGrant, euro) into BillCurrency
+
+!new Comment('commentHostelReceipt')
+!commentHostelReceipt.text := 'Pending verification of hostel receipts.'
+
+!new Comment('commentTextbooks')
+!commentTextbooks.text := 'Draft expenses for newly rented textbooks.'
+
+!new Comment('commentMeals')
+!commentMeals.text := 'Validated meal expenses for on-campus dining.'
+
+!new Expense('studentExchangeProgramExpense')
+!studentExchangeProgramExpense.amount := 450.00
+!studentExchangeProgramExpense.startDate := Date('2023-05-01')
+!studentExchangeProgramExpense.endDate := Date('2023-11-30')
+
+!insert (studentExchangeProgramExpense, monthlyHostelRent) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, textbooks) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, cafeteriaMeals) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, localTransport) into ExpenseContainsBills
+!insert (studentExchangeProgramExpense, scholarshipGrant) into ExpenseContainsBills
+
+!insert (studentExchangeProgramExpense, commentHostelReceipt) into ExpenseComment
+!insert (studentExchangeProgramExpense, commentTextbooks) into ExpenseComment
+!insert (studentExchangeProgramExpense, commentMeals) into ExpenseComment

@@ -1,0 +1,64 @@
+!new RentalOffice('rentalOffice25')
+!rentalOffice25.name := 'Alpine Car & Trailer Rentals'
+!rentalOffice25.number := 55
+!rentalOffice25.address := '202 Summit Road, Denver, CO, 80202'
+
+!new Truck('electricTruck')
+!electricTruck.id := 49
+!electricTruck.registrationState := #CO
+!electricTruck.licensePlateNumber := 'ECO-TRUK'
+!electricTruck.vehicleTypeCode := #TRUCK
+!electricTruck.registrationLastMaintenanceDate := Date('2023-05-20')
+!electricTruck.expirationDate := Date('2024-05-20')
+!electricTruck.odometerReading := 50
+!electricTruck.gasTankCapacity := 0.0
+!electricTruck.workingRadio := true
+!electricTruck.mileage := 0
+
+!new Vehicle('customTrailer')
+!customTrailer.id := 50
+!customTrailer.registrationState := #CO
+!customTrailer.licensePlateNumber := 'CUST-089'
+!customTrailer.vehicleTypeCode := #OPEN_TRAILER
+!customTrailer.registrationLastMaintenanceDate := Date('2023-04-10')
+!customTrailer.expirationDate := Date('2025-04-10')
+
+!new RentalAgreement('rentalAgreement42a')
+!rentalAgreement42a.number := 2001
+!rentalAgreement42a.rentalDate := Date('2023-07-15')
+!rentalAgreement42a.anticipatedDuration := 3
+!rentalAgreement42a.depositPaid := 0.00
+!rentalAgreement42a.quotedDailyRate := 10.00
+!rentalAgreement42a.quotedRatePerMile := 0.00
+
+!new RentalAgreement('rentalAgreement42b')
+!rentalAgreement42b.number := 2002
+!rentalAgreement42b.rentalDate := Date('2023-07-15')
+!rentalAgreement42b.anticipatedDuration := 3
+!rentalAgreement42b.depositPaid := 0.00
+!rentalAgreement42b.quotedDailyRate := 10.00
+!rentalAgreement42b.quotedRatePerMile := 0.00
+
+!new Individual('individualCustomer19')
+!individualCustomer19.name := 'Allison Green'
+!individualCustomer19.address := '404 Pine Street, Boulder, CO, 80302'
+!individualCustomer19.poorRisk := false
+!individualCustomer19.homePhone := '+1-720-555-1379'
+!individualCustomer19.driverLicenseState := #CO
+!individualCustomer19.driverLicenseNumber := 678900
+!individualCustomer19.driverLicenseExpirationDate := Date('2031-11-25')
+
+!insert (rentalOffice25, electricTruck) into RentalOfficeVehicle
+!insert (rentalOffice25, customTrailer) into RentalOfficeVehicle
+
+!insert (rentalOffice25, rentalAgreement42a) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice25, rentalAgreement42a) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement42a, electricTruck) into RentalAgreementVehicle
+!insert (rentalAgreement42a, individualCustomer19) into RentalAgreementCustomer
+
+!insert (rentalOffice25, rentalAgreement42b) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice25, rentalAgreement42b) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement42b, customTrailer) into RentalAgreementVehicle
+!insert (rentalAgreement42b, individualCustomer19) into RentalAgreementCustomer

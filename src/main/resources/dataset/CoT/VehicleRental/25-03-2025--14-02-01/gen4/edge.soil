@@ -1,0 +1,38 @@
+!new RentalOffice('rentalOffice19')
+!rentalOffice19.name := 'Rainforest Rentals'
+!rentalOffice19.number := 44
+!rentalOffice19.address := '101 Jungle Drive, Hilo, HI, 96720'
+
+!new Truck('truck17')
+!truck17.id := 37
+!truck17.registrationState := #AK
+!truck17.licensePlateNumber := 'TRK-ALOHA'
+!truck17.vehicleTypeCode := #TRUCK
+!truck17.registrationLastMaintenanceDate := Date('2023-07-10')
+!truck17.expirationDate := Date('2024-07-10')
+!truck17.odometerReading := 250000
+!truck17.gasTankCapacity := 0.0
+!truck17.workingRadio := false
+!truck17.mileage := 2
+
+!new RentalAgreement('rentalAgreement31')
+!rentalAgreement31.number := 5000
+!rentalAgreement31.rentalDate := Date('2025-01-01')
+!rentalAgreement31.anticipatedDuration := 1095
+!rentalAgreement31.depositPaid := 300.00
+!rentalAgreement31.quotedDailyRate := 40.00
+!rentalAgreement31.quotedRatePerMile := 0.50
+
+!new Company('company16')
+!company16.name := 'Island Transport Solutions'
+!company16.address := '808 Shoreline Drive, Honolulu, HI, 96801'
+!company16.poorRisk := false
+!company16.idNumber := 2025
+
+!insert (rentalOffice19, truck17) into RentalOfficeVehicle
+
+!insert (rentalOffice19, rentalAgreement31) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice19, rentalAgreement31) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement31, truck17) into RentalAgreementVehicle
+!insert (rentalAgreement31, company16) into RentalAgreementCustomer

@@ -1,0 +1,72 @@
+!new Bank('bank30')
+!bank30.country := 'South Africa'
+!bank30.name := 'Ubuntu National Bank'
+!bank30.bic := 'UBZNZAJJ'
+
+!new Account('account68')
+!account68.iban := 'ZA653010000000012345'
+!account68.balance := 50000
+
+!new Account('account69')
+!account69.iban := 'ZA653010000000067890'
+!account69.balance := 8000
+
+!new Account('account70')
+!account70.iban := 'ZA653010000000054321'
+!account70.balance := 12000
+
+!new Account('account71')
+!account71.iban := 'ZA653010000000076432'
+!account71.balance := 30000
+
+!new Account('account72')
+!account72.iban := 'ZA653010000000098765'
+!account72.balance := 4500
+
+!new Person('person95')
+!person95.firstName := 'Sipho'
+!person95.lastName := 'Nkosi'
+!person95.age := 35
+
+!new Person('person96')
+!person96.firstName := 'Thandi'
+!person96.lastName := 'Mbeki'
+!person96.age := 28
+
+!new Person('person97')
+!person97.firstName := 'Jabu'
+!person97.lastName := 'Dlamini'
+!person97.age := 40
+
+!new Person('person98')
+!person98.firstName := 'Lesedi'
+!person98.lastName := 'Dube'
+!person98.age := 33
+
+!new Person('person99')
+!person99.firstName := 'Amara'
+!person99.lastName := 'Naidoo'
+!person99.age := 30
+
+!insert (person95, account68) into Ownership
+!insert (person96, account68) into Ownership
+!insert (person97, account69) into Ownership
+!insert (person98, account70) into Ownership
+!insert (person99, account70) into Ownership
+!insert (person95, account71) into Ownership
+!insert (person98, account72) into Ownership
+
+!insert (person95, account68) into Use
+!insert (person96, account68) into Use
+!insert (person97, account68) into Use
+!insert (person97, account69) into Use
+!insert (person98, account70) into Use
+!insert (person99, account70) into Use
+!insert (person95, account71) into Use
+!insert (person98, account72) into Use
+
+!insert (bank30, account68) into AccountOfBanks
+!insert (bank30, account69) into AccountOfBanks
+!insert (bank30, account70) into AccountOfBanks
+!insert (bank30, account71) into AccountOfBanks
+!insert (bank30, account72) into AccountOfBanks

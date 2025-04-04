@@ -1,0 +1,85 @@
+!new Currency('japaneseYen')
+!japaneseYen.name := 'Japanese Yen'
+!japaneseYen.abbreviation := 'JPY'
+
+!new Currency('britishPound')
+!britishPound.name := 'British Pound'
+!britishPound.abbreviation := 'GBP'
+
+!new Currency('canadianDollar')
+!canadianDollar.name := 'Canadian Dollar'
+!canadianDollar.abbreviation := 'CAD'
+
+!new Bill('conferenceVenueRental')
+!conferenceVenueRental.amount := 250000.00
+!conferenceVenueRental.category := 'Conference Venue Rental'
+!conferenceVenueRental.date := Date('2023-10-15')
+!conferenceVenueRental.paymentMethod := #CHECK
+!conferenceVenueRental.status := #PENDING
+
+!new Bill('speakerHonorariums')
+!speakerHonorariums.amount := 5000.00
+!speakerHonorariums.category := 'Speaker Honorariums'
+!speakerHonorariums.date := Date('2023-10-15')
+!speakerHonorariums.paymentMethod := #CASH
+!speakerHonorariums.status := #VALIDATED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 1200.00
+!cateringServices.category := 'Catering Services'
+!cateringServices.date := Date('2023-10-15')
+!cateringServices.paymentMethod := #CHECK
+!cateringServices.status := #VERIFIED
+
+!new Bill('administrativeSupplies')
+!administrativeSupplies.amount := 750.00
+!administrativeSupplies.category := 'Administrative Supplies'
+!administrativeSupplies.date := Date('2023-10-15')
+!administrativeSupplies.paymentMethod := #CASH
+!administrativeSupplies.status := #VALIDATED
+
+!new Bill('travelGrants')
+!travelGrants.amount := 950.00
+!travelGrants.category := 'Travel Grants for International Scholars'
+!travelGrants.date := Date('2023-10-15')
+!travelGrants.paymentMethod := #CHECK
+!travelGrants.status := #PENDING
+
+!insert (conferenceVenueRental, japaneseYen) into BillCurrency
+!insert (speakerHonorariums, britishPound) into BillCurrency
+!insert (cateringServices, britishPound) into BillCurrency
+!insert (administrativeSupplies, canadianDollar) into BillCurrency
+!insert (travelGrants, canadianDollar) into BillCurrency
+
+!new Expense('academicResearchConferenceExpenses')
+-- Correct total amount reflects only the sum of the bill amounts
+!academicResearchConferenceExpenses.amount := 257900.00
+!academicResearchConferenceExpenses.startDate := Date('2023-10-15')
+!academicResearchConferenceExpenses.endDate := Date('2023-10-17')
+
+!insert (academicResearchConferenceExpenses, conferenceVenueRental) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, speakerHonorariums) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, cateringServices) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, administrativeSupplies) into ExpenseContainsBills
+!insert (academicResearchConferenceExpenses, travelGrants) into ExpenseContainsBills
+
+!new Comment('commentVenueRental')
+!commentVenueRental.text := 'Venue rental costs pending final confirmation and adjustment based on attendance.'
+
+!new Comment('commentSpeakerPayments')
+!commentSpeakerPayments.text := 'All speaker payments verified and processed successfully.'
+
+!new Comment('commentCateringAudit')
+!commentCateringAudit.text := 'Catering efficiently reconciled within budget, set for official audit.'
+
+!new Comment('commentAdminSupplies')
+!commentAdminSupplies.text := 'Administrative supply expenses validated, enabling smooth conference management.'
+
+!new Comment('commentTravelGrants')
+!commentTravelGrants.text := 'Pending verification of travel grants, subject to scholar documentation.'
+
+!insert (academicResearchConferenceExpenses, commentVenueRental) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentSpeakerPayments) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentCateringAudit) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentAdminSupplies) into ExpenseComment
+!insert (academicResearchConferenceExpenses, commentTravelGrants) into ExpenseComment

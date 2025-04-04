@@ -1,0 +1,24 @@
+!new Expense('expense10')
+!expense10.amount := 100.0
+!expense10.startDate := Date('2023-10-01')
+!expense10.endDate := Date('2023-10-15')
+
+!new Currency('currency8')
+!currency8.name := 'Indian Rupee'
+!currency8.abbreviation := 'INR'
+
+!new Bill('bill16')
+!bill16.amount := 100.0
+!bill16.category := 'Books'
+!bill16.date := Date('2023-10-10')
+!bill16.paymentMethod := #CASH
+!bill16.status := #REFUSED
+
+!insert (expense10, bill16) into ExpenseContainsBills
+
+!insert (bill16, currency8) into BillCurrency
+
+!new Comment('comment10')
+!comment10.text := 'Books purchase for October that got refused'
+
+!insert (expense10, comment10) into ExpenseComment

@@ -1,0 +1,101 @@
+!new AddressBook('Oceanic_Ventures_Connections')
+
+!new Person('Aisha_Al_Zein')
+!Aisha_Al_Zein.name := 'Aisha Al Zein'
+!Aisha_Al_Zein.phone := '+971-4-355-9876'
+!Aisha_Al_Zein.website := 'aishaalzeinconsults.ae'
+!Aisha_Al_Zein.email := 'aisha.alzein@oceanicventures.ae'
+!Aisha_Al_Zein.title := 'Chief Financial Officer'
+
+!new Address('Address_Aisha_Al_Zein')
+!Address_Aisha_Al_Zein.city := 'Dubai'
+!Address_Aisha_Al_Zein.houseNr := '45'
+!Address_Aisha_Al_Zein.street := 'Sheikh Zayed Road'
+!insert (Aisha_Al_Zein, Address_Aisha_Al_Zein) into ContactContainsAddress
+
+!new Note('Note_Aisha_Al_Zein')
+!Note_Aisha_Al_Zein.author := 'Aisha Al Zein'
+!Note_Aisha_Al_Zein.time := Date('2023-06-18')
+!Note_Aisha_Al_Zein.type := #EMAIL
+!Note_Aisha_Al_Zein.comment := 'Sent quarterly financial reports to executive team.'
+!insert (Aisha_Al_Zein, Note_Aisha_Al_Zein) into ContactContainsNote
+
+!new Company('Amazonas_Eco_Tours')
+!Amazonas_Eco_Tours.name := 'Amazonas Eco Tours'
+!Amazonas_Eco_Tours.phone := '+55-92-3312-4789'
+!Amazonas_Eco_Tours.website := 'amazonasecotours.brazil'
+!Amazonas_Eco_Tours.email := 'booking@amazonasecotours.brazil'
+!Amazonas_Eco_Tours.industry := 'Tourism and Eco Travel'
+
+!new Address('Address_Amazonas_Eco_Tours')
+!Address_Amazonas_Eco_Tours.city := 'Manaus'
+!Address_Amazonas_Eco_Tours.houseNr := '81'
+!Address_Amazonas_Eco_Tours.street := 'Avenida Eduardo Ribeiro'
+!insert (Amazonas_Eco_Tours, Address_Amazonas_Eco_Tours) into ContactContainsAddress
+
+!new Note('Note_Amazonas_Eco_Tours')
+!Note_Amazonas_Eco_Tours.author := 'Operations Manager'
+!Note_Amazonas_Eco_Tours.time := Date('2023-09-25')
+!Note_Amazonas_Eco_Tours.type := #MEETING
+!Note_Amazonas_Eco_Tours.comment := 'Planning itinerary setups for eco-friendly tourism packages.'
+!insert (Amazonas_Eco_Tours, Note_Amazonas_Eco_Tours) into ContactContainsNote
+
+!new Person('Liam_O_Connor')
+!Liam_O_Connor.name := 'Liam O\'Connor'
+!Liam_O_Connor.phone := '+353-1-555-9908'
+!Liam_O_Connor.website := 'liamoconnorsolutions.ie'
+!Liam_O_Connor.email := 'liam.oconnor@oceanicventures.ie'
+!Liam_O_Connor.title := 'Sustainability Advisor'
+
+!new Address('Address_Liam_O_Connor')
+!Address_Liam_O_Connor.city := 'Dublin'
+!Address_Liam_O_Connor.houseNr := '12'
+!Address_Liam_O_Connor.street := 'St Stephen\'s Green'
+!insert (Liam_O_Connor, Address_Liam_O_Connor) into ContactContainsAddress
+
+!new Note('Note_Liam_O_Connor')
+!Note_Liam_O_Connor.author := 'Liam O\'Connor'
+!Note_Liam_O_Connor.time := Date('2023-10-12')
+!Note_Liam_O_Connor.type := #CALL
+!Note_Liam_O_Connor.comment := 'Consultation call with environmental NGOs about sustainable practices.'
+!insert (Liam_O_Connor, Note_Liam_O_Connor) into ContactContainsNote
+
+!new Company('Pacifica_Marine_Innovations')
+!Pacifica_Marine_Innovations.name := 'Pacifica Marine Innovations'
+!Pacifica_Marine_Innovations.phone := '+61-2-8897-6534'
+!Pacifica_Marine_Innovations.website := 'pacificamarine.com.au'
+!Pacifica_Marine_Innovations.email := 'innovations@pacificamarine.com.au'
+!Pacifica_Marine_Innovations.industry := 'Marine Biotechnology'
+
+!new Address('Address_Pacifica_Marine_Innovations')
+!Address_Pacifica_Marine_Innovations.city := 'Sydney'
+!Address_Pacifica_Marine_Innovations.houseNr := '223'
+!Address_Pacifica_Marine_Innovations.street := 'Darling Harbour'
+!insert (Pacifica_Marine_Innovations, Address_Pacifica_Marine_Innovations) into ContactContainsAddress
+
+!new Note('Note_Pacifica_Marine_Innovations')
+!Note_Pacifica_Marine_Innovations.author := 'Chief Scientist'
+!Note_Pacifica_Marine_Innovations.time := Date('2023-08-05')
+!Note_Pacifica_Marine_Innovations.type := #MEETING
+!Note_Pacifica_Marine_Innovations.comment := 'Discussed collaboration on marine preservation technology.'
+!insert (Pacifica_Marine_Innovations, Note_Pacifica_Marine_Innovations) into ContactContainsNote
+
+!new Relationship('Relationship_Aisha_to_Liam')
+!Relationship_Aisha_to_Liam.type := #EMPLOYEE
+!insert (Aisha_Al_Zein, Relationship_Aisha_to_Liam) into ContactToRelationship
+!insert (Relationship_Aisha_to_Liam, Liam_O_Connor) into RelationshipToContact
+
+!new Relationship('Relationship_Liam_to_Amazonas')
+!Relationship_Liam_to_Amazonas.type := #COWORKER
+!insert (Liam_O_Connor, Relationship_Liam_to_Amazonas) into ContactToRelationship
+!insert (Relationship_Liam_to_Amazonas, Amazonas_Eco_Tours) into RelationshipToContact
+
+!new Relationship('Relationship_Aisha_to_Pacifica')
+!Relationship_Aisha_to_Pacifica.type := #BOSS
+!insert (Aisha_Al_Zein, Relationship_Aisha_to_Pacifica) into ContactToRelationship
+!insert (Relationship_Aisha_to_Pacifica, Pacifica_Marine_Innovations) into RelationshipToContact
+
+!insert (Oceanic_Ventures_Connections, Aisha_Al_Zein) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Amazonas_Eco_Tours) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Liam_O_Connor) into AddressBookMadeOfContact
+!insert (Oceanic_Ventures_Connections, Pacifica_Marine_Innovations) into AddressBookMadeOfContact

@@ -1,0 +1,46 @@
+!new Driver('driver1')
+!driver1.id := 'D001'
+!driver1.name := 'John Martinez'
+
+!new Shipment('shipment1')
+!shipment1.id := 'SHP001'
+!shipment1.status := #ASSIGNED
+
+!new Address('pickupAddress')
+!pickupAddress.text := '123 Elm St, Springfield, IL'
+
+!new GeoLocation('pickupGeoLocation')
+!pickupGeoLocation.latitude := 39.7817
+!pickupGeoLocation.longitude := -89.6501
+
+!new Address('deliveryAddress')
+!deliveryAddress.text := '789 Maple Ave, Chicago, IL'
+
+!new GeoLocation('deliveryGeoLocation')
+!deliveryGeoLocation.latitude := 41.8781
+!deliveryGeoLocation.longitude := -87.6298
+
+!new Station('station1')
+
+!new Customer('customer1')
+!customer1.id := 'CUST001'
+!customer1.name := 'Alice French'
+!customer1.twitterUserName := '@aliceFrenchChi'
+
+!insert (driver1, shipment1) into DriverShipment
+
+!insert (shipment1, pickupAddress) into ShipmentContainsPickUpAddress
+
+!insert (shipment1, deliveryAddress) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress, pickupGeoLocation) into AddressContainsGeoLocation
+
+!insert (deliveryAddress, deliveryGeoLocation) into AddressContainsGeoLocation
+
+!insert (customer1, shipment1) into CustomerConsistsOfShipment
+
+!insert (station1, customer1) into StationContainsCustomer
+
+!insert (station1, shipment1) into StationShipment
+
+!insert (station1, driver1) into StationContainsDriver

@@ -1,0 +1,59 @@
+!new Expense('traditionalWeddingCeremony')
+!traditionalWeddingCeremony.amount := 2500.00
+!traditionalWeddingCeremony.startDate := Date('2023-11-10')
+!traditionalWeddingCeremony.endDate := Date('2023-11-12')
+
+!new Bill('venueRental')
+!venueRental.amount := 1000.00
+!venueRental.category := 'Event'
+!venueRental.date := Date('2023-10-05')
+!venueRental.paymentMethod := #CHECK
+!venueRental.status := #VERIFIED
+
+!new Bill('cateringServices')
+!cateringServices.amount := 750.00
+!cateringServices.category := 'Food'
+!cateringServices.date := Date('2023-11-11')
+!cateringServices.paymentMethod := #CREDIT_CARD
+!cateringServices.status := #VALIDATED
+
+!new Bill('photographyVideography')
+!photographyVideography.amount := 500.00
+!photographyVideography.category := 'Services'
+!photographyVideography.date := Date('2023-11-12')
+!photographyVideography.paymentMethod := #CASH
+!photographyVideography.status := #DRAFT
+
+!new Bill('traditionalAttireAccessories')
+!traditionalAttireAccessories.amount := 250.00
+!traditionalAttireAccessories.category := 'Clothing'
+!traditionalAttireAccessories.date := Date('2023-10-20')
+!traditionalAttireAccessories.paymentMethod := #CASH
+!traditionalAttireAccessories.status := #REFUSED
+
+!new Currency('indianRupee')
+!indianRupee.name := 'Indian Rupee'
+!indianRupee.abbreviation := 'INR'
+
+!insert (venueRental, indianRupee) into BillCurrency
+!insert (cateringServices, indianRupee) into BillCurrency
+!insert (photographyVideography, indianRupee) into BillCurrency
+!insert (traditionalAttireAccessories, indianRupee) into BillCurrency
+
+!insert (traditionalWeddingCeremony, venueRental) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, cateringServices) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, photographyVideography) into ExpenseContainsBills
+!insert (traditionalWeddingCeremony, traditionalAttireAccessories) into ExpenseContainsBills
+
+!new Comment('commentVenueDecor')
+!commentVenueDecor.text := 'The location added a majestic touch to the wedding, with traditional Indian decor.'
+
+!new Comment('commentCulinaryExperience')
+!commentCulinaryExperience.text := 'Guests raved about the variety of dishes, bringing authentic flavors to every table.'
+
+!new Comment('commentPhotography')
+!commentPhotography.text := 'The team did an excellent job capturing candid moments and details.'
+
+!insert (traditionalWeddingCeremony, commentVenueDecor) into ExpenseComment
+!insert (traditionalWeddingCeremony, commentCulinaryExperience) into ExpenseComment
+!insert (traditionalWeddingCeremony, commentPhotography) into ExpenseComment

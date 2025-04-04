@@ -1,0 +1,39 @@
+!new Client('clientEdge1')
+!clientEdge1.clientId := 1
+!clientEdge1.isSuspended := false
+
+!new Rental('rentalEdge1')
+!rentalEdge1.date := Date('2023-09-20')
+
+!new Rental('rentalEdge2')
+!rentalEdge2.date := Date('2023-09-21')
+
+!new Movie('cassetteOnlyCopy')
+!cassetteOnlyCopy.title := 'The Only Copy'
+!cassetteOnlyCopy.availableCopies := 1
+!cassetteOnlyCopy.genre := #Action
+
+!new Series('cassetteSingleEpisode')
+!cassetteSingleEpisode.title := 'Single Episode Saga'
+!cassetteSingleEpisode.availableCopies := 0
+!cassetteSingleEpisode.episode := 1
+
+!new Actor('actorJohnSmith')
+!actorJohnSmith.name := 'John Smith'
+
+!new Actor('actorJaneDoe')
+!actorJaneDoe.name := 'Jane Doe'
+
+!new Actor('actorCarlosMendes')
+!actorCarlosMendes.name := 'Carlos Mendes'
+
+!insert (clientEdge1, rentalEdge1) into ClientRental
+!insert (clientEdge1, rentalEdge2) into ClientRental
+
+!insert (rentalEdge1, cassetteOnlyCopy) into RentalCassette
+!insert (rentalEdge1, cassetteSingleEpisode) into RentalCassette
+!insert (rentalEdge2, cassetteOnlyCopy) into RentalCassette
+
+!insert (cassetteOnlyCopy, actorJohnSmith) into CassetteActor
+!insert (cassetteOnlyCopy, actorJaneDoe) into CassetteActor
+!insert (cassetteSingleEpisode, actorCarlosMendes) into CassetteActor

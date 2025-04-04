@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice12')
+!rentalOffice12.name := 'MountainView Rentals'
+!rentalOffice12.number := 303
+!rentalOffice12.address := '500 High Peak Drive, Denver, CO, 80202'
+
+!new Vehicle('vehicle14')
+!vehicle14.id := 23
+!vehicle14.registrationState := #CO
+!vehicle14.licensePlateNumber := 'CO1122SUV'
+!vehicle14.vehicleTypeCode := #TRUCK10
+!vehicle14.registrationLastMaintenanceDate := Date('2023-02-20')
+!vehicle14.expirationDate := Date('2024-02-19')
+
+!new Truck('truck10')
+!truck10.id := 24
+!truck10.registrationState := #CO
+!truck10.licensePlateNumber := 'CO3344FLT'
+!truck10.vehicleTypeCode := #TRUCK
+!truck10.registrationLastMaintenanceDate := Date('2023-07-01')
+!truck10.expirationDate := Date('2024-01-15')
+!truck10.odometerReading := 180000
+!truck10.gasTankCapacity := 50.0
+!truck10.workingRadio := true
+!truck10.mileage := 8
+
+!new Individual('individualCustomer8')
+!individualCustomer8.name := 'Chad Anderson'
+!individualCustomer8.address := '222 Pine Street, Boulder, CO, 80302'
+!individualCustomer8.poorRisk := false
+!individualCustomer8.homePhone := '720-123-9876'
+!individualCustomer8.driverLicenseState := #CO
+!individualCustomer8.driverLicenseNumber := 9876543
+!individualCustomer8.driverLicenseExpirationDate := Date('2027-11-25')
+
+!new Company('company10')
+!company10.name := 'Summit Construction'
+!company10.address := '999 Rock Quarry Road, Colorado Springs, CO, 80903'
+!company10.poorRisk := true
+!company10.idNumber := 303600
+
+!new RentalAgreement('rentalAgreement18')
+!rentalAgreement18.number := 3005
+!rentalAgreement18.rentalDate := Date('2023-12-10')
+!rentalAgreement18.anticipatedDuration := 5
+!rentalAgreement18.depositPaid := 150.00
+!rentalAgreement18.quotedDailyRate := 60.00
+!rentalAgreement18.quotedRatePerMile := 0.25
+
+!new RentalAgreement('rentalAgreement19')
+!rentalAgreement19.number := 3006
+!rentalAgreement19.rentalDate := Date('2023-12-20')
+!rentalAgreement19.anticipatedDuration := 21
+!rentalAgreement19.depositPaid := 850.00
+!rentalAgreement19.quotedDailyRate := 150.00
+!rentalAgreement19.quotedRatePerMile := 0.50
+
+!insert (rentalOffice12, vehicle14) into RentalOfficeVehicle
+!insert (rentalOffice12, truck10) into RentalOfficeVehicle
+
+!insert (rentalOffice12, rentalAgreement18) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice12, rentalAgreement18) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement18, vehicle14) into RentalAgreementVehicle
+!insert (rentalAgreement18, individualCustomer8) into RentalAgreementCustomer
+
+!insert (rentalOffice12, rentalAgreement19) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice12, rentalAgreement19) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement19, truck10) into RentalAgreementVehicle
+!insert (rentalAgreement19, company10) into RentalAgreementCustomer

@@ -1,0 +1,93 @@
+!new AddressBook('AddressBook_2')
+
+!new Company('Innovate_Start_up_Co')
+!Innovate_Start_up_Co.name := 'Innovate Start-up Co.'
+!Innovate_Start_up_Co.phone := '+44-20-7946-0958'
+!Innovate_Start_up_Co.website := 'www.innovatestart.com'
+!Innovate_Start_up_Co.email := 'info@innovatestart.com'
+!Innovate_Start_up_Co.industry := 'FinTech'
+
+!new Address('Address_1')
+!Address_1.city := 'London'
+!Address_1.houseNr := '15'
+!Address_1.street := 'Baker Street'
+!insert (Innovate_Start_up_Co, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'Clara Tan'
+!Note_1.time := Date('2023-09-29')
+!Note_1.type := #EMAIL
+!Note_1.comment := 'Clarification on partnership agreement.'
+!insert (Innovate_Start_up_Co, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #BOSS
+!insert (Innovate_Start_up_Co, Relationship_1) into ContactToRelationship
+
+!new Person('Dr_Mei_Lin_Chen')
+!Dr_Mei_Lin_Chen.name := 'Dr. Mei Lin Chen'
+!Dr_Mei_Lin_Chen.phone := '+86-21-5555-2222'
+!Dr_Mei_Lin_Chen.website := 'www.drmeilinchuniversity.com'
+!Dr_Mei_Lin_Chen.email := 'mei.chen@universityedu.cn'
+!Dr_Mei_Lin_Chen.title := 'Professor of Economics'
+
+!new Address('Address_2')
+!Address_2.city := 'Shanghai'
+!Address_2.houseNr := '67'
+!Address_2.street := 'Nanjing Road West'
+!insert (Dr_Mei_Lin_Chen, Address_2) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Li Zhi'
+!Note_2.time := Date('2023-11-03')
+!Note_2.type := #MEETING
+!Note_2.comment := 'Presentation on global economic trends.'
+!insert (Dr_Mei_Lin_Chen, Note_2) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #SUBDIVISION
+!insert (Dr_Mei_Lin_Chen, Relationship_2) into ContactToRelationship
+!insert (Relationship_2, Innovate_Start_up_Co) into RelationshipToContact
+
+!new Relationship('Relationship_3')
+!Relationship_3.type := #COWORKER
+!insert (Dr_Mei_Lin_Chen, Relationship_3) into ContactToRelationship
+
+!new Person('Alejandro_Rosas')
+!Alejandro_Rosas.name := 'Alejandro Rosas'
+!Alejandro_Rosas.phone := '+34-91-888-3456'
+!Alejandro_Rosas.website := 'www.alejandro-rosas-art.com'
+!Alejandro_Rosas.email := 'alejandro@rosasart.es'
+!Alejandro_Rosas.title := 'Art Consultant'
+
+!new Address('Address_3')
+!Address_3.city := 'Madrid'
+!Address_3.houseNr := '102'
+!Address_3.street := 'Gran Via'
+!insert (Alejandro_Rosas, Address_3) into ContactContainsAddress
+
+!new Address('Address_4')
+!Address_4.city := 'Barcelona'
+!Address_4.houseNr := '22'
+!Address_4.street := 'Rambla de Catalunya'
+!insert (Alejandro_Rosas, Address_4) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Juan Carlos'
+!Note_3.time := Date('2023-10-18')
+!Note_3.type := #CALL
+!Note_3.comment := 'Discussed upcoming art exhibition.'
+!insert (Alejandro_Rosas, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_4')
+!Relationship_4.type := #COWORKER
+!insert (Alejandro_Rosas, Relationship_4) into ContactToRelationship
+!insert (Relationship_4, Dr_Mei_Lin_Chen) into RelationshipToContact
+
+!insert (Relationship_3, Alejandro_Rosas) into RelationshipToContact
+
+!insert (Relationship_1, Dr_Mei_Lin_Chen) into RelationshipToContact
+
+!insert (AddressBook_2, Innovate_Start_up_Co) into AddressBookMadeOfContact
+!insert (AddressBook_2, Dr_Mei_Lin_Chen) into AddressBookMadeOfContact
+!insert (AddressBook_2, Alejandro_Rosas) into AddressBookMadeOfContact

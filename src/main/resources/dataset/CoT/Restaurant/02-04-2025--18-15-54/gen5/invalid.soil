@@ -1,0 +1,78 @@
+!new Restaurant('restaurant24')
+!restaurant24.name := 'Elegant Essence'
+
+!new Owner('owner54')
+!owner54.name := 'Carla Mendes'
+!owner54.percentageShares := 80
+
+!new Owner('owner55')
+!owner55.name := 'Ethan Cooper'
+!owner55.percentageShares := 40
+
+!insert (restaurant24, owner54) into RestaurantOwner
+!insert (restaurant24, owner55) into RestaurantOwner
+
+!new Table('table54')
+!table54.number := 501
+!table54.description := 'Exclusive private booth with velvet seats'
+!table54.capacity := 2
+
+!new Table('table55')
+!table55.number := 502
+!table55.description := 'Elegant long table for large gatherings'
+!table55.capacity := 50
+
+!new Waiter('waiter47')
+!waiter47.name := 'Liam Chan'
+!waiter47.dateOfBirth := Date('1991-12-11')
+!waiter47.phoneNumber := '+46 70-112-3344'
+
+!new Chef('chef32')
+!chef32.name := 'Maya Patel'
+!chef32.dateOfBirth := Date('1979-02-20')
+!chef32.phoneNumber := '+46 70-445-6677'
+
+!new Cook('cook40')
+!cook40.name := 'Eva Berg'
+!cook40.dateOfBirth := Date('1993-03-19')
+!cook40.phoneNumber := '+46 70-889-0011'
+!cook40.yearsOfExperience := 5
+
+!insert (chef32, cook40) into ChefCook
+
+!new RegularCustomer('customer16')
+!customer16.name := 'Johann Müller'
+!customer16.prefferedLanguage := #English  -- Using #English as placeholder for German
+
+!new Individual('individualReservation17')
+!individualReservation17.time := Time('20:00')
+!individualReservation17.date := Date('2023-12-31')
+!individualReservation17.numberPeople := 3
+!individualReservation17.name := 'Nadia Johansson'
+!individualReservation17.phoneNumber := '+46 70-345-6789'
+!individualReservation17.number := 20231231
+!individualReservation17.seating := #Inside
+!individualReservation17.smoking := #NonSmoking
+
+!insert (restaurant24, individualReservation17) into RestaurantReservation
+!insert (individualReservation17, table54) into ReservationTable
+
+!insert (individualReservation17, waiter47) into ReservationWaiter
+
+!insert (individualReservation17, customer16) into ReservationCustomer
+
+!new Banquet('banquet21')
+!banquet21.date := Date('2023-12-31')
+!banquet21.time := Time('22:00')
+!banquet21.numberPeople := 100
+!banquet21.name := 'Corporate Gala'
+!banquet21.phoneNumber := '+46 70-987-6543'
+!banquet21.number := 20231231
+!banquet21.groupName := 'Global Ventures Inc.'
+!banquet21.paymentMethod := #CreditCard  -- Using #CreditCard as placeholder for Bank Transfer
+!banquet21.busService := false
+
+!insert (restaurant24, banquet21) into RestaurantReservation
+!insert (banquet21, table55) into ReservationTable
+
+!insert (banquet21, waiter47) into ReservationWaiter

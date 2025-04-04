@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine25')
+!stateMachine25.name := 'inventoryTrackingMachine'
+
+!new State('state75')
+!state75.name := 'stocked'
+
+!new State('state76')
+!state76.name := 'reserved'
+
+!new State('state77')
+!state77.name := 'dispatched'
+
+!new State('state78')
+!state78.name := 'restocked'
+
+!new Transition('transition68')
+!transition68.name := 'reserveItem'
+
+!new Transition('transition69')
+!transition69.name := 'dispatchItem'
+
+!new Transition('transition70')
+!transition70.name := 'restockItem'
+
+!new Transition('transition71')
+!transition71.name := 'backToStock'
+
+!new TimeEvent('event68')
+!event68.time := 12
+
+!new TimeEvent('event69')
+!event69.time := 24
+
+!new TimeEvent('event70')
+!event70.time := 36
+
+!new TimeEvent('event71')
+!event71.time := 48
+
+!insert (stateMachine25, state75) into StateMachineContainsStates
+!insert (stateMachine25, state76) into StateMachineContainsStates
+!insert (stateMachine25, state77) into StateMachineContainsStates
+!insert (stateMachine25, state78) into StateMachineContainsStates
+
+!insert (stateMachine25, transition68) into StateMachineContainsTransitions
+!insert (stateMachine25, transition69) into StateMachineContainsTransitions
+!insert (stateMachine25, transition70) into StateMachineContainsTransitions
+!insert (stateMachine25, transition71) into StateMachineContainsTransitions
+
+!insert (transition68, event68) into TransitionContainsEvents
+!insert (transition69, event69) into TransitionContainsEvents
+!insert (transition70, event70) into TransitionContainsEvents
+!insert (transition71, event71) into TransitionContainsEvents
+
+!insert (state75, transition68) into StateTransition
+!insert (state76, transition69) into StateTransition
+!insert (state77, transition70) into StateTransition
+!insert (state78, transition71) into StateTransition
+
+!insert (transition68, state76) into TransitionState
+!insert (transition69, state77) into TransitionState
+!insert (transition70, state78) into TransitionState
+!insert (transition71, state75) into TransitionState
+
+!insert (stateMachine25, state75) into StateMachineStartsStates

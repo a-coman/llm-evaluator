@@ -1,0 +1,276 @@
+!new Client('client7')
+!client7.clientId := 4
+!client7.isSuspended := false
+
+!new Client('client8')
+!client8.clientId := 987654321
+!client8.isSuspended := true
+
+!new Rental('rental4')
+!rental4.date := Date('2023-02-28')
+
+!new Movie('cassetteSilentNight')
+!cassetteSilentNight.title := 'Silent Night'
+!cassetteSilentNight.availableCopies := 500
+!cassetteSilentNight.genre := #Comedy
+
+!new Series('cassetteDragonsTale')
+!cassetteDragonsTale.title := 'Dragon\'s Tale Ep.45'
+!cassetteDragonsTale.availableCopies := 3
+!cassetteDragonsTale.episode := 45
+
+!new Actor('actorKevinCheng')
+!actorKevinCheng.name := 'Kevin Cheng'
+
+!new Actor('actorLunaSofia')
+!actorLunaSofia.name := 'Luna Sofia'
+
+!insert (client7, rental4) into ClientRental
+
+!insert (rental4, cassetteSilentNight) into RentalCassette
+!insert (rental4, cassetteDragonsTale) into RentalCassette
+
+!insert (cassetteSilentNight, actorKevinCheng) into CassetteActor
+!insert (cassetteSilentNight, actorLunaSofia) into CassetteActor
+!insert (cassetteDragonsTale, actorLunaSofia) into CassetteActor
+!insert (cassetteDragonsTale, actorKevinCheng) into CassetteActor
+
+!new Client('client401')
+!client401.clientId := 401
+!client401.isSuspended := false
+
+!new Client('client402')
+!client402.clientId := 402
+!client402.isSuspended := false
+
+!new Client('client403')
+!client403.clientId := 403
+!client403.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-11-22')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-11-05')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-11-12')
+
+!new Movie('cassetteKilimanjaroChronicles')
+!cassetteKilimanjaroChronicles.title := 'Kilimanjaro Chronicles'
+!cassetteKilimanjaroChronicles.availableCopies := 3
+!cassetteKilimanjaroChronicles.genre := #Action
+
+!new Series('cassetteEveningTalksVenice')
+!cassetteEveningTalksVenice.title := 'Evening Talks in Venice'
+!cassetteEveningTalksVenice.availableCopies := 2
+!cassetteEveningTalksVenice.episode := 10
+
+!new Series('cassetteFuturesFolly')
+!cassetteFuturesFolly.title := 'Future\'s Folly'
+!cassetteFuturesFolly.availableCopies := 5
+!cassetteFuturesFolly.episode := 2
+
+!new Actor('actorDayoAkin')
+!actorDayoAkin.name := 'Dayo Akin'
+
+!new Actor('actorGiuliaRizzo')
+!actorGiuliaRizzo.name := 'Giulia Rizzo'
+
+!new Actor('actorMarcoLombardi')
+!actorMarcoLombardi.name := 'Marco Lombardi'
+
+!new Actor('actorZaraKim')
+!actorZaraKim.name := 'Zara Kim'
+
+!insert (client401, rental1) into ClientRental
+!insert (client401, rental3) into ClientRental
+!insert (client402, rental2) into ClientRental
+
+!insert (rental1, cassetteKilimanjaroChronicles) into RentalCassette
+!insert (rental2, cassetteEveningTalksVenice) into RentalCassette
+!insert (rental3, cassetteKilimanjaroChronicles) into RentalCassette
+
+!insert (cassetteKilimanjaroChronicles, actorDayoAkin) into CassetteActor
+!insert (cassetteEveningTalksVenice, actorGiuliaRizzo) into CassetteActor
+!insert (cassetteEveningTalksVenice, actorMarcoLombardi) into CassetteActor
+!insert (cassetteFuturesFolly, actorZaraKim) into CassetteActor
+
+!new Client('client300')
+!client300.clientId := 300
+!client300.isSuspended := false
+
+!new Client('client301')
+!client301.clientId := 301
+!client301.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-10-05')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-10-06')
+
+!new Movie('cassetteTheFinalStand')
+!cassetteTheFinalStand.title := 'The Final Stand'
+!cassetteTheFinalStand.availableCopies := 5
+!cassetteTheFinalStand.genre := #Action
+
+!new Series('cassetteCrossBorderDrama')
+!cassetteCrossBorderDrama.title := 'Cross-Border Drama'
+!cassetteCrossBorderDrama.availableCopies := 2
+!cassetteCrossBorderDrama.episode := 1
+
+!new Series('cassetteGalacticVoyage')
+!cassetteGalacticVoyage.title := 'Galactic Voyage'
+!cassetteGalacticVoyage.availableCopies := 0
+!cassetteGalacticVoyage.episode := 20
+
+!new Actor('actorBruceLee')
+!actorBruceLee.name := 'Bruce Lee'
+
+!new Actor('actorPenelopeCruz')
+!actorPenelopeCruz.name := 'Penélope Cruz'
+
+!new Actor('actorJackieChan')
+!actorJackieChan.name := 'Jackie Chan'
+
+!new Actor('actorChrisEvans')
+!actorChrisEvans.name := 'Chris Evans'
+
+!new Actor('actorGalGadot')
+!actorGalGadot.name := 'Gal Gadot'
+
+!new Actor('actorBenedictCumberbatch')
+!actorBenedictCumberbatch.name := 'Benedict Cumberbatch'
+
+!insert (client300, rental1) into ClientRental
+!insert (client301, rental2) into ClientRental
+
+!insert (rental1, cassetteTheFinalStand) into RentalCassette
+!insert (rental1, cassetteGalacticVoyage) into RentalCassette
+
+!insert (rental2, cassetteCrossBorderDrama) into RentalCassette
+!insert (rental2, cassetteGalacticVoyage) into RentalCassette
+
+!insert (cassetteTheFinalStand, actorBruceLee) into CassetteActor
+
+!insert (cassetteCrossBorderDrama, actorPenelopeCruz) into CassetteActor
+!insert (cassetteCrossBorderDrama, actorJackieChan) into CassetteActor
+
+!insert (cassetteGalacticVoyage, actorChrisEvans) into CassetteActor
+!insert (cassetteGalacticVoyage, actorGalGadot) into CassetteActor
+!insert (cassetteGalacticVoyage, actorBenedictCumberbatch) into CassetteActor
+
+!new Client('selimKaya')
+!selimKaya.clientId := 401
+!selimKaya.isSuspended := false
+
+!new Client('leylaAydin')
+!leylaAydin.clientId := 402
+!leylaAydin.isSuspended := false
+
+!new Client('mehmetDemir')
+!mehmetDemir.clientId := 403
+!mehmetDemir.isSuspended := true
+
+!new Rental('rentalSelim')
+!rentalSelim.date := Date('2023-08-18')
+
+!new Rental('rentalLeyla')
+!rentalLeyla.date := Date('2023-08-20')
+
+!new Movie('cassetteSultansSecret')
+!cassetteSultansSecret.title := 'The Sultan\'s Secret'
+!cassetteSultansSecret.availableCopies := 5
+!cassetteSultansSecret.genre := #Action
+
+!new Movie('cassetteCafePera')
+!cassetteCafePera.title := 'Café Pera'
+!cassetteCafePera.availableCopies := 4
+!cassetteCafePera.genre := #Comedy
+
+!new Series('cassetteGoldenHornChronicles')
+!cassetteGoldenHornChronicles.title := 'Golden Horn Chronicles'
+!cassetteGoldenHornChronicles.availableCopies := 2
+!cassetteGoldenHornChronicles.episode := 22
+
+!new Actor('actorTubaBuyukustun')
+!actorTubaBuyukustun.name := 'Tuba Büyüküstün'
+
+!new Actor('actorKivancTatlitug')
+!actorKivancTatlitug.name := 'Kıvanç Tatlıtuğ'
+
+!new Actor('actorCagatayUlusoy')
+!actorCagatayUlusoy.name := 'Çağatay Ulusoy'
+
+!new Actor('actorBerenSaat')
+!actorBerenSaat.name := 'Beren Saat'
+
+!insert (selimKaya, rentalSelim) into ClientRental
+!insert (leylaAydin, rentalLeyla) into ClientRental
+
+!insert (rentalSelim, cassetteSultansSecret) into RentalCassette
+!insert (rentalLeyla, cassetteCafePera) into RentalCassette
+!insert (rentalLeyla, cassetteGoldenHornChronicles) into RentalCassette
+
+!insert (cassetteSultansSecret, actorKivancTatlitug) into CassetteActor
+!insert (cassetteSultansSecret, actorTubaBuyukustun) into CassetteActor
+
+!insert (cassetteCafePera, actorCagatayUlusoy) into CassetteActor
+
+!insert (cassetteGoldenHornChronicles, actorBerenSaat) into CassetteActor
+!insert (cassetteGoldenHornChronicles, actorTubaBuyukustun) into CassetteActor
+
+!new Client('liamOConnor')
+!liamOConnor.clientId := 740
+!liamOConnor.isSuspended := false
+
+!new Client('jasmineMing')
+!jasmineMing.clientId := 741
+!jasmineMing.isSuspended := false
+
+!new Rental('rentalAdventureLands')
+!rentalAdventureLands.date := Date('2023-07-22')
+
+!new Rental('rentalDesertMirage')
+!rentalDesertMirage.date := Date('2023-08-05')
+
+!new Series('cassetteWalkaboutWonders')
+!cassetteWalkaboutWonders.title := 'Walkabout Wonders'
+!cassetteWalkaboutWonders.availableCopies := 8
+!cassetteWalkaboutWonders.episode := 10
+
+!new Movie('cassetteOutbackSafariAdventures')
+!cassetteOutbackSafariAdventures.title := 'Outback Safari Adventures'
+!cassetteOutbackSafariAdventures.availableCopies := 1
+!cassetteOutbackSafariAdventures.genre := #Action
+
+!new Movie('cassetteWildFrontierCowboys')
+!cassetteWildFrontierCowboys.title := 'Wild Frontier: Cowboys'
+!cassetteWildFrontierCowboys.availableCopies := 2
+!cassetteWildFrontierCowboys.genre := #Action
+
+!new Actor('actorDavidGulpilil')
+!actorDavidGulpilil.name := 'David Gulpilil'
+
+!new Actor('actorHughJackman')
+!actorHughJackman.name := 'Hugh Jackman'
+
+!new Actor('actorSamElliott')
+!actorSamElliott.name := 'Sam Elliott'
+
+!insert (liamOConnor, rentalAdventureLands) into ClientRental
+!insert (jasmineMing, rentalDesertMirage) into ClientRental
+
+!insert (rentalAdventureLands, cassetteWalkaboutWonders) into RentalCassette
+!insert (rentalAdventureLands, cassetteOutbackSafariAdventures) into RentalCassette
+!insert (rentalAdventureLands, cassetteWildFrontierCowboys) into RentalCassette
+
+!insert (rentalDesertMirage, cassetteOutbackSafariAdventures) into RentalCassette
+
+!insert (cassetteWalkaboutWonders, actorDavidGulpilil) into CassetteActor
+
+!insert (cassetteOutbackSafariAdventures, actorHughJackman) into CassetteActor
+
+!insert (cassetteWildFrontierCowboys, actorSamElliott) into CassetteActor
+

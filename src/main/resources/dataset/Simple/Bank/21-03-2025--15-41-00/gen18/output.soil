@@ -1,0 +1,51 @@
+!new Bank('bank19')
+!bank19.country := 'India'
+!bank19.name := 'HDFC Bank'
+!bank19.bic := 'HDFCINBB'
+
+!new Account('account52')
+!account52.iban := 'IN50101345678912345678'
+!account52.balance := 6800
+
+!new Account('account53')
+!account53.iban := 'IN60111345678912345679'
+!account53.balance := 1500
+
+!new Account('account54')
+!account54.iban := 'IN70121345678912345680'
+!account54.balance := 2900
+
+!new Person('person56')
+!person56.firstName := 'Aarav'
+!person56.lastName := 'Sharma'
+!person56.age := 39
+
+!new Person('person57')
+!person57.firstName := 'Priya'
+!person57.lastName := 'Verma'
+!person57.age := 35
+
+!new Person('person58')
+!person58.firstName := 'Rajesh'
+!person58.lastName := 'Patel'
+!person58.age := 43
+
+-- Associations
+!insert (bank19, account52) into AccountOfBanks
+!insert (bank19, account53) into AccountOfBanks
+!insert (bank19, account54) into AccountOfBanks
+
+!insert (person56, account52) into Ownership
+!insert (person57, account52) into Ownership
+
+!insert (person57, account53) into Ownership
+!insert (person58, account53) into Ownership
+
+!insert (person58, account54) into Ownership
+!insert (person56, account54) into Ownership
+
+!insert (person56, account53) into Use
+!insert (person57, account54) into Use
+
+!insert (person58, account52) into Use
+!insert (person57, account52) into Use

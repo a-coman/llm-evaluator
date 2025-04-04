@@ -1,0 +1,64 @@
+!new Client('client400')
+!client400.clientId := 400
+!client400.isSuspended := false
+
+!new Client('client401')
+!client401.clientId := 401
+!client401.isSuspended := true
+
+!new Rental('rental1')
+!rental1.date := Date('2023-09-18')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-09-19')
+
+!new Movie('cassetteTimelessAdventure')
+!cassetteTimelessAdventure.title := 'Timeless Adventure'
+!cassetteTimelessAdventure.availableCopies := 0
+!cassetteTimelessAdventure.genre := #Action
+
+!new Movie('cassetteLaughingMatters')
+!cassetteLaughingMatters.title := 'Laughing Matters'
+!cassetteLaughingMatters.availableCopies := 1
+!cassetteLaughingMatters.genre := #Comedy
+
+!new Series('cassetteTwilightTales')
+!cassetteTwilightTales.title := 'Twilight Tales'
+!cassetteTwilightTales.availableCopies := 0
+!cassetteTwilightTales.episode := 13
+
+!new Series('cassetteTomorrowsQuest')
+!cassetteTomorrowsQuest.title := 'Tomorrow\'s Quest'
+!cassetteTomorrowsQuest.availableCopies := 0
+!cassetteTomorrowsQuest.episode := 22
+
+!new Actor('actorMerylStreep')
+!actorMerylStreep.name := 'Meryl Streep'
+
+!new Actor('actorKevinHart')
+!actorKevinHart.name := 'Kevin Hart'
+
+!new Actor('actorZoeSaldana')
+!actorZoeSaldana.name := 'Zoe Saldana'
+
+!new Actor('actorKeanuReeves')
+!actorKeanuReeves.name := 'Keanu Reeves'
+
+!new Actor('actorNataliePortman')
+!actorNataliePortman.name := 'Natalie Portman'
+
+!insert (client400, rental1) into ClientRental
+!insert (client401, rental2) into ClientRental
+
+!insert (rental1, cassetteTimelessAdventure) into RentalCassette
+!insert (rental1, cassetteLaughingMatters) into RentalCassette
+!insert (rental1, cassetteTwilightTales) into RentalCassette
+
+!insert (rental2, cassetteLaughingMatters) into RentalCassette
+!insert (rental2, cassetteTomorrowsQuest) into RentalCassette
+
+!insert (cassetteTimelessAdventure, actorMerylStreep) into CassetteActor
+!insert (cassetteLaughingMatters, actorKevinHart) into CassetteActor
+!insert (cassetteTwilightTales, actorZoeSaldana) into CassetteActor
+!insert (cassetteTwilightTales, actorKeanuReeves) into CassetteActor
+!insert (cassetteTomorrowsQuest, actorNataliePortman) into CassetteActor

@@ -1,0 +1,70 @@
+!new RentalOffice('rentalOffice24')
+!rentalOffice24.name := 'WindyCity Rentals'
+!rentalOffice24.number := 606
+!rentalOffice24.address := '960 Lake Shore Drive, Chicago, IL, 60611'
+
+!new Vehicle('vehicle25')
+!vehicle25.id := 47
+!vehicle25.registrationState := #CO
+!vehicle25.licensePlateNumber := 'IL5623ELS'
+!vehicle25.vehicleTypeCode := #TRUCK10
+!vehicle25.registrationLastMaintenanceDate := Date('2023-07-01')
+!vehicle25.expirationDate := Date('2024-07-01')
+
+!new Truck('truck23')
+!truck23.id := 48
+!truck23.registrationState := #CO
+!truck23.licensePlateNumber := 'IL1122DMP'
+!truck23.vehicleTypeCode := #TRUCK
+!truck23.registrationLastMaintenanceDate := Date('2023-02-28')
+!truck23.expirationDate := Date('2023-12-22')
+!truck23.odometerReading := 140000
+!truck23.gasTankCapacity := 70.0
+!truck23.workingRadio := true
+!truck23.mileage := 6
+
+!new Individual('individualCustomer18')
+!individualCustomer18.name := 'Emily Nguyen'
+!individualCustomer18.address := '347 Oak Avenue, Evanston, IL, 60201'
+!individualCustomer18.poorRisk := false
+!individualCustomer18.homePhone := '847-555-7890'
+!individualCustomer18.driverLicenseState := #CO
+!individualCustomer18.driverLicenseNumber := 3479021
+!individualCustomer18.driverLicenseExpirationDate := Date('2025-02-10')
+
+!new Company('company21')
+!company21.name := 'Midwest Builders'
+!company21.address := '200 Construction Way, Naperville, IL, 60540'
+!company21.poorRisk := true
+!company21.idNumber := 606777
+
+!new RentalAgreement('rentalAgreement40')
+!rentalAgreement40.number := 3011
+!rentalAgreement40.rentalDate := Date('2023-11-15')
+!rentalAgreement40.anticipatedDuration := 4
+!rentalAgreement40.depositPaid := 150.00
+!rentalAgreement40.quotedDailyRate := 45.00
+!rentalAgreement40.quotedRatePerMile := 0.30
+
+!new RentalAgreement('rentalAgreement41')
+!rentalAgreement41.number := 3012
+!rentalAgreement41.rentalDate := Date('2023-11-30')
+!rentalAgreement41.anticipatedDuration := 10
+!rentalAgreement41.depositPaid := 1100.00
+!rentalAgreement41.quotedDailyRate := 175.00
+!rentalAgreement41.quotedRatePerMile := 0.60
+
+!insert (rentalOffice24, vehicle25) into RentalOfficeVehicle
+!insert (rentalOffice24, truck23) into RentalOfficeVehicle
+
+!insert (rentalOffice24, rentalAgreement40) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice24, rentalAgreement40) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement40, vehicle25) into RentalAgreementVehicle
+!insert (rentalAgreement40, individualCustomer18) into RentalAgreementCustomer
+
+!insert (rentalOffice24, rentalAgreement41) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice24, rentalAgreement41) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement41, truck23) into RentalAgreementVehicle
+!insert (rentalAgreement41, company21) into RentalAgreementCustomer

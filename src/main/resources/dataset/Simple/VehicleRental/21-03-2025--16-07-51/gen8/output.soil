@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice10')
+!rentalOffice10.name := 'Capital Rentals'
+!rentalOffice10.number := 110
+!rentalOffice10.address := '456 Government Ave, Hartford, CT'
+
+!new Truck('truck6')
+!truck6.id := 9
+!truck6.registrationState := #CT
+!truck6.licensePlateNumber := 'CT4321'
+!truck6.vehicleTypeCode := #TRUCK
+!truck6.registrationLastMaintenanceDate := Date('2023-05-17')
+!truck6.expirationDate := Date('2024-05-17')
+!truck6.odometerReading := 3500
+!truck6.gasTankCapacity := 140.0
+!truck6.workingRadio := true
+!truck6.mileage := 18
+
+!new Company('companyCustomer4')
+!companyCustomer4.name := 'Green Landscaping LLC'
+!companyCustomer4.address := '321 Garden St, Hartford, CT'
+!companyCustomer4.poorRisk := false
+!companyCustomer4.idNumber := 5004
+
+!new RentalAgreement('rentalAgreement9')
+!rentalAgreement9.number := 509
+!rentalAgreement9.rentalDate := Date('2023-10-15')
+!rentalAgreement9.anticipatedDuration := 8
+!rentalAgreement9.depositPaid := 250.0
+!rentalAgreement9.quotedDailyRate := 60.0
+!rentalAgreement9.quotedRatePerMile := 0.4
+
+!insert (rentalOffice10, truck6) into RentalOfficeVehicle
+!insert (rentalOffice10, rentalAgreement9) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice10, rentalAgreement9) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement9, truck6) into RentalAgreementVehicle
+!insert (rentalAgreement9, companyCustomer4) into RentalAgreementCustomer

@@ -1,0 +1,57 @@
+!new Customer('customer13')
+!customer13.firstName := 'Carlos'
+!customer13.lastName := 'Silva'
+
+!new Booking('booking13')
+!booking13.bookingId := 21105
+!booking13.startDate := 'February 15, 2024'
+!booking13.endDate := 'February 22, 2024'
+!booking13.canceled := false
+!booking13.confirmed := true
+
+!new RoomReservation('roomreservation21')
+!roomreservation21.checkInDate := 'February 15, 2024'
+!roomreservation21.checkOutDate := 'February 22, 2024'
+
+!new Room('room26')
+!room26.roomNumber := 405
+!room26.numBeds := 2
+!room26.pricePerNight := 700.00
+!room26.occupied := true
+!room26.blocked := false
+
+!new RoomExtra('roomextra30')
+!roomextra30.price := 100.00
+!roomextra30.description := 'Rental of traditional Carnaval costumes.'
+
+!new RoomExtra('roomextra31')
+!roomextra31.price := 50.00
+!roomextra31.description := 'Exclusive breakfast with a view of Copacabana Beach.'
+
+!new Bill('bill25')
+!bill25.billId := 211051
+!bill25.price := 0.00
+
+!new Bill('bill26')
+!bill26.billId := 211052
+!bill26.price := 0.00
+
+!new Bill('bill27')
+!bill27.billId := 211053
+!bill27.price := 0.00
+
+!insert (booking13, customer13) into BookingCustomer
+!insert (booking13, roomreservation21) into BookingRoomReservation
+
+!insert (roomreservation21, room26) into RoomReservationRoom
+
+!insert (roomreservation21, roomextra30) into RoomReservationExtras
+!insert (roomreservation21, roomextra31) into RoomReservationExtras
+
+!insert (bill25, roomreservation21) into BillRoomReservation
+!insert (bill26, roomreservation21) into BillRoomReservation
+!insert (bill27, roomreservation21) into BillRoomReservation
+
+!insert (booking13, bill25) into BookingBill
+!insert (booking13, bill26) into BookingBill
+!insert (booking13, bill27) into BookingBill

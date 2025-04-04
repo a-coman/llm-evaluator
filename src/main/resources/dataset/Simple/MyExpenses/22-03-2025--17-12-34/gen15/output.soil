@@ -1,0 +1,33 @@
+!new Expense('expense17')
+!expense17.amount := 220.0
+!expense17.startDate := Date('2024-05-01')
+!expense17.endDate := Date('2024-05-31')
+
+!new Currency('currency15')
+!currency15.name := 'Korean Won'
+!currency15.abbreviation := 'KRW'
+
+!new Bill('bill28')
+!bill28.amount := 120.0
+!bill28.category := 'Transport'
+!bill28.date := Date('2024-05-05')
+!bill28.paymentMethod := #CREDIT_CARD
+!bill28.status := #VALIDATED
+
+!new Bill('bill29')
+!bill29.amount := 100.0
+!bill29.category := 'Dining Out'
+!bill29.date := Date('2024-05-18')
+!bill29.paymentMethod := #CHECK
+!bill29.status := #PENDING
+
+!insert (expense17, bill28) into ExpenseContainsBills
+!insert (expense17, bill29) into ExpenseContainsBills
+
+!insert (bill28, currency15) into BillCurrency
+!insert (bill29, currency15) into BillCurrency
+
+!new Comment('comment17')
+!comment17.text := 'May transport and dining out expenses'
+
+!insert (expense17, comment17) into ExpenseComment

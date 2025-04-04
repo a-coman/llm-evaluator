@@ -1,0 +1,42 @@
+!new Client('clientBoundary1')
+!clientBoundary1.clientId := 1
+!clientBoundary1.isSuspended := false
+
+!new Client('clientBoundary2')
+!clientBoundary2.clientId := 2147483647
+!clientBoundary2.isSuspended := true
+
+!new Rental('rentalBoundary1')
+!rentalBoundary1.date := Date('2023-01-01')
+
+!new Movie('movieBoundary1')
+!movieBoundary1.title := 'Fast Affair'
+!movieBoundary1.availableCopies := 0
+!movieBoundary1.genre := #Action
+
+!new Series('seriesBoundary1')
+!seriesBoundary1.title := 'TechVenture Ep.1'
+!seriesBoundary1.availableCopies := 1
+!seriesBoundary1.episode := 1
+
+!new Movie('movieBoundary2')
+!movieBoundary2.title := 'The Comedy Show'
+!movieBoundary2.availableCopies := 9999
+!movieBoundary2.genre := #Comedy
+
+!new Actor('actorBoundary1')
+!actorBoundary1.name := 'John Doe'
+
+!new Actor('actorBoundary2')
+!actorBoundary2.name := 'Jane Smith'
+
+!insert (clientBoundary1, rentalBoundary1) into ClientRental
+
+!insert (rentalBoundary1, movieBoundary1) into RentalCassette
+!insert (rentalBoundary1, seriesBoundary1) into RentalCassette
+
+!insert (movieBoundary1, actorBoundary1) into CassetteActor
+!insert (seriesBoundary1, actorBoundary2) into CassetteActor
+
+!insert (movieBoundary2, actorBoundary1) into CassetteActor
+!insert (movieBoundary2, actorBoundary2) into CassetteActor

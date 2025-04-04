@@ -1,0 +1,108 @@
+!new StateMachine('metroOperationCycle')
+!metroOperationCycle.name := 'metroOperationCycle'
+
+!new State('stationIdle')
+!stationIdle.name := 'stationIdle'
+
+!new State('boarding')
+!boarding.name := 'boarding'
+
+!new State('inTransit')
+!inTransit.name := 'inTransit'
+
+!new State('arriveStation')
+!arriveStation.name := 'arriveStation'
+
+!new State('disembark')
+!disembark.name := 'disembark'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('openDoors')
+!openDoors.name := 'openDoors'
+
+!new Transition('startTransit')
+!startTransit.name := 'startTransit'
+
+!new Transition('stationArrival')
+!stationArrival.name := 'stationArrival'
+
+!new Transition('exitPassengers')
+!exitPassengers.name := 'exitPassengers'
+
+!new Transition('prepareDeparture')
+!prepareDeparture.name := 'prepareDeparture'
+
+!new Transition('serviceCheck')
+!serviceCheck.name := 'serviceCheck'
+
+!new Transition('completeMaintenance')
+!completeMaintenance.name := 'completeMaintenance'
+
+!new TimeEvent('doorOpeningDuration')
+!doorOpeningDuration.time := 1
+
+!new TimeEvent('boardingDuration')
+!boardingDuration.time := 5
+
+!new TimeEvent('transitTime')
+!transitTime.time := 12
+
+!new TimeEvent('disembarkDuration')
+!disembarkDuration.time := 3
+
+!new TimeEvent('preparationTime')
+!preparationTime.time := 2
+
+!new TimeEvent('maintenanceInterval')
+!maintenanceInterval.time := 10
+
+!new TimeEvent('timeEventCompleteMaintenance')
+!timeEventCompleteMaintenance.time := 5 -- Added to comply with constraint
+
+!insert (metroOperationCycle, stationIdle) into StateMachineContainsStates
+!insert (metroOperationCycle, boarding) into StateMachineContainsStates
+!insert (metroOperationCycle, inTransit) into StateMachineContainsStates
+!insert (metroOperationCycle, arriveStation) into StateMachineContainsStates
+!insert (metroOperationCycle, disembark) into StateMachineContainsStates
+!insert (metroOperationCycle, maintenance) into StateMachineContainsStates
+
+!insert (metroOperationCycle, stationIdle) into StateMachineStartsStates
+
+!insert (metroOperationCycle, openDoors) into StateMachineContainsTransitions
+!insert (metroOperationCycle, startTransit) into StateMachineContainsTransitions
+!insert (metroOperationCycle, stationArrival) into StateMachineContainsTransitions
+!insert (metroOperationCycle, exitPassengers) into StateMachineContainsTransitions
+!insert (metroOperationCycle, prepareDeparture) into StateMachineContainsTransitions
+!insert (metroOperationCycle, serviceCheck) into StateMachineContainsTransitions
+!insert (metroOperationCycle, completeMaintenance) into StateMachineContainsTransitions
+
+!insert (openDoors, doorOpeningDuration) into TransitionContainsEvents
+!insert (startTransit, boardingDuration) into TransitionContainsEvents
+!insert (stationArrival, transitTime) into TransitionContainsEvents
+!insert (exitPassengers, disembarkDuration) into TransitionContainsEvents
+!insert (prepareDeparture, preparationTime) into TransitionContainsEvents
+!insert (serviceCheck, maintenanceInterval) into TransitionContainsEvents
+!insert (completeMaintenance, timeEventCompleteMaintenance) into TransitionContainsEvents
+
+!insert (stationIdle, openDoors) into StateTransition
+!insert (openDoors, boarding) into TransitionState
+
+!insert (boarding, startTransit) into StateTransition
+!insert (startTransit, inTransit) into TransitionState
+
+!insert (inTransit, stationArrival) into StateTransition
+!insert (stationArrival, arriveStation) into TransitionState
+
+!insert (arriveStation, exitPassengers) into StateTransition
+!insert (exitPassengers, disembark) into TransitionState
+
+!insert (disembark, prepareDeparture) into StateTransition
+!insert (prepareDeparture, stationIdle) into TransitionState
+
+!insert (stationIdle, serviceCheck) into StateTransition
+!insert (serviceCheck, maintenance) into TransitionState
+
+!insert (maintenance, completeMaintenance) into StateTransition
+!insert (completeMaintenance, stationIdle) into TransitionState

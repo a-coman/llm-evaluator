@@ -1,0 +1,76 @@
+!new AddressBook('AddressBook_1')
+
+!new Person('Person_1')
+!Person_1.name := 'John Doe'
+!Person_1.phone := '+1-555-0123'
+!Person_1.website := 'www.johndoe.com'
+!Person_1.email := 'john.doe@example.com'
+!Person_1.title := 'Software Engineer'
+
+!new Address('Address_1')
+!Address_1.city := 'San Francisco'
+!Address_1.houseNr := '123'
+!Address_1.street := 'Market Street'
+!insert (Person_1, Address_1) into ContactContainsAddress
+
+!new Note('Note_1')
+!Note_1.author := 'John Doe'
+!Note_1.time := Date('2023-01-15')
+!Note_1.type := #EMAIL
+!Note_1.comment := 'Follow up with client about software updates.'
+!insert (Person_1, Note_1) into ContactContainsNote
+
+!new Relationship('Relationship_1')
+!Relationship_1.type := #EMPLOYEE
+!insert (Person_1, Relationship_1) into ContactToRelationship
+
+!new Company('Company_1')
+!Company_1.name := 'Tech Innovations Inc.'
+!Company_1.phone := '+1-555-5678'
+!Company_1.website := 'www.techinnovations.com'
+!Company_1.email := 'contact@techinnovations.com'
+!Company_1.industry := 'Information Technology'
+
+!new Address('Address_2')
+!Address_2.city := 'New York'
+!Address_2.houseNr := '456'
+!Address_2.street := '5th Avenue'
+!insert (Company_1, Address_2) into ContactContainsAddress
+
+!new Note('Note_2')
+!Note_2.author := 'Sarah Mills'
+!Note_2.time := Date('2023-02-10')
+!Note_2.type := #MEETING
+!Note_2.comment := 'Annual budget discussion scheduled.'
+!insert (Company_1, Note_2) into ContactContainsNote
+
+!insert (Relationship_1, Company_1) into RelationshipToContact
+
+!new Person('Person_2')
+!Person_2.name := 'Emily Zhang'
+!Person_2.phone := '+44-7777-9988'
+!Person_2.website := 'emilyzhangdesign.com'
+!Person_2.email := 'e.zhang@designbliss.com'
+!Person_2.title := 'Creative Director'
+
+!new Address('Address_3')
+!Address_3.city := 'London'
+!Address_3.houseNr := '221B'
+!Address_3.street := 'Baker Street'
+!insert (Person_2, Address_3) into ContactContainsAddress
+
+!new Note('Note_3')
+!Note_3.author := 'Emily Zhang'
+!Note_3.time := Date('2023-03-01')
+!Note_3.type := #CALL
+!Note_3.comment := 'Discussed quarterly design themes with marketing.'
+!insert (Person_2, Note_3) into ContactContainsNote
+
+!new Relationship('Relationship_2')
+!Relationship_2.type := #COWORKER
+!insert (Person_2, Relationship_2) into ContactToRelationship
+!insert (Relationship_2, Person_1) into RelationshipToContact
+
+!insert (AddressBook_1, Person_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Company_1) into AddressBookMadeOfContact
+!insert (AddressBook_1, Person_2) into AddressBookMadeOfContact

@@ -1,0 +1,143 @@
+!new Restaurant('restaurant22')
+!restaurant22.name := 'El Tazón Dorado'
+
+!new Owner('owner49')
+!owner49.name := 'Marta Hernandez'
+!owner49.percentageShares := 40
+
+!new Owner('owner50')
+!owner50.name := 'Diego Torres'
+!owner50.percentageShares := 30
+
+!new Owner('owner51')
+!owner51.name := 'Isabel Perez'
+!owner51.percentageShares := 30
+
+!insert (restaurant22, owner49) into RestaurantOwner
+!insert (restaurant22, owner50) into RestaurantOwner
+!insert (restaurant22, owner51) into RestaurantOwner
+
+!new Table('table49')
+!table49.number := 7
+!table49.description := 'Enclosed family-style seating.'
+!table49.capacity := 6
+
+!new Table('table50')
+!table50.number := 8
+!table50.description := 'Outdoor patio seating with a view of the street parade.'
+!table50.capacity := 4
+
+!new RegularCustomer('customer14')
+!customer14.name := 'Priya Kapoor'
+!customer14.prefferedLanguage := #English  -- Using #English as placeholder for Hindi
+
+!new Waiter('waiter42')
+!waiter42.name := 'Ricardo Navarro'
+!waiter42.dateOfBirth := Date('1990-12-15')
+!waiter42.phoneNumber := '555-6650'
+
+!new Individual('individualReservation15')
+!individualReservation15.time := Time('13:00')
+!individualReservation15.date := Date('2023-10-19')
+!individualReservation15.numberPeople := 1
+!individualReservation15.name := 'Priya Kapoor'
+!individualReservation15.phoneNumber := '555-9055'
+!individualReservation15.number := 9005
+!individualReservation15.seating := #Inside  -- Using #Inside as a placeholder for Patio
+!individualReservation15.smoking := #NonSmoking
+
+!insert (restaurant22, individualReservation15) into RestaurantReservation
+!insert (individualReservation15, table50) into ReservationTable
+!insert (individualReservation15, waiter42) into ReservationWaiter
+
+!insert (individualReservation15, customer14) into ReservationCustomer
+
+!new MenuItem('menuItem37')
+!menuItem37.description := 'Churros con Chocolate'
+!menuItem37.prepTime := 10.0
+!menuItem37.classification := #Dessert
+
+!new Chef('chef30')
+!chef30.name := 'Lucia Alvarez'
+!chef30.dateOfBirth := Date('1968-04-07')
+!chef30.phoneNumber := '555-2100'
+
+!new Cook('cook37')
+!cook37.name := 'Emilio Vargas'
+!cook37.dateOfBirth := Date('1975-09-22')
+!cook37.phoneNumber := '555-4849'
+!cook37.yearsOfExperience := 20
+
+!insert (menuItem37, chef30) into MenuItemChef
+!insert (chef30, cook37) into ChefCook
+
+!new ItemOrder('itemOrder32')
+!itemOrder32.time := Time('13:10')
+!insert (individualReservation15, itemOrder32) into ReservationItemOrdered
+!insert (itemOrder32, menuItem37) into ItemOrderMenuItem
+
+!new Banquet('banquet19')
+!banquet19.date := Date('2023-10-19')
+!banquet19.time := Time('14:30')
+!banquet19.numberPeople := 5
+!banquet19.name := 'Art Exhibition Team'
+!banquet19.paymentMethod := #CreditCard  -- Placeholder for Bank Transfer
+!banquet19.busService := false
+
+!insert (restaurant22, banquet19) into RestaurantReservation
+!insert (banquet19, table49) into ReservationTable
+
+!new Waiter('waiter43')
+!waiter43.name := 'Clara Morales'
+!waiter43.dateOfBirth := Date('1992-11-01')
+!waiter43.phoneNumber := '555-9934'
+
+!insert (banquet19, waiter42) into ReservationWaiter
+!insert (banquet19, waiter43) into ReservationWaiter
+
+!new HeadWaiter('headWaiter20')
+!headWaiter20.name := 'Fernando Iglesias'
+!headWaiter20.dateOfBirth := Date('1983-03-11')
+!headWaiter20.phoneNumber := '555-7766'
+
+!insert (headWaiter20, waiter42) into HeadWaiterWaiter
+!insert (headWaiter20, waiter43) into HeadWaiterWaiter
+
+!new FoodItem('foodItem69')
+!foodItem69.number := 9001
+!foodItem69.description := 'All-purpose flour'
+!foodItem69.purchaseFlag := true
+!foodItem69.unit := #Pound  -- Using #Pound as placeholder for Kg
+
+!new FoodItem('foodItem70')
+!foodItem70.number := 9002
+!foodItem70.description := 'Dark Chocolate Sauce'
+!foodItem70.purchaseFlag := true
+!foodItem70.unit := #Ounce  -- Using #Ounce as placeholder for Liters
+
+!new FoodItem('foodItem71')
+!foodItem71.number := 9003
+!foodItem71.description := 'Mixed cinnamon and sugar'
+!foodItem71.purchaseFlag := true
+!foodItem71.unit := #Gram
+
+!insert (menuItem37, foodItem69) into MenuItemFoodItem
+!insert (menuItem37, foodItem70) into MenuItemFoodItem
+!insert (menuItem37, foodItem71) into MenuItemFoodItem
+
+!new Allergen('allergen29')
+!allergen29.type := #Gluten
+
+!new Allergen('allergen30')
+!allergen30.type := #Lactose
+
+!insert (foodItem69, allergen29) into FoodItemAllergen
+!insert (foodItem70, allergen30) into FoodItemAllergen
+
+!new DietaryRequirement('dietary9')
+!dietary9.diet := #Vegan  -- Using #Vegan as placeholder for Nut-Free
+
+!new Manager('manager8')
+!manager8.name := 'Javier Cortez'
+!manager8.dateOfBirth := Date('1965-02-08')
+!manager8.phoneNumber := '555-3257'

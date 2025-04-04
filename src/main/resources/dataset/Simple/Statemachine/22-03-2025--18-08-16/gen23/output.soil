@@ -1,0 +1,65 @@
+!new StateMachine('stateMachine24')
+!stateMachine24.name := 'energyManagementMachine'
+
+!new State('state71')
+!state71.name := 'idleMode'
+
+!new State('state72')
+!state72.name := 'activeMode'
+
+!new State('state73')
+!state73.name := 'energySavingMode'
+
+!new State('state74')
+!state74.name := 'shutdown'
+
+!new Transition('transition64')
+!transition64.name := 'activate'
+
+!new Transition('transition65')
+!transition65.name := 'enterEnergySaving'
+
+!new Transition('transition66')
+!transition66.name := 'shutdownSystem'
+
+!new Transition('transition67')
+!transition67.name := 'restart'
+
+!new TimeEvent('event64')
+!event64.time := 10
+
+!new TimeEvent('event65')
+!event65.time := 20
+
+!new TimeEvent('event66')
+!event66.time := 30
+
+!new TimeEvent('event67')
+!event67.time := 40
+
+!insert (stateMachine24, state71) into StateMachineContainsStates
+!insert (stateMachine24, state72) into StateMachineContainsStates
+!insert (stateMachine24, state73) into StateMachineContainsStates
+!insert (stateMachine24, state74) into StateMachineContainsStates
+
+!insert (stateMachine24, transition64) into StateMachineContainsTransitions
+!insert (stateMachine24, transition65) into StateMachineContainsTransitions
+!insert (stateMachine24, transition66) into StateMachineContainsTransitions
+!insert (stateMachine24, transition67) into StateMachineContainsTransitions
+
+!insert (transition64, event64) into TransitionContainsEvents
+!insert (transition65, event65) into TransitionContainsEvents
+!insert (transition66, event66) into TransitionContainsEvents
+!insert (transition67, event67) into TransitionContainsEvents
+
+!insert (state71, transition64) into StateTransition
+!insert (state72, transition65) into StateTransition
+!insert (state73, transition66) into StateTransition
+!insert (state74, transition67) into StateTransition
+
+!insert (transition64, state72) into TransitionState
+!insert (transition65, state73) into TransitionState
+!insert (transition66, state74) into TransitionState
+!insert (transition67, state71) into TransitionState
+
+!insert (stateMachine24, state71) into StateMachineStartsStates

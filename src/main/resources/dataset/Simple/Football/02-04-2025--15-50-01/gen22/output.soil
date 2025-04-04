@@ -1,0 +1,159 @@
+!new Club('club43')
+!club43.name := 'Storm FC'
+!club43.homeGround := 'Storm Cellar'
+!club43.chairman := 'Natalie Fisher'
+
+!new Club('club44')
+!club44.name := 'Hurricanes FC'
+!club44.homeGround := 'Hurricane Stadium'
+!club44.chairman := 'Ethan Riley'
+
+!new Team('team43')
+!team43.name := 'Storm Chasers'
+!insert (club43, team43) into ClubTeam
+
+!new Team('team44')
+!team44.name := 'Hurricane Force'
+!insert (club44, team44) into ClubTeam
+
+!new Player('player64')
+!player64.name := 'Isaac Turner'
+!player64.age := 27
+!player64.bestFoot := #RIGHT
+!player64.phoneNumber := '456-789-0123'
+!insert (team43, player64) into TeamPlayer
+
+!new Player('player65')
+!player65.name := 'Grace Bennett'
+!player65.age := 25
+!player65.bestFoot := #LEFT
+!player65.phoneNumber := '567-890-1234'
+!insert (team43, player65) into TeamPlayer
+
+!new Player('player66')
+!player66.name := 'Oliver Price'
+!player66.age := 28
+!player66.bestFoot := #BOTH
+!player66.phoneNumber := '678-901-2345'
+!insert (team44, player66) into TeamPlayer
+
+!new Position('position64')
+!position64.positionName := #MIDFIELDER
+!insert (player64, position64) into PlayerPositions
+
+!new Position('position65')
+!position65.positionName := #FORWARD
+!insert (player65, position65) into PlayerPositions
+
+!new Position('position66')
+!position66.positionName := #DEFENDER
+!insert (player66, position66) into PlayerPositions
+
+!new TrainingSession('training43')
+!training43.date := '2024-08-10'
+!training43.location := 'Storm Fortress'
+!training43.purpose := 'Ball Control and Dribbling'
+!insert (team43, training43) into TeamTraining
+
+!new TrainingSession('training44')
+!training44.date := '2024-08-11'
+!training44.location := 'Hurricane Winds'
+!training44.purpose := 'Defensive Set Pieces'
+!insert (team44, training44) into TeamTraining
+
+!new TrainingNotes('trainingNotes43')
+!trainingNotes43.note := 'Focused on maintaining control under pressure'
+!trainingNotes43.date := '2024-08-10'
+!insert (training43, trainingNotes43) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes44')
+!trainingNotes44.note := 'Practiced defending against corners and free kicks'
+!trainingNotes44.date := '2024-08-11'
+!insert (training44, trainingNotes44) into TrainingTrainingNotes
+
+!new TrainingObjective('objective64')
+!objective64.areaToImprove := 'Ball Retention'
+!objective64.startDate := '2024-05-01'
+!objective64.endDate := '2024-08-01'
+!objective64.success := true
+!insert (objective64, player64) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective65')
+!objective65.areaToImprove := 'Finishing Under Pressure'
+!objective65.startDate := '2024-06-10'
+!objective65.endDate := '2024-09-10'
+!objective65.success := false
+!insert (objective65, player65) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective66')
+!objective66.areaToImprove := 'Tactical Awareness'
+!objective66.startDate := '2024-04-15'
+!objective66.endDate := '2024-07-15'
+!objective66.success := true
+!insert (objective66, player66) into TrainingObjectivePlayer
+
+!new Competition('competition22')
+!competition22.name := 'World Challenge Cup'
+!competition22.type := 'Final'
+
+!new Match('match22')
+!match22.date := '2024-08-20'
+!match22.homeAway := false
+!insert (competition22, match22) into CompetitionMatch
+!insert (team43, match22) into VisitorMatch
+!insert (team44, match22) into LocalMatch
+
+!new MatchReport('report22')
+!report22.duration := 90
+!report22.scoreVisitor := 1
+!report22.scoreLocal := 3
+!insert (match22, report22) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer64')
+!matchPlayer64.booked := false
+!matchPlayer64.goals := 1
+!matchPlayer64.rating := 8
+!insert (player64, matchPlayer64) into PlayerMatch
+!insert (match22, matchPlayer64) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer66')
+!matchPlayer66.booked := true
+!matchPlayer66.goals := 0
+!matchPlayer66.rating := 7
+!insert (player66, matchPlayer66) into PlayerMatch
+!insert (match22, matchPlayer66) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition64')
+!matchPlayerPosition64.positionName := #MIDFIELDER
+!matchPlayerPosition64.number := 8
+!insert (matchPlayer64, matchPlayerPosition64) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition66')
+!matchPlayerPosition66.positionName := #DEFENDER
+!matchPlayerPosition66.number := 4
+!insert (matchPlayer66, matchPlayerPosition66) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event83')
+!event83.eventType := #GOAL
+!event83.time := 15
+!insert (match22, event83) into MatchMatchEvent
+
+!new MatchEvent('event84')
+!event84.eventType := #GOAL
+!event84.time := 35
+!insert (match22, event84) into MatchMatchEvent
+
+!new MatchEvent('event85')
+!event85.eventType := #GOAL
+!event85.time := 55
+!insert (match22, event85) into MatchMatchEvent
+
+!new MatchEvent('event86')
+!event86.eventType := #GOAL
+!event86.time := 75
+!insert (match22, event86) into MatchMatchEvent
+
+!new MatchNote('matchNote22')
+!matchNote22.note := 'Dominant performance by Hurricanes FC, sealing a strong victory'
+!matchNote22.date := '2024-08-20'
+!insert (match22, matchNote22) into MatchMatchNote

@@ -1,0 +1,69 @@
+!new Client('client601')
+!client601.clientId := 601
+!client601.isSuspended := false
+
+!new Client('client602')
+!client602.clientId := 602
+!client602.isSuspended := true
+
+!new Client('client603')
+!client603.clientId := 603
+!client603.isSuspended := false
+
+!new Rental('rental1')
+!rental1.date := Date('2023-06-15')
+
+!new Rental('rental2')
+!rental2.date := Date('2023-08-22')
+
+!new Rental('rental3')
+!rental3.date := Date('2023-09-10')
+
+!new Movie('cassetteSilentEchoes')
+!cassetteSilentEchoes.title := 'Silent Echoes'
+!cassetteSilentEchoes.availableCopies := 6
+!cassetteSilentEchoes.genre := #Comedy
+
+!new Series('cassetteArtOfIntrigue')
+!cassetteArtOfIntrigue.title := 'The Art of Intrigue'
+!cassetteArtOfIntrigue.availableCopies := 5
+!cassetteArtOfIntrigue.episode := 12
+
+!new Movie('cassetteTropicalOdyssey')
+!cassetteTropicalOdyssey.title := 'Tropical Odyssey'
+!cassetteTropicalOdyssey.availableCopies := 0
+!cassetteTropicalOdyssey.genre := #Action
+
+!new Series('cassetteEchoesOfThePast')
+!cassetteEchoesOfThePast.title := 'Echoes of the Past'
+!cassetteEchoesOfThePast.availableCopies := 2
+!cassetteEchoesOfThePast.episode := 1
+
+!new Actor('actorGretaMueller')
+!actorGretaMueller.name := 'Greta Müller'
+
+!new Actor('actorMarcelFournier')
+!actorMarcelFournier.name := 'Marcel Fournier'
+
+!new Actor('actorJeanBaptiste')
+!actorJeanBaptiste.name := 'Jean Baptiste'
+
+!new Actor('actorCarlosDias')
+!actorCarlosDias.name := 'Carlos Dias'
+
+!new Actor('actorElenaPetrov')
+!actorElenaPetrov.name := 'Elena Petrov'
+
+!insert (client601, rental1) into ClientRental
+!insert (client603, rental2) into ClientRental
+!insert (client601, rental3) into ClientRental
+
+!insert (rental1, cassetteSilentEchoes) into RentalCassette
+!insert (rental2, cassetteArtOfIntrigue) into RentalCassette
+!insert (rental3, cassetteSilentEchoes) into RentalCassette
+
+!insert (cassetteSilentEchoes, actorGretaMueller) into CassetteActor
+!insert (cassetteArtOfIntrigue, actorMarcelFournier) into CassetteActor
+!insert (cassetteArtOfIntrigue, actorJeanBaptiste) into CassetteActor
+!insert (cassetteTropicalOdyssey, actorCarlosDias) into CassetteActor
+!insert (cassetteEchoesOfThePast, actorElenaPetrov) into CassetteActor

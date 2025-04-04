@@ -1,0 +1,54 @@
+!new Driver('driver5')
+!driver5.id := 'D005'
+!driver5.name := 'Isla Becker'
+
+!new Shipment('shipment8')
+!shipment8.id := 'S008'
+!shipment8.status := #DELIVERED
+
+!new Shipment('shipment9')
+!shipment9.id := 'S009'
+!shipment9.status := #NEW
+
+!new Address('address9')
+!address9.text := '111 Spruce Way'
+
+!new Address('address10')
+!address10.text := '444 Palm Ave'
+
+!new GeoLocation('geoLocation9')
+!geoLocation9.latitude := 52.5200
+!geoLocation9.longitude := 13.4050
+
+!new GeoLocation('geoLocation10')
+!geoLocation10.latitude := 55.7558
+!geoLocation10.longitude := 37.6173
+
+!new Customer('customer5')
+!customer5.id := 'C005'
+!customer5.name := 'Jackie Neal'
+!customer5.twitterUserName := '@jackie_neal'
+
+!new Station('station4')
+
+!insert (driver5, shipment8) into DriverShipment
+!insert (driver5, shipment9) into DriverShipment
+
+!insert (shipment8, address9) into ShipmentContainsPickUpAddress
+!insert (shipment8, address10) into ShipmentContainsDeliveryAddress
+
+!insert (shipment9, address10) into ShipmentContainsPickUpAddress
+!insert (shipment9, address9) into ShipmentContainsDeliveryAddress
+
+!insert (address9, geoLocation9) into AddressContainsGeoLocation
+!insert (address10, geoLocation10) into AddressContainsGeoLocation
+
+!insert (customer5, shipment8) into CustomerConsistsOfShipment
+!insert (customer5, shipment9) into CustomerConsistsOfShipment
+
+!insert (station4, customer5) into StationContainsCustomer
+
+!insert (station4, shipment8) into StationShipment
+!insert (station4, shipment9) into StationShipment
+
+!insert (station4, driver5) into StationContainsDriver

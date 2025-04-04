@@ -1,0 +1,80 @@
+!new AddressBook('GlobalTechAddressBook')
+
+!new Person('Maria_Garcia')
+!Maria_Garcia.name := 'María García'
+!Maria_Garcia.phone := '+34-612-345-678'
+!Maria_Garcia.website := 'maria-garcia-professional.com'
+!Maria_Garcia.email := 'maria.garcia@globaltech.es'
+!Maria_Garcia.title := 'Senior Software Engineer'
+
+!new Address('Address_Maria_Garcia')
+!Address_Maria_Garcia.city := 'Barcelona'
+!Address_Maria_Garcia.houseNr := '24'
+!Address_Maria_Garcia.street := 'Gran Via de les Corts Catalanes'
+!insert (Maria_Garcia, Address_Maria_Garcia) into ContactContainsAddress
+
+!new Note('Note_Maria_Garcia')
+!Note_Maria_Garcia.author := 'María García'
+!Note_Maria_Garcia.time := Date('2023-09-15')
+!Note_Maria_Garcia.type := #MEETING
+!Note_Maria_Garcia.comment := 'Meeting with the client to discuss new software requirements.'
+!insert (Maria_Garcia, Note_Maria_Garcia) into ContactContainsNote
+
+!new Person('John_Smith')
+!John_Smith.name := 'John Smith'
+!John_Smith.phone := '+1-202-555-0143'
+!John_Smith.website := 'john-smith.biz'
+!John_Smith.email := 'john.smith@globaltech.com'
+!John_Smith.title := 'Director of Operations'
+
+!new Address('Address_John_Smith')
+!Address_John_Smith.city := 'New York'
+!Address_John_Smith.houseNr := '50'
+!Address_John_Smith.street := 'Fifth Avenue'
+!insert (John_Smith, Address_John_Smith) into ContactContainsAddress
+
+!new Note('Note_John_Smith')
+!Note_John_Smith.author := 'John Smith'
+!Note_John_Smith.time := Date('2023-10-05')
+!Note_John_Smith.type := #CALL
+!Note_John_Smith.comment := 'Follow-up call with suppliers in Asia.'
+!insert (John_Smith, Note_John_Smith) into ContactContainsNote
+
+!new Company('Nihao_Logistics')
+!Nihao_Logistics.name := 'Nihao Logistics'
+!Nihao_Logistics.phone := '+86-10-5554-6789'
+!Nihao_Logistics.website := 'nihaologistics.cn'
+!Nihao_Logistics.email := 'contact@nihaologistics.cn'
+!Nihao_Logistics.industry := 'Logistics'
+
+!new Address('Address_Nihao_Logistics')
+!Address_Nihao_Logistics.city := 'Beijing'
+!Address_Nihao_Logistics.houseNr := '908'
+!Address_Nihao_Logistics.street := 'Zhongguancun Ave'
+!insert (Nihao_Logistics, Address_Nihao_Logistics) into ContactContainsAddress
+
+!new Note('Note_Nihao_Logistics')
+!Note_Nihao_Logistics.author := 'Zhang Wei'
+!Note_Nihao_Logistics.time := Date('2023-10-01')
+!Note_Nihao_Logistics.type := #EMAIL
+!Note_Nihao_Logistics.comment := 'Received shipment tracking numbers.'
+!insert (Nihao_Logistics, Note_Nihao_Logistics) into ContactContainsNote
+
+!new Relationship('Relationship_John_to_Maria')
+!Relationship_John_to_Maria.type := #BOSS
+!insert (John_Smith, Relationship_John_to_Maria) into ContactToRelationship
+!insert (Relationship_John_to_Maria, Maria_Garcia) into RelationshipToContact
+
+!new Relationship('Relationship_Maria_to_John')
+!Relationship_Maria_to_John.type := #EMPLOYEE
+!insert (Maria_Garcia, Relationship_Maria_to_John) into ContactToRelationship
+!insert (Relationship_Maria_to_John, John_Smith) into RelationshipToContact
+
+!new Relationship('Relationship_John_to_Nihao')
+!Relationship_John_to_Nihao.type := #COWORKER
+!insert (John_Smith, Relationship_John_to_Nihao) into ContactToRelationship
+!insert (Relationship_John_to_Nihao, Nihao_Logistics) into RelationshipToContact
+
+!insert (GlobalTechAddressBook, Maria_Garcia) into AddressBookMadeOfContact
+!insert (GlobalTechAddressBook, John_Smith) into AddressBookMadeOfContact
+!insert (GlobalTechAddressBook, Nihao_Logistics) into AddressBookMadeOfContact

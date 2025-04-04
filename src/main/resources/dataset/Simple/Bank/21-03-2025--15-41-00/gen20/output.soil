@@ -1,0 +1,51 @@
+!new Bank('bank21')
+!bank21.country := 'Brazil'
+!bank21.name := 'Banco Bradesco'
+!bank21.bic := 'BBDEBRSPSPO'
+
+!new Account('account58')
+!account58.iban := 'BR1800000000001012345678901B'
+!account58.balance := 7500
+
+!new Account('account59')
+!account59.iban := 'BR1800000000002012345678902B'
+!account59.balance := 500
+
+!new Account('account60')
+!account60.iban := 'BR1800000000003012345678903B'
+!account60.balance := 6000
+
+!new Person('person62')
+!person62.firstName := 'Lucas'
+!person62.lastName := 'Santos'
+!person62.age := 42
+
+!new Person('person63')
+!person63.firstName := 'Mariana'
+!person63.lastName := 'Costa'
+!person63.age := 37
+
+!new Person('person64')
+!person64.firstName := 'Felipe'
+!person64.lastName := 'Almeida'
+!person64.age := 29
+
+-- Associations
+!insert (bank21, account58) into AccountOfBanks
+!insert (bank21, account59) into AccountOfBanks
+!insert (bank21, account60) into AccountOfBanks
+
+!insert (person62, account58) into Ownership
+!insert (person63, account58) into Ownership
+
+!insert (person63, account59) into Ownership
+!insert (person64, account59) into Ownership
+
+!insert (person64, account60) into Ownership
+!insert (person62, account60) into Ownership
+
+!insert (person62, account59) into Use
+!insert (person63, account60) into Use
+
+!insert (person64, account58) into Use
+!insert (person63, account58) into Use

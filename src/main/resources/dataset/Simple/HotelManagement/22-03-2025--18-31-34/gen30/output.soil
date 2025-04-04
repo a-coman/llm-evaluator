@@ -1,0 +1,47 @@
+!new Booking('booking31')
+!booking31.startDate := '2026-04-10'
+!booking31.endDate := '2026-04-15'
+!booking31.canceled := true
+!booking31.bookingId := 130
+!booking31.confirmed := false
+
+!new Bill('bill31')
+!bill31.price := 0.00
+!bill31.billId := 230
+
+!new FreeRoomTypesDTO('roomType31')
+!roomType31.roomTypeDescription := 'Railway Carriage Suite'
+!roomType31.numBeds := 1
+!roomType31.pricePerNight := 150.00
+!roomType31.numFreeRooms := 1
+
+!new Customer('customer31')
+!customer31.firstName := 'Diana'
+!customer31.lastName := 'Iverson'
+
+!new RoomReservation('reservation31')
+!reservation31.checkInDate := '2026-04-10'
+!reservation31.checkOutDate := '2026-04-15'
+
+!new RoomExtra('extra31')
+!extra31.price := 35.00
+!extra31.description := 'Scenic Train Ride Pass'
+
+!new Room('room46')
+!room46.numBeds := 1
+!room46.pricePerNight := 140.00
+!room46.occupied := false
+!room46.blocked := false
+!room46.roomNumber := 146
+
+!insert (booking31, bill31) into BookingBill
+
+!insert (booking31, customer31) into BookingCustomer
+
+!insert (booking31, reservation31) into BookingRoomReservation
+
+!insert (reservation31, extra31) into RoomReservationExtras
+
+!insert (reservation31, room46) into RoomReservationRoom
+
+!insert (bill31, reservation31) into BillRoomReservation

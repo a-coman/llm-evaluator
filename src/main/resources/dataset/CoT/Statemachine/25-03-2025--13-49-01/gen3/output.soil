@@ -1,0 +1,424 @@
+!new StateMachine('homeSecurityAlarm')
+!homeSecurityAlarm.name := 'homeSecurityAlarm'
+
+!new State('disarmed')
+!disarmed.name := 'disarmed'
+
+!new State('armedStay')
+!armedStay.name := 'armedStay'
+
+!new State('armedAway')
+!armedAway.name := 'armedAway'
+
+!new State('alarmTriggered')
+!alarmTriggered.name := 'alarmTriggered'
+
+!new Transition('setToStay')
+!setToStay.name := 'setToStay'
+
+!new Transition('setToAway')
+!setToAway.name := 'setToAway'
+
+!new Transition('triggerAlarmStay')
+!triggerAlarmStay.name := 'triggerAlarmStay'
+
+!new Transition('triggerAlarmAway')
+!triggerAlarmAway.name := 'triggerAlarmAway'
+
+!new Transition('disarmAlarm')
+!disarmAlarm.name := 'disarmAlarm'
+
+!new TimeEvent('timeEventSetToStay')
+!timeEventSetToStay.time := 1
+
+!new TimeEvent('timeEventSetToAway')
+!timeEventSetToAway.time := 30
+
+!new TimeEvent('timeEventTriggerAlarmStay')
+!timeEventTriggerAlarmStay.time := 15
+
+!new TimeEvent('timeEventTriggerAlarmAway')
+!timeEventTriggerAlarmAway.time := 15
+
+!new TimeEvent('timeEventDisarmAlarm')
+!timeEventDisarmAlarm.time := 3
+
+!insert (homeSecurityAlarm, disarmed) into StateMachineContainsStates
+!insert (homeSecurityAlarm, armedStay) into StateMachineContainsStates
+!insert (homeSecurityAlarm, armedAway) into StateMachineContainsStates
+!insert (homeSecurityAlarm, alarmTriggered) into StateMachineContainsStates
+
+!insert (homeSecurityAlarm, disarmed) into StateMachineStartsStates
+
+!insert (homeSecurityAlarm, setToStay) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, setToAway) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, triggerAlarmStay) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, triggerAlarmAway) into StateMachineContainsTransitions
+!insert (homeSecurityAlarm, disarmAlarm) into StateMachineContainsTransitions
+
+!insert (setToStay, timeEventSetToStay) into TransitionContainsEvents
+!insert (setToAway, timeEventSetToAway) into TransitionContainsEvents
+!insert (triggerAlarmStay, timeEventTriggerAlarmStay) into TransitionContainsEvents
+!insert (triggerAlarmAway, timeEventTriggerAlarmAway) into TransitionContainsEvents
+!insert (disarmAlarm, timeEventDisarmAlarm) into TransitionContainsEvents
+
+!insert (disarmed, setToStay) into StateTransition
+!insert (setToStay, armedStay) into TransitionState
+
+!insert (disarmed, setToAway) into StateTransition
+!insert (setToAway, armedAway) into TransitionState
+
+!insert (armedStay, triggerAlarmStay) into StateTransition
+!insert (triggerAlarmStay, alarmTriggered) into TransitionState
+
+!insert (armedAway, triggerAlarmAway) into StateTransition
+!insert (triggerAlarmAway, alarmTriggered) into TransitionState
+
+!insert (alarmTriggered, disarmAlarm) into StateTransition
+!insert (disarmAlarm, disarmed) into TransitionState
+
+!new StateMachine('emergencyManager')
+!emergencyManager.name := 'emergencyManager'
+
+!new State('ready')
+!ready.name := 'ready'
+
+!new State('alerted')
+!alerted.name := 'alerted'
+
+!new State('dispatching')
+!dispatching.name := 'dispatching'
+
+!new State('resolved')
+!resolved.name := 'resolved'
+
+!new Transition('readyToAlerted')
+!readyToAlerted.name := 'readyToAlerted'
+
+!new Transition('alertedToDispatching')
+!alertedToDispatching.name := 'alertedToDispatching'
+
+!new Transition('dispatchingToResolved')
+!dispatchingToResolved.name := 'dispatchingToResolved'
+
+!new Transition('alertedToReady')
+!alertedToReady.name := 'alertedToReady'
+
+!new TimeEvent('timeEventReadyToAlerted')
+!timeEventReadyToAlerted.time := 2
+
+!new TimeEvent('timeEventAlertedToReady')
+!timeEventAlertedToReady.time := 5
+
+!new TimeEvent('timeEventAlertedToDispatching')
+!timeEventAlertedToDispatching.time := 20
+
+!new TimeEvent('timeEventDispatchingToResolved')
+!timeEventDispatchingToResolved.time := 40
+
+!insert (emergencyManager, ready) into StateMachineContainsStates
+!insert (emergencyManager, alerted) into StateMachineContainsStates
+!insert (emergencyManager, dispatching) into StateMachineContainsStates
+!insert (emergencyManager, resolved) into StateMachineContainsStates
+
+!insert (emergencyManager, ready) into StateMachineStartsStates
+
+!insert (emergencyManager, readyToAlerted) into StateMachineContainsTransitions
+!insert (emergencyManager, alertedToDispatching) into StateMachineContainsTransitions
+!insert (emergencyManager, dispatchingToResolved) into StateMachineContainsTransitions
+!insert (emergencyManager, alertedToReady) into StateMachineContainsTransitions
+
+!insert (readyToAlerted, timeEventReadyToAlerted) into TransitionContainsEvents
+!insert (alertedToReady, timeEventAlertedToReady) into TransitionContainsEvents
+!insert (alertedToDispatching, timeEventAlertedToDispatching) into TransitionContainsEvents
+!insert (dispatchingToResolved, timeEventDispatchingToResolved) into TransitionContainsEvents
+
+!insert (ready, readyToAlerted) into StateTransition
+!insert (readyToAlerted, alerted) into TransitionState
+
+!insert (alerted, alertedToDispatching) into StateTransition
+!insert (alertedToDispatching, dispatching) into TransitionState
+
+!insert (dispatching, dispatchingToResolved) into StateTransition
+!insert (dispatchingToResolved, resolved) into TransitionState
+
+!insert (alerted, alertedToReady) into StateTransition
+!insert (alertedToReady, ready) into TransitionState
+
+!new StateMachine('washingMachineCycle')
+!washingMachineCycle.name := 'washingMachineCycle'
+
+!new State('idle')
+!idle.name := 'idle'
+
+!new State('washing')
+!washing.name := 'washing'
+
+!new State('rinsing')
+!rinsing.name := 'rinsing'
+
+!new State('spinning')
+!spinning.name := 'spinning'
+
+!new State('off')
+!off.name := 'off'
+
+!new Transition('beginWash')
+!beginWash.name := 'beginWash'
+
+!new Transition('washToRinse')
+!washToRinse.name := 'washToRinse'
+
+!new Transition('rinseToSpin')
+!rinseToSpin.name := 'rinseToSpin'
+
+!new Transition('endCycleToIdle')
+!endCycleToIdle.name := 'endCycleToIdle'
+
+!new Transition('endCycleToOff')
+!endCycleToOff.name := 'endCycleToOff'
+
+!new TimeEvent('timeEventBeginWash')
+!timeEventBeginWash.time := 5
+
+!new TimeEvent('timeEventWashToRinse')
+!timeEventWashToRinse.time := 8
+
+!new TimeEvent('timeEventRinseToSpin')
+!timeEventRinseToSpin.time := 10
+
+!new TimeEvent('timeEventEndCycleToIdle')
+!timeEventEndCycleToIdle.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!new TimeEvent('timeEventEndCycleToOff')
+!timeEventEndCycleToOff.time := 1 -- Changed from 0 to positive to comply with constraints
+
+!insert (washingMachineCycle, idle) into StateMachineContainsStates
+!insert (washingMachineCycle, washing) into StateMachineContainsStates
+!insert (washingMachineCycle, rinsing) into StateMachineContainsStates
+!insert (washingMachineCycle, spinning) into StateMachineContainsStates
+!insert (washingMachineCycle, off) into StateMachineContainsStates
+
+!insert (washingMachineCycle, beginWash) into StateMachineContainsTransitions
+!insert (washingMachineCycle, washToRinse) into StateMachineContainsTransitions
+!insert (washingMachineCycle, rinseToSpin) into StateMachineContainsTransitions
+!insert (washingMachineCycle, endCycleToIdle) into StateMachineContainsTransitions
+!insert (washingMachineCycle, endCycleToOff) into StateMachineContainsTransitions
+
+!insert (beginWash, timeEventBeginWash) into TransitionContainsEvents
+!insert (washToRinse, timeEventWashToRinse) into TransitionContainsEvents
+!insert (rinseToSpin, timeEventRinseToSpin) into TransitionContainsEvents
+!insert (endCycleToIdle, timeEventEndCycleToIdle) into TransitionContainsEvents
+!insert (endCycleToOff, timeEventEndCycleToOff) into TransitionContainsEvents
+
+!insert (idle, beginWash) into StateTransition
+!insert (beginWash, washing) into TransitionState
+
+!insert (washing, washToRinse) into StateTransition
+!insert (washToRinse, rinsing) into TransitionState
+
+!insert (rinsing, rinseToSpin) into StateTransition
+!insert (rinseToSpin, spinning) into TransitionState
+
+!insert (spinning, endCycleToIdle) into StateTransition
+!insert (endCycleToIdle, idle) into TransitionState
+
+!insert (spinning, endCycleToOff) into StateTransition
+!insert (endCycleToOff, off) into TransitionState
+
+!new StateMachine('grapeHarvestCycle')
+!grapeHarvestCycle.name := 'grapeHarvestCycle'
+
+!new State('ready')
+!ready.name := 'ready'
+
+!new State('detectRipeVines')
+!detectRipeVines.name := 'detectRipeVines'
+
+!new State('collectGrapes')
+!collectGrapes.name := 'collectGrapes'
+
+!new State('transport')
+!transport.name := 'transport'
+
+!new State('cleanupRow')
+!cleanupRow.name := 'cleanupRow'
+
+!new State('maintenance')
+!maintenance.name := 'maintenance'
+
+!new Transition('beginHarvest')
+!beginHarvest.name := 'beginHarvest'
+
+!new Transition('verifyRipe')
+!verifyRipe.name := 'verifyRipe'
+
+!new Transition('startTransport')
+!startTransport.name := 'startTransport'
+
+!new Transition('finalizeTransport')
+!finalizeTransport.name := 'finalizeTransport'
+
+!new Transition('finishCleanup')
+!finishCleanup.name := 'finishCleanup'
+
+!new Transition('resetMachine')
+!resetMachine.name := 'resetMachine'
+
+!new TimeEvent('initialWait')
+!initialWait.time := 5
+
+!new TimeEvent('detectionDuration')
+!detectionDuration.time := 25
+
+!new TimeEvent('collectionTime')
+!collectionTime.time := 60
+
+!new TimeEvent('transportTime')
+!transportTime.time := 15
+
+!new TimeEvent('cleaningTime')
+!cleaningTime.time := 20
+
+!new TimeEvent('maintenanceCheck')
+!maintenanceCheck.time := 30
+
+!insert (grapeHarvestCycle, ready) into StateMachineContainsStates
+!insert (grapeHarvestCycle, detectRipeVines) into StateMachineContainsStates
+!insert (grapeHarvestCycle, collectGrapes) into StateMachineContainsStates
+!insert (grapeHarvestCycle, transport) into StateMachineContainsStates
+!insert (grapeHarvestCycle, cleanupRow) into StateMachineContainsStates
+!insert (grapeHarvestCycle, maintenance) into StateMachineContainsStates
+
+!insert (grapeHarvestCycle, ready) into StateMachineStartsStates
+
+!insert (grapeHarvestCycle, beginHarvest) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, verifyRipe) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, startTransport) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, finalizeTransport) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, finishCleanup) into StateMachineContainsTransitions
+!insert (grapeHarvestCycle, resetMachine) into StateMachineContainsTransitions
+
+!insert (beginHarvest, initialWait) into TransitionContainsEvents
+!insert (verifyRipe, detectionDuration) into TransitionContainsEvents
+!insert (startTransport, collectionTime) into TransitionContainsEvents
+!insert (finalizeTransport, transportTime) into TransitionContainsEvents
+!insert (finishCleanup, cleaningTime) into TransitionContainsEvents
+!insert (resetMachine, maintenanceCheck) into TransitionContainsEvents
+
+!insert (ready, beginHarvest) into StateTransition
+!insert (beginHarvest, detectRipeVines) into TransitionState
+
+!insert (detectRipeVines, verifyRipe) into StateTransition
+!insert (verifyRipe, collectGrapes) into TransitionState
+
+!insert (collectGrapes, startTransport) into StateTransition
+!insert (startTransport, transport) into TransitionState
+
+!insert (transport, finalizeTransport) into StateTransition
+!insert (finalizeTransport, cleanupRow) into TransitionState
+
+!insert (cleanupRow, finishCleanup) into StateTransition
+!insert (finishCleanup, maintenance) into TransitionState
+
+!insert (maintenance, resetMachine) into StateTransition
+!insert (resetMachine, ready) into TransitionState
+
+!new StateMachine('internationalFlightController')
+!internationalFlightController.name := 'internationalFlightController'
+
+!new State('boarding')
+!boarding.name := 'boarding'
+
+!new State('takeoff')
+!takeoff.name := 'takeoff'
+
+!new State('cruise')
+!cruise.name := 'cruise'
+
+!new State('layover')
+!layover.name := 'layover'
+
+!new State('landing')
+!landing.name := 'landing'
+
+!new State('taxiing')
+!taxiing.name := 'taxiing'
+
+!new Transition('initiateTakeoff')
+!initiateTakeoff.name := 'initiateTakeoff'
+
+!new Transition('ascendToCruise')
+!ascendToCruise.name := 'ascendToCruise'
+
+!new Transition('enterLayover')
+!enterLayover.name := 'enterLayover'
+
+!new Transition('resumeCruise')
+!resumeCruise.name := 'resumeCruise'
+
+!new Transition('beginLanding')
+!beginLanding.name := 'beginLanding'
+
+!new Transition('taxiAfterLanding')
+!taxiAfterLanding.name := 'taxiAfterLanding'
+
+!new TimeEvent('timeEventInitiateTakeoff')
+!timeEventInitiateTakeoff.time := 10
+
+!new TimeEvent('timeEventAscendToCruise')
+!timeEventAscendToCruise.time := 15
+
+!new TimeEvent('timeEventEnterLayover')
+!timeEventEnterLayover.time := 360
+
+!new TimeEvent('timeEventResumeCruise')
+!timeEventResumeCruise.time := 120
+
+!new TimeEvent('timeEventBeginLanding')
+!timeEventBeginLanding.time := 30
+
+!new TimeEvent('timeEventTaxiAfterLanding')
+!timeEventTaxiAfterLanding.time := 20
+
+!insert (internationalFlightController, boarding) into StateMachineContainsStates
+!insert (internationalFlightController, takeoff) into StateMachineContainsStates
+!insert (internationalFlightController, cruise) into StateMachineContainsStates
+!insert (internationalFlightController, layover) into StateMachineContainsStates
+!insert (internationalFlightController, landing) into StateMachineContainsStates
+!insert (internationalFlightController, taxiing) into StateMachineContainsStates
+
+!insert (internationalFlightController, boarding) into StateMachineStartsStates
+
+!insert (internationalFlightController, initiateTakeoff) into StateMachineContainsTransitions
+!insert (internationalFlightController, ascendToCruise) into StateMachineContainsTransitions
+!insert (internationalFlightController, enterLayover) into StateMachineContainsTransitions
+!insert (internationalFlightController, resumeCruise) into StateMachineContainsTransitions
+!insert (internationalFlightController, beginLanding) into StateMachineContainsTransitions
+!insert (internationalFlightController, taxiAfterLanding) into StateMachineContainsTransitions
+
+!insert (initiateTakeoff, timeEventInitiateTakeoff) into TransitionContainsEvents
+!insert (ascendToCruise, timeEventAscendToCruise) into TransitionContainsEvents
+!insert (enterLayover, timeEventEnterLayover) into TransitionContainsEvents
+!insert (resumeCruise, timeEventResumeCruise) into TransitionContainsEvents
+!insert (beginLanding, timeEventBeginLanding) into TransitionContainsEvents
+!insert (taxiAfterLanding, timeEventTaxiAfterLanding) into TransitionContainsEvents
+
+!insert (boarding, initiateTakeoff) into StateTransition
+!insert (initiateTakeoff, takeoff) into TransitionState
+
+!insert (takeoff, ascendToCruise) into StateTransition
+!insert (ascendToCruise, cruise) into TransitionState
+
+!insert (cruise, enterLayover) into StateTransition
+!insert (enterLayover, layover) into TransitionState
+
+!insert (layover, resumeCruise) into StateTransition
+!insert (resumeCruise, cruise) into TransitionState
+
+!insert (cruise, beginLanding) into StateTransition
+!insert (beginLanding, landing) into TransitionState
+
+!insert (landing, taxiAfterLanding) into StateTransition
+!insert (taxiAfterLanding, taxiing) into TransitionState
+

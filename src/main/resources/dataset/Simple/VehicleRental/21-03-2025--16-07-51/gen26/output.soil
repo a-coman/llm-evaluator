@@ -1,0 +1,37 @@
+!new RentalOffice('rentalOffice28')
+!rentalOffice28.name := 'Northern Rentals'
+!rentalOffice28.number := 128
+!rentalOffice28.address := '456 Arctic Lane, Fairbanks, AK'
+
+!new Truck('truck16')
+!truck16.id := 27
+!truck16.registrationState := #AK
+!truck16.licensePlateNumber := 'AK7878'
+!truck16.vehicleTypeCode := #TRUCK24
+!truck16.registrationLastMaintenanceDate := Date('2023-09-15')
+!truck16.expirationDate := Date('2024-09-15')
+!truck16.odometerReading := 31000
+!truck16.gasTankCapacity := 150.0
+!truck16.workingRadio := true
+!truck16.mileage := 10
+
+!new Company('companyCustomer13')
+!companyCustomer13.name := 'Polar Logistics'
+!companyCustomer13.address := '901 North Ave, Fairbanks, AK'
+!companyCustomer13.poorRisk := false
+!companyCustomer13.idNumber := 14013
+
+!new RentalAgreement('rentalAgreement27')
+!rentalAgreement27.number := 527
+!rentalAgreement27.rentalDate := Date('2023-11-29')
+!rentalAgreement27.anticipatedDuration := 12
+!rentalAgreement27.depositPaid := 400.0
+!rentalAgreement27.quotedDailyRate := 60.0
+!rentalAgreement27.quotedRatePerMile := 0.5
+
+!insert (rentalOffice28, truck16) into RentalOfficeVehicle
+!insert (rentalOffice28, rentalAgreement27) into RentalOfficeRentalAgreementOrigin
+!insert (rentalOffice28, rentalAgreement27) into RentalOfficeRentalAgreementDrop
+
+!insert (rentalAgreement27, truck16) into RentalAgreementVehicle
+!insert (rentalAgreement27, companyCustomer13) into RentalAgreementCustomer

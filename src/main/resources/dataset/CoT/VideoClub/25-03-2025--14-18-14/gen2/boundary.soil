@@ -1,0 +1,42 @@
+!new Client('clientBoundary3')
+!clientBoundary3.clientId := 2
+!clientBoundary3.isSuspended := true
+
+!new Client('clientBoundary4')
+!clientBoundary4.clientId := 1000000
+!clientBoundary4.isSuspended := false
+
+!new Rental('rentalBoundary2')
+!rentalBoundary2.date := Date('2024-01-01')
+
+!new Movie('cassetteGalaxyQuestXX')
+!cassetteGalaxyQuestXX.title := 'Galaxy Quest XX'
+!cassetteGalaxyQuestXX.availableCopies := 10000
+!cassetteGalaxyQuestXX.genre := #Action
+
+!new Series('cassetteDetectiveChronicles')
+!cassetteDetectiveChronicles.title := 'Detective Chronicles Ep.5'
+!cassetteDetectiveChronicles.availableCopies := 5
+!cassetteDetectiveChronicles.episode := 5
+
+!new Movie('cassetteStreetLaughs')
+!cassetteStreetLaughs.title := 'Street Laughs'
+!cassetteStreetLaughs.availableCopies := 0
+!cassetteStreetLaughs.genre := #Comedy
+
+!new Actor('actorCarlosSanz')
+!actorCarlosSanz.name := 'Carlos Sanz'
+
+!new Actor('actorMiyukiTanaka')
+!actorMiyukiTanaka.name := 'Miyuki Tanaka'
+
+!insert (clientBoundary3, rentalBoundary2) into ClientRental
+
+!insert (rentalBoundary2, cassetteGalaxyQuestXX) into RentalCassette
+!insert (rentalBoundary2, cassetteDetectiveChronicles) into RentalCassette
+
+!insert (cassetteGalaxyQuestXX, actorCarlosSanz) into CassetteActor
+!insert (cassetteDetectiveChronicles, actorMiyukiTanaka) into CassetteActor
+
+!insert (cassetteStreetLaughs, actorCarlosSanz) into CassetteActor
+!insert (cassetteStreetLaughs, actorMiyukiTanaka) into CassetteActor

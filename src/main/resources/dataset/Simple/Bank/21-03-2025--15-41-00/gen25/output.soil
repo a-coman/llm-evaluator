@@ -1,0 +1,51 @@
+!new Bank('bank26')
+!bank26.country := 'Japan'
+!bank26.name := 'Sumitomo Mitsui Banking Corporation'
+!bank26.bic := 'SMBCJPJT'
+
+!new Account('account73')
+!account73.iban := 'JP890000000000123456789'
+!account73.balance := 6250
+
+!new Account('account74')
+!account74.iban := 'JP890000000000987654321'
+!account74.balance := 400
+
+!new Account('account75')
+!account75.iban := 'JP890000000000567890123'
+!account75.balance := 2700
+
+!new Person('person77')
+!person77.firstName := 'Haruto'
+!person77.lastName := 'Suzuki'
+!person77.age := 38
+
+!new Person('person78')
+!person78.firstName := 'Yua'
+!person78.lastName := 'Takahashi'
+!person78.age := 34
+
+!new Person('person79')
+!person79.firstName := 'Satoshi'
+!person79.lastName := 'Yamamoto'
+!person79.age := 41
+
+-- Associations
+!insert (bank26, account73) into AccountOfBanks
+!insert (bank26, account74) into AccountOfBanks
+!insert (bank26, account75) into AccountOfBanks
+
+!insert (person77, account73) into Ownership
+!insert (person78, account73) into Ownership
+
+!insert (person78, account74) into Ownership
+!insert (person79, account74) into Ownership
+
+!insert (person79, account75) into Ownership
+!insert (person77, account75) into Ownership
+
+!insert (person77, account74) into Use
+!insert (person78, account75) into Use
+
+!insert (person79, account73) into Use
+!insert (person78, account73) into Use

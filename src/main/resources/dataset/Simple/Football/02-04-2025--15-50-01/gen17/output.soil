@@ -1,0 +1,159 @@
+!new Club('club33')
+!club33.name := 'Dragons FC'
+!club33.homeGround := 'Dragon Fortress'
+!club33.chairman := 'Alice Hamilton'
+
+!new Club('club34')
+!club34.name := 'Phoenix FC'
+!club34.homeGround := 'Phoenix Nest'
+!club34.chairman := 'Michael Torres'
+
+!new Team('team33')
+!team33.name := 'Dragon Warriors'
+!insert (club33, team33) into ClubTeam
+
+!new Team('team34')
+!team34.name := 'Phoenix Flames'
+!insert (club34, team34) into ClubTeam
+
+!new Player('player49')
+!player49.name := 'Oliver Bennett'
+!player49.age := 25
+!player49.bestFoot := #RIGHT
+!player49.phoneNumber := '678-912-3456'
+!insert (team33, player49) into TeamPlayer
+
+!new Player('player50')
+!player50.name := 'Charlotte Young'
+!player50.age := 28
+!player50.bestFoot := #LEFT
+!player50.phoneNumber := '789-023-4567'
+!insert (team33, player50) into TeamPlayer
+
+!new Player('player51')
+!player51.name := 'Daniel Green'
+!player51.age := 30
+!player51.bestFoot := #BOTH
+!player51.phoneNumber := '890-134-5678'
+!insert (team34, player51) into TeamPlayer
+
+!new Position('position49')
+!position49.positionName := #FORWARD
+!insert (player49, position49) into PlayerPositions
+
+!new Position('position50')
+!position50.positionName := #MIDFIELDER
+!insert (player50, position50) into PlayerPositions
+
+!new Position('position51')
+!position51.positionName := #DEFENDER
+!insert (player51, position51) into PlayerPositions
+
+!new TrainingSession('training33')
+!training33.date := '2024-02-15'
+!training33.location := 'Dragon Lair'
+!training33.purpose := 'Attacking Drills'
+!insert (team33, training33) into TeamTraining
+
+!new TrainingSession('training34')
+!training34.date := '2024-02-16'
+!training34.location := 'Phoenix Arena'
+!training34.purpose := 'Defensive Strategies'
+!insert (team34, training34) into TeamTraining
+
+!new TrainingNotes('trainingNotes33')
+!trainingNotes33.note := 'Practiced off-the-ball movements and finishing'
+!trainingNotes33.date := '2024-02-15'
+!insert (training33, trainingNotes33) into TrainingTrainingNotes
+
+!new TrainingNotes('trainingNotes34')
+!trainingNotes34.note := 'Focused on defensive line management and clearances'
+!trainingNotes34.date := '2024-02-16'
+!insert (training34, trainingNotes34) into TrainingTrainingNotes
+
+!new TrainingObjective('objective49')
+!objective49.areaToImprove := 'Attacking Movement'
+!objective49.startDate := '2023-12-01'
+!objective49.endDate := '2024-02-28'
+!objective49.success := true
+!insert (objective49, player49) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective50')
+!objective50.areaToImprove := 'Vision and Passing'
+!objective50.startDate := '2023-11-10'
+!objective50.endDate := '2024-01-10'
+!objective50.success := false
+!insert (objective50, player50) into TrainingObjectivePlayer
+
+!new TrainingObjective('objective51')
+!objective51.areaToImprove := 'Tackling Techniques'
+!objective51.startDate := '2023-10-15'
+!objective51.endDate := '2024-01-15'
+!objective51.success := true
+!insert (objective51, player51) into TrainingObjectivePlayer
+
+!new Competition('competition17')
+!competition17.name := 'Galaxy Cup'
+!competition17.type := 'Playoff'
+
+!new Match('match17')
+!match17.date := '2024-02-25'
+!match17.homeAway := false
+!insert (competition17, match17) into CompetitionMatch
+!insert (team33, match17) into VisitorMatch
+!insert (team34, match17) into LocalMatch
+
+!new MatchReport('report17')
+!report17.duration := 90
+!report17.scoreVisitor := 2
+!report17.scoreLocal := 2
+!insert (match17, report17) into MatchMatchReport
+
+!new MatchPlayer('matchPlayer49')
+!matchPlayer49.booked := false
+!matchPlayer49.goals := 1
+!matchPlayer49.rating := 8
+!insert (player49, matchPlayer49) into PlayerMatch
+!insert (match17, matchPlayer49) into MatchMatchPlayer
+
+!new MatchPlayer('matchPlayer51')
+!matchPlayer51.booked := false
+!matchPlayer51.goals := 1
+!matchPlayer51.rating := 7
+!insert (player51, matchPlayer51) into PlayerMatch
+!insert (match17, matchPlayer51) into MatchMatchPlayer
+
+!new MatchPlayerPosition('matchPlayerPosition49')
+!matchPlayerPosition49.positionName := #FORWARD
+!matchPlayerPosition49.number := 9
+!insert (matchPlayer49, matchPlayerPosition49) into MatchPlayerMatchPlayerPosition
+
+!new MatchPlayerPosition('matchPlayerPosition51')
+!matchPlayerPosition51.positionName := #DEFENDER
+!matchPlayerPosition51.number := 5
+!insert (matchPlayer51, matchPlayerPosition51) into MatchPlayerMatchPlayerPosition
+
+!new MatchEvent('event64')
+!event64.eventType := #GOAL
+!event64.time := 22
+!insert (match17, event64) into MatchMatchEvent
+
+!new MatchEvent('event65')
+!event65.eventType := #GOAL
+!event65.time := 35
+!insert (match17, event65) into MatchMatchEvent
+
+!new MatchEvent('event66')
+!event66.eventType := #GOAL
+!event66.time := 55
+!insert (match17, event66) into MatchMatchEvent
+
+!new MatchEvent('event67')
+!event67.eventType := #GOAL
+!event67.time := 78
+!insert (match17, event67) into MatchMatchEvent
+
+!new MatchNote('matchNote17')
+!matchNote17.note := 'Intense playoff match ending in a draw, showcasing both teams\' skills'
+!matchNote17.date := '2024-02-25'
+!insert (match17, matchNote17) into MatchMatchNote
