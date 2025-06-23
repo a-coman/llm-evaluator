@@ -1,4 +1,4 @@
-package es.uma;
+package es.uma.Similarity;
 // Ref: https://www.geeksforgeeks.org/java-program-to-implement-levenshtein-distance-computing-algorithm/
 // Java implementation of Levenshtein distance calculation
 // Using Dynamic Programming (Optimised solution)

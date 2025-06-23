@@ -1,4 +1,4 @@
-package es.uma;
+package es.uma.Similarity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -26,9 +26,9 @@ public class SimilarityMetrics {
     }
 
     public SimilarityResult calculate() {
-        double numericSimilarity = Similarity.calculateNumeric(numericAttributes);
-        double stringEqualsSimilarity = Similarity.calculateStringEquals(stringAttributes);
-        double stringLvSimilarity = Similarity.calculateStringLv(stringAttributes);
+        double numericSimilarity = SimilarityMethod.calculateNumeric(numericAttributes);
+        double stringEqualsSimilarity = SimilarityMethod.calculateStringEquals(stringAttributes);
+        double stringLvSimilarity = SimilarityMethod.calculateStringLv(stringAttributes);
 
         return new SimilarityResult(numericSimilarity, stringEqualsSimilarity, stringLvSimilarity);
     }

@@ -1,9 +1,9 @@
-package es.uma;
+package es.uma.Similarity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Similarity {
+public class SimilarityMethod {
 
     public static double calculateNumeric(List<Double> numericAttributes) {
         if (numericAttributes == null || numericAttributes.isEmpty()) {

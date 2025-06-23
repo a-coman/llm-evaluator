@@ -1,4 +1,4 @@
-package es.uma;
+package es.uma.Similarity;
 
 public class SimilarityResult {
     private final double numericSimilarity;
