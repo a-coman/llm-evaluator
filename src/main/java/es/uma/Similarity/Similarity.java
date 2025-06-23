@@ -181,12 +181,12 @@ public class Similarity {
         System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
         
         String simpleoutput = calculateSimpleSimilarities(simplePaths);
-        Utils.saveFile(simpleoutput, "./", "simpleDifference.md", false);
+        Utils.saveFile(simpleoutput, "./src/main/java/es/uma/Similarity/", "simpleDifference.md", false);
         
         String cotoutput = calculateCoTSimilarities(cotPaths);
-        Utils.saveFile(cotoutput, "./", "cotDifference.md", false);
+        Utils.saveFile(cotoutput, "./src/main/java/es/uma/Similarity/", "cotDifference.md", false);
 
         String combinedOutput = calculateCombined();
-        Utils.saveFile(combinedOutput, "./", "combinedDifference.md", false);
+        Utils.saveFile(combinedOutput, "./src/main/java/es/uma/Similarity/", "combinedDifference.md", false);
     }
 }

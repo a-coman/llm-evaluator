@@ -6,14 +6,14 @@
 *(If there is only one attribute, it also returns 1.0)*
 - **0.0** means the attributes are entirely **identical**.
 
-## Statemachine
-|  Across Systems | Numeric | StringEquals | StringLv |
-|---|---|---|---|
-| ALL Generations | 0.9340 | 0.9986 | 0.8432 |
 ## Restaurant
 |  Across Systems | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | ALL Generations | 0.9788 | 0.9995 | 0.8842 |
+## Statemachine
+|  Across Systems | Numeric | StringEquals | StringLv |
+|---|---|---|---|
+| ALL Generations | 0.9340 | 0.9986 | 0.8432 |
 ## Bank
 |  Across Systems | Numeric | StringEquals | StringLv |
 |---|---|---|---|
@@ -38,11 +38,11 @@
 |  Across Systems | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | ALL Generations | 0.9660 | 0.9990 | 0.8614 |
-## VehicleRental
-|  Across Systems | Numeric | StringEquals | StringLv |
-|---|---|---|---|
-| ALL Generations | 0.9892 | 0.9988 | 0.8916 |
 ## HotelManagement
 |  Across Systems | Numeric | StringEquals | StringLv |
 |---|---|---|---|
 | ALL Generations | 0.9755 | 0.9976 | 0.8582 |
+## VehicleRental
+|  Across Systems | Numeric | StringEquals | StringLv |
+|---|---|---|---|
+| ALL Generations | 0.9892 | 0.9988 | 0.8916 |
