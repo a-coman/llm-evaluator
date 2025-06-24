@@ -1,14 +1,11 @@
 package es.uma.Semantics;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import es.uma.Utils;
 
 public class Semantics {
-
-    private static Map<String, SemanticMetrics> acrossMetricsMap = new HashMap<>(); // key: system name
 
     private static final String interpretationText = "";
 
@@ -30,7 +27,6 @@ public class Semantics {
 
             List<String> attributes = (domain != null) ? domain.getAttributes() : List.of();
             
-            acrossMetricsMap.put(system, new SemanticMetrics());
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
             SemanticMetrics systemMetrics = new SemanticMetrics();
@@ -60,7 +56,7 @@ public class Semantics {
                 for (String attribute : attributeValues.keySet()) {
                     List<String> valuesList = attributeValues.get(attribute);
                     genMetrics.addAttribute(attribute, valuesList);
-                    acrossMetricsMap.get(system).addAttribute(attribute, valuesList); // Aggregate across instances
+                    systemMetrics.addAttribute(attribute, valuesList);
                 }
 
 
@@ -75,8 +71,6 @@ public class Semantics {
             SemanticResult systemResult = systemMetrics.calculate();
             output.append(systemResult.toMarkdownRow("ALL Gen")).append("\n\n");
 
-
-            acrossMetricsMap.get(system).aggregate(systemMetrics);
         }
 
         return output.toString().trim();
