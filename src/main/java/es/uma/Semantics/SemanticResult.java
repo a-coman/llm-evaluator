@@ -18,4 +18,15 @@ public class SemanticResult {
         sb.append(" |");
         return sb.toString();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("SemanticResult{\n");
+        for (Map.Entry<String, Double> entry : results.entrySet()) {
+            sb.append("  ").append(entry.getKey()).append(": ").append(String.format("%.4f", entry.getValue())).append("\n");
+        }
+        sb.append("}");
+        return sb.toString();
+    }
 }

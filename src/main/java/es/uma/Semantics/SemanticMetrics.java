@@ -30,6 +30,7 @@ public class SemanticMetrics {
         for (String attribute : attributes.keySet()) {
             List<String> values = attributes.get(attribute);
             if (values == null || values.isEmpty()) {
+                results.put(attribute, -1.0); // Assign -1.0 for empty attributes
                 continue; // Skip empty attributes
             }
 
@@ -47,5 +48,15 @@ public class SemanticMetrics {
                 this.attributes.get(attribute).addAll(values);
             }
         });
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("SemanticMetrics:\n");
+        for (Map.Entry<String, List<String>> entry : attributes.entrySet()) {
+            sb.append("Attribute: ").append(entry.getKey()).append(", Values: ").append(entry.getValue()).append("\n");
+        }
+        return sb.toString();
     }
 }

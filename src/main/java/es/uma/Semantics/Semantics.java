@@ -29,8 +29,8 @@ public class Semantics {
             
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
+            
             SemanticMetrics systemMetrics = new SemanticMetrics();
-
 
             // Construct table header
             output.append("| Generations | ");
@@ -64,12 +64,19 @@ public class Semantics {
                 SemanticResult result = genMetrics.calculate();
                 output.append(result.toMarkdownRow(gen)).append("\n");
 
+                System.out.println(result.toString());
+                System.out.println(genMetrics.toString());
+
             }
             
             // Across instances
             System.out.println("Calculating across " + system + "...");
             SemanticResult systemResult = systemMetrics.calculate();
             output.append(systemResult.toMarkdownRow("ALL Gen")).append("\n\n");
+
+            
+            System.out.println(systemMetrics.toString());
+
 
         }
 
