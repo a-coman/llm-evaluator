@@ -86,6 +86,9 @@ public class Semantics {
     
 
     public static void calculateSemantics() {
+        // Reset the output file
+        Utils.saveFile("", "./src/main/java/es/uma/Semantics/", "matrix.md", false);
+
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
         
         String simpleoutput = calculateSimple(simplePaths);
