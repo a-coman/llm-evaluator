@@ -22,7 +22,8 @@ public class Semantics {
             try {
                 domain = Domain.valueOf(system.toUpperCase());
             } catch (IllegalArgumentException e) {
-                throw new IllegalArgumentException("Unknown system: " + system);
+                System.out.println("Unknown system: " + system);
+                continue;
             }
 
             List<String> attributes = (domain != null) ? domain.getAttributes() : List.of();
