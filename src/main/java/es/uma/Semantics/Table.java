@@ -1,11 +1,33 @@
 package es.uma.Semantics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Table {
 
     private String title;
     private String[] rowsHeader;
     private String[] columnsHeader;
     private float[][] data;
+
+    public static class DiagStats {
+        public final float mean;
+        public final float std;
+        public final float min;
+        public final float max;
+
+        public DiagStats(float mean, float std, float min, float max) {
+            this.mean = mean;
+            this.std = std;
+            this.min = min;
+            this.max = max;
+        }
+
+        @Override
+        public String toString() {
+            return String.format("Top-diag -> Mean: %.2f, Std: %.2f, Min: %.2f, Max: %.2f", mean, std, min, max);
+        }
+    }
 
     public Table(String title, int size) {
         this.title = title;
@@ -40,6 +62,43 @@ public class Table {
         return data;
     }
 
+    // Method to compute stats of the top diagonal
+    public DiagStats getTopDiagStats() {
+        int n = data.length;
+        List<Float> topDiagValues = new ArrayList<>();
+
+        // Collect values above the main diagonal
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                topDiagValues.add(data[i][j]);
+            }
+        }
+
+        if (topDiagValues.isEmpty()) {
+            throw new IllegalStateException("No top diagonal values found.");
+        }
+
+        // Compute mean, min, max
+        float sum = 0.0f;
+        float min = Float.POSITIVE_INFINITY;
+        float max = Float.NEGATIVE_INFINITY;
+        for (float val : topDiagValues) {
+            sum += val;
+            if (val < min) min = val;
+            if (val > max) max = val;
+        }
+        float mean = sum / topDiagValues.size();
+
+        // Compute standard deviation
+        float varianceSum = 0.0f;
+        for (float val : topDiagValues) {
+            varianceSum += (val - mean) * (val - mean);
+        }
+        float std = (float) Math.sqrt(varianceSum / topDiagValues.size());
+
+        return new DiagStats(mean, std, min, max);
+    }
+
     public String toMarkdown() {
         StringBuilder sb = new StringBuilder();
         sb.append("| ").append(title).append(" | ").append(String.join(" | ", columnsHeader)).append(" |\n");
@@ -67,6 +126,8 @@ public class Table {
 
         Table table = new Table(title, rows, columns, data);
         System.out.println(table.toMarkdown());
+        System.out.println(table.getTopDiagStats());
+
     }
 
 }
