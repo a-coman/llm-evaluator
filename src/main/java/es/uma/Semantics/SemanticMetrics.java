@@ -6,10 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 public class SemanticMetrics {
+
+    // Map -> String attribute, List<String> values
     private final Map<String, List<String>> attributes;
 
     public SemanticMetrics() {
-        this.attributes = new LinkedHashMap<>();
+        this.attributes = new LinkedHashMap<>(); // Using LinkedHashMap to maintain Domain.java specification order
     }
 
     public void addAttribute(String attribute, List<String> values) {
@@ -23,22 +25,35 @@ public class SemanticMetrics {
         }
     }
 
-    public SemanticResult calculate() {
+    public void addAttributesMap(Map<String, List<String>> map) {
+        if (map != null) {
+            map.forEach((key, value) -> {
+                if (value != null && !value.isEmpty()) {
+                    this.addAttribute(key, value);
+                }
+            });
+        }
+    }
 
-        Map<String, Double> results = new LinkedHashMap<>();
-        
+    public List<Table> calculate() {
+
+        List<Table> tables = new ArrayList<>();
+
         for (String attribute : attributes.keySet()) {
-            List<String> values = attributes.get(attribute);
-            if (values == null || values.isEmpty()) {
-                results.put(attribute, -1.0); // Assign -1.0 for empty attributes
-                continue; // Skip empty attributes
+            String[] values = attributes.get(attribute).toArray(new String[0]);
+
+            if (values == null || values.length == 0) {
+                tables.add(new Table(attribute, new String[0], new String[0], new float[0][0]));
+                // Assign an empty table for empty attributes
+                continue;
             }
 
-            double semanticSimilarity = SemanticMethod.calculateSemanticSimilarity(values);
-            results.put(attribute, semanticSimilarity);
+            // Add table for this attribute
+            float[][] data = SemanticMethod.getSimilarity(values);
+            tables.add(new Table(attribute, values, values, data));
         }
 
-        return new SemanticResult(results);
+        return tables;
     }
 
     public void aggregate(SemanticMetrics other) {
@@ -58,5 +73,16 @@ public class SemanticMetrics {
             sb.append("Attribute: ").append(entry.getKey()).append(", Values: ").append(entry.getValue()).append("\n");
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        SemanticMetrics metrics = new SemanticMetrics();
+        metrics.addAttribute("Color", List.of("Red", "Green", "Blue"));
+        metrics.addAttribute("Shape", List.of("Circle", "Square", "Triangle"));
+
+        List<Table> tables = metrics.calculate();
+        for (Table table : tables) {
+            System.out.println(table.toMarkdown());
+        }
     }
 }

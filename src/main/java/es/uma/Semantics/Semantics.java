@@ -26,73 +26,51 @@ public class Semantics {
                 continue;
             }
 
-            List<String> attributes = (domain != null) ? domain.getAttributes() : List.of();
+            List<String> attributeNames = (domain != null) ? domain.getAttributes() : List.of();
             
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
             
             SemanticMetrics systemMetrics = new SemanticMetrics();
 
-            // Construct table header
-            output.append("| Generations | ");
-            for (String attribute : attributes) {
-                output.append(attribute).append(" | ");
-            }
-            output.append("\n");
-            for (int i = 0; i < attributes.size()+1; i++) {
-                output.append("|---");
-            }
-            output.append("|\n");
-
-
-            // Within instances
+            // Whithin instances
             for (String gen : genMap.keySet()) {
                 String filePath = genMap.get(gen).get(0); // Single output.soil
                 String instance = Utils.readFile(filePath);
-        
-                Map<String, List<String>> attributeValues = Extractor.getAttributes(instance, attributes); // attributeName, listOfValues
-                
+                Map<String, List<String>> attributes = Extractor.getAttributes(instance, attributeNames); // attributeName, listOfValues
+
                 SemanticMetrics genMetrics = new SemanticMetrics();
-                
-                for (String attribute : attributeValues.keySet()) {
-                    List<String> valuesList = attributeValues.get(attribute);
-                    genMetrics.addAttribute(attribute, valuesList);
-                    systemMetrics.addAttribute(attribute, valuesList);
-                }
 
+                genMetrics.addAttributesMap(attributes);
+                systemMetrics.addAttributesMap(attributes);
 
+                output.append("### " + gen + "\n\n");
                 System.out.println("Calculating within " + system + "/" + gen + "...");
-                SemanticResult result = genMetrics.calculate();
-                output.append(result.toMarkdownRow(gen)).append("\n");
-
-                System.out.println(result.toString());
-                System.out.println(genMetrics.toString());
-
+                List<Table> genTables = genMetrics.calculate();
+                for (Table table : genTables) {
+                    output.append(table.toMarkdown()).append("\n\n");
+                }
             }
-            
+
             // Across instances
+            output.append("### ALL Gen\n\n");
             System.out.println("Calculating across " + system + "...");
-            SemanticResult systemResult = systemMetrics.calculate();
-            output.append(systemResult.toMarkdownRow("ALL Gen")).append("\n\n");
-
-            
-            System.out.println(systemMetrics.toString());
-
+            List<Table> systemTables = systemMetrics.calculate();
+            for (Table table : systemTables) {
+                output.append(table.toMarkdown()).append("\n\n");
+            }
 
         }
 
         return output.toString().trim();
     }
     
-
     public static void calculateSemantics() {
-        // Reset the output file
-        Utils.saveFile("", "./src/main/java/es/uma/Semantics/", "matrix.md", false);
 
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
         
-        String simpleoutput = calculateSimple(simplePaths);
-        Utils.saveFile(simpleoutput, "./src/main/java/es/uma/Semantics/", "simpleSemantics.md", false);
+        String simpleOutput = calculateSimple(simplePaths);
+        Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Semantics/", "simpleSemantics.md", false);
     }
     
 }
