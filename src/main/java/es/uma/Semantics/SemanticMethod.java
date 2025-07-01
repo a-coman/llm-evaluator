@@ -49,9 +49,10 @@ public class SemanticMethod {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == j) {
-                    data[i][j] = 1.0f; // Similarity with itself
+                    data[i][j] = 0.0f; // Similarity with itself
                 } else {
-                    data[i][j] = cosineSimilarity(embeddingValues.get(i).vector(), embeddingValues.get(j).vector());
+                    float sim = cosineSimilarity(embeddingValues.get(i).vector(), embeddingValues.get(j).vector());
+                    data[i][j] = (1.0f - sim) / 2.0f; // Range [0,1] where 0 = very similar, 1 = very different
                     data[j][i] = data[i][j]; // Symmetric
                 }
             }

@@ -7,7 +7,14 @@ import es.uma.Utils;
 
 public class Semantics {
 
-    private static final String interpretationText = "";
+    private static final String interpretationText = """
+        **Table values interpretation:**
+
+        - **NaN** indicates the absence of attributes of that type.
+        - **1.0** means that the attributes are completely **different**. 
+        *(If there is only one attribute, it also returns 1.0)*
+        - **0.0** means the attributes are entirely **identical**.
+        """;
 
     private static String calculateSimple(Map<String, Map<String, List<String>>> simplePaths) {
 
