@@ -1,5 +1,6 @@
 package es.uma.Semantics;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +18,12 @@ public class Semantics {
         """;
 
     private static String calculateSimple(Map<String, Map<String, List<String>>> simplePaths) {
+
+        StringBuilder summary = new StringBuilder();
+        String[] summaryHeader = new String[] {"Weighted Mean", "Weighted STD"};
+        String[] summaryRows = simplePaths.keySet().toArray(new String[0]);
+        Table withinSummary = new Table("Within", summaryRows, summaryHeader);
+        Table acrossSummary = new Table("Across", summaryRows, summaryHeader);
 
         StringBuilder output = new StringBuilder();
         
@@ -47,6 +54,8 @@ public class Semantics {
                 String instance = Utils.readFile(filePath);
                 Map<String, List<String>> attributes = Extractor.getAttributes(instance, attributeNames); // attributeName, listOfValues
 
+                systemTable.setColumnsNumberAttributes(gen, attributes);
+
                 SemanticMetrics genMetrics = new SemanticMetrics();
 
                 genMetrics.addAttributesMap(attributes);
@@ -57,7 +66,7 @@ public class Semantics {
                 List<Table> genTables = genMetrics.calculate();
                 for (Table table : genTables) {
                     output.append(table.toMarkdown()).append("\n\n");
-                    systemTable.setData(table.getTopDiagStats().mean, gen, table.getTitle());
+                    systemTable.setValue(table.getTopDiagStats().mean, gen, table.getTitle());
                 }
             }
 
@@ -68,18 +77,44 @@ public class Semantics {
             
             String[] allGenRowHeader = new String[] {"Across Gen"};
             Table acrossTable = new Table(system, allGenRowHeader, attributeNames.toArray(new String[0]));
+            Map<String, List<String>> acrossAttributes = new HashMap<>();
 
             for (Table table : systemTables) {
                 output.append(table.toMarkdown()).append("\n\n");
-                acrossTable.setData(table.getTopDiagStats().mean, allGenRowHeader[0], table.getTitle());
+                acrossTable.setValue(table.getTopDiagStats().mean, allGenRowHeader[0], table.getTitle());
+
+                acrossAttributes.put(table.getTitle(), List.of(table.getColumnsHeader()));
             }
+
+            acrossTable.setColumnsNumberAttributes("Across Gen", acrossAttributes);
 
             output.append("### ALL Gen top-diag mean\n\n");
             output.append(systemTable.toMarkdown()).append("\n\n");
             output.append(acrossTable.toMarkdown()).append("\n\n");
 
+            // Update summary tables
+            for (int i = 0; i < systemTable.getRowsHeader().length; i++) {
+                float mean = systemTable.getWeightedMean(i);
+                float std = systemTable.getWeightedStd(i);
+                
+                withinSummary.addValue(mean, system, "Weighted Mean");
+                withinSummary.addValue(std, system, "Weighted STD");
+            }
+
+            withinSummary.setValue(withinSummary.getValue(system, "Weighted Mean")/genMap.keySet().size(), system, "Weighted Mean");
+            withinSummary.setValue(withinSummary.getValue(system, "Weighted STD")/genMap.keySet().size(), system, "Weighted STD");
+
+            acrossSummary.setValue(acrossTable.getWeightedMean(0), system, "Weighted Mean");
+            acrossSummary.setValue(acrossTable.getWeightedStd(0), system, "Weighted STD");
+
         }
 
+        summary.append("# Summary\n\n");
+        summary.append("## Within Instances\n\n");
+        summary.append(withinSummary.toMarkdown()).append("\n\n");
+        summary.append("## Across Instances\n\n");
+        summary.append(acrossSummary.toMarkdown()).append("\n\n");
+        Utils.saveFile(summary.toString().trim(), "./src/main/java/es/uma/Semantics/", "simpleSummary.md", false);
         return output.toString().trim();
     }
     

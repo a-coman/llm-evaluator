@@ -2,6 +2,7 @@ package es.uma.Semantics;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Table {
 
@@ -9,6 +10,8 @@ public class Table {
     private String[] rowsHeader;
     private String[] columnsHeader;
     private float[][] data;
+
+    private int[][] numberAttributes;
 
     public static class DiagStats {
         public final float mean;
@@ -34,6 +37,7 @@ public class Table {
         this.rowsHeader = new String[size];
         this.columnsHeader = new String[size];
         this.data = new float[size][size];
+        this.numberAttributes = new int[size][size];
     }
 
     public Table(String title, String[] rowsHeader, String[] columnsHeader) {
@@ -41,6 +45,7 @@ public class Table {
         this.rowsHeader = rowsHeader;
         this.columnsHeader = columnsHeader;
         this.data = new float[rowsHeader.length][columnsHeader.length];
+        this.numberAttributes = new int[rowsHeader.length][columnsHeader.length];
     }
 
     public Table(String title, String[] rowsHeader, String[] columnsHeader, float[][] data) {
@@ -48,6 +53,7 @@ public class Table {
         this.rowsHeader = rowsHeader;
         this.columnsHeader = columnsHeader;
         this.data = data;
+        this.numberAttributes = new int[rowsHeader.length][columnsHeader.length];
     }
 
     public String[] getRowsHeader() {
@@ -66,7 +72,7 @@ public class Table {
         return title;
     }
 
-    public void setData(float data, String row, String column) {
+    public void setValue(float data, String row, String column) {
         int rowIndex = -1;
         int colIndex = -1;
 
@@ -132,6 +138,117 @@ public class Table {
 
         return new DiagStats(mean, std, min, max);
     }
+
+    public void setColumnsNumberAttributes(String gen, Map<String, List<String>> attributes) {
+
+        int rowIndex = -1;
+        for (int i = 0; i < rowsHeader.length; i++) {
+            if (rowsHeader[i].equals(gen)) {
+                rowIndex = i;
+                break;
+            }
+        }
+
+        if (rowIndex == -1) {
+            throw new IllegalArgumentException("Gen not found.");
+        }
+
+
+        for (Map.Entry<String, List<String>> entry : attributes.entrySet()) {
+            String column = entry.getKey();
+            List<String> values = entry.getValue();
+
+            int colIndex = -1;
+            for (int j = 0; j < columnsHeader.length; j++) {
+                if (columnsHeader[j].equals(column)) {
+                    colIndex = j;
+                    break;
+                }
+            }
+
+            if (colIndex == -1) {
+                throw new IllegalArgumentException("Column not found.");
+            }
+
+            this.numberAttributes[rowIndex][colIndex] = values.size();
+        }
+    }
+
+
+    public float getWeightedMean(int rowIndex) {
+        float sum = 0.0f;
+        int total = 0;
+        for (int i = 0; i < columnsHeader.length; i++) {
+            sum += data[rowIndex][i] * numberAttributes[rowIndex][i];
+            total += numberAttributes[rowIndex][i];
+        }
+        return total > 0 ? sum / total : 0.0f;
+    }
+
+    public float getWeightedStd(int rowIndex) {
+        float mean = getWeightedMean(rowIndex);
+        float varianceSum = 0.0f;
+        int total = 0;
+
+        for (int i = 0; i < columnsHeader.length; i++) {
+            float diff = data[rowIndex][i] - mean;
+            varianceSum += diff * diff * numberAttributes[rowIndex][i];
+            total += numberAttributes[rowIndex][i];
+        }
+
+        return total > 0 ? (float) Math.sqrt(varianceSum / total) : 0.0f;
+    }
+
+    public void addValue(float data, String row, String column) {
+        int rowIndex = -1;
+        int colIndex = -1;
+
+        for (int i = 0; i < rowsHeader.length; i++) {
+            if (rowsHeader[i].equals(row)) {
+                rowIndex = i;
+                break;
+            }
+        }
+
+        for (int j = 0; j < columnsHeader.length; j++) {
+            if (columnsHeader[j].equals(column)) {
+                colIndex = j;
+                break;
+            }
+        }
+
+        if (rowIndex == -1 || colIndex == -1) {
+            throw new IllegalArgumentException("Row or column not found.");
+        }
+
+        this.data[rowIndex][colIndex] += data;
+    }
+
+    public float getValue(String row, String column) {
+        int rowIndex = -1;
+        int colIndex = -1;
+
+        for (int i = 0; i < rowsHeader.length; i++) {
+            if (rowsHeader[i].equals(row)) {
+                rowIndex = i;
+                break;
+            }
+        }
+
+        for (int j = 0; j < columnsHeader.length; j++) {
+            if (columnsHeader[j].equals(column)) {
+                colIndex = j;
+                break;
+            }
+        }
+
+        if (rowIndex == -1 || colIndex == -1) {
+            throw new IllegalArgumentException("Row or column not found.");
+        }
+
+        return this.data[rowIndex][colIndex];
+    }
+
 
     public String toMarkdown() {
         StringBuilder sb = new StringBuilder();
