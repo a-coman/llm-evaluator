@@ -31,6 +31,7 @@ public class Semantics {
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
             
+            Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]), attributeNames.toArray(new String[0]));
             SemanticMetrics systemMetrics = new SemanticMetrics();
 
             // Whithin instances
@@ -49,16 +50,26 @@ public class Semantics {
                 List<Table> genTables = genMetrics.calculate();
                 for (Table table : genTables) {
                     output.append(table.toMarkdown()).append("\n\n");
+                    systemTable.setData(table.getTopDiagStats().mean, gen, table.getTitle());
                 }
             }
 
             // Across instances
-            output.append("### ALL Gen\n\n");
+            output.append("### ALL Gen detailed\n\n");
             System.out.println("Calculating across " + system + "...");
             List<Table> systemTables = systemMetrics.calculate();
+            
+            String[] allGenRowHeader = new String[] {"Across Gen"};
+            Table acrossTable = new Table(system, allGenRowHeader, attributeNames.toArray(new String[0]));
+
             for (Table table : systemTables) {
                 output.append(table.toMarkdown()).append("\n\n");
+                acrossTable.setData(table.getTopDiagStats().mean, allGenRowHeader[0], table.getTitle());
             }
+
+            output.append("### ALL Gen top-diag mean\n\n");
+            output.append(systemTable.toMarkdown()).append("\n\n");
+            output.append(acrossTable.toMarkdown()).append("\n\n");
 
         }
 

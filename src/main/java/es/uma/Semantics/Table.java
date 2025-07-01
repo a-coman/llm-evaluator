@@ -62,9 +62,43 @@ public class Table {
         return data;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
+    public void setData(float data, String row, String column) {
+        int rowIndex = -1;
+        int colIndex = -1;
+
+        for (int i = 0; i < rowsHeader.length; i++) {
+            if (rowsHeader[i].equals(row)) {
+                rowIndex = i;
+                break;
+            }
+        }
+
+        for (int j = 0; j < columnsHeader.length; j++) {
+            if (columnsHeader[j].equals(column)) {
+                colIndex = j;
+                break;
+            }
+        }
+
+        if (rowIndex == -1 || colIndex == -1) {
+            throw new IllegalArgumentException("Row or column not found.");
+        }
+
+        this.data[rowIndex][colIndex] = data;
+    }
+
     // Method to compute stats of the top diagonal
     public DiagStats getTopDiagStats() {
         int n = data.length;
+
+        if (n == 0 || n == 1) {
+            return new DiagStats(0, 0, 0, 0);
+        }
+
         List<Float> topDiagValues = new ArrayList<>();
 
         // Collect values above the main diagonal
@@ -107,7 +141,7 @@ public class Table {
         for (int i = 0; i < rowsHeader.length; i++) {
             sb.append("| ").append("**").append(rowsHeader[i]).append("** | ");
             for (int j = 0; j < columnsHeader.length; j++) {
-                sb.append(data[i][j]).append(" | ");
+                sb.append(String.format("%.4f", data[i][j])).append(" | ");
             }
             sb.append("\n");
         }
