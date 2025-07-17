@@ -102,7 +102,7 @@ public class Table {
         int n = data.length;
 
         if (n == 0 || n == 1) {
-            return new DiagStats(1, 0, 1, 1);
+            return new DiagStats(0, 0, 0, 0);
         }
 
         List<Float> topDiagValues = new ArrayList<>();
