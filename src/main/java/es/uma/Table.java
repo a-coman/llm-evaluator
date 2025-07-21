@@ -1,4 +1,4 @@
-package es.uma.Semantics;
+package es.uma;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,8 @@
-package es.uma.Semantics;
+package es.uma;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import es.uma.Utils;
 
 public class Extractor {
 

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import es.uma.Extractor;
+import es.uma.Table;
 import es.uma.Utils;
 
 public class Semantics {

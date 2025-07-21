@@ -5,6 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import es.uma.Table;
+
 public class SemanticMetrics {
 
     // Map -> String attribute, List<String> values
