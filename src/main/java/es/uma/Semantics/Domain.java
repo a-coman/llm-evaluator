@@ -3,7 +3,10 @@ package es.uma.Semantics;
 import java.util.List;
 
 public enum Domain {
-    ADDRESSBOOK(List.of("name", "title", "city", "street", "comment", "industry"));
+    EXAMPLE1(List.of("country", "name", "firstName", "lastName")),
+    EXAMPLE2(List.of("country", "name", "firstName", "lastName")),
+    EXAMPLE3(List.of("country", "name", "firstName", "lastName"));
+    // ADDRESSBOOK(List.of("name", "title", "city", "street", "comment", "industry")),
     // BANK(List.of("country", "name", "firstName", "lastName")),
     // FOOTBALL(List.of("name", "homeGround", "chairman", "type", "note", "location", "purpose", "reason", "areaToImprove")),
     // HOTELMANAGEMENT(List.of("firstName", "lastName", "description","roomTypeDescription")),
