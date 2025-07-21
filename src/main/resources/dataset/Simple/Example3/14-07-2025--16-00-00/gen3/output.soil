@@ -1,0 +1,67 @@
+-- Synthetic generated
+
+!new Bank('bank1')
+!bank1.country := 'country1'
+!bank1.name := 'name1'
+!bank1.bic := 'bic1'
+
+!new Account('account1')
+!account1.iban := 'iban1'
+!account1.balance := 111
+
+!new Person('person1')
+!person1.firstName := 'firstName1'
+!person1.lastName := 'lastName1'
+!person1.age := 222
+
+!new Bank('bank3')
+!bank3.country := 'country3'
+!bank3.name := 'name3'
+!bank3.bic := 'bic3'
+
+!new Account('account6')
+!account6.iban := 'iban6'
+!account6.balance := 333
+
+!new Account('account7')
+!account7.iban := 'iban7'
+!account7.balance := 444
+
+!new Person('person6')
+!person6.firstName := 'firstName6'
+!person6.lastName := 'lastName6'
+!person6.age := 555
+
+!new Person('person7')
+!person7.firstName := 'firstName7'
+!person7.lastName := 'lastName7'
+!person7.age := 666
+
+!new Person('person8')
+!person8.firstName := 'firstName8'
+!person8.lastName := 'lastName8'
+!person8.age := 777
+
+!new Person('person9')
+!person9.firstName := 'firstName9'
+!person9.lastName := 'lastName9'
+!person9.age := 888
+
+-- Associations
+!insert (bank1, account1) into AccountOfBanks
+!insert (bank3, account6) into AccountOfBanks
+!insert (bank3, account7) into AccountOfBanks
+
+!insert (person1, account1) into Ownership
+!insert (person6, account6) into Ownership
+!insert (person7, account6) into Ownership
+
+!insert (person8, account7) into Ownership
+!insert (person9, account7) into Ownership
+
+!insert (person1, account1) into Use
+!insert (person6, account7) into Use
+!insert (person7, account7) into Use
+
+!insert (person8, account6) into Use
+!insert (person9, account6) into Use
