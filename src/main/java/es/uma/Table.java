@@ -199,6 +199,7 @@ public class Table {
         return total > 0 ? (float) Math.sqrt(varianceSum / total) : 0.0f;
     }
 
+    // Increment the value at the specified row and column by the given data
     public void addValue(float data, String row, String column) {
         int rowIndex = -1;
         int colIndex = -1;
