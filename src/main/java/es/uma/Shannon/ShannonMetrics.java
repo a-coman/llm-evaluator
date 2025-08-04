@@ -45,7 +45,7 @@ public class ShannonMetrics {
     // Calculate Shannon metrics and classify attributes
     public List<Table> calculate() {
         List<Table> tables = new ArrayList<>();
-        String[] columnsHeader = {"Nº", "Values"};
+        String[] columnsHeader = {"Nº"};
 
         for (String attribute : attributes.keySet()) {
             List<String> values = attributes.get(attribute);
@@ -77,7 +77,6 @@ public class ShannonMetrics {
                     entropy -= px * Math.log(px) / Math.log(2);
                 }
                 table.setValue(count, group, "Nº");
-                table.setValue(0.0f, group, "Values"); // TODO: Placeholder for values as Table only accepts float
             }
 
             tables.add(table);
