@@ -10,12 +10,6 @@ import es.uma.Utils;
 public class Shannon {
     private static String calculateSimple(Map<String, Map<String, List<String>>> simplePaths) {
     
-        StringBuilder summary = new StringBuilder();
-        String[] summaryHeader = new String[] {"Weighted Mean", "Weighted STD"};
-        String[] summaryRows = simplePaths.keySet().toArray(new String[0]);
-        Table withinSummary = new Table("Within", summaryRows, summaryHeader);
-        Table acrossSummary = new Table("Across", summaryRows, summaryHeader);
-
         StringBuilder output = new StringBuilder();
         
         output.append("# Simple\n\n");
@@ -36,7 +30,7 @@ public class Shannon {
             Map<String, List<String>> genMap = simplePaths.get(system);
             
             Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]), attributeNames.toArray(new String[0]));
-            SemanticMetrics systemMetrics = new SemanticMetrics();
+            ShannonMetrics systemMetrics = new ShannonMetrics();
 
             // Whithin instances
             for (String gen : genMap.keySet()) {
@@ -46,14 +40,44 @@ public class Shannon {
 
                 systemTable.setColumnsNumberAttributes(gen, attributes);
 
-                SemanticMetrics genMetrics = new SemanticMetrics();
-                // Calculate metrics for the generation
-                // ...
+                ShannonMetrics genMetrics = new ShannonMetrics();
+
+                genMetrics.addAttributesMap(attributes);
+                systemMetrics.addAttributesMap(attributes);
+
+                output.append("### " + gen + "\n\n");
+                System.out.println("Calculating within " + system + "/" + gen + "...");
+
+                List<Table> genTables = genMetrics.calculate();
+                for (Table table : genTables) {
+                    output.append(table.toMarkdown()).append("\n\n");
+                }
+            }
+
+            // Across instances
+            output.append("### ALL Gen \n\n");
+            System.out.println("Calculating across " + system + "...");
+            List<Table> systemTables = systemMetrics.calculate();
+            for (Table table : systemTables) {
+                output.append(table.toMarkdown()).append("\n\n");
             }
             
-            output.append(systemTable.toMarkdown()).append("\n");
         }
         
         return output.toString();
     }
+
+    public static void calculateShannon() {
+
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
+        
+        String simpleOutput = calculateSimple(simplePaths);
+        Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Shannon/", "simpleShannon.md", false);
+    }
+
+    public static void main(String[] args) {
+        calculateShannon();
+        System.out.println("Shannon metrics calculated and saved.");
+    }
 }
+
