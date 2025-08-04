@@ -8,8 +8,8 @@ import es.uma.Shannon.Classifiers.AgeGroupClassifier;
 
 public class ClassifiersFactory {
     public static GroupClassifier getClassifier(String attribute) {
-        switch (attribute.toLowerCase()) {
-            case "age":
+        switch (attribute) {
+            case "Person.age":
                 return new AgeGroupClassifier();
 
             default:

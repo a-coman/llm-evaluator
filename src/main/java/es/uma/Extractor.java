@@ -8,11 +8,30 @@ import java.util.stream.Collectors;
 public class Extractor {
 
     private static List<String> getAttribute(String instance, String attribute) {
-        String pattern = "\\." + attribute + "\\s*:\\s*=\\s*(\\S+)";
-        List<String> values = Utils.match(instance, pattern);
-        List<String> result = values.stream()
-            .map(s -> s.replaceAll("^'|'$", "")) // Remove leading/trailing quotes
+        // Attribute is in the form of -> "ClassName.attribute"
+        String[] parts = attribute.split("\\.");
+        if (parts.length != 2) {
+            throw new IllegalArgumentException("Attribute must be in the format ClassName.attribute");
+        }
+        String className = parts[0];
+        String attrName = parts[1];
+
+        // Find all instance names for the class
+        String instancePattern = "!new " + className + "\\('([^']+)'\\)";
+        List<String> instanceNames = Utils.match(instance, instancePattern);
+
+        // For each instance, find the attribute value
+        List<String> result = instanceNames.stream()
+            .map(name -> {
+                String attrPattern = "!" + name + "\\." + attrName + "\\s*:=\\s*(\\S+)";
+                List<String> values = Utils.match(instance, attrPattern);
+                return values.stream()
+                    .map(s -> s.replaceAll("^'|'$", "")) // Remove leading/trailing quotes
+                    .collect(Collectors.toList());
+            })
+            .flatMap(List::stream)
             .collect(Collectors.toList());
+
         return result;
     }
 
@@ -31,10 +50,10 @@ public class Extractor {
     }
 
     public static void main(String[] args) {
-        String instancePath = "src/main/resources/dataset/CoT/Bank/24-03-2025--21-13-02/gen2/baseline.soil";
+        String instancePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(instancePath);
         
-        System.out.println(getAttributes(instance, List.of("country", "name", "bic", "iban", "firstName", "lastName")));
+        System.out.println(getAttributes(instance, List.of("Relationship.type")));
 
     }
 }
