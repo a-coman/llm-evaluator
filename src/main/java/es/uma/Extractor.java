@@ -3,12 +3,17 @@ package es.uma;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Extractor {
 
     private static List<String> getAttribute(String instance, String attribute) {
-        String pattern = "\\." + attribute + "\\s*:\\s*=\\s*'([^']*)'";
-        return Utils.match(instance, pattern);
+        String pattern = "\\." + attribute + "\\s*:\\s*=\\s*(\\S+)";
+        List<String> values = Utils.match(instance, pattern);
+        List<String> result = values.stream()
+            .map(s -> s.replaceAll("^'|'$", "")) // Remove leading/trailing quotes
+            .collect(Collectors.toList());
+        return result;
     }
 
     public static Map<String, List<String>> getAttributes(String instance, List<String> attributes) {
