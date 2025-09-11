@@ -22,8 +22,6 @@ public class RandomSelector {
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
         Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
 
-        // System.out.println("Simple Paths: " + simplePaths);
-
         // Used Seed.java to generate seeds
         // Fixed seeds for reproducibility
         long seedUMA = 8973687696131L;
