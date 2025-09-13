@@ -42,8 +42,8 @@ public class Shannon {
 
                 ShannonMetrics genMetrics = new ShannonMetrics();
 
-                genMetrics.addAttributesMap(attributes);
-                systemMetrics.addAttributesMap(attributes);
+                genMetrics.addAttributesMap(attributes, system);
+                systemMetrics.addAttributesMap(attributes, system);
 
                 output.append("### " + gen + "\n\n");
                 System.out.println("Calculating within " + system + "/" + gen + "...");

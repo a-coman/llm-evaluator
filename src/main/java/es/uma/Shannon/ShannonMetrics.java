@@ -10,18 +10,24 @@ import es.uma.Table;
 import es.uma.Utils;
 
 public class ShannonMetrics {    
-    // Map -> String attribute, List<String> values
-    private final Map<String, List<String>> attributes;
+
+    // Map -> String system, Map -> String attribute, List<String> values
+    private final Map<String, Map<String, List<String>>> systemAttributes;
+
    
     public ShannonMetrics() {
-        this.attributes = new LinkedHashMap<>(); // Using LinkedHashMap to maintain Domain.java specification order
+        this.systemAttributes = new LinkedHashMap<>();
     }
 
-    public ShannonMetrics(Map<String, List<String>> attributes) {
-        this.attributes = new LinkedHashMap<>(attributes);
+    public ShannonMetrics(Map<String, List<String>> attributes, String system) {
+        this.systemAttributes = new LinkedHashMap<>();
+        this.addAttributesMap(attributes, system);
     }
-    
-    public void addAttribute(String attribute, List<String> values) {
+
+    public void addAttribute(String attribute, List<String> values, String system) {
+        // Map -> String attribute, List<String> values
+        Map<String, List<String>> attributes = systemAttributes.computeIfAbsent(system, k -> new LinkedHashMap<>());
+
         if (values != null) {
             if (attributes.get(attribute) != null) {
                 List<String> existingValues = attributes.get(attribute);
@@ -32,11 +38,11 @@ public class ShannonMetrics {
         }
     }
 
-    public void addAttributesMap(Map<String, List<String>> map) {
-        if (map != null) {
-            map.forEach((key, value) -> {
+    public void addAttributesMap(Map<String, List<String>> attributesMap, String system) {
+        if (attributesMap != null) {
+            attributesMap.forEach((key, value) -> {
                 if (value != null && !value.isEmpty()) {
-                    this.addAttribute(key, value);
+                    this.addAttribute(key, value, system);
                 }
             });
         }
@@ -46,58 +52,67 @@ public class ShannonMetrics {
     public List<Table> calculate() {
         List<Table> tables = new ArrayList<>();
         String[] columnsHeader = {"Nº"};
+        for (String system : systemAttributes.keySet()) {
+            Map<String, List<String>> attributes = systemAttributes.get(system);
+            for (String attribute : attributes.keySet()) {
+                List<String> values = attributes.get(attribute);
 
-        for (String attribute : attributes.keySet()) {
-            List<String> values = attributes.get(attribute);
-
-            if (values == null || values.isEmpty()) {
-                continue;
-            }
-
-            GroupClassifier classifier = ClassifiersFactory.getClassifier(attribute);
-            Map<String, List<String>> groups = new LinkedHashMap<>();
-
-            for (String value : values) {
-                String group = classifier.classify(value);
-                groups.computeIfAbsent(group, k -> new ArrayList<>()).add(value);
-            }
-
-            List<String> allGroups = classifier.getGroups();
-            String[] rowsHeader = allGroups.toArray(new String[0]);
-            Table table = new Table(attribute, rowsHeader, columnsHeader);
-
-            int totalValues = groups.values().stream().mapToInt(List::size).sum();
-            float entropy = 0.0f;
-
-            for (String group : allGroups) {
-                List<String> groupValues = groups.getOrDefault(group, new ArrayList<>());
-                int count = groupValues.size();
-                float px = totalValues > 0 ? (float) count / totalValues : 0.0f;
-                if (px > 0) {
-                    entropy -= px * Math.log(px) / Math.log(2);
+                if (values == null || values.isEmpty()) {
+                    continue;
                 }
-                table.setValue(count, group, "Nº");
+
+                GroupClassifier classifier = ClassifiersFactory.getClassifier(attribute);
+                Map<String, List<String>> groups = new LinkedHashMap<>();
+
+                for (String value : values) {
+                    String group = classifier.classify(value);
+                    groups.computeIfAbsent(group, k -> new ArrayList<>()).add(value);
+                }
+
+                List<String> allGroups = classifier.getGroups();
+                String[] rowsHeader = allGroups.toArray(new String[0]);
+                Table table = new Table(attribute, rowsHeader, columnsHeader);
+
+                int totalValues = groups.values().stream().mapToInt(List::size).sum();
+                float entropy = 0.0f;
+
+                for (String group : allGroups) {
+                    List<String> groupValues = groups.getOrDefault(group, new ArrayList<>());
+                    int count = groupValues.size();
+                    float px = totalValues > 0 ? (float) count / totalValues : 0.0f;
+                    if (px > 0) {
+                        entropy -= px * Math.log(px) / Math.log(2);
+                    }
+                    table.setValue(count, group, "Nº");
+                }
+
+                tables.add(table);
+
+                float maxEntropy = (float) Math.log(groups.size()) / (float) Math.log(2);
+                float evenness = maxEntropy == 0 ? 0 : entropy / maxEntropy;
+                float maxEntropyAllGroups = (float) Math.log(classifier.getGroups().size()) / (float) Math.log(2); // Maximum entropy for all possible groups
+                float evennessAllGroups = maxEntropyAllGroups == 0 ? 0 : entropy / maxEntropyAllGroups;
+
+                System.out.println("Attribute " + attribute + " - Total Values: " + totalValues + " - Groups: " + groups);
+                System.out.println("Entropy: " + entropy + " - Max Entropy: " + maxEntropy + " - Evenness (in active groups): " + evenness + " - Evenness (in all groups): " + evennessAllGroups);
             }
-
-            tables.add(table);
-
-            float maxEntropy = (float) Math.log(groups.size()) / (float) Math.log(2);
-            float evenness = maxEntropy == 0 ? 0 : entropy / maxEntropy;
-            float maxEntropyAllGroups = (float) Math.log(classifier.getGroups().size()) / (float) Math.log(2); // Maximum entropy for all possible groups
-            float evennessAllGroups = maxEntropyAllGroups == 0 ? 0 : entropy / maxEntropyAllGroups;
-
-            System.out.println("Attribute " + attribute + " - Total Values: " + totalValues + " - Groups: " + groups);
-            System.out.println("Entropy: " + entropy + " - Max Entropy: " + maxEntropy + " - Evenness (in active groups): " + evenness + " - Evenness (in all groups): " + evennessAllGroups);
         }
 
         return tables;
     }
 
     public void aggregate(ShannonMetrics other) {
-        other.attributes.forEach((attribute, values) -> {
-            if (values != null && !values.isEmpty()) {
-                this.addAttribute(attribute, values);
-            }
+
+        if (other == null) {
+            return;
+        }
+
+        other.systemAttributes.forEach((system, attributes) -> {
+            attributes.forEach((attribute, values) -> {
+                if (values != null && !values.isEmpty()) {
+                    this.addAttribute(attribute, values, system);
+                }
+            });
         });
     }
 
@@ -108,16 +123,18 @@ public class ShannonMetrics {
         //exampleAttributes.put("age", List.of("12", "18", "25", "65", "43", "-11", "31", "0", "19", "20", "21", "22", "23", "24"));
 
         //String filePath = "src/main/resources/dataset/Simple/Example1/14-07-2025--16-00-00/gen1/output.soil";
-        //String filePath = "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
-        String filePath = "src/main/resources/dataset/Simple/Example3/14-07-2025--16-00-00/gen3/output.soil";
+        String filePath = "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
+        //String filePath = "src/main/resources/dataset/Simple/Example3/14-07-2025--16-00-00/gen3/output.soil";
+        //String filePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(filePath);
-        List<String> attributeNames = List.of("age");
+        String system = "Example2";
+        List<String> attributeNames = List.of("Person.age");
 
         exampleAttributes = Extractor.getAttributes(instance, attributeNames);
 
         System.out.println("Extracted Attributes: " + exampleAttributes);
         
-        ShannonMetrics metrics = new ShannonMetrics(exampleAttributes);
+        ShannonMetrics metrics = new ShannonMetrics(exampleAttributes, system);
         
         //System.out.println(metrics.classifyAttributes());
         List<Table> tables = metrics.calculate();
