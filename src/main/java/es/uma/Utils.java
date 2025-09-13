@@ -53,7 +53,7 @@ public class Utils {
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(text);
         while (m.find()) {
-            matches.add(m.group(1));
+            matches.add(m.group(1).trim());
         }
         return matches;
     }
