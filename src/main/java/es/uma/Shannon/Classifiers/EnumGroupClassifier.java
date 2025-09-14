@@ -1,6 +1,5 @@
 package es.uma.Shannon.Classifiers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import es.uma.Utils;
