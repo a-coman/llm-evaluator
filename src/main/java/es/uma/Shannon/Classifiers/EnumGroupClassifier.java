@@ -65,7 +65,8 @@ public class EnumGroupClassifier implements GroupClassifier {
         if (groups.contains(value)) {
             return value;
         } else {
-            throw new IllegalArgumentException("Value " + value + " not found in enum " + attributeName + " of class " + className + " in " + system + ".");
+            return null; // Return null if the value does not match any group (e.g., invalid enum value)
+            //throw new IllegalArgumentException("Value " + value + " not found in enum " + attributeName + " of class " + className + " in " + system + ".");
         }
 
     }

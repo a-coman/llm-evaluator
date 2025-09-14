@@ -66,6 +66,11 @@ public class ShannonMetrics {
 
                 for (String value : values) {
                     String group = classifier.classify(value);
+
+                    if (group == null) {
+                        continue; // Skip values that don't match any group (e.g., invalid enum values)
+                    }
+
                     groups.computeIfAbsent(group, k -> new ArrayList<>()).add(value);
                 }
 
