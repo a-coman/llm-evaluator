@@ -25,8 +25,8 @@ public class RandomSelector {
         // Used Seed.java to generate seeds
         // Fixed seeds for reproducibility
         long seedUMA = 8973687696131L;
-        long seedJKU = 10558747322614L;
-        long seedTUWIEN = 27615425851431L;
+        // long seedJKU = 10558747322614L;
+        // long seedTUWIEN = 27615425851431L;
 
         System.out.println("Seed: " + seedUMA);
         Random random = new Random(seedUMA);
