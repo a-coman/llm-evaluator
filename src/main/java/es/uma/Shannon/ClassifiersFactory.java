@@ -1,8 +1,6 @@
 package es.uma.Shannon;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import es.uma.Shannon.Classifiers.AgeGroupClassifier;
 import es.uma.Shannon.Classifiers.EnumGroupClassifier;
@@ -50,12 +48,4 @@ public class ClassifiersFactory {
         }
     }
 
-    // public static Map<String, GroupClassifier> getAllClassifiers(List<String> attributes) {
-    //     Map<String, GroupClassifier> classifiers = new HashMap<>();
-
-    //     for (String attribute : attributes) {
-    //         classifiers.put(attribute, getClassifier(attribute));
-    //     }
-    //     return classifiers;
-    // }
 }
