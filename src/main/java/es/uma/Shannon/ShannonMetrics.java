@@ -61,7 +61,7 @@ public class ShannonMetrics {
                     continue;
                 }
 
-                GroupClassifier classifier = ClassifiersFactory.getClassifier(attribute);
+                GroupClassifier classifier = ClassifiersFactory.getClassifier(attribute, system);
                 Map<String, List<String>> groups = new LinkedHashMap<>();
 
                 for (String value : values) {
@@ -93,6 +93,13 @@ public class ShannonMetrics {
                 float maxEntropyAllGroups = (float) Math.log(classifier.getGroups().size()) / (float) Math.log(2); // Maximum entropy for all possible groups
                 float evennessAllGroups = maxEntropyAllGroups == 0 ? 0 : entropy / maxEntropyAllGroups;
 
+                float[][] data = new float[][] {{entropy}, {maxEntropy}, {evenness}, {maxEntropyAllGroups}, {evennessAllGroups}};
+                String[] entropyRows = new String[] {"Entropy", "Max Entropy (active groups)", "Evenness (active groups)", "Max Entropy (all groups)", "Evenness (all groups)"};
+                String[] entropyColumns = new String[] {"Value"};
+                Table entropyTable = new Table("Entropy", entropyRows, entropyColumns, data);
+
+                tables.add(entropyTable);
+
                 System.out.println("Attribute " + attribute + " - Total Values: " + totalValues + " - Groups: " + groups);
                 System.out.println("Entropy: " + entropy + " - Max Entropy: " + maxEntropy + " - Evenness (in active groups): " + evenness + " - Evenness (in all groups): " + evennessAllGroups);
             }
@@ -123,12 +130,12 @@ public class ShannonMetrics {
         //exampleAttributes.put("age", List.of("12", "18", "25", "65", "43", "-11", "31", "0", "19", "20", "21", "22", "23", "24"));
 
         //String filePath = "src/main/resources/dataset/Simple/Example1/14-07-2025--16-00-00/gen1/output.soil";
-        String filePath = "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
+        //String filePath = "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
         //String filePath = "src/main/resources/dataset/Simple/Example3/14-07-2025--16-00-00/gen3/output.soil";
-        //String filePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
+        String filePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(filePath);
-        String system = "Example2";
-        List<String> attributeNames = List.of("Person.age");
+        String system = "addressbook";
+        List<String> attributeNames = List.of("Note.type");
 
         exampleAttributes = Extractor.getAttributes(instance, attributeNames);
 

@@ -5,21 +5,19 @@ import java.util.List;
 public enum Domain {
     // Attribute should be in the form of -> "ClassName.attribute"
 
-    EXAMPLE1(List.of("Person.age")),
-    EXAMPLE2(List.of("Person.age")),
-    EXAMPLE3(List.of("Person.age")),
-    BANK(List.of("Person.age"));
-    // ADDRESSBOOK(List.of()),
-    // BANK (List.of("country", "bic", "iban", "balance", "age")), // We can also add bankName, first and last names clustering them with LV distance, but I think there is no need to evaluate semantics on names, in that case we are more interested in evaluating that they are lexically different.
-    // The attributes that make sense to use are the ones that we can group based on meaning, like country (Continentes -> European, American, etc.), iban and bic (country), balance (low, medium, high), age (young, middle-aged, old).
-    // FOOTBALL(List.of()),
+    //EXAMPLE1(List.of("Person.age")),
+    //EXAMPLE2(List.of("Person.age")),
+    //EXAMPLE3(List.of("Person.age")),
+    // BANK (List.of("country", "bic", "iban", "balance", "age")),
     // HOTELMANAGEMENT(List.of()),
-    // MYEXPENSES(List.of()),
-    // PICKUPNET(List.of()),
-    // RESTAURANT(List.of()),
     // STATEMACHINE(List.of()),
-    // VEHICLERENTAL(List.of()),
-    // VIDEOCLUB(List.of());
+    ADDRESSBOOK(List.of("Note.type", "Relationship.type")),
+    MYEXPENSES(List.of("Bill.paymentMethod", "Bill.status")),
+    PICKUPNET(List.of("Shipment.status")),
+    RESTAURANT(List.of("Individual.seating", "Banquet.paymentMethod", "MenuItem.classification", "FoodItem.unit", "Allergen.type", "RegularCustomer.prefferedLanguage")),
+    VEHICLERENTAL(List.of("Individual.driverLicenseState")),
+    VIDEOCLUB(List.of("Movie.genre")),
+    FOOTBALL(List.of("MatchEvent.eventType", "Player.bestFoot", "Player.positionName"));
 
     private final List<String> attributes;
 

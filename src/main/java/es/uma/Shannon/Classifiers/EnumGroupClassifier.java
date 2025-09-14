@@ -14,14 +14,15 @@ public class EnumGroupClassifier implements GroupClassifier {
     private String system;
 
     public EnumGroupClassifier(String attribute, String system) {
-        this.groups = new ArrayList<>();
         String[] parts = attribute.split("\\.");
         this.className = parts[0]; // Get the class name before the dot
         this.attributeName = parts[1]; // Get the attribute name after the dot
         this.system = system;
+        this.groups = getGroups();
     }
 
     private String getClassDiagram(String system) {
+        system = system.toLowerCase(); // TODO: ensure system names are always lowercase
         String filePath = "src/main/resources/prompts/" + system + "/diagram.use";
         return Utils.readFile(filePath);
     }
@@ -60,8 +61,14 @@ public class EnumGroupClassifier implements GroupClassifier {
 
     @Override
     public String classify(String value) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'classify'");
+
+        value = value.replace("#", ""); // Remove # if present in the value
+        if (groups.contains(value)) {
+            return value;
+        } else {
+            throw new IllegalArgumentException("Value " + value + " not found in enum " + attributeName + " of class " + className + " in " + system + ".");
+        }
+
     }
 
     // Main for testing
