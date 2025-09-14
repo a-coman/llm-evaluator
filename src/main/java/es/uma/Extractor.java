@@ -49,11 +49,30 @@ public class Extractor {
         return instanceAttributes;
     }
 
+    // Main for testing purposes
     public static void main(String[] args) {
         String instancePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(instancePath);
         
         System.out.println(getAttributes(instance, List.of("Relationship.type")));
+
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
+        for (String system : simplePaths.keySet()) {
+            System.out.println("System: " + system);
+            Map<String, List<String>> genMap = simplePaths.get(system);
+            for (String gen : genMap.keySet()) {
+                String filePath = genMap.get(gen).get(0); // Single output.soil
+                String instanceContent = Utils.readFile(filePath);
+                Map<String, List<String>> attributes = getAttributes(instanceContent, List.of("Contact.name","Note.author","Person.firstName","Person.lastName","Club.chairman","Player.name","Customer.firstName","Customer.lastName","Driver.name","Customer.name","Person.name","Individual.name","Actor.name"));
+
+                // Print the attributes
+                for (List<String> values : attributes.values()) {
+                    for (String value : values) {
+                        System.out.println(value);
+                    }
+                }
+            }
+        }
 
     }
 }
