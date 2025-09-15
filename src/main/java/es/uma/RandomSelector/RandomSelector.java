@@ -53,7 +53,9 @@ public class RandomSelector {
                 int positionInGroup = genIndex - (NUMBER_OF_CATEGORIES * (group - 1)) - 1; // -1 for 0-based index
 
                 List<String> cotInstances = gensCoT.get("gen" + group);
-                String cotInstance = cotInstances.get(positionInGroup);
+                String cotInstance = cotInstances.get(positionInGroup).contains("invalid") // Do not select invalid instances
+                    ? cotInstances.get(positionInGroup+1)
+                    : cotInstances.get(positionInGroup);
 
                 instances.add(simpleInstance);
                 instances.add(cotInstance);
