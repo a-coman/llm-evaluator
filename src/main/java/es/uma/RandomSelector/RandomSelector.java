@@ -24,14 +24,14 @@ public class RandomSelector {
 
         // Used Seed.java to generate seeds
         // Fixed seeds for reproducibility
-        long seedUMA = 8973687696131L;
-        // long seedJKU = 10558747322614L;
-        // long seedTUWIEN = 27615425851431L;
+        long seedForm1 = 8973687696131L;
+        // long seedForm2 = 10558747322614L;
+        // long seedForm3 = 27615425851431L;
 
-        System.out.println("Seed: " + seedUMA);
-        Random random = new Random(seedUMA);
+        System.out.println("Seed: " + seedForm1);
+        Random random = new Random(seedForm1);
 
-        List<String> analyzedSystems = new ArrayList<>(List.of("Bank", "PickupNet", "Restaurant", "Statemachine"));
+        List<String> analyzedSystems = new ArrayList<>(List.of("Bank", "PickupNet", "HotelManagement", "Statemachine"));
         Collections.shuffle(analyzedSystems, random); // Shuffle to avoid order bias
 
         for (String system : analyzedSystems) {
@@ -62,11 +62,19 @@ public class RandomSelector {
 
             }
 
+            // Add 2x "Real" and "Synthetic" instances
+            instances.add("Real");
+            instances.add("Real");
+            instances.add("Synthetic");
+            instances.add("Synthetic");
+
             System.out.println("System: " + system);
             Collections.shuffle(instances, random); // Shuffle to avoid order bias
 
-            for (String instance : instances) {
-                System.out.println(instance);
+            char id = system.charAt(0);
+
+            for (int i = 0; i < instances.size(); i++) {
+                System.out.println("- [" + id + i + "] " + instances.get(i));
             }
         }
     }
