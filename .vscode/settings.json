@@ -4,5 +4,6 @@
         "activityBar.background": "#45251E",
         "titleBar.activeBackground": "#61332A",
         "titleBar.activeForeground": "#FCF9F9"
-    }
+    },
+    "remote.autoForwardPorts": false
 }
