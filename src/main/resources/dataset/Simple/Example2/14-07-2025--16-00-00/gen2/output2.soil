@@ -1,0 +1,122 @@
+-- Bank1
+
+!new Bank('bank1')
+!bank1.country := 'France'
+!bank1.name := 'SOCIETE GENERALE'
+!bank1.bic := 'SOGEFRPP'
+
+!new Account('account7')
+!account7.iban := 'FR1420041010050500013M02606'
+!account7.balance := 128450
+
+!new Person('person121')
+!person121.age := 41
+!person121.firstName := 'Émile'
+!person121.lastName := 'Dubois'
+
+!new Person('person8')
+!person8.age := 39
+!person8.firstName := 'Claire'
+!person8.lastName := 'Moreau'
+
+!new Person('person9')
+!person9.age := 22
+!person9.firstName := 'Julien'
+!person9.lastName := 'Lefevre'
+
+!insert (person121, account7) into Ownership
+!insert (person8, account7) into Ownership
+!insert (person121, account7) into Use
+!insert (person8, account7) into Use
+!insert (person9, account7) into Use
+!insert (bank1, account7) into AccountOfBanks
+
+-- Bank17 
+
+!new Bank('bank17')
+!bank17.country := 'Netherlands'
+!bank17.name := 'ABN AMRO'
+!bank17.bic := 'ABNANL2A'
+
+!new Account('account44')
+!account44.iban := 'NL91ABNA0417164300'
+!account44.balance := 58760
+
+!new Account('account875')
+!account875.iban := 'NL99ABNA0123345789'
+!account875.balance := 0
+
+!new Person('person10')
+!person10.age := 33
+!person10.firstName := 'Sanne'
+!person10.lastName := 'de Vries'
+
+!insert (person10, account44) into Ownership
+!insert (person10, account875) into Ownership
+!insert (person10, account44) into Use
+!insert (person10, account875) into Use
+!insert (bank17, account44) into AccountOfBanks
+!insert (bank17, account875) into AccountOfBanks
+
+-- Bank35
+
+!new Bank('bank35')
+!bank35.country := 'Portugal'
+!bank35.name := 'Caixa Geral de Depósitos'
+!bank35.bic := 'CGDIPTPL'
+
+!new Account('account10')
+!account10.iban := 'PT50000201231234567890154'
+!account10.balance := 9325
+
+!new Person('person27')
+!person27.age := 45
+!person27.firstName := 'João'
+!person27.lastName := 'Silva'
+
+!new Person('person12')
+!person12.age := 16
+!person12.firstName := 'Matilde'
+!person12.lastName := 'Silva'
+
+!insert (person27, account10) into Ownership
+!insert (person27, account10) into Use
+!insert (person12, account10) into Use
+!insert (bank35, account10) into AccountOfBanks
+
+-- Bank 81
+
+!new Bank('bank81')
+!bank81.country := 'Switzerland'
+!bank81.name := 'UBS Switzerland AG'
+!bank81.bic := 'UBSWCHZH80A'
+
+!new Account('account434')
+!account434.iban := 'CH9300762011623852957'
+!account434.balance := 1045000
+
+!new Person('person13')
+!person13.age := 52
+!person13.firstName := 'Luca'
+!person13.lastName := 'Keller'
+
+!new Person('person1755')
+!person1755.age := 50
+!person1755.firstName := 'Maya'
+!person1755.lastName := 'Keller'
+
+!new Person('person2198')
+!person2198.age := 24
+!person2198.firstName := 'Nina'
+!person2198.lastName := 'Keller'
+
+!new Person('person66')
+!person66.age := 34
+!person66.firstName := 'Juan Antonio'
+!person66.lastName := 'Gonzalez Rubio'
+
+!insert (person13, account434) into Ownership
+!insert (person2198, account434) into Ownership
+!insert (person13, account434) into Use
+!insert (person1755, account434) into Use
+!insert (bank81, account434) into AccountOfBanks

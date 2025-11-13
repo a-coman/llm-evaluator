@@ -1,0 +1,9 @@
+!new Location('location1')
+!location1.address := 'La Constitucion, 43, 29001 Málaga, España'
+!location1.latitude := 31.2054
+!location1.longitue := 4.0832
+
+!new Location('location2')
+!location2.address := 'Arquitecto Francisco Peñalosa, 6, Campanillas, 29071 Málaga, España'
+!location2.latitude := 36.7156
+!location2.longitue := -4.4922
