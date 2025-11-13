@@ -77,6 +77,7 @@ public class SemanticMetrics {
         return sb.toString();
     }
 
+    // Main for testing purposes
     public static void main(String[] args) {
         SemanticMetrics metrics = new SemanticMetrics();
         metrics.addAttribute("Color", List.of("Red", "Green", "Blue"));

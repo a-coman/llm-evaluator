@@ -15,7 +15,7 @@ public class Similarity {
             **Table values interpretation:**
 
             - **NaN** indicates the absence of attributes of that type.
-            - **1.0** means that the attributes are completely **different**. 
+            - **1.0** means that the attributes are completely **different**.
             *(If there is only one attribute, it also returns 1.0)*
             - **0.0** means the attributes are entirely **identical**.
             """;
@@ -53,7 +53,7 @@ public class Similarity {
                 output.append(result.toMarkdownRow(gen)).append("\n");
 
             }
-            
+
             // Across instances
             System.out.println("Calculating across " + system + "...");
             SimilarityResult systemResult = systemMetrics.calculate();
@@ -82,7 +82,7 @@ public class Similarity {
 
         output.append("# CoT\n\n");
         output.append(interpretationText).append("\n");
-        
+
         for (String system : cotPaths.keySet()) {
             Map<String, List<String>> genMap = cotPaths.get(system);
             SimilarityMetrics systemMetrics = new SimilarityMetrics();
@@ -93,7 +93,7 @@ public class Similarity {
             for (String gen : genMap.keySet()) {
                 List<String> categoryFiles = genMap.get(gen);
                 SimilarityMetrics genMetrics = new SimilarityMetrics();
-                
+
                 output.append("| " + gen + " | Numeric | StringEquals | StringLv |\n");
                 output.append("|---|---|---|---|\n");
 
@@ -174,19 +174,20 @@ public class Similarity {
     }
 
     public static void calculateSimilarities() {
-        
+
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
         Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
         System.out.println("SimplePaths:\n" + simplePaths + "\n\n");
         System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
-        
+
         String simpleoutput = calculateSimpleSimilarities(simplePaths);
         Utils.saveFile(simpleoutput, "./src/main/java/es/uma/Similarity/", "simpleDifference.md", false);
-        
+
         String cotoutput = calculateCoTSimilarities(cotPaths);
         Utils.saveFile(cotoutput, "./src/main/java/es/uma/Similarity/", "cotDifference.md", false);
 
         String combinedOutput = calculateCombined();
         Utils.saveFile(combinedOutput, "./src/main/java/es/uma/Similarity/", "combinedDifference.md", false);
+        System.out.println("Similarity metrics calculated and saved.");
     }
 }

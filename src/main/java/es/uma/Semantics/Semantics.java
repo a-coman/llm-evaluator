@@ -119,6 +119,11 @@ public class Semantics {
         Utils.saveFile(summary.toString().trim(), "./src/main/java/es/uma/Semantics/", "simpleSummary.md", false);
         return output.toString().trim();
     }
+
+    private static String calculateCoT(Map<String, Map<String, List<String>>> cotPaths) {
+        //TODO: Add unimplemented method
+        return "";
+    }
     
     public static void calculateSemantics() {
 
@@ -126,6 +131,11 @@ public class Semantics {
         
         String simpleOutput = calculateSimple(simplePaths);
         Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Semantics/", "simpleSemantics.md", false);
+
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        String cotOutput = calculateCoT(cotPaths);
+        Utils.saveFile(cotOutput, "./src/main/java/es/uma/Semantics/", "cotSemantics.md", false);
+        System.out.println("Semantics metrics calculated and saved.");
     }
     
 }

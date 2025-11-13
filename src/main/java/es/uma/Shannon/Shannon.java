@@ -144,10 +144,7 @@ public class Shannon {
 
         String cotOutput = calculateCoT(cotPaths);
         Utils.saveFile(cotOutput, "./src/main/java/es/uma/Shannon/", "cotShannon.md", false);
-    }
-
-    public static void main(String[] args) {
-        calculateShannon();
         System.out.println("Shannon metrics calculated and saved.");
     }
+
 }

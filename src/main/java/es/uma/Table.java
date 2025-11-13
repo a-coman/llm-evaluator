@@ -6,6 +6,7 @@ import java.util.Map;
 
 public class Table {
 
+    // TODO: Change table to String values and then use a method to convert to float
     private String title;
     private String[] rowsHeader;
     private String[] columnsHeader;

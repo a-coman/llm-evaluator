@@ -3,11 +3,12 @@ package es.uma.Semantics;
 import java.util.List;
 
 public enum Domain {
-    // TODO: Attribute should be in the form of -> "ClassName.attribute"
-
+    
     EXAMPLE1(List.of("Bank.country", "Bank.name", "Person.firstName", "Person.lastName")),
     EXAMPLE2(List.of("Bank.country", "Bank.name", "Person.firstName", "Person.lastName")),
     EXAMPLE3(List.of("Bank.country", "Bank.name", "Person.firstName", "Person.lastName"));
+
+    // TODO: Change the listOf. The attributes should be in the form of -> "ClassName.attribute"
     // ADDRESSBOOK(List.of("name", "title", "city", "street", "comment", "industry")),
     // BANK(List.of("country", "name", "firstName", "lastName")),
     // FOOTBALL(List.of("name", "homeGround", "chairman", "type", "note", "location", "purpose", "reason", "areaToImprove")),
