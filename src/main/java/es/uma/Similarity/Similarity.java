@@ -7,6 +7,8 @@ import java.util.Map;
 
 import es.uma.Utils;
 
+// TODO: LinkedHashmaps should be used to guarantee order on metrics output
+
 public class Similarity {
 
     private static Map<String, SimilarityMetrics> acrossMetricsMap = new HashMap<>(); // key: system name
