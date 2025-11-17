@@ -9,13 +9,13 @@ import es.uma.Utils;
 
 public class Shannon {
     private static String calculateSimple(Map<String, Map<String, List<String>>> simplePaths) {
-    
+
         StringBuilder output = new StringBuilder();
-        
+
         output.append("# Simple\n\n");
-        
+
         for (String system : simplePaths.keySet()) {
-            
+
             Domain domain = null;
             try {
                 domain = Domain.valueOf(system.toUpperCase());
@@ -25,18 +25,20 @@ public class Shannon {
             }
 
             List<String> attributeNames = (domain != null) ? domain.getAttributes() : List.of();
-            
+
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
-            
-            Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]), attributeNames.toArray(new String[0]));
+
+            Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]),
+                    attributeNames.toArray(new String[0]));
             ShannonMetrics systemMetrics = new ShannonMetrics();
 
             // Whithin instances
             for (String gen : genMap.keySet()) {
                 String filePath = genMap.get(gen).get(0); // Single output.soil
                 String instance = Utils.readFile(filePath);
-                Map<String, List<String>> attributes = Extractor.getAttributes(instance, attributeNames); // attributeName, listOfValues
+                Map<String, List<String>> attributes = Extractor.getInstanceAttributes(instance, attributeNames); // attributeName,
+                                                                                                                  // listOfValues
 
                 systemTable.setColumnsNumberAttributes(gen, attributes);
 
@@ -94,7 +96,7 @@ public class Shannon {
 
                 for (String filePath : categoryFiles) {
                     String instance = Utils.readFile(filePath);
-                    Map<String, List<String>> attributes = Extractor.getAttributes(instance, attributeNames);
+                    Map<String, List<String>> attributes = Extractor.getInstanceAttributes(instance, attributeNames);
 
                     genMetrics.addAttributesMap(attributes, system);
                     systemMetrics.addAttributesMap(attributes, system);
@@ -138,7 +140,7 @@ public class Shannon {
 
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
         Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
-        
+
         String simpleOutput = calculateSimple(simplePaths);
         Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Shannon/", "simpleShannon.md", false);
 

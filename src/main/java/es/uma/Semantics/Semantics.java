@@ -11,29 +11,29 @@ import es.uma.Utils;
 public class Semantics {
 
     private static final String interpretationText = """
-        **Table values interpretation:**
+            **Table values interpretation:**
 
-        - **NaN** indicates the absence of attributes of that type.
-        - **1.0** means that the attributes are completely **different**. 
-        *(If there is only one attribute, it also returns 1.0)*
-        - **0.0** means the attributes are entirely **identical**.
-        """;
+            - **NaN** indicates the absence of attributes of that type.
+            - **1.0** means that the attributes are completely **different**.
+            *(If there is only one attribute, it also returns 1.0)*
+            - **0.0** means the attributes are entirely **identical**.
+            """;
 
     private static String calculateSimple(Map<String, Map<String, List<String>>> simplePaths) {
 
         StringBuilder summary = new StringBuilder();
-        String[] summaryHeader = new String[] {"Weighted Mean", "Weighted STD"};
+        String[] summaryHeader = new String[] { "Weighted Mean", "Weighted STD" };
         String[] summaryRows = simplePaths.keySet().toArray(new String[0]);
         Table withinSummary = new Table("Within", summaryRows, summaryHeader);
         Table acrossSummary = new Table("Across", summaryRows, summaryHeader);
 
         StringBuilder output = new StringBuilder();
-        
+
         output.append("# Simple\n\n");
         output.append(interpretationText).append("\n");
-        
+
         for (String system : simplePaths.keySet()) {
-            
+
             Domain domain = null;
             try {
                 domain = Domain.valueOf(system.toUpperCase());
@@ -43,18 +43,20 @@ public class Semantics {
             }
 
             List<String> attributeNames = (domain != null) ? domain.getAttributes() : List.of();
-            
+
             output.append("## " + system + "\n\n");
             Map<String, List<String>> genMap = simplePaths.get(system);
-            
-            Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]), attributeNames.toArray(new String[0]));
+
+            Table systemTable = new Table(system, genMap.keySet().toArray(new String[0]),
+                    attributeNames.toArray(new String[0]));
             SemanticMetrics systemMetrics = new SemanticMetrics();
 
             // Whithin instances
             for (String gen : genMap.keySet()) {
                 String filePath = genMap.get(gen).get(0); // Single output.soil
                 String instance = Utils.readFile(filePath);
-                Map<String, List<String>> attributes = Extractor.getAttributes(instance, attributeNames); // attributeName, listOfValues
+                Map<String, List<String>> attributes = Extractor.getInstanceAttributes(instance, attributeNames); // attributeName,
+                                                                                                                  // listOfValues
 
                 systemTable.setColumnsNumberAttributes(gen, attributes);
 
@@ -76,8 +78,8 @@ public class Semantics {
             output.append("### ALL Gen detailed\n\n");
             System.out.println("Calculating across " + system + "...");
             List<Table> systemTables = systemMetrics.calculate();
-            
-            String[] allGenRowHeader = new String[] {"Across Gen"};
+
+            String[] allGenRowHeader = new String[] { "Across Gen" };
             Table acrossTable = new Table(system, allGenRowHeader, attributeNames.toArray(new String[0]));
             Map<String, List<String>> acrossAttributes = new HashMap<>();
 
@@ -98,13 +100,15 @@ public class Semantics {
             for (int i = 0; i < systemTable.getRowsHeader().length; i++) {
                 float mean = systemTable.getWeightedMean(i);
                 float std = systemTable.getWeightedStd(i);
-                
+
                 withinSummary.addValue(mean, system, "Weighted Mean");
                 withinSummary.addValue(std, system, "Weighted STD");
             }
 
-            withinSummary.setValue(withinSummary.getValue(system, "Weighted Mean")/genMap.keySet().size(), system, "Weighted Mean");
-            withinSummary.setValue(withinSummary.getValue(system, "Weighted STD")/genMap.keySet().size(), system, "Weighted STD");
+            withinSummary.setValue(withinSummary.getValue(system, "Weighted Mean") / genMap.keySet().size(), system,
+                    "Weighted Mean");
+            withinSummary.setValue(withinSummary.getValue(system, "Weighted STD") / genMap.keySet().size(), system,
+                    "Weighted STD");
 
             acrossSummary.setValue(acrossTable.getWeightedMean(0), system, "Weighted Mean");
             acrossSummary.setValue(acrossTable.getWeightedStd(0), system, "Weighted STD");
@@ -121,14 +125,14 @@ public class Semantics {
     }
 
     private static String calculateCoT(Map<String, Map<String, List<String>>> cotPaths) {
-        //TODO: Add unimplemented method
+        // TODO: Add unimplemented method
         return "";
     }
-    
+
     public static void calculateSemantics() {
 
         Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
-        
+
         String simpleOutput = calculateSimple(simplePaths);
         Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Semantics/", "simpleSemantics.md", false);
 
@@ -137,5 +141,5 @@ public class Semantics {
         Utils.saveFile(cotOutput, "./src/main/java/es/uma/Semantics/", "cotSemantics.md", false);
         System.out.println("Semantics metrics calculated and saved.");
     }
-    
+
 }

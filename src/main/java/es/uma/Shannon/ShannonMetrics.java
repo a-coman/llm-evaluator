@@ -9,12 +9,11 @@ import es.uma.Extractor;
 import es.uma.Table;
 import es.uma.Utils;
 
-public class ShannonMetrics {    
+public class ShannonMetrics {
 
     // Map -> String system, Map -> String attribute, List<String> values
     private final Map<String, Map<String, List<String>>> systemAttributes;
 
-   
     public ShannonMetrics() {
         this.systemAttributes = new LinkedHashMap<>();
     }
@@ -51,7 +50,7 @@ public class ShannonMetrics {
     // Calculate Shannon metrics and classify attributes
     public List<Table> calculate() {
         List<Table> tables = new ArrayList<>();
-        String[] columnsHeader = {"Nº"};
+        String[] columnsHeader = { "Nº" };
         for (String system : systemAttributes.keySet()) {
             Map<String, List<String>> attributes = systemAttributes.get(system);
             for (String attribute : attributes.keySet()) {
@@ -95,18 +94,28 @@ public class ShannonMetrics {
 
                 float maxEntropy = (float) Math.log(groups.size()) / (float) Math.log(2);
                 float evenness = maxEntropy == 0 ? 0 : entropy / maxEntropy;
-                float maxEntropyAllGroups = (float) Math.log(classifier.getGroups().size()) / (float) Math.log(2); // Maximum entropy for all possible groups
+                float maxEntropyAllGroups = (float) Math.log(classifier.getGroups().size()) / (float) Math.log(2); // Maximum
+                                                                                                                   // entropy
+                                                                                                                   // for
+                                                                                                                   // all
+                                                                                                                   // possible
+                                                                                                                   // groups
                 float evennessAllGroups = maxEntropyAllGroups == 0 ? 0 : entropy / maxEntropyAllGroups;
 
-                float[][] data = new float[][] {{entropy}, {maxEntropy}, {evenness}, {maxEntropyAllGroups}, {evennessAllGroups}};
-                String[] entropyRows = new String[] {"Entropy", "Max Entropy (active groups)", "Evenness (active groups)", "Max Entropy (all groups)", "Evenness (all groups)"};
-                String[] entropyColumns = new String[] {"Value"};
+                float[][] data = new float[][] { { entropy }, { maxEntropy }, { evenness }, { maxEntropyAllGroups },
+                        { evennessAllGroups } };
+                String[] entropyRows = new String[] { "Entropy", "Max Entropy (active groups)",
+                        "Evenness (active groups)", "Max Entropy (all groups)", "Evenness (all groups)" };
+                String[] entropyColumns = new String[] { "Value" };
                 Table entropyTable = new Table("Entropy", entropyRows, entropyColumns, data);
 
                 tables.add(entropyTable);
 
-                System.out.println("Attribute " + attribute + " - Total Values: " + totalValues + " - Groups: " + groups);
-                System.out.println("Entropy: " + entropy + " - Max Entropy: " + maxEntropy + " - Evenness (in active groups): " + evenness + " - Evenness (in all groups): " + evennessAllGroups);
+                System.out
+                        .println("Attribute " + attribute + " - Total Values: " + totalValues + " - Groups: " + groups);
+                System.out.println(
+                        "Entropy: " + entropy + " - Max Entropy: " + maxEntropy + " - Evenness (in active groups): "
+                                + evenness + " - Evenness (in all groups): " + evennessAllGroups);
             }
         }
 
@@ -132,23 +141,27 @@ public class ShannonMetrics {
     public static void main(String[] args) {
         Map<String, List<String>> exampleAttributes = new LinkedHashMap<>();
 
-        //exampleAttributes.put("age", List.of("12", "18", "25", "65", "43", "-11", "31", "0", "19", "20", "21", "22", "23", "24"));
+        // exampleAttributes.put("age", List.of("12", "18", "25", "65", "43", "-11",
+        // "31", "0", "19", "20", "21", "22", "23", "24"));
 
-        //String filePath = "src/main/resources/dataset/Simple/Example1/14-07-2025--16-00-00/gen1/output.soil";
-        //String filePath = "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
-        //String filePath = "src/main/resources/dataset/Simple/Example3/14-07-2025--16-00-00/gen3/output.soil";
+        // String filePath =
+        // "src/main/resources/dataset/Simple/Example1/14-07-2025--16-00-00/gen1/output.soil";
+        // String filePath =
+        // "src/main/resources/dataset/Simple/Example2/14-07-2025--16-00-00/gen2/output.soil";
+        // String filePath =
+        // "src/main/resources/dataset/Simple/Example3/14-07-2025--16-00-00/gen3/output.soil";
         String filePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(filePath);
         String system = "addressbook";
         List<String> attributeNames = List.of("Note.type");
 
-        exampleAttributes = Extractor.getAttributes(instance, attributeNames);
+        exampleAttributes = Extractor.getInstanceAttributes(instance, attributeNames);
 
         System.out.println("Extracted Attributes: " + exampleAttributes);
-        
+
         ShannonMetrics metrics = new ShannonMetrics(exampleAttributes, system);
-        
-        //System.out.println(metrics.classifyAttributes());
+
+        // System.out.println(metrics.classifyAttributes());
         List<Table> tables = metrics.calculate();
         tables.forEach(table -> System.out.println(table.toMarkdown()));
     }
