@@ -23,6 +23,7 @@ public class Extractor {
             .compile("(?i)^interface\\s+(\\w+)(?:\\s*<\\s*(\\w+))?.*$");
     private static final Pattern ATTRIBUTE_LINE_PATTERN = Pattern.compile("^(\\w+)\\s*:\\s*.+$");
 
+    // Get specific instance attributes
     // attributes => Map<className, List<attributeName>>
     public static Map<String, Map<String, List<String>>> getInstanceAttributes(String instance,
             Map<String, List<String>> attributes) {
@@ -187,6 +188,12 @@ public class Extractor {
             this.parent = parent;
             this.instantiable = instantiable;
         }
+    }
+
+    // Get all instance attributes
+    public static Map<String, Map<String, List<String>>> getAllInstanceAttributes(String instance, String model){
+        var modelAttributes = getModelAttributes(model);
+        return getInstanceAttributes(instance, modelAttributes);
     }
 
     // Main for testing purposes
