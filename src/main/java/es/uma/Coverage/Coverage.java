@@ -56,7 +56,7 @@ public class Coverage {
                 var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
                 CoverageMetrics instanceMetrics = calculateMetrics(instanceAttributes, systemAttributes, sysDefinedCls,
-                        sysDefinedAttr, sysDefinedRel, output);
+                        sysDefinedAttr, sysDefinedRel);
 
                 systemMetrics.add(instanceMetrics);
 
@@ -112,7 +112,7 @@ public class Coverage {
                     var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
                     CoverageMetrics categoryMetrics = calculateMetrics(instanceAttributes, systemAttributes,
-                            sysDefinedCls, sysDefinedAttr, sysDefinedRel, output);
+                            sysDefinedCls, sysDefinedAttr, sysDefinedRel);
                     genMetrics.add(categoryMetrics);
 
                     output.append(categoryMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
@@ -141,8 +141,7 @@ public class Coverage {
     }
 
     private static CoverageMetrics calculateMetrics(Map<String, Map<String, List<String>>> instanceAttributes,
-            Map<String, List<String>> systemAttributes, int sysDefinedCls, int sysDefinedAttr, int sysDefinedRel,
-            StringBuilder output) {
+            Map<String, List<String>> systemAttributes, int sysDefinedCls, int sysDefinedAttr, int sysDefinedRel) {
         CoverageMetrics metrics = new CoverageMetrics();
         metrics.definedCls = sysDefinedCls;
         metrics.definedAttr = sysDefinedAttr;
