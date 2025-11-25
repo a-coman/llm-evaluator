@@ -30,7 +30,7 @@ public class ShannonMetrics {
         if (values != null) {
             if (attributes.get(attribute) != null) {
                 List<String> existingValues = attributes.get(attribute);
-                existingValues.addAll(values);
+                existingValues.addAll(values); // TODO: Review this; Add new values to existing list
             } else {
                 attributes.put(attribute, new ArrayList<>(values));
             }
