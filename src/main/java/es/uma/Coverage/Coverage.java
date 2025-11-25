@@ -1,7 +1,6 @@
 package es.uma.Coverage;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -55,17 +54,22 @@ public class Coverage {
                 String instance = Utils.readFile(filePath);
                 var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
-                CoverageMetrics instanceMetrics = calculateMetrics(instanceAttributes, systemAttributes, sysDefinedCls,
-                        sysDefinedAttr, sysDefinedRel);
+                CoverageMetrics instanceMetrics = new CoverageMetrics();
+                instanceMetrics.definedCls = sysDefinedCls;
+                instanceMetrics.definedAttr = sysDefinedAttr;
+                instanceMetrics.definedRel = sysDefinedRel;
+                instanceMetrics.calculate(instanceAttributes, systemAttributes, instance);
 
                 systemMetrics.add(instanceMetrics);
 
                 output.append(instanceMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-                output.append(instanceMetrics.getUncoveredListString());     
+                output.append(instanceMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
+                output.append(instanceMetrics.getUncoveredListString());
             }
 
             output.append("### ALL Gen \n\n");
             output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+            output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
             output.append(systemMetrics.getUncoveredListString());
 
             totalMetrics.add(systemMetrics);
@@ -73,6 +77,7 @@ public class Coverage {
 
         output.append("# Coverage \n\n");
         output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+        output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
         output.append(totalMetrics.getUncoveredListString());
 
         return output.toString();
@@ -109,18 +114,26 @@ public class Coverage {
                     output.append("#### ").append(category).append("\n\n");
 
                     String instance = Utils.readFile(filePath);
+                    // Map<className, Map<attributeName, List<values>>>
                     var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
-                    CoverageMetrics categoryMetrics = calculateMetrics(instanceAttributes, systemAttributes,
-                            sysDefinedCls, sysDefinedAttr, sysDefinedRel);
+                    CoverageMetrics categoryMetrics = new CoverageMetrics();
+                    categoryMetrics.definedCls = sysDefinedCls;
+                    categoryMetrics.definedAttr = sysDefinedAttr;
+                    categoryMetrics.definedRel = sysDefinedRel;
+                    categoryMetrics.calculate(instanceAttributes, systemAttributes, instance);
+
                     genMetrics.add(categoryMetrics);
 
                     output.append(categoryMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+                    output.append(categoryMetrics.toInstantiationTable("Instantiation Stats").toMarkdown())
+                            .append("\n\n");
                     output.append(categoryMetrics.getUncoveredListString());
                 }
 
                 output.append("#### ALL Categories\n\n");
                 output.append(genMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+                output.append(genMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
                 output.append(genMetrics.getUncoveredListString());
 
                 systemMetrics.add(genMetrics);
@@ -128,6 +141,7 @@ public class Coverage {
 
             output.append("### ALL Gen \n\n");
             output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+            output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
             output.append(systemMetrics.getUncoveredListString());
 
             totalMetrics.add(systemMetrics);
@@ -135,41 +149,9 @@ public class Coverage {
 
         output.append("# Coverage \n\n");
         output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+        output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
         output.append(totalMetrics.getUncoveredListString());
 
         return output.toString();
-    }
-
-    private static CoverageMetrics calculateMetrics(Map<String, Map<String, List<String>>> instanceAttributes,
-            Map<String, List<String>> systemAttributes, int sysDefinedCls, int sysDefinedAttr, int sysDefinedRel) {
-        CoverageMetrics metrics = new CoverageMetrics();
-        metrics.definedCls = sysDefinedCls;
-        metrics.definedAttr = sysDefinedAttr;
-        metrics.definedRel = sysDefinedRel;
-
-        List<String> uncovered = new ArrayList<>();
-
-        // Calculate Instantiated CLS
-        for (String className : instanceAttributes.keySet()) {
-            if (systemAttributes.containsKey(className)) {
-                metrics.instantiatedCls++;
-            }
-        }
-
-        // Calculate Instantiated Attr
-        for (var className : instanceAttributes.keySet()) {
-            var attributesMap = instanceAttributes.get(className);
-            for (String attributeName : attributesMap.keySet()) {
-                // Check if attribute exists in system
-                if (systemAttributes.containsKey(className)
-                        && systemAttributes.get(className).contains(attributeName)) {
-                    metrics.instantiatedAttr++;
-                } else {
-                    uncovered.add(className + "." + attributeName);
-                }
-            }
-        }
-
-        return metrics;
     }
 }

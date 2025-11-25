@@ -191,19 +191,29 @@ public class Extractor {
     }
 
     // Get all instance attributes
-    public static Map<String, Map<String, List<String>>> getAllInstanceAttributes(String instance, String model){
+    public static Map<String, Map<String, List<String>>> getAllInstanceAttributes(String instance, String model) {
         var modelAttributes = getModelAttributes(model);
         return getInstanceAttributes(instance, modelAttributes);
     }
 
+    // Get instance counts per class
+    public static Map<String, Integer> getInstanceCounts(String instance) {
+        Map<String, Integer> instanceCounts = new HashMap<>();
+        Matcher matcher = NEW_INSTANCE_PATTERN.matcher(instance);
+        while (matcher.find()) {
+            String className = matcher.group(1);
+            instanceCounts.put(className, instanceCounts.getOrDefault(className, 0) + 1);
+        }
+        return instanceCounts;
+    }
+
     // Main for testing purposes
     public static void main(String[] args) {
-        String instancePath =
-        "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
+        String instancePath = "src/main/resources/dataset/Simple/AddressBook/21-03-2025--17-36-43/gen1/output.soil";
         String instance = Utils.readFile(instancePath);
 
         System.out.println(getInstanceAttributes(instance, Map.of("Relationship",
-        List.of("type"))));
+                List.of("type"))));
 
         String modelPath = "src/main/resources/prompts/addressbook/diagram.use";
         String model = Utils.readFile(modelPath);
