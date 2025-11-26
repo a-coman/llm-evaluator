@@ -29,7 +29,7 @@ public class Coverage {
     }
 
     private static String calculate(String type) {
-        Boolean isCoT = type.toLowerCase().equals("cot");
+        boolean isCoT = type.equalsIgnoreCase("cot");
 
         Map<String, Map<String, List<String>>> paths = Utils.getPaths(type);
         StringBuilder output = new StringBuilder();
@@ -53,7 +53,7 @@ public class Coverage {
     }
 
     private static CoverageMetrics processSystem(Map<String, List<String>> genPaths, SystemModel model,
-            StringBuilder output, Boolean isCoT) {
+            StringBuilder output, boolean isCoT) {
         CoverageMetrics systemMetrics = new CoverageMetrics();
 
         for (Map.Entry<String, List<String>> genEntry : genPaths.entrySet()) {

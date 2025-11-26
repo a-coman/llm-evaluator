@@ -73,29 +73,39 @@ public class Table {
         return title;
     }
 
-    public void setValue(float data, String row, String column) {
-        int rowIndex = -1;
-        int colIndex = -1;
-
+    // Helper method to find row index
+    private int findRowIndex(String row) {
         for (int i = 0; i < rowsHeader.length; i++) {
             if (rowsHeader[i].equals(row)) {
-                rowIndex = i;
-                break;
+                return i;
             }
         }
+        return -1;
+    }
 
+    // Helper method to find column index
+    private int findColumnIndex(String column) {
         for (int j = 0; j < columnsHeader.length; j++) {
             if (columnsHeader[j].equals(column)) {
-                colIndex = j;
-                break;
+                return j;
             }
         }
+        return -1;
+    }
 
+    // Helper method to get validated indices
+    private int[] getIndices(String row, String column) {
+        int rowIndex = findRowIndex(row);
+        int colIndex = findColumnIndex(column);
         if (rowIndex == -1 || colIndex == -1) {
-            throw new IllegalArgumentException("Row or column not found.");
+            throw new IllegalArgumentException("Row or column not found: row='" + row + "', column='" + column + "'");
         }
+        return new int[] { rowIndex, colIndex };
+    }
 
-        this.data[rowIndex][colIndex] = data;
+    public void setValue(float data, String row, String column) {
+        int[] indices = getIndices(row, column);
+        this.data[indices[0]][indices[1]] = data;
     }
 
     // Method to compute stats of the top diagonal
@@ -125,8 +135,10 @@ public class Table {
         float max = Float.NEGATIVE_INFINITY;
         for (float val : topDiagValues) {
             sum += val;
-            if (val < min) min = val;
-            if (val > max) max = val;
+            if (val < min)
+                min = val;
+            if (val > max)
+                max = val;
         }
         float mean = sum / topDiagValues.size();
 
@@ -154,7 +166,6 @@ public class Table {
             throw new IllegalArgumentException("Gen not found.");
         }
 
-
         for (Map.Entry<String, List<String>> entry : attributes.entrySet()) {
             String column = entry.getKey();
             List<String> values = entry.getValue();
@@ -174,7 +185,6 @@ public class Table {
             this.numberAttributes[rowIndex][colIndex] = values.size();
         }
     }
-
 
     public float getWeightedMean(int rowIndex) {
         float sum = 0.0f;
@@ -202,55 +212,14 @@ public class Table {
 
     // Increment the value at the specified row and column by the given data
     public void addValue(float data, String row, String column) {
-        int rowIndex = -1;
-        int colIndex = -1;
-
-        for (int i = 0; i < rowsHeader.length; i++) {
-            if (rowsHeader[i].equals(row)) {
-                rowIndex = i;
-                break;
-            }
-        }
-
-        for (int j = 0; j < columnsHeader.length; j++) {
-            if (columnsHeader[j].equals(column)) {
-                colIndex = j;
-                break;
-            }
-        }
-
-        if (rowIndex == -1 || colIndex == -1) {
-            throw new IllegalArgumentException("Row or column not found.");
-        }
-
-        this.data[rowIndex][colIndex] += data;
+        int[] indices = getIndices(row, column);
+        this.data[indices[0]][indices[1]] += data;
     }
 
     public float getValue(String row, String column) {
-        int rowIndex = -1;
-        int colIndex = -1;
-
-        for (int i = 0; i < rowsHeader.length; i++) {
-            if (rowsHeader[i].equals(row)) {
-                rowIndex = i;
-                break;
-            }
-        }
-
-        for (int j = 0; j < columnsHeader.length; j++) {
-            if (columnsHeader[j].equals(column)) {
-                colIndex = j;
-                break;
-            }
-        }
-
-        if (rowIndex == -1 || colIndex == -1) {
-            throw new IllegalArgumentException("Row or column not found.");
-        }
-
-        return this.data[rowIndex][colIndex];
+        int[] indices = getIndices(row, column);
+        return this.data[indices[0]][indices[1]];
     }
-
 
     public String toMarkdown() {
         StringBuilder sb = new StringBuilder();
@@ -269,12 +238,12 @@ public class Table {
 
     public static void main(String[] args) {
         String title = "My Table";
-        String[] rows = {"Row1", "Row2", "Row3"};
-        String[] columns = {"Col1", "Col2", "Col3"};
+        String[] rows = { "Row1", "Row2", "Row3" };
+        String[] columns = { "Col1", "Col2", "Col3" };
         float[][] data = {
-            {1, 2, 3},
-            {4, 5, 6},
-            {7, 8, 9}
+                { 1, 2, 3 },
+                { 4, 5, 6 },
+                { 7, 8, 9 }
         };
 
         Table table = new Table(title, rows, columns, data);

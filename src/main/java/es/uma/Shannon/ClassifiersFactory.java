@@ -13,7 +13,7 @@ public class ClassifiersFactory {
             "Relationship.type", 
             "MatchEvent.eventType", 
             "Player.bestFoot", 
-            "Position.positionName", 
+            "Player.positionName", 
             "Bill.paymentMethod", 
             "Bill.status", 
             "Shipment.status", 

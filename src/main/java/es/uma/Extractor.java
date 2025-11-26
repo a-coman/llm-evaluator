@@ -34,13 +34,13 @@ public class Extractor {
     /**
      * Get instance attributes filtered by specified class-attribute mappings.
      * 
-     * @param instance {@code The SOIL instance content}
+     * @param instance   {@code The SOIL instance content}
      * @param attributes {@code Map<className, List<attributeName to extract>>}
      * @return {@code Map<className, Map<attributeName, List<values>>>}
      */
-    public static Map<String, Map<String, List<String>>> getInstanceAttributes(String instance, 
-        Map<String, List<String>> attributes) {
-        
+    public static Map<String, Map<String, List<String>>> getInstanceAttributes(String instance,
+            Map<String, List<String>> attributes) {
+
         validateNotEmpty(instance, "Instance");
         validateNotEmpty(attributes, "Attributes");
 
@@ -82,7 +82,7 @@ public class Extractor {
      * "ClassName.attributeName").
      * 
      * @param instance {@code The SOIL instance content}
-     * @param specs {@code List of "ClassName.attributeName" strings specifying attributes to extract}
+     * @param specs    {@code List of "ClassName.attributeName" strings specifying attributes to extract}
      * @return {@code Map<ClassName.attributeName, List<values>>}
      */
     public static Map<String, List<String>> getInstanceAttributes(String instance, List<String> specs) {
@@ -109,7 +109,8 @@ public class Extractor {
     }
 
     /**
-     * Get all instance attributes without filtering by model definition (raw extraction).
+     * Get all instance attributes without filtering by model definition (raw
+     * extraction).
      */
     public static Map<String, Map<String, List<String>>> getRawInstanceAttributes(String instance) {
         Map<String, Map<String, List<String>>> result = new LinkedHashMap<>();
@@ -248,6 +249,14 @@ public class Extractor {
                 }
             }
         }
+
+        // Handle incomplete class definition (missing 'end' keyword)
+        if (current != null) {
+            System.err.println("Warning: Model file has incomplete class definition for '" + current.name
+                    + "' (missing 'end' keyword)");
+            classes.put(current.name, current);
+        }
+
         return classes;
     }
 

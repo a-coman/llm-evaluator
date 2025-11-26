@@ -20,7 +20,7 @@ public enum Domain {
     RESTAURANT(List.of("Owner.name", "RegularCustomer.name", "Manager.name", "HeadWaiter.name", "Waiter.name", "Cook.name", "BusDriver.name", "Chef.name", "Table.description")),
     STATEMACHINE(List.of("StateMachine.name", "State.name", "Transition.name")),
     VEHICLERENTAL(List.of("RentalOffice.name", "Individual.name", "Company.name", "RentalOffice.address")),
-    VIDEOCLUB(List.of("Movie.title", "Series.Title", "Actor.name"));
+    VIDEOCLUB(List.of("Movie.title", "Series.title", "Actor.name"));
 
     private final List<String> attributes;
 
