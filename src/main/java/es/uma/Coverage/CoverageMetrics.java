@@ -1,163 +1,140 @@
 package es.uma.Coverage;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import es.uma.Extractor;
 import es.uma.Table;
 
 public class CoverageMetrics {
-    int definedCls = 0, definedAttr = 0, definedRel = 0;
-    int instantiatedCls = 0, instantiatedAttr = 0, instantiatedRel = 0;
-    List<String> uncovered = new ArrayList<>();
-    List<String> hallucinations = new ArrayList<>();
+    // Model definition counts
+    private int definedCls, definedAttr, definedRel;
+    // Instantiation coverage counts
+    private int instantiatedCls, instantiatedAttr, instantiatedRel;
+    // Instance counts
+    private int totalObjects, totalAttributeValues, totalPossibleAttributeValues, totalLinks;
+    // Issues tracking
+    private final List<String> uncovered = new ArrayList<>();
+    private final List<String> hallucinations = new ArrayList<>();
 
-    // Instantiation metrics
-    int totalObjects = 0;
-    int totalAttributeValues = 0;
-    int totalPossibleAttributeValues = 0;
-    int totalLinks = 0;
-
-    void add(CoverageMetrics other) {
-        this.definedCls += other.definedCls;
-        this.definedAttr += other.definedAttr;
-        this.definedRel += other.definedRel;
-        this.instantiatedCls += other.instantiatedCls;
-        this.instantiatedAttr += other.instantiatedAttr;
-        this.instantiatedRel += other.instantiatedRel;
-        this.uncovered.addAll(other.uncovered);
-        this.hallucinations.addAll(other.hallucinations);
-
-        this.totalObjects += other.totalObjects;
-        this.totalAttributeValues += other.totalAttributeValues;
-        this.totalPossibleAttributeValues += other.totalPossibleAttributeValues;
-        this.totalLinks += other.totalLinks;
+    public void add(CoverageMetrics other) {
+        definedCls += other.definedCls;
+        definedAttr += other.definedAttr;
+        definedRel += other.definedRel;
+        instantiatedCls += other.instantiatedCls;
+        instantiatedAttr += other.instantiatedAttr;
+        instantiatedRel += other.instantiatedRel;
+        totalObjects += other.totalObjects;
+        totalAttributeValues += other.totalAttributeValues;
+        totalPossibleAttributeValues += other.totalPossibleAttributeValues;
+        totalLinks += other.totalLinks;
+        uncovered.addAll(other.uncovered);
+        hallucinations.addAll(other.hallucinations);
     }
 
     public void calculate(Map<String, Map<String, List<String>>> instanceAttributes,
-            Map<String, List<String>> systemAttributes, String instanceContent, List<String> modelRelationships) {
+            Map<String, List<String>> modelAttributes, String instanceContent, List<String> modelRelationships) {
 
-        // instanceAttributes only has attributes/clases present in the model because they come from the getAll(modelAttributes)
-        // Relationship metrics
-        Map<String, Integer> instanceRelationships = Extractor.getInstanceRelationships(instanceContent);
+        Set<String> modelRelSet = new HashSet<>(modelRelationships);
 
-        for (String rel : instanceRelationships.keySet()) {
-            if (!modelRelationships.contains(rel)) {
-                hallucinations.add("Relationship: " + rel);
+        // Process relationships
+        Map<String, Integer> instanceRels = Extractor.getInstanceRelationships(instanceContent);
+        instanceRels.keySet().stream()
+                .filter(rel -> !modelRelSet.contains(rel))
+                .forEach(rel -> hallucinations.add("Relationship: " + rel));
+
+        instanceRels.keySet().retainAll(modelRelSet);
+        totalLinks = instanceRels.values().stream().mapToInt(Integer::intValue).sum();
+
+        // Process class instances
+        Map<String, Integer> instanceCounts = Extractor.getInstanceCounts(instanceContent);
+        instanceCounts.keySet().stream()
+                .filter(cls -> !modelAttributes.containsKey(cls))
+                .forEach(cls -> hallucinations.add("Class: " + cls));
+
+        instanceCounts.keySet().retainAll(modelAttributes.keySet());
+        totalObjects = instanceCounts.values().stream().mapToInt(Integer::intValue).sum();
+
+        // Calculate possible attribute values
+        instanceCounts.forEach((cls,
+                count) -> totalPossibleAttributeValues += count * modelAttributes.getOrDefault(cls, List.of()).size());
+
+        // Process attribute hallucinations
+        Map<String, Map<String, List<String>>> rawAttrs = Extractor.getRawInstanceAttributes(instanceContent);
+        rawAttrs.forEach((cls, attrMap) -> {
+            List<String> validAttrs = modelAttributes.get(cls);
+            if (validAttrs != null) {
+                attrMap.keySet().stream()
+                        .filter(attr -> !validAttrs.contains(attr))
+                        .forEach(attr -> hallucinations.add("Attribute: " + cls + "." + attr));
             }
-        }
+        });
 
-        instanceRelationships.keySet().retainAll(modelRelationships); // To only keep relationships present in the model
-        this.totalLinks = instanceRelationships.values().stream().mapToInt(Integer::intValue).sum();
-
-        definedCls = systemAttributes.keySet().size();
-        definedAttr = systemAttributes.values().stream().mapToInt(List::size).sum();
+        // Set definition counts
+        definedCls = modelAttributes.size();
+        definedAttr = modelAttributes.values().stream().mapToInt(List::size).sum();
         definedRel = modelRelationships.size();
 
-        instantiatedCls = instanceAttributes.keySet().size();
+        // Set instantiation counts
+        instantiatedCls = instanceAttributes.size();
         instantiatedAttr = instanceAttributes.values().stream().mapToInt(Map::size).sum();
-        instantiatedRel = instanceRelationships.keySet().size();
-
+        instantiatedRel = instanceRels.size();
         totalAttributeValues = instanceAttributes.values().stream()
-                .mapToInt(attrMap -> attrMap.values().stream().mapToInt(List::size).sum())
+                .flatMap(m -> m.values().stream())
+                .mapToInt(List::size)
                 .sum();
 
-        // Instantiation stats
-        Map<String, Integer> instanceCounts = Extractor.getInstanceCounts(instanceContent);
-
-        for (String cls : instanceCounts.keySet()) {
-            if (!systemAttributes.containsKey(cls)) {
-                hallucinations.add("Class: " + cls);
+        // Track uncovered elements
+        modelAttributes.forEach((cls, attrs) -> {
+            if (!instanceCounts.containsKey(cls)) {
+                uncovered.add("Class: " + cls);
             }
-        }
+            Map<String, List<String>> instAttrs = instanceAttributes.get(cls);
+            attrs.stream()
+                    .filter(attr -> instAttrs == null || !instAttrs.containsKey(attr))
+                    .forEach(attr -> uncovered.add("Attribute: " + cls + "." + attr));
+        });
 
-        instanceCounts.keySet().retainAll(systemAttributes.keySet()); // To only keep classes present in the model
-        this.totalObjects = instanceCounts.values().stream().mapToInt(Integer::intValue).sum();
-
-        for (Map.Entry<String, Integer> entry : instanceCounts.entrySet()) {
-            String className = entry.getKey();
-            int count = entry.getValue();
-            if (systemAttributes.containsKey(className)) {
-                int attrsPerClass = systemAttributes.get(className).size();
-                this.totalPossibleAttributeValues += count * attrsPerClass;
-            }
-        }
-
-        // Attribute hallucinations
-        Map<String, Map<String, List<String>>> rawAttributes = Extractor.getRawInstanceAttributes(instanceContent);
-        for (String className : rawAttributes.keySet()) {
-            if (systemAttributes.containsKey(className)) {
-                List<String> validAttrs = systemAttributes.get(className);
-                for (String attrName : rawAttributes.get(className).keySet()) {
-                    if (!validAttrs.contains(attrName)) {
-                        hallucinations.add("Attribute: " + className + "." + attrName);
-                    }
-                }
-            }
-        }
-
-        // Uncovered metrics
-        for (String className : systemAttributes.keySet()) {
-            if (!instanceCounts.containsKey(className)) {
-                uncovered.add("Class: " + className);
-            }
-
-            List<String> definedAttributes = systemAttributes.get(className);
-            Map<String, List<String>> instantiatedAttributesMap = instanceAttributes.get(className);
-
-            for (String attr : definedAttributes) {
-                if (instantiatedAttributesMap == null || !instantiatedAttributesMap.containsKey(attr)) {
-                    uncovered.add("Attribute: " + className + "." + attr);
-                }
-            }
-        }
-        for (String rel : modelRelationships) {
-            if (!instanceRelationships.containsKey(rel)) {
-                uncovered.add("Relationship: " + rel);
-            }
-        }
+        modelRelationships.stream()
+                .filter(rel -> !instanceRels.containsKey(rel))
+                .forEach(rel -> uncovered.add("Relationship: " + rel));
     }
 
     public String getUncoveredListString() {
-        if (!uncovered.isEmpty()) {
-            return "Uncovered: " + uncovered.toString() + "\n\n";
-        }
-        return "";
+        return uncovered.isEmpty() ? "" : "Uncovered: " + uncovered + "\n\n";
     }
 
     public String getHallucinationListString() {
-        if (!hallucinations.isEmpty()) {
-            return "Hallucinations: " + hallucinations.toString() + "\n\n";
-        }
-        return "";
+        return hallucinations.isEmpty() ? "" : "Hallucinations: " + hallucinations + "\n\n";
     }
 
-    Table toTable(String title) {
-        String[] tableColumnsHeader = new String[] { "instantiated", "defined", "coverage" };
-        String[] tableRowsHeader = new String[] { "classes", "attributes", "relationships" };
-
-        float[][] tableData = {
-                { instantiatedCls, definedCls, definedCls != 0 ? (float) instantiatedCls / definedCls : 0 },
-                { instantiatedAttr, definedAttr, definedAttr != 0 ? (float) instantiatedAttr / definedAttr : 0 },
-                { instantiatedRel, definedRel, definedRel != 0 ? (float) instantiatedRel / definedRel : 0 }
+    public Table toTable(String title) {
+        String[] columns = { "instantiated", "defined", "coverage" };
+        String[] rows = { "classes", "attributes", "relationships" };
+        float[][] data = {
+                { instantiatedCls, definedCls, ratio(instantiatedCls, definedCls) },
+                { instantiatedAttr, definedAttr, ratio(instantiatedAttr, definedAttr) },
+                { instantiatedRel, definedRel, ratio(instantiatedRel, definedRel) }
         };
-
-        return new Table(title, tableRowsHeader, tableColumnsHeader, tableData);
+        return new Table(title, rows, columns, data);
     }
 
-    Table toInstantiationTable(String title) {
-        String[] tableColumnsHeader = new String[] { "total instantiated", "total possible", "ratio" };
-        String[] tableRowsHeader = new String[] { "classes", "attributes", "relationships" };
-
-        float[][] tableData = {
+    public Table toInstantiationTable(String title) {
+        String[] columns = { "total instantiated", "total possible", "ratio" };
+        String[] rows = { "classes", "attributes", "relationships" };
+        float[][] data = {
                 { totalObjects, -1, -1 },
                 { totalAttributeValues, totalPossibleAttributeValues,
-                        totalPossibleAttributeValues != 0 ? (float) totalAttributeValues / totalPossibleAttributeValues
-                                : 0 },
+                        ratio(totalAttributeValues, totalPossibleAttributeValues) },
                 { totalLinks, -1, -1 }
         };
+        return new Table(title, rows, columns, data);
+    }
 
-        return new Table(title, tableRowsHeader, tableColumnsHeader, tableData);
+    private static float ratio(int numerator, int denominator) {
+        return denominator != 0 ? (float) numerator / denominator : 0;
     }
 }

@@ -9,144 +9,125 @@ import es.uma.Utils;
 
 public class Coverage {
 
+    private static final String PROMPTS_PATH = "./src/main/resources/prompts/";
+    private static final String OUTPUT_PATH = "./src/main/java/es/uma/Coverage/";
+
     public static void main(String[] args) {
         calculateCoverage();
     }
 
     public static void calculateCoverage() {
-        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
-
         System.out.println("Calculating Simple Coverage...");
-        String simpleOutput = calculateSimple(simplePaths);
-        Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Coverage/", "simpleCoverage.md", false);
+        String simpleOutput = calculate("Simple");
+        Utils.saveFile(simpleOutput, OUTPUT_PATH, "simpleCoverage.md", false);
 
         System.out.println("Calculating CoT Coverage...");
-        String cotOutput = calculateCoT(cotPaths);
-        Utils.saveFile(cotOutput, "./src/main/java/es/uma/Coverage/", "cotCoverage.md", false);
+        String cotOutput = calculate("CoT");
+        Utils.saveFile(cotOutput, OUTPUT_PATH, "cotCoverage.md", false);
+
         System.out.println("Coverage metrics calculated and saved.");
     }
 
-    private static String calculateSimple(Map<String, Map<String, List<String>>> paths) {
+    private static String calculate(String type) {
+        Boolean isCoT = type.toLowerCase().equals("cot");
+
+        Map<String, Map<String, List<String>>> paths = Utils.getPaths(type);
         StringBuilder output = new StringBuilder();
-        output.append("# Simple\n\n");
+        output.append("# ").append(type).append("\n\n");
 
         CoverageMetrics totalMetrics = new CoverageMetrics();
 
-        for (String system : paths.keySet()) {
+        for (Map.Entry<String, Map<String, List<String>>> systemEntry : paths.entrySet()) {
+            String system = systemEntry.getKey();
             output.append("## ").append(system).append("\n\n");
 
-            String systemContent = Utils
-                    .readFile("./src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use");
-            Map<String, List<String>> systemAttributes = Extractor.getModelAttributes(systemContent);
-            List<String> modelRelationships = Extractor.getModelRelationships(systemContent);
+            SystemModel model = new SystemModel(system);
+            CoverageMetrics systemMetrics = processSystem(systemEntry.getValue(), model, output, isCoT);
 
-            Map<String, List<String>> genPaths = paths.get(system);
-            CoverageMetrics systemMetrics = new CoverageMetrics();
-
-            for (String gen : genPaths.keySet()) {
-                output.append("### ").append(gen).append("\n\n");
-
-                String filePath = genPaths.get(gen).get(0);
-                String instance = Utils.readFile(filePath);
-                var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
-
-                CoverageMetrics instanceMetrics = new CoverageMetrics();
-                instanceMetrics.calculate(instanceAttributes, systemAttributes, instance, modelRelationships);
-
-                systemMetrics.add(instanceMetrics);
-
-                output.append(instanceMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-                output.append(instanceMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-                output.append(instanceMetrics.getUncoveredListString());
-                output.append(instanceMetrics.getHallucinationListString());
-            }
-
-            output.append("### ALL Gen \n\n");
-            output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-            output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-            output.append(systemMetrics.getUncoveredListString());
-            output.append(systemMetrics.getHallucinationListString());
-
+            appendMetricsSummary(output, systemMetrics, "### ALL Gen");
             totalMetrics.add(systemMetrics);
         }
 
-        output.append("# Coverage \n\n");
-        output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-        output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-        output.append(totalMetrics.getUncoveredListString());
-        output.append(totalMetrics.getHallucinationListString());
-
+        appendMetricsSummary(output, totalMetrics, "# Coverage");
         return output.toString();
     }
 
-    private static String calculateCoT(Map<String, Map<String, List<String>>> paths) {
-        StringBuilder output = new StringBuilder();
-        output.append("# CoT\n\n");
+    private static CoverageMetrics processSystem(Map<String, List<String>> genPaths, SystemModel model,
+            StringBuilder output, Boolean isCoT) {
+        CoverageMetrics systemMetrics = new CoverageMetrics();
 
-        CoverageMetrics totalMetrics = new CoverageMetrics();
+        for (Map.Entry<String, List<String>> genEntry : genPaths.entrySet()) {
+            String gen = genEntry.getKey();
+            List<String> files = genEntry.getValue();
+            output.append("### ").append(gen).append("\n\n");
 
-        for (String system : paths.keySet()) {
-            output.append("## ").append(system).append("\n\n");
+            CoverageMetrics genMetrics = isCoT
+                    ? processCoTFiles(files, model, output)
+                    : processSimpleFile(files.get(0), model);
 
-            String systemContent = Utils
-                    .readFile("./src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use");
-            Map<String, List<String>> systemAttributes = Extractor.getModelAttributes(systemContent);
-            List<String> modelRelationships = Extractor.getModelRelationships(systemContent);
-
-            Map<String, List<String>> genPaths = paths.get(system);
-            CoverageMetrics systemMetrics = new CoverageMetrics();
-
-            for (String gen : genPaths.keySet()) {
-                output.append("### ").append(gen).append("\n\n");
-
-                List<String> categoryFiles = genPaths.get(gen);
-                CoverageMetrics genMetrics = new CoverageMetrics();
-
-                for (String filePath : categoryFiles) {
-                    String category = new File(filePath).getName().replace(".soil", "");
-                    output.append("#### ").append(category).append("\n\n");
-
-                    String instance = Utils.readFile(filePath);
-                    // Map<className, Map<attributeName, List<values>>>
-                    var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
-
-                    CoverageMetrics categoryMetrics = new CoverageMetrics();
-                    categoryMetrics.calculate(instanceAttributes, systemAttributes, instance, modelRelationships);
-
-                    genMetrics.add(categoryMetrics);
-
-                    output.append(categoryMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-                    output.append(categoryMetrics.toInstantiationTable("Instantiation Stats").toMarkdown())
-                            .append("\n\n");
-                    output.append(categoryMetrics.getUncoveredListString());
-                    output.append(categoryMetrics.getHallucinationListString());
-                }
-
-                output.append("#### ALL Categories\n\n");
-                output.append(genMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-                output.append(genMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-                output.append(genMetrics.getUncoveredListString());
-                output.append(genMetrics.getHallucinationListString());
-
-                systemMetrics.add(genMetrics);
+            if (isCoT) {
+                appendMetricsSummary(output, genMetrics, "#### ALL Categories");
+            } else {
+                appendMetrics(output, genMetrics);
             }
 
-            output.append("### ALL Gen \n\n");
-            output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-            output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-            output.append(systemMetrics.getUncoveredListString());
-            output.append(systemMetrics.getHallucinationListString());
-
-            totalMetrics.add(systemMetrics);
+            systemMetrics.add(genMetrics);
         }
 
-        output.append("# Coverage \n\n");
-        output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
-        output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
-        output.append(totalMetrics.getUncoveredListString());
-        output.append(totalMetrics.getHallucinationListString());
+        return systemMetrics;
+    }
 
-        return output.toString();
+    private static CoverageMetrics processSimpleFile(String filePath, SystemModel model) {
+        String instance = Utils.readFile(filePath);
+        return calculateMetrics(instance, model);
+    }
+
+    private static CoverageMetrics processCoTFiles(List<String> files, SystemModel model, StringBuilder output) {
+        CoverageMetrics genMetrics = new CoverageMetrics();
+
+        for (String filePath : files) {
+            String category = new File(filePath).getName().replace(".soil", "");
+            output.append("#### ").append(category).append("\n\n");
+
+            String instance = Utils.readFile(filePath);
+            CoverageMetrics categoryMetrics = calculateMetrics(instance, model);
+
+            appendMetrics(output, categoryMetrics);
+            genMetrics.add(categoryMetrics);
+        }
+
+        return genMetrics;
+    }
+
+    private static CoverageMetrics calculateMetrics(String instance, SystemModel model) {
+        var instanceAttributes = Extractor.getAllInstanceAttributes(instance, model.content);
+        CoverageMetrics metrics = new CoverageMetrics();
+        metrics.calculate(instanceAttributes, model.attributes, instance, model.relationships);
+        return metrics;
+    }
+
+    private static void appendMetrics(StringBuilder output, CoverageMetrics metrics) {
+        output.append(metrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
+        output.append(metrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
+        output.append(metrics.getUncoveredListString());
+        output.append(metrics.getHallucinationListString());
+    }
+
+    private static void appendMetricsSummary(StringBuilder output, CoverageMetrics metrics, String header) {
+        output.append(header).append(" \n\n");
+        appendMetrics(output, metrics);
+    }
+
+    /** Holds preloaded model data to avoid repeated file reads and parsing */
+    private static class SystemModel {
+        final String content;
+        final Map<String, List<String>> attributes;
+        final List<String> relationships;
+
+        SystemModel(String system) {
+            this.content = Utils.readFile(PROMPTS_PATH + system.toLowerCase() + "/diagram.use");
+            this.attributes = Extractor.getModelAttributes(content);
+            this.relationships = Extractor.getModelRelationships(content);
+        }
     }
 }
