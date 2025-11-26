@@ -2010,6 +2010,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen2
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2025,6 +2027,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen3
 
@@ -2042,6 +2046,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen4
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2057,6 +2063,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen5
 
@@ -2074,6 +2082,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen6
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2089,6 +2099,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen7
 
@@ -2106,6 +2118,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen8
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2121,6 +2135,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen9
 
@@ -2138,6 +2154,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen10
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2153,6 +2171,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen11
 
@@ -2170,6 +2190,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen12
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2185,6 +2207,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen13
 
@@ -2202,6 +2226,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen14
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2217,6 +2243,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen15
 
@@ -2234,6 +2262,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen16
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2249,6 +2279,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen17
 
@@ -2266,6 +2298,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen18
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2281,6 +2315,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen19
 
@@ -2298,6 +2334,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen20
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2313,6 +2351,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen21
 
@@ -2330,6 +2370,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen22
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2345,6 +2387,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen23
 
@@ -2362,6 +2406,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen24
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2377,6 +2423,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen25
 
@@ -2394,6 +2442,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen26
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2409,6 +2459,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen27
 
@@ -2426,6 +2478,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen28
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2441,6 +2495,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen29
 
@@ -2458,6 +2514,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### gen30
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2474,6 +2532,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2489,6 +2549,8 @@
 | **attributes** | 315.0000 | 315.0000 | 1.0000 | 
 | **relationships** | 156.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ## Football
 
@@ -2508,6 +2570,8 @@
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes]
+
 ### gen2
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2523,6 +2587,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen3
 
@@ -2540,6 +2606,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen4
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2555,6 +2623,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen5
 
@@ -2572,6 +2642,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen6
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2587,6 +2659,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen7
 
@@ -2604,6 +2678,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen8
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2619,6 +2695,8 @@
 | **attributes** | 76.0000 | 76.0000 | 1.0000 | 
 | **relationships** | 32.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen9
 
@@ -2636,6 +2714,8 @@
 | **relationships** | 28.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen10
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2651,6 +2731,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen11
 
@@ -2668,6 +2750,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen12
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2683,6 +2767,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen13
 
@@ -2700,6 +2786,8 @@
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen14
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2715,6 +2803,8 @@
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen15
 
@@ -2732,6 +2822,8 @@
 | **relationships** | 28.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen16
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2747,6 +2839,8 @@
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen17
 
@@ -2764,6 +2858,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen18
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2779,6 +2875,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen19
 
@@ -2796,6 +2894,8 @@
 | **relationships** | 28.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen20
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2811,6 +2911,8 @@
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen21
 
@@ -2828,6 +2930,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen22
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2843,6 +2947,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen23
 
@@ -2860,6 +2966,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen24
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2875,6 +2983,8 @@
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen25
 
@@ -2892,6 +3002,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen26
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2907,6 +3019,8 @@
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen27
 
@@ -2924,6 +3038,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen28
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2939,6 +3055,8 @@
 | **attributes** | 70.0000 | 70.0000 | 1.0000 | 
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ### gen29
 
@@ -2956,6 +3074,8 @@
 | **relationships** | 32.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### gen30
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2972,6 +3092,8 @@
 | **relationships** | 27.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -2987,6 +3109,8 @@
 | **attributes** | 2151.0000 | 2151.0000 | 1.0000 | 
 | **relationships** | 897.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 ## HotelManagement
 
@@ -3504,6 +3628,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate]
+
 ### gen2
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3519,6 +3645,8 @@
 | **attributes** | 29.0000 | 29.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
 
 ### gen3
 
@@ -3536,6 +3664,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### gen4
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3551,6 +3681,8 @@
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
 
 ### gen5
 
@@ -3568,6 +3700,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen6
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3583,6 +3717,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen7
 
@@ -3600,6 +3736,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen8
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3615,6 +3753,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen9
 
@@ -3632,6 +3772,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen10
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3647,6 +3789,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen11
 
@@ -3664,6 +3808,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen12
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3679,6 +3825,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen13
 
@@ -3696,6 +3844,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen14
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3711,6 +3861,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen15
 
@@ -3728,6 +3880,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen16
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3743,6 +3897,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen17
 
@@ -3760,6 +3916,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen18
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3775,6 +3933,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen19
 
@@ -3792,6 +3952,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen20
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3807,6 +3969,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen21
 
@@ -3824,6 +3988,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen22
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3839,6 +4005,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen23
 
@@ -3856,6 +4024,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen24
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3871,6 +4041,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen25
 
@@ -3888,6 +4060,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen26
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3903,6 +4077,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen27
 
@@ -3920,6 +4096,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen28
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3935,6 +4113,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ### gen29
 
@@ -3952,6 +4132,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen30
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3968,6 +4150,8 @@
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3983,6 +4167,8 @@
 | **attributes** | 712.0000 | 712.0000 | 1.0000 | 
 | **relationships** | 155.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 ## Example1
 
@@ -4036,6 +4222,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem]
+
 ### gen2
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4051,6 +4239,8 @@
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen3
 
@@ -4068,6 +4258,8 @@
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen4
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4083,6 +4275,8 @@
 | **attributes** | 46.0000 | 46.0000 | 1.0000 | 
 | **relationships** | 14.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen5
 
@@ -4100,6 +4294,8 @@
 | **relationships** | 13.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen6
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4115,6 +4311,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen7
 
@@ -4132,6 +4330,8 @@
 | **relationships** | 13.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen8
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4147,6 +4347,8 @@
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen9
 
@@ -4164,6 +4366,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen10
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4179,6 +4383,8 @@
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen11
 
@@ -4196,6 +4402,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen12
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4211,6 +4419,8 @@
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen13
 
@@ -4228,6 +4438,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen14
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4243,6 +4455,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen15
 
@@ -4260,6 +4474,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen16
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4275,6 +4491,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen17
 
@@ -4292,6 +4510,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen18
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4307,6 +4527,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen19
 
@@ -4324,6 +4546,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen20
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4339,6 +4563,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen21
 
@@ -4356,6 +4582,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen22
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4371,6 +4599,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen23
 
@@ -4388,6 +4618,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen24
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4403,6 +4635,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen25
 
@@ -4420,6 +4654,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen26
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4435,6 +4671,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen27
 
@@ -4452,6 +4690,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen28
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4467,6 +4707,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ### gen29
 
@@ -4484,6 +4726,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### gen30
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4500,6 +4744,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4515,6 +4761,8 @@
 | **attributes** | 1164.0000 | 1164.0000 | 1.0000 | 
 | **relationships** | 340.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 
 ## AddressBook
 
@@ -5097,4 +5345,6 @@
 | **attributes** | 8039.0000 | 8039.0000 | 1.0000 | 
 | **relationships** | 3591.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
 

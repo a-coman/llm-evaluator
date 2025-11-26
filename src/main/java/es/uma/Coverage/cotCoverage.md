@@ -20,6 +20,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -35,6 +37,8 @@
 | **attributes** | 68.0000 | 86.0000 | 0.7907 | 
 | **relationships** | 27.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr]
 
 #### boundary
 
@@ -52,6 +56,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -67,6 +73,8 @@
 | **attributes** | 68.0000 | 73.0000 | 0.9315 | 
 | **relationships** | 22.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
 
 #### complex
 
@@ -84,6 +92,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -99,6 +109,8 @@
 | **attributes** | 339.0000 | 383.0000 | 0.8851 | 
 | **relationships** | 118.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
 
 ### gen2
 
@@ -118,6 +130,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -133,6 +147,8 @@
 | **attributes** | 67.0000 | 74.0000 | 0.9054 | 
 | **relationships** | 24.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver]
 
 #### boundary
 
@@ -150,6 +166,8 @@
 | **relationships** | 16.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -165,6 +183,8 @@
 | **attributes** | 64.0000 | 69.0000 | 0.9275 | 
 | **relationships** | 20.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver]
 
 #### complex
 
@@ -182,6 +202,8 @@
 | **relationships** | 40.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -197,6 +219,8 @@
 | **attributes** | 341.0000 | 368.0000 | 0.9266 | 
 | **relationships** | 107.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver]
 
 ### gen3
 
@@ -216,21 +240,27 @@
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 16.0000 | 19.0000 | 0.8421 | 
 | **attributes** | 47.0000 | 58.0000 | 0.8103 | 
-| **relationships** | 13.0000 | 13.0000 | 1.0000 | 
+| **relationships** | 12.0000 | 13.0000 | 0.9231 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 30.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 84.0000 | 95.0000 | 0.8842 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer]
+
+Hallucinations: [Relationship: CustomerDietary]
 
 #### boundary
 
@@ -248,6 +278,8 @@
 | **relationships** | 22.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -263,6 +295,8 @@
 | **attributes** | 67.0000 | 73.0000 | 0.9178 | 
 | **relationships** | 21.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
 
 #### complex
 
@@ -280,21 +314,27 @@
 | **relationships** | 42.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 73.0000 | 95.0000 | 0.7684 | 
 | **attributes** | 219.0000 | 290.0000 | 0.7552 | 
-| **relationships** | 60.0000 | 65.0000 | 0.9231 | 
+| **relationships** | 59.0000 | 65.0000 | 0.9077 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 128.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 374.0000 | 408.0000 | 0.9167 | 
-| **relationships** | 128.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 127.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
+Hallucinations: [Relationship: CustomerDietary]
 
 ### gen4
 
@@ -314,6 +354,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: ChefCook, Relationship: HeadWaiterWaiter]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -329,6 +371,8 @@
 | **attributes** | 79.0000 | 89.0000 | 0.8876 | 
 | **relationships** | 27.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr]
 
 #### boundary
 
@@ -346,21 +390,27 @@
 | **relationships** | 22.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 16.0000 | 19.0000 | 0.8421 | 
 | **attributes** | 48.0000 | 58.0000 | 0.8276 | 
-| **relationships** | 13.0000 | 13.0000 | 1.0000 | 
+| **relationships** | 12.0000 | 13.0000 | 0.9231 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 21.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 64.0000 | 69.0000 | 0.9275 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 20.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver]
+
+Hallucinations: [Relationship: CustomerDietary]
 
 #### complex
 
@@ -378,21 +428,27 @@
 | **relationships** | 41.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 71.0000 | 95.0000 | 0.7474 | 
 | **attributes** | 219.0000 | 290.0000 | 0.7552 | 
-| **relationships** | 56.0000 | 65.0000 | 0.8615 | 
+| **relationships** | 55.0000 | 65.0000 | 0.8462 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 127.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 379.0000 | 417.0000 | 0.9089 | 
-| **relationships** | 122.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 121.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: ChefCook, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
+Hallucinations: [Relationship: CustomerDietary]
 
 ### gen5
 
@@ -412,6 +468,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -427,6 +485,8 @@
 | **attributes** | 70.0000 | 78.0000 | 0.8974 | 
 | **relationships** | 23.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver]
 
 #### boundary
 
@@ -444,6 +504,8 @@
 | **relationships** | 18.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -459,6 +521,8 @@
 | **attributes** | 67.0000 | 72.0000 | 0.9306 | 
 | **relationships** | 22.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver]
 
 #### complex
 
@@ -476,6 +540,8 @@
 | **relationships** | 42.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -491,6 +557,8 @@
 | **attributes** | 356.0000 | 383.0000 | 0.9295 | 
 | **relationships** | 115.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
 
 ### gen6
 
@@ -510,6 +578,8 @@
 | **relationships** | 13.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -525,6 +595,8 @@
 | **attributes** | 84.0000 | 95.0000 | 0.8842 | 
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer]
 
 #### boundary
 
@@ -542,6 +614,8 @@
 | **relationships** | 18.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: FoodItemAllergen]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -557,6 +631,8 @@
 | **attributes** | 67.0000 | 73.0000 | 0.9178 | 
 | **relationships** | 21.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
 
 #### complex
 
@@ -574,6 +650,8 @@
 | **relationships** | 43.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -590,21 +668,27 @@
 | **relationships** | 124.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: FoodItemAllergen, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 416.0000 | 570.0000 | 0.7298 | 
 | **attributes** | 1268.0000 | 1740.0000 | 0.7287 | 
-| **relationships** | 330.0000 | 390.0000 | 0.8462 | 
+| **relationships** | 328.0000 | 390.0000 | 0.8410 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 737.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 2165.0000 | 2368.0000 | 0.9143 | 
-| **relationships** | 714.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 712.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: ChefCook, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: FoodItemAllergen, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr]
+
+Hallucinations: [Relationship: CustomerDietary, Relationship: CustomerDietary]
 
 ## Statemachine
 
@@ -625,6 +709,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 15.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -706,6 +792,8 @@
 | **relationships** | 95.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### gen2
 
 #### invalid
@@ -723,6 +811,8 @@
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
 | **relationships** | 24.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -804,6 +894,8 @@
 | **relationships** | 118.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### gen3
 
 #### invalid
@@ -821,6 +913,8 @@
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
 | **relationships** | 25.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -902,6 +996,8 @@
 | **relationships** | 133.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### gen4
 
 #### invalid
@@ -919,6 +1015,8 @@
 | **attributes** | 14.0000 | 14.0000 | 1.0000 | 
 | **relationships** | 23.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -1000,6 +1098,8 @@
 | **relationships** | 130.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### gen5
 
 #### invalid
@@ -1017,6 +1117,8 @@
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
 | **relationships** | 24.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -1098,6 +1200,8 @@
 | **relationships** | 141.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### gen6
 
 #### invalid
@@ -1115,6 +1219,8 @@
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates]
 
 #### edge
 
@@ -1196,6 +1302,8 @@
 | **relationships** | 157.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: StateMachineStartsStates]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -1211,6 +1319,8 @@
 | **attributes** | 476.0000 | 476.0000 | 1.0000 | 
 | **relationships** | 774.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates]
 
 ## Bank
 
@@ -1854,6 +1964,8 @@
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Relationship: DriverShipment]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -1917,6 +2029,8 @@
 | **attributes** | 75.0000 | 75.0000 | 1.0000 | 
 | **relationships** | 51.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: DriverShipment]
 
 ### gen2
 
@@ -2423,6 +2537,8 @@
 | **attributes** | 739.0000 | 739.0000 | 1.0000 | 
 | **relationships** | 502.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Relationship: DriverShipment]
 
 ## AddressBook
 
@@ -3050,6 +3166,8 @@
 | **relationships** | 4.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3081,6 +3199,8 @@
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
 | **relationships** | 2.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment]
 
 #### baseline
 
@@ -3129,6 +3249,8 @@
 | **attributes** | 111.0000 | 111.0000 | 1.0000 | 
 | **relationships** | 37.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment, Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment]
 
 ### gen2
 
@@ -3636,6 +3758,8 @@
 | **relationships** | 282.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment, Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment]
+
 ## VideoClub
 
 ### gen1
@@ -3656,6 +3780,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3671,6 +3797,8 @@
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -3688,6 +3816,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3703,6 +3833,8 @@
 | **attributes** | 14.0000 | 14.0000 | 1.0000 | 
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -3720,6 +3852,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3735,6 +3869,8 @@
 | **attributes** | 79.0000 | 79.0000 | 1.0000 | 
 | **relationships** | 39.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen2
 
@@ -3754,6 +3890,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3769,6 +3907,8 @@
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -3786,6 +3926,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3801,6 +3943,8 @@
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -3818,6 +3962,8 @@
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3833,6 +3979,8 @@
 | **attributes** | 88.0000 | 88.0000 | 1.0000 | 
 | **relationships** | 40.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen3
 
@@ -3852,6 +4000,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3867,6 +4017,8 @@
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
 | **relationships** | 13.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -3884,6 +4036,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3899,6 +4053,8 @@
 | **attributes** | 21.0000 | 21.0000 | 1.0000 | 
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -3916,6 +4072,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3931,6 +4089,8 @@
 | **attributes** | 96.0000 | 96.0000 | 1.0000 | 
 | **relationships** | 47.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen4
 
@@ -3950,6 +4110,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3965,6 +4127,8 @@
 | **attributes** | 21.0000 | 21.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -3982,6 +4146,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -3997,6 +4163,8 @@
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -4014,6 +4182,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4029,6 +4199,8 @@
 | **attributes** | 95.0000 | 95.0000 | 1.0000 | 
 | **relationships** | 48.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen5
 
@@ -4048,6 +4220,8 @@
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4063,6 +4237,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 12.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -4080,6 +4256,8 @@
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4095,6 +4273,8 @@
 | **attributes** | 28.0000 | 28.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -4112,6 +4292,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4127,6 +4309,8 @@
 | **attributes** | 102.0000 | 102.0000 | 1.0000 | 
 | **relationships** | 48.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ### gen6
 
@@ -4146,6 +4330,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4161,6 +4347,8 @@
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
 | **relationships** | 14.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### boundary
 
@@ -4178,6 +4366,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4193,6 +4383,8 @@
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 #### complex
 
@@ -4210,6 +4402,8 @@
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4226,6 +4420,8 @@
 | **relationships** | 52.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4241,6 +4437,8 @@
 | **attributes** | 567.0000 | 567.0000 | 1.0000 | 
 | **relationships** | 274.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
 
 ## Football
 
@@ -4294,6 +4492,8 @@
 | **relationships** | 23.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4342,6 +4542,8 @@
 | **relationships** | 153.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote]
+
 ### gen2
 
 #### invalid
@@ -4376,6 +4578,8 @@
 | **relationships** | 30.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4391,6 +4595,8 @@
 | **attributes** | 69.0000 | 69.0000 | 1.0000 | 
 | **relationships** | 32.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: MatchMatchNote]
 
 #### baseline
 
@@ -4440,6 +4646,8 @@
 | **relationships** | 148.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: MatchMatchNote]
+
 ### gen3
 
 #### invalid
@@ -4457,6 +4665,8 @@
 | **attributes** | 52.0000 | 52.0000 | 1.0000 | 
 | **relationships** | 23.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Relationship: MatchMatchEvent]
 
 #### edge
 
@@ -4490,6 +4700,8 @@
 | **relationships** | 22.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4505,6 +4717,8 @@
 | **attributes** | 88.0000 | 88.0000 | 1.0000 | 
 | **relationships** | 37.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer]
 
 #### complex
 
@@ -4537,6 +4751,8 @@
 | **attributes** | 336.0000 | 336.0000 | 1.0000 | 
 | **relationships** | 149.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Relationship: MatchMatchEvent, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer]
 
 ### gen4
 
@@ -4572,6 +4788,8 @@
 | **relationships** | 33.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4587,6 +4805,8 @@
 | **attributes** | 57.0000 | 57.0000 | 1.0000 | 
 | **relationships** | 23.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote]
 
 #### baseline
 
@@ -4636,6 +4856,8 @@
 | **relationships** | 151.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote]
+
 ### gen5
 
 #### invalid
@@ -4654,6 +4876,8 @@
 | **relationships** | 25.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4670,6 +4894,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4685,6 +4911,8 @@
 | **attributes** | 62.0000 | 62.0000 | 1.0000 | 
 | **relationships** | 25.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote]
 
 #### baseline
 
@@ -4718,6 +4946,8 @@
 | **relationships** | 29.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4733,6 +4963,8 @@
 | **attributes** | 153.0000 | 338.0000 | 0.4527 | 
 | **relationships** | 148.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
 
 ### gen6
 
@@ -4752,6 +4984,8 @@
 | **relationships** | 26.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4767,6 +5001,8 @@
 | **attributes** | 0.0000 | 75.0000 | 0.0000 | 
 | **relationships** | 32.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
 
 #### boundary
 
@@ -4784,6 +5020,8 @@
 | **relationships** | 25.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote]
+
 #### baseline
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4799,6 +5037,8 @@
 | **attributes** | 0.0000 | 88.0000 | 0.0000 | 
 | **relationships** | 39.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
 
 #### complex
 
@@ -4816,6 +5056,8 @@
 | **relationships** | 31.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
+
 #### ALL Categories
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4832,6 +5074,8 @@
 | **relationships** | 153.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -4847,6 +5091,8 @@
 | **attributes** | 1473.0000 | 2018.0000 | 0.7299 | 
 | **relationships** | 902.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: MatchMatchNote, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Relationship: MatchMatchEvent, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number]
 
 ## HotelManagement
 
@@ -4867,6 +5113,8 @@
 | **attributes** | 30.0000 | 30.0000 | 1.0000 | 
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -4948,6 +5196,8 @@
 | **relationships** | 54.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
+
 ### gen2
 
 #### invalid
@@ -4965,6 +5215,8 @@
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
 | **relationships** | 13.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -5046,6 +5298,8 @@
 | **relationships** | 62.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
+
 ### gen3
 
 #### invalid
@@ -5063,6 +5317,8 @@
 | **attributes** | 24.0000 | 24.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -5144,6 +5400,8 @@
 | **relationships** | 55.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
+
 ### gen4
 
 #### invalid
@@ -5161,6 +5419,8 @@
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -5242,6 +5502,8 @@
 | **relationships** | 47.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
+
 ### gen5
 
 #### invalid
@@ -5259,6 +5521,8 @@
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
 | **relationships** | 8.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -5340,6 +5604,8 @@
 | **relationships** | 54.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
+
 ### gen6
 
 #### invalid
@@ -5357,6 +5623,8 @@
 | **attributes** | 28.0000 | 28.0000 | 1.0000 | 
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms]
 
 #### edge
 
@@ -5389,6 +5657,8 @@
 | **attributes** | 20.0000 | 20.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: RoomExtra, Attribute: RoomExtra.price, Attribute: RoomExtra.description, Relationship: RoomReservationExtras]
 
 #### baseline
 
@@ -5438,6 +5708,8 @@
 | **relationships** | 49.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: RoomExtra, Attribute: RoomExtra.price, Attribute: RoomExtra.description, Relationship: RoomReservationExtras]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5453,6 +5725,8 @@
 | **attributes** | 971.0000 | 971.0000 | 1.0000 | 
 | **relationships** | 321.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: RoomExtra, Attribute: RoomExtra.price, Attribute: RoomExtra.description, Relationship: RoomReservationExtras]
 
 ## VehicleRental
 
@@ -5474,6 +5748,8 @@
 | **relationships** | 2.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Relationship: RentalOfficeVehicle, Relationship: RentalOfficeRentalAgreementDrop, Relationship: RentalAgreementVehicle]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5490,6 +5766,8 @@
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5505,6 +5783,8 @@
 | **attributes** | 29.0000 | 29.0000 | 1.0000 | 
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 #### baseline
 
@@ -5554,6 +5834,8 @@
 | **relationships** | 38.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Relationship: RentalOfficeVehicle, Relationship: RentalOfficeRentalAgreementDrop, Relationship: RentalAgreementVehicle, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### gen2
 
 #### invalid
@@ -5572,6 +5854,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5588,6 +5872,8 @@
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5603,6 +5889,8 @@
 | **attributes** | 44.0000 | 44.0000 | 1.0000 | 
 | **relationships** | 11.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
 
 #### baseline
 
@@ -5652,6 +5940,8 @@
 | **relationships** | 53.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen3
 
 #### invalid
@@ -5670,6 +5960,8 @@
 | **relationships** | 7.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5686,6 +5978,8 @@
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 #### boundary
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5701,6 +5995,8 @@
 | **attributes** | 29.0000 | 29.0000 | 1.0000 | 
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 #### baseline
 
@@ -5750,6 +6046,8 @@
 | **relationships** | 44.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### gen4
 
 #### invalid
@@ -5768,6 +6066,8 @@
 | **relationships** | 9.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5783,6 +6083,8 @@
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
 | **relationships** | 5.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 #### boundary
 
@@ -5848,6 +6150,8 @@
 | **relationships** | 50.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### gen5
 
 #### invalid
@@ -5881,6 +6185,8 @@
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
 
 #### boundary
 
@@ -5946,6 +6252,8 @@
 | **relationships** | 56.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
+
 ### gen6
 
 #### invalid
@@ -5964,6 +6272,8 @@
 | **relationships** | 6.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate]
+
 #### edge
 
 | Model Coverage | instantiated | defined | coverage |
@@ -5979,6 +6289,8 @@
 | **attributes** | 35.0000 | 35.0000 | 1.0000 | 
 | **relationships** | 10.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
 
 #### boundary
 
@@ -6044,6 +6356,8 @@
 | **relationships** | 52.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 ### ALL Gen 
 
 | Model Coverage | instantiated | defined | coverage |
@@ -6060,19 +6374,25 @@
 | **relationships** | 293.0000 | -1.0000 | -1.0000 | 
 
 
+Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Relationship: RentalOfficeVehicle, Relationship: RentalOfficeRentalAgreementDrop, Relationship: RentalAgreementVehicle, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
 # Coverage 
 
 | Model Coverage | instantiated | defined | coverage |
 |---|---|---|---|
 | **classes** | 2078.0000 | 2310.0000 | 0.8996 | 
 | **attributes** | 5484.0000 | 6480.0000 | 0.8463 | 
-| **relationships** | 1996.0000 | 2100.0000 | 0.9505 | 
+| **relationships** | 1994.0000 | 2100.0000 | 0.9495 | 
 
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
 | **classes** | 4253.0000 | -1.0000 | -1.0000 | 
 | **attributes** | 10221.0000 | 10969.0000 | 0.9318 | 
-| **relationships** | 4879.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 4877.0000 | -1.0000 | -1.0000 | 
 
+
+Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: ChefCook, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Class: ItemOrder, Attribute: ItemOrder.time, Class: MenuItem, Attribute: MenuItem.description, Attribute: MenuItem.prepTime, Attribute: MenuItem.classification, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: HeadWaiter, Attribute: HeadWaiter.name, Attribute: HeadWaiter.dateOfBirth, Attribute: HeadWaiter.phoneNumber, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Relationship: MenuItemChef, Relationship: HeadWaiterWaiter, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Attribute: Cook.phoneNumber, Attribute: Chef.dateOfBirth, Attribute: Chef.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: FoodItemAllergen, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Attribute: Waiter.spokenLanguage, Attribute: BusDriver.driverLicenseNr, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: StateMachineStartsStates, Relationship: DriverShipment, Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment, Class: Comment, Attribute: Comment.text, Relationship: ExpenseComment, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: MatchMatchNote, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Relationship: MatchMatchEvent, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Relationship: TrainingFailded, Relationship: FailedPlayer, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Class: MatchEvent, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchEvent, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: MatchNote, Attribute: MatchNote.note, Attribute: MatchNote.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: MatchMatchNote, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Attribute: Club.name, Attribute: Club.homeGround, Attribute: Club.chairman, Attribute: Team.name, Attribute: Competition.name, Attribute: Competition.type, Attribute: TrainingSession.date, Attribute: TrainingSession.location, Attribute: TrainingSession.purpose, Attribute: TrainingNotes.note, Attribute: TrainingNotes.date, Attribute: MatchEvent.eventType, Attribute: MatchEvent.time, Attribute: Match.date, Attribute: Match.homeAway, Attribute: TrainingFailedToAttend.reason, Attribute: Player.name, Attribute: Player.age, Attribute: Player.bestFoot, Attribute: Player.phoneNumber, Attribute: MatchReport.duration, Attribute: MatchReport.scoreVisitor, Attribute: MatchReport.scoreLocal, Attribute: MatchNote.note, Attribute: MatchNote.date, Attribute: TrainingObjective.areaToImprove, Attribute: TrainingObjective.startDate, Attribute: TrainingObjective.endDate, Attribute: TrainingObjective.success, Attribute: Position.positionName, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Attribute: MatchPlayer.booked, Attribute: MatchPlayer.goals, Attribute: MatchPlayer.rating, Attribute: MatchPlayerPosition.positionName, Attribute: MatchPlayerPosition.number, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: FreeRoomTypesDTO, Attribute: FreeRoomTypesDTO.roomTypeDescription, Attribute: FreeRoomTypesDTO.numBeds, Attribute: FreeRoomTypesDTO.pricePerNight, Attribute: FreeRoomTypesDTO.numFreeRooms, Class: RoomExtra, Attribute: RoomExtra.price, Attribute: RoomExtra.description, Relationship: RoomReservationExtras, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Relationship: RentalOfficeVehicle, Relationship: RentalOfficeRentalAgreementDrop, Relationship: RentalAgreementVehicle, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
+
+Hallucinations: [Relationship: CustomerDietary, Relationship: CustomerDietary]
 

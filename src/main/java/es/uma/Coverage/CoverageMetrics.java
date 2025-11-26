@@ -11,6 +11,7 @@ public class CoverageMetrics {
     int definedCls = 0, definedAttr = 0, definedRel = 0;
     int instantiatedCls = 0, instantiatedAttr = 0, instantiatedRel = 0;
     List<String> uncovered = new ArrayList<>();
+    List<String> hallucinations = new ArrayList<>();
 
     // Instantiation metrics
     int totalObjects = 0;
@@ -26,6 +27,7 @@ public class CoverageMetrics {
         this.instantiatedAttr += other.instantiatedAttr;
         this.instantiatedRel += other.instantiatedRel;
         this.uncovered.addAll(other.uncovered);
+        this.hallucinations.addAll(other.hallucinations);
 
         this.totalObjects += other.totalObjects;
         this.totalAttributeValues += other.totalAttributeValues;
@@ -36,40 +38,18 @@ public class CoverageMetrics {
     public void calculate(Map<String, Map<String, List<String>>> instanceAttributes,
             Map<String, List<String>> systemAttributes, String instanceContent, List<String> modelRelationships) {
 
-        // // Combined loops for instanceAttributes
-        // for (var className : instanceAttributes.keySet()) {
-        //     boolean isSystemClass = systemAttributes.containsKey(className);
-
-        //     if (isSystemClass) {
-        //         this.instantiatedCls++;
-        //     }
-
-        //     var attributesMap = instanceAttributes.get(className);
-
-        //     // Total attribute values
-        //     for (List<String> values : attributesMap.values()) {
-        //         this.totalAttributeValues += values.size();
-        //     }
-
-        //     // Attribute coverage
-        //     for (String attributeName : attributesMap.keySet()) {
-        //         if (isSystemClass && systemAttributes.get(className).contains(attributeName)) {
-        //             this.instantiatedAttr++;
-        //         } else {
-        //             this.uncovered.add(className + "." + attributeName);
-        //         }
-        //     }
-        // }
-
-        // // Relationship metrics
+        // instanceAttributes only has attributes/clases present in the model because they come from the getAll(modelAttributes)
+        // Relationship metrics
         Map<String, Integer> instanceRelationships = Extractor.getInstanceRelationships(instanceContent);
-        this.totalLinks = instanceRelationships.values().stream().mapToInt(Integer::intValue).sum();
 
-        // for (String relName : modelRelationships) {
-        //     if (instanceRelationships.containsKey(relName)) {
-        //         this.instantiatedRel++;
-        //     }
-        // }
+        for (String rel : instanceRelationships.keySet()) {
+            if (!modelRelationships.contains(rel)) {
+                hallucinations.add("Relationship: " + rel);
+            }
+        }
+
+        instanceRelationships.keySet().retainAll(modelRelationships); // To only keep relationships present in the model
+        this.totalLinks = instanceRelationships.values().stream().mapToInt(Integer::intValue).sum();
 
         definedCls = systemAttributes.keySet().size();
         definedAttr = systemAttributes.values().stream().mapToInt(List::size).sum();
@@ -83,9 +63,16 @@ public class CoverageMetrics {
                 .mapToInt(attrMap -> attrMap.values().stream().mapToInt(List::size).sum())
                 .sum();
 
-
         // Instantiation stats
         Map<String, Integer> instanceCounts = Extractor.getInstanceCounts(instanceContent);
+
+        for (String cls : instanceCounts.keySet()) {
+            if (!systemAttributes.containsKey(cls)) {
+                hallucinations.add("Class: " + cls);
+            }
+        }
+
+        instanceCounts.keySet().retainAll(systemAttributes.keySet()); // To only keep classes present in the model
         this.totalObjects = instanceCounts.values().stream().mapToInt(Integer::intValue).sum();
 
         for (Map.Entry<String, Integer> entry : instanceCounts.entrySet()) {
@@ -97,12 +84,51 @@ public class CoverageMetrics {
             }
         }
 
+        // Attribute hallucinations
+        Map<String, Map<String, List<String>>> rawAttributes = Extractor.getRawInstanceAttributes(instanceContent);
+        for (String className : rawAttributes.keySet()) {
+            if (systemAttributes.containsKey(className)) {
+                List<String> validAttrs = systemAttributes.get(className);
+                for (String attrName : rawAttributes.get(className).keySet()) {
+                    if (!validAttrs.contains(attrName)) {
+                        hallucinations.add("Attribute: " + className + "." + attrName);
+                    }
+                }
+            }
+        }
 
+        // Uncovered metrics
+        for (String className : systemAttributes.keySet()) {
+            if (!instanceCounts.containsKey(className)) {
+                uncovered.add("Class: " + className);
+            }
+
+            List<String> definedAttributes = systemAttributes.get(className);
+            Map<String, List<String>> instantiatedAttributesMap = instanceAttributes.get(className);
+
+            for (String attr : definedAttributes) {
+                if (instantiatedAttributesMap == null || !instantiatedAttributesMap.containsKey(attr)) {
+                    uncovered.add("Attribute: " + className + "." + attr);
+                }
+            }
+        }
+        for (String rel : modelRelationships) {
+            if (!instanceRelationships.containsKey(rel)) {
+                uncovered.add("Relationship: " + rel);
+            }
+        }
     }
 
     public String getUncoveredListString() {
         if (!uncovered.isEmpty()) {
             return "Uncovered: " + uncovered.toString() + "\n\n";
+        }
+        return "";
+    }
+
+    public String getHallucinationListString() {
+        if (!hallucinations.isEmpty()) {
+            return "Hallucinations: " + hallucinations.toString() + "\n\n";
         }
         return "";
     }

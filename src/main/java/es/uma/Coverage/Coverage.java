@@ -59,12 +59,14 @@ public class Coverage {
                 output.append(instanceMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
                 output.append(instanceMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
                 output.append(instanceMetrics.getUncoveredListString());
+                output.append(instanceMetrics.getHallucinationListString());
             }
 
             output.append("### ALL Gen \n\n");
             output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
             output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
             output.append(systemMetrics.getUncoveredListString());
+            output.append(systemMetrics.getHallucinationListString());
 
             totalMetrics.add(systemMetrics);
         }
@@ -73,6 +75,7 @@ public class Coverage {
         output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
         output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
         output.append(totalMetrics.getUncoveredListString());
+        output.append(totalMetrics.getHallucinationListString());
 
         return output.toString();
     }
@@ -117,12 +120,14 @@ public class Coverage {
                     output.append(categoryMetrics.toInstantiationTable("Instantiation Stats").toMarkdown())
                             .append("\n\n");
                     output.append(categoryMetrics.getUncoveredListString());
+                    output.append(categoryMetrics.getHallucinationListString());
                 }
 
                 output.append("#### ALL Categories\n\n");
                 output.append(genMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
                 output.append(genMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
                 output.append(genMetrics.getUncoveredListString());
+                output.append(genMetrics.getHallucinationListString());
 
                 systemMetrics.add(genMetrics);
             }
@@ -131,6 +136,7 @@ public class Coverage {
             output.append(systemMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
             output.append(systemMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
             output.append(systemMetrics.getUncoveredListString());
+            output.append(systemMetrics.getHallucinationListString());
 
             totalMetrics.add(systemMetrics);
         }
@@ -139,6 +145,7 @@ public class Coverage {
         output.append(totalMetrics.toTable("Model Coverage").toMarkdown()).append("\n\n");
         output.append(totalMetrics.toInstantiationTable("Instantiation Stats").toMarkdown()).append("\n\n");
         output.append(totalMetrics.getUncoveredListString());
+        output.append(totalMetrics.getHallucinationListString());
 
         return output.toString();
     }

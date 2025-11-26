@@ -284,4 +284,30 @@ public class Extractor {
         }
 
     }
+
+    // Get all instance attributes without filtering by model
+    public static Map<String, Map<String, List<String>>> getRawInstanceAttributes(String instance) {
+        Map<String, Map<String, List<String>>> instanceAttributes = new LinkedHashMap<>();
+        Map<String, String> instanceToClass = new HashMap<>();
+
+        Matcher newMatcher = NEW_INSTANCE_PATTERN.matcher(instance);
+        while (newMatcher.find()) {
+            instanceToClass.put(newMatcher.group(2), newMatcher.group(1));
+        }
+
+        Matcher attrMatcher = INSTANCE_ATTRIBUTE_PATTERN.matcher(instance);
+        while (attrMatcher.find()) {
+            String instanceName = attrMatcher.group(1);
+            String attrName = attrMatcher.group(2);
+            String rawValue = attrMatcher.group(3) != null ? attrMatcher.group(3) : attrMatcher.group(4);
+
+            String className = instanceToClass.get(instanceName);
+            if (className == null)
+                continue;
+
+            instanceAttributes.computeIfAbsent(className, k -> new LinkedHashMap<>())
+                    .computeIfAbsent(attrName, k -> new ArrayList<>()).add(rawValue);
+        }
+        return instanceAttributes;
+    }
 }
