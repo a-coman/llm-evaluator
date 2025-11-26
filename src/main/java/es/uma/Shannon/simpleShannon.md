@@ -2381,6 +2381,22 @@
 
 ### gen4
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -2397,26 +2413,26 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen5
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -2433,26 +2449,26 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen6
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -2471,6 +2487,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen7
+
 | Player.bestFoot | Nº |
 |---|---|
 | **LEFT** | 1.0000 | 
@@ -2486,8 +2504,6 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 1.0000 | 
 
-
-### gen7
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -2505,22 +2521,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen8
@@ -2633,6 +2633,22 @@
 
 ### gen11
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 3.0000 | 
@@ -2651,6 +2667,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen12
+
 | Player.bestFoot | Nº |
 |---|---|
 | **LEFT** | 1.0000 | 
@@ -2666,8 +2684,6 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 1.0000 | 
 
-
-### gen12
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -2685,22 +2701,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen13
@@ -2849,6 +2849,22 @@
 
 ### gen17
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -2865,22 +2881,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen18
@@ -2921,6 +2921,22 @@
 
 ### gen19
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 1.0000 | 
@@ -2937,22 +2953,6 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.4307 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen20
@@ -3029,6 +3029,22 @@
 
 ### gen22
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -3045,22 +3061,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen23
@@ -3173,6 +3173,22 @@
 
 ### gen26
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -3189,26 +3205,26 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen27
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -3225,22 +3241,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### gen28
@@ -3281,6 +3281,22 @@
 
 ### gen29
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 6.0000 | 
@@ -3299,6 +3315,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen30
+
 | Player.bestFoot | Nº |
 |---|---|
 | **LEFT** | 1.0000 | 
@@ -3314,8 +3332,6 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 1.0000 | 
 
-
-### gen30
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -3333,22 +3349,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
 
 
 ### ALL Gen 
@@ -3812,6 +3812,23 @@
 
 ### gen1
 
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 0.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Individual.seating | Nº |
 |---|---|
 | **Inside** | 1.0000 | 
@@ -3862,12 +3879,14 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Allergen.type | Nº |
+### gen2
+
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 0.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -3878,8 +3897,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen2
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -3896,6 +3913,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen3
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -3912,8 +3931,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen3
 
 | Individual.seating | Nº |
 |---|---|
@@ -3927,23 +3944,6 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -3966,6 +3966,23 @@
 
 ### gen4
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 1.0000 | 
@@ -3981,6 +3998,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen5
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -3997,8 +4016,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen5
 
 | Individual.seating | Nº |
 |---|---|
@@ -4012,23 +4029,6 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -4085,6 +4085,23 @@
 
 ### gen7
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 1.0000 | 
@@ -4100,6 +4117,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen8
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4116,8 +4135,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen8
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -4131,23 +4148,6 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -4187,21 +4187,6 @@
 
 ### gen10
 
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 1.0000 | 
@@ -4219,7 +4204,39 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 ### gen11
+
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
 
 | Individual.seating | Nº |
 |---|---|
@@ -4236,6 +4253,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen12
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4252,8 +4271,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen12
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -4270,6 +4287,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen13
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4286,8 +4305,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen13
 
 | Individual.seating | Nº |
 |---|---|
@@ -4304,39 +4321,7 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 ### gen14
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 1.0000 | 
-| **CreditCard** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -4352,6 +4337,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 1.0000 | 
+| **CreditCard** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -4527,21 +4527,6 @@
 
 ### gen20
 
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4559,7 +4544,39 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 ### gen21
+
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
 
 | Individual.seating | Nº |
 |---|---|
@@ -4576,6 +4593,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen22
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4592,8 +4611,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen22
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -4610,6 +4627,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+### gen23
+
 | MenuItem.classification | Nº |
 |---|---|
 | **Apetizer** | 0.0000 | 
@@ -4626,8 +4645,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-### gen23
 
 | Individual.seating | Nº |
 |---|---|
@@ -4644,39 +4661,7 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 ### gen24
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -4695,12 +4680,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-### gen25
-
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -4711,6 +4694,8 @@
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
+
+### gen25
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -4726,6 +4711,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -4900,6 +4900,23 @@
 
 
 ### ALL Gen 
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 0.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
 
 | Individual.seating | Nº |
 |---|---|
@@ -4951,23 +4968,6 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 0.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 7.0000 | 
@@ -5004,22 +5004,6 @@
 
 ### gen1
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 1.0000 | 
@@ -5037,13 +5021,11 @@
 | **Evenness (all groups)** | 0.7925 | 
 
 
-### gen2
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
-| **CALL** | 0.0000 | 
-| **EMAIL** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -5054,6 +5036,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen2
 
 | Relationship.type | Nº |
 |---|---|
@@ -5070,6 +5054,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 0.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen3
@@ -5109,22 +5109,6 @@
 
 ### gen4
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 0.0000 | 
-| **EMAIL** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 1.0000 | 
@@ -5142,13 +5126,11 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen5
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
+| **CALL** | 0.0000 | 
+| **EMAIL** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -5159,6 +5141,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen5
 
 | Relationship.type | Nº |
 |---|---|
@@ -5177,13 +5161,11 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen6
-
 | Note.type | Nº |
 |---|---|
-| **MEETING** | 0.0000 | 
+| **MEETING** | 1.0000 | 
 | **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -5194,6 +5176,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen6
 
 | Relationship.type | Nº |
 |---|---|
@@ -5212,12 +5196,10 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen7
-
 | Note.type | Nº |
 |---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 0.0000 | 
+| **MEETING** | 0.0000 | 
+| **CALL** | 1.0000 | 
 | **EMAIL** | 1.0000 | 
 
 
@@ -5229,6 +5211,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen7
 
 | Relationship.type | Nº |
 |---|---|
@@ -5247,13 +5231,11 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen8
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
+| **CALL** | 0.0000 | 
+| **EMAIL** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -5264,6 +5246,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen8
 
 | Relationship.type | Nº |
 |---|---|
@@ -5280,6 +5264,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen9
@@ -5319,22 +5319,6 @@
 
 ### gen10
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 0.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5350,26 +5334,26 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 0.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen11
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 1.0000 | 
@@ -5387,13 +5371,11 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen12
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
-| **CALL** | 0.0000 | 
-| **EMAIL** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -5404,6 +5386,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen12
 
 | Relationship.type | Nº |
 |---|---|
@@ -5422,7 +5406,40 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 0.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 ### gen13
+
+| Relationship.type | Nº |
+|---|---|
+| **BOSS** | 1.0000 | 
+| **EMPLOYEE** | 0.0000 | 
+| **SUBDIVISION** | 0.0000 | 
+| **COWORKER** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
 
 | Note.type | Nº |
 |---|---|
@@ -5440,40 +5457,7 @@
 | **Evenness (all groups)** | 0.6309 | 
 
 
-| Relationship.type | Nº |
-|---|---|
-| **BOSS** | 1.0000 | 
-| **EMPLOYEE** | 0.0000 | 
-| **SUBDIVISION** | 0.0000 | 
-| **COWORKER** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
-
 ### gen14
-
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
 
 | Relationship.type | Nº |
 |---|---|
@@ -5490,26 +5474,26 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen15
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5527,13 +5511,11 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen16
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
-| **CALL** | 0.0000 | 
-| **EMAIL** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -5544,6 +5526,8 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
+
+### gen16
 
 | Relationship.type | Nº |
 |---|---|
@@ -5562,7 +5546,40 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 0.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 ### gen17
+
+| Relationship.type | Nº |
+|---|---|
+| **BOSS** | 0.0000 | 
+| **EMPLOYEE** | 1.0000 | 
+| **SUBDIVISION** | 1.0000 | 
+| **COWORKER** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
 
 | Note.type | Nº |
 |---|---|
@@ -5580,6 +5597,8 @@
 | **Evenness (all groups)** | 0.6309 | 
 
 
+### gen18
+
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5596,8 +5615,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
 
-
-### gen18
 
 | Note.type | Nº |
 |---|---|
@@ -5613,43 +5630,10 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
-
-
-| Relationship.type | Nº |
-|---|---|
-| **BOSS** | 0.0000 | 
-| **EMPLOYEE** | 1.0000 | 
-| **SUBDIVISION** | 1.0000 | 
-| **COWORKER** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
 
 
 ### gen19
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5665,26 +5649,26 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen20
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5700,26 +5684,26 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen21
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5735,6 +5719,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen22
@@ -5844,22 +5844,6 @@
 
 ### gen25
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5875,26 +5859,26 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen26
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5910,6 +5894,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen27
@@ -5949,22 +5949,6 @@
 
 ### gen28
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -5982,8 +5966,6 @@
 | **Evenness (all groups)** | 0.5000 | 
 
 
-### gen29
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
@@ -6000,6 +5982,8 @@
 | **Evenness (all groups)** | 0.6309 | 
 
 
+### gen29
+
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 1.0000 | 
@@ -6015,6 +5999,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
 
 
 ### gen30
@@ -6054,22 +6054,6 @@
 
 ### ALL Gen 
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 25.0000 | 
-| **CALL** | 23.0000 | 
-| **EMAIL** | 12.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5209 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9596 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9596 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 10.0000 | 
@@ -6085,5 +6069,21 @@
 | **Evenness (active groups)** | 0.9231 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.9231 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 25.0000 | 
+| **CALL** | 23.0000 | 
+| **EMAIL** | 12.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5209 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9596 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9596 | 
 
 

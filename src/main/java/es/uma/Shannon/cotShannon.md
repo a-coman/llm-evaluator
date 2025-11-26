@@ -38,21 +38,21 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| RegularCustomer.prefferedLanguage | Nº |
 |---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **English** | 1.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
+| **Evenness (all groups)** | 0.0000 | 
 
 
 | FoodItem.unit | Nº |
@@ -73,6 +73,23 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 1.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 0.0000 | 
@@ -90,39 +107,7 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 1.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 #### boundary
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -159,6 +144,21 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 0.0000 | 
@@ -178,10 +178,10 @@
 
 #### baseline
 
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -193,10 +193,27 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
+| **Lactose** | 0.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 1.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -243,23 +260,6 @@
 | **Evenness (all groups)** | 0.4307 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 0.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 1.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 0.0000 | 
@@ -279,21 +279,6 @@
 
 #### complex
 
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 0.0000 | 
@@ -307,23 +292,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
 
 
 | FoodItem.unit | Nº |
@@ -342,6 +310,21 @@
 | **Evenness (active groups)** | 0.9610 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.8277 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
 
 
 | Allergen.type | Nº |
@@ -378,6 +361,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 1.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
 #### ALL Categories
 
 | Banquet.paymentMethod | Nº |
@@ -395,21 +395,21 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| RegularCustomer.prefferedLanguage | Nº |
 |---|---|
-| **Apetizer** | 4.0000 | 
-| **Main** | 5.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **English** | 3.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 1.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 0.9911 | 
+| **Entropy** | 0.8113 | 
 | **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.9911 | 
+| **Evenness (active groups)** | 0.8113 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.4955 | 
+| **Evenness (all groups)** | 0.4056 | 
 
 
 | FoodItem.unit | Nº |
@@ -430,6 +430,23 @@
 | **Evenness (all groups)** | 0.8245 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 4.0000 | 
+| **Main** | 5.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.9911 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.9911 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.4955 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 0.0000 | 
@@ -445,23 +462,6 @@
 | **Evenness (active groups)** | 0.9851 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.7806 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 3.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.8113 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.8113 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.4056 | 
 
 
 | Individual.seating | Nº |
@@ -500,10 +500,10 @@
 
 #### edge
 
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -515,10 +515,27 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
+| **Lactose** | 0.0000 | 
+| **Seafood** | 1.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -565,23 +582,6 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 0.0000 | 
-| **Seafood** | 1.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 1.0000 | 
@@ -614,6 +614,23 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
+
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
 
 
 | MenuItem.classification | Nº |
@@ -651,39 +668,7 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
-
 #### baseline
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -700,12 +685,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 0.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -714,6 +699,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -735,12 +735,12 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
+| **Apetizer** | 1.0000 | 
+| **Main** | 0.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -771,51 +771,21 @@
 
 #### complex
 
-| Individual.seating | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 1.0000 | 
-| **CreditCard** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 4.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
 
 
 | FoodItem.unit | Nº |
@@ -836,23 +806,6 @@
 | **Evenness (all groups)** | 0.8531 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 2.0000 | 
@@ -867,6 +820,53 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 4.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 1.0000 | 
+| **CreditCard** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -900,6 +900,23 @@
 | **Evenness (active groups)** | 0.9183 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.9183 | 
+
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 3.0000 | 
+| **Seafood** | 1.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 2.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.4591 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9206 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.7296 | 
 
 
 | MenuItem.classification | Nº |
@@ -937,23 +954,6 @@
 | **Evenness (all groups)** | 0.8169 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 3.0000 | 
-| **Seafood** | 1.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 2.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.4591 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9206 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.7296 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 4.0000 | 
@@ -974,21 +974,6 @@
 ### gen3
 
 #### invalid
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 1.0000 | 
-| **CreditCard** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -1024,12 +1009,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### edge
-
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 1.0000 | 
+| **CreditCard** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1038,6 +1021,25 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+#### edge
+
+| RegularCustomer.prefferedLanguage | Nº |
+|---|---|
+| **English** | 1.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -1056,12 +1058,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 2.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Lactose** | 2.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1070,6 +1072,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -1091,29 +1108,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 2.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 1.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
+| **Apetizer** | 0.0000 | 
+| **Main** | 2.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1142,21 +1142,21 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Lactose** | 1.0000 | 
+| **Seafood** | 1.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
+| **Evenness (all groups)** | 0.7925 | 
 
 
 | FoodItem.unit | Nº |
@@ -1177,39 +1177,24 @@
 | **Evenness (all groups)** | 0.6826 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 1.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
+| **Apetizer** | 1.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.7925 | 
+| **Evenness (all groups)** | 0.5000 | 
 
 
 #### baseline
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -1226,12 +1211,27 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Individual.seating | Nº |
 |---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 0.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1261,12 +1261,12 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
+| **Apetizer** | 1.0000 | 
+| **Main** | 0.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1296,36 +1296,6 @@
 
 
 #### complex
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -1362,6 +1332,21 @@
 | **Evenness (all groups)** | 0.7449 | 
 
 
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 2.0000 | 
@@ -1376,6 +1361,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -1397,21 +1397,6 @@
 
 
 #### ALL Categories
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 2.0000 | 
-| **CreditCard** | 3.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.9710 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.9710 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.9710 | 
-
 
 | MenuItem.classification | Nº |
 |---|---|
@@ -1447,6 +1432,38 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 2.0000 | 
+| **CreditCard** | 3.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.9710 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.9710 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.9710 | 
+
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 6.0000 | 
+| **Seafood** | 1.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0613 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.6696 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5306 | 
+
+
 | Individual.seating | Nº |
 |---|---|
 | **Inside** | 3.0000 | 
@@ -1480,56 +1497,9 @@
 | **Evenness (all groups)** | 0.8099 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 6.0000 | 
-| **Seafood** | 1.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0613 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.6696 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5306 | 
-
-
 ### gen4
 
 #### invalid
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
@@ -1548,7 +1518,20 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### edge
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
 
 | Individual.seating | Nº |
 |---|---|
@@ -1565,37 +1548,7 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 1.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
+#### edge
 
 | FoodItem.unit | Nº |
 |---|---|
@@ -1615,6 +1568,38 @@
 | **Evenness (all groups)** | 0.4307 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 1.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 2.0000 | 
@@ -1629,6 +1614,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -1651,6 +1651,23 @@
 
 #### boundary
 
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 1.0000 | 
@@ -1664,23 +1681,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
 
 
 | FoodItem.unit | Nº |
@@ -1701,12 +1701,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
+| **Apetizer** | 1.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1719,21 +1719,6 @@
 
 
 #### baseline
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -1750,12 +1735,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 0.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1764,6 +1749,21 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -1785,23 +1785,6 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 1.0000 | 
@@ -1819,12 +1802,46 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 1.0000 | 
+| **Main** | 0.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 #### complex
 
-| Individual.seating | Nº |
+| RegularCustomer.prefferedLanguage | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **English** | 2.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Banquet.paymentMethod | Nº |
+|---|---|
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -1836,10 +1853,45 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
+| **Lactose** | 2.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| FoodItem.unit | Nº |
+|---|---|
+| **Ounce** | 3.0000 | 
+| **Sheet** | 0.0000 | 
+| **Pound** | 7.0000 | 
+| **Gram** | 1.0000 | 
+| **Dozen** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5511 | 
+| **Max Entropy (active groups)** | 2.0000 | 
+| **Evenness (active groups)** | 0.7755 | 
+| **Max Entropy (all groups)** | 2.3219 | 
+| **Evenness (all groups)** | 0.6680 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -1868,89 +1920,7 @@
 | **Evenness (all groups)** | 0.4056 | 
 
 
-| FoodItem.unit | Nº |
-|---|---|
-| **Ounce** | 3.0000 | 
-| **Sheet** | 0.0000 | 
-| **Pound** | 7.0000 | 
-| **Gram** | 1.0000 | 
-| **Dozen** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5511 | 
-| **Max Entropy (active groups)** | 2.0000 | 
-| **Evenness (active groups)** | 0.7755 | 
-| **Max Entropy (all groups)** | 2.3219 | 
-| **Evenness (all groups)** | 0.6680 | 
-
-
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 2.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 2.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 #### ALL Categories
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 4.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 1.0000 | 
-| **CreditCard** | 4.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.7219 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.7219 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.7219 | 
-
 
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
@@ -1969,21 +1939,34 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Apetizer** | 2.0000 | 
-| **Main** | 5.0000 | 
-| **Dessert** | 2.0000 | 
-| **Beverage** | 0.0000 | 
+| **Cash** | 1.0000 | 
+| **CreditCard** | 4.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.4355 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9057 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.7178 | 
+| **Entropy** | 0.7219 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.7219 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.7219 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 4.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
 
 
 | FoodItem.unit | Nº |
@@ -2002,6 +1985,23 @@
 | **Evenness (active groups)** | 0.6681 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.5755 | 
+
+
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 2.0000 | 
+| **Main** | 5.0000 | 
+| **Dessert** | 2.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.4355 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9057 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.7178 | 
 
 
 | Allergen.type | Nº |
@@ -2040,6 +2040,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| RegularCustomer.prefferedLanguage | Nº |
+|---|---|
+| **English** | 1.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 0.0000 | 
@@ -2054,6 +2071,8 @@
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
+
+#### edge
 
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
@@ -2072,23 +2091,6 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### edge
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 0.0000 | 
@@ -2101,23 +2103,6 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 2.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -2156,12 +2141,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| RegularCustomer.prefferedLanguage | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **English** | 1.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
+| **Apetizer** | 0.0000 | 
+| **Main** | 2.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2172,8 +2157,6 @@
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
-
-#### boundary
 
 | Individual.seating | Nº |
 |---|---|
@@ -2187,6 +2170,58 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+#### boundary
+
+| FoodItem.unit | Nº |
+|---|---|
+| **Ounce** | 2.0000 | 
+| **Sheet** | 0.0000 | 
+| **Pound** | 1.0000 | 
+| **Gram** | 0.0000 | 
+| **Dozen** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.9183 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.9183 | 
+| **Max Entropy (all groups)** | 2.3219 | 
+| **Evenness (all groups)** | 0.3955 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -2207,30 +2242,14 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| FoodItem.unit | Nº |
+#### baseline
+
+| RegularCustomer.prefferedLanguage | Nº |
 |---|---|
-| **Ounce** | 2.0000 | 
-| **Sheet** | 0.0000 | 
-| **Pound** | 1.0000 | 
-| **Gram** | 0.0000 | 
-| **Dozen** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.9183 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.9183 | 
-| **Max Entropy (all groups)** | 2.3219 | 
-| **Evenness (all groups)** | 0.3955 | 
-
-
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
+| **English** | 1.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2242,7 +2261,22 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### baseline
+| Allergen.type | Nº |
+|---|---|
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
 
 | Individual.seating | Nº |
 |---|---|
@@ -2257,6 +2291,24 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
+
+
+| FoodItem.unit | Nº |
+|---|---|
+| **Ounce** | 1.0000 | 
+| **Sheet** | 0.0000 | 
+| **Pound** | 1.0000 | 
+| **Gram** | 1.0000 | 
+| **Dozen** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.3219 | 
+| **Evenness (all groups)** | 0.6826 | 
 
 
 | Banquet.paymentMethod | Nº |
@@ -2291,47 +2343,14 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| FoodItem.unit | Nº |
-|---|---|
-| **Ounce** | 1.0000 | 
-| **Sheet** | 0.0000 | 
-| **Pound** | 1.0000 | 
-| **Gram** | 1.0000 | 
-| **Dozen** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.3219 | 
-| **Evenness (all groups)** | 0.6826 | 
-
+#### complex
 
 | Allergen.type | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
+| **Lactose** | 2.0000 | 
 | **Seafood** | 0.0000 | 
 | **Nuts** | 0.0000 | 
-| **Gluten** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 1.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2343,12 +2362,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### complex
-
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -2360,10 +2377,28 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| FoodItem.unit | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
+| **Ounce** | 3.0000 | 
+| **Sheet** | 0.0000 | 
+| **Pound** | 6.0000 | 
+| **Gram** | 3.0000 | 
+| **Dozen** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5000 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9464 | 
+| **Max Entropy (all groups)** | 2.3219 | 
+| **Evenness (all groups)** | 0.6460 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2390,41 +2425,6 @@
 | **Evenness (active groups)** | 0.8113 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.4056 | 
-
-
-| FoodItem.unit | Nº |
-|---|---|
-| **Ounce** | 3.0000 | 
-| **Sheet** | 0.0000 | 
-| **Pound** | 6.0000 | 
-| **Gram** | 3.0000 | 
-| **Dozen** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5000 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9464 | 
-| **Max Entropy (all groups)** | 2.3219 | 
-| **Evenness (all groups)** | 0.6460 | 
-
-
-| Allergen.type | Nº |
-|---|---|
-| **Lactose** | 2.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
 
 
 | RegularCustomer.prefferedLanguage | Nº |
@@ -2461,21 +2461,6 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
-|---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 4.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | RegularCustomer.prefferedLanguage | Nº |
 |---|---|
 | **English** | 5.0000 | 
@@ -2493,21 +2478,19 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 7.0000 | 
-| **Dessert** | 2.0000 | 
-| **Beverage** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 4.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 0.7642 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.7642 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.3821 | 
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
 
 
 | FoodItem.unit | Nº |
@@ -2545,14 +2528,31 @@
 | **Evenness (all groups)** | 0.2958 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 7.0000 | 
+| **Dessert** | 2.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.7642 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.7642 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.3821 | 
+
+
 ### gen6
 
 #### invalid
 
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 1.0000 | 
 
 
 | Entropy | Value |
@@ -2564,10 +2564,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| Individual.seating | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 1.0000 | 
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2598,21 +2598,6 @@
 
 #### edge
 
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
 | Banquet.paymentMethod | Nº |
 |---|---|
 | **Cash** | 0.0000 | 
@@ -2628,12 +2613,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Individual.seating | Nº |
 |---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 2.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2641,7 +2624,7 @@
 | **Entropy** | 0.0000 | 
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -2697,6 +2680,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 0.0000 | 
+| **Main** | 2.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
 #### boundary
 
 | Banquet.paymentMethod | Nº |
@@ -2712,23 +2712,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.5000 | 
 
 
 | FoodItem.unit | Nº |
@@ -2749,6 +2732,23 @@
 | **Evenness (all groups)** | 0.3955 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 1.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.5000 | 
+
+
 #### baseline
 
 | Individual.seating | Nº |
@@ -2763,6 +2763,23 @@
 | **Max Entropy (active groups)** | 0.0000 | 
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
+
+
+| RegularCustomer.prefferedLanguage | Nº |
+|---|---|
+| **English** | 1.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
 
 
@@ -2781,12 +2798,12 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| MenuItem.classification | Nº |
+| Allergen.type | Nº |
 |---|---|
-| **Apetizer** | 0.0000 | 
-| **Main** | 1.0000 | 
-| **Dessert** | 0.0000 | 
-| **Beverage** | 0.0000 | 
+| **Lactose** | 1.0000 | 
+| **Seafood** | 0.0000 | 
+| **Nuts** | 0.0000 | 
+| **Gluten** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2816,29 +2833,12 @@
 | **Evenness (all groups)** | 0.4307 | 
 
 
-| Allergen.type | Nº |
+| MenuItem.classification | Nº |
 |---|---|
-| **Lactose** | 1.0000 | 
-| **Seafood** | 0.0000 | 
-| **Nuts** | 0.0000 | 
-| **Gluten** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 1.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 0.0000 | 
+| **Apetizer** | 0.0000 | 
+| **Main** | 1.0000 | 
+| **Dessert** | 0.0000 | 
+| **Beverage** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2851,21 +2851,6 @@
 
 
 #### complex
-
-| Individual.seating | Nº |
-|---|---|
-| **Inside** | 1.0000 | 
-| **Patio** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.0000 | 
-| **Max Entropy (active groups)** | 0.0000 | 
-| **Evenness (active groups)** | 0.0000 | 
-| **Max Entropy (all groups)** | 1.0000 | 
-| **Evenness (all groups)** | 0.0000 | 
-
 
 | Banquet.paymentMethod | Nº |
 |---|---|
@@ -2897,6 +2882,21 @@
 | **Evenness (active groups)** | 0.8113 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.4056 | 
+
+
+| Individual.seating | Nº |
+|---|---|
+| **Inside** | 1.0000 | 
+| **Patio** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.0000 | 
+| **Max Entropy (active groups)** | 0.0000 | 
+| **Evenness (active groups)** | 0.0000 | 
+| **Max Entropy (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.0000 | 
 
 
 | FoodItem.unit | Nº |
@@ -2953,10 +2953,10 @@
 
 #### ALL Categories
 
-| Individual.seating | Nº |
+| Banquet.paymentMethod | Nº |
 |---|---|
-| **Inside** | 4.0000 | 
-| **Patio** | 0.0000 | 
+| **Cash** | 0.0000 | 
+| **CreditCard** | 5.0000 | 
 
 
 | Entropy | Value |
@@ -2968,10 +2968,10 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-| Banquet.paymentMethod | Nº |
+| Individual.seating | Nº |
 |---|---|
-| **Cash** | 0.0000 | 
-| **CreditCard** | 5.0000 | 
+| **Inside** | 4.0000 | 
+| **Patio** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -2998,23 +2998,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| MenuItem.classification | Nº |
-|---|---|
-| **Apetizer** | 1.0000 | 
-| **Main** | 7.0000 | 
-| **Dessert** | 1.0000 | 
-| **Beverage** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.9864 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.6224 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.4932 | 
 
 
 | FoodItem.unit | Nº |
@@ -3052,6 +3035,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 1.0000 | 
+| **Main** | 7.0000 | 
+| **Dessert** | 1.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 0.9864 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.6224 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.4932 | 
+
+
 ### ALL Gen
 
 | Banquet.paymentMethod | Nº |
@@ -3069,21 +3069,21 @@
 | **Evenness (all groups)** | 0.6913 | 
 
 
-| MenuItem.classification | Nº |
+| RegularCustomer.prefferedLanguage | Nº |
 |---|---|
-| **Apetizer** | 13.0000 | 
-| **Main** | 36.0000 | 
-| **Dessert** | 6.0000 | 
-| **Beverage** | 0.0000 | 
+| **English** | 27.0000 | 
+| **Spanish** | 0.0000 | 
+| **German** | 0.0000 | 
+| **Italian** | 1.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.2408 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.7828 | 
+| **Entropy** | 0.2223 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 0.2223 | 
 | **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.6204 | 
+| **Evenness (all groups)** | 0.1111 | 
 
 
 | FoodItem.unit | Nº |
@@ -3104,6 +3104,23 @@
 | **Evenness (all groups)** | 0.8011 | 
 
 
+| MenuItem.classification | Nº |
+|---|---|
+| **Apetizer** | 13.0000 | 
+| **Main** | 36.0000 | 
+| **Dessert** | 6.0000 | 
+| **Beverage** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.2408 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.7828 | 
+| **Max Entropy (all groups)** | 2.0000 | 
+| **Evenness (all groups)** | 0.6204 | 
+
+
 | Allergen.type | Nº |
 |---|---|
 | **Lactose** | 26.0000 | 
@@ -3119,23 +3136,6 @@
 | **Evenness (active groups)** | 0.7402 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.7402 | 
-
-
-| RegularCustomer.prefferedLanguage | Nº |
-|---|---|
-| **English** | 27.0000 | 
-| **Spanish** | 0.0000 | 
-| **German** | 0.0000 | 
-| **Italian** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 0.2223 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 0.2223 | 
-| **Max Entropy (all groups)** | 2.0000 | 
-| **Evenness (all groups)** | 0.1111 | 
 
 
 | Individual.seating | Nº |
@@ -4228,22 +4228,6 @@
 
 #### complex
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 2.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5000 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9464 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9464 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -4259,6 +4243,22 @@
 | **Evenness (active groups)** | 0.9183 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.4591 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 2.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5000 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9464 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9464 | 
 
 
 #### ALL Categories
@@ -4335,22 +4335,6 @@
 
 #### edge
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 2.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 2.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5219 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9602 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9602 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -4366,6 +4350,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.7925 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 2.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 2.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5219 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9602 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9602 | 
 
 
 #### boundary
@@ -4512,22 +4512,6 @@
 
 #### invalid
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -4543,6 +4527,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.7925 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
 
 
 #### edge
@@ -4582,22 +4582,6 @@
 
 #### boundary
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 0.0000 | 
@@ -4615,23 +4599,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
-#### baseline
-
 | Note.type | Nº |
 |---|---|
 | **MEETING** | 1.0000 | 
 | **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
+| **EMAIL** | 0.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
+| **Evenness (all groups)** | 0.6309 | 
 
+
+#### baseline
 
 | Relationship.type | Nº |
 |---|---|
@@ -4648,6 +4632,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
 
 
 #### complex
@@ -4687,22 +4687,6 @@
 
 #### ALL Categories
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 5.0000 | 
-| **CALL** | 5.0000 | 
-| **EMAIL** | 6.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5794 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9965 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9965 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 2.0000 | 
@@ -4718,6 +4702,22 @@
 | **Evenness (active groups)** | 0.8892 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.8892 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 5.0000 | 
+| **CALL** | 5.0000 | 
+| **EMAIL** | 6.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5794 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9965 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9965 | 
 
 
 ### gen5
@@ -4794,22 +4794,6 @@
 
 #### boundary
 
-| Note.type | Nº |
-|---|---|
-| **MEETING** | 1.0000 | 
-| **CALL** | 1.0000 | 
-| **EMAIL** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5850 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 1.0000 | 
-
-
 | Relationship.type | Nº |
 |---|---|
 | **BOSS** | 1.0000 | 
@@ -4825,6 +4809,22 @@
 | **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 2.0000 | 
 | **Evenness (all groups)** | 0.5000 | 
+
+
+| Note.type | Nº |
+|---|---|
+| **MEETING** | 1.0000 | 
+| **CALL** | 1.0000 | 
+| **EMAIL** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5850 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 1.0000 | 
 
 
 #### baseline
@@ -7211,6 +7211,22 @@
 
 #### invalid
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 0.0000 | 
@@ -7227,22 +7243,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
 
 
 #### edge
@@ -7337,6 +7337,22 @@
 
 #### complex
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 2.0000 | 
@@ -7355,23 +7371,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+#### ALL Categories
+
 | Player.bestFoot | Nº |
 |---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 0.0000 | 
+| **LEFT** | 5.0000 | 
+| **RIGHT** | 4.0000 | 
+| **BOTH** | 2.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
+| **Entropy** | 1.4949 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9432 | 
 | **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
+| **Evenness (all groups)** | 0.9432 | 
 
-
-#### ALL Categories
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -7391,25 +7407,25 @@
 | **Evenness (all groups)** | 0.2946 | 
 
 
+### gen2
+
+#### invalid
+
 | Player.bestFoot | Nº |
 |---|---|
-| **LEFT** | 5.0000 | 
-| **RIGHT** | 4.0000 | 
-| **BOTH** | 2.0000 | 
+| **LEFT** | 0.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 1.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.4949 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9432 | 
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
 | **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9432 | 
+| **Evenness (all groups)** | 0.6309 | 
 
-
-### gen2
-
-#### invalid
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -7427,22 +7443,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 0.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
 
 
 #### edge
@@ -7483,6 +7483,22 @@
 
 #### boundary
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 0.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 6.0000 | 
@@ -7501,6 +7517,8 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+#### baseline
+
 | Player.bestFoot | Nº |
 |---|---|
 | **LEFT** | 1.0000 | 
@@ -7516,8 +7534,6 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
-
-#### baseline
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -7537,11 +7553,13 @@
 | **Evenness (all groups)** | 0.4307 | 
 
 
+#### complex
+
 | Player.bestFoot | Nº |
 |---|---|
 | **LEFT** | 1.0000 | 
-| **RIGHT** | 0.0000 | 
-| **BOTH** | 1.0000 | 
+| **RIGHT** | 1.0000 | 
+| **BOTH** | 0.0000 | 
 
 
 | Entropy | Value |
@@ -7552,8 +7570,6 @@
 | **Max Entropy (all groups)** | 1.5850 | 
 | **Evenness (all groups)** | 0.6309 | 
 
-
-#### complex
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -7573,23 +7589,23 @@
 | **Evenness (all groups)** | 0.0000 | 
 
 
+#### ALL Categories
+
 | Player.bestFoot | Nº |
 |---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 1.0000 | 
-| **BOTH** | 0.0000 | 
+| **LEFT** | 4.0000 | 
+| **RIGHT** | 3.0000 | 
+| **BOTH** | 3.0000 | 
 
 
 | Entropy | Value |
 |---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
+| **Entropy** | 1.5710 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9912 | 
 | **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
+| **Evenness (all groups)** | 0.9912 | 
 
-
-#### ALL Categories
 
 | MatchEvent.eventType | Nº |
 |---|---|
@@ -7607,22 +7623,6 @@
 | **Evenness (active groups)** | 0.9877 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.4254 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 4.0000 | 
-| **RIGHT** | 3.0000 | 
-| **BOTH** | 3.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5710 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9912 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9912 | 
 
 
 ### gen3
@@ -7719,6 +7719,22 @@
 
 #### baseline
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 2.0000 | 
+| **RIGHT** | 2.0000 | 
+| **BOTH** | 0.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 4.0000 | 
@@ -7735,22 +7751,6 @@
 | **Evenness (active groups)** | 0.7219 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.3109 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 2.0000 | 
-| **RIGHT** | 2.0000 | 
-| **BOTH** | 0.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
 
 
 #### complex
@@ -7829,6 +7829,22 @@
 
 #### invalid
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 0.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.0000 | 
+| **Max Entropy (active groups)** | 1.0000 | 
+| **Evenness (active groups)** | 1.0000 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.6309 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 0.0000 | 
@@ -7845,22 +7861,6 @@
 | **Evenness (active groups)** | 0.0000 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.0000 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 0.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.0000 | 
-| **Max Entropy (active groups)** | 1.0000 | 
-| **Evenness (active groups)** | 1.0000 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.6309 | 
 
 
 #### edge
@@ -7885,6 +7885,22 @@
 
 #### baseline
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 1.0000 | 
+| **RIGHT** | 2.0000 | 
+| **BOTH** | 1.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5000 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9464 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9464 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 6.0000 | 
@@ -7901,22 +7917,6 @@
 | **Evenness (active groups)** | 0.5917 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.2548 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 1.0000 | 
-| **RIGHT** | 2.0000 | 
-| **BOTH** | 1.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5000 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9464 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9464 | 
 
 
 #### complex
@@ -7957,6 +7957,22 @@
 
 #### ALL Categories
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 2.0000 | 
+| **RIGHT** | 4.0000 | 
+| **BOTH** | 4.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5219 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9602 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9602 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 10.0000 | 
@@ -7973,22 +7989,6 @@
 | **Evenness (active groups)** | 0.8631 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.3717 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 2.0000 | 
-| **RIGHT** | 4.0000 | 
-| **BOTH** | 4.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5219 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9602 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9602 | 
 
 
 ### gen5
@@ -8173,6 +8173,22 @@
 
 ### ALL Gen
 
+| Player.bestFoot | Nº |
+|---|---|
+| **LEFT** | 21.0000 | 
+| **RIGHT** | 20.0000 | 
+| **BOTH** | 10.0000 | 
+
+
+| Entropy | Value |
+|---|---|
+| **Entropy** | 1.5176 | 
+| **Max Entropy (active groups)** | 1.5850 | 
+| **Evenness (active groups)** | 0.9575 | 
+| **Max Entropy (all groups)** | 1.5850 | 
+| **Evenness (all groups)** | 0.9575 | 
+
+
 | MatchEvent.eventType | Nº |
 |---|---|
 | **GOAL** | 60.0000 | 
@@ -8189,22 +8205,6 @@
 | **Evenness (active groups)** | 0.8631 | 
 | **Max Entropy (all groups)** | 2.3219 | 
 | **Evenness (all groups)** | 0.3717 | 
-
-
-| Player.bestFoot | Nº |
-|---|---|
-| **LEFT** | 21.0000 | 
-| **RIGHT** | 20.0000 | 
-| **BOTH** | 10.0000 | 
-
-
-| Entropy | Value |
-|---|---|
-| **Entropy** | 1.5176 | 
-| **Max Entropy (active groups)** | 1.5850 | 
-| **Evenness (active groups)** | 0.9575 | 
-| **Max Entropy (all groups)** | 1.5850 | 
-| **Evenness (all groups)** | 0.9575 | 
 
 
 ## VehicleRental
