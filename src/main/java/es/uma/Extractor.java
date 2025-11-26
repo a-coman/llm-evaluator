@@ -22,6 +22,10 @@ public class Extractor {
     private static final Pattern INTERFACE_DECL_PATTERN = Pattern
             .compile("(?i)^interface\\s+(\\w+)(?:\\s*<\\s*(\\w+))?.*$");
     private static final Pattern ATTRIBUTE_LINE_PATTERN = Pattern.compile("^(\\w+)\\s*:\\s*.+$");
+    private static final Pattern RELATIONSHIP_DECL_PATTERN = Pattern
+            .compile("(?i)^(?:association|composition|aggregation)\\s+(\\w+).*$");
+    private static final Pattern INSTANCE_RELATIONSHIP_PATTERN = Pattern
+            .compile("!insert\\s+\\(.*\\)\\s+into\\s+(\\w+)");
 
     // Get specific instance attributes
     // attributes => Map<className, List<attributeName>>
@@ -34,15 +38,18 @@ public class Extractor {
 
         // Map<className, Map<attributeName, List<values>>>
         Map<String, Map<String, List<String>>> instanceAttributes = new LinkedHashMap<>();
-        attributes.forEach((cls, attrList) -> {
-            Map<String, List<String>> attrMap = instanceAttributes.computeIfAbsent(cls, k -> new LinkedHashMap<>());
-            attrList.forEach(attr -> attrMap.computeIfAbsent(attr, k -> new ArrayList<>()));
-        });
 
         Map<String, String> instanceToClass = new HashMap<>();
         Matcher newMatcher = NEW_INSTANCE_PATTERN.matcher(instance);
         while (newMatcher.find()) {
             instanceToClass.put(newMatcher.group(2), newMatcher.group(1));
+        }
+
+        // Initialize map for classes that are present in the instance and requested
+        for (String className : instanceToClass.values()) {
+            if (attributes.containsKey(className)) {
+                instanceAttributes.putIfAbsent(className, new LinkedHashMap<>());
+            }
         }
 
         Map<String, Set<String>> targetAttrs = new HashMap<>();
@@ -61,7 +68,8 @@ public class Extractor {
             if (wanted == null || !wanted.contains(attrName)) {
                 continue;
             }
-            instanceAttributes.get(className).get(attrName).add(rawValue);
+            instanceAttributes.computeIfAbsent(className, k -> new LinkedHashMap<>())
+                    .computeIfAbsent(attrName, k -> new ArrayList<>()).add(rawValue);
         }
 
         return instanceAttributes;
@@ -92,6 +100,8 @@ public class Extractor {
     }
 
     // returns => Map<className, List<attributeName>>
+    // Only returns instantiable classes, if inheritence it adds the attributes to
+    // the inheriting class
     public static Map<String, List<String>> getModelAttributes(String model) {
         if (model == null || model.isEmpty()) {
             throw new IllegalArgumentException("Model must not be null or empty");
@@ -205,6 +215,40 @@ public class Extractor {
             instanceCounts.put(className, instanceCounts.getOrDefault(className, 0) + 1);
         }
         return instanceCounts;
+    }
+
+    // Get model relationships
+    public static List<String> getModelRelationships(String model) {
+        if (model == null || model.isEmpty()) {
+            throw new IllegalArgumentException("Model must not be null or empty");
+        }
+
+        List<String> relationships = new ArrayList<>();
+        String[] lines = model.split("\\R");
+
+        for (String rawLine : lines) {
+            String line = rawLine.trim();
+            if (line.isEmpty() || line.startsWith("--")) {
+                continue;
+            }
+
+            Matcher matcher = RELATIONSHIP_DECL_PATTERN.matcher(line);
+            if (matcher.matches()) {
+                relationships.add(matcher.group(1));
+            }
+        }
+        return relationships;
+    }
+
+    // Get instance relationships counts
+    public static Map<String, Integer> getInstanceRelationships(String instance) {
+        Map<String, Integer> relationshipCounts = new HashMap<>();
+        Matcher matcher = INSTANCE_RELATIONSHIP_PATTERN.matcher(instance);
+        while (matcher.find()) {
+            String relationshipName = matcher.group(1);
+            relationshipCounts.put(relationshipName, relationshipCounts.getOrDefault(relationshipName, 0) + 1);
+        }
+        return relationshipCounts;
     }
 
     // Main for testing purposes

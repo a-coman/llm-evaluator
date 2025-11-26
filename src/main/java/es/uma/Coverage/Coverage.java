@@ -39,10 +39,7 @@ public class Coverage {
             String systemContent = Utils
                     .readFile("./src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use");
             Map<String, List<String>> systemAttributes = Extractor.getModelAttributes(systemContent);
-
-            int sysDefinedCls = systemAttributes.keySet().size();
-            int sysDefinedAttr = systemAttributes.values().stream().mapToInt(List::size).sum();
-            int sysDefinedRel = 0; // TODO: Implement relationship extraction
+            List<String> modelRelationships = Extractor.getModelRelationships(systemContent);
 
             Map<String, List<String>> genPaths = paths.get(system);
             CoverageMetrics systemMetrics = new CoverageMetrics();
@@ -55,10 +52,7 @@ public class Coverage {
                 var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
                 CoverageMetrics instanceMetrics = new CoverageMetrics();
-                instanceMetrics.definedCls = sysDefinedCls;
-                instanceMetrics.definedAttr = sysDefinedAttr;
-                instanceMetrics.definedRel = sysDefinedRel;
-                instanceMetrics.calculate(instanceAttributes, systemAttributes, instance);
+                instanceMetrics.calculate(instanceAttributes, systemAttributes, instance, modelRelationships);
 
                 systemMetrics.add(instanceMetrics);
 
@@ -95,10 +89,7 @@ public class Coverage {
             String systemContent = Utils
                     .readFile("./src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use");
             Map<String, List<String>> systemAttributes = Extractor.getModelAttributes(systemContent);
-
-            int sysDefinedCls = systemAttributes.keySet().size();
-            int sysDefinedAttr = systemAttributes.values().stream().mapToInt(List::size).sum();
-            int sysDefinedRel = 0; // TODO: Implement relationship extraction
+            List<String> modelRelationships = Extractor.getModelRelationships(systemContent);
 
             Map<String, List<String>> genPaths = paths.get(system);
             CoverageMetrics systemMetrics = new CoverageMetrics();
@@ -118,10 +109,7 @@ public class Coverage {
                     var instanceAttributes = Extractor.getAllInstanceAttributes(instance, systemContent);
 
                     CoverageMetrics categoryMetrics = new CoverageMetrics();
-                    categoryMetrics.definedCls = sysDefinedCls;
-                    categoryMetrics.definedAttr = sysDefinedAttr;
-                    categoryMetrics.definedRel = sysDefinedRel;
-                    categoryMetrics.calculate(instanceAttributes, systemAttributes, instance);
+                    categoryMetrics.calculate(instanceAttributes, systemAttributes, instance, modelRelationships);
 
                     genMetrics.add(categoryMetrics);
 

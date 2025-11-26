@@ -16,6 +16,7 @@ public class CoverageMetrics {
     int totalObjects = 0;
     int totalAttributeValues = 0;
     int totalPossibleAttributeValues = 0;
+    int totalLinks = 0;
 
     void add(CoverageMetrics other) {
         this.definedCls += other.definedCls;
@@ -29,35 +30,59 @@ public class CoverageMetrics {
         this.totalObjects += other.totalObjects;
         this.totalAttributeValues += other.totalAttributeValues;
         this.totalPossibleAttributeValues += other.totalPossibleAttributeValues;
+        this.totalLinks += other.totalLinks;
     }
 
     public void calculate(Map<String, Map<String, List<String>>> instanceAttributes,
-            Map<String, List<String>> systemAttributes, String instanceContent) {
+            Map<String, List<String>> systemAttributes, String instanceContent, List<String> modelRelationships) {
 
-        // Combined loops for instanceAttributes
-        for (var className : instanceAttributes.keySet()) {
-            boolean isSystemClass = systemAttributes.containsKey(className);
+        // // Combined loops for instanceAttributes
+        // for (var className : instanceAttributes.keySet()) {
+        //     boolean isSystemClass = systemAttributes.containsKey(className);
 
-            if (isSystemClass) {
-                this.instantiatedCls++;
-            }
+        //     if (isSystemClass) {
+        //         this.instantiatedCls++;
+        //     }
 
-            var attributesMap = instanceAttributes.get(className);
+        //     var attributesMap = instanceAttributes.get(className);
 
-            // Total attribute values
-            for (List<String> values : attributesMap.values()) {
-                this.totalAttributeValues += values.size();
-            }
+        //     // Total attribute values
+        //     for (List<String> values : attributesMap.values()) {
+        //         this.totalAttributeValues += values.size();
+        //     }
 
-            // Attribute coverage
-            for (String attributeName : attributesMap.keySet()) {
-                if (isSystemClass && systemAttributes.get(className).contains(attributeName)) {
-                    this.instantiatedAttr++;
-                } else {
-                    this.uncovered.add(className + "." + attributeName);
-                }
-            }
-        }
+        //     // Attribute coverage
+        //     for (String attributeName : attributesMap.keySet()) {
+        //         if (isSystemClass && systemAttributes.get(className).contains(attributeName)) {
+        //             this.instantiatedAttr++;
+        //         } else {
+        //             this.uncovered.add(className + "." + attributeName);
+        //         }
+        //     }
+        // }
+
+        // // Relationship metrics
+        Map<String, Integer> instanceRelationships = Extractor.getInstanceRelationships(instanceContent);
+        this.totalLinks = instanceRelationships.values().stream().mapToInt(Integer::intValue).sum();
+
+        // for (String relName : modelRelationships) {
+        //     if (instanceRelationships.containsKey(relName)) {
+        //         this.instantiatedRel++;
+        //     }
+        // }
+
+        definedCls = systemAttributes.keySet().size();
+        definedAttr = systemAttributes.values().stream().mapToInt(List::size).sum();
+        definedRel = modelRelationships.size();
+
+        instantiatedCls = instanceAttributes.keySet().size();
+        instantiatedAttr = instanceAttributes.values().stream().mapToInt(Map::size).sum();
+        instantiatedRel = instanceRelationships.keySet().size();
+
+        totalAttributeValues = instanceAttributes.values().stream()
+                .mapToInt(attrMap -> attrMap.values().stream().mapToInt(List::size).sum())
+                .sum();
+
 
         // Instantiation stats
         Map<String, Integer> instanceCounts = Extractor.getInstanceCounts(instanceContent);
@@ -71,6 +96,8 @@ public class CoverageMetrics {
                 this.totalPossibleAttributeValues += count * attrsPerClass;
             }
         }
+
+
     }
 
     public String getUncoveredListString() {
@@ -102,7 +129,7 @@ public class CoverageMetrics {
                 { totalAttributeValues, totalPossibleAttributeValues,
                         totalPossibleAttributeValues != 0 ? (float) totalAttributeValues / totalPossibleAttributeValues
                                 : 0 },
-                { 0, 0, 0 } // Relationships TODO
+                { totalLinks, -1, -1 }
         };
 
         return new Table(title, tableRowsHeader, tableColumnsHeader, tableData);
