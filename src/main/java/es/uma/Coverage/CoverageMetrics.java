@@ -126,10 +126,10 @@ public class CoverageMetrics {
         String[] columns = { "total instantiated", "total possible", "ratio" };
         String[] rows = { "classes", "attributes", "relationships" };
         float[][] data = {
-                { totalObjects, -1, -1 },
+                { totalObjects, Float.POSITIVE_INFINITY, 0 },
                 { totalAttributeValues, totalPossibleAttributeValues,
                         ratio(totalAttributeValues, totalPossibleAttributeValues) },
-                { totalLinks, -1, -1 }
+                { totalLinks, Float.POSITIVE_INFINITY, 0 }
         };
         return new Table(title, rows, columns, data);
     }

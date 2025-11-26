@@ -13,9 +13,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 14.0000 | -1.0000 | -1.0000 | 
+| **classes** | 14.0000 | Infinity | 0.0000 | 
 | **attributes** | 14.0000 | 14.0000 | 1.0000 | 
-| **relationships** | 22.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 22.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -29,9 +29,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -45,9 +45,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 5.0000 | 5.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -61,9 +61,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -77,9 +77,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 7.0000 | 7.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -93,9 +93,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -109,9 +109,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -125,9 +125,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -141,9 +141,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -157,9 +157,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -173,9 +173,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -189,9 +189,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -205,9 +205,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -221,9 +221,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -237,9 +237,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 7.0000 | 7.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -253,9 +253,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 8.0000 | 8.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -269,9 +269,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -285,9 +285,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -301,9 +301,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -317,9 +317,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -333,9 +333,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -349,9 +349,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -365,9 +365,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -381,9 +381,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -397,9 +397,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -413,9 +413,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -429,9 +429,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -445,9 +445,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -461,9 +461,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -477,9 +477,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -493,9 +493,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 323.0000 | -1.0000 | -1.0000 | 
+| **classes** | 323.0000 | Infinity | 0.0000 | 
 | **attributes** | 323.0000 | 323.0000 | 1.0000 | 
-| **relationships** | 513.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 513.0000 | Infinity | 0.0000 | 
 
 
 ## Bank
@@ -511,9 +511,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 31.0000 | 31.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -527,9 +527,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 10.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 10.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -543,9 +543,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -559,9 +559,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 10.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 10.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -575,9 +575,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -591,9 +591,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -607,9 +607,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -623,9 +623,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -639,9 +639,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -655,9 +655,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -671,9 +671,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -687,9 +687,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -703,9 +703,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -719,9 +719,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -735,9 +735,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -751,9 +751,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -767,9 +767,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -783,9 +783,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -799,9 +799,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -815,9 +815,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -831,9 +831,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -847,9 +847,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -863,9 +863,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -879,9 +879,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -895,9 +895,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -911,9 +911,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -927,9 +927,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -943,9 +943,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -959,9 +959,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -975,9 +975,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 18.0000 | 18.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -991,9 +991,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 215.0000 | -1.0000 | -1.0000 | 
+| **classes** | 215.0000 | Infinity | 0.0000 | 
 | **attributes** | 555.0000 | 555.0000 | 1.0000 | 
-| **relationships** | 386.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 386.0000 | Infinity | 0.0000 | 
 
 
 ## PickupNet
@@ -1009,9 +1009,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 16.0000 | -1.0000 | -1.0000 | 
+| **classes** | 16.0000 | Infinity | 0.0000 | 
 | **attributes** | 28.0000 | 28.0000 | 1.0000 | 
-| **relationships** | 22.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 22.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -1025,9 +1025,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 14.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 14.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -1041,9 +1041,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -1057,9 +1057,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 14.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 14.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -1073,9 +1073,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -1089,9 +1089,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -1105,9 +1105,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -1121,9 +1121,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -1137,9 +1137,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -1153,9 +1153,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -1169,9 +1169,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -1185,9 +1185,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -1201,9 +1201,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -1217,9 +1217,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -1233,9 +1233,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -1249,9 +1249,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -1265,9 +1265,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -1281,9 +1281,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -1297,9 +1297,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 13.0000 | 13.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -1313,9 +1313,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -1329,9 +1329,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -1345,9 +1345,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -1361,9 +1361,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -1377,9 +1377,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -1393,9 +1393,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -1409,9 +1409,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -1425,9 +1425,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -1441,9 +1441,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -1457,9 +1457,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -1473,9 +1473,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 9.0000 | -1.0000 | -1.0000 | 
+| **classes** | 9.0000 | Infinity | 0.0000 | 
 | **attributes** | 15.0000 | 15.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -1489,9 +1489,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 272.0000 | -1.0000 | -1.0000 | 
+| **classes** | 272.0000 | Infinity | 0.0000 | 
 | **attributes** | 453.0000 | 453.0000 | 1.0000 | 
-| **relationships** | 381.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 381.0000 | Infinity | 0.0000 | 
 
 
 ## MyExpenses
@@ -1507,9 +1507,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 39.0000 | 39.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -1523,9 +1523,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -1539,9 +1539,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -1555,9 +1555,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 11.0000 | 11.0000 | 1.0000 | 
-| **relationships** | 3.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 3.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -1571,9 +1571,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -1587,9 +1587,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 11.0000 | 11.0000 | 1.0000 | 
-| **relationships** | 3.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 3.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -1603,9 +1603,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -1619,9 +1619,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 11.0000 | 11.0000 | 1.0000 | 
-| **relationships** | 3.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 3.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -1635,9 +1635,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -1651,9 +1651,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -1667,9 +1667,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -1683,9 +1683,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 11.0000 | 11.0000 | 1.0000 | 
-| **relationships** | 3.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 3.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -1699,9 +1699,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -1715,9 +1715,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -1731,9 +1731,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -1747,9 +1747,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -1763,9 +1763,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -1779,9 +1779,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -1795,9 +1795,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -1811,9 +1811,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -1827,9 +1827,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -1843,9 +1843,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -1859,9 +1859,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -1875,9 +1875,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -1891,9 +1891,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -1907,9 +1907,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -1923,9 +1923,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -1939,9 +1939,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -1955,9 +1955,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -1971,9 +1971,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 16.0000 | 16.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -1987,9 +1987,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 153.0000 | -1.0000 | -1.0000 | 
+| **classes** | 153.0000 | Infinity | 0.0000 | 
 | **attributes** | 483.0000 | 483.0000 | 1.0000 | 
-| **relationships** | 150.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 150.0000 | Infinity | 0.0000 | 
 
 
 ## VideoClub
@@ -2005,9 +2005,9 @@
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 25.0000 | 25.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2023,9 +2023,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2041,9 +2041,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2059,9 +2059,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2077,9 +2077,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2095,9 +2095,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2113,9 +2113,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2131,9 +2131,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2149,9 +2149,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2167,9 +2167,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2185,9 +2185,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2203,9 +2203,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2221,9 +2221,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2239,9 +2239,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2257,9 +2257,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2275,9 +2275,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2293,9 +2293,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2311,9 +2311,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2329,9 +2329,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2347,9 +2347,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2365,9 +2365,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2383,9 +2383,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2401,9 +2401,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2419,9 +2419,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2437,9 +2437,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2455,9 +2455,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2473,9 +2473,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2491,9 +2491,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2509,9 +2509,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2527,9 +2527,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 10.0000 | 10.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2545,9 +2545,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 157.0000 | -1.0000 | -1.0000 | 
+| **classes** | 157.0000 | Infinity | 0.0000 | 
 | **attributes** | 315.0000 | 315.0000 | 1.0000 | 
-| **relationships** | 156.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 156.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies]
@@ -2565,9 +2565,9 @@ Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.avai
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 71.0000 | 71.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes]
@@ -2583,9 +2583,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2601,9 +2601,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2619,9 +2619,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2637,9 +2637,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2655,9 +2655,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2673,9 +2673,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 28.0000 | -1.0000 | -1.0000 | 
+| **classes** | 28.0000 | Infinity | 0.0000 | 
 | **attributes** | 70.0000 | 70.0000 | 1.0000 | 
-| **relationships** | 29.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 29.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2691,9 +2691,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 31.0000 | -1.0000 | -1.0000 | 
+| **classes** | 31.0000 | Infinity | 0.0000 | 
 | **attributes** | 76.0000 | 76.0000 | 1.0000 | 
-| **relationships** | 32.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 32.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2709,9 +2709,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 27.0000 | -1.0000 | -1.0000 | 
+| **classes** | 27.0000 | Infinity | 0.0000 | 
 | **attributes** | 68.0000 | 68.0000 | 1.0000 | 
-| **relationships** | 28.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 28.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2727,9 +2727,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2745,9 +2745,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 28.0000 | -1.0000 | -1.0000 | 
+| **classes** | 28.0000 | Infinity | 0.0000 | 
 | **attributes** | 70.0000 | 70.0000 | 1.0000 | 
-| **relationships** | 29.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 29.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2763,9 +2763,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2781,9 +2781,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 30.0000 | -1.0000 | -1.0000 | 
+| **classes** | 30.0000 | Infinity | 0.0000 | 
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2799,9 +2799,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 30.0000 | -1.0000 | -1.0000 | 
+| **classes** | 30.0000 | Infinity | 0.0000 | 
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2817,9 +2817,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 27.0000 | -1.0000 | -1.0000 | 
+| **classes** | 27.0000 | Infinity | 0.0000 | 
 | **attributes** | 68.0000 | 68.0000 | 1.0000 | 
-| **relationships** | 28.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 28.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2835,9 +2835,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 30.0000 | -1.0000 | -1.0000 | 
+| **classes** | 30.0000 | Infinity | 0.0000 | 
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2853,9 +2853,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2871,9 +2871,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2889,9 +2889,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 27.0000 | -1.0000 | -1.0000 | 
+| **classes** | 27.0000 | Infinity | 0.0000 | 
 | **attributes** | 68.0000 | 68.0000 | 1.0000 | 
-| **relationships** | 28.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 28.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2907,9 +2907,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 30.0000 | -1.0000 | -1.0000 | 
+| **classes** | 30.0000 | Infinity | 0.0000 | 
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2925,9 +2925,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2943,9 +2943,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2961,9 +2961,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2979,9 +2979,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 30.0000 | -1.0000 | -1.0000 | 
+| **classes** | 30.0000 | Infinity | 0.0000 | 
 | **attributes** | 74.0000 | 74.0000 | 1.0000 | 
-| **relationships** | 31.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 31.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -2997,9 +2997,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 28.0000 | -1.0000 | -1.0000 | 
+| **classes** | 28.0000 | Infinity | 0.0000 | 
 | **attributes** | 70.0000 | 70.0000 | 1.0000 | 
-| **relationships** | 29.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 29.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3015,9 +3015,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3033,9 +3033,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 29.0000 | -1.0000 | -1.0000 | 
+| **classes** | 29.0000 | Infinity | 0.0000 | 
 | **attributes** | 72.0000 | 72.0000 | 1.0000 | 
-| **relationships** | 30.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 30.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3051,9 +3051,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 28.0000 | -1.0000 | -1.0000 | 
+| **classes** | 28.0000 | Infinity | 0.0000 | 
 | **attributes** | 70.0000 | 70.0000 | 1.0000 | 
-| **relationships** | 29.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 29.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3069,9 +3069,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 31.0000 | -1.0000 | -1.0000 | 
+| **classes** | 31.0000 | Infinity | 0.0000 | 
 | **attributes** | 76.0000 | 76.0000 | 1.0000 | 
-| **relationships** | 32.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 32.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3087,9 +3087,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 26.0000 | -1.0000 | -1.0000 | 
+| **classes** | 26.0000 | Infinity | 0.0000 | 
 | **attributes** | 66.0000 | 66.0000 | 1.0000 | 
-| **relationships** | 27.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 27.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3105,9 +3105,9 @@ Uncovered: [Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.rea
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 866.0000 | -1.0000 | -1.0000 | 
+| **classes** | 866.0000 | Infinity | 0.0000 | 
 | **attributes** | 2151.0000 | 2151.0000 | 1.0000 | 
-| **relationships** | 897.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 897.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes]
@@ -3125,9 +3125,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 14.0000 | -1.0000 | -1.0000 | 
+| **classes** | 14.0000 | Infinity | 0.0000 | 
 | **attributes** | 44.0000 | 44.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -3141,9 +3141,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -3157,9 +3157,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -3173,9 +3173,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -3189,9 +3189,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -3205,9 +3205,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -3221,9 +3221,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -3237,9 +3237,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -3253,9 +3253,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -3269,9 +3269,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -3285,9 +3285,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -3301,9 +3301,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -3317,9 +3317,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -3333,9 +3333,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -3349,9 +3349,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -3365,9 +3365,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -3381,9 +3381,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -3397,9 +3397,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -3413,9 +3413,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -3429,9 +3429,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -3445,9 +3445,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -3461,9 +3461,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -3477,9 +3477,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -3493,9 +3493,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -3509,9 +3509,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -3525,9 +3525,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 7.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 7.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -3541,9 +3541,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -3557,9 +3557,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -3573,9 +3573,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -3589,9 +3589,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 7.0000 | -1.0000 | -1.0000 | 
+| **classes** | 7.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 6.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 6.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -3605,9 +3605,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 232.0000 | -1.0000 | -1.0000 | 
+| **classes** | 232.0000 | Infinity | 0.0000 | 
 | **attributes** | 757.0000 | 757.0000 | 1.0000 | 
-| **relationships** | 201.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 201.0000 | Infinity | 0.0000 | 
 
 
 ## VehicleRental
@@ -3623,9 +3623,9 @@ Uncovered: [Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNo
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 8.0000 | -1.0000 | -1.0000 | 
+| **classes** | 8.0000 | Infinity | 0.0000 | 
 | **attributes** | 49.0000 | 49.0000 | 1.0000 | 
-| **relationships** | 10.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 10.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate]
@@ -3641,9 +3641,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 5.0000 | -1.0000 | -1.0000 | 
+| **classes** | 5.0000 | Infinity | 0.0000 | 
 | **attributes** | 29.0000 | 29.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3659,9 +3659,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3677,9 +3677,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3695,9 +3695,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3713,9 +3713,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3731,9 +3731,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3749,9 +3749,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3767,9 +3767,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3785,9 +3785,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3803,9 +3803,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3821,9 +3821,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3839,9 +3839,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3857,9 +3857,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3875,9 +3875,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3893,9 +3893,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3911,9 +3911,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3929,9 +3929,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3947,9 +3947,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -3965,9 +3965,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -3983,9 +3983,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -4001,9 +4001,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 19.0000 | 19.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4019,9 +4019,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 26.0000 | 26.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -4037,9 +4037,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4055,9 +4055,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -4073,9 +4073,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4091,9 +4091,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -4109,9 +4109,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4127,9 +4127,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 22.0000 | 22.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber]
@@ -4145,9 +4145,9 @@ Uncovered: [Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationStat
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 4.0000 | -1.0000 | -1.0000 | 
+| **classes** | 4.0000 | Infinity | 0.0000 | 
 | **attributes** | 23.0000 | 23.0000 | 1.0000 | 
-| **relationships** | 5.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 5.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4163,9 +4163,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 125.0000 | -1.0000 | -1.0000 | 
+| **classes** | 125.0000 | Infinity | 0.0000 | 
 | **attributes** | 712.0000 | 712.0000 | 1.0000 | 
-| **relationships** | 155.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 155.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate]
@@ -4183,9 +4183,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 31.0000 | 31.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -4199,9 +4199,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 31.0000 | 31.0000 | 1.0000 | 
-| **relationships** | 16.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 16.0000 | Infinity | 0.0000 | 
 
 
 ## Restaurant
@@ -4217,9 +4217,9 @@ Uncovered: [Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrati
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 9.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 9.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem]
@@ -4235,9 +4235,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4253,9 +4253,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 39.0000 | 39.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4271,9 +4271,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 14.0000 | -1.0000 | -1.0000 | 
+| **classes** | 14.0000 | Infinity | 0.0000 | 
 | **attributes** | 46.0000 | 46.0000 | 1.0000 | 
-| **relationships** | 14.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 14.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4289,9 +4289,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 14.0000 | -1.0000 | -1.0000 | 
+| **classes** | 14.0000 | Infinity | 0.0000 | 
 | **attributes** | 43.0000 | 43.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4307,9 +4307,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4325,9 +4325,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4343,9 +4343,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4361,9 +4361,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4379,9 +4379,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4397,9 +4397,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4415,9 +4415,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 42.0000 | 42.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4433,9 +4433,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4451,9 +4451,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4469,9 +4469,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4487,9 +4487,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4505,9 +4505,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4523,9 +4523,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4541,9 +4541,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4559,9 +4559,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4577,9 +4577,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4595,9 +4595,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4613,9 +4613,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4631,9 +4631,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4649,9 +4649,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4667,9 +4667,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4685,9 +4685,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4703,9 +4703,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4721,9 +4721,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 37.0000 | 37.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4739,9 +4739,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 12.0000 | -1.0000 | -1.0000 | 
+| **classes** | 12.0000 | Infinity | 0.0000 | 
 | **attributes** | 38.0000 | 38.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4757,9 +4757,9 @@ Uncovered: [Class: Individual, Attribute: Individual.time, Attribute: Individual
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 370.0000 | -1.0000 | -1.0000 | 
+| **classes** | 370.0000 | Infinity | 0.0000 | 
 | **attributes** | 1164.0000 | 1164.0000 | 1.0000 | 
-| **relationships** | 340.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 340.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
@@ -4777,9 +4777,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 13.0000 | -1.0000 | -1.0000 | 
+| **classes** | 13.0000 | Infinity | 0.0000 | 
 | **attributes** | 40.0000 | 40.0000 | 1.0000 | 
-| **relationships** | 15.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 15.0000 | Infinity | 0.0000 | 
 
 
 ### gen2
@@ -4793,9 +4793,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 31.0000 | 31.0000 | 1.0000 | 
-| **relationships** | 11.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 11.0000 | Infinity | 0.0000 | 
 
 
 ### gen3
@@ -4809,9 +4809,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen4
@@ -4825,9 +4825,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen5
@@ -4841,9 +4841,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen6
@@ -4857,9 +4857,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen7
@@ -4873,9 +4873,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen8
@@ -4889,9 +4889,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen9
@@ -4905,9 +4905,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen10
@@ -4921,9 +4921,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen11
@@ -4937,9 +4937,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen12
@@ -4953,9 +4953,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen13
@@ -4969,9 +4969,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen14
@@ -4985,9 +4985,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen15
@@ -5001,9 +5001,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen16
@@ -5017,9 +5017,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen17
@@ -5033,9 +5033,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen18
@@ -5049,9 +5049,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen19
@@ -5065,9 +5065,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen20
@@ -5081,9 +5081,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen21
@@ -5097,9 +5097,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen22
@@ -5113,9 +5113,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen23
@@ -5129,9 +5129,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen24
@@ -5145,9 +5145,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen25
@@ -5161,9 +5161,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen26
@@ -5177,9 +5177,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen27
@@ -5193,9 +5193,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen28
@@ -5209,9 +5209,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen29
@@ -5225,9 +5225,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### gen30
@@ -5241,9 +5241,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 11.0000 | -1.0000 | -1.0000 | 
+| **classes** | 11.0000 | Infinity | 0.0000 | 
 | **attributes** | 34.0000 | 34.0000 | 1.0000 | 
-| **relationships** | 12.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 12.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -5257,9 +5257,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 331.0000 | -1.0000 | -1.0000 | 
+| **classes** | 331.0000 | Infinity | 0.0000 | 
 | **attributes** | 1023.0000 | 1023.0000 | 1.0000 | 
-| **relationships** | 362.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 362.0000 | Infinity | 0.0000 | 
 
 
 ## Example3
@@ -5275,9 +5275,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -5291,9 +5291,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 10.0000 | -1.0000 | -1.0000 | 
+| **classes** | 10.0000 | Infinity | 0.0000 | 
 | **attributes** | 27.0000 | 27.0000 | 1.0000 | 
-| **relationships** | 13.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 13.0000 | Infinity | 0.0000 | 
 
 
 ## Example2
@@ -5309,9 +5309,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 17.0000 | -1.0000 | -1.0000 | 
+| **classes** | 17.0000 | Infinity | 0.0000 | 
 | **attributes** | 45.0000 | 45.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 ### ALL Gen 
@@ -5325,9 +5325,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 17.0000 | -1.0000 | -1.0000 | 
+| **classes** | 17.0000 | Infinity | 0.0000 | 
 | **attributes** | 45.0000 | 45.0000 | 1.0000 | 
-| **relationships** | 21.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 21.0000 | Infinity | 0.0000 | 
 
 
 # Coverage 
@@ -5341,9 +5341,9 @@ Uncovered: [Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, At
 
 | Instantiation Stats | total instantiated | total possible | ratio |
 |---|---|---|---|
-| **classes** | 3083.0000 | -1.0000 | -1.0000 | 
+| **classes** | 3083.0000 | Infinity | 0.0000 | 
 | **attributes** | 8039.0000 | 8039.0000 | 1.0000 | 
-| **relationships** | 3591.0000 | -1.0000 | -1.0000 | 
+| **relationships** | 3591.0000 | Infinity | 0.0000 | 
 
 
 Uncovered: [Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: Cassette, Attribute: Cassette.title, Attribute: Cassette.availableCopies, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: TrainingFailedToAttend, Attribute: TrainingFailedToAttend.reason, Class: PlayerNotes, Attribute: PlayerNotes.note, Attribute: PlayerNotes.date, Relationship: TrainingFailded, Relationship: FailedPlayer, Relationship: PlayerPlayerNotes, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Truck, Attribute: Truck.id, Attribute: Truck.registrationState, Attribute: Truck.licensePlateNumber, Attribute: Truck.vehicleTypeCode, Attribute: Truck.registrationLastMaintenanceDate, Attribute: Truck.expirationDate, Attribute: Truck.odometerReading, Attribute: Truck.gasTankCapacity, Attribute: Truck.workingRadio, Attribute: Truck.mileage, Class: Company, Attribute: Company.name, Attribute: Company.address, Attribute: Company.poorRisk, Attribute: Company.idNumber, Class: Vehicle, Attribute: Vehicle.id, Attribute: Vehicle.registrationState, Attribute: Vehicle.licensePlateNumber, Attribute: Vehicle.vehicleTypeCode, Attribute: Vehicle.registrationLastMaintenanceDate, Attribute: Vehicle.expirationDate, Class: Individual, Attribute: Individual.name, Attribute: Individual.address, Attribute: Individual.poorRisk, Attribute: Individual.homePhone, Attribute: Individual.driverLicenseState, Attribute: Individual.driverLicenseNumber, Attribute: Individual.driverLicenseExpirationDate, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: ItemOrder, Attribute: ItemOrder.time, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: ReservationItemOrdered, Relationship: ItemOrderMenuItem, Relationship: MenuItemFoodItem, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Relationship: ReservationCustomer, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Banquet, Attribute: Banquet.time, Attribute: Banquet.date, Attribute: Banquet.numberPeople, Attribute: Banquet.name, Attribute: Banquet.phoneNumber, Attribute: Banquet.number, Attribute: Banquet.groupName, Attribute: Banquet.paymentMethod, Attribute: Banquet.busService, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen, Class: Individual, Attribute: Individual.time, Attribute: Individual.date, Attribute: Individual.numberPeople, Attribute: Individual.name, Attribute: Individual.phoneNumber, Attribute: Individual.number, Attribute: Individual.seating, Attribute: Individual.smoking, Class: FoodItem, Attribute: FoodItem.number, Attribute: FoodItem.description, Attribute: FoodItem.purchaseFlag, Attribute: FoodItem.unit, Class: Allergen, Attribute: Allergen.type, Class: Person, Attribute: Person.name, Class: RegularCustomer, Attribute: RegularCustomer.name, Attribute: RegularCustomer.prefferedLanguage, Class: DietaryRequirement, Attribute: DietaryRequirement.diet, Class: ReportedAllergy, Attribute: ReportedAllergy.allergen, Class: Manager, Attribute: Manager.name, Attribute: Manager.dateOfBirth, Attribute: Manager.phoneNumber, Class: BusDriver, Attribute: BusDriver.name, Attribute: BusDriver.dateOfBirth, Attribute: BusDriver.phoneNumber, Attribute: BusDriver.driverLicenseNr, Relationship: ReservationCustomer, Relationship: BanquetBusDriver, Relationship: MenuItemFoodItem, Relationship: FoodItemAllergen]
