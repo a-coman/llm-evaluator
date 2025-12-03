@@ -252,6 +252,16 @@ public class Utils {
         }
     }
 
+    public static String removeBackticks(String text) {
+        String regex = "```+[^\\n]*"; // Matches codeblocks, i.e. ``` or more followed by any character except a newline
+        return text.replaceAll(regex, "").trim();
+    }
+
+    public static String removeComments(String text) {
+        String regex = "(?m)^(?!!|--).*$"; // Matches any line that doesn't start with ! or --
+        return text.replaceAll(regex, "").trim();
+    }
+
     public static void main(String[] args) {
         // String path =
         // "src/main/resources/dataset/CoT/Football/02-04-2025--19-03-28/gen5/invalid.soil";
