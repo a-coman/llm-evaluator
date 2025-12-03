@@ -79,7 +79,7 @@ public class CoverageMetrics {
         definedRel = modelRelationships.size();
 
         // Set instantiation counts
-        instantiatedCls = instanceAttributes.size();
+        instantiatedCls = instanceCounts.size(); // TODO: CHECK
         instantiatedAttr = instanceAttributes.values().stream().mapToInt(Map::size).sum();
         instantiatedRel = instanceRels.size();
         totalAttributeValues = instanceAttributes.values().stream()
