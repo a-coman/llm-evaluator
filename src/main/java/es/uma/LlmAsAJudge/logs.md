@@ -1,6 +1,5 @@
 # Input IJudge
-|Messages|
-|---|
+## System Message
 ```
 SystemMessage { text = "<role>
 You are an expert software and system modeler. You are able to assess the semantic quality of object models that have been created to conform to a domain model. The models are defined in USE (UML-based Specification Environment) and OCL (Object Constraint Language).
@@ -118,6 +117,7 @@ Output:
 </examples>
 " }
 ```
+## User Message
 ```
 UserMessage { name = null, contents = [TextContent { text = "<domain_model>
 model BankAccount
@@ -258,22 +258,22 @@ Top-P: null
 # Output IJudge
 ```
 **Response**: Realistic
-**Why**: All created objects have plausible attribute values and their relationships respect the defined multiplicities and OCL constraints within the domain model. Specifically, all account owners are 18 years or older, and all account balances are non-negative.
+**Why**: All object attributes contain plausible real-world values (e.g., bank names, country codes, ages, IBANs, positive balances). All associations correctly adhere to defined multiplicities and the OCL constraints are satisfied, specifically `AdultOwners` (all account owners are 18 or older) and `positiveBalance` (all account balances are non-negative). The country codes in IBANs also align with the associated bank's country.
 ```
 
 |Response|
 |---|
 Finish Reason: STOP
 Input Tokens: 1924
-Output Tokens: 53
-Total Tokens: 3577
-Generation Time: 9.31 seconds
+Output Tokens: 99
+Total Tokens: 3498
+Generation Time: 8.66 seconds
 
 
 # Summary for all generations
 | Metric | Value |
 | --- | --- |
-| Generations time | 9.31 seconds |
+| Generations time | 8.66 seconds |
 | Sum of input tokens | 1924 |
-| Sum of output tokens | 53 |
-| Sum of total tokens | 3577 |
+| Sum of output tokens | 99 |
+| Sum of total tokens | 3498 |

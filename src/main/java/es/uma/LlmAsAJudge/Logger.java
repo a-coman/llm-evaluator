@@ -40,7 +40,7 @@ public class Logger {
         return listenerLogs.toString();
     }
 
-    public static void save(String path) {
+    public static void save(String path, Boolean append) {
 
         StringBuilder metrics = new StringBuilder();
         metrics.append(getListenerLogs());
@@ -58,6 +58,10 @@ public class Logger {
         metrics.append("| Sum of output tokens | " + sumOfOutputTokens + " |\n");
         metrics.append("| Sum of total tokens | " + sumOfTotalTokens + " |\n");
 
-        Utils.saveFile(metrics.toString(), path, "logs.md");
+        Utils.saveFile(metrics.toString(), path, "logs.md", append);
+    }
+
+    public static void save(String path) {
+        save(path, true);
     }
 }

@@ -36,10 +36,11 @@ public class Listener implements ChatModelListener {
         StringBuffer sb = new StringBuffer();
         
         sb.append("# Input " + (currentAgent.get() != null ? currentAgent.get() : "Unknown") + (currentCategory.get() != null ? (" : " + currentCategory.get()) : "") + "\n");
-        sb.append("|Messages|\n|---|\n");
+        sb.append("## System Message\n");
         List<ChatMessage> messages = request.messages();
         ChatRequestParameters parameters = request.parameters();
         sb.append("```\n" + Utils.removeBackticks(messages.getFirst().toString()) + "\n```\n"); // System message (without backticks codeblock)
+        sb.append("## User Message\n");
         sb.append("```\n" + Utils.removeBackticks(messages.getLast().toString()) + "\n```\n"); // Last user message (no prveious history) (without backticks codeblock)
         sb.append("\n|Request|\n|---|\n");
         sb.append("Model: " + parameters.modelName() + "\n");
