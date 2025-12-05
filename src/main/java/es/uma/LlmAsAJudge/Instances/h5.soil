@@ -1,0 +1,78 @@
+!new Customer('customer75') 
+!customer75.firstName := 'Marius' 
+!customer75.lastName := 'Popescu'
+
+!new Customer('customer1401') 
+!customer1401.firstName := 'Elena' 
+!customer1401.lastName := 'Lupu'
+
+!new Booking('booking197') 
+!booking197.bookingId := 79014 
+!booking197.startDate := 'October 27, 2025' 
+!booking197.endDate := 'October 30, 2025' 
+!booking197.canceled := false 
+!booking197.confirmed := true
+
+!new Booking('booking216') 
+!booking216.bookingId := 85415 
+!booking216.startDate := 'December 20, 2025' 
+!booking216.endDate := 'December 23, 2025' 
+!booking216.canceled := false 
+!booking216.confirmed := true
+
+!new RoomReservation('roomreservation197') 
+!roomreservation197.checkInDate := 'October 27, 2025' 
+!roomreservation197.checkOutDate := 'October 30, 2025'
+
+!new RoomReservation('roomreservation216') 
+!roomreservation216.checkInDate := 'March 6, 2025' 
+!roomreservation216.checkOutDate := 'March 9, 2025'
+
+!new Room('room5') 
+!room5.roomNumber := 201 
+!room5.numBeds := 1 
+!room5.pricePerNight := 140.00 
+!room5.occupied := true 
+!room5.blocked := false
+
+!new Room('room36') 
+!room36.roomNumber := 404 
+!room36.numBeds := 2 
+!room36.pricePerNight := 190.00 
+!room36.occupied := false 
+!room36.blocked := true
+
+!new RoomExtra('roomextra41') 
+!roomextra41.price := 60.00 
+!roomextra41.description := 'Valet Parking (3 nights)'
+
+!new Bill('bill197') 
+!bill197.billId := 234570 
+!bill197.price := 480.00
+
+!new Bill('bill216') 
+!bill216.billId := 234571 
+!bill216.price := 570.00
+
+!new FreeRoomTypesDTO('freeroomtypesdto18') 
+!freeroomtypesdto18.roomTypeDescription := 'Junior Suite' 
+!freeroomtypesdto18.numBeds := 2 
+!freeroomtypesdto18.pricePerNight := 280.00 
+!freeroomtypesdto18.numFreeRooms := 3
+
+!insert (booking197, customer75) into BookingCustomer 
+!insert (booking216, customer1401) into BookingCustomer
+
+!insert (booking197, roomreservation197) into BookingRoomReservation 
+!insert (booking216, roomreservation216) into BookingRoomReservation
+
+!insert (booking197, bill197) into BookingBill 
+!insert (booking216, bill216) into BookingBill
+
+!insert (roomreservation197, room5) into RoomReservationRoom 
+!insert (roomreservation216, room36) into RoomReservationRoom
+
+!insert (roomreservation197, roomextra41) into RoomReservationExtras
+
+!insert (bill197, roomreservation197) into BillRoomReservation 
+!insert (bill216, roomreservation216) into BillRoomReservation

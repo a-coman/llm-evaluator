@@ -1,0 +1,67 @@
+!new StateMachine('tl1') 
+!tl1.name := 'TrafficLight'
+
+!new State('s_red') 
+!s_red.name := 'red'
+
+!new State('s_redYellow') 
+!s_redYellow.name := 'redYellow'
+
+!new State('s_green') 
+!s_green.name := 'green'
+
+!new State('s_yellow') 
+!s_yellow.name := 'yellow'
+
+!new Transition('t_prep_go') 
+!t_prep_go.name := 'prepareGo'
+
+!new Transition('t_go') 
+!t_go.name := 'go'
+
+!new Transition('t_prep_stop') 
+!t_prep_stop.name := 'prepareStop'
+
+!new Transition('t_stop') 
+!t_stop.name := 'stop'
+
+!new TimeEvent('e_red_timer') 
+!e_red_timer.time := 45
+
+!new TimeEvent('e_redyellow_timer') 
+!e_redyellow_timer.time := 2
+
+!new TimeEvent('e_green_timer') 
+!e_green_timer.time := 45
+
+!new TimeEvent('e_yellow_timer') 
+!e_yellow_timer.time := 3
+
+!insert (tl1, s_red) into StateMachineContainsStates 
+!insert (tl1, s_redYellow) into StateMachineContainsStates 
+!insert (tl1, s_green) into StateMachineContainsStates 
+!insert (tl1, s_yellow) into StateMachineContainsStates
+
+!insert (tl1, t_prep_go) into StateMachineContainsTransitions 
+!insert (tl1, t_go) into StateMachineContainsTransitions 
+!insert (tl1, t_prep_stop) into StateMachineContainsTransitions 
+!insert (tl1, t_stop) into StateMachineContainsTransitions
+
+!insert (t_prep_go, e_red_timer) into TransitionContainsEvents 
+!insert (t_go, e_redyellow_timer) into TransitionContainsEvents 
+!insert (t_prep_stop, e_green_timer) into TransitionContainsEvents 
+!insert (t_stop, e_yellow_timer) into TransitionContainsEvents
+
+!insert (s_red, t_prep_go) into StateTransition 
+!insert (t_prep_go, s_redYellow) into TransitionState
+
+!insert (s_redYellow, t_go) into StateTransition 
+!insert (t_go, s_green) into TransitionState
+
+!insert (s_green, t_prep_stop) into StateTransition 
+!insert (t_prep_stop, s_yellow) into TransitionState
+
+!insert (s_yellow, t_stop) into StateTransition 
+!insert (t_stop, s_red) into TransitionState
+
+!insert (tl1, s_red) into StateMachineStartsStates

@@ -1,0 +1,53 @@
+!new Driver('driver21')
+!driver21.id := 'D021'
+!driver21.name := 'Sophia Roberts'
+
+!new Shipment('shipment35')
+!shipment35.id := 'S035'
+!shipment35.status := #ASSIGNED
+
+!new Shipment('shipment36')
+!shipment36.id := 'S036'
+!shipment36.status := #UNDERWAY
+
+!new Address('address41')
+!address41.text := '1818 Crescent Canyon'
+
+!new Address('address42')
+!address42.text := '1919 Maplewood Drive'
+
+!new GeoLocation('geoLocation41')
+!geoLocation41.latitude := 48.2082
+!geoLocation41.longitude := 16.3738
+
+!new GeoLocation('geoLocation42')
+!geoLocation42.latitude := 37.7749
+!geoLocation42.longitude := -122.4194
+
+!new Customer('customer21')
+!customer21.id := 'C021'
+!customer21.name := 'Ella Parker'
+!customer21.twitterUserName := '@ella_parker'
+
+!new Station('station20')
+
+!insert (driver21, shipment35) into DriverShipment
+
+!insert (shipment35, address41) into ShipmentContainsPickUpAddress
+!insert (shipment35, address42) into ShipmentContainsDeliveryAddress
+
+!insert (shipment36, address42) into ShipmentContainsPickUpAddress
+!insert (shipment36, address41) into ShipmentContainsDeliveryAddress
+
+!insert (address41, geoLocation41) into AddressContainsGeoLocation
+!insert (address42, geoLocation42) into AddressContainsGeoLocation
+
+!insert (customer21, shipment35) into CustomerConsistsOfShipment
+!insert (customer21, shipment36) into CustomerConsistsOfShipment
+
+!insert (station20, customer21) into StationContainsCustomer
+
+!insert (station20, shipment35) into StationShipment
+!insert (station20, shipment36) into StationShipment
+
+!insert (station20, driver21) into StationContainsDriver

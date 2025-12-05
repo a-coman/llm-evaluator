@@ -1,0 +1,76 @@
+!new Driver('driver44')
+!driver44.id := 'DL008'
+!driver44.name := 'Carlos Mendes'
+
+!new Shipment('shipment44')
+!shipment44.id := 'SH1122'
+!shipment44.status := #NEW
+
+!new Shipment('shipment45')
+!shipment45.id := 'SH2233'
+!shipment45.status := #DELIVERED
+
+!new Address('pickupAddress44')
+!pickupAddress44.text := 'EV Parts Manufacturing Hub, Sao Paulo, Brazil'
+
+!new GeoLocation('pickupGeoLocation44')
+!pickupGeoLocation44.latitude := -23.5505
+!pickupGeoLocation44.longitude := -46.6333
+
+!new Address('deliveryAddress44')
+!deliveryAddress44.text := 'Amazon Research Facility, Manaus, Brazil'
+
+!new GeoLocation('deliveryGeoLocation44')
+!deliveryGeoLocation44.latitude := -3.1190
+!deliveryGeoLocation44.longitude := -60.0217
+
+!new Address('pickupAddress45')
+!pickupAddress45.text := 'EcoTech Distributors, Rio de Janeiro, Brazil'
+
+!new GeoLocation('pickupGeoLocation45')
+!pickupGeoLocation45.latitude := -22.9068
+!pickupGeoLocation45.longitude := -43.1729
+
+!new Address('deliveryAddress45')
+!deliveryAddress45.text := 'University of Amazonas, Manaus, Brazil'
+
+!new GeoLocation('deliveryGeoLocation45')
+!deliveryGeoLocation45.latitude := -3.1019
+!deliveryGeoLocation45.longitude := -60.0250
+
+!new Station('station31')
+
+!new Customer('customer45')
+!customer45.id := 'CST5566'
+!customer45.name := 'Manaus Innovation Hub'
+!customer45.twitterUserName := '@ManausInnovate'
+
+!insert (driver44, shipment44) into DriverShipment
+
+!insert (shipment44, pickupAddress44) into ShipmentContainsPickUpAddress
+
+!insert (shipment44, deliveryAddress44) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress44, pickupGeoLocation44) into AddressContainsGeoLocation
+
+!insert (deliveryAddress44, deliveryGeoLocation44) into AddressContainsGeoLocation
+
+!insert (shipment45, pickupAddress45) into ShipmentContainsPickUpAddress
+
+!insert (shipment45, deliveryAddress45) into ShipmentContainsDeliveryAddress
+
+!insert (pickupAddress45, pickupGeoLocation45) into AddressContainsGeoLocation
+
+!insert (deliveryAddress45, deliveryGeoLocation45) into AddressContainsGeoLocation
+
+!insert (customer45, shipment44) into CustomerConsistsOfShipment
+
+!insert (customer45, shipment45) into CustomerConsistsOfShipment
+
+!insert (station31, customer45) into StationContainsCustomer
+
+!insert (station31, shipment44) into StationShipment
+
+!insert (station31, shipment45) into StationShipment
+
+!insert (station31, driver44) into StationContainsDriver

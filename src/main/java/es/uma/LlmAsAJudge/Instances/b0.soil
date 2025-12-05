@@ -1,0 +1,51 @@
+!new Bank('bank11')
+!bank11.country := 'Australia'
+!bank11.name := 'Westpac'
+!bank11.bic := 'WPACAU2S'
+
+!new Account('account28')
+!account28.iban := 'AU123456789012345678'
+!account28.balance := 6700
+
+!new Account('account29')
+!account29.iban := 'AU987654321098765432'
+!account29.balance := 1300
+
+!new Account('account30')
+!account30.iban := 'AU321123456789654789'
+!account30.balance := 2200
+
+!new Person('person32')
+!person32.firstName := 'James'
+!person32.lastName := 'Smith'
+!person32.age := 52
+
+!new Person('person33')
+!person33.firstName := 'Emma'
+!person33.lastName := 'Taylor'
+!person33.age := 34
+
+!new Person('person34')
+!person34.firstName := 'Liam'
+!person34.lastName := 'Moore'
+!person34.age := 26
+
+-- Associations
+!insert (bank11, account28) into AccountOfBanks
+!insert (bank11, account29) into AccountOfBanks
+!insert (bank11, account30) into AccountOfBanks
+
+!insert (person32, account28) into Ownership
+!insert (person33, account28) into Ownership
+
+!insert (person33, account29) into Ownership
+!insert (person34, account29) into Ownership
+
+!insert (person34, account30) into Ownership
+!insert (person32, account30) into Ownership
+
+!insert (person32, account29) into Use
+!insert (person33, account30) into Use
+
+!insert (person34, account28) into Use
+!insert (person33, account28) into Use

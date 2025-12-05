@@ -1,0 +1,74 @@
+!new Driver('driver2') 
+!driver2.id := 'D002' 
+!driver2.name := 'Maria Garcia'
+
+!new Shipment('shipment2') 
+!shipment2.id := 'SHP002' 
+!shipment2.status := #UNDERWAY
+
+!new Shipment('shipment3') 
+!shipment3.id := 'SHP003' 
+!shipment3.status := #NEW
+
+!new Address('addr_pickup_warehouse') 
+!addr_pickup_warehouse.text := '500 Kent Ave, Brooklyn, NY'
+
+!new GeoLocation('geo_pickup_warehouse') 
+!geo_pickup_warehouse.latitude := 40.7101 
+!geo_pickup_warehouse.longitude := -73.9680
+
+!new Address('addr_delivery_customerA') 
+!addr_delivery_customerA.text := '1600 Broadway, New York, NY'
+
+!new GeoLocation('geo_delivery_customerA') 
+!geo_delivery_customerA.latitude := 40.7601 
+!geo_delivery_customerA.longitude := -73.9847
+
+!new Address('addr_pickup_shop') 
+!addr_pickup_shop.text := '230 Elizabeth St, New York, NY'
+
+!new GeoLocation('geo_pickup_shop') 
+!geo_pickup_shop.latitude := 40.7223 
+!geo_pickup_shop.longitude := -73.9946
+
+!new Address('addr_delivery_customerB') 
+!addr_delivery_customerB.text := '11 Wall St, New York, NY'
+
+!new GeoLocation('geo_delivery_customerB') 
+!geo_delivery_customerB.latitude := 40.7070 
+!geo_delivery_customerB.longitude := -74.0113
+
+!new Station('station_nyc_main')
+
+!new Customer('customer2') 
+!customer2.id := 'CUST002' 
+!customer2.name := 'TechCorp Inc.' 
+!customer2.twitterUserName := '@techcorp'
+
+!new Customer('customer3') 
+!customer3.id := 'CUST003' 
+!customer3.name := 'Sarah Jenkins' 
+!customer3.twitterUserName := '@sarahj_art'
+
+!insert (driver2, shipment2) into DriverShipment
+
+!insert (shipment2, addr_pickup_warehouse) into ShipmentContainsPickUpAddress 
+!insert (shipment2, addr_delivery_customerA) into ShipmentContainsDeliveryAddress 
+!insert (shipment3, addr_pickup_shop) into ShipmentContainsPickUpAddress 
+!insert (shipment3, addr_delivery_customerB) into ShipmentContainsDeliveryAddress
+
+!insert (addr_pickup_warehouse, geo_pickup_warehouse) into AddressContainsGeoLocation 
+!insert (addr_delivery_customerA, geo_delivery_customerA) into AddressContainsGeoLocation 
+!insert (addr_pickup_shop, geo_pickup_shop) into AddressContainsGeoLocation 
+!insert (addr_delivery_customerB, geo_delivery_customerB) into AddressContainsGeoLocation
+
+!insert (customer2, shipment2) into CustomerConsistsOfShipment 
+!insert (customer3, shipment3) into CustomerConsistsOfShipment
+
+!insert (station_nyc_main, customer2) into StationContainsCustomer 
+!insert (station_nyc_main, customer3) into StationContainsCustomer
+
+!insert (station_nyc_main, shipment2) into StationShipment 
+!insert (station_nyc_main, shipment3) into StationShipment
+
+!insert (station_nyc_main, driver2) into StationContainsDriver

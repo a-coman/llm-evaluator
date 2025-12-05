@@ -1,0 +1,112 @@
+!new StateMachine('wm1')
+!wm1.name := 'WashingMachine'
+
+!new State('s_idle')
+!s_idle.name := 'idle'
+
+!new State('s_filling')
+!s_filling.name := 'filling'
+
+!new State('s_washing')
+!s_washing.name := 'washing'
+
+!new State('s_draining')
+!s_draining.name := 'draining'
+
+!new State('s_rinsing')
+!s_rinsing.name := 'rinsing'
+
+!new State('s_spinning')
+!s_spinning.name := 'spinning'
+
+!new State('s_completed')
+!s_completed.name := 'completed'
+
+!new Transition('t_start')
+!t_start.name := 'startCycle'
+
+!new Transition('t_fill_done')
+!t_fill_done.name := 'fillComplete'
+
+!new Transition('t_wash_done')
+!t_wash_done.name := 'washComplete'
+
+!new Transition('t_drain_done')
+!t_drain_done.name := 'drainComplete'
+
+!new Transition('t_rinse_done')
+!t_rinse_done.name := 'rinseComplete'
+
+!new Transition('t_spin_done')
+!t_spin_done.name := 'spinComplete'
+
+!new Transition('t_reset')
+!t_reset.name := 'resetToIdle'
+
+!new TimeEvent('e_start')
+!e_start.time := 1
+
+!new TimeEvent('e_fill_done')
+!e_fill_done.time := 5
+
+!new TimeEvent('e_wash_done')
+!e_wash_done.time := 30
+
+!new TimeEvent('e_drain_done')
+!e_drain_done.time := 35
+
+!new TimeEvent('e_rinse_done')
+!e_rinse_done.time := 43
+
+!new TimeEvent('e_spin_done')
+!e_spin_done.time := 50
+
+!new TimeEvent('e_reset')
+!e_reset.time := 51
+
+!insert (wm1, s_idle) into StateMachineContainsStates
+!insert (wm1, s_filling) into StateMachineContainsStates
+!insert (wm1, s_washing) into StateMachineContainsStates
+!insert (wm1, s_draining) into StateMachineContainsStates
+!insert (wm1, s_rinsing) into StateMachineContainsStates
+!insert (wm1, s_spinning) into StateMachineContainsStates
+!insert (wm1, s_completed) into StateMachineContainsStates
+
+!insert (wm1, t_start) into StateMachineContainsTransitions
+!insert (wm1, t_fill_done) into StateMachineContainsTransitions
+!insert (wm1, t_wash_done) into StateMachineContainsTransitions
+!insert (wm1, t_drain_done) into StateMachineContainsTransitions
+!insert (wm1, t_rinse_done) into StateMachineContainsTransitions
+!insert (wm1, t_spin_done) into StateMachineContainsTransitions
+!insert (wm1, t_reset) into StateMachineContainsTransitions
+
+!insert (t_start, e_start) into TransitionContainsEvents
+!insert (t_fill_done, e_fill_done) into TransitionContainsEvents
+!insert (t_wash_done, e_wash_done) into TransitionContainsEvents
+!insert (t_drain_done, e_drain_done) into TransitionContainsEvents
+!insert (t_rinse_done, e_rinse_done) into TransitionContainsEvents
+!insert (t_spin_done, e_spin_done) into TransitionContainsEvents
+!insert (t_reset, e_reset) into TransitionContainsEvents
+
+!insert (s_idle, t_start) into StateTransition
+!insert (t_start, s_filling) into TransitionState
+
+!insert (s_filling, t_fill_done) into StateTransition
+!insert (t_fill_done, s_washing) into TransitionState
+
+!insert (s_washing, t_wash_done) into StateTransition
+!insert (t_wash_done, s_draining) into TransitionState
+
+!insert (s_draining, t_drain_done) into StateTransition
+!insert (t_drain_done, s_rinsing) into TransitionState
+
+!insert (s_rinsing, t_rinse_done) into StateTransition
+!insert (t_rinse_done, s_spinning) into TransitionState
+
+!insert (s_spinning, t_spin_done) into StateTransition
+!insert (t_spin_done, s_completed) into TransitionState
+
+!insert (s_completed, t_reset) into StateTransition
+!insert (t_reset, s_idle) into TransitionState
+
+!insert (wm1, s_idle) into StateMachineStartsStates

@@ -1,0 +1,51 @@
+!new StateMachine('stateMachine13')
+!stateMachine13.name := 'clearingMachine'
+
+!new State('state33')
+!state33.name := 'pendingClearance'
+
+!new State('state34')
+!state34.name := 'clearing'
+
+!new State('state35')
+!state35.name := 'cleared'
+
+!new Transition('transition28')
+!transition28.name := 'pendingToClearing'
+
+!new Transition('transition29')
+!transition29.name := 'clearingToCleared'
+
+!new Transition('transition30')
+!transition30.name := 'clearedToPending'
+
+!new TimeEvent('event28')
+!event28.time := 12
+
+!new TimeEvent('event29')
+!event29.time := 22
+
+!new TimeEvent('event30')
+!event30.time := 32
+
+!insert (stateMachine13, state33) into StateMachineContainsStates
+!insert (stateMachine13, state34) into StateMachineContainsStates
+!insert (stateMachine13, state35) into StateMachineContainsStates
+
+!insert (stateMachine13, transition28) into StateMachineContainsTransitions
+!insert (stateMachine13, transition29) into StateMachineContainsTransitions
+!insert (stateMachine13, transition30) into StateMachineContainsTransitions
+
+!insert (transition28, event28) into TransitionContainsEvents
+!insert (transition29, event29) into TransitionContainsEvents
+!insert (transition30, event30) into TransitionContainsEvents
+
+!insert (state33, transition28) into StateTransition
+!insert (state34, transition29) into StateTransition
+!insert (state35, transition30) into StateTransition
+
+!insert (transition28, state34) into TransitionState
+!insert (transition29, state35) into TransitionState
+!insert (transition30, state33) into TransitionState
+
+!insert (stateMachine13, state33) into StateMachineStartsStates

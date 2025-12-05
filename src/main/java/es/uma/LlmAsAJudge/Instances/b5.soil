@@ -1,0 +1,60 @@
+!new Bank('bank11')
+!bank11.country := 'India'
+!bank11.name := 'Saraswat Cooperative Bank'
+!bank11.bic := 'SARBINBBXXX'
+
+!new Account('account21')
+!account21.iban := 'IN68113600040500123456'
+!account21.balance := 30000
+
+!new Account('account22')
+!account22.iban := 'IN68113600040500432109'
+!account22.balance := 7000
+
+!new Account('account23')
+!account23.iban := 'IN68113600040500789012'
+!account23.balance := 2000
+
+!new Account('account24')
+!account24.iban := 'IN68113600040500987654'
+!account24.balance := 10000
+
+!new Person('person29')
+!person29.firstName := 'Priya'
+!person29.lastName := 'Sharma'
+!person29.age := 40
+
+!new Person('person30')
+!person30.firstName := 'Rohit'
+!person30.lastName := 'Gupta'
+!person30.age := 38
+
+!new Person('person31')
+!person31.firstName := 'Anjali'
+!person31.lastName := 'Iyer'
+!person31.age := 29
+
+!new Person('person32')
+!person32.firstName := 'Sneha'
+!person32.lastName := 'Mehta'
+!person32.age := 50
+
+!insert (person29, account21) into Ownership
+!insert (person30, account22) into Ownership
+!insert (person31, account22) into Ownership
+!insert (person31, account23) into Ownership
+!insert (person32, account24) into Ownership
+!insert (person29, account24) into Ownership
+
+!insert (person29, account21) into Use
+!insert (person32, account21) into Use
+!insert (person30, account22) into Use
+!insert (person31, account22) into Use
+!insert (person31, account23) into Use
+!insert (person32, account24) into Use
+!insert (person29, account24) into Use
+
+!insert (bank11, account21) into AccountOfBanks
+!insert (bank11, account22) into AccountOfBanks
+!insert (bank11, account23) into AccountOfBanks
+!insert (bank11, account24) into AccountOfBanks

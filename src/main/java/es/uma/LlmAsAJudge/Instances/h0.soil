@@ -1,0 +1,47 @@
+!new Booking('booking11')
+!booking11.startDate := '2023-11-05'
+!booking11.endDate := '2023-11-10'
+!booking11.canceled := false
+!booking11.bookingId := 110
+!booking11.confirmed := true
+
+!new Bill('bill11')
+!bill11.price := 600.00
+!bill11.billId := 210
+
+!new FreeRoomTypesDTO('roomType11')
+!roomType11.roomTypeDescription := 'Garden View Room'
+!roomType11.numBeds := 2
+!roomType11.pricePerNight := 150.00
+!roomType11.numFreeRooms := 3
+
+!new Customer('customer11')
+!customer11.firstName := 'Laura'
+!customer11.lastName := 'Morrison'
+
+!new RoomReservation('reservation11')
+!reservation11.checkInDate := '2023-11-05'
+!reservation11.checkOutDate := '2023-11-10'
+
+!new RoomExtra('extra11')
+!extra11.price := 20.00
+!extra11.description := 'Welcome Gift Basket'
+
+!new Room('room18')
+!room18.numBeds := 2
+!room18.pricePerNight := 145.00
+!room18.occupied := true
+!room18.blocked := false
+!room18.roomNumber := 118
+
+!insert (booking11, bill11) into BookingBill
+
+!insert (booking11, customer11) into BookingCustomer
+
+!insert (booking11, reservation11) into BookingRoomReservation
+
+!insert (reservation11, extra11) into RoomReservationExtras
+
+!insert (reservation11, room18) into RoomReservationRoom
+
+!insert (bill11, reservation11) into BillRoomReservation

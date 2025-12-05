@@ -1,0 +1,80 @@
+!new Driver('driver44') 
+!driver44.id := 'D0044' 
+!driver44.name := 'Javier Lopez Fernández'
+
+!new Driver('driver145') 
+!driver145.id := 'D0145' 
+!driver145.name := 'Antonio Martín Sánchez'
+
+!new Shipment('shipment607') 
+!shipment607.id := 'SHP00607' 
+!shipment607.status := #ASSIGNED
+
+!new Shipment('shipment71') 
+!shipment71.id := 'SHP0071' 
+!shipment71.status := #DELIVERED
+
+!new Address('addr_pickup_s6') 
+!addr_pickup_s6.text := 'C. de Preciados, 9, 28013 Madrid'
+
+!new GeoLocation('geo_pickup_s6') 
+!geo_pickup_s6.latitude := 40.4178 
+!geo_pickup_s6.longitude := -3.7048
+
+!new Address('addr_delivery_s6') 
+!addr_delivery_s6.text := 'Pl. de la Independencia, 7, 28001 Madrid'
+
+!new GeoLocation('geo_delivery_s6') 
+!geo_delivery_s6.latitude := 40.4190 
+!geo_delivery_s6.longitude := -3.6888
+
+!new Address('addr_pickup_s7') 
+!addr_pickup_s7.text := 'C. de Serrano, 52, 28001 Madrid'
+
+!new GeoLocation('geo_pickup_s7') 
+!geo_pickup_s7.latitude := 40.4285 
+!geo_pickup_s7.longitude := -3.6886
+
+!new Address('addr_delivery_s7') 
+!addr_delivery_s7.text := 'Paseo del Prado, 21, 28014 Madrid'
+
+!new GeoLocation('geo_delivery_s7') 
+!geo_delivery_s7.latitude := 40.4138 
+!geo_delivery_s7.longitude := -3.6921
+
+!new Station('station_madrid_centro')
+
+!new Customer('customer4796') 
+!customer4796.id := 'CUST4796' 
+!customer4796.name := 'Ana Ruiz Pérez' 
+!customer4796.twitterUserName := '@anaruiz_mad'
+
+!new Customer('customer35487') 
+!customer35487.id := 'CUST35487' 
+!customer35487.name := 'Gourmet Ibérico SL' 
+!customer35487.twitterUserName := '@ibericoGourmet'
+
+!insert (driver44, shipment607) into DriverShipment
+!insert (driver145, shipment71) into DriverShipment
+
+!insert (shipment607, addr_pickup_s6) into ShipmentContainsPickUpAddress 
+!insert (shipment607, addr_delivery_s6) into ShipmentContainsDeliveryAddress 
+!insert (shipment71, addr_pickup_s7) into ShipmentContainsPickUpAddress 
+!insert (shipment71, addr_delivery_s7) into ShipmentContainsDeliveryAddress
+
+!insert (addr_pickup_s6, geo_pickup_s6) into AddressContainsGeoLocation 
+!insert (addr_delivery_s6, geo_delivery_s6) into AddressContainsGeoLocation 
+!insert (addr_pickup_s7, geo_pickup_s7) into AddressContainsGeoLocation 
+!insert (addr_delivery_s7, geo_delivery_s7) into AddressContainsGeoLocation
+
+!insert (customer4796, shipment607) into CustomerConsistsOfShipment 
+!insert (customer35487, shipment71) into CustomerConsistsOfShipment
+
+!insert (station_madrid_centro, customer4796) into StationContainsCustomer 
+!insert (station_madrid_centro, customer35487) into StationContainsCustomer
+
+!insert (station_madrid_centro, shipment607) into StationShipment 
+!insert (station_madrid_centro, shipment71) into StationShipment
+
+!insert (station_madrid_centro, driver44) into StationContainsDriver
+!insert (station_madrid_centro, driver145) into StationContainsDriver

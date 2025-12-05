@@ -1,0 +1,71 @@
+!new Customer('customer17') 
+!customer17.firstName := 'Klaus' 
+!customer17.lastName := 'Schmidt'
+
+!new Booking('booking17') 
+!booking17.bookingId := 89013 
+!booking17.startDate := 'July 22, 2024' 
+!booking17.endDate := 'July 26, 2024' 
+!booking17.canceled := false 
+!booking17.confirmed := true
+
+!new RoomReservation('roomreservation27') 
+!roomreservation27.checkInDate := 'July 22, 2024' 
+!roomreservation27.checkOutDate := 'July 26, 2024'
+
+!new RoomReservation('roomreservation28') 
+!roomreservation28.checkInDate := 'July 22, 2024' 
+!roomreservation28.checkOutDate := 'July 26, 2024'
+
+!new Room('room33') 
+!room33.roomNumber := 401 
+!room33.numBeds := 1 
+!room33.pricePerNight := 180.00 
+!room33.occupied := true 
+!room33.blocked := false
+
+!new Room('room34') 
+!room34.roomNumber := 402 
+!room34.numBeds := 2 
+!room34.pricePerNight := 210.00 
+!room34.occupied := true 
+!room34.blocked := false
+
+!new RoomExtra('roomextra39') 
+!roomextra39.price := 45.00 
+!roomextra39.description := 'Minibar package (full stay)'
+
+!new RoomExtra('roomextra40') 
+!roomextra40.price := 20.00 
+!roomextra40.description := 'Room Service (Breakfast)'
+
+!new Bill('bill33') 
+!bill33.billId := 234568 
+!bill33.price := 765.00 // (180 * 4 nights) + 45 extra
+
+!new Bill('bill34') 
+!bill34.billId := 234569 
+!bill34.price := 860.00 // (210 * 4 nights) + 20 extra
+
+!new FreeRoomTypesDTO('freeroomtypesdto17') 
+!freeroomtypesdto17.roomTypeDescription := 'Standard Single' 
+!freeroomtypesdto17.numBeds := 1 
+!freeroomtypesdto17.pricePerNight := 95.00 
+!freeroomtypesdto17.numFreeRooms := 5
+
+!insert (booking17, customer17) into BookingCustomer
+
+!insert (booking17, roomreservation27) into BookingRoomReservation 
+!insert (booking17, roomreservation28) into BookingRoomReservation
+
+!insert (booking17, bill33) into BookingBill 
+!insert (booking17, bill34) into BookingBill
+
+!insert (roomreservation27, room33) into RoomReservationRoom 
+!insert (roomreservation28, room34) into RoomReservationRoom
+
+!insert (roomreservation27, roomextra39) into RoomReservationExtras 
+!insert (roomreservation28, roomextra40) into RoomReservationExtras
+
+!insert (bill33, roomreservation27) into BillRoomReservation 
+!insert (bill34, roomreservation28) into BillRoomReservation
