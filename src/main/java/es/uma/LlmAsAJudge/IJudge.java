@@ -114,11 +114,32 @@ public interface IJudge {
     !insert (p1, c1) into Ownership
     </object_model>
     ```
-
     Output:
     ```
     **Response**: Realistic
     **Why**: The object 'c1' has a valid, recognized real-world car brand assigned, and its plausible that a teenager has only one car.
+    ```
+
+    Example 3:
+    Input:
+    ```
+    <domain_model>
+    class Component
+    attributes
+        setting_val: Integer
+        config_mode: String
+    end
+    </domain_model>
+    <object_model>
+    !new Component('c1')
+    !c1.setting_val := 8080
+    !c1.config_mode := 'Legacy'
+    </object_model>
+    ```
+    Output:
+    ```
+    **Response**: Unknown
+    **Why**: The class 'Component' and attribute 'setting_val' are generic and lack specific real-world semantic context. Without knowing what specific physical or software system this represents, it is impossible to determine if '8080' is a realistic value or an outlier.
     ```
     </examples>
     """;
