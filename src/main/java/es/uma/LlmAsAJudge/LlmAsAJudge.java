@@ -3,6 +3,7 @@ package es.uma.LlmAsAJudge;
 import es.uma.Utils;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,7 @@ public class LlmAsAJudge {
 
     public static void main(String[] args) {
         final String OUTPUT_PATH = "src/main/java/es/uma/LlmAsAJudge/";
-        final String INSTANCES_PATH = OUTPUT_PATH + "test/";
+        final String INSTANCES_PATH = OUTPUT_PATH + "Instances/";
         final String PROMPTS_PATH = "src/main/resources/prompts/";
 
         // Clear the responses file first
@@ -31,9 +32,9 @@ public class LlmAsAJudge {
         if (soilFiles == null) {
             throw new RuntimeException("No .soil files found in the Instances directory.");
         }
-        
-        for (File soilFile : soilFiles) {
-            IJudge judge = Llms.getAgent(IJudge.class, Model.TEST);
+
+        Arrays.stream(soilFiles).parallel().forEach(soilFile -> {
+            IJudge judge = Llms.getAgent(IJudge.class, Model.GEMINI_3_PRO);
 
             String fileName = soilFile.getName();
             String prefix = fileName.substring(0, 1);
@@ -51,11 +52,13 @@ public class LlmAsAJudge {
 
             // Append to responses.md with title
             String content = "# " + fileName + "\n\n" + response + "\n\n";
-            Utils.saveFile(content, OUTPUT_PATH, "responses.md");
+            synchronized (LlmAsAJudge.class) {
+                Utils.saveFile(content, OUTPUT_PATH, "responses.md");
+            }
 
             System.out.println("Processed: " + fileName + " with domain: " + domainName);
-            
-        }
+
+        });
 
         Logger.save(OUTPUT_PATH, false);
     }

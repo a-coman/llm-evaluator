@@ -33,6 +33,7 @@ public class Llms {
             // Return OpenRouter model for other models
             return OpenAiChatModel.builder()
                 .apiKey(dotenv.get("OPENROUTER_API_KEY"))
+                .baseUrl("https://openrouter.ai/api/v1")
                 .modelName(model.getModelName())
                 .logRequests(true)
                 .logResponses(true)

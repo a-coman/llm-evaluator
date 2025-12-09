@@ -17,37 +17,45 @@ import dev.langchain4j.model.chat.listener.ChatModelListener;
 
 public class Listener implements ChatModelListener {
 
-    private static double startTime;
+    private static ThreadLocal<Long> startTime = new ThreadLocal<>();
 
     private static ThreadLocal<String> currentAgent = new ThreadLocal<>();
+
     public static void setCurrentAgent(String agentName) {
         currentAgent.set(agentName);
     }
 
     private static ThreadLocal<String> currentCategory = new ThreadLocal<>();
+
     public static void setCurrentCategory(String category) {
         currentCategory.set(category);
     }
 
     @Override
     public void onRequest(ChatModelRequestContext requestContext) {
-        startTime = System.nanoTime();
+        startTime.set(System.nanoTime());
         ChatRequest request = requestContext.chatRequest();
         StringBuffer sb = new StringBuffer();
-        
-        sb.append("# Input " + (currentAgent.get() != null ? currentAgent.get() : "Unknown") + (currentCategory.get() != null ? (" : " + currentCategory.get()) : "") + "\n");
+
+        sb.append("# Input " + (currentAgent.get() != null ? currentAgent.get() : "Unknown")
+                + (currentCategory.get() != null ? (" : " + currentCategory.get()) : "") + "\n");
         sb.append("## System Message\n");
         List<ChatMessage> messages = request.messages();
         ChatRequestParameters parameters = request.parameters();
-        sb.append("```\n" + Utils.removeBackticks(messages.getFirst().toString()) + "\n```\n"); // System message (without backticks codeblock)
+        sb.append("```\n" + Utils.removeBackticks(messages.getFirst().toString()) + "\n```\n"); // System message
+                                                                                                // (without backticks
+                                                                                                // codeblock)
         sb.append("## User Message\n");
-        sb.append("```\n" + Utils.removeBackticks(messages.getLast().toString()) + "\n```\n"); // Last user message (no prveious history) (without backticks codeblock)
+        sb.append("```\n" + Utils.removeBackticks(messages.getLast().toString()) + "\n```\n"); // Last user message (no
+                                                                                               // prveious history)
+                                                                                               // (without backticks
+                                                                                               // codeblock)
         sb.append("\n|Request|\n|---|\n");
         sb.append("Model: " + parameters.modelName() + "\n");
         sb.append("Max-Tokens: " + parameters.maxOutputTokens() + "\n");
         sb.append("Temperature: " + parameters.temperature() + "\n");
         sb.append("Top-P: " + parameters.topP() + "\n\n");
-        
+
         Logger.addLog(sb.toString());
     }
 
@@ -58,7 +66,8 @@ public class Listener implements ChatModelListener {
 
         ChatResponseMetadata metadata = response.metadata();
 
-        sb.append("# Output " + (currentAgent.get() != null ? currentAgent.get() : "Unknown") + (currentCategory.get() != null ? (" : " + currentCategory.get()) : "") + "\n");
+        sb.append("# Output " + (currentAgent.get() != null ? currentAgent.get() : "Unknown")
+                + (currentCategory.get() != null ? (" : " + currentCategory.get()) : "") + "\n");
         String aiMessage = response.aiMessage().text();
         aiMessage = Utils.removeBackticks(aiMessage); // (without backticks codeblock)
         sb.append("```\n" + aiMessage + "\n```\n");
@@ -71,11 +80,11 @@ public class Listener implements ChatModelListener {
         sb.append("Input Tokens: " + inputTokens + "\n");
         sb.append("Output Tokens: " + outputTokens + "\n");
         sb.append("Total Tokens: " + totalTokens + "\n");
-        double genTime = (System.nanoTime() - startTime) / 1000000000;
+        double genTime = (System.nanoTime() - startTime.get()) / 1000000000.0;
         Logger.inecrementGenTime(genTime);
         sb.append("Generation Time: " + String.format("%.2f", genTime) + " seconds\n\n");
         Logger.incrementTokens(inputTokens, outputTokens, totalTokens);
-        
+
         Logger.addLog(sb.toString());
     }
 
