@@ -46,7 +46,8 @@ public class LlmAsAJudge {
 
             String domainModelPath = PROMPTS_PATH + domainName + "/diagram.use";
             String domainModel = Utils.readFile(domainModelPath);
-            String objectModel = Utils.readFile(soilFile.getPath());
+            String objectModelWithComments = Utils.readFile(soilFile.getPath());
+            String objectModel = Utils.removeComments(objectModelWithComments);
 
             String response = judge.chat(domainModel, objectModel);
 
