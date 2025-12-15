@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -260,6 +262,10 @@ public class Utils {
     public static String removeComments(String text) {
         String regex = "(?m)^(?!!|--).*$"; // Matches any line that doesn't start with ! or --
         return text.replaceAll(regex, "").trim();
+    }
+
+    public static String getTime() {
+        return LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy--HH-mm-ss")); 
     }
 
     public static void main(String[] args) {
