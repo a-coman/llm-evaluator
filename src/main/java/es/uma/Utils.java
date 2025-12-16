@@ -268,6 +268,25 @@ public class Utils {
         return LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy--HH-mm-ss")); 
     }
 
+    // Recursively collect all .soil files in dir and subdirs
+    private static File[] getAllSoilFiles(File dir, List<File> result) {
+        File[] files = dir.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    getAllSoilFiles(file, result);
+                } else if (file.getName().endsWith(".soil")) {
+                    result.add(file);
+                }
+            }
+        }
+        return result.toArray(new File[0]);
+    }
+
+    public static File[] getAllSoilFiles(File dir) {
+        return getAllSoilFiles(dir, new ArrayList<>());
+    }
+
     public static void main(String[] args) {
         // String path =
         // "src/main/resources/dataset/CoT/Football/02-04-2025--19-03-28/gen5/invalid.soil";

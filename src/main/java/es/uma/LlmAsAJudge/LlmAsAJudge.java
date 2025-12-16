@@ -33,7 +33,7 @@ public class LlmAsAJudge {
         Utils.saveFile("", OUTPUT_PATH, "responses-" + MODEL.name() + ".md", false);
 
         File instancesDir = new File(INSTANCES_PATH);
-        File[] soilFiles = getAllSoilFiles(instancesDir);
+        File[] soilFiles = Utils.getAllSoilFiles(instancesDir);
 
         if (soilFiles == null || soilFiles.length == 0) {
             throw new RuntimeException("No .soil files found in the Instances directory or its subdirectories.");
@@ -162,25 +162,6 @@ public class LlmAsAJudge {
         }
 
         return results;
-    }
-
-    // Recursively collect all .soil files in dir and subdirs
-    private static File[] getAllSoilFiles(File dir, List<File> result) {
-        File[] files = dir.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (file.isDirectory()) {
-                    getAllSoilFiles(file, result);
-                } else if (file.getName().endsWith(".soil")) {
-                    result.add(file);
-                }
-            }
-        }
-        return result.toArray(new File[0]);
-    }
-
-    private static File[] getAllSoilFiles(File dir) {
-        return getAllSoilFiles(dir, new ArrayList<>());
     }
 
     // Main method for testing
