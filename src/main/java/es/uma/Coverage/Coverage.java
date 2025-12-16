@@ -13,25 +13,25 @@ public class Coverage {
     private static final String OUTPUT_PATH = "./src/main/java/es/uma/Coverage/";
 
     public static void main(String[] args) {
-        calculateCoverage();
+        calculateCoverage("GPT4O-exp1");
     }
 
-    public static void calculateCoverage() {
+    public static void calculateCoverage(String dataset) {
         System.out.println("Calculating Simple Coverage...");
-        String simpleOutput = calculate("Simple");
+        String simpleOutput = calculate("Simple", dataset);
         Utils.saveFile(simpleOutput, OUTPUT_PATH, "simpleCoverage.md", false);
 
         System.out.println("Calculating CoT Coverage...");
-        String cotOutput = calculate("CoT");
+        String cotOutput = calculate("CoT", dataset);
         Utils.saveFile(cotOutput, OUTPUT_PATH, "cotCoverage.md", false);
 
         System.out.println("Coverage metrics calculated and saved.");
     }
 
-    private static String calculate(String type) {
+    private static String calculate(String type, String dataset) {
         boolean isCoT = type.equalsIgnoreCase("cot");
 
-        Map<String, Map<String, List<String>>> paths = Utils.getPaths(type);
+        Map<String, Map<String, List<String>>> paths = Utils.getPaths(type, dataset);
         StringBuilder output = new StringBuilder();
         output.append("# ").append(type).append("\n\n");
 

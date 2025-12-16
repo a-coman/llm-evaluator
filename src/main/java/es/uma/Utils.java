@@ -124,10 +124,10 @@ public class Utils {
         }
     }
 
-    public static Map<String, Map<String, List<String>>> getPaths(String type) {
+    public static Map<String, Map<String, List<String>>> getPaths(String type, String dataset) {
         Map<String, Map<String, List<String>>> simplePaths = new HashMap<>();
         Map<String, Map<String, List<String>>> cotPaths = new HashMap<>();
-        String datasetRoot = "./src/main/resources/dataset";
+        String datasetRoot = "./src/main/resources/dataset/"+ dataset +"/";
         File rootDir = new File(datasetRoot);
 
         File[] categoryDirs = rootDir.listFiles();
@@ -279,7 +279,7 @@ public class Utils {
 
         // Map<String, Map<String, List<String>>> simplePaths =
         // Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", "GPT4O");
         // System.out.println("SimplePaths:\n" + simplePaths + "\n\n");
         System.out.println(cotPaths.get("Bank").get("gen1"));
         // System.out.println("CoTPaths:\n" + cotPaths + "\n\n");

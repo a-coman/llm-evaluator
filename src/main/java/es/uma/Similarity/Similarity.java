@@ -175,10 +175,10 @@ public class Similarity {
         return output.toString().trim();
     }
 
-    public static void calculateSimilarities() {
+    public static void calculateSimilarities(String dataset) {
 
-        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple", dataset);
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", dataset);
         System.out.println("SimplePaths:\n" + simplePaths + "\n\n");
         System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
 

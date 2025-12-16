@@ -136,10 +136,10 @@ public class Shannon {
         return output.toString();
     }
 
-    public static void calculateShannon() {
+    public static void calculateShannon(String dataset) {
 
-        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple", dataset);
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", dataset);
 
         String simpleOutput = calculateSimple(simplePaths);
         Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Shannon/", "simpleShannon.md", false);

@@ -129,14 +129,14 @@ public class Semantics {
         return "";
     }
 
-    public static void calculateSemantics() {
+    public static void calculateSemantics(String dataset) {
 
-        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple", dataset);
 
         String simpleOutput = calculateSimple(simplePaths);
         Utils.saveFile(simpleOutput, "./src/main/java/es/uma/Semantics/", "simpleSemantics.md", false);
 
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", dataset);
         String cotOutput = calculateCoT(cotPaths);
         Utils.saveFile(cotOutput, "./src/main/java/es/uma/Semantics/", "cotSemantics.md", false);
         System.out.println("Semantics metrics calculated and saved.");

@@ -19,8 +19,8 @@ public class RandomSelector {
 
     public static void main(String[] args) {
 
-        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT");
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple", "GPT4O-exp1");
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", "GPT4O-exp1");
 
         // Used Seed.java to generate seeds
         // Fixed seeds for reproducibility
