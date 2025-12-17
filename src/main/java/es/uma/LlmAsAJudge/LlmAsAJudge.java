@@ -2,7 +2,6 @@ package es.uma.LlmAsAJudge;
 
 import es.uma.Table;
 import es.uma.Utils;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -11,12 +10,180 @@ import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.Collections;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.LongAdder;
 
 public class LlmAsAJudge {
 
-    public static void testPrompts() {
+    private static final Model MODEL = Model.QWEN_4B;
 
-        final Model MODEL = Model.GEMINI_3_PRO;
+    private static final Pattern RESPONSE_PATTERN = Pattern
+            .compile("(?im)^\\*\\*Response\\*\\*:\\s*(Realistic|Unrealistic)\\b");
+
+    private static String extractResponseLabelOrThrow(String response, String context) {
+        Matcher m = RESPONSE_PATTERN.matcher(response == null ? "" : response);
+        if (!m.find()) {
+            throw new IllegalArgumentException("Missing '**Response**: Realistic|Unrealistic' for " + context);
+        }
+        return m.group(1);
+    }
+
+    private static String deriveOutDirFromAnyPath(String anySoilPath, int parentLevelsUp) {
+        File dir = new File(anySoilPath);
+        for (int i = 0; i < parentLevelsUp; i++) {
+            dir = dir.getParentFile();
+            if (dir == null) {
+                throw new IllegalArgumentException(
+                        "Cannot derive output directory from path: " + anySoilPath + " (levels=" + parentLevelsUp
+                                + ")");
+            }
+        }
+        return dir.getPath() + "/";
+    }
+
+    private static Table buildSystemResultsTable(String title, List<String> systems,
+            Map<String, LongAdder> realisticBySystem,
+            Map<String, LongAdder> unrealisticBySystem) {
+
+        String[] rowsHeader = new String[systems.size() + 1];
+        String[] columnsHeader = { "Realistic", "Unrealistic", "Success Rate" };
+        float[][] tableData = new float[systems.size() + 1][3];
+
+        float totalRealistic = 0.0f;
+        float totalUnrealistic = 0.0f;
+
+        for (int i = 0; i < systems.size(); i++) {
+            String system = systems.get(i);
+
+            LongAdder r = realisticBySystem.get(system);
+            LongAdder u = unrealisticBySystem.get(system);
+
+            float realistic = r == null ? 0.0f : r.floatValue();
+            float unrealistic = u == null ? 0.0f : u.floatValue();
+            float total = realistic + unrealistic;
+
+            rowsHeader[i] = system;
+            tableData[i][0] = realistic;
+            tableData[i][1] = unrealistic;
+            tableData[i][2] = total == 0.0f ? 0.0f : (100.0f * (realistic / total));
+
+            totalRealistic += realistic;
+            totalUnrealistic += unrealistic;
+        }
+
+        int totalRow = systems.size();
+        rowsHeader[totalRow] = "Total";
+        tableData[totalRow][0] = totalRealistic;
+        tableData[totalRow][1] = totalUnrealistic;
+        float grandTotal = totalRealistic + totalUnrealistic;
+        tableData[totalRow][2] = grandTotal == 0.0f ? 0.0f : (100.0f * (totalRealistic / grandTotal));
+
+        return new Table(title, rowsHeader, columnsHeader, tableData);
+    }
+
+    private static void judgeBySystem(String modeTitle, String dataset,
+            Map<String, Map<String, List<String>>> paths,
+            boolean includeCategoryInResponses) {
+
+        if (paths == null || paths.isEmpty()) {
+            return;
+        }
+
+        // Derive output directory from any .soil path.
+        // Simple: .../Simple/system/date/gen1/output.soil -> go back 3 dirs =>
+        // .../Simple/system/
+        // CoT: .../CoT/system/date/gen/category.soil -> go back 3 dirs =>
+        // .../CoT/system/
+        String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
+        String outDir = deriveOutDirFromAnyPath(firstPath, 3);
+
+        // Responses markdown: contains all systems
+        StringBuffer responsesMd = new StringBuffer();
+        responsesMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
+
+        // Counts per system
+        Map<String, LongAdder> realisticBySystem = new ConcurrentHashMap<>();
+        Map<String, LongAdder> unrealisticBySystem = new ConcurrentHashMap<>();
+
+        for (String system : paths.keySet()) {
+            Map<String, List<String>> genMap = paths.get(system);
+            if (genMap == null || genMap.isEmpty()) {
+                continue;
+            }
+
+            String domainModelPath = "src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use";
+            String domainModel = Utils.readFile(domainModelPath);
+
+            // Initialize counters
+            LongAdder realistic = new LongAdder();
+            LongAdder unrealistic = new LongAdder();
+            realisticBySystem.put(system, realistic);
+            unrealisticBySystem.put(system, unrealistic);
+
+            responsesMd.append("# ").append(system).append("\n\n");
+
+            System.out.println("GenMap entryset: " + genMap.entrySet());
+
+            genMap.entrySet().stream().parallel().forEach(entry -> {
+                String gen = entry.getKey();
+                List<String> soilFiles = entry.getValue();
+                if (soilFiles == null || soilFiles.isEmpty()) {
+                    return;
+                }
+
+                // For Simple this will be 1 file (output.soil).
+                // For CoT this will be many category .soil files (baseline.soil, complex.soil,
+                // ...)
+                for (String filePath : soilFiles) {
+                    String instance = Utils.readFile(filePath);
+                    IJudge judge = Llms.getAgent(IJudge.class, MODEL);
+                    String response = judge.chat(domainModel, instance);
+                    System.out.println("Judged: " + system + "/" + gen + "/" + filePath);
+
+                    String label;
+                    String sectionName;
+                    if (includeCategoryInResponses) {
+                        String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
+                        label = extractResponseLabelOrThrow(response, system + "/" + gen + "/" + category);
+                        sectionName = gen + " / " + category;
+                    } else {
+                        label = extractResponseLabelOrThrow(response, system + "/" + gen);
+                        sectionName = gen;
+                    }
+
+                    if ("Realistic".equalsIgnoreCase(label)) {
+                        realistic.increment();
+                    } else {
+                        unrealistic.increment();
+                    }
+
+                    responsesMd.append("## ").append(sectionName).append("\n\n");
+                    responsesMd.append(response).append("\n\n");
+
+                }
+            });
+        }
+
+        // Build results table by system
+        List<String> systems = new ArrayList<>(realisticBySystem.keySet());
+        Collections.sort(systems);
+
+        Table resultsTable = buildSystemResultsTable(modeTitle + " / " + MODEL.name(), systems, realisticBySystem,
+                unrealisticBySystem);
+
+        StringBuffer resultsMd = new StringBuffer();
+        resultsMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
+        resultsMd.append(resultsTable.toMarkdown()).append("\n");
+
+        // Save in the mode/system directory
+        Utils.saveFile(responsesMd.toString(), outDir, "judge-responses.md", false);
+        Utils.saveFile(resultsMd.toString(), outDir, "judge-results.md", false);
+        // Save logs
+        Logger.save(outDir, "judge-logs.md", false);
+    }
+
+    public static void testPrompts() {
 
         final Map<String, String> PREFIX_TO_DOMAIN = new HashMap<>();
 
@@ -25,7 +192,8 @@ public class LlmAsAJudge {
         PREFIX_TO_DOMAIN.put("p", "pickupnet");
         PREFIX_TO_DOMAIN.put("h", "hotelmanagement");
 
-        final String OUTPUT_PATH = "src/main/java/es/uma/LlmAsAJudge/PromptTestInstances/Outputs/" + Utils.getTime() + "/";
+        final String OUTPUT_PATH = "src/main/java/es/uma/LlmAsAJudge/PromptTestInstances/Outputs/" + Utils.getTime()
+                + "/";
         final String INSTANCES_PATH = "src/main/java/es/uma/LlmAsAJudge/PromptTestInstances/Instances/";
         final String PROMPTS_PATH = "src/main/resources/prompts/";
 
@@ -82,7 +250,7 @@ public class LlmAsAJudge {
 
     private static float[][] getResults(String responses) {
         float[][] results = new float[3][4]; // rows: [0]=Realistic, [1]=Unrealistic, [2]=SuccessRate;
-                                             // cols: [0]=Real, [1]=Synthetic, [2]=Simple, [3]=CoT
+                                             // cols: [0]=Real, [1]=Synthetic, [2]=Simple, [3=CoT
 
         // Column indices map: 0=Real, 1=Synthetic, 2=Simple, 3=CoT
         Map<String, Integer> idToColumn = new HashMap<>();
@@ -164,18 +332,21 @@ public class LlmAsAJudge {
         return results;
     }
 
+    private static void judgeSimple(String dataset) {
+        judgeBySystem("Simple", dataset, Utils.getPaths("Simple", dataset), false);
+    }
+
+    private static void judgeCoT(String dataset) {
+        judgeBySystem("CoT", dataset, Utils.getPaths("CoT", dataset), true);
+    }
+
+    public static void judge(String dataset) {
+        judgeSimple(dataset);
+        judgeCoT(dataset);
+    }
+
     // Main method for testing
     public static void main(String[] args) {
-        // Create results table
-        final Model MODEL = Model.GEMINI_3_PRO;
-        final String OUTPUT_PATH = "src/main/java/es/uma/LlmAsAJudge/PromptTestInstances/Outputs/" + "09-12-2025--22-03-16" + "/";
-        String title = MODEL.name();
-        String[] rowsHeader = { "Realistic", "Unrealistic", "Success Rate" };
-        String[] columnsHeader = { "Real", "Synthetic", "Simple", "CoT" };
-        float[][] tableData = getResults(Utils.readFile(OUTPUT_PATH + "responses-" + MODEL.name() + ".md"));
-        Table resultsTable = new Table(title, rowsHeader, columnsHeader, tableData);
-
-        System.out.println(resultsTable.toMarkdown());
-        System.out.println("\n\n" + MODEL.name());
+        judge("GPT5-exp1");
     }
 }
