@@ -91,6 +91,35 @@ public class LlmAsAJudge {
             return;
         }
 
+        // Work item per SOIL file (so we can parallelize per file, not per gen)
+        final class WorkItem {
+            final String system;
+            final String gen;
+            final String filePath;
+            final String sectionName;
+            final String sortKey;
+            final String context;
+
+            WorkItem(String system, String gen, String filePath, String sectionName, String sortKey, String context) {
+                this.system = system;
+                this.gen = gen;
+                this.filePath = filePath;
+                this.sectionName = sectionName;
+                this.sortKey = sortKey;
+                this.context = context;
+            }
+        }
+
+        final class Section {
+            final String sortKey;
+            final String markdown;
+
+            Section(String sortKey, String markdown) {
+                this.sortKey = sortKey;
+                this.markdown = markdown;
+            }
+        }
+
         String outDir = null;
         StringBuffer responsesMd = new StringBuffer();
         StringBuffer resultsMd = new StringBuffer();
@@ -104,6 +133,11 @@ public class LlmAsAJudge {
 
         try {
             // Derive output directory from any .soil path.
+            // Works for:
+            // - Simple: .../Simple/<system>/<date>/<gen>/output.soil (levelsUp=3 =>
+            // <system>/)
+            // - CoT: .../CoT/<system>/<date>/<gen>/<category>.soil (levelsUp=3 =>
+            // <system>/)
             String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
             outDir = deriveOutDirFromAnyPath(firstPath, 3);
 
@@ -134,62 +168,76 @@ public class LlmAsAJudge {
 
                 responsesMd.append("# ").append(system).append("\n\n");
 
-                genMap.entrySet().stream().parallel().forEach(entry -> {
+                // Flatten all gens/files into per-file work items (so we can parallelize per
+                // file)
+                List<WorkItem> work = new ArrayList<>();
+                for (Map.Entry<String, List<String>> entry : genMap.entrySet()) {
                     String gen = entry.getKey();
                     List<String> soilFiles = entry.getValue();
                     if (soilFiles == null || soilFiles.isEmpty()) {
-                        return;
+                        continue;
                     }
-
-                    // Build a whole block locally, then append once (prevents interleaving)
-                    StringBuilder localBlock = new StringBuilder();
 
                     for (String filePath : soilFiles) {
-                        try {
-                            String instance = Utils.readFile(filePath);
-                            IJudge judge = Llms.getAgent(IJudge.class, MODEL);
-                            String response = judge.chat(domainModel, instance);
+                        String sectionName;
+                        String sortKey;
+                        String context;
 
-                            String label;
-                            String sectionName;
-                            if (includeCategoryInResponses) {
-                                String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
-                                label = extractResponseLabelOrThrow(response, system + "/" + gen + "/" + category);
-                                sectionName = gen + " / " + category;
-                            } else {
-                                label = extractResponseLabelOrThrow(response, system + "/" + gen);
-                                sectionName = gen;
-                            }
-
-                            if ("Realistic".equalsIgnoreCase(label)) {
-                                realistic.increment();
-                            } else {
-                                unrealistic.increment();
-                            }
-
-                            localBlock.append("## ").append(sectionName).append("\n\n");
-                            localBlock.append(response).append("\n\n");
-
-                            System.out.println("Judged: " + system + "/" + gen + "/" + filePath);
-
-                        } catch (Exception e) {
-                            String msg = "Error judging " + system + "/" + gen + " (" + filePath + "): "
-                                    + e.getClass().getSimpleName() + " - " + e.getMessage();
-                            errors.add(msg);
-
-                            localBlock.append("## ").append(gen);
-                            if (includeCategoryInResponses) {
-                                String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
-                                localBlock.append(" / ").append(category);
-                            }
-                            localBlock.append("\n\n");
-                            localBlock.append("**ERROR**: ").append(msg).append("\n\n");
+                        if (includeCategoryInResponses) {
+                            String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
+                            sectionName = gen + " / " + category;
+                            sortKey = gen + "/" + category;
+                            context = system + "/" + gen + "/" + category;
+                        } else {
+                            sectionName = gen;
+                            sortKey = gen;
+                            context = system + "/" + gen;
                         }
-                    }
 
-                    
-                    responsesMd.append(localBlock);
+                        work.add(new WorkItem(system, gen, filePath, sectionName, sortKey, context));
+                    }
+                }
+
+                // Judge *each soil file* in parallel
+                ConcurrentLinkedQueue<Section> sections = new ConcurrentLinkedQueue<>();
+                work.parallelStream().forEach(item -> {
+                    try {
+                        String instance = Utils.readFile(item.filePath);
+                        IJudge judge = Llms.getAgent(IJudge.class, MODEL);
+                        String response = judge.chat(domainModel, instance);
+
+                        String label = extractResponseLabelOrThrow(response, item.context);
+                        if ("Realistic".equalsIgnoreCase(label)) {
+                            realistic.increment();
+                        } else {
+                            unrealistic.increment();
+                        }
+
+                        StringBuilder md = new StringBuilder();
+                        md.append("## ").append(item.sectionName).append("\n\n");
+                        md.append(response).append("\n\n");
+                        sections.add(new Section(item.sortKey, md.toString()));
+
+                        System.out.println("Judged: " + item.system + "/" + item.gen + "/" + item.filePath);
+
+                    } catch (Exception e) {
+                        String msg = "Error judging " + item.system + "/" + item.gen + " (" + item.filePath + "): "
+                                + e.getClass().getSimpleName() + " - " + e.getMessage();
+                        errors.add(msg);
+
+                        StringBuilder md = new StringBuilder();
+                        md.append("## ").append(item.sectionName).append("\n\n");
+                        md.append("**ERROR**: ").append(msg).append("\n\n");
+                        sections.add(new Section(item.sortKey, md.toString()));
+                    }
                 });
+
+                // Append this system's sections in a stable order (gen/category)
+                List<Section> ordered = new ArrayList<>(sections);
+                ordered.sort((a, b) -> a.sortKey.compareToIgnoreCase(b.sortKey));
+                for (Section s : ordered) {
+                    responsesMd.append(s.markdown);
+                }
             }
 
             // Build results table by system (even if partial)
@@ -203,11 +251,15 @@ public class LlmAsAJudge {
             resultsMd.append(resultsTable.toMarkdown()).append("\n");
 
             if (!errors.isEmpty()) {
-                responsesMd.append("\n# Errors\n\n");
+                StringBuilder errMd = new StringBuilder();
+                errMd.append("# Errors\n\n");
                 for (String err : errors) {
-                    responsesMd.append("- ").append(err).append("\n");
+                    errMd.append("- ").append(err).append("\n");
                 }
-                responsesMd.append("\n");
+                errMd.append("\n");
+
+                // Save alongside outputs so you can see what got skipped/failed
+                Utils.saveFile(errMd.toString(), outDir, "errors-" + MODEL.name() + ".md", false);
             }
 
         } finally {
@@ -217,8 +269,6 @@ public class LlmAsAJudge {
 
             Utils.saveFile(responsesMd.toString(), safeOutDir, "judge-responses.md", false);
 
-            // Save results if we managed to build any; otherwise save an error stub so the
-            // run is visible.
             if (resultsMd.length() > 0) {
                 Utils.saveFile(resultsMd.toString(), safeOutDir, "judge-results.md", false);
             } else {
