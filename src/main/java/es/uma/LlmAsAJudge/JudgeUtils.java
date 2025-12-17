@@ -108,8 +108,9 @@ public class JudgeUtils {
         return new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
     }
 
-    public static WorkItem toWorkItem(String system, String gen, String filePath, boolean includeCategoryInResponses) {
-        if (includeCategoryInResponses) {
+    public static WorkItem toWorkItem(String system, String gen, String filePath, String modeTitle) {
+        // If CoT mode, include category in section name and sort key
+        if ("CoT".equalsIgnoreCase(modeTitle)) {
             String category = safeCategoryFromFilePath(filePath);
             String sectionName = gen + " / " + category;
             String sortKey = gen + "/" + category;

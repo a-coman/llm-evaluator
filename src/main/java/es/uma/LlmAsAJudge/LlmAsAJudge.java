@@ -17,9 +17,7 @@ public class LlmAsAJudge {
 
     private static final Model MODEL = Model.QWEN_4B;
 
-    private static void judgeBySystem(String modeTitle, String dataset,
-            Map<String, Map<String, List<String>>> paths,
-            boolean includeCategoryInResponses) {
+    private static void judgeBySystem(String modeTitle, String dataset, Map<String, Map<String, List<String>>> paths) {
 
         if (paths == null || paths.isEmpty()) {
             return;
@@ -38,12 +36,10 @@ public class LlmAsAJudge {
         ConcurrentLinkedQueue<String> errors = new ConcurrentLinkedQueue<>();
 
         try {
-            // Derive output directory from any .soil path.
+            // Derive output directory from .soil path.
             // Works for:
-            // - Simple: .../Simple/<system>/<date>/<gen>/output.soil (levelsUp=3 =>
-            // <system>/)
-            // - CoT: .../CoT/<system>/<date>/<gen>/<category>.soil (levelsUp=3 =>
-            // <system>/)
+            // - Simple: .../Simple/<system>/<date>/<gen>/output.soil (levelsUp=4 => /Simple/)
+            // - CoT: .../CoT/<system>/<date>/<gen>/<category>.soil (levelsUp=4 => /CoT/)
             String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
             outDir = JudgeUtils.deriveOutDirFromAnyPath(firstPath, 4);
 
@@ -96,7 +92,7 @@ public class LlmAsAJudge {
                     }
 
                     for (String filePath : soilFiles) {
-                        work.add(JudgeUtils.toWorkItem(system, gen, filePath, includeCategoryInResponses));
+                        work.add(JudgeUtils.toWorkItem(system, gen, filePath, modeTitle));
                     }
                 }
 
@@ -188,17 +184,9 @@ public class LlmAsAJudge {
         }
     }
 
-    private static void judgeSimple(String dataset) {
-        judgeBySystem("Simple", dataset, Utils.getPaths("Simple", dataset), false);
-    }
-
-    private static void judgeCoT(String dataset) {
-        judgeBySystem("CoT", dataset, Utils.getPaths("CoT", dataset), true);
-    }
-
     public static void judge(String dataset) {
-        judgeSimple(dataset);
-        judgeCoT(dataset);
+        judgeBySystem("Simple", dataset, Utils.getPaths("Simple", dataset));
+        judgeBySystem("CoT", dataset, Utils.getPaths("CoT", dataset));
     }
 
     // Main method for testing
