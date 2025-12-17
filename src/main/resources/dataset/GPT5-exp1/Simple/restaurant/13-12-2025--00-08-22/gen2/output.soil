@@ -1,0 +1,212 @@
+!new Restaurant('r3')
+!r3.name := 'Seaside Diner'
+
+!new Owner('o4')
+!o4.name := 'Quinn Harper'
+!o4.percentageShares := 70
+!new Owner('o5')
+!o5.name := 'Renee Valdez'
+!o5.percentageShares := 30
+
+!insert (r3, o4) into RestaurantOwner
+!insert (r3, o5) into RestaurantOwner
+
+!new HeadWaiter('hw3')
+!hw3.name := 'Samuel Wright'
+!hw3.dateOfBirth := Date('1984-01-10')
+!hw3.phoneNumber := '+1-555-3001'
+
+!new Waiter('w4')
+!w4.name := 'Elena Conti'
+!w4.dateOfBirth := Date('1998-03-03')
+!w4.phoneNumber := '+1-555-3002'
+!w4.spokenLanguage := #Italian
+!new Waiter('w5')
+!w5.name := 'Liam OConnor'
+!w5.dateOfBirth := Date('1995-10-19')
+!w5.phoneNumber := '+1-555-3003'
+!w5.spokenLanguage := #English
+
+!insert (hw3, w4) into HeadWaiterWaiter
+!insert (hw3, w5) into HeadWaiterWaiter
+
+!new Chef('ch3')
+!ch3.name := 'Mei Lin'
+!ch3.dateOfBirth := Date('1987-06-22')
+!ch3.phoneNumber := '+1-555-3101'
+!new Chef('ch4')
+!ch4.name := 'Antonio Vega'
+!ch4.dateOfBirth := Date('1978-09-12')
+!ch4.phoneNumber := '+1-555-3102'
+
+!new Cook('ck4')
+!ck4.name := 'Nora Shah'
+!ck4.dateOfBirth := Date('2001-11-30')
+!ck4.phoneNumber := '+1-555-3201'
+!ck4.yearsOfExperience := 1
+!new Cook('ck5')
+!ck5.name := 'Dmitri Volkov'
+!ck5.dateOfBirth := Date('1999-02-14')
+!ck5.phoneNumber := '+1-555-3202'
+!ck5.yearsOfExperience := 0
+!new Cook('ck6')
+!ck6.name := 'Chloe Bennett'
+!ck6.dateOfBirth := Date('1991-07-07')
+!ck6.phoneNumber := '+1-555-3203'
+!ck6.yearsOfExperience := 9
+
+!insert (ch3, ck4) into ChefCook
+!insert (ch3, ck5) into ChefCook
+!insert (ch4, ck6) into ChefCook
+
+!new Table('t101')
+!t101.number := 101
+!t101.description := 'Patio four-top A'
+!t101.capacity := 4
+!new Table('t102')
+!t102.number := 102
+!t102.description := 'Patio four-top B'
+!t102.capacity := 4
+!new Table('t103')
+!t103.number := 103
+!t103.description := 'Inside three-top'
+!t103.capacity := 3
+!new Table('t104')
+!t104.number := 104
+!t104.description := 'Banquet eight-top'
+!t104.capacity := 8
+!new Table('t105')
+!t105.number := 105
+!t105.description := 'Banquet four-top'
+!t105.capacity := 4
+
+!new RegularCustomer('rc4')
+!rc4.name := 'Paula Stein'
+!rc4.prefferedLanguage := #German
+
+!new Individual('ind4')
+!ind4.time := Time('17:00')
+!ind4.date := Date('2025-12-20')
+!ind4.numberPeople := 8
+!ind4.name := 'Paula Stein'
+!ind4.phoneNumber := '+1-555-4001'
+!ind4.number := 30001
+!ind4.seating := #Patio
+!ind4.smoking := #Smoking
+
+!new Individual('ind5')
+!ind5.time := Time('21:45')
+!ind5.date := Date('2025-12-20')
+!ind5.numberPeople := 3
+!ind5.name := 'Late Snack'
+!ind5.phoneNumber := '+1-555-4002'
+!ind5.number := 30002
+!ind5.seating := #Inside
+!ind5.smoking := #NonSmoking
+
+!new Banquet('ban3')
+!ban3.time := Time('13:00')
+!ban3.date := Date('2025-12-21')
+!ban3.numberPeople := 12
+!ban3.name := 'Community Center'
+!ban3.phoneNumber := '+1-555-5001'
+!ban3.number := 40001
+!ban3.groupName := 'Holiday Volunteers'
+!ban3.paymentMethod := #Cash
+!ban3.busService := false
+
+!insert (r3, ind4) into RestaurantReservation
+!insert (r3, ind5) into RestaurantReservation
+!insert (r3, ban3) into RestaurantReservation
+
+!insert (ind4, rc4) into ReservationCustomer
+
+!insert (ind4, w4) into ReservationWaiter
+!insert (ind4, w5) into ReservationWaiter
+!insert (ind5, w5) into ReservationWaiter
+!insert (ban3, w4) into ReservationWaiter
+
+!insert (ind4, t101) into ReservationTable
+!insert (ind4, t102) into ReservationTable
+!insert (ind5, t103) into ReservationTable
+!insert (ban3, t104) into ReservationTable
+!insert (ban3, t105) into ReservationTable
+
+!new Allergen('a10')
+!a10.type := #Seafood
+!new Allergen('a11')
+!a11.type := #Gluten
+!new Allergen('a12')
+!a12.type := #Nuts
+
+!new FoodItem('f20')
+!f20.number := 620
+!f20.description := 'Pasta sheets'
+!f20.purchaseFlag := true
+!f20.unit := #Sheet
+!new FoodItem('f21')
+!f21.number := 621
+!f21.description := 'Mixed nuts'
+!f21.purchaseFlag := true
+!f21.unit := #Ounce
+!new FoodItem('f22')
+!f22.number := 622
+!f22.description := 'Salmon fillet'
+!f22.purchaseFlag := false
+!f22.unit := #Pound
+!new FoodItem('f23')
+!f23.number := 623
+!f23.description := 'Lemon'
+!f23.purchaseFlag := true
+!f23.unit := #Dozen
+
+!insert (f20, a11) into FoodItemAllergen
+!insert (f21, a12) into FoodItemAllergen
+!insert (f22, a10) into FoodItemAllergen
+
+!new MenuItem('mi10')
+!mi10.description := 'Lemon Herb Salmon'
+!mi10.prepTime := 14.0
+!mi10.classification := #Main
+!new MenuItem('mi11')
+!mi11.description := 'Nut Brittle'
+!mi11.prepTime := 9.0
+!mi11.classification := #Dessert
+!new MenuItem('mi12')
+!mi12.description := 'Pasta Sampler'
+!mi12.prepTime := 16.5
+!mi12.classification := #Main
+
+!insert (mi10, ch4) into MenuItemChef
+!insert (mi11, ch3) into MenuItemChef
+!insert (mi12, ch4) into MenuItemChef
+
+!insert (mi10, f22) into MenuItemFoodItem
+!insert (mi10, f23) into MenuItemFoodItem
+!insert (mi11, f21) into MenuItemFoodItem
+!insert (mi12, f20) into MenuItemFoodItem
+!insert (mi12, f23) into MenuItemFoodItem
+
+!new ItemOrder('io10')
+!io10.time := Time('17:10')
+!new ItemOrder('io11')
+!io11.time := Time('17:12')
+!new ItemOrder('io12')
+!io12.time := Time('13:15')
+!new ItemOrder('io13')
+!io13.time := Time('13:18')
+
+!insert (ind4, io10) into ReservationItemOrdered
+!insert (ind4, io11) into ReservationItemOrdered
+!insert (ban3, io12) into ReservationItemOrdered
+!insert (ban3, io13) into ReservationItemOrdered
+
+!insert (io10, mi10) into ItemOrderMenuItem
+!insert (io11, mi11) into ItemOrderMenuItem
+!insert (io12, mi12) into ItemOrderMenuItem
+!insert (io13, mi10) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr10')
+!dr10.diet := #Halal
+!new ReportedAllergy('ra10')
+!ra10.allergen := #Nuts

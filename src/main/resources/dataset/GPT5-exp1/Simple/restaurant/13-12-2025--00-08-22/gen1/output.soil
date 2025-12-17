@@ -1,0 +1,342 @@
+!new Restaurant('r1')
+!r1.name := 'Bistro Nova'
+!new Restaurant('r2')
+!r2.name := 'Patio Grill'
+
+!new Owner('o1')
+!o1.name := 'Amelia Hart'
+!o1.percentageShares := 60
+!new Owner('o2')
+!o2.name := 'Noah Kim'
+!o2.percentageShares := 40
+!new Owner('o3')
+!o3.name := 'Lucia Rossi'
+!o3.percentageShares := 100
+
+!insert (r1, o1) into RestaurantOwner
+!insert (r1, o2) into RestaurantOwner
+!insert (r2, o3) into RestaurantOwner
+
+!new HeadWaiter('hw1')
+!hw1.name := 'Ethan Cole'
+!hw1.dateOfBirth := Date('1982-03-14')
+!hw1.phoneNumber := '+1-555-0101'
+!new HeadWaiter('hw2')
+!hw2.name := 'Sofia Nguyen'
+!hw2.dateOfBirth := Date('1979-11-02')
+!hw2.phoneNumber := '+1-555-0102'
+
+!new Waiter('w1')
+!w1.name := 'Mia Park'
+!w1.dateOfBirth := Date('1996-05-20')
+!w1.phoneNumber := '+1-555-0201'
+!w1.spokenLanguage := #English
+!new Waiter('w2')
+!w2.name := 'Diego Alvarez'
+!w2.dateOfBirth := Date('1993-09-08')
+!w2.phoneNumber := '+1-555-0202'
+!w2.spokenLanguage := #Spanish
+!new Waiter('w3')
+!w3.name := 'Greta Fischer'
+!w3.dateOfBirth := Date('1990-01-29')
+!w3.phoneNumber := '+1-555-0203'
+!w3.spokenLanguage := #German
+
+!insert (hw1, w1) into HeadWaiterWaiter
+!insert (hw1, w2) into HeadWaiterWaiter
+!insert (hw2, w3) into HeadWaiterWaiter
+
+!new Chef('ch1')
+!ch1.name := 'Hiro Tanaka'
+!ch1.dateOfBirth := Date('1985-07-17')
+!ch1.phoneNumber := '+1-555-0301'
+!new Chef('ch2')
+!ch2.name := 'Claire Dubois'
+!ch2.dateOfBirth := Date('1988-12-05')
+!ch2.phoneNumber := '+1-555-0302'
+
+!new Cook('ck1')
+!ck1.name := 'Ben Ortiz'
+!ck1.dateOfBirth := Date('2000-02-10')
+!ck1.phoneNumber := '+1-555-0401'
+!ck1.yearsOfExperience := 0
+!new Cook('ck2')
+!ck2.name := 'Ava Singh'
+!ck2.dateOfBirth := Date('1997-04-23')
+!ck2.phoneNumber := '+1-555-0402'
+!ck2.yearsOfExperience := 5
+!new Cook('ck3')
+!ck3.name := 'Marco Bianchi'
+!ck3.dateOfBirth := Date('1992-08-31')
+!ck3.phoneNumber := '+1-555-0403'
+!ck3.yearsOfExperience := 12
+
+!insert (ch1, ck1) into ChefCook
+!insert (ch1, ck2) into ChefCook
+!insert (ch2, ck3) into ChefCook
+
+!new Manager('m1')
+!m1.name := 'Priya Desai'
+!m1.dateOfBirth := Date('1981-06-09')
+!m1.phoneNumber := '+1-555-0501'
+
+!new Table('t1')
+!t1.number := 1
+!t1.description := 'Window two-top'
+!t1.capacity := 2
+!new Table('t2')
+!t2.number := 2
+!t2.description := 'Booth'
+!t2.capacity := 4
+!new Table('t5')
+!t5.number := 5
+!t5.description := 'Single seat (bar)'
+!t5.capacity := 1
+!new Table('t6')
+!t6.number := 6
+!t6.description := 'Small patio two-top'
+!t6.capacity := 2
+
+!new Table('t3')
+!t3.number := 3
+!t3.description := 'Round table'
+!t3.capacity := 6
+!new Table('t4')
+!t4.number := 10
+!t4.description := 'Banquet section A'
+!t4.capacity := 10
+!new Table('t7')
+!t7.number := 11
+!t7.description := 'Large table'
+!t7.capacity := 6
+!new Table('t8')
+!t8.number := 12
+!t8.description := 'Banquet section B'
+!t8.capacity := 4
+
+!new RegularCustomer('rc1')
+!rc1.name := 'Jordan Lee'
+!rc1.prefferedLanguage := #English
+!new RegularCustomer('rc2')
+!rc2.name := 'Isabella Martin'
+!rc2.prefferedLanguage := #Italian
+!new RegularCustomer('rc3')
+!rc3.name := 'Karim Haddad'
+!rc3.prefferedLanguage := #German
+
+!new Individual('ind1')
+!ind1.time := Time('18:30')
+!ind1.date := Date('2025-12-12')
+!ind1.numberPeople := 2
+!ind1.name := 'Jordan Lee'
+!ind1.phoneNumber := '+1-555-1001'
+!ind1.number := 10001
+!ind1.seating := #Inside
+!ind1.smoking := #NonSmoking
+
+!new Individual('ind2')
+!ind2.time := Time('19:15')
+!ind2.date := Date('2025-12-12')
+!ind2.numberPeople := 5
+!ind2.name := 'Walk-in Group'
+!ind2.phoneNumber := '+1-555-1002'
+!ind2.number := 10002
+!ind2.seating := #Patio
+!ind2.smoking := #NonSmoking
+
+!new Banquet('ban1')
+!ban1.time := Time('20:00')
+!ban1.date := Date('2025-12-13')
+!ban1.numberPeople := 18
+!ban1.name := 'Isabella Martin'
+!ban1.phoneNumber := '+1-555-2001'
+!ban1.number := 20001
+!ban1.groupName := 'Martin Anniversary'
+!ban1.paymentMethod := #CreditCard
+!ban1.busService := true
+
+!new Banquet('ban2')
+!ban2.time := Time('12:00')
+!ban2.date := Date('2025-12-14')
+!ban2.numberPeople := 6
+!ban2.name := 'Karim Haddad'
+!ban2.phoneNumber := '+1-555-2002'
+!ban2.number := 20002
+!ban2.groupName := 'Business Lunch'
+!ban2.paymentMethod := #Cash
+!ban2.busService := false
+
+!new Individual('ind3')
+!ind3.time := Time('12:10')
+!ind3.date := Date('2025-12-14')
+!ind3.numberPeople := 1
+!ind3.name := 'Solo Guest'
+!ind3.phoneNumber := '+1-555-1003'
+!ind3.number := 10003
+!ind3.seating := #Inside
+!ind3.smoking := #NonSmoking
+
+!insert (r1, ind1) into RestaurantReservation
+!insert (r1, ind2) into RestaurantReservation
+!insert (r2, ban1) into RestaurantReservation
+!insert (r2, ban2) into RestaurantReservation
+
+!insert (ind1, rc1) into ReservationCustomer
+!insert (ban1, rc2) into ReservationCustomer
+!insert (ban2, rc3) into ReservationCustomer
+
+!insert (ind1, w1) into ReservationWaiter
+!insert (ind2, w2) into ReservationWaiter
+!insert (ind2, w1) into ReservationWaiter
+!insert (ban1, w3) into ReservationWaiter
+!insert (ban2, w3) into ReservationWaiter
+!insert (ban2, w2) into ReservationWaiter
+!insert (ind3, w1) into ReservationWaiter
+
+!insert (ind1, t1) into ReservationTable
+!insert (ind2, t2) into ReservationTable
+!insert (ind2, t6) into ReservationTable
+!insert (ban1, t4) into ReservationTable
+!insert (ban1, t3) into ReservationTable
+!insert (ban1, t8) into ReservationTable
+!insert (ban2, t7) into ReservationTable
+!insert (ind3, t5) into ReservationTable
+
+!new BusDriver('bd1')
+!bd1.name := 'Owen Price'
+!bd1.dateOfBirth := Date('1975-10-21')
+!bd1.phoneNumber := '+1-555-0601'
+!bd1.driverLicenseNr := 'D-8831-XY'
+!new BusDriver('bd2')
+!bd2.name := 'Nina Petrova'
+!bd2.dateOfBirth := Date('1980-04-12')
+!bd2.phoneNumber := '+1-555-0602'
+!bd2.driverLicenseNr := 'D-7742-ZZ'
+
+!insert (ban1, bd1) into BanquetBusDriver
+!insert (ban1, bd2) into BanquetBusDriver
+
+!new Allergen('a1')
+!a1.type := #Lactose
+!new Allergen('a2')
+!a2.type := #Gluten
+!new Allergen('a3')
+!a3.type := #Nuts
+!new Allergen('a4')
+!a4.type := #Seafood
+
+!new FoodItem('f1')
+!f1.number := 101
+!f1.description := 'Romaine lettuce'
+!f1.purchaseFlag := true
+!f1.unit := #Gram
+!new FoodItem('f2')
+!f2.number := 102
+!f2.description := 'Parmesan cheese'
+!f2.purchaseFlag := true
+!f2.unit := #Ounce
+!new FoodItem('f3')
+!f3.number := 201
+!f3.description := 'Ribeye steak'
+!f3.purchaseFlag := false
+!f3.unit := #Pound
+!new FoodItem('f4')
+!f4.number := 301
+!f4.description := 'Wheat flour'
+!f4.purchaseFlag := true
+!f4.unit := #Pound
+!new FoodItem('f5')
+!f5.number := 302
+!f5.description := 'Sugar'
+!f5.purchaseFlag := true
+!f5.unit := #Gram
+!new FoodItem('f6')
+!f6.number := 401
+!f6.description := 'Tea leaves'
+!f6.purchaseFlag := true
+!f6.unit := #Ounce
+!new FoodItem('f7')
+!f7.number := 303
+!f7.description := 'Almonds'
+!f7.purchaseFlag := true
+!f7.unit := #Ounce
+!new FoodItem('f8')
+!f8.number := 501
+!f8.description := 'Shrimp'
+!f8.purchaseFlag := false
+!f8.unit := #Pound
+
+!insert (f2, a1) into FoodItemAllergen
+!insert (f4, a2) into FoodItemAllergen
+!insert (f7, a3) into FoodItemAllergen
+!insert (f8, a4) into FoodItemAllergen
+
+!new MenuItem('mi1')
+!mi1.description := 'Caesar Salad'
+!mi1.prepTime := 7.5
+!mi1.classification := #Apetizer
+!new MenuItem('mi2')
+!mi2.description := 'Ribeye Steak'
+!mi2.prepTime := 18.0
+!mi2.classification := #Main
+!new MenuItem('mi3')
+!mi3.description := 'Tiramisu'
+!mi3.prepTime := 10.0
+!mi3.classification := #Dessert
+!new MenuItem('mi4')
+!mi4.description := 'Iced Tea'
+!mi4.prepTime := 2.0
+!mi4.classification := #Beverage
+!new MenuItem('mi5')
+!mi5.description := 'Shrimp Cocktail'
+!mi5.prepTime := 6.0
+!mi5.classification := #Apetizer
+
+!insert (mi1, ch1) into MenuItemChef
+!insert (mi2, ch2) into MenuItemChef
+!insert (mi3, ch1) into MenuItemChef
+!insert (mi4, ch2) into MenuItemChef
+!insert (mi5, ch2) into MenuItemChef
+
+!insert (mi1, f1) into MenuItemFoodItem
+!insert (mi1, f2) into MenuItemFoodItem
+!insert (mi2, f3) into MenuItemFoodItem
+!insert (mi3, f2) into MenuItemFoodItem
+!insert (mi3, f4) into MenuItemFoodItem
+!insert (mi3, f5) into MenuItemFoodItem
+!insert (mi3, f7) into MenuItemFoodItem
+!insert (mi4, f6) into MenuItemFoodItem
+!insert (mi5, f8) into MenuItemFoodItem
+
+!new ItemOrder('io1')
+!io1.time := Time('18:40')
+!new ItemOrder('io2')
+!io2.time := Time('19:05')
+!new ItemOrder('io3')
+!io3.time := Time('20:10')
+!new ItemOrder('io4')
+!io4.time := Time('20:12')
+!new ItemOrder('io5')
+!io5.time := Time('12:15')
+
+!insert (ind1, io1) into ReservationItemOrdered
+!insert (ind1, io2) into ReservationItemOrdered
+!insert (ban1, io3) into ReservationItemOrdered
+!insert (ban1, io4) into ReservationItemOrdered
+!insert (ind3, io5) into ReservationItemOrdered
+
+!insert (io1, mi1) into ItemOrderMenuItem
+!insert (io2, mi2) into ItemOrderMenuItem
+!insert (io3, mi2) into ItemOrderMenuItem
+!insert (io4, mi4) into ItemOrderMenuItem
+!insert (io5, mi5) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr1')
+!dr1.diet := #Vegan
+!new DietaryRequirement('dr2')
+!dr2.diet := #Kosher
+
+!new ReportedAllergy('ra1')
+!ra1.allergen := #Gluten
+!new ReportedAllergy('ra2')
+!ra2.allergen := #Seafood

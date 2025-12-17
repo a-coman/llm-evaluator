@@ -1,0 +1,195 @@
+!new Restaurant('r4')
+!r4.name := 'Urban Spice'
+
+!new Owner('o6')
+!o6.name := 'Harper Mills'
+!o6.percentageShares := 25
+!new Owner('o7')
+!o7.name := 'Yuki Sato'
+!o7.percentageShares := 25
+!new Owner('o8')
+!o8.name := 'Mateo Silva'
+!o8.percentageShares := 25
+!new Owner('o9')
+!o9.name := 'Aisha Rahman'
+!o9.percentageShares := 25
+
+!insert (r4, o6) into RestaurantOwner
+!insert (r4, o7) into RestaurantOwner
+!insert (r4, o8) into RestaurantOwner
+!insert (r4, o9) into RestaurantOwner
+
+!new HeadWaiter('hw4')
+!hw4.name := 'Tessa Morgan'
+!hw4.dateOfBirth := Date('1986-02-28')
+!hw4.phoneNumber := '+1-555-7001'
+
+!new Waiter('w6')
+!w6.name := 'Carlos Mendez'
+!w6.dateOfBirth := Date('1999-06-15')
+!w6.phoneNumber := '+1-555-7002'
+!w6.spokenLanguage := #Spanish
+!new Waiter('w7')
+!w7.name := 'Hannah Klein'
+!w7.dateOfBirth := Date('1994-09-01')
+!w7.phoneNumber := '+1-555-7003'
+!w7.spokenLanguage := #German
+
+!insert (hw4, w6) into HeadWaiterWaiter
+!insert (hw4, w7) into HeadWaiterWaiter
+
+!new Chef('ch5')
+!ch5.name := 'Ravi Patel'
+!ch5.dateOfBirth := Date('1983-08-19')
+!ch5.phoneNumber := '+1-555-7101'
+
+!new Cook('ck7')
+!ck7.name := 'Jun Park'
+!ck7.dateOfBirth := Date('2002-01-05')
+!ck7.phoneNumber := '+1-555-7201'
+!ck7.yearsOfExperience := 0
+!new Cook('ck8')
+!ck8.name := 'Sara Nordin'
+!ck8.dateOfBirth := Date('1996-12-11')
+!ck8.phoneNumber := '+1-555-7202'
+!ck8.yearsOfExperience := 3
+
+!insert (ch5, ck7) into ChefCook
+!insert (ch5, ck8) into ChefCook
+
+!new Table('t201')
+!t201.number := 201
+!t201.description := 'Inside four-top'
+!t201.capacity := 4
+!new Table('t202')
+!t202.number := 202
+!t202.description := 'High-top five seats'
+!t202.capacity := 5
+!new Table('t203')
+!t203.number := 203
+!t203.description := 'Patio four-top'
+!t203.capacity := 4
+!new Table('t204')
+!t204.number := 204
+!t204.description := 'Chef counter single'
+!t204.capacity := 1
+
+!new RegularCustomer('rc5')
+!rc5.name := 'Nadia Gomez'
+!rc5.prefferedLanguage := #Spanish
+
+!new Individual('ind6')
+!ind6.time := Time('18:05')
+!ind6.date := Date('2025-12-22')
+!ind6.numberPeople := 4
+!ind6.name := 'Nadia Gomez'
+!ind6.phoneNumber := '+1-555-8001'
+!ind6.number := 50001
+!ind6.seating := #Inside
+!ind6.smoking := #NonSmoking
+
+!new Banquet('ban4')
+!ban4.time := Time('19:30')
+!ban4.date := Date('2025-12-22')
+!ban4.numberPeople := 9
+!ban4.name := 'Event Coordinator'
+!ban4.phoneNumber := '+1-555-8002'
+!ban4.number := 60001
+!ban4.groupName := 'Startup Demo Night'
+!ban4.paymentMethod := #CreditCard
+!ban4.busService := true
+
+!new Individual('ind7')
+!ind7.time := Time('11:00')
+!ind7.date := Date('2025-12-23')
+!ind7.numberPeople := 1
+!ind7.name := 'Anonymous'
+!ind7.phoneNumber := '+1-555-8003'
+!ind7.number := 50002
+!ind7.seating := #Patio
+!ind7.smoking := #Smoking
+
+!insert (r4, ind6) into RestaurantReservation
+!insert (r4, ban4) into RestaurantReservation
+
+!insert (ind6, rc5) into ReservationCustomer
+
+!insert (ind6, w6) into ReservationWaiter
+!insert (ban4, w7) into ReservationWaiter
+!insert (ban4, w6) into ReservationWaiter
+!insert (ind7, w6) into ReservationWaiter
+
+!insert (ind6, t201) into ReservationTable
+!insert (ban4, t202) into ReservationTable
+!insert (ban4, t203) into ReservationTable
+!insert (ind7, t204) into ReservationTable
+
+!new BusDriver('bd3')
+!bd3.name := 'Viktor Ilic'
+!bd3.dateOfBirth := Date('1972-04-06')
+!bd3.phoneNumber := '+1-555-9001'
+!bd3.driverLicenseNr := 'BUS-44109'
+
+!insert (ban4, bd3) into BanquetBusDriver
+
+!new Allergen('a20')
+!a20.type := #Lactose
+!new Allergen('a21')
+!a21.type := #Nuts
+
+!new FoodItem('f30')
+!f30.number := 900
+!f30.description := 'Creamy pesto base'
+!f30.purchaseFlag := false
+!f30.unit := #Ounce
+!new FoodItem('f31')
+!f31.number := 901
+!f31.description := 'Butter'
+!f31.purchaseFlag := true
+!f31.unit := #Ounce
+!new FoodItem('f32')
+!f32.number := 902
+!f32.description := 'Cashews'
+!f32.purchaseFlag := true
+!f32.unit := #Ounce
+
+!insert (f30, a20) into FoodItemAllergen
+!insert (f30, a21) into FoodItemAllergen
+!insert (f31, a20) into FoodItemAllergen
+!insert (f32, a21) into FoodItemAllergen
+
+!new MenuItem('mi20')
+!mi20.description := 'Creamy Pesto Gnocchi'
+!mi20.prepTime := 12.0
+!mi20.classification := #Main
+!new MenuItem('mi21')
+!mi21.description := 'Roasted Cashew Tart'
+!mi21.prepTime := 8.5
+!mi21.classification := #Dessert
+
+!insert (mi20, ch5) into MenuItemChef
+!insert (mi21, ch5) into MenuItemChef
+
+!insert (mi20, f30) into MenuItemFoodItem
+!insert (mi20, f31) into MenuItemFoodItem
+!insert (mi21, f32) into MenuItemFoodItem
+
+!new ItemOrder('io20')
+!io20.time := Time('18:15')
+!new ItemOrder('io21')
+!io21.time := Time('19:45')
+!new ItemOrder('io22')
+!io22.time := Time('19:47')
+
+!insert (ind6, io20) into ReservationItemOrdered
+!insert (ban4, io21) into ReservationItemOrdered
+!insert (ban4, io22) into ReservationItemOrdered
+
+!insert (io20, mi20) into ItemOrderMenuItem
+!insert (io21, mi21) into ItemOrderMenuItem
+!insert (io22, mi21) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr20')
+!dr20.diet := #Vegetarian
+!new ReportedAllergy('ra20')
+!ra20.allergen := #Nuts
