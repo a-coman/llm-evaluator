@@ -40,6 +40,8 @@ public class Llms {
                 .listeners(List.of(new Listener()))
                 .maxRetries(10)
                 .timeout(Duration.ofSeconds(180))
+                .temperature(model.getTemperature())
+                .maxTokens(model.getMaxTokens())
                 .build();
         }
         
