@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import java.util.Collections;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.LongAdder;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class LlmAsAJudge {
 
@@ -90,97 +91,146 @@ public class LlmAsAJudge {
             return;
         }
 
-        // Derive output directory from any .soil path.
-        // Simple: .../Simple/system/date/gen1/output.soil -> go back 3 dirs =>
-        // .../Simple/system/
-        // CoT: .../CoT/system/date/gen/category.soil -> go back 3 dirs =>
-        // .../CoT/system/
-        String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
-        String outDir = deriveOutDirFromAnyPath(firstPath, 3);
-
-        // Responses markdown: contains all systems
+        String outDir = null;
         StringBuffer responsesMd = new StringBuffer();
-        responsesMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
+        StringBuffer resultsMd = new StringBuffer();
 
         // Counts per system
         Map<String, LongAdder> realisticBySystem = new ConcurrentHashMap<>();
         Map<String, LongAdder> unrealisticBySystem = new ConcurrentHashMap<>();
 
-        for (String system : paths.keySet()) {
-            Map<String, List<String>> genMap = paths.get(system);
-            if (genMap == null || genMap.isEmpty()) {
-                continue;
+        // Collect non-fatal errors instead of throwing from worker threads
+        ConcurrentLinkedQueue<String> errors = new ConcurrentLinkedQueue<>();
+
+        try {
+            // Derive output directory from any .soil path.
+            String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
+            outDir = deriveOutDirFromAnyPath(firstPath, 3);
+
+            // Responses markdown: contains all systems
+            responsesMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
+
+            for (String system : paths.keySet()) {
+                Map<String, List<String>> genMap = paths.get(system);
+                if (genMap == null || genMap.isEmpty()) {
+                    continue;
+                }
+
+                String domainModelPath = "src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use";
+                String domainModel;
+                try {
+                    domainModel = Utils.readFile(domainModelPath);
+                } catch (Exception e) {
+                    errors.add("Failed to read domain model for system '" + system + "' at " + domainModelPath
+                            + ": " + e.getMessage());
+                    continue;
+                }
+
+                // Initialize counters
+                LongAdder realistic = new LongAdder();
+                LongAdder unrealistic = new LongAdder();
+                realisticBySystem.put(system, realistic);
+                unrealisticBySystem.put(system, unrealistic);
+
+                responsesMd.append("# ").append(system).append("\n\n");
+
+                genMap.entrySet().stream().parallel().forEach(entry -> {
+                    String gen = entry.getKey();
+                    List<String> soilFiles = entry.getValue();
+                    if (soilFiles == null || soilFiles.isEmpty()) {
+                        return;
+                    }
+
+                    // Build a whole block locally, then append once (prevents interleaving)
+                    StringBuilder localBlock = new StringBuilder();
+
+                    for (String filePath : soilFiles) {
+                        try {
+                            String instance = Utils.readFile(filePath);
+                            IJudge judge = Llms.getAgent(IJudge.class, MODEL);
+                            String response = judge.chat(domainModel, instance);
+
+                            String label;
+                            String sectionName;
+                            if (includeCategoryInResponses) {
+                                String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
+                                label = extractResponseLabelOrThrow(response, system + "/" + gen + "/" + category);
+                                sectionName = gen + " / " + category;
+                            } else {
+                                label = extractResponseLabelOrThrow(response, system + "/" + gen);
+                                sectionName = gen;
+                            }
+
+                            if ("Realistic".equalsIgnoreCase(label)) {
+                                realistic.increment();
+                            } else {
+                                unrealistic.increment();
+                            }
+
+                            localBlock.append("## ").append(sectionName).append("\n\n");
+                            localBlock.append(response).append("\n\n");
+
+                            System.out.println("Judged: " + system + "/" + gen + "/" + filePath);
+
+                        } catch (Exception e) {
+                            String msg = "Error judging " + system + "/" + gen + " (" + filePath + "): "
+                                    + e.getClass().getSimpleName() + " - " + e.getMessage();
+                            errors.add(msg);
+
+                            localBlock.append("## ").append(gen);
+                            if (includeCategoryInResponses) {
+                                String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
+                                localBlock.append(" / ").append(category);
+                            }
+                            localBlock.append("\n\n");
+                            localBlock.append("**ERROR**: ").append(msg).append("\n\n");
+                        }
+                    }
+
+                    
+                    responsesMd.append(localBlock);
+                });
             }
 
-            String domainModelPath = "src/main/resources/prompts/" + system.toLowerCase() + "/diagram.use";
-            String domainModel = Utils.readFile(domainModelPath);
+            // Build results table by system (even if partial)
+            List<String> systems = new ArrayList<>(realisticBySystem.keySet());
+            Collections.sort(systems);
 
-            // Initialize counters
-            LongAdder realistic = new LongAdder();
-            LongAdder unrealistic = new LongAdder();
-            realisticBySystem.put(system, realistic);
-            unrealisticBySystem.put(system, unrealistic);
+            Table resultsTable = buildSystemResultsTable(modeTitle + " / " + MODEL.name(), systems,
+                    realisticBySystem, unrealisticBySystem);
 
-            responsesMd.append("# ").append(system).append("\n\n");
+            resultsMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
+            resultsMd.append(resultsTable.toMarkdown()).append("\n");
 
-            System.out.println("GenMap entryset: " + genMap.entrySet());
-
-            genMap.entrySet().stream().parallel().forEach(entry -> {
-                String gen = entry.getKey();
-                List<String> soilFiles = entry.getValue();
-                if (soilFiles == null || soilFiles.isEmpty()) {
-                    return;
+            if (!errors.isEmpty()) {
+                responsesMd.append("\n# Errors\n\n");
+                for (String err : errors) {
+                    responsesMd.append("- ").append(err).append("\n");
                 }
+                responsesMd.append("\n");
+            }
 
-                // For Simple this will be 1 file (output.soil).
-                // For CoT this will be many category .soil files (baseline.soil, complex.soil,
-                // ...)
-                for (String filePath : soilFiles) {
-                    String instance = Utils.readFile(filePath);
-                    IJudge judge = Llms.getAgent(IJudge.class, MODEL);
-                    String response = judge.chat(domainModel, instance);
-                    System.out.println("Judged: " + system + "/" + gen + "/" + filePath);
+        } finally {
+            // Always attempt to save whatever we have.
+            // If outDir couldn't be derived, fall back to a deterministic location.
+            String safeOutDir = (outDir != null) ? outDir : ("./judge-output/" + modeTitle + "/" + MODEL.name() + "/");
 
-                    String label;
-                    String sectionName;
-                    if (includeCategoryInResponses) {
-                        String category = new File(filePath).getName().replaceFirst("(?i)\\.soil$", "");
-                        label = extractResponseLabelOrThrow(response, system + "/" + gen + "/" + category);
-                        sectionName = gen + " / " + category;
-                    } else {
-                        label = extractResponseLabelOrThrow(response, system + "/" + gen);
-                        sectionName = gen;
-                    }
+            Utils.saveFile(responsesMd.toString(), safeOutDir, "judge-responses.md", false);
 
-                    if ("Realistic".equalsIgnoreCase(label)) {
-                        realistic.increment();
-                    } else {
-                        unrealistic.increment();
-                    }
+            // Save results if we managed to build any; otherwise save an error stub so the
+            // run is visible.
+            if (resultsMd.length() > 0) {
+                Utils.saveFile(resultsMd.toString(), safeOutDir, "judge-results.md", false);
+            } else {
+                Utils.saveFile(
+                        "# " + modeTitle + " / " + MODEL.name()
+                                + "\n\n(No results generated; run may have failed early.)\n",
+                        safeOutDir, "judge-results.md", false);
+            }
 
-                    responsesMd.append("## ").append(sectionName).append("\n\n");
-                    responsesMd.append(response).append("\n\n");
-
-                }
-            });
+            // Save logs even on failure
+            Logger.save(safeOutDir, "judge-logs.md", false);
         }
-
-        // Build results table by system
-        List<String> systems = new ArrayList<>(realisticBySystem.keySet());
-        Collections.sort(systems);
-
-        Table resultsTable = buildSystemResultsTable(modeTitle + " / " + MODEL.name(), systems, realisticBySystem,
-                unrealisticBySystem);
-
-        StringBuffer resultsMd = new StringBuffer();
-        resultsMd.append("# ").append(modeTitle).append(" / ").append(MODEL.name()).append("\n\n");
-        resultsMd.append(resultsTable.toMarkdown()).append("\n");
-
-        // Save in the mode/system directory
-        Utils.saveFile(responsesMd.toString(), outDir, "judge-responses.md", false);
-        Utils.saveFile(resultsMd.toString(), outDir, "judge-results.md", false);
-        // Save logs
-        Logger.save(outDir, "judge-logs.md", false);
     }
 
     public static void testPrompts() {
@@ -197,60 +247,88 @@ public class LlmAsAJudge {
         final String INSTANCES_PATH = "src/main/java/es/uma/LlmAsAJudge/PromptTestInstances/Instances/";
         final String PROMPTS_PATH = "src/main/resources/prompts/";
 
+        ConcurrentLinkedQueue<String> errors = new ConcurrentLinkedQueue<>();
+
         // Clear the responses file first
         Utils.saveFile("", OUTPUT_PATH, "responses-" + MODEL.name() + ".md", false);
 
-        File instancesDir = new File(INSTANCES_PATH);
-        File[] soilFiles = Utils.getAllSoilFiles(instancesDir);
+        try {
+            File instancesDir = new File(INSTANCES_PATH);
+            File[] soilFiles = Utils.getAllSoilFiles(instancesDir);
 
-        if (soilFiles == null || soilFiles.length == 0) {
-            throw new RuntimeException("No .soil files found in the Instances directory or its subdirectories.");
+            if (soilFiles == null || soilFiles.length == 0) {
+                throw new RuntimeException("No .soil files found in the Instances directory or its subdirectories.");
+            }
+
+            Arrays.stream(soilFiles).parallel().forEach(soilFile -> {
+                try {
+                    IJudge judge = Llms.getAgent(IJudge.class, MODEL);
+
+                    String fileName = soilFile.getName();
+                    String prefix = fileName.substring(0, 1);
+                    String domainName = PREFIX_TO_DOMAIN.get(prefix);
+
+                    if (domainName == null) {
+                        // Don't throw: record error and continue
+                        errors.add("Unknown prefix for file: " + fileName);
+                        return;
+                    }
+
+                    String domainModelPath = PROMPTS_PATH + domainName + "/diagram.use";
+                    String domainModel = Utils.readFile(domainModelPath);
+                    String objectModelWithComments = Utils.readFile(soilFile.getPath());
+                    String objectModel = Utils.removeComments(objectModelWithComments);
+
+                    String response = judge.chat(domainModel, objectModel);
+
+                    // Append to responses.md with title
+                    String content = "# " + fileName + "\n\n" + response + "\n\n";
+                    synchronized (LlmAsAJudge.class) {
+                        Utils.saveFile(content, OUTPUT_PATH, "responses-" + MODEL.name() + ".md", true);
+                    }
+
+                    System.out.println("Processed: " + fileName + " with domain: " + domainName);
+
+                } catch (Exception e) {
+                    errors.add("Failed processing " + soilFile.getName() + ": " + e.getClass().getSimpleName()
+                            + " - " + e.getMessage());
+                }
+            });
+
+            // Create results table (guarded so we still save logs/errors if parsing fails)
+            try {
+                String title = MODEL.name();
+                String[] rowsHeader = { "Realistic", "Unrealistic", "Success Rate" };
+                String[] columnsHeader = { "Real", "Synthetic", "Simple", "CoT" };
+                float[][] tableData = getResults(Utils.readFile(OUTPUT_PATH + "responses-" + MODEL.name() + ".md"));
+                Table resultsTable = new Table(title, rowsHeader, columnsHeader, tableData);
+
+                Utils.saveFile(resultsTable.toString(), OUTPUT_PATH, "results-" + MODEL.name() + ".md", false);
+            } catch (Exception e) {
+                errors.add("Failed generating results table: " + e.getClass().getSimpleName() + " - " + e.getMessage());
+            }
+
+        } finally {
+            if (!errors.isEmpty()) {
+                StringBuilder errMd = new StringBuilder();
+                errMd.append("# Errors\n\n");
+                for (String err : errors) {
+                    errMd.append("- ").append(err).append("\n");
+                }
+                errMd.append("\n");
+
+                // Save alongside outputs so you can see what got skipped/failed
+                Utils.saveFile(errMd.toString(), OUTPUT_PATH, "errors-" + MODEL.name() + ".md", false);
+            }
+
+            // Save logs even if anything failed above
+            Logger.save(OUTPUT_PATH, "logs-" + MODEL.name() + ".md", false);
         }
-
-        Arrays.stream(soilFiles).parallel().forEach(soilFile -> {
-            IJudge judge = Llms.getAgent(IJudge.class, MODEL);
-
-            String fileName = soilFile.getName();
-            String prefix = fileName.substring(0, 1);
-            String domainName = PREFIX_TO_DOMAIN.get(prefix);
-
-            if (domainName == null) {
-                throw new RuntimeException("Unknown prefix for file: " + fileName);
-            }
-
-            String domainModelPath = PROMPTS_PATH + domainName + "/diagram.use";
-            String domainModel = Utils.readFile(domainModelPath);
-            String objectModelWithComments = Utils.readFile(soilFile.getPath());
-            String objectModel = Utils.removeComments(objectModelWithComments);
-
-            String response = judge.chat(domainModel, objectModel);
-
-            // Append to responses.md with title
-            String content = "# " + fileName + "\n\n" + response + "\n\n";
-            synchronized (LlmAsAJudge.class) {
-                Utils.saveFile(content, OUTPUT_PATH, "responses-" + MODEL.name() + ".md", true);
-            }
-
-            System.out.println("Processed: " + fileName + " with domain: " + domainName);
-
-        });
-
-        // Create results table
-        String title = MODEL.name();
-        String[] rowsHeader = { "Realistic", "Unrealistic", "Success Rate" };
-        String[] columnsHeader = { "Real", "Synthetic", "Simple", "CoT" };
-        float[][] tableData = getResults(Utils.readFile(OUTPUT_PATH + "responses-" + MODEL.name() + ".md"));
-        Table resultsTable = new Table(title, rowsHeader, columnsHeader, tableData);
-
-        Utils.saveFile(resultsTable.toString(), OUTPUT_PATH, "results-" + MODEL.name() + ".md", false);
-
-        // Save logs
-        Logger.save(OUTPUT_PATH, "logs-" + MODEL.name() + ".md", false);
     }
 
     private static float[][] getResults(String responses) {
         float[][] results = new float[3][4]; // rows: [0]=Realistic, [1]=Unrealistic, [2]=SuccessRate;
-                                             // cols: [0]=Real, [1]=Synthetic, [2]=Simple, [3=CoT
+                                             // cols: [0]=Real, [1]=Synthetic, [2]=Simple, 3=CoT
 
         // Column indices map: 0=Real, 1=Synthetic, 2=Simple, 3=CoT
         Map<String, Integer> idToColumn = new HashMap<>();
