@@ -45,7 +45,7 @@ public class LlmAsAJudge {
             // - CoT: .../CoT/<system>/<date>/<gen>/<category>.soil (levelsUp=3 =>
             // <system>/)
             String firstPath = paths.values().iterator().next().values().iterator().next().get(0);
-            outDir = JudgeUtils.deriveOutDirFromAnyPath(firstPath, 3);
+            outDir = JudgeUtils.deriveOutDirFromAnyPath(firstPath, 4);
 
             // Responses markdown: contains all systems
             responsesMd.append("# ")

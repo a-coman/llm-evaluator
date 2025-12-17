@@ -1157,218 +1157,201 @@ context Reservation inv TablesCapacityGreaterThanPeople:
 </domain_model>
 
 <object_model>
-!new Restaurant('r3')
-!r3.name := 'Seaside Diner'
+!new Restaurant('r4')
+!r4.name := 'Urban Spice'
 
-!new Owner('o4')
-!o4.name := 'Quinn Harper'
-!o4.percentageShares := 70
-!new Owner('o5')
-!o5.name := 'Renee Valdez'
-!o5.percentageShares := 30
+!new Owner('o6')
+!o6.name := 'Harper Mills'
+!o6.percentageShares := 25
+!new Owner('o7')
+!o7.name := 'Yuki Sato'
+!o7.percentageShares := 25
+!new Owner('o8')
+!o8.name := 'Mateo Silva'
+!o8.percentageShares := 25
+!new Owner('o9')
+!o9.name := 'Aisha Rahman'
+!o9.percentageShares := 25
 
-!insert (r3, o4) into RestaurantOwner
-!insert (r3, o5) into RestaurantOwner
+!insert (r4, o6) into RestaurantOwner
+!insert (r4, o7) into RestaurantOwner
+!insert (r4, o8) into RestaurantOwner
+!insert (r4, o9) into RestaurantOwner
 
-!new HeadWaiter('hw3')
-!hw3.name := 'Samuel Wright'
-!hw3.dateOfBirth := Date('1984-01-10')
-!hw3.phoneNumber := '+1-555-3001'
+!new HeadWaiter('hw4')
+!hw4.name := 'Tessa Morgan'
+!hw4.dateOfBirth := Date('1986-02-28')
+!hw4.phoneNumber := '+1-555-7001'
 
-!new Waiter('w4')
-!w4.name := 'Elena Conti'
-!w4.dateOfBirth := Date('1998-03-03')
-!w4.phoneNumber := '+1-555-3002'
-!w4.spokenLanguage := #Italian
-!new Waiter('w5')
-!w5.name := 'Liam OConnor'
-!w5.dateOfBirth := Date('1995-10-19')
-!w5.phoneNumber := '+1-555-3003'
-!w5.spokenLanguage := #English
+!new Waiter('w6')
+!w6.name := 'Carlos Mendez'
+!w6.dateOfBirth := Date('1999-06-15')
+!w6.phoneNumber := '+1-555-7002'
+!w6.spokenLanguage := #Spanish
+!new Waiter('w7')
+!w7.name := 'Hannah Klein'
+!w7.dateOfBirth := Date('1994-09-01')
+!w7.phoneNumber := '+1-555-7003'
+!w7.spokenLanguage := #German
 
-!insert (hw3, w4) into HeadWaiterWaiter
-!insert (hw3, w5) into HeadWaiterWaiter
+!insert (hw4, w6) into HeadWaiterWaiter
+!insert (hw4, w7) into HeadWaiterWaiter
 
-!new Chef('ch3')
-!ch3.name := 'Mei Lin'
-!ch3.dateOfBirth := Date('1987-06-22')
-!ch3.phoneNumber := '+1-555-3101'
-!new Chef('ch4')
-!ch4.name := 'Antonio Vega'
-!ch4.dateOfBirth := Date('1978-09-12')
-!ch4.phoneNumber := '+1-555-3102'
+!new Chef('ch5')
+!ch5.name := 'Ravi Patel'
+!ch5.dateOfBirth := Date('1983-08-19')
+!ch5.phoneNumber := '+1-555-7101'
 
-!new Cook('ck4')
-!ck4.name := 'Nora Shah'
-!ck4.dateOfBirth := Date('2001-11-30')
-!ck4.phoneNumber := '+1-555-3201'
-!ck4.yearsOfExperience := 1
-!new Cook('ck5')
-!ck5.name := 'Dmitri Volkov'
-!ck5.dateOfBirth := Date('1999-02-14')
-!ck5.phoneNumber := '+1-555-3202'
-!ck5.yearsOfExperience := 0
-!new Cook('ck6')
-!ck6.name := 'Chloe Bennett'
-!ck6.dateOfBirth := Date('1991-07-07')
-!ck6.phoneNumber := '+1-555-3203'
-!ck6.yearsOfExperience := 9
+!new Cook('ck7')
+!ck7.name := 'Jun Park'
+!ck7.dateOfBirth := Date('2002-01-05')
+!ck7.phoneNumber := '+1-555-7201'
+!ck7.yearsOfExperience := 0
+!new Cook('ck8')
+!ck8.name := 'Sara Nordin'
+!ck8.dateOfBirth := Date('1996-12-11')
+!ck8.phoneNumber := '+1-555-7202'
+!ck8.yearsOfExperience := 3
 
-!insert (ch3, ck4) into ChefCook
-!insert (ch3, ck5) into ChefCook
-!insert (ch4, ck6) into ChefCook
+!insert (ch5, ck7) into ChefCook
+!insert (ch5, ck8) into ChefCook
 
-!new Table('t101')
-!t101.number := 101
-!t101.description := 'Patio four-top A'
-!t101.capacity := 4
-!new Table('t102')
-!t102.number := 102
-!t102.description := 'Patio four-top B'
-!t102.capacity := 4
-!new Table('t103')
-!t103.number := 103
-!t103.description := 'Inside three-top'
-!t103.capacity := 3
-!new Table('t104')
-!t104.number := 104
-!t104.description := 'Banquet eight-top'
-!t104.capacity := 8
-!new Table('t105')
-!t105.number := 105
-!t105.description := 'Banquet four-top'
-!t105.capacity := 4
+!new Table('t201')
+!t201.number := 201
+!t201.description := 'Inside four-top'
+!t201.capacity := 4
+!new Table('t202')
+!t202.number := 202
+!t202.description := 'High-top five seats'
+!t202.capacity := 5
+!new Table('t203')
+!t203.number := 203
+!t203.description := 'Patio four-top'
+!t203.capacity := 4
+!new Table('t204')
+!t204.number := 204
+!t204.description := 'Chef counter single'
+!t204.capacity := 1
 
-!new RegularCustomer('rc4')
-!rc4.name := 'Paula Stein'
-!rc4.prefferedLanguage := #German
+!new RegularCustomer('rc5')
+!rc5.name := 'Nadia Gomez'
+!rc5.prefferedLanguage := #Spanish
 
-!new Individual('ind4')
-!ind4.time := Time('17:00')
-!ind4.date := Date('2025-12-20')
-!ind4.numberPeople := 8
-!ind4.name := 'Paula Stein'
-!ind4.phoneNumber := '+1-555-4001'
-!ind4.number := 30001
-!ind4.seating := #Patio
-!ind4.smoking := #Smoking
+!new Individual('ind6')
+!ind6.time := Time('18:05')
+!ind6.date := Date('2025-12-22')
+!ind6.numberPeople := 4
+!ind6.name := 'Nadia Gomez'
+!ind6.phoneNumber := '+1-555-8001'
+!ind6.number := 50001
+!ind6.seating := #Inside
+!ind6.smoking := #NonSmoking
 
-!new Individual('ind5')
-!ind5.time := Time('21:45')
-!ind5.date := Date('2025-12-20')
-!ind5.numberPeople := 3
-!ind5.name := 'Late Snack'
-!ind5.phoneNumber := '+1-555-4002'
-!ind5.number := 30002
-!ind5.seating := #Inside
-!ind5.smoking := #NonSmoking
+!new Banquet('ban4')
+!ban4.time := Time('19:30')
+!ban4.date := Date('2025-12-22')
+!ban4.numberPeople := 9
+!ban4.name := 'Event Coordinator'
+!ban4.phoneNumber := '+1-555-8002'
+!ban4.number := 60001
+!ban4.groupName := 'Startup Demo Night'
+!ban4.paymentMethod := #CreditCard
+!ban4.busService := true
 
-!new Banquet('ban3')
-!ban3.time := Time('13:00')
-!ban3.date := Date('2025-12-21')
-!ban3.numberPeople := 12
-!ban3.name := 'Community Center'
-!ban3.phoneNumber := '+1-555-5001'
-!ban3.number := 40001
-!ban3.groupName := 'Holiday Volunteers'
-!ban3.paymentMethod := #Cash
-!ban3.busService := false
+!new Individual('ind7')
+!ind7.time := Time('11:00')
+!ind7.date := Date('2025-12-23')
+!ind7.numberPeople := 1
+!ind7.name := 'Anonymous'
+!ind7.phoneNumber := '+1-555-8003'
+!ind7.number := 50002
+!ind7.seating := #Patio
+!ind7.smoking := #Smoking
 
-!insert (r3, ind4) into RestaurantReservation
-!insert (r3, ind5) into RestaurantReservation
-!insert (r3, ban3) into RestaurantReservation
+!insert (r4, ind6) into RestaurantReservation
+!insert (r4, ban4) into RestaurantReservation
 
-!insert (ind4, rc4) into ReservationCustomer
+!insert (ind6, rc5) into ReservationCustomer
 
-!insert (ind4, w4) into ReservationWaiter
-!insert (ind4, w5) into ReservationWaiter
-!insert (ind5, w5) into ReservationWaiter
-!insert (ban3, w4) into ReservationWaiter
+!insert (ind6, w6) into ReservationWaiter
+!insert (ban4, w7) into ReservationWaiter
+!insert (ban4, w6) into ReservationWaiter
+!insert (ind7, w6) into ReservationWaiter
 
-!insert (ind4, t101) into ReservationTable
-!insert (ind4, t102) into ReservationTable
-!insert (ind5, t103) into ReservationTable
-!insert (ban3, t104) into ReservationTable
-!insert (ban3, t105) into ReservationTable
+!insert (ind6, t201) into ReservationTable
+!insert (ban4, t202) into ReservationTable
+!insert (ban4, t203) into ReservationTable
+!insert (ind7, t204) into ReservationTable
 
-!new Allergen('a10')
-!a10.type := #Seafood
-!new Allergen('a11')
-!a11.type := #Gluten
-!new Allergen('a12')
-!a12.type := #Nuts
+!new BusDriver('bd3')
+!bd3.name := 'Viktor Ilic'
+!bd3.dateOfBirth := Date('1972-04-06')
+!bd3.phoneNumber := '+1-555-9001'
+!bd3.driverLicenseNr := 'BUS-44109'
 
-!new FoodItem('f20')
-!f20.number := 620
-!f20.description := 'Pasta sheets'
-!f20.purchaseFlag := true
-!f20.unit := #Sheet
-!new FoodItem('f21')
-!f21.number := 621
-!f21.description := 'Mixed nuts'
-!f21.purchaseFlag := true
-!f21.unit := #Ounce
-!new FoodItem('f22')
-!f22.number := 622
-!f22.description := 'Salmon fillet'
-!f22.purchaseFlag := false
-!f22.unit := #Pound
-!new FoodItem('f23')
-!f23.number := 623
-!f23.description := 'Lemon'
-!f23.purchaseFlag := true
-!f23.unit := #Dozen
+!insert (ban4, bd3) into BanquetBusDriver
 
-!insert (f20, a11) into FoodItemAllergen
-!insert (f21, a12) into FoodItemAllergen
-!insert (f22, a10) into FoodItemAllergen
+!new Allergen('a20')
+!a20.type := #Lactose
+!new Allergen('a21')
+!a21.type := #Nuts
 
-!new MenuItem('mi10')
-!mi10.description := 'Lemon Herb Salmon'
-!mi10.prepTime := 14.0
-!mi10.classification := #Main
-!new MenuItem('mi11')
-!mi11.description := 'Nut Brittle'
-!mi11.prepTime := 9.0
-!mi11.classification := #Dessert
-!new MenuItem('mi12')
-!mi12.description := 'Pasta Sampler'
-!mi12.prepTime := 16.5
-!mi12.classification := #Main
+!new FoodItem('f30')
+!f30.number := 900
+!f30.description := 'Creamy pesto base'
+!f30.purchaseFlag := false
+!f30.unit := #Ounce
+!new FoodItem('f31')
+!f31.number := 901
+!f31.description := 'Butter'
+!f31.purchaseFlag := true
+!f31.unit := #Ounce
+!new FoodItem('f32')
+!f32.number := 902
+!f32.description := 'Cashews'
+!f32.purchaseFlag := true
+!f32.unit := #Ounce
 
-!insert (mi10, ch4) into MenuItemChef
-!insert (mi11, ch3) into MenuItemChef
-!insert (mi12, ch4) into MenuItemChef
+!insert (f30, a20) into FoodItemAllergen
+!insert (f30, a21) into FoodItemAllergen
+!insert (f31, a20) into FoodItemAllergen
+!insert (f32, a21) into FoodItemAllergen
 
-!insert (mi10, f22) into MenuItemFoodItem
-!insert (mi10, f23) into MenuItemFoodItem
-!insert (mi11, f21) into MenuItemFoodItem
-!insert (mi12, f20) into MenuItemFoodItem
-!insert (mi12, f23) into MenuItemFoodItem
+!new MenuItem('mi20')
+!mi20.description := 'Creamy Pesto Gnocchi'
+!mi20.prepTime := 12.0
+!mi20.classification := #Main
+!new MenuItem('mi21')
+!mi21.description := 'Roasted Cashew Tart'
+!mi21.prepTime := 8.5
+!mi21.classification := #Dessert
 
-!new ItemOrder('io10')
-!io10.time := Time('17:10')
-!new ItemOrder('io11')
-!io11.time := Time('17:12')
-!new ItemOrder('io12')
-!io12.time := Time('13:15')
-!new ItemOrder('io13')
-!io13.time := Time('13:18')
+!insert (mi20, ch5) into MenuItemChef
+!insert (mi21, ch5) into MenuItemChef
 
-!insert (ind4, io10) into ReservationItemOrdered
-!insert (ind4, io11) into ReservationItemOrdered
-!insert (ban3, io12) into ReservationItemOrdered
-!insert (ban3, io13) into ReservationItemOrdered
+!insert (mi20, f30) into MenuItemFoodItem
+!insert (mi20, f31) into MenuItemFoodItem
+!insert (mi21, f32) into MenuItemFoodItem
 
-!insert (io10, mi10) into ItemOrderMenuItem
-!insert (io11, mi11) into ItemOrderMenuItem
-!insert (io12, mi12) into ItemOrderMenuItem
-!insert (io13, mi10) into ItemOrderMenuItem
+!new ItemOrder('io20')
+!io20.time := Time('18:15')
+!new ItemOrder('io21')
+!io21.time := Time('19:45')
+!new ItemOrder('io22')
+!io22.time := Time('19:47')
 
-!new DietaryRequirement('dr10')
-!dr10.diet := #Halal
-!new ReportedAllergy('ra10')
-!ra10.allergen := #Nuts
+!insert (ind6, io20) into ReservationItemOrdered
+!insert (ban4, io21) into ReservationItemOrdered
+!insert (ban4, io22) into ReservationItemOrdered
+
+!insert (io20, mi20) into ItemOrderMenuItem
+!insert (io21, mi21) into ItemOrderMenuItem
+!insert (io22, mi21) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr20')
+!dr20.diet := #Vegetarian
+!new ReportedAllergy('ra20')
+!ra20.allergen := #Nuts
 </object_model>
 " }], attributes = {} }
 ```
@@ -1783,201 +1766,218 @@ context Reservation inv TablesCapacityGreaterThanPeople:
 </domain_model>
 
 <object_model>
-!new Restaurant('r4')
-!r4.name := 'Urban Spice'
+!new Restaurant('r3')
+!r3.name := 'Seaside Diner'
 
-!new Owner('o6')
-!o6.name := 'Harper Mills'
-!o6.percentageShares := 25
-!new Owner('o7')
-!o7.name := 'Yuki Sato'
-!o7.percentageShares := 25
-!new Owner('o8')
-!o8.name := 'Mateo Silva'
-!o8.percentageShares := 25
-!new Owner('o9')
-!o9.name := 'Aisha Rahman'
-!o9.percentageShares := 25
+!new Owner('o4')
+!o4.name := 'Quinn Harper'
+!o4.percentageShares := 70
+!new Owner('o5')
+!o5.name := 'Renee Valdez'
+!o5.percentageShares := 30
 
-!insert (r4, o6) into RestaurantOwner
-!insert (r4, o7) into RestaurantOwner
-!insert (r4, o8) into RestaurantOwner
-!insert (r4, o9) into RestaurantOwner
+!insert (r3, o4) into RestaurantOwner
+!insert (r3, o5) into RestaurantOwner
 
-!new HeadWaiter('hw4')
-!hw4.name := 'Tessa Morgan'
-!hw4.dateOfBirth := Date('1986-02-28')
-!hw4.phoneNumber := '+1-555-7001'
+!new HeadWaiter('hw3')
+!hw3.name := 'Samuel Wright'
+!hw3.dateOfBirth := Date('1984-01-10')
+!hw3.phoneNumber := '+1-555-3001'
 
-!new Waiter('w6')
-!w6.name := 'Carlos Mendez'
-!w6.dateOfBirth := Date('1999-06-15')
-!w6.phoneNumber := '+1-555-7002'
-!w6.spokenLanguage := #Spanish
-!new Waiter('w7')
-!w7.name := 'Hannah Klein'
-!w7.dateOfBirth := Date('1994-09-01')
-!w7.phoneNumber := '+1-555-7003'
-!w7.spokenLanguage := #German
+!new Waiter('w4')
+!w4.name := 'Elena Conti'
+!w4.dateOfBirth := Date('1998-03-03')
+!w4.phoneNumber := '+1-555-3002'
+!w4.spokenLanguage := #Italian
+!new Waiter('w5')
+!w5.name := 'Liam OConnor'
+!w5.dateOfBirth := Date('1995-10-19')
+!w5.phoneNumber := '+1-555-3003'
+!w5.spokenLanguage := #English
 
-!insert (hw4, w6) into HeadWaiterWaiter
-!insert (hw4, w7) into HeadWaiterWaiter
+!insert (hw3, w4) into HeadWaiterWaiter
+!insert (hw3, w5) into HeadWaiterWaiter
 
-!new Chef('ch5')
-!ch5.name := 'Ravi Patel'
-!ch5.dateOfBirth := Date('1983-08-19')
-!ch5.phoneNumber := '+1-555-7101'
+!new Chef('ch3')
+!ch3.name := 'Mei Lin'
+!ch3.dateOfBirth := Date('1987-06-22')
+!ch3.phoneNumber := '+1-555-3101'
+!new Chef('ch4')
+!ch4.name := 'Antonio Vega'
+!ch4.dateOfBirth := Date('1978-09-12')
+!ch4.phoneNumber := '+1-555-3102'
 
-!new Cook('ck7')
-!ck7.name := 'Jun Park'
-!ck7.dateOfBirth := Date('2002-01-05')
-!ck7.phoneNumber := '+1-555-7201'
-!ck7.yearsOfExperience := 0
-!new Cook('ck8')
-!ck8.name := 'Sara Nordin'
-!ck8.dateOfBirth := Date('1996-12-11')
-!ck8.phoneNumber := '+1-555-7202'
-!ck8.yearsOfExperience := 3
+!new Cook('ck4')
+!ck4.name := 'Nora Shah'
+!ck4.dateOfBirth := Date('2001-11-30')
+!ck4.phoneNumber := '+1-555-3201'
+!ck4.yearsOfExperience := 1
+!new Cook('ck5')
+!ck5.name := 'Dmitri Volkov'
+!ck5.dateOfBirth := Date('1999-02-14')
+!ck5.phoneNumber := '+1-555-3202'
+!ck5.yearsOfExperience := 0
+!new Cook('ck6')
+!ck6.name := 'Chloe Bennett'
+!ck6.dateOfBirth := Date('1991-07-07')
+!ck6.phoneNumber := '+1-555-3203'
+!ck6.yearsOfExperience := 9
 
-!insert (ch5, ck7) into ChefCook
-!insert (ch5, ck8) into ChefCook
+!insert (ch3, ck4) into ChefCook
+!insert (ch3, ck5) into ChefCook
+!insert (ch4, ck6) into ChefCook
 
-!new Table('t201')
-!t201.number := 201
-!t201.description := 'Inside four-top'
-!t201.capacity := 4
-!new Table('t202')
-!t202.number := 202
-!t202.description := 'High-top five seats'
-!t202.capacity := 5
-!new Table('t203')
-!t203.number := 203
-!t203.description := 'Patio four-top'
-!t203.capacity := 4
-!new Table('t204')
-!t204.number := 204
-!t204.description := 'Chef counter single'
-!t204.capacity := 1
+!new Table('t101')
+!t101.number := 101
+!t101.description := 'Patio four-top A'
+!t101.capacity := 4
+!new Table('t102')
+!t102.number := 102
+!t102.description := 'Patio four-top B'
+!t102.capacity := 4
+!new Table('t103')
+!t103.number := 103
+!t103.description := 'Inside three-top'
+!t103.capacity := 3
+!new Table('t104')
+!t104.number := 104
+!t104.description := 'Banquet eight-top'
+!t104.capacity := 8
+!new Table('t105')
+!t105.number := 105
+!t105.description := 'Banquet four-top'
+!t105.capacity := 4
 
-!new RegularCustomer('rc5')
-!rc5.name := 'Nadia Gomez'
-!rc5.prefferedLanguage := #Spanish
+!new RegularCustomer('rc4')
+!rc4.name := 'Paula Stein'
+!rc4.prefferedLanguage := #German
 
-!new Individual('ind6')
-!ind6.time := Time('18:05')
-!ind6.date := Date('2025-12-22')
-!ind6.numberPeople := 4
-!ind6.name := 'Nadia Gomez'
-!ind6.phoneNumber := '+1-555-8001'
-!ind6.number := 50001
-!ind6.seating := #Inside
-!ind6.smoking := #NonSmoking
+!new Individual('ind4')
+!ind4.time := Time('17:00')
+!ind4.date := Date('2025-12-20')
+!ind4.numberPeople := 8
+!ind4.name := 'Paula Stein'
+!ind4.phoneNumber := '+1-555-4001'
+!ind4.number := 30001
+!ind4.seating := #Patio
+!ind4.smoking := #Smoking
 
-!new Banquet('ban4')
-!ban4.time := Time('19:30')
-!ban4.date := Date('2025-12-22')
-!ban4.numberPeople := 9
-!ban4.name := 'Event Coordinator'
-!ban4.phoneNumber := '+1-555-8002'
-!ban4.number := 60001
-!ban4.groupName := 'Startup Demo Night'
-!ban4.paymentMethod := #CreditCard
-!ban4.busService := true
+!new Individual('ind5')
+!ind5.time := Time('21:45')
+!ind5.date := Date('2025-12-20')
+!ind5.numberPeople := 3
+!ind5.name := 'Late Snack'
+!ind5.phoneNumber := '+1-555-4002'
+!ind5.number := 30002
+!ind5.seating := #Inside
+!ind5.smoking := #NonSmoking
 
-!new Individual('ind7')
-!ind7.time := Time('11:00')
-!ind7.date := Date('2025-12-23')
-!ind7.numberPeople := 1
-!ind7.name := 'Anonymous'
-!ind7.phoneNumber := '+1-555-8003'
-!ind7.number := 50002
-!ind7.seating := #Patio
-!ind7.smoking := #Smoking
+!new Banquet('ban3')
+!ban3.time := Time('13:00')
+!ban3.date := Date('2025-12-21')
+!ban3.numberPeople := 12
+!ban3.name := 'Community Center'
+!ban3.phoneNumber := '+1-555-5001'
+!ban3.number := 40001
+!ban3.groupName := 'Holiday Volunteers'
+!ban3.paymentMethod := #Cash
+!ban3.busService := false
 
-!insert (r4, ind6) into RestaurantReservation
-!insert (r4, ban4) into RestaurantReservation
+!insert (r3, ind4) into RestaurantReservation
+!insert (r3, ind5) into RestaurantReservation
+!insert (r3, ban3) into RestaurantReservation
 
-!insert (ind6, rc5) into ReservationCustomer
+!insert (ind4, rc4) into ReservationCustomer
 
-!insert (ind6, w6) into ReservationWaiter
-!insert (ban4, w7) into ReservationWaiter
-!insert (ban4, w6) into ReservationWaiter
-!insert (ind7, w6) into ReservationWaiter
+!insert (ind4, w4) into ReservationWaiter
+!insert (ind4, w5) into ReservationWaiter
+!insert (ind5, w5) into ReservationWaiter
+!insert (ban3, w4) into ReservationWaiter
 
-!insert (ind6, t201) into ReservationTable
-!insert (ban4, t202) into ReservationTable
-!insert (ban4, t203) into ReservationTable
-!insert (ind7, t204) into ReservationTable
+!insert (ind4, t101) into ReservationTable
+!insert (ind4, t102) into ReservationTable
+!insert (ind5, t103) into ReservationTable
+!insert (ban3, t104) into ReservationTable
+!insert (ban3, t105) into ReservationTable
 
-!new BusDriver('bd3')
-!bd3.name := 'Viktor Ilic'
-!bd3.dateOfBirth := Date('1972-04-06')
-!bd3.phoneNumber := '+1-555-9001'
-!bd3.driverLicenseNr := 'BUS-44109'
+!new Allergen('a10')
+!a10.type := #Seafood
+!new Allergen('a11')
+!a11.type := #Gluten
+!new Allergen('a12')
+!a12.type := #Nuts
 
-!insert (ban4, bd3) into BanquetBusDriver
+!new FoodItem('f20')
+!f20.number := 620
+!f20.description := 'Pasta sheets'
+!f20.purchaseFlag := true
+!f20.unit := #Sheet
+!new FoodItem('f21')
+!f21.number := 621
+!f21.description := 'Mixed nuts'
+!f21.purchaseFlag := true
+!f21.unit := #Ounce
+!new FoodItem('f22')
+!f22.number := 622
+!f22.description := 'Salmon fillet'
+!f22.purchaseFlag := false
+!f22.unit := #Pound
+!new FoodItem('f23')
+!f23.number := 623
+!f23.description := 'Lemon'
+!f23.purchaseFlag := true
+!f23.unit := #Dozen
 
-!new Allergen('a20')
-!a20.type := #Lactose
-!new Allergen('a21')
-!a21.type := #Nuts
+!insert (f20, a11) into FoodItemAllergen
+!insert (f21, a12) into FoodItemAllergen
+!insert (f22, a10) into FoodItemAllergen
 
-!new FoodItem('f30')
-!f30.number := 900
-!f30.description := 'Creamy pesto base'
-!f30.purchaseFlag := false
-!f30.unit := #Ounce
-!new FoodItem('f31')
-!f31.number := 901
-!f31.description := 'Butter'
-!f31.purchaseFlag := true
-!f31.unit := #Ounce
-!new FoodItem('f32')
-!f32.number := 902
-!f32.description := 'Cashews'
-!f32.purchaseFlag := true
-!f32.unit := #Ounce
+!new MenuItem('mi10')
+!mi10.description := 'Lemon Herb Salmon'
+!mi10.prepTime := 14.0
+!mi10.classification := #Main
+!new MenuItem('mi11')
+!mi11.description := 'Nut Brittle'
+!mi11.prepTime := 9.0
+!mi11.classification := #Dessert
+!new MenuItem('mi12')
+!mi12.description := 'Pasta Sampler'
+!mi12.prepTime := 16.5
+!mi12.classification := #Main
 
-!insert (f30, a20) into FoodItemAllergen
-!insert (f30, a21) into FoodItemAllergen
-!insert (f31, a20) into FoodItemAllergen
-!insert (f32, a21) into FoodItemAllergen
+!insert (mi10, ch4) into MenuItemChef
+!insert (mi11, ch3) into MenuItemChef
+!insert (mi12, ch4) into MenuItemChef
 
-!new MenuItem('mi20')
-!mi20.description := 'Creamy Pesto Gnocchi'
-!mi20.prepTime := 12.0
-!mi20.classification := #Main
-!new MenuItem('mi21')
-!mi21.description := 'Roasted Cashew Tart'
-!mi21.prepTime := 8.5
-!mi21.classification := #Dessert
+!insert (mi10, f22) into MenuItemFoodItem
+!insert (mi10, f23) into MenuItemFoodItem
+!insert (mi11, f21) into MenuItemFoodItem
+!insert (mi12, f20) into MenuItemFoodItem
+!insert (mi12, f23) into MenuItemFoodItem
 
-!insert (mi20, ch5) into MenuItemChef
-!insert (mi21, ch5) into MenuItemChef
+!new ItemOrder('io10')
+!io10.time := Time('17:10')
+!new ItemOrder('io11')
+!io11.time := Time('17:12')
+!new ItemOrder('io12')
+!io12.time := Time('13:15')
+!new ItemOrder('io13')
+!io13.time := Time('13:18')
 
-!insert (mi20, f30) into MenuItemFoodItem
-!insert (mi20, f31) into MenuItemFoodItem
-!insert (mi21, f32) into MenuItemFoodItem
+!insert (ind4, io10) into ReservationItemOrdered
+!insert (ind4, io11) into ReservationItemOrdered
+!insert (ban3, io12) into ReservationItemOrdered
+!insert (ban3, io13) into ReservationItemOrdered
 
-!new ItemOrder('io20')
-!io20.time := Time('18:15')
-!new ItemOrder('io21')
-!io21.time := Time('19:45')
-!new ItemOrder('io22')
-!io22.time := Time('19:47')
+!insert (io10, mi10) into ItemOrderMenuItem
+!insert (io11, mi11) into ItemOrderMenuItem
+!insert (io12, mi12) into ItemOrderMenuItem
+!insert (io13, mi10) into ItemOrderMenuItem
 
-!insert (ind6, io20) into ReservationItemOrdered
-!insert (ban4, io21) into ReservationItemOrdered
-!insert (ban4, io22) into ReservationItemOrdered
-
-!insert (io20, mi20) into ItemOrderMenuItem
-!insert (io21, mi21) into ItemOrderMenuItem
-!insert (io22, mi21) into ItemOrderMenuItem
-
-!new DietaryRequirement('dr20')
-!dr20.diet := #Vegetarian
-!new ReportedAllergy('ra20')
-!ra20.allergen := #Nuts
+!new DietaryRequirement('dr10')
+!dr10.diet := #Halal
+!new ReportedAllergy('ra10')
+!ra10.allergen := #Nuts
 </object_model>
 " }], attributes = {} }
 ```
@@ -1992,50 +1992,50 @@ Top-P: null
 # Output IJudge
 ```
 **Response**: Realistic  
-**Why**: All objects and attributes align with domain constraints and real-world logic. Owners' shares sum to 100%, tables have positive capacities, reservations match table capacities, ages and experience levels are plausible, and allergen associations are valid. No contradictions or impossible values exist.
-```
-
-|Response|
-|---|
-Finish Reason: STOP
-Input Tokens: 4383
-Output Tokens: 761
-Total Tokens: 5144
-Generation Time: 34.27 seconds
-
-# Output IJudge
-```
-**Response**: Unrealistic  
-**Why**: The object model violates the constraint that the sum of owner shares for each restaurant must equal 100%. In the object model, restaurant r1 has three owners with percentages 60%, 40%, and 100%, resulting in a total of 200%, which is impossible.
-```
-
-|Response|
-|---|
-Finish Reason: STOP
-Input Tokens: 5852
-Output Tokens: 907
-Total Tokens: 6759
-Generation Time: 34.93 seconds
-
-# Output IJudge
-```
-**Response**: Realistic  
-**Why**: All object values and relationships align with the domain model's constraints and real-world plausibility. For example, table capacities meet reservation requirements, cook experience is non-negative, and allergen associations are valid. No contradictory or implausible values are present.
+**Why**: All objects and attributes align with the domain model's constraints and real-world plausibility. Owner shares sum to 100%, table capacities meet reservation requirements, cook experience values are non-negative, and all attributes (e.g., dates, languages, units) are valid. No contradictions or impossible values exist.
 ```
 
 |Response|
 |---|
 Finish Reason: STOP
 Input Tokens: 4613
-Output Tokens: 895
-Total Tokens: 5508
-Generation Time: 37.17 seconds
+Output Tokens: 837
+Total Tokens: 5450
+Generation Time: 30.11 seconds
+
+# Output IJudge
+```
+**Response**: Unrealistic  
+**Why**: The object model violates the "TotalOwnerShares" constraint, where the sum of percentage shares for Restaurant r1 (60% + 40% + 100%) equals 200%, which exceeds the required 100%. This is a direct contradiction with the domain model's requirement for owner share percentages to sum to exactly 100%.
+```
+
+|Response|
+|---|
+Finish Reason: STOP
+Input Tokens: 5852
+Output Tokens: 849
+Total Tokens: 6701
+Generation Time: 30.12 seconds
+
+# Output IJudge
+```
+**Response**: Realistic  
+**Why**: All attributes and relationships adhere to domain constraints (e.g., owner shares sum to 100%, table capacities > 0, cook experience ≥ 0). Values are within enum ranges (e.g., seating: Inside/Patio, smoking: NonSmoking/Smoking). Realistic scenarios include a restaurant with 4 owners splitting shares, a banquet with 9 people, and valid allergen-food item associations. No contradictions or nonsensical relationships exist.
+```
+
+|Response|
+|---|
+Finish Reason: STOP
+Input Tokens: 4383
+Output Tokens: 852
+Total Tokens: 5235
+Generation Time: 30.14 seconds
 
 
 # Summary for all generations
 | Metric | Value |
 | --- | --- |
-| Generations time | 106.38 seconds |
+| Generations time | 90.38 seconds |
 | Sum of input tokens | 14848 |
-| Sum of output tokens | 2563 |
-| Sum of total tokens | 17411 |
+| Sum of output tokens | 2538 |
+| Sum of total tokens | 17386 |
