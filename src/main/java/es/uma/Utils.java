@@ -296,11 +296,10 @@ public class Utils {
         // System.out.println(numericAttributes);
         // System.out.println(stringAttributes);
 
-        // Map<String, Map<String, List<String>>> simplePaths =
-        // Utils.getPaths("Simple");
-        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", "GPT4O");
-        // System.out.println("SimplePaths:\n" + simplePaths + "\n\n");
-        System.out.println(cotPaths.get("Bank").get("gen1"));
-        // System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
+        Map<String, Map<String, List<String>>> simplePaths = Utils.getPaths("Simple", "GPT4O-exp1");
+        Map<String, Map<String, List<String>>> cotPaths = Utils.getPaths("CoT", "GPT4O-exp1");
+        System.out.println("SimplePaths:\n" + simplePaths + "\n\n");
+        // System.out.println(cotPaths.get("Bank").get("gen1"));
+        System.out.println("CoTPaths:\n" + cotPaths + "\n\n");
     }
 }
