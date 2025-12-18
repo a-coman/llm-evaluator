@@ -1,0 +1,243 @@
+!new Restaurant('rest26')
+!rest26.name := 'Nebula Garden'
+
+!new Restaurant('rest27')
+!rest27.name := 'Nebula Garden Annex'
+
+!new Owner('own62')
+!own62.name := 'Rowena Park'
+!own62.percentageShares := 60
+
+!new Owner('own63')
+!own63.name := 'Stefan Ilic'
+!own63.percentageShares := 40
+
+!insert (rest26, own62) into RestaurantOwner
+!insert (rest26, own63) into RestaurantOwner
+!insert (rest27, own62) into RestaurantOwner
+!insert (rest27, own63) into RestaurantOwner
+
+!new HeadWaiter('hw27')
+!hw27.name := 'Camille Novak'
+!hw27.dateOfBirth := Date('1986-05-16')
+!hw27.phoneNumber := '+1-555-2600'
+
+!new Waiter('w55')
+!w55.name := 'Ortega Ruiz'
+!w55.dateOfBirth := Date('1997-09-09')
+!w55.phoneNumber := '+1-555-2601'
+!w55.spokenLanguage := #Spanish
+
+!new Waiter('w56')
+!w56.name := 'Hannah Weiss'
+!w56.dateOfBirth := Date('1999-03-03')
+!w56.phoneNumber := '+1-555-2602'
+!w56.spokenLanguage := #German
+
+!new Waiter('w57')
+!w57.name := 'Luca Bianchi'
+!w57.dateOfBirth := Date('1994-12-12')
+!w57.phoneNumber := '+1-555-2603'
+!w57.spokenLanguage := #Italian
+
+!insert (hw27, w55) into HeadWaiterWaiter
+!insert (hw27, w56) into HeadWaiterWaiter
+!insert (hw27, w57) into HeadWaiterWaiter
+
+!new Chef('chef38')
+!chef38.name := 'Talia Moretti'
+!chef38.dateOfBirth := Date('1981-08-08')
+!chef38.phoneNumber := '+1-555-2610'
+
+!new Chef('chef39')
+!chef39.name := 'Erik Stone'
+!chef39.dateOfBirth := Date('1979-02-02')
+!chef39.phoneNumber := '+1-555-2611'
+
+!new Cook('cook54')
+!cook54.name := 'Nora Feld'
+!cook54.dateOfBirth := Date('1992-11-11')
+!cook54.phoneNumber := '+1-555-2620'
+!cook54.yearsOfExperience := 10
+
+!new Cook('cook55')
+!cook55.name := 'Samir Qadir'
+!cook55.dateOfBirth := Date('2004-04-04')
+!cook55.phoneNumber := '+1-555-2621'
+!cook55.yearsOfExperience := 0
+
+!new Cook('cook56')
+!cook56.name := 'Ivy Chen'
+!cook56.dateOfBirth := Date('1988-06-06')
+!cook56.phoneNumber := '+1-555-2622'
+!cook56.yearsOfExperience := 14
+
+!insert (chef38, cook54) into ChefCook
+!insert (chef38, cook55) into ChefCook
+!insert (chef39, cook56) into ChefCook
+
+!new Allergen('aNuts26')
+!aNuts26.type := #Nuts
+
+!new Allergen('aSeafood26')
+!aSeafood26.type := #Seafood
+
+!new FoodItem('fi230')
+!fi230.number := 5010
+!fi230.description := 'Cashews'
+!fi230.purchaseFlag := true
+!fi230.unit := #Gram
+
+!new FoodItem('fi231')
+!fi231.number := 5011
+!fi231.description := 'Shrimp'
+!fi231.purchaseFlag := true
+!fi231.unit := #Pound
+
+!new FoodItem('fi232')
+!fi232.number := 5012
+!fi232.description := 'Rice Paper'
+!fi232.purchaseFlag := true
+!fi232.unit := #Sheet
+
+!new FoodItem('fi233')
+!fi233.number := 5013
+!fi233.description := 'Citrus Dressing'
+!fi233.purchaseFlag := false
+!fi233.unit := #Ounce
+
+!insert (fi230, aNuts26) into FoodItemAllergen
+!insert (fi231, aSeafood26) into FoodItemAllergen
+
+!new MenuItem('mi63')
+!mi63.description := 'Shrimp Summer Roll'
+!mi63.prepTime := 6.0
+!mi63.classification := #Apetizer
+
+!new MenuItem('mi64')
+!mi64.description := 'Cashew Citrus Bowl'
+!mi64.prepTime := 9.5
+!mi64.classification := #Main
+
+!new MenuItem('mi65')
+!mi65.description := 'Still Water'
+!mi65.prepTime := 0.0
+!mi65.classification := #Beverage
+
+!insert (mi63, chef38) into MenuItemChef
+!insert (mi64, chef39) into MenuItemChef
+!insert (mi65, chef38) into MenuItemChef
+
+!insert (mi63, fi231) into MenuItemFoodItem
+!insert (mi63, fi232) into MenuItemFoodItem
+!insert (mi63, fi233) into MenuItemFoodItem
+!insert (mi64, fi230) into MenuItemFoodItem
+!insert (mi64, fi233) into MenuItemFoodItem
+
+!new RegularCustomer('rc17')
+!rc17.name := 'Mina Alvarez'
+!rc17.prefferedLanguage := #English
+
+!new Banquet('resBan24')
+!resBan24.time := Time('18:00')
+!resBan24.date := Date('2026-07-21')
+!resBan24.numberPeople := 12
+!resBan24.name := 'Group Liaison'
+!resBan24.phoneNumber := '+1-555-2630'
+!resBan24.number := 70001
+!resBan24.groupName := 'Stargazer Society'
+!resBan24.paymentMethod := #CreditCard
+!resBan24.busService := true
+
+!new Individual('resInd33')
+!resInd33.time := Time('12:15')
+!resInd33.date := Date('2026-07-22')
+!resInd33.numberPeople := 3
+!resInd33.name := 'Mina Alvarez'
+!resInd33.phoneNumber := '+1-555-2631'
+!resInd33.number := 70002
+!resInd33.seating := #Patio
+!resInd33.smoking := #NonSmoking
+
+!new Individual('resInd34')
+!resInd34.time := Time('22:30')
+!resInd34.date := Date('2026-07-22')
+!resInd34.numberPeople := 1
+!resInd34.name := 'Late Solo'
+!resInd34.phoneNumber := '+1-555-2632'
+!resInd34.number := 70003
+!resInd34.seating := #Inside
+!resInd34.smoking := #NonSmoking
+
+!insert (rest26, resBan24) into RestaurantReservation
+!insert (rest26, resInd33) into RestaurantReservation
+!insert (rest26, resInd34) into RestaurantReservation
+
+!insert (resInd33, rc17) into ReservationCustomer
+
+!insert (resBan24, w55) into ReservationWaiter
+!insert (resBan24, w56) into ReservationWaiter
+!insert (resInd33, w57) into ReservationWaiter
+!insert (resInd34, w56) into ReservationWaiter
+
+!new BusDriver('bd18')
+!bd18.name := 'Kurt Valdez'
+!bd18.dateOfBirth := Date('1964-04-14')
+!bd18.phoneNumber := '+1-555-2640'
+!bd18.driverLicenseNr := 'BUS-6818-NG'
+
+!insert (resBan24, bd18) into BanquetBusDriver
+
+!new Table('t260')
+!t260.number := 260
+!t260.description := 'Banquet round A'
+!t260.capacity := 5
+
+!new Table('t261')
+!t261.number := 261
+!t261.description := 'Banquet round B'
+!t261.capacity := 7
+
+!new Table('t262')
+!t262.number := 262
+!t262.description := 'Patio two-top'
+!t262.capacity := 2
+
+!new Table('t263')
+!t263.number := 263
+!t263.description := 'Patio stool'
+!t263.capacity := 1
+
+!new Table('t264')
+!t264.number := 264
+!t264.description := 'Inside single'
+!t264.capacity := 1
+
+!insert (resBan24, t260) into ReservationTable
+!insert (resBan24, t261) into ReservationTable
+!insert (resInd33, t262) into ReservationTable
+!insert (resInd33, t263) into ReservationTable
+!insert (resInd34, t264) into ReservationTable
+
+!new ItemOrder('io200')
+!io200.time := Time('18:10')
+
+!new ItemOrder('io201')
+!io201.time := Time('18:12')
+
+!new ItemOrder('io202')
+!io202.time := Time('12:20')
+
+!insert (resBan24, io200) into ReservationItemOrdered
+!insert (resBan24, io201) into ReservationItemOrdered
+!insert (resInd33, io202) into ReservationItemOrdered
+
+!insert (io200, mi63) into ItemOrderMenuItem
+!insert (io201, mi65) into ItemOrderMenuItem
+!insert (io202, mi64) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr14')
+!dr14.diet := #Vegetarian
+
+!new ReportedAllergy('ra13')
+!ra13.allergen := #Seafood

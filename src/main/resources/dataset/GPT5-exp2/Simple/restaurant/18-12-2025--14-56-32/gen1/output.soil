@@ -1,0 +1,330 @@
+!new Restaurant('rest1')
+!rest1.name := 'Harbor Bistro'
+
+!new Restaurant('rest2')
+!rest2.name := 'Green Garden'
+
+!new Owner('own1')
+!own1.name := 'Alice Chen'
+!own1.percentageShares := 50
+
+!new Owner('own2')
+!own2.name := 'Bruno Silva'
+!own2.percentageShares := 30
+
+!new Owner('own3')
+!own3.name := 'Carla Novak'
+!own3.percentageShares := 20
+
+!new Owner('own4')
+!own4.name := 'Diana Rossi'
+!own4.percentageShares := 100
+
+!insert (rest1, own1) into RestaurantOwner
+!insert (rest1, own2) into RestaurantOwner
+!insert (rest1, own3) into RestaurantOwner
+!insert (rest2, own4) into RestaurantOwner
+
+!new HeadWaiter('hw1')
+!hw1.name := 'Hector Miles'
+!hw1.dateOfBirth := Date('1980-04-12')
+!hw1.phoneNumber := '+1-555-0100'
+
+!new Waiter('w1')
+!w1.name := 'Mina Patel'
+!w1.dateOfBirth := Date('1996-09-03')
+!w1.phoneNumber := '+1-555-0111'
+!w1.spokenLanguage := #English
+
+!new Waiter('w2')
+!w2.name := 'Luis García'
+!w2.dateOfBirth := Date('1992-02-20')
+!w2.phoneNumber := '+1-555-0112'
+!w2.spokenLanguage := #Spanish
+
+!new Waiter('w3')
+!w3.name := 'Greta König'
+!w3.dateOfBirth := Date('1998-07-19')
+!w3.phoneNumber := '+1-555-0113'
+!w3.spokenLanguage := #German
+
+!insert (hw1, w1) into HeadWaiterWaiter
+!insert (hw1, w2) into HeadWaiterWaiter
+!insert (hw1, w3) into HeadWaiterWaiter
+
+!new Chef('chef1')
+!chef1.name := 'Marco Bianchi'
+!chef1.dateOfBirth := Date('1975-11-30')
+!chef1.phoneNumber := '+1-555-0201'
+
+!new Chef('chef2')
+!chef2.name := 'Nora Stein'
+!chef2.dateOfBirth := Date('1983-06-25')
+!chef2.phoneNumber := '+1-555-0202'
+
+!new Cook('cook1')
+!cook1.name := 'Sam Lee'
+!cook1.dateOfBirth := Date('1990-01-14')
+!cook1.phoneNumber := '+1-555-0211'
+!cook1.yearsOfExperience := 12
+
+!new Cook('cook2')
+!cook2.name := 'Olivia Park'
+!cook2.dateOfBirth := Date('2001-08-05')
+!cook2.phoneNumber := '+1-555-0212'
+!cook2.yearsOfExperience := 0
+
+!new Cook('cook3')
+!cook3.name := 'Ivan Horvat'
+!cook3.dateOfBirth := Date('1994-12-02')
+!cook3.phoneNumber := '+1-555-0213'
+!cook3.yearsOfExperience := 5
+
+!insert (chef1, cook1) into ChefCook
+!insert (chef1, cook2) into ChefCook
+!insert (chef2, cook3) into ChefCook
+
+!new Manager('mgr1')
+!mgr1.name := 'Rita Gomez'
+!mgr1.dateOfBirth := Date('1988-03-08')
+!mgr1.phoneNumber := '+1-555-0301'
+
+!new BusDriver('bd1')
+!bd1.name := 'Tom Driver'
+!bd1.dateOfBirth := Date('1970-10-10')
+!bd1.phoneNumber := '+1-555-0401'
+!bd1.driverLicenseNr := 'D-8831-XY'
+
+!new BusDriver('bd2')
+!bd2.name := 'Uma Wheels'
+!bd2.dateOfBirth := Date('1978-05-22')
+!bd2.phoneNumber := '+1-555-0402'
+!bd2.driverLicenseNr := 'D-1190-ZZ'
+
+!new RegularCustomer('rc1')
+!rc1.name := 'Evan Brooks'
+!rc1.prefferedLanguage := #English
+
+!new RegularCustomer('rc2')
+!rc2.name := 'Sofía Martín'
+!rc2.prefferedLanguage := #Spanish
+
+!new DietaryRequirement('dr1')
+!dr1.diet := #Vegan
+
+!new DietaryRequirement('dr2')
+!dr2.diet := #Kosher
+
+!new ReportedAllergy('ra1')
+!ra1.allergen := #Nuts
+
+!new ReportedAllergy('ra2')
+!ra2.allergen := #Gluten
+
+!new Allergen('aLactose')
+!aLactose.type := #Lactose
+
+!new Allergen('aNuts')
+!aNuts.type := #Nuts
+
+!new Allergen('aGluten')
+!aGluten.type := #Gluten
+
+!new Allergen('aSeafood')
+!aSeafood.type := #Seafood
+
+!new FoodItem('fi1')
+!fi1.number := 101
+!fi1.description := 'Butter'
+!fi1.purchaseFlag := true
+!fi1.unit := #Ounce
+
+!new FoodItem('fi2')
+!fi2.number := 102
+!fi2.description := 'Wheat Flour'
+!fi2.purchaseFlag := true
+!fi2.unit := #Pound
+
+!new FoodItem('fi3')
+!fi3.number := 103
+!fi3.description := 'Shrimp'
+!fi3.purchaseFlag := true
+!fi3.unit := #Pound
+
+!new FoodItem('fi4')
+!fi4.number := 104
+!fi4.description := 'Almonds'
+!fi4.purchaseFlag := true
+!fi4.unit := #Gram
+
+!new FoodItem('fi5')
+!fi5.number := 105
+!fi5.description := 'Lettuce'
+!fi5.purchaseFlag := false
+!fi5.unit := #Dozen
+
+!insert (fi1, aLactose) into FoodItemAllergen
+!insert (fi2, aGluten) into FoodItemAllergen
+!insert (fi3, aSeafood) into FoodItemAllergen
+!insert (fi4, aNuts) into FoodItemAllergen
+
+!new MenuItem('mi1')
+!mi1.description := 'Garlic Shrimp'
+!mi1.prepTime := 12.5
+!mi1.classification := #Apetizer
+
+!new MenuItem('mi2')
+!mi2.description := 'Garden Salad'
+!mi2.prepTime := 6.0
+!mi2.classification := #Main
+
+!new MenuItem('mi3')
+!mi3.description := 'Almond Tart'
+!mi3.prepTime := 25.0
+!mi3.classification := #Dessert
+
+!new MenuItem('mi4')
+!mi4.description := 'Sparkling Water'
+!mi4.prepTime := 0.5
+!mi4.classification := #Beverage
+
+!insert (mi1, chef1) into MenuItemChef
+!insert (mi2, chef2) into MenuItemChef
+!insert (mi3, chef1) into MenuItemChef
+!insert (mi4, chef2) into MenuItemChef
+
+!insert (mi1, fi3) into MenuItemFoodItem
+!insert (mi1, fi1) into MenuItemFoodItem
+!insert (mi2, fi5) into MenuItemFoodItem
+!insert (mi3, fi2) into MenuItemFoodItem
+!insert (mi3, fi4) into MenuItemFoodItem
+
+!new Individual('resInd1')
+!resInd1.time := Time('18:00')
+!resInd1.date := Date('2025-12-20')
+!resInd1.numberPeople := 2
+!resInd1.name := 'Evan Brooks'
+!resInd1.phoneNumber := '+1-555-1001'
+!resInd1.number := 2001
+!resInd1.seating := #Inside
+!resInd1.smoking := #NonSmoking
+
+!new Individual('resInd2')
+!resInd2.time := Time('19:30')
+!resInd2.date := Date('2025-12-20')
+!resInd2.numberPeople := 5
+!resInd2.name := 'Walk-in Guest'
+!resInd2.phoneNumber := '+1-555-1002'
+!resInd2.number := 2002
+!resInd2.seating := #Patio
+!resInd2.smoking := #Smoking
+
+!new Banquet('resBan1')
+!resBan1.time := Time('20:00')
+!resBan1.date := Date('2025-12-31')
+!resBan1.numberPeople := 30
+!resBan1.name := 'Sofía Martín'
+!resBan1.phoneNumber := '+1-555-1003'
+!resBan1.number := 3001
+!resBan1.groupName := 'New Year Club'
+!resBan1.paymentMethod := #CreditCard
+!resBan1.busService := true
+
+!insert (rest1, resInd1) into RestaurantReservation
+!insert (rest1, resBan1) into RestaurantReservation
+!insert (rest2, resInd2) into RestaurantReservation
+
+!insert (resInd1, rc1) into ReservationCustomer
+!insert (resBan1, rc2) into ReservationCustomer
+
+!insert (resInd1, w1) into ReservationWaiter
+!insert (resInd2, w2) into ReservationWaiter
+!insert (resInd2, w3) into ReservationWaiter
+!insert (resBan1, w1) into ReservationWaiter
+!insert (resBan1, w2) into ReservationWaiter
+
+!insert (resBan1, bd1) into BanquetBusDriver
+!insert (resBan1, bd2) into BanquetBusDriver
+
+!new Table('t1')
+!t1.number := 1
+!t1.description := 'Window two-top'
+!t1.capacity := 2
+
+!new Table('t2')
+!t2.number := 2
+!t2.description := 'Patio four-top'
+!t2.capacity := 4
+
+!new Table('t3')
+!t3.number := 3
+!t3.description := 'Patio two-top'
+!t3.capacity := 1
+
+!new Table('t10')
+!t10.number := 10
+!t10.description := 'Banquet table A'
+!t10.capacity := 10
+
+!new Table('t11')
+!t11.number := 11
+!t11.description := 'Banquet table B'
+!t11.capacity := 10
+
+!new Table('t12')
+!t12.number := 12
+!t12.description := 'Banquet table C'
+!t12.capacity := 10
+
+!insert (resInd1, t1) into ReservationTable
+!insert (resInd2, t2) into ReservationTable
+!insert (resInd2, t3) into ReservationTable
+!insert (resBan1, t10) into ReservationTable
+!insert (resBan1, t11) into ReservationTable
+!insert (resBan1, t12) into ReservationTable
+
+!new ItemOrder('io1')
+!io1.time := Time('18:05')
+
+!new ItemOrder('io2')
+!io2.time := Time('18:10')
+
+!new ItemOrder('io3')
+!io3.time := Time('19:40')
+
+!new ItemOrder('io4')
+!io4.time := Time('20:15')
+
+!new ItemOrder('io5')
+!io5.time := Time('20:16')
+
+!insert (resInd1, io1) into ReservationItemOrdered
+!insert (resInd1, io2) into ReservationItemOrdered
+!insert (resInd2, io3) into ReservationItemOrdered
+!insert (resBan1, io4) into ReservationItemOrdered
+!insert (resBan1, io5) into ReservationItemOrdered
+
+!insert (io1, mi1) into ItemOrderMenuItem
+!insert (io2, mi4) into ItemOrderMenuItem
+!insert (io3, mi2) into ItemOrderMenuItem
+!insert (io4, mi1) into ItemOrderMenuItem
+!insert (io5, mi3) into ItemOrderMenuItem
+
+!new Individual('resNoRest1')
+!resNoRest1.time := Time('21:00')
+!resNoRest1.date := Date('2026-01-01')
+!resNoRest1.numberPeople := 1
+!resNoRest1.name := 'No Restaurant Linked'
+!resNoRest1.phoneNumber := '+1-555-1999'
+!resNoRest1.number := 2003
+!resNoRest1.seating := #Inside
+!resNoRest1.smoking := #NonSmoking
+
+!insert (resNoRest1, w3) into ReservationWaiter
+
+!new Table('t20')
+!t20.number := 20
+!t20.description := 'Single seat at bar'
+!t20.capacity := 1
+
+!insert (resNoRest1, t20) into ReservationTable

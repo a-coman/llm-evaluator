@@ -1,0 +1,92 @@
+!new Restaurant('rest5')
+!rest5.name := 'Lighthouse Café'
+
+!new Owner('own10')
+!own10.name := 'Paul Nguyen'
+!own10.percentageShares := 99
+
+!new Owner('own11')
+!own11.name := 'Sara Lind'
+!own11.percentageShares := 1
+
+!insert (rest5, own10) into RestaurantOwner
+!insert (rest5, own11) into RestaurantOwner
+
+!new HeadWaiter('hw4')
+!hw4.name := 'Janet Cole'
+!hw4.dateOfBirth := Date('1972-05-06')
+!hw4.phoneNumber := '+1-555-5000'
+
+!new Waiter('w9')
+!w9.name := 'Ilya Morozov'
+!w9.dateOfBirth := Date('1990-12-01')
+!w9.phoneNumber := '+1-555-5011'
+!w9.spokenLanguage := #Italian
+
+!insert (hw4, w9) into HeadWaiterWaiter
+
+!new Chef('chef7')
+!chef7.name := 'Ana Costa'
+!chef7.dateOfBirth := Date('1981-09-15')
+!chef7.phoneNumber := '+1-555-5101'
+
+!new Cook('cook9')
+!cook9.name := 'Mason Hill'
+!cook9.dateOfBirth := Date('2003-03-03')
+!cook9.phoneNumber := '+1-555-5111'
+!cook9.yearsOfExperience := 0
+
+!insert (chef7, cook9) into ChefCook
+
+!new Table('t50')
+!t50.number := 50
+!t50.description := 'Small booth A'
+!t50.capacity := 2
+
+!new Table('t51')
+!t51.number := 51
+!t51.description := 'Small booth B'
+!t51.capacity := 2
+
+!new Table('t52')
+!t52.number := 52
+!t52.description := 'Chef counter seat'
+!t52.capacity := 1
+
+!new RegularCustomer('rc4')
+!rc4.name := 'Tomás Ibarra'
+!rc4.prefferedLanguage := #Spanish
+
+!new Individual('resInd5')
+!resInd5.time := Time('08:15')
+!resInd5.date := Date('2026-05-02')
+!resInd5.numberPeople := 4
+!resInd5.name := 'Tomás Ibarra'
+!resInd5.phoneNumber := '+1-555-5201'
+!resInd5.number := 8001
+!resInd5.seating := #Inside
+!resInd5.smoking := #NonSmoking
+
+!new Banquet('resBan4')
+!resBan4.time := Time('06:30')
+!resBan4.date := Date('2026-05-03')
+!resBan4.numberPeople := 1
+!resBan4.name := 'Early Meeting'
+!resBan4.phoneNumber := '+1-555-5202'
+!resBan4.number := 9001
+!resBan4.groupName := 'Sunrise Briefing'
+!resBan4.paymentMethod := #CreditCard
+!resBan4.busService := false
+
+!insert (rest5, resInd5) into RestaurantReservation
+!insert (rest5, resBan4) into RestaurantReservation
+
+!insert (resInd5, rc4) into ReservationCustomer
+
+!insert (resInd5, w9) into ReservationWaiter
+!insert (resBan4, w9) into ReservationWaiter
+
+!insert (resInd5, t50) into ReservationTable
+!insert (resInd5, t51) into ReservationTable
+
+!insert (resBan4, t52) into ReservationTable

@@ -1,0 +1,170 @@
+!new Restaurant('rest14')
+!rest14.name := 'Museum Lunch Counter'
+
+!new Owner('own33')
+!own33.name := 'Nia Brooks'
+!own33.percentageShares := 100
+
+!insert (rest14, own33) into RestaurantOwner
+
+!new HeadWaiter('hw13')
+!hw13.name := 'Oskar Hahn'
+!hw13.dateOfBirth := Date('1981-01-01')
+!hw13.phoneNumber := '+1-555-1400'
+
+!new Waiter('w28')
+!w28.name := 'Clara Diaz'
+!w28.dateOfBirth := Date('1999-09-19')
+!w28.phoneNumber := '+1-555-1401'
+!w28.spokenLanguage := #Spanish
+
+!new Waiter('w29')
+!w29.name := 'Ben Turner'
+!w29.dateOfBirth := Date('1996-06-06')
+!w29.phoneNumber := '+1-555-1402'
+!w29.spokenLanguage := #English
+
+!insert (hw13, w28) into HeadWaiterWaiter
+!insert (hw13, w29) into HeadWaiterWaiter
+
+!new Manager('mgr3')
+!mgr3.name := 'Tina Meyer'
+!mgr3.dateOfBirth := Date('1975-05-05')
+!mgr3.phoneNumber := '+1-555-1409'
+
+!new Chef('chef20')
+!chef20.name := 'Ken Morgan'
+!chef20.dateOfBirth := Date('1988-08-18')
+!chef20.phoneNumber := '+1-555-1410'
+
+!new Cook('cook26')
+!cook26.name := 'Asha Verma'
+!cook26.dateOfBirth := Date('2000-02-20')
+!cook26.phoneNumber := '+1-555-1411'
+!cook26.yearsOfExperience := 0
+
+!new Cook('cook27')
+!cook27.name := 'Paul Steiner'
+!cook27.dateOfBirth := Date('1991-11-21')
+!cook27.phoneNumber := '+1-555-1412'
+!cook27.yearsOfExperience := 9
+
+!insert (chef20, cook26) into ChefCook
+!insert (chef20, cook27) into ChefCook
+
+!new BusDriver('bd8')
+!bd8.name := 'Ronan Fields'
+!bd8.dateOfBirth := Date('1966-10-10')
+!bd8.phoneNumber := '+1-555-1420'
+!bd8.driverLicenseNr := 'BUS-9910-ML'
+
+!new Allergen('aNuts14')
+!aNuts14.type := #Nuts
+
+!new Allergen('aGluten14')
+!aGluten14.type := #Gluten
+
+!new FoodItem('fi110')
+!fi110.number := 1310
+!fi110.description := 'Wholegrain Bread Loaf'
+!fi110.purchaseFlag := true
+!fi110.unit := #Pound
+
+!new FoodItem('fi111')
+!fi111.number := 1311
+!fi111.description := 'Peanut Spread'
+!fi111.purchaseFlag := true
+!fi111.unit := #Ounce
+
+!new FoodItem('fi112')
+!fi112.number := 1312
+!fi112.description := 'Tomatoes'
+!fi112.purchaseFlag := false
+!fi112.unit := #Dozen
+
+!insert (fi110, aGluten14) into FoodItemAllergen
+!insert (fi111, aNuts14) into FoodItemAllergen
+
+!new MenuItem('mi31')
+!mi31.description := 'Peanut Toast'
+!mi31.prepTime := 3.0
+!mi31.classification := #Apetizer
+
+!new MenuItem('mi32')
+!mi32.description := 'Tomato Sandwich'
+!mi32.prepTime := 4.5
+!mi32.classification := #Main
+
+!new MenuItem('mi33')
+!mi33.description := 'Tap Water'
+!mi33.prepTime := 0.0
+!mi33.classification := #Beverage
+
+!insert (mi31, chef20) into MenuItemChef
+!insert (mi32, chef20) into MenuItemChef
+!insert (mi33, chef20) into MenuItemChef
+
+!insert (mi31, fi110) into MenuItemFoodItem
+!insert (mi31, fi111) into MenuItemFoodItem
+!insert (mi32, fi110) into MenuItemFoodItem
+!insert (mi32, fi112) into MenuItemFoodItem
+
+!new Table('t140')
+!t140.number := 140
+!t140.description := 'Counter seat A'
+!t140.capacity := 1
+
+!new Table('t141')
+!t141.number := 141
+!t141.description := 'Counter seat B'
+!t141.capacity := 1
+
+!new Table('t142')
+!t142.number := 142
+!t142.description := 'Small table'
+!t142.capacity := 2
+
+!new Banquet('resBan12')
+!resBan12.time := Time('10:00')
+!resBan12.date := Date('2026-10-10')
+!resBan12.numberPeople := 2
+!resBan12.name := 'Docent Office'
+!resBan12.phoneNumber := '+1-555-1430'
+!resBan12.number := 25001
+!resBan12.groupName := 'VIP Shuttle Breakfast'
+!resBan12.paymentMethod := #Cash
+!resBan12.busService := true
+
+!new Individual('resInd16')
+!resInd16.time := Time('12:15')
+!resInd16.date := Date('2026-10-10')
+!resInd16.numberPeople := 2
+!resInd16.name := 'Gallery Visitors'
+!resInd16.phoneNumber := '+1-555-1431'
+!resInd16.number := 25002
+!resInd16.seating := #Inside
+!resInd16.smoking := #NonSmoking
+
+!insert (rest14, resBan12) into RestaurantReservation
+!insert (rest14, resInd16) into RestaurantReservation
+
+!insert (resBan12, bd8) into BanquetBusDriver
+
+!insert (resBan12, w28) into ReservationWaiter
+!insert (resInd16, w29) into ReservationWaiter
+
+!insert (resBan12, t140) into ReservationTable
+!insert (resBan12, t141) into ReservationTable
+!insert (resInd16, t142) into ReservationTable
+
+!new ItemOrder('io90')
+!io90.time := Time('10:05')
+
+!new ItemOrder('io91')
+!io91.time := Time('12:20')
+
+!insert (resBan12, io90) into ReservationItemOrdered
+!insert (resInd16, io91) into ReservationItemOrdered
+
+!insert (io90, mi33) into ItemOrderMenuItem
+!insert (io91, mi32) into ItemOrderMenuItem

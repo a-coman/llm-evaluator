@@ -1,0 +1,195 @@
+!new Restaurant('rest4')
+!rest4.name := 'Quiet Noodle House'
+
+!new Owner('own7')
+!own7.name := 'Marta Ivanova'
+!own7.percentageShares := 34
+
+!new Owner('own8')
+!own8.name := 'Noah Johnson'
+!own8.percentageShares := 33
+
+!new Owner('own9')
+!own9.name := 'Yuki Sato'
+!own9.percentageShares := 33
+
+!insert (rest4, own7) into RestaurantOwner
+!insert (rest4, own8) into RestaurantOwner
+!insert (rest4, own9) into RestaurantOwner
+
+!new HeadWaiter('hw3')
+!hw3.name := 'Quentin Baker'
+!hw3.dateOfBirth := Date('1982-08-18')
+!hw3.phoneNumber := '+1-555-0800'
+
+!new Waiter('w7')
+!w7.name := 'Aya Mori'
+!w7.dateOfBirth := Date('1999-04-09')
+!w7.phoneNumber := '+1-555-0811'
+!w7.spokenLanguage := #English
+
+!new Waiter('w8')
+!w8.name := 'Carlos Vega'
+!w8.dateOfBirth := Date('1991-09-27')
+!w8.phoneNumber := '+1-555-0812'
+!w8.spokenLanguage := #Spanish
+
+!insert (hw3, w7) into HeadWaiterWaiter
+!insert (hw3, w8) into HeadWaiterWaiter
+
+!new Chef('chef5')
+!chef5.name := 'Helena Dubois'
+!chef5.dateOfBirth := Date('1984-03-03')
+!chef5.phoneNumber := '+1-555-0901'
+
+!new Chef('chef6')
+!chef6.name := 'Ravi Mehta'
+!chef6.dateOfBirth := Date('1976-12-24')
+!chef6.phoneNumber := '+1-555-0902'
+
+!new Cook('cook6')
+!cook6.name := 'Ben Carter'
+!cook6.dateOfBirth := Date('1997-06-16')
+!cook6.phoneNumber := '+1-555-0911'
+!cook6.yearsOfExperience := 1
+
+!new Cook('cook7')
+!cook7.name := 'Lina Aydin'
+!cook7.dateOfBirth := Date('1993-11-05')
+!cook7.phoneNumber := '+1-555-0912'
+!cook7.yearsOfExperience := 7
+
+!new Cook('cook8')
+!cook8.name := 'Zoe King'
+!cook8.dateOfBirth := Date('2002-02-12')
+!cook8.phoneNumber := '+1-555-0913'
+!cook8.yearsOfExperience := 0
+
+!insert (chef5, cook6) into ChefCook
+!insert (chef5, cook7) into ChefCook
+!insert (chef6, cook8) into ChefCook
+
+!new Allergen('aGluten3')
+!aGluten3.type := #Gluten
+
+!new FoodItem('fi20')
+!fi20.number := 310
+!fi20.description := 'Rice Noodles'
+!fi20.purchaseFlag := true
+!fi20.unit := #Pound
+
+!new FoodItem('fi21')
+!fi21.number := 311
+!fi21.description := 'Soy Sauce'
+!fi21.purchaseFlag := true
+!fi21.unit := #Ounce
+
+!new FoodItem('fi22')
+!fi22.number := 312
+!fi22.description := 'Wheat Dumpling Wrappers'
+!fi22.purchaseFlag := true
+!fi22.unit := #Sheet
+
+!insert (fi22, aGluten3) into FoodItemAllergen
+
+!new MenuItem('mi8')
+!mi8.description := 'Beef Pho'
+!mi8.prepTime := 20.0
+!mi8.classification := #Main
+
+!new MenuItem('mi9')
+!mi9.description := 'Steamed Dumplings'
+!mi9.prepTime := 11.0
+!mi9.classification := #Apetizer
+
+!new MenuItem('mi10')
+!mi10.description := 'Hot Green Tea'
+!mi10.prepTime := 2.0
+!mi10.classification := #Beverage
+
+!insert (mi8, chef5) into MenuItemChef
+!insert (mi9, chef6) into MenuItemChef
+!insert (mi10, chef5) into MenuItemChef
+
+!insert (mi8, fi20) into MenuItemFoodItem
+!insert (mi8, fi21) into MenuItemFoodItem
+!insert (mi9, fi22) into MenuItemFoodItem
+
+!new Table('t40')
+!t40.number := 40
+!t40.description := 'Solo counter seat'
+!t40.capacity := 1
+
+!new Table('t41')
+!t41.number := 41
+!t41.description := 'Back room table'
+!t41.capacity := 10
+
+!new Table('t42')
+!t42.number := 42
+!t42.description := 'Back room table'
+!t42.capacity := 10
+
+!new Table('t43')
+!t43.number := 43
+!t43.description := 'Side table'
+!t43.capacity := 5
+
+!new RegularCustomer('rc3')
+!rc3.name := 'Irene Adler'
+!rc3.prefferedLanguage := #German
+
+!new Individual('resInd4')
+!resInd4.time := Time('11:30')
+!resInd4.date := Date('2026-04-01')
+!resInd4.numberPeople := 1
+!resInd4.name := 'Irene Adler'
+!resInd4.phoneNumber := '+1-555-3001'
+!resInd4.number := 6001
+!resInd4.seating := #Inside
+!resInd4.smoking := #NonSmoking
+
+!new Banquet('resBan3')
+!resBan3.time := Time('13:00')
+!resBan3.date := Date('2026-04-01')
+!resBan3.numberPeople := 25
+!resBan3.name := 'Event Coordinator'
+!resBan3.phoneNumber := '+1-555-3002'
+!resBan3.number := 7001
+!resBan3.groupName := 'City Chess League'
+!resBan3.paymentMethod := #Cash
+!resBan3.busService := true
+
+!insert (rest4, resInd4) into RestaurantReservation
+!insert (rest4, resBan3) into RestaurantReservation
+
+!insert (resInd4, rc3) into ReservationCustomer
+
+!insert (resInd4, w7) into ReservationWaiter
+!insert (resBan3, w7) into ReservationWaiter
+!insert (resBan3, w8) into ReservationWaiter
+
+!insert (resInd4, t40) into ReservationTable
+!insert (resBan3, t41) into ReservationTable
+!insert (resBan3, t42) into ReservationTable
+!insert (resBan3, t43) into ReservationTable
+
+!new BusDriver('bd3')
+!bd3.name := 'Nina Shuttle'
+!bd3.dateOfBirth := Date('1969-09-01')
+!bd3.phoneNumber := '+1-555-3100'
+!bd3.driverLicenseNr := 'BUS-7721-AZ'
+
+!insert (resBan3, bd3) into BanquetBusDriver
+
+!new ItemOrder('io20')
+!io20.time := Time('11:35')
+
+!new ItemOrder('io21')
+!io21.time := Time('11:37')
+
+!insert (resInd4, io20) into ReservationItemOrdered
+!insert (resInd4, io21) into ReservationItemOrdered
+
+!insert (io20, mi8) into ItemOrderMenuItem
+!insert (io21, mi10) into ItemOrderMenuItem

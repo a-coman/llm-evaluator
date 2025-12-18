@@ -1,0 +1,204 @@
+!new Restaurant('rest29')
+!rest29.name := 'Clockwork Eatery'
+
+!new Owner('own66')
+!own66.name := 'Aria Bloom'
+!own66.percentageShares := 25
+
+!new Owner('own67')
+!own67.name := 'Boris Kent'
+!own67.percentageShares := 25
+
+!new Owner('own68')
+!own68.name := 'Celine Frost'
+!own68.percentageShares := 25
+
+!new Owner('own69')
+!own69.name := 'Darius Cole'
+!own69.percentageShares := 25
+
+!insert (rest29, own66) into RestaurantOwner
+!insert (rest29, own67) into RestaurantOwner
+!insert (rest29, own68) into RestaurantOwner
+!insert (rest29, own69) into RestaurantOwner
+
+!new HeadWaiter('hw29')
+!hw29.name := 'Parker Sloan'
+!hw29.dateOfBirth := Date('1985-05-05')
+!hw29.phoneNumber := '+1-555-2900'
+
+!new Waiter('w61')
+!w61.name := 'Inez Romero'
+!w61.dateOfBirth := Date('1997-07-01')
+!w61.phoneNumber := '+1-555-2901'
+!w61.spokenLanguage := #Spanish
+
+!new Waiter('w62')
+!w62.name := 'Felix Hartmann'
+!w62.dateOfBirth := Date('1994-02-14')
+!w62.phoneNumber := '+1-555-2902'
+!w62.spokenLanguage := #German
+
+!insert (hw29, w61) into HeadWaiterWaiter
+!insert (hw29, w62) into HeadWaiterWaiter
+
+!new Chef('chef42')
+!chef42.name := 'Naomi Richter'
+!chef42.dateOfBirth := Date('1980-10-10')
+!chef42.phoneNumber := '+1-555-2910'
+
+!new Cook('cook60')
+!cook60.name := 'Evan Pike'
+!cook60.dateOfBirth := Date('2003-01-01')
+!cook60.phoneNumber := '+1-555-2911'
+!cook60.yearsOfExperience := 0
+
+!new Cook('cook61')
+!cook61.name := 'Soraya Malik'
+!cook61.dateOfBirth := Date('1989-09-09')
+!cook61.phoneNumber := '+1-555-2912'
+!cook61.yearsOfExperience := 17
+
+!insert (chef42, cook60) into ChefCook
+!insert (chef42, cook61) into ChefCook
+
+!new Allergen('aNuts29')
+!aNuts29.type := #Nuts
+
+!new Allergen('aGluten29')
+!aGluten29.type := #Gluten
+
+!new FoodItem('fi250')
+!fi250.number := 7010
+!fi250.description := 'Walnut Pieces'
+!fi250.purchaseFlag := true
+!fi250.unit := #Gram
+
+!new FoodItem('fi251')
+!fi251.number := 7011
+!fi251.description := 'Flour'
+!fi251.purchaseFlag := true
+!fi251.unit := #Pound
+
+!new FoodItem('fi252')
+!fi252.number := 7012
+!fi252.description := 'Sparkling Water'
+!fi252.purchaseFlag := false
+!fi252.unit := #Dozen
+
+!insert (fi250, aNuts29) into FoodItemAllergen
+!insert (fi251, aGluten29) into FoodItemAllergen
+
+!new MenuItem('mi69')
+!mi69.description := 'Walnut Flatbread'
+!mi69.prepTime := 11.0
+!mi69.classification := #Main
+
+!new MenuItem('mi70')
+!mi70.description := 'House Water'
+!mi70.prepTime := 0.0
+!mi70.classification := #Beverage
+
+!insert (mi69, chef42) into MenuItemChef
+!insert (mi70, chef42) into MenuItemChef
+
+!insert (mi69, fi250) into MenuItemFoodItem
+!insert (mi69, fi251) into MenuItemFoodItem
+!insert (mi70, fi252) into MenuItemFoodItem
+
+!new Table('t290')
+!t290.number := 290
+!t290.description := 'Counter seat'
+!t290.capacity := 1
+
+!new Table('t291')
+!t291.number := 291
+!t291.description := 'Banquet section A'
+!t291.capacity := 3
+
+!new Table('t292')
+!t292.number := 292
+!t292.description := 'Banquet section B'
+!t292.capacity := 3
+
+!new Table('t293')
+!t293.number := 293
+!t293.description := 'Banquet section C'
+!t293.capacity := 3
+
+!new RegularCustomer('rc19')
+!rc19.name := 'Kai Morgan'
+!rc19.prefferedLanguage := #English
+
+!new Individual('resInd37')
+!resInd37.time := Time('06:00')
+!resInd37.date := Date('2026-12-24')
+!resInd37.numberPeople := 1
+!resInd37.name := 'Kai Morgan'
+!resInd37.phoneNumber := '+1-555-2920'
+!resInd37.number := 90001
+!resInd37.seating := #Inside
+!resInd37.smoking := #NonSmoking
+
+!new Banquet('resBan26')
+!resBan26.time := Time('23:30')
+!resBan26.date := Date('2026-12-24')
+!resBan26.numberPeople := 9
+!resBan26.name := 'Night Organizer'
+!resBan26.phoneNumber := '+1-555-2921'
+!resBan26.number := 90002
+!resBan26.groupName := 'Midnight Mechanics'
+!resBan26.paymentMethod := #Cash
+!resBan26.busService := true
+
+!insert (rest29, resInd37) into RestaurantReservation
+!insert (rest29, resBan26) into RestaurantReservation
+
+!insert (resInd37, rc19) into ReservationCustomer
+
+!insert (resInd37, w61) into ReservationWaiter
+!insert (resBan26, w61) into ReservationWaiter
+!insert (resBan26, w62) into ReservationWaiter
+
+!insert (resInd37, t290) into ReservationTable
+!insert (resBan26, t291) into ReservationTable
+!insert (resBan26, t292) into ReservationTable
+!insert (resBan26, t293) into ReservationTable
+
+!new BusDriver('bd21')
+!bd21.name := 'Tess Driver'
+!bd21.dateOfBirth := Date('1970-07-07')
+!bd21.phoneNumber := '+1-555-2930'
+!bd21.driverLicenseNr := 'BUS-2921-CW'
+
+!new BusDriver('bd22')
+!bd22.name := 'Marek Driver'
+!bd22.dateOfBirth := Date('1968-08-08')
+!bd22.phoneNumber := '+1-555-2931'
+!bd22.driverLicenseNr := 'BUS-2922-CW'
+
+!insert (resBan26, bd21) into BanquetBusDriver
+!insert (resBan26, bd22) into BanquetBusDriver
+
+!new ItemOrder('io220')
+!io220.time := Time('23:35')
+
+!new ItemOrder('io221')
+!io221.time := Time('23:36')
+
+!new ItemOrder('io222')
+!io222.time := Time('23:50')
+
+!insert (resBan26, io220) into ReservationItemOrdered
+!insert (resBan26, io221) into ReservationItemOrdered
+!insert (resBan26, io222) into ReservationItemOrdered
+
+!insert (io220, mi70) into ItemOrderMenuItem
+!insert (io221, mi69) into ItemOrderMenuItem
+!insert (io222, mi69) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr16')
+!dr16.diet := #Kosher
+
+!new ReportedAllergy('ra15')
+!ra15.allergen := #Nuts

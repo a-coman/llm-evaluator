@@ -1,0 +1,230 @@
+!new Restaurant('rest24')
+!rest24.name := 'Cedar & Salt'
+
+!new Owner('own59')
+!own59.name := 'Eleanor Price'
+!own59.percentageShares := 99
+
+!new Owner('own60')
+!own60.name := 'Milan Jovanovic'
+!own60.percentageShares := 1
+
+!insert (rest24, own59) into RestaurantOwner
+!insert (rest24, own60) into RestaurantOwner
+
+!new HeadWaiter('hw24')
+!hw24.name := 'Ramon Chase'
+!hw24.dateOfBirth := Date('1984-08-14')
+!hw24.phoneNumber := '+1-555-2400'
+
+!new HeadWaiter('hw25')
+!hw25.name := 'Ingrid Vale'
+!hw25.dateOfBirth := Date('1989-02-06')
+!hw25.phoneNumber := '+1-555-2401'
+
+!new Waiter('w50')
+!w50.name := 'Sabrina Knox'
+!w50.dateOfBirth := Date('1999-09-01')
+!w50.phoneNumber := '+1-555-2402'
+!w50.spokenLanguage := #English
+
+!new Waiter('w51')
+!w51.name := 'Diego Marin'
+!w51.dateOfBirth := Date('1996-12-10')
+!w51.phoneNumber := '+1-555-2403'
+!w51.spokenLanguage := #Spanish
+
+!new Waiter('w52')
+!w52.name := 'Lotte Weiss'
+!w52.dateOfBirth := Date('1994-04-22')
+!w52.phoneNumber := '+1-555-2404'
+!w52.spokenLanguage := #German
+
+!insert (hw24, w50) into HeadWaiterWaiter
+!insert (hw24, w51) into HeadWaiterWaiter
+!insert (hw25, w52) into HeadWaiterWaiter
+
+!new Chef('chef35')
+!chef35.name := 'Paolo Ferri'
+!chef35.dateOfBirth := Date('1978-03-03')
+!chef35.phoneNumber := '+1-555-2410'
+
+!new Chef('chef36')
+!chef36.name := 'Greta Holm'
+!chef36.dateOfBirth := Date('1986-06-16')
+!chef36.phoneNumber := '+1-555-2411'
+
+!new Cook('cook50')
+!cook50.name := 'Amir Saleh'
+!cook50.dateOfBirth := Date('1991-01-12')
+!cook50.phoneNumber := '+1-555-2412'
+!cook50.yearsOfExperience := 0
+
+!new Cook('cook51')
+!cook51.name := 'Nina Varga'
+!cook51.dateOfBirth := Date('1988-11-08')
+!cook51.phoneNumber := '+1-555-2413'
+!cook51.yearsOfExperience := 19
+
+!insert (chef35, cook50) into ChefCook
+!insert (chef36, cook51) into ChefCook
+
+!new Allergen('aSeafood24')
+!aSeafood24.type := #Seafood
+
+!new Allergen('aGluten24')
+!aGluten24.type := #Gluten
+
+!new FoodItem('fi210')
+!fi210.number := 3001
+!fi210.description := 'Sourdough Bread'
+!fi210.purchaseFlag := true
+!fi210.unit := #Pound
+
+!new FoodItem('fi211')
+!fi211.number := 3002
+!fi211.description := 'Clams'
+!fi211.purchaseFlag := true
+!fi211.unit := #Pound
+
+!new FoodItem('fi212')
+!fi212.number := 3003
+!fi212.description := 'Herb Oil'
+!fi212.purchaseFlag := false
+!fi212.unit := #Ounce
+
+!insert (fi210, aGluten24) into FoodItemAllergen
+!insert (fi211, aSeafood24) into FoodItemAllergen
+
+!new MenuItem('mi58')
+!mi58.description := 'Clam Toast Bites'
+!mi58.prepTime := 8.0
+!mi58.classification := #Apetizer
+
+!new MenuItem('mi59')
+!mi59.description := 'Herb Oil Bread Plate'
+!mi59.prepTime := 2.0
+!mi59.classification := #Main
+
+!new MenuItem('mi60')
+!mi60.description := 'House Water (Carafe)'
+!mi60.prepTime := 0.0
+!mi60.classification := #Beverage
+
+!insert (mi58, chef35) into MenuItemChef
+!insert (mi59, chef36) into MenuItemChef
+!insert (mi60, chef36) into MenuItemChef
+
+!insert (mi58, fi210) into MenuItemFoodItem
+!insert (mi58, fi211) into MenuItemFoodItem
+!insert (mi59, fi210) into MenuItemFoodItem
+!insert (mi59, fi212) into MenuItemFoodItem
+
+!new RegularCustomer('rc15')
+!rc15.name := 'Lea Martin'
+!rc15.prefferedLanguage := #Italian
+
+!new Individual('resInd28')
+!resInd28.time := Time('15:05')
+!resInd28.date := Date('2026-09-09')
+!resInd28.numberPeople := 0
+!resInd28.name := 'Zero-Guest Hold'
+!resInd28.phoneNumber := '+1-555-2420'
+!resInd28.number := 50001
+!resInd28.seating := #Patio
+!resInd28.smoking := #Smoking
+
+!new Individual('resInd29')
+!resInd29.time := Time('18:10')
+!resInd29.date := Date('2026-09-09')
+!resInd29.numberPeople := 2
+!resInd29.name := 'Lea Martin'
+!resInd29.phoneNumber := '+1-555-2421'
+!resInd29.number := 50002
+!resInd29.seating := #Inside
+!resInd29.smoking := #NonSmoking
+
+!new Banquet('resBan23')
+!resBan23.time := Time('20:00')
+!resBan23.date := Date('2026-09-09')
+!resBan23.numberPeople := 60
+!resBan23.name := 'Conference Desk'
+!resBan23.phoneNumber := '+1-555-2422'
+!resBan23.number := 51001
+!resBan23.groupName := 'Cedar Summit'
+!resBan23.paymentMethod := #Cash
+!resBan23.busService := true
+
+!insert (rest24, resInd28) into RestaurantReservation
+!insert (rest24, resInd29) into RestaurantReservation
+!insert (rest24, resBan23) into RestaurantReservation
+
+!insert (resInd29, rc15) into ReservationCustomer
+
+!insert (resInd28, w50) into ReservationWaiter
+!insert (resInd29, w51) into ReservationWaiter
+!insert (resBan23, w50) into ReservationWaiter
+!insert (resBan23, w51) into ReservationWaiter
+!insert (resBan23, w52) into ReservationWaiter
+
+!new Table('t240')
+!t240.number := 240
+!t240.description := 'Small patio stand'
+!t240.capacity := 1
+
+!new Table('t241')
+!t241.number := 241
+!t241.description := 'Inside two-top (exact)'
+!t241.capacity := 2
+
+!new Table('t242')
+!t242.number := 242
+!t242.description := 'Hall table A'
+!t242.capacity := 20
+
+!new Table('t243')
+!t243.number := 243
+!t243.description := 'Hall table B'
+!t243.capacity := 20
+
+!new Table('t244')
+!t244.number := 244
+!t244.description := 'Hall table C'
+!t244.capacity := 20
+
+!insert (resInd28, t240) into ReservationTable
+!insert (resInd29, t241) into ReservationTable
+!insert (resBan23, t242) into ReservationTable
+!insert (resBan23, t243) into ReservationTable
+!insert (resBan23, t244) into ReservationTable
+
+!new BusDriver('bd17')
+!bd17.name := 'Oscar Wynn'
+!bd17.dateOfBirth := Date('1966-06-06')
+!bd17.phoneNumber := '+1-555-2430'
+!bd17.driverLicenseNr := 'BUS-5517-CS'
+
+!insert (resBan23, bd17) into BanquetBusDriver
+
+!new ItemOrder('io180')
+!io180.time := Time('18:12')
+
+!insert (resInd29, io180) into ReservationItemOrdered
+!insert (io180, mi60) into ItemOrderMenuItem
+
+!new ItemOrder('io181')
+!io181.time := Time('20:05')
+
+!new ItemOrder('io182')
+!io182.time := Time('20:06')
+
+!new ItemOrder('io183')
+!io183.time := Time('20:30')
+
+!insert (resBan23, io181) into ReservationItemOrdered
+!insert (resBan23, io182) into ReservationItemOrdered
+!insert (resBan23, io183) into ReservationItemOrdered
+
+!insert (io181, mi58) into ItemOrderMenuItem
+!insert (io182, mi59) into ItemOrderMenuItem
+!insert (io183, mi60) into ItemOrderMenuItem

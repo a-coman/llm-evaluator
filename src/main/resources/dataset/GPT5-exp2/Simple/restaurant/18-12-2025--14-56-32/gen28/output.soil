@@ -1,0 +1,161 @@
+!new Restaurant('rest30')
+!rest30.name := 'Saffron & Steam'
+
+!new Owner('own70')
+!own70.name := 'Leila Nasser'
+!own70.percentageShares := 50
+
+!new Owner('own71')
+!own71.name := 'Jonas Berg'
+!own71.percentageShares := 50
+
+!insert (rest30, own70) into RestaurantOwner
+!insert (rest30, own71) into RestaurantOwner
+
+!new HeadWaiter('hw30')
+!hw30.name := 'Carsten Lowe'
+!hw30.dateOfBirth := Date('1981-03-30')
+!hw30.phoneNumber := '+1-555-3000'
+
+!new Waiter('w63')
+!w63.name := 'Elena Varga'
+!w63.dateOfBirth := Date('1998-08-08')
+!w63.phoneNumber := '+1-555-3001'
+!w63.spokenLanguage := #English
+
+!new Waiter('w64')
+!w64.name := 'Pietro Conti'
+!w64.dateOfBirth := Date('1995-09-19')
+!w64.phoneNumber := '+1-555-3002'
+!w64.spokenLanguage := #Italian
+
+!new Waiter('w65')
+!w65.name := 'Marta Klein'
+!w65.dateOfBirth := Date('1999-12-12')
+!w65.phoneNumber := '+1-555-3003'
+!w65.spokenLanguage := #German
+
+!insert (hw30, w63) into HeadWaiterWaiter
+!insert (hw30, w64) into HeadWaiterWaiter
+!insert (hw30, w65) into HeadWaiterWaiter
+
+!new Manager('mgr5')
+!mgr5.name := 'Noor Salman'
+!mgr5.dateOfBirth := Date('1976-06-16')
+!mgr5.phoneNumber := '+1-555-3010'
+
+!new Chef('chef43')
+!chef43.name := 'Aurelia Rossi'
+!chef43.dateOfBirth := Date('1983-01-10')
+!chef43.phoneNumber := '+1-555-3020'
+
+!new Chef('chef44')
+!chef44.name := 'Marek Nowak'
+!chef44.dateOfBirth := Date('1979-07-27')
+!chef44.phoneNumber := '+1-555-3021'
+
+!new Cook('cook62')
+!cook62.name := 'Sana Rahim'
+!cook62.dateOfBirth := Date('1994-04-04')
+!cook62.phoneNumber := '+1-555-3030'
+!cook62.yearsOfExperience := 0
+
+!new Cook('cook63')
+!cook63.name := 'Elias Ward'
+!cook63.dateOfBirth := Date('1988-11-11')
+!cook63.phoneNumber := '+1-555-3031'
+!cook63.yearsOfExperience := 16
+
+!new Cook('cook64')
+!cook64.name := 'Giulia Ferraro'
+!cook64.dateOfBirth := Date('2002-02-02')
+!cook64.phoneNumber := '+1-555-3032'
+!cook64.yearsOfExperience := 2
+
+!insert (chef43, cook62) into ChefCook
+!insert (chef43, cook63) into ChefCook
+!insert (chef44, cook64) into ChefCook
+
+!new Allergen('aGluten30')
+!aGluten30.type := #Gluten
+
+!new Allergen('aNuts30')
+!aNuts30.type := #Nuts
+
+!new Allergen('aLactose30')
+!aLactose30.type := #Lactose
+
+!new FoodItem('fi300')
+!fi300.number := 9010
+!fi300.description := 'Pistachios'
+!fi300.purchaseFlag := true
+!fi300.unit := #Gram
+
+!new FoodItem('fi301')
+!fi301.number := 9011
+!fi301.description := 'Yogurt'
+!fi301.purchaseFlag := true
+!fi301.unit := #Ounce
+
+!new FoodItem('fi302')
+!fi302.number := 9012
+!fi302.description := 'Phyllo Sheets'
+!fi302.purchaseFlag := true
+!fi302.unit := #Sheet
+
+!new FoodItem('fi303')
+!fi303.number := 9013
+!fi303.description := 'Black Tea Leaves'
+!fi303.purchaseFlag := false
+!fi303.unit := #Gram
+
+!new FoodItem('fi304')
+!fi304.number := 9014
+!fi304.description := 'Chickpeas'
+!fi304.purchaseFlag := true
+!fi304.unit := #Pound
+
+!insert (fi300, aNuts30) into FoodItemAllergen
+!insert (fi301, aLactose30) into FoodItemAllergen
+!insert (fi302, aGluten30) into FoodItemAllergen
+
+!new MenuItem('mi71')
+!mi71.description := 'Pistachio Baklava'
+!mi71.prepTime := 40.0
+!mi71.classification := #Dessert
+
+!new MenuItem('mi72')
+!mi72.description := 'Chickpea Stew Bowl'
+!mi72.prepTime := 18.0
+!mi72.classification := #Main
+
+!new MenuItem('mi73')
+!mi73.description := 'Black Tea (served hot)'
+!mi73.prepTime := 0.0
+!mi73.classification := #Beverage
+
+!new MenuItem('mi74')
+!mi74.description := 'Yogurt Dip Plate'
+!mi74.prepTime := 3.0
+!mi74.classification := #Apetizer
+
+!insert (mi71, chef43) into MenuItemChef
+!insert (mi72, chef44) into MenuItemChef
+!insert (mi73, chef44) into MenuItemChef
+!insert (mi74, chef43) into MenuItemChef
+
+!insert (mi71, fi300) into MenuItemFoodItem
+!insert (mi71, fi302) into MenuItemFoodItem
+!insert (mi74, fi301) into MenuItemFoodItem
+!insert (mi72, fi304) into MenuItemFoodItem
+!insert (mi73, fi303) into MenuItemFoodItem
+
+!new RegularCustomer('rc20')
+!rc20.name := 'Anika Stern'
+!rc20.prefferedLanguage := #German
+
+!new DietaryRequirement('dr17')
+!dr17.diet := #Vegetarian
+
+!new ReportedAllergy('ra16')
+!ra16.allergen := #Gluten

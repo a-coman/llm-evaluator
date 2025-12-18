@@ -1,0 +1,86 @@
+!new Restaurant('rest19')
+!rest19.name := 'Stonebridge Brasserie'
+
+!new Owner('own47')
+!own47.name := 'Inez Navarro'
+!own47.percentageShares := 70
+
+!new Owner('own48')
+!own48.name := 'Calvin Reed'
+!own48.percentageShares := 30
+
+!insert (rest19, own47) into RestaurantOwner
+!insert (rest19, own48) into RestaurantOwner
+
+!new HeadWaiter('hw19')
+!hw19.name := 'Marion Blake'
+!hw19.dateOfBirth := Date('1983-03-21')
+!hw19.phoneNumber := '+1-555-1900'
+
+!new Waiter('w39')
+!w39.name := 'Sergio Peña'
+!w39.dateOfBirth := Date('1997-07-12')
+!w39.phoneNumber := '+1-555-1901'
+!w39.spokenLanguage := #Spanish
+
+!new Waiter('w40')
+!w40.name := 'Franz Adler'
+!w40.dateOfBirth := Date('1992-11-02')
+!w40.phoneNumber := '+1-555-1902'
+!w40.spokenLanguage := #German
+
+!insert (hw19, w39) into HeadWaiterWaiter
+!insert (hw19, w40) into HeadWaiterWaiter
+
+!new Individual('resInd22')
+!resInd22.time := Time('13:05')
+!resInd22.date := Date('2026-04-20')
+!resInd22.numberPeople := 3
+!resInd22.name := 'Walk-up Trio'
+!resInd22.phoneNumber := '+1-555-1910'
+!resInd22.number := 34001
+!resInd22.seating := #Patio
+!resInd22.smoking := #NonSmoking
+
+!new Banquet('resBan17')
+!resBan17.time := Time('16:30')
+!resBan17.date := Date('2026-04-20')
+!resBan17.numberPeople := 8
+!resBan17.name := 'Community Coordinator'
+!resBan17.phoneNumber := '+1-555-1911'
+!resBan17.number := 35001
+!resBan17.groupName := 'Neighborhood Planning Meet'
+!resBan17.paymentMethod := #CreditCard
+!resBan17.busService := false
+
+!insert (rest19, resInd22) into RestaurantReservation
+!insert (rest19, resBan17) into RestaurantReservation
+
+!insert (resInd22, w39) into ReservationWaiter
+!insert (resBan17, w39) into ReservationWaiter
+!insert (resBan17, w40) into ReservationWaiter
+
+!new Table('t190')
+!t190.number := 190
+!t190.description := 'Patio table (exact fit)'
+!t190.capacity := 3
+
+!new Table('t191')
+!t191.number := 191
+!t191.description := 'Banquet split table A'
+!t191.capacity := 2
+
+!new Table('t192')
+!t192.number := 192
+!t192.description := 'Banquet split table B'
+!t192.capacity := 3
+
+!new Table('t193')
+!t193.number := 193
+!t193.description := 'Banquet split table C'
+!t193.capacity := 3
+
+!insert (resInd22, t190) into ReservationTable
+!insert (resBan17, t191) into ReservationTable
+!insert (resBan17, t192) into ReservationTable
+!insert (resBan17, t193) into ReservationTable

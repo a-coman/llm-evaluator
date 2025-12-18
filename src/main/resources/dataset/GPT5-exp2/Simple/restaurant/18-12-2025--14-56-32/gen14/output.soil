@@ -1,0 +1,266 @@
+!new Restaurant('rest15')
+!rest15.name := 'Comet Night Kitchen'
+
+!new Owner('own34')
+!own34.name := 'Aiden Ross'
+!own34.percentageShares := 34
+
+!new Owner('own35')
+!own35.name := 'Beatriz Luna'
+!own35.percentageShares := 33
+
+!new Owner('own36')
+!own36.name := 'Chen Wu'
+!own36.percentageShares := 33
+
+!insert (rest15, own34) into RestaurantOwner
+!insert (rest15, own35) into RestaurantOwner
+!insert (rest15, own36) into RestaurantOwner
+
+!new HeadWaiter('hw14')
+!hw14.name := 'Nolan Pierce'
+!hw14.dateOfBirth := Date('1989-09-09')
+!hw14.phoneNumber := '+1-555-1500'
+
+!new Waiter('w30')
+!w30.name := 'Eva Schmidt'
+!w30.dateOfBirth := Date('1998-04-14')
+!w30.phoneNumber := '+1-555-1501'
+!w30.spokenLanguage := #German
+
+!new Waiter('w31')
+!w31.name := 'Mateo Silva'
+!w31.dateOfBirth := Date('1993-12-12')
+!w31.phoneNumber := '+1-555-1502'
+!w31.spokenLanguage := #Spanish
+
+!new Waiter('w32')
+!w32.name := 'Iris Bell'
+!w32.dateOfBirth := Date('2000-06-06')
+!w32.phoneNumber := '+1-555-1503'
+!w32.spokenLanguage := #English
+
+!insert (hw14, w30) into HeadWaiterWaiter
+!insert (hw14, w31) into HeadWaiterWaiter
+!insert (hw14, w32) into HeadWaiterWaiter
+
+!new Manager('mgr4')
+!mgr4.name := 'Keira Vaughn'
+!mgr4.dateOfBirth := Date('1978-01-23')
+!mgr4.phoneNumber := '+1-555-1510'
+
+!new Chef('chef21')
+!chef21.name := 'Soren Nygaard'
+!chef21.dateOfBirth := Date('1982-02-02')
+!chef21.phoneNumber := '+1-555-1520'
+
+!new Chef('chef22')
+!chef22.name := 'Lucia Baresi'
+!chef22.dateOfBirth := Date('1987-07-17')
+!chef22.phoneNumber := '+1-555-1521'
+
+!new Cook('cook28')
+!cook28.name := 'Pavel Orlov'
+!cook28.dateOfBirth := Date('1995-05-05')
+!cook28.phoneNumber := '+1-555-1530'
+!cook28.yearsOfExperience := 8
+
+!new Cook('cook29')
+!cook29.name := 'Nina Cho'
+!cook29.dateOfBirth := Date('2003-03-03')
+!cook29.phoneNumber := '+1-555-1531'
+!cook29.yearsOfExperience := 0
+
+!new Cook('cook30')
+!cook30.name := 'Tarek Ali'
+!cook30.dateOfBirth := Date('1991-11-11')
+!cook30.phoneNumber := '+1-555-1532'
+!cook30.yearsOfExperience := 13
+
+!insert (chef21, cook28) into ChefCook
+!insert (chef21, cook29) into ChefCook
+!insert (chef22, cook30) into ChefCook
+
+!new Allergen('aNuts15')
+!aNuts15.type := #Nuts
+
+!new Allergen('aGluten15')
+!aGluten15.type := #Gluten
+
+!new Allergen('aLactose15')
+!aLactose15.type := #Lactose
+
+!new FoodItem('fi120')
+!fi120.number := 1410
+!fi120.description := 'Toasted Sesame-Nut Mix'
+!fi120.purchaseFlag := true
+!fi120.unit := #Gram
+
+!new FoodItem('fi121')
+!fi121.number := 1411
+!fi121.description := 'Wheat Noodles'
+!fi121.purchaseFlag := true
+!fi121.unit := #Pound
+
+!new FoodItem('fi122')
+!fi122.number := 1412
+!fi122.description := 'Cream Sauce Base'
+!fi122.purchaseFlag := true
+!fi122.unit := #Ounce
+
+!new FoodItem('fi123')
+!fi123.number := 1413
+!fi123.description := 'Sparkling Water Bottles'
+!fi123.purchaseFlag := false
+!fi123.unit := #Dozen
+
+!insert (fi120, aNuts15) into FoodItemAllergen
+!insert (fi120, aGluten15) into FoodItemAllergen
+!insert (fi121, aGluten15) into FoodItemAllergen
+!insert (fi122, aLactose15) into FoodItemAllergen
+
+!new MenuItem('mi34')
+!mi34.description := 'Midnight Noodle Bowl'
+!mi34.prepTime := 13.0
+!mi34.classification := #Main
+
+!new MenuItem('mi35')
+!mi35.description := 'Nut Crunch Topping'
+!mi35.prepTime := 0.1
+!mi35.classification := #Apetizer
+
+!new MenuItem('mi36')
+!mi36.description := 'Sparkling Water (Bottle)'
+!mi36.prepTime := 0.0
+!mi36.classification := #Beverage
+
+!new MenuItem('mi37')
+!mi37.description := 'Cream Ribbon Dessert'
+!mi37.prepTime := 4.0
+!mi37.classification := #Dessert
+
+!insert (mi34, chef21) into MenuItemChef
+!insert (mi35, chef21) into MenuItemChef
+!insert (mi36, chef22) into MenuItemChef
+!insert (mi37, chef22) into MenuItemChef
+
+!insert (mi34, fi121) into MenuItemFoodItem
+!insert (mi34, fi122) into MenuItemFoodItem
+!insert (mi35, fi120) into MenuItemFoodItem
+!insert (mi36, fi123) into MenuItemFoodItem
+!insert (mi37, fi122) into MenuItemFoodItem
+!insert (mi37, fi120) into MenuItemFoodItem
+
+!new RegularCustomer('rc9')
+!rc9.name := 'Dana Frost'
+!rc9.prefferedLanguage := #English
+
+!new Individual('resInd17')
+!resInd17.time := Time('19:10')
+!resInd17.date := Date('2026-11-20')
+!resInd17.numberPeople := 2
+!resInd17.name := 'Dana Frost'
+!resInd17.phoneNumber := '+1-555-1540'
+!resInd17.number := 26001
+!resInd17.seating := #Inside
+!resInd17.smoking := #NonSmoking
+
+!new Individual('resInd18')
+!resInd18.time := Time('19:15')
+!resInd18.date := Date('2026-11-20')
+!resInd18.numberPeople := 1
+!resInd18.name := 'Walk-in Visitor'
+!resInd18.phoneNumber := '+1-555-1541'
+!resInd18.number := 26002
+!resInd18.seating := #Patio
+!resInd18.smoking := #Smoking
+
+!new Banquet('resBan13')
+!resBan13.time := Time('20:00')
+!resBan13.date := Date('2026-11-20')
+!resBan13.numberPeople := 15
+!resBan13.name := 'Dana Frost'
+!resBan13.phoneNumber := '+1-555-1542'
+!resBan13.number := 27001
+!resBan13.groupName := 'Meteor Watch Party'
+!resBan13.paymentMethod := #CreditCard
+!resBan13.busService := false
+
+!insert (rest15, resInd17) into RestaurantReservation
+!insert (rest15, resInd18) into RestaurantReservation
+!insert (rest15, resBan13) into RestaurantReservation
+
+!insert (resInd17, rc9) into ReservationCustomer
+!insert (resBan13, rc9) into ReservationCustomer
+
+!insert (resInd17, w30) into ReservationWaiter
+!insert (resInd18, w31) into ReservationWaiter
+!insert (resInd18, w32) into ReservationWaiter
+!insert (resBan13, w30) into ReservationWaiter
+!insert (resBan13, w31) into ReservationWaiter
+
+!new Table('t150')
+!t150.number := 150
+!t150.description := 'Inside two-top (exact fit)'
+!t150.capacity := 2
+
+!new Table('t151')
+!t151.number := 151
+!t151.description := 'Patio single'
+!t151.capacity := 1
+
+!new Table('t152')
+!t152.number := 152
+!t152.description := 'Banquet table 5 seats A'
+!t152.capacity := 5
+
+!new Table('t153')
+!t153.number := 153
+!t153.description := 'Banquet table 5 seats B'
+!t153.capacity := 5
+
+!new Table('t154')
+!t154.number := 154
+!t154.description := 'Banquet table 5 seats C'
+!t154.capacity := 5
+
+!insert (resInd17, t150) into ReservationTable
+!insert (resInd18, t151) into ReservationTable
+!insert (resBan13, t152) into ReservationTable
+!insert (resBan13, t153) into ReservationTable
+!insert (resBan13, t154) into ReservationTable
+
+!new ItemOrder('io100')
+!io100.time := Time('19:12')
+
+!new ItemOrder('io101')
+!io101.time := Time('19:13')
+
+!insert (resInd17, io100) into ReservationItemOrdered
+!insert (resInd17, io101) into ReservationItemOrdered
+
+!insert (io100, mi34) into ItemOrderMenuItem
+!insert (io101, mi36) into ItemOrderMenuItem
+
+!new ItemOrder('io102')
+!io102.time := Time('20:10')
+
+!new ItemOrder('io103')
+!io103.time := Time('20:12')
+
+!new ItemOrder('io104')
+!io104.time := Time('20:40')
+
+!insert (resBan13, io102) into ReservationItemOrdered
+!insert (resBan13, io103) into ReservationItemOrdered
+!insert (resBan13, io104) into ReservationItemOrdered
+
+!insert (io102, mi35) into ItemOrderMenuItem
+!insert (io103, mi34) into ItemOrderMenuItem
+!insert (io104, mi37) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr8')
+!dr8.diet := #Vegan
+
+!new ReportedAllergy('ra7')
+!ra7.allergen := #Nuts

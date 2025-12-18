@@ -1,0 +1,177 @@
+!new Restaurant('rest7')
+!rest7.name := 'Mountain Hearth'
+
+!new Owner('own14')
+!own14.name := 'Olga Petrenko'
+!own14.percentageShares := 25
+
+!new Owner('own15')
+!own15.name := 'James O’Neil'
+!own15.percentageShares := 25
+
+!new Owner('own16')
+!own16.name := 'Fatima Zahra'
+!own16.percentageShares := 25
+
+!new Owner('own17')
+!own17.name := 'Wei Huang'
+!own17.percentageShares := 25
+
+!insert (rest7, own14) into RestaurantOwner
+!insert (rest7, own15) into RestaurantOwner
+!insert (rest7, own16) into RestaurantOwner
+!insert (rest7, own17) into RestaurantOwner
+
+!new HeadWaiter('hw6')
+!hw6.name := 'Stella Quinn'
+!hw6.dateOfBirth := Date('1987-10-01')
+!hw6.phoneNumber := '+1-555-7000'
+
+!new Waiter('w12')
+!w12.name := 'Jonas Richter'
+!w12.dateOfBirth := Date('1999-01-11')
+!w12.phoneNumber := '+1-555-7011'
+!w12.spokenLanguage := #German
+
+!new Waiter('w13')
+!w13.name := 'Maria Lopez'
+!w13.dateOfBirth := Date('1996-08-23')
+!w13.phoneNumber := '+1-555-7012'
+!w13.spokenLanguage := #Spanish
+
+!insert (hw6, w12) into HeadWaiterWaiter
+!insert (hw6, w13) into HeadWaiterWaiter
+
+!new Cook('cook12')
+!cook12.name := 'Ethan Snow'
+!cook12.dateOfBirth := Date('1992-02-29')
+!cook12.phoneNumber := '+1-555-7101'
+!cook12.yearsOfExperience := 2
+
+!new Cook('cook13')
+!cook13.name := 'Mila Hart'
+!cook13.dateOfBirth := Date('1990-07-21')
+!cook13.phoneNumber := '+1-555-7104'
+!cook13.yearsOfExperience := 11
+
+!new Chef('chef9')
+!chef9.name := 'Claire Rowan'
+!chef9.dateOfBirth := Date('1980-12-05')
+!chef9.phoneNumber := '+1-555-7102'
+
+!new Chef('chef10')
+!chef10.name := 'Boris Ivanov'
+!chef10.dateOfBirth := Date('1974-04-17')
+!chef10.phoneNumber := '+1-555-7103'
+
+!insert (chef9, cook12) into ChefCook
+!insert (chef10, cook13) into ChefCook
+
+!new Allergen('aNuts7')
+!aNuts7.type := #Nuts
+
+!new Allergen('aLactose7')
+!aLactose7.type := #Lactose
+
+!new FoodItem('fi40')
+!fi40.number := 540
+!fi40.description := 'Walnuts'
+!fi40.purchaseFlag := true
+!fi40.unit := #Gram
+
+!new FoodItem('fi41')
+!fi41.number := 541
+!fi41.description := 'Cream'
+!fi41.purchaseFlag := true
+!fi41.unit := #Ounce
+
+!new FoodItem('fi42')
+!fi42.number := 542
+!fi42.description := 'Herb Mix'
+!fi42.purchaseFlag := false
+!fi42.unit := #Gram
+
+!insert (fi40, aNuts7) into FoodItemAllergen
+!insert (fi41, aLactose7) into FoodItemAllergen
+
+!new MenuItem('mi13')
+!mi13.description := 'Walnut Cream Cake'
+!mi13.prepTime := 35.0
+!mi13.classification := #Dessert
+
+!new MenuItem('mi14')
+!mi14.description := 'Herbal Spritzer'
+!mi14.prepTime := 1.5
+!mi14.classification := #Beverage
+
+!new MenuItem('mi15')
+!mi15.description := 'Chef’s Surprise Plate'
+!mi15.prepTime := 22.0
+!mi15.classification := #Main
+
+!insert (mi13, chef9) into MenuItemChef
+!insert (mi14, chef10) into MenuItemChef
+!insert (mi15, chef9) into MenuItemChef
+
+!insert (mi13, fi40) into MenuItemFoodItem
+!insert (mi13, fi41) into MenuItemFoodItem
+!insert (mi14, fi42) into MenuItemFoodItem
+!insert (mi15, fi42) into MenuItemFoodItem
+
+!new Table('t70')
+!t70.number := 70
+!t70.description := 'Fireplace table'
+!t70.capacity := 6
+
+!new Table('t71')
+!t71.number := 71
+!t71.description := 'Small round table'
+!t71.capacity := 3
+
+!new Table('t72')
+!t72.number := 72
+!t72.description := 'Bench seat'
+!t72.capacity := 3
+
+!new RegularCustomer('rc5')
+!rc5.name := 'Luca Romano'
+!rc5.prefferedLanguage := #Italian
+
+!new Individual('resInd7')
+!resInd7.time := Time('16:00')
+!resInd7.date := Date('2026-07-04')
+!resInd7.numberPeople := 6
+!resInd7.name := 'Drop-in Party'
+!resInd7.phoneNumber := '+1-555-7201'
+!resInd7.number := 12001
+!resInd7.seating := #Inside
+!resInd7.smoking := #NonSmoking
+
+!new Banquet('resBan6')
+!resBan6.time := Time('18:30')
+!resBan6.date := Date('2026-07-04')
+!resBan6.numberPeople := 6
+!resBan6.name := 'Luca Romano'
+!resBan6.phoneNumber := '+1-555-7202'
+!resBan6.number := 13001
+!resBan6.groupName := 'Family Reunion'
+!resBan6.paymentMethod := #Cash
+!resBan6.busService := false
+
+!insert (rest7, resInd7) into RestaurantReservation
+!insert (rest7, resBan6) into RestaurantReservation
+
+!insert (resBan6, rc5) into ReservationCustomer
+
+!insert (resInd7, w12) into ReservationWaiter
+!insert (resBan6, w13) into ReservationWaiter
+
+!insert (resInd7, t70) into ReservationTable
+!insert (resBan6, t71) into ReservationTable
+!insert (resBan6, t72) into ReservationTable
+
+!new DietaryRequirement('dr3')
+!dr3.diet := #Halal
+
+!new ReportedAllergy('ra3')
+!ra3.allergen := #Seafood

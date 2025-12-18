@@ -1,0 +1,116 @@
+!new Restaurant('rest32')
+!rest32.name := 'Heritage Bakery Lab'
+
+!new Owner('own74')
+!own74.name := 'Marcel Dupre'
+!own74.percentageShares := 50
+
+!new Owner('own75')
+!own75.name := 'Nadia Petrova'
+!own75.percentageShares := 30
+
+!new Owner('own76')
+!own76.name := 'Oskar Lind'
+!own76.percentageShares := 20
+
+!insert (rest32, own74) into RestaurantOwner
+!insert (rest32, own75) into RestaurantOwner
+!insert (rest32, own76) into RestaurantOwner
+
+!new Manager('mgr6')
+!mgr6.name := 'Clara Wynn'
+!mgr6.dateOfBirth := Date('1982-02-02')
+!mgr6.phoneNumber := '+1-555-3200'
+
+!new Chef('chef50')
+!chef50.name := 'Amal Saeed'
+!chef50.dateOfBirth := Date('1980-10-20')
+!chef50.phoneNumber := '+1-555-3210'
+
+!new Cook('cook70')
+!cook70.name := 'Timo Berger'
+!cook70.dateOfBirth := Date('1996-06-06')
+!cook70.phoneNumber := '+1-555-3211'
+!cook70.yearsOfExperience := 4
+
+!new Cook('cook71')
+!cook71.name := 'Rina Cole'
+!cook71.dateOfBirth := Date('2003-03-03')
+!cook71.phoneNumber := '+1-555-3212'
+!cook71.yearsOfExperience := 0
+
+!insert (chef50, cook70) into ChefCook
+!insert (chef50, cook71) into ChefCook
+
+!new Allergen('aGluten32')
+!aGluten32.type := #Gluten
+
+!new Allergen('aNuts32')
+!aNuts32.type := #Nuts
+
+!new Allergen('aLactose32')
+!aLactose32.type := #Lactose
+
+!new FoodItem('fi320')
+!fi320.number := 3200
+!fi320.description := 'Wheat Flour (high protein)'
+!fi320.purchaseFlag := true
+!fi320.unit := #Pound
+
+!new FoodItem('fi321')
+!fi321.number := 3201
+!fi321.description := 'Butter cultured'
+!fi321.purchaseFlag := true
+!fi321.unit := #Ounce
+
+!new FoodItem('fi322')
+!fi322.number := 3202
+!fi322.description := 'Walnut pieces'
+!fi322.purchaseFlag := true
+!fi322.unit := #Gram
+
+!new FoodItem('fi323')
+!fi323.number := 3203
+!fi323.description := 'Coffee beans'
+!fi323.purchaseFlag := false
+!fi323.unit := #Gram
+
+!insert (fi320, aGluten32) into FoodItemAllergen
+!insert (fi321, aLactose32) into FoodItemAllergen
+!insert (fi322, aNuts32) into FoodItemAllergen
+
+!new MenuItem('mi100')
+!mi100.description := 'Walnut Croissant'
+!mi100.prepTime := 45.0
+!mi100.classification := #Dessert
+
+!new MenuItem('mi101')
+!mi101.description := 'Espresso Shot'
+!mi101.prepTime := 0.5
+!mi101.classification := #Beverage
+
+!new MenuItem('mi102')
+!mi102.description := 'Butter Roll (mini)'
+!mi102.prepTime := 20.0
+!mi102.classification := #Apetizer
+
+!insert (mi100, chef50) into MenuItemChef
+!insert (mi101, chef50) into MenuItemChef
+!insert (mi102, chef50) into MenuItemChef
+
+!insert (mi100, fi320) into MenuItemFoodItem
+!insert (mi100, fi321) into MenuItemFoodItem
+!insert (mi100, fi322) into MenuItemFoodItem
+!insert (mi101, fi323) into MenuItemFoodItem
+!insert (mi102, fi320) into MenuItemFoodItem
+!insert (mi102, fi321) into MenuItemFoodItem
+
+!new RegularCustomer('rc21')
+!rc21.name := 'Viktor Hahn'
+!rc21.prefferedLanguage := #German
+
+!new DietaryRequirement('dr18')
+!dr18.diet := #Vegan
+
+!new ReportedAllergy('ra17')
+!ra17.allergen := #Gluten

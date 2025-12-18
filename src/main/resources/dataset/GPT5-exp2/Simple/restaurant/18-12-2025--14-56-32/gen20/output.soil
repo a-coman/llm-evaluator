@@ -1,0 +1,227 @@
+!new Restaurant('rest21')
+!rest21.name := 'Eclipse Speakeasy'
+
+!new Owner('own53')
+!own53.name := 'Vera Quinn'
+!own53.percentageShares := 100
+
+!insert (rest21, own53) into RestaurantOwner
+
+!new HeadWaiter('hw21')
+!hw21.name := 'Damon Cruz'
+!hw21.dateOfBirth := Date('1982-06-12')
+!hw21.phoneNumber := '+1-555-2100'
+
+!new Waiter('w43')
+!w43.name := 'Sofia Klein'
+!w43.dateOfBirth := Date('1998-08-21')
+!w43.phoneNumber := '+1-555-2101'
+!w43.spokenLanguage := #German
+
+!new Waiter('w44')
+!w44.name := 'Marco Reyes'
+!w44.dateOfBirth := Date('1995-03-09')
+!w44.phoneNumber := '+1-555-2102'
+!w44.spokenLanguage := #Spanish
+
+!insert (hw21, w43) into HeadWaiterWaiter
+!insert (hw21, w44) into HeadWaiterWaiter
+
+!new Chef('chef29')
+!chef29.name := 'Elise Ward'
+!chef29.dateOfBirth := Date('1979-12-01')
+!chef29.phoneNumber := '+1-555-2110'
+
+!new Chef('chef30')
+!chef30.name := 'Bruno Hart'
+!chef30.dateOfBirth := Date('1986-04-18')
+!chef30.phoneNumber := '+1-555-2111'
+
+!new Cook('cook42')
+!cook42.name := 'Nadia Stone'
+!cook42.dateOfBirth := Date('1990-10-05')
+!cook42.phoneNumber := '+1-555-2120'
+!cook42.yearsOfExperience := 7
+
+!new Cook('cook43')
+!cook43.name := 'Owen Dale'
+!cook43.dateOfBirth := Date('2004-01-15')
+!cook43.phoneNumber := '+1-555-2121'
+!cook43.yearsOfExperience := 0
+
+!new Cook('cook44')
+!cook44.name := 'Pia Moreno'
+!cook44.dateOfBirth := Date('1988-09-09')
+!cook44.phoneNumber := '+1-555-2122'
+!cook44.yearsOfExperience := 14
+
+!insert (chef29, cook42) into ChefCook
+!insert (chef29, cook43) into ChefCook
+!insert (chef30, cook44) into ChefCook
+
+!new Allergen('aNuts21')
+!aNuts21.type := #Nuts
+
+!new Allergen('aGluten21')
+!aGluten21.type := #Gluten
+
+!new Allergen('aLactose21')
+!aLactose21.type := #Lactose
+
+!new FoodItem('fi170')
+!fi170.number := 1910
+!fi170.description := 'Puff Pastry'
+!fi170.purchaseFlag := true
+!fi170.unit := #Pound
+
+!new FoodItem('fi171')
+!fi171.number := 1911
+!fi171.description := 'Hazelnut Cream'
+!fi171.purchaseFlag := true
+!fi171.unit := #Ounce
+
+!new FoodItem('fi172')
+!fi172.number := 1912
+!fi172.description := 'Espresso Beans'
+!fi172.purchaseFlag := false
+!fi172.unit := #Gram
+
+!new FoodItem('fi173')
+!fi173.number := 1913
+!fi173.description := 'Citrus Syrup'
+!fi173.purchaseFlag := false
+!fi173.unit := #Ounce
+
+!insert (fi170, aGluten21) into FoodItemAllergen
+!insert (fi171, aNuts21) into FoodItemAllergen
+!insert (fi171, aLactose21) into FoodItemAllergen
+
+!new MenuItem('mi48')
+!mi48.description := 'Hazelnut Mille-Feuille'
+!mi48.prepTime := 22.0
+!mi48.classification := #Dessert
+
+!new MenuItem('mi49')
+!mi49.description := 'Espresso Tonic'
+!mi49.prepTime := 1.0
+!mi49.classification := #Beverage
+
+!new MenuItem('mi50')
+!mi50.description := 'Citrus Pastry Bites'
+!mi50.prepTime := 8.0
+!mi50.classification := #Apetizer
+
+!insert (mi48, chef29) into MenuItemChef
+!insert (mi49, chef30) into MenuItemChef
+!insert (mi50, chef29) into MenuItemChef
+
+!insert (mi48, fi170) into MenuItemFoodItem
+!insert (mi48, fi171) into MenuItemFoodItem
+!insert (mi49, fi172) into MenuItemFoodItem
+!insert (mi49, fi173) into MenuItemFoodItem
+!insert (mi50, fi170) into MenuItemFoodItem
+!insert (mi50, fi173) into MenuItemFoodItem
+
+!new Table('t210')
+!t210.number := 210
+!t210.description := 'Booth left'
+!t210.capacity := 2
+
+!new Table('t211')
+!t211.number := 211
+!t211.description := 'Booth right'
+!t211.capacity := 2
+
+!new Table('t212')
+!t212.number := 212
+!t212.description := 'Salon table A'
+!t212.capacity := 6
+
+!new Table('t213')
+!t213.number := 213
+!t213.description := 'Salon table B'
+!t213.capacity := 6
+
+!new Table('t214')
+!t214.number := 214
+!t214.description := 'Salon table C'
+!t214.capacity := 6
+
+!new Individual('resInd25')
+!resInd25.time := Time('18:30')
+!resInd25.date := Date('2026-10-05')
+!resInd25.numberPeople := 4
+!resInd25.name := 'Quiet Booth Duo x2'
+!resInd25.phoneNumber := '+1-555-2130'
+!resInd25.number := 38001
+!resInd25.seating := #Inside
+!resInd25.smoking := #NonSmoking
+
+!new Banquet('resBan19')
+!resBan19.time := Time('21:00')
+!resBan19.date := Date('2026-10-05')
+!resBan19.numberPeople := 18
+!resBan19.name := 'Event Host'
+!resBan19.phoneNumber := '+1-555-2131'
+!resBan19.number := 39001
+!resBan19.groupName := 'Eclipse Alumni'
+!resBan19.paymentMethod := #CreditCard
+!resBan19.busService := true
+
+!insert (rest21, resInd25) into RestaurantReservation
+!insert (rest21, resBan19) into RestaurantReservation
+
+!insert (resInd25, t210) into ReservationTable
+!insert (resInd25, t211) into ReservationTable
+
+!insert (resBan19, t212) into ReservationTable
+!insert (resBan19, t213) into ReservationTable
+!insert (resBan19, t214) into ReservationTable
+
+!insert (resInd25, w43) into ReservationWaiter
+!insert (resBan19, w43) into ReservationWaiter
+!insert (resBan19, w44) into ReservationWaiter
+
+!new RegularCustomer('rc13')
+!rc13.name := 'Harold Ivy'
+!rc13.prefferedLanguage := #English
+
+!insert (resBan19, rc13) into ReservationCustomer
+
+!new BusDriver('bd13')
+!bd13.name := 'Calvin Shore'
+!bd13.dateOfBirth := Date('1968-03-03')
+!bd13.phoneNumber := '+1-555-2140'
+!bd13.driverLicenseNr := 'BUS-9913-EC'
+
+!new BusDriver('bd14')
+!bd14.name := 'Lena Pike'
+!bd14.dateOfBirth := Date('1976-07-27')
+!bd14.phoneNumber := '+1-555-2141'
+!bd14.driverLicenseNr := 'BUS-9914-EC'
+
+!insert (resBan19, bd13) into BanquetBusDriver
+!insert (resBan19, bd14) into BanquetBusDriver
+
+!new ItemOrder('io150')
+!io150.time := Time('21:05')
+
+!new ItemOrder('io151')
+!io151.time := Time('21:06')
+
+!new ItemOrder('io152')
+!io152.time := Time('21:20')
+
+!insert (resBan19, io150) into ReservationItemOrdered
+!insert (resBan19, io151) into ReservationItemOrdered
+!insert (resBan19, io152) into ReservationItemOrdered
+
+!insert (io150, mi50) into ItemOrderMenuItem
+!insert (io151, mi49) into ItemOrderMenuItem
+!insert (io152, mi48) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr11')
+!dr11.diet := #Vegan
+
+!new ReportedAllergy('ra10')
+!ra10.allergen := #Nuts

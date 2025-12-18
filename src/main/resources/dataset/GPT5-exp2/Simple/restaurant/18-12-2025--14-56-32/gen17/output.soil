@@ -1,0 +1,197 @@
+!new Restaurant('rest18')
+!rest18.name := 'Floating Sushi Boat'
+
+!new Owner('own45')
+!own45.name := 'Sora Nishimura'
+!own45.percentageShares := 51
+
+!new Owner('own46')
+!own46.name := 'Helen Carter'
+!own46.percentageShares := 49
+
+!insert (rest18, own45) into RestaurantOwner
+!insert (rest18, own46) into RestaurantOwner
+
+!new HeadWaiter('hw18')
+!hw18.name := 'Dmitri Volkov'
+!hw18.dateOfBirth := Date('1982-09-02')
+!hw18.phoneNumber := '+1-555-1800'
+
+!new Waiter('w36')
+!w36.name := 'Alba Reyes'
+!w36.dateOfBirth := Date('1999-01-05')
+!w36.phoneNumber := '+1-555-1801'
+!w36.spokenLanguage := #Spanish
+
+!new Waiter('w37')
+!w37.name := 'Jonah Beck'
+!w37.dateOfBirth := Date('1996-06-22')
+!w37.phoneNumber := '+1-555-1802'
+!w37.spokenLanguage := #English
+
+!new Waiter('w38')
+!w38.name := 'Greta Weiss'
+!w38.dateOfBirth := Date('1993-03-30')
+!w38.phoneNumber := '+1-555-1803'
+!w38.spokenLanguage := #German
+
+!insert (hw18, w36) into HeadWaiterWaiter
+!insert (hw18, w37) into HeadWaiterWaiter
+!insert (hw18, w38) into HeadWaiterWaiter
+
+!new Chef('chef27')
+!chef27.name := 'Kenji Watanabe'
+!chef27.dateOfBirth := Date('1977-07-07')
+!chef27.phoneNumber := '+1-555-1810'
+
+!new Cook('cook37')
+!cook37.name := 'Lara Stone'
+!cook37.dateOfBirth := Date('1990-10-10')
+!cook37.phoneNumber := '+1-555-1811'
+!cook37.yearsOfExperience := 15
+
+!new Cook('cook38')
+!cook38.name := 'Milan Kovac'
+!cook38.dateOfBirth := Date('2004-04-14')
+!cook38.phoneNumber := '+1-555-1812'
+!cook38.yearsOfExperience := 0
+
+!insert (chef27, cook37) into ChefCook
+!insert (chef27, cook38) into ChefCook
+
+!new Allergen('aSeafood18')
+!aSeafood18.type := #Seafood
+
+!new Allergen('aGluten18')
+!aGluten18.type := #Gluten
+
+!new FoodItem('fi150')
+!fi150.number := 1710
+!fi150.description := 'Nori Sheets'
+!fi150.purchaseFlag := true
+!fi150.unit := #Sheet
+
+!new FoodItem('fi151')
+!fi151.number := 1711
+!fi151.description := 'Crab Mix'
+!fi151.purchaseFlag := true
+!fi151.unit := #Ounce
+
+!new FoodItem('fi152')
+!fi152.number := 1712
+!fi152.description := 'Soy Sauce'
+!fi152.purchaseFlag := false
+!fi152.unit := #Ounce
+
+!insert (fi151, aSeafood18) into FoodItemAllergen
+!insert (fi152, aGluten18) into FoodItemAllergen
+
+!new MenuItem('mi43')
+!mi43.description := 'Crab Handroll'
+!mi43.prepTime := 4.0
+!mi43.classification := #Main
+
+!new MenuItem('mi44')
+!mi44.description := 'Soy Shot'
+!mi44.prepTime := 0.0
+!mi44.classification := #Beverage
+
+!insert (mi43, chef27) into MenuItemChef
+!insert (mi44, chef27) into MenuItemChef
+
+!insert (mi43, fi150) into MenuItemFoodItem
+!insert (mi43, fi151) into MenuItemFoodItem
+!insert (mi44, fi152) into MenuItemFoodItem
+
+!new Individual('resInd21')
+!resInd21.time := Time('11:00')
+!resInd21.date := Date('2026-02-02')
+!resInd21.numberPeople := 1
+!resInd21.name := 'Solo Seated'
+!resInd21.phoneNumber := '+1-555-1820'
+!resInd21.number := 32001
+!resInd21.seating := #Inside
+!resInd21.smoking := #NonSmoking
+
+!new Banquet('resBan16')
+!resBan16.time := Time('20:30')
+!resBan16.date := Date('2026-02-02')
+!resBan16.numberPeople := 40
+!resBan16.name := 'Operations Desk'
+!resBan16.phoneNumber := '+1-555-1821'
+!resBan16.number := 33001
+!resBan16.groupName := 'Harbor Gala'
+!resBan16.paymentMethod := #Cash
+!resBan16.busService := true
+
+!insert (rest18, resInd21) into RestaurantReservation
+!insert (rest18, resBan16) into RestaurantReservation
+
+!insert (resInd21, w36) into ReservationWaiter
+!insert (resBan16, w36) into ReservationWaiter
+!insert (resBan16, w37) into ReservationWaiter
+!insert (resBan16, w38) into ReservationWaiter
+
+!new Table('t180')
+!t180.number := 180
+!t180.description := 'Single bar stool'
+!t180.capacity := 1
+
+!new Table('t181')
+!t181.number := 181
+!t181.description := 'Deck table A'
+!t181.capacity := 10
+
+!new Table('t182')
+!t182.number := 182
+!t182.description := 'Deck table B'
+!t182.capacity := 10
+
+!new Table('t183')
+!t183.number := 183
+!t183.description := 'Deck table C'
+!t183.capacity := 10
+
+!new Table('t184')
+!t184.number := 184
+!t184.description := 'Deck table D'
+!t184.capacity := 10
+
+!insert (resInd21, t180) into ReservationTable
+!insert (resBan16, t181) into ReservationTable
+!insert (resBan16, t182) into ReservationTable
+!insert (resBan16, t183) into ReservationTable
+!insert (resBan16, t184) into ReservationTable
+
+!new BusDriver('bd11')
+!bd11.name := 'Clive Jensen'
+!bd11.dateOfBirth := Date('1969-11-11')
+!bd11.phoneNumber := '+1-555-1830'
+!bd11.driverLicenseNr := 'BUS-4411-FS'
+
+!new BusDriver('bd12')
+!bd12.name := 'Rosa Medina'
+!bd12.dateOfBirth := Date('1974-08-08')
+!bd12.phoneNumber := '+1-555-1831'
+!bd12.driverLicenseNr := 'BUS-4412-FS'
+
+!insert (resBan16, bd11) into BanquetBusDriver
+!insert (resBan16, bd12) into BanquetBusDriver
+
+!new ItemOrder('io130')
+!io130.time := Time('20:40')
+
+!new ItemOrder('io131')
+!io131.time := Time('20:41')
+
+!insert (resBan16, io130) into ReservationItemOrdered
+!insert (resBan16, io131) into ReservationItemOrdered
+
+!insert (io130, mi43) into ItemOrderMenuItem
+!insert (io131, mi44) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr10')
+!dr10.diet := #Halal
+
+!new ReportedAllergy('ra9')
+!ra9.allergen := #Lactose

@@ -1,0 +1,13 @@
+!new Restaurant('rest31')
+!rest31.name := 'One-Tableless Concept'
+
+!new Owner('own72')
+!own72.name := 'Seth Palmer'
+!own72.percentageShares := 99
+
+!new Owner('own73')
+!own73.name := 'Lina Gruber'
+!own73.percentageShares := 1
+
+!insert (rest31, own72) into RestaurantOwner
+!insert (rest31, own73) into RestaurantOwner

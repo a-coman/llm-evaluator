@@ -1,0 +1,189 @@
+!new Restaurant('rest3')
+!rest3.name := 'Skyline Rooftop Grill'
+
+!new Owner('own5')
+!own5.name := 'Kenji Tanaka'
+!own5.percentageShares := 60
+
+!new Owner('own6')
+!own6.name := 'Laura Schmidt'
+!own6.percentageShares := 40
+
+!insert (rest3, own5) into RestaurantOwner
+!insert (rest3, own6) into RestaurantOwner
+
+!new HeadWaiter('hw2')
+!hw2.name := 'Paula Reed'
+!hw2.dateOfBirth := Date('1979-01-09')
+!hw2.phoneNumber := '+1-555-0600'
+
+!new Waiter('w4')
+!w4.name := 'Enzo Conti'
+!w4.dateOfBirth := Date('1995-05-14')
+!w4.phoneNumber := '+1-555-0611'
+!w4.spokenLanguage := #Italian
+
+!new Waiter('w5')
+!w5.name := 'Hannah Wright'
+!w5.dateOfBirth := Date('2000-10-28')
+!w5.phoneNumber := '+1-555-0612'
+!w5.spokenLanguage := #English
+
+!new Waiter('w6')
+!w6.name := 'Diego Alvarez'
+!w6.dateOfBirth := Date('1993-03-17')
+!w6.phoneNumber := '+1-555-0613'
+!w6.spokenLanguage := #Spanish
+
+!insert (hw2, w4) into HeadWaiterWaiter
+!insert (hw2, w5) into HeadWaiterWaiter
+!insert (hw2, w6) into HeadWaiterWaiter
+
+!new Cook('cook4')
+!cook4.name := 'Priya Nair'
+!cook4.dateOfBirth := Date('1989-09-21')
+!cook4.phoneNumber := '+1-555-0701'
+!cook4.yearsOfExperience := 9
+
+!new Cook('cook5')
+!cook5.name := 'Omar Haddad'
+!cook5.dateOfBirth := Date('1991-12-11')
+!cook5.phoneNumber := '+1-555-0702'
+!cook5.yearsOfExperience := 3
+
+!new Chef('chef3')
+!chef3.name := 'Sienna Laurent'
+!chef3.dateOfBirth := Date('1985-07-07')
+!chef3.phoneNumber := '+1-555-0711'
+
+!new Chef('chef4')
+!chef4.name := 'Viktor Petrov'
+!chef4.dateOfBirth := Date('1977-02-02')
+!chef4.phoneNumber := '+1-555-0712'
+
+!insert (chef3, cook4) into ChefCook
+!insert (chef4, cook5) into ChefCook
+
+!new Allergen('aNuts2')
+!aNuts2.type := #Nuts
+
+!new Allergen('aSeafood2')
+!aSeafood2.type := #Seafood
+
+!new FoodItem('fi10')
+!fi10.number := 210
+!fi10.description := 'Beef Steak'
+!fi10.purchaseFlag := true
+!fi10.unit := #Pound
+
+!new FoodItem('fi11')
+!fi11.number := 211
+!fi11.description := 'Potatoes'
+!fi11.purchaseFlag := true
+!fi11.unit := #Pound
+
+!new FoodItem('fi12')
+!fi12.number := 212
+!fi12.description := 'Hazelnut Crumble'
+!fi12.purchaseFlag := true
+!fi12.unit := #Gram
+
+!new FoodItem('fi13')
+!fi13.number := 213
+!fi13.description := 'Scallops'
+!fi13.purchaseFlag := true
+!fi13.unit := #Ounce
+
+!insert (fi12, aNuts2) into FoodItemAllergen
+!insert (fi13, aSeafood2) into FoodItemAllergen
+
+!new MenuItem('mi5')
+!mi5.description := 'Rooftop Steak Frites'
+!mi5.prepTime := 18.0
+!mi5.classification := #Main
+
+!new MenuItem('mi6')
+!mi6.description := 'Seared Scallops'
+!mi6.prepTime := 14.0
+!mi6.classification := #Apetizer
+
+!new MenuItem('mi7')
+!mi7.description := 'Hazelnut Sundae'
+!mi7.prepTime := 4.0
+!mi7.classification := #Dessert
+
+!insert (mi5, chef3) into MenuItemChef
+!insert (mi6, chef3) into MenuItemChef
+!insert (mi7, chef4) into MenuItemChef
+
+!insert (mi5, fi10) into MenuItemFoodItem
+!insert (mi5, fi11) into MenuItemFoodItem
+!insert (mi6, fi13) into MenuItemFoodItem
+!insert (mi7, fi12) into MenuItemFoodItem
+
+!new Table('t30')
+!t30.number := 30
+!t30.description := 'Long communal table'
+!t30.capacity := 12
+
+!new Table('t31')
+!t31.number := 31
+!t31.description := 'Two-top near bar'
+!t31.capacity := 2
+
+!new Table('t32')
+!t32.number := 32
+!t32.description := 'Four-top corner'
+!t32.capacity := 4
+
+!new Individual('resInd3')
+!resInd3.time := Time('17:45')
+!resInd3.date := Date('2026-02-14')
+!resInd3.numberPeople := 6
+!resInd3.name := 'Valentine Group'
+!resInd3.phoneNumber := '+1-555-2001'
+!resInd3.number := 4001
+!resInd3.seating := #Patio
+!resInd3.smoking := #NonSmoking
+
+!new Banquet('resBan2')
+!resBan2.time := Time('12:00')
+!resBan2.date := Date('2026-03-10')
+!resBan2.numberPeople := 12
+!resBan2.name := 'Corporate Host'
+!resBan2.phoneNumber := '+1-555-2002'
+!resBan2.number := 5001
+!resBan2.groupName := 'Apex Quarterly Lunch'
+!resBan2.paymentMethod := #Cash
+!resBan2.busService := false
+
+!insert (rest3, resInd3) into RestaurantReservation
+!insert (rest3, resBan2) into RestaurantReservation
+
+!insert (resInd3, w4) into ReservationWaiter
+!insert (resInd3, w5) into ReservationWaiter
+!insert (resInd3, w6) into ReservationWaiter
+
+!insert (resBan2, w5) into ReservationWaiter
+
+!insert (resInd3, t31) into ReservationTable
+!insert (resInd3, t32) into ReservationTable
+
+!insert (resBan2, t30) into ReservationTable
+
+!new ItemOrder('io10')
+!io10.time := Time('12:10')
+
+!new ItemOrder('io11')
+!io11.time := Time('12:12')
+
+!new ItemOrder('io12')
+!io12.time := Time('12:30')
+
+!insert (resBan2, io10) into ReservationItemOrdered
+!insert (resBan2, io11) into ReservationItemOrdered
+!insert (resBan2, io12) into ReservationItemOrdered
+
+!insert (io10, mi6) into ItemOrderMenuItem
+!insert (io11, mi5) into ItemOrderMenuItem
+!insert (io12, mi7) into ItemOrderMenuItem

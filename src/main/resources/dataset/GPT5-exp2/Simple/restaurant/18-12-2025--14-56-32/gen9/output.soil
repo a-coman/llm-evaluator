@@ -1,0 +1,148 @@
+!new Restaurant('rest10')
+!rest10.name := 'Pop-up Fusion Lab'
+
+!new Owner('own22')
+!own22.name := 'Gwen Hart'
+!own22.percentageShares := 98
+
+!new Owner('own23')
+!own23.name := 'Rafi Cohen'
+!own23.percentageShares := 1
+
+!new Owner('own24')
+!own24.name := 'Mei Alvarez'
+!own24.percentageShares := 1
+
+!insert (rest10, own22) into RestaurantOwner
+!insert (rest10, own23) into RestaurantOwner
+!insert (rest10, own24) into RestaurantOwner
+
+!new HeadWaiter('hw9')
+!hw9.name := 'Tariq Owens'
+!hw9.dateOfBirth := Date('1983-03-13')
+!hw9.phoneNumber := '+1-555-9500'
+
+!new Waiter('w19')
+!w19.name := 'Elena Soto'
+!w19.dateOfBirth := Date('2001-01-01')
+!w19.phoneNumber := '+1-555-9511'
+!w19.spokenLanguage := #English
+
+!insert (hw9, w19) into HeadWaiterWaiter
+
+!new Chef('chef15')
+!chef15.name := 'Hugo Bernard'
+!chef15.dateOfBirth := Date('1986-06-06')
+!chef15.phoneNumber := '+1-555-9601'
+
+!new Cook('cook19')
+!cook19.name := 'Kim Norris'
+!cook19.dateOfBirth := Date('1999-09-09')
+!cook19.phoneNumber := '+1-555-9602'
+!cook19.yearsOfExperience := 0
+
+!insert (chef15, cook19) into ChefCook
+
+!new Allergen('aNuts10')
+!aNuts10.type := #Nuts
+
+!new FoodItem('fi70')
+!fi70.number := 870
+!fi70.description := 'Peanut Sauce Base'
+!fi70.purchaseFlag := true
+!fi70.unit := #Ounce
+
+!new FoodItem('fi71')
+!fi71.number := 871
+!fi71.description := 'Rice Paper'
+!fi71.purchaseFlag := true
+!fi71.unit := #Sheet
+
+!new FoodItem('fi72')
+!fi72.number := 872
+!fi72.description := 'Lime'
+!fi72.purchaseFlag := false
+!fi72.unit := #Dozen
+
+!insert (fi70, aNuts10) into FoodItemAllergen
+
+!new MenuItem('mi21')
+!mi21.description := 'Peanut Lime Wrap'
+!mi21.prepTime := 7.5
+!mi21.classification := #Apetizer
+
+!new MenuItem('mi22')
+!mi22.description := 'Rice Paper Citrus Roll'
+!mi22.prepTime := 5.0
+!mi22.classification := #Dessert
+
+!insert (mi21, chef15) into MenuItemChef
+!insert (mi22, chef15) into MenuItemChef
+
+!insert (mi21, fi70) into MenuItemFoodItem
+!insert (mi21, fi71) into MenuItemFoodItem
+!insert (mi21, fi72) into MenuItemFoodItem
+!insert (mi22, fi71) into MenuItemFoodItem
+!insert (mi22, fi72) into MenuItemFoodItem
+
+!new Table('t100')
+!t100.number := 100
+!t100.description := 'Modular table section A'
+!t100.capacity := 6
+
+!new Table('t101')
+!t101.number := 101
+!t101.description := 'Modular table section B'
+!t101.capacity := 4
+
+!new Table('t102')
+!t102.number := 102
+!t102.description := 'Single standing table'
+!t102.capacity := 1
+
+!new Banquet('resBan9')
+!resBan9.time := Time('21:45')
+!resBan9.date := Date('2026-10-31')
+!resBan9.numberPeople := 10
+!resBan9.name := 'Night Market Host'
+!resBan9.phoneNumber := '+1-555-9701'
+!resBan9.number := 18001
+!resBan9.groupName := 'Night Market Collective'
+!resBan9.paymentMethod := #Cash
+!resBan9.busService := true
+
+!insert (rest10, resBan9) into RestaurantReservation
+
+!insert (resBan9, w19) into ReservationWaiter
+!insert (resBan9, t100) into ReservationTable
+!insert (resBan9, t101) into ReservationTable
+
+!new ItemOrder('io50')
+!io50.time := Time('22:00')
+
+!new ItemOrder('io51')
+!io51.time := Time('22:05')
+
+!new ItemOrder('io52')
+!io52.time := Time('22:06')
+
+!insert (resBan9, io50) into ReservationItemOrdered
+!insert (resBan9, io51) into ReservationItemOrdered
+!insert (resBan9, io52) into ReservationItemOrdered
+
+!insert (io50, mi21) into ItemOrderMenuItem
+!insert (io51, mi22) into ItemOrderMenuItem
+!insert (io52, mi21) into ItemOrderMenuItem
+
+!new Individual('resInd10')
+!resInd10.time := Time('23:59')
+!resInd10.date := Date('2026-12-31')
+!resInd10.numberPeople := 1
+!resInd10.name := 'Anonymous Late Guest'
+!resInd10.phoneNumber := '+1-555-9702'
+!resInd10.number := 19001
+!resInd10.seating := #Inside
+!resInd10.smoking := #NonSmoking
+
+!insert (resInd10, w19) into ReservationWaiter
+!insert (resInd10, t102) into ReservationTable

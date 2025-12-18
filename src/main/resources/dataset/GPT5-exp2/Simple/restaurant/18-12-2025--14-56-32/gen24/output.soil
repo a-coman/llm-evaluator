@@ -1,0 +1,183 @@
+!new Restaurant('rest25')
+!rest25.name := 'Polar Picnic Hall'
+
+!new Owner('own61')
+!own61.name := 'Quinn Harper'
+!own61.percentageShares := 100
+
+!insert (rest25, own61) into RestaurantOwner
+
+!new HeadWaiter('hw26')
+!hw26.name := 'Evelyn Drake'
+!hw26.dateOfBirth := Date('1983-10-30')
+!hw26.phoneNumber := '+1-555-2500'
+
+!new Waiter('w53')
+!w53.name := 'Tomas Ricci'
+!w53.dateOfBirth := Date('1997-02-07')
+!w53.phoneNumber := '+1-555-2501'
+!w53.spokenLanguage := #Italian
+
+!new Waiter('w54')
+!w54.name := 'Alicia Moore'
+!w54.dateOfBirth := Date('2000-06-18')
+!w54.phoneNumber := '+1-555-2502'
+!w54.spokenLanguage := #English
+
+!insert (hw26, w53) into HeadWaiterWaiter
+!insert (hw26, w54) into HeadWaiterWaiter
+
+!new Chef('chef37')
+!chef37.name := 'Svenja Hart'
+!chef37.dateOfBirth := Date('1979-01-13')
+!chef37.phoneNumber := '+1-555-2510'
+
+!new Cook('cook52')
+!cook52.name := 'Nikhil Batra'
+!cook52.dateOfBirth := Date('1992-09-09')
+!cook52.phoneNumber := '+1-555-2511'
+!cook52.yearsOfExperience := 12
+
+!new Cook('cook53')
+!cook53.name := 'Lena Ortiz'
+!cook53.dateOfBirth := Date('2004-12-12')
+!cook53.phoneNumber := '+1-555-2512'
+!cook53.yearsOfExperience := 0
+
+!insert (chef37, cook52) into ChefCook
+!insert (chef37, cook53) into ChefCook
+
+!new Allergen('aGluten25')
+!aGluten25.type := #Gluten
+
+!new FoodItem('fi220')
+!fi220.number := 4000
+!fi220.description := 'Beef'
+!fi220.purchaseFlag := true
+!fi220.unit := #Pound
+
+!new FoodItem('fi221')
+!fi221.number := 4001
+!fi221.description := 'Pearl Barley'
+!fi221.purchaseFlag := true
+!fi221.unit := #Pound
+
+!new FoodItem('fi222')
+!fi222.number := 4002
+!fi222.description := 'Carrots'
+!fi222.purchaseFlag := false
+!fi222.unit := #Gram
+
+!insert (fi221, aGluten25) into FoodItemAllergen
+
+!new MenuItem('mi61')
+!mi61.description := 'Arctic Lemonade'
+!mi61.prepTime := 0.0
+!mi61.classification := #Beverage
+
+!new MenuItem('mi62')
+!mi62.description := 'Hearty Winter Stew'
+!mi62.prepTime := 30.0
+!mi62.classification := #Main
+
+!insert (mi61, chef37) into MenuItemChef
+!insert (mi62, chef37) into MenuItemChef
+
+!insert (mi62, fi220) into MenuItemFoodItem
+!insert (mi62, fi221) into MenuItemFoodItem
+!insert (mi62, fi222) into MenuItemFoodItem
+
+!new RegularCustomer('rc16')
+!rc16.name := 'Mikael Lund'
+!rc16.prefferedLanguage := #German
+
+!new Individual('resInd30')
+!resInd30.time := Time('11:00')
+!resInd30.date := Date('2026-02-20')
+!resInd30.numberPeople := 6
+!resInd30.name := 'Ice Fishing Crew'
+!resInd30.phoneNumber := '+1-555-2520'
+!resInd30.number := 60001
+!resInd30.seating := #Inside
+!resInd30.smoking := #NonSmoking
+
+!new Individual('resInd31')
+!resInd31.time := Time('11:05')
+!resInd31.date := Date('2026-02-20')
+!resInd31.numberPeople := 1
+!resInd31.name := 'Mikael Lund'
+!resInd31.phoneNumber := '+1-555-2521'
+!resInd31.number := 60002
+!resInd31.seating := #Patio
+!resInd31.smoking := #NonSmoking
+
+!new Individual('resInd32')
+!resInd32.time := Time('12:00')
+!resInd32.date := Date('2026-02-20')
+!resInd32.numberPeople := 3
+!resInd32.name := 'Midday Trio'
+!resInd32.phoneNumber := '+1-555-2522'
+!resInd32.number := 60003
+!resInd32.seating := #Inside
+!resInd32.smoking := #Smoking
+
+!insert (rest25, resInd30) into RestaurantReservation
+!insert (rest25, resInd31) into RestaurantReservation
+!insert (rest25, resInd32) into RestaurantReservation
+
+!insert (resInd31, rc16) into ReservationCustomer
+!insert (resInd32, rc16) into ReservationCustomer
+
+!insert (resInd30, w53) into ReservationWaiter
+!insert (resInd31, w54) into ReservationWaiter
+!insert (resInd32, w53) into ReservationWaiter
+!insert (resInd32, w54) into ReservationWaiter
+
+!new Table('t250')
+!t250.number := 250
+!t250.description := 'Heated booth'
+!t250.capacity := 4
+
+!new Table('t251')
+!t251.number := 251
+!t251.description := 'Auxiliary chair set'
+!t251.capacity := 2
+
+!new Table('t252')
+!t252.number := 252
+!t252.description := 'Single stool'
+!t252.capacity := 1
+
+!new Table('t253')
+!t253.number := 253
+!t253.description := 'Narrow bench'
+!t253.capacity := 1
+
+!new Table('t254')
+!t254.number := 254
+!t254.description := 'Two-top by window'
+!t254.capacity := 2
+
+!insert (resInd30, t250) into ReservationTable
+!insert (resInd30, t251) into ReservationTable
+!insert (resInd31, t252) into ReservationTable
+!insert (resInd32, t253) into ReservationTable
+!insert (resInd32, t254) into ReservationTable
+
+!new ItemOrder('io190')
+!io190.time := Time('12:10')
+
+!new ItemOrder('io191')
+!io191.time := Time('12:15')
+
+!insert (resInd32, io190) into ReservationItemOrdered
+!insert (resInd32, io191) into ReservationItemOrdered
+
+!insert (io190, mi61) into ItemOrderMenuItem
+!insert (io191, mi62) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr13')
+!dr13.diet := #Halal
+
+!new ReportedAllergy('ra12')
+!ra12.allergen := #Nuts

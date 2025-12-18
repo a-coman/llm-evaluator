@@ -1,0 +1,242 @@
+!new Restaurant('rest8')
+!rest8.name := 'Riverside Diner'
+
+!new Owner('own18')
+!own18.name := 'Harper Lin'
+!own18.percentageShares := 55
+
+!new Owner('own19')
+!own19.name := 'Owen Price'
+!own19.percentageShares := 45
+
+!insert (rest8, own18) into RestaurantOwner
+!insert (rest8, own19) into RestaurantOwner
+
+!new HeadWaiter('hw7')
+!hw7.name := 'Carmen Wells'
+!hw7.dateOfBirth := Date('1985-09-09')
+!hw7.phoneNumber := '+1-555-8000'
+
+!new Waiter('w14')
+!w14.name := 'Noel Hart'
+!w14.dateOfBirth := Date('1998-02-18')
+!w14.phoneNumber := '+1-555-8011'
+!w14.spokenLanguage := #English
+
+!new Waiter('w15')
+!w15.name := 'Giulia Ferri'
+!w15.dateOfBirth := Date('1993-05-26')
+!w15.phoneNumber := '+1-555-8012'
+!w15.spokenLanguage := #Italian
+
+!new Waiter('w16')
+!w16.name := 'Felix Braun'
+!w16.dateOfBirth := Date('2000-11-03')
+!w16.phoneNumber := '+1-555-8013'
+!w16.spokenLanguage := #German
+
+!insert (hw7, w14) into HeadWaiterWaiter
+!insert (hw7, w15) into HeadWaiterWaiter
+!insert (hw7, w16) into HeadWaiterWaiter
+
+!new Chef('chef11')
+!chef11.name := 'Rosa Delgado'
+!chef11.dateOfBirth := Date('1979-03-19')
+!chef11.phoneNumber := '+1-555-8101'
+
+!new Chef('chef12')
+!chef12.name := 'Anton Weber'
+!chef12.dateOfBirth := Date('1988-07-28')
+!chef12.phoneNumber := '+1-555-8102'
+
+!new Cook('cook14')
+!cook14.name := 'Kara Finch'
+!cook14.dateOfBirth := Date('2002-01-10')
+!cook14.phoneNumber := '+1-555-8111'
+!cook14.yearsOfExperience := 0
+
+!new Cook('cook15')
+!cook15.name := 'Victor Hale'
+!cook15.dateOfBirth := Date('1986-10-20')
+!cook15.phoneNumber := '+1-555-8112'
+!cook15.yearsOfExperience := 20
+
+!new Cook('cook16')
+!cook16.name := 'Sven Adler'
+!cook16.dateOfBirth := Date('1995-04-04')
+!cook16.phoneNumber := '+1-555-8113'
+!cook16.yearsOfExperience := 3
+
+!insert (chef11, cook14) into ChefCook
+!insert (chef11, cook15) into ChefCook
+!insert (chef12, cook16) into ChefCook
+
+!new Allergen('aLactose8')
+!aLactose8.type := #Lactose
+
+!new Allergen('aGluten8')
+!aGluten8.type := #Gluten
+
+!new FoodItem('fi50')
+!fi50.number := 650
+!fi50.description := 'Short-grain rice'
+!fi50.purchaseFlag := true
+!fi50.unit := #Pound
+
+!new FoodItem('fi51')
+!fi51.number := 651
+!fi51.description := 'Mixed vegetables'
+!fi51.purchaseFlag := true
+!fi51.unit := #Pound
+
+!new FoodItem('fi52')
+!fi52.number := 652
+!fi52.description := 'Mascarpone'
+!fi52.purchaseFlag := true
+!fi52.unit := #Ounce
+
+!new FoodItem('fi53')
+!fi53.number := 653
+!fi53.description := 'Espresso'
+!fi53.purchaseFlag := true
+!fi53.unit := #Ounce
+
+!new FoodItem('fi54')
+!fi54.number := 654
+!fi54.description := 'Ladyfingers'
+!fi54.purchaseFlag := true
+!fi54.unit := #Sheet
+
+!insert (fi52, aLactose8) into FoodItemAllergen
+!insert (fi54, aGluten8) into FoodItemAllergen
+
+!new MenuItem('mi16')
+!mi16.description := 'Veggie Paella'
+!mi16.prepTime := 28.0
+!mi16.classification := #Main
+
+!new MenuItem('mi17')
+!mi17.description := 'Tiramisu Slice'
+!mi17.prepTime := 9.0
+!mi17.classification := #Dessert
+
+!new MenuItem('mi18')
+!mi18.description := 'Iced Coffee'
+!mi18.prepTime := 1.0
+!mi18.classification := #Beverage
+
+!insert (mi16, chef11) into MenuItemChef
+!insert (mi17, chef12) into MenuItemChef
+!insert (mi18, chef11) into MenuItemChef
+
+!insert (mi16, fi50) into MenuItemFoodItem
+!insert (mi16, fi51) into MenuItemFoodItem
+!insert (mi17, fi52) into MenuItemFoodItem
+!insert (mi17, fi53) into MenuItemFoodItem
+!insert (mi17, fi54) into MenuItemFoodItem
+!insert (mi18, fi53) into MenuItemFoodItem
+
+!new Table('t80')
+!t80.number := 80
+!t80.description := 'Banquet room table 1'
+!t80.capacity := 8
+
+!new Table('t81')
+!t81.number := 81
+!t81.description := 'Banquet room table 2'
+!t81.capacity := 8
+
+!new Table('t82')
+!t82.number := 82
+!t82.description := 'Banquet room table 3'
+!t82.capacity := 4
+
+!new Table('t83')
+!t83.number := 83
+!t83.description := 'Corner two-top'
+!t83.capacity := 2
+
+!new Banquet('resBan7')
+!resBan7.time := Time('19:00')
+!resBan7.date := Date('2026-08-15')
+!resBan7.numberPeople := 20
+!resBan7.name := 'Event Desk'
+!resBan7.phoneNumber := '+1-555-8201'
+!resBan7.number := 14001
+!resBan7.groupName := 'River Charity'
+!resBan7.paymentMethod := #CreditCard
+!resBan7.busService := true
+
+!new Individual('resInd8')
+!resInd8.time := Time('07:00')
+!resInd8.date := Date('2026-08-16')
+!resInd8.numberPeople := 2
+!resInd8.name := 'Nadia Holm'
+!resInd8.phoneNumber := '+1-555-8202'
+!resInd8.number := 15001
+!resInd8.seating := #Inside
+!resInd8.smoking := #NonSmoking
+
+!insert (rest8, resBan7) into RestaurantReservation
+!insert (rest8, resInd8) into RestaurantReservation
+
+!insert (resBan7, w14) into ReservationWaiter
+!insert (resBan7, w15) into ReservationWaiter
+!insert (resInd8, w16) into ReservationWaiter
+
+!insert (resBan7, t80) into ReservationTable
+!insert (resBan7, t81) into ReservationTable
+!insert (resBan7, t82) into ReservationTable
+!insert (resInd8, t83) into ReservationTable
+
+!new BusDriver('bd4')
+!bd4.name := 'Marek Novak'
+!bd4.dateOfBirth := Date('1968-06-06')
+!bd4.phoneNumber := '+1-555-8301'
+!bd4.driverLicenseNr := 'BUS-3001-RV'
+
+!new BusDriver('bd5')
+!bd5.name := 'Selma Kline'
+!bd5.dateOfBirth := Date('1973-02-14')
+!bd5.phoneNumber := '+1-555-8302'
+!bd5.driverLicenseNr := 'BUS-3002-RV'
+
+!insert (resBan7, bd4) into BanquetBusDriver
+!insert (resBan7, bd5) into BanquetBusDriver
+
+!new ItemOrder('io40')
+!io40.time := Time('19:10')
+
+!new ItemOrder('io41')
+!io41.time := Time('19:12')
+
+!new ItemOrder('io42')
+!io42.time := Time('19:45')
+
+!new ItemOrder('io43')
+!io43.time := Time('07:05')
+
+!insert (resBan7, io40) into ReservationItemOrdered
+!insert (resBan7, io41) into ReservationItemOrdered
+!insert (resBan7, io42) into ReservationItemOrdered
+!insert (resInd8, io43) into ReservationItemOrdered
+
+!insert (io40, mi16) into ItemOrderMenuItem
+!insert (io41, mi18) into ItemOrderMenuItem
+!insert (io42, mi17) into ItemOrderMenuItem
+!insert (io43, mi18) into ItemOrderMenuItem
+
+!new RegularCustomer('rc6')
+!rc6.name := 'Nadia Holm'
+!rc6.prefferedLanguage := #English
+
+!insert (resInd8, rc6) into ReservationCustomer
+
+!new DietaryRequirement('dr4')
+!dr4.diet := #Vegan
+
+!new DietaryRequirement('dr5')
+!dr5.diet := #Vegetarian
+
+!new ReportedAllergy('ra4')
+!ra4.allergen := #Nuts

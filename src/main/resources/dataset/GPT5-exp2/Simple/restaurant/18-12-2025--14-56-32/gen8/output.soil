@@ -1,0 +1,142 @@
+!new Restaurant('rest9')
+!rest9.name := 'Seaside Vegan Corner'
+
+!new Owner('own20')
+!own20.name := 'Renee Walsh'
+!own20.percentageShares := 50
+
+!new Owner('own21')
+!own21.name := 'Khalid Mansour'
+!own21.percentageShares := 50
+
+!insert (rest9, own20) into RestaurantOwner
+!insert (rest9, own21) into RestaurantOwner
+
+!new HeadWaiter('hw8')
+!hw8.name := 'Victor Lane'
+!hw8.dateOfBirth := Date('1984-01-16')
+!hw8.phoneNumber := '+1-555-9000'
+
+!new Waiter('w17')
+!w17.name := 'Elisa Neri'
+!w17.dateOfBirth := Date('1997-07-07')
+!w17.phoneNumber := '+1-555-9011'
+!w17.spokenLanguage := #Italian
+
+!new Waiter('w18')
+!w18.name := 'Mateo Ruiz'
+!w18.dateOfBirth := Date('1991-03-22')
+!w18.phoneNumber := '+1-555-9012'
+!w18.spokenLanguage := #Spanish
+
+!insert (hw8, w17) into HeadWaiterWaiter
+!insert (hw8, w18) into HeadWaiterWaiter
+
+!new Chef('chef13')
+!chef13.name := 'June Park'
+!chef13.dateOfBirth := Date('1989-05-05')
+!chef13.phoneNumber := '+1-555-9101'
+
+!new Chef('chef14')
+!chef14.name := 'Tobias Klein'
+!chef14.dateOfBirth := Date('1978-09-09')
+!chef14.phoneNumber := '+1-555-9102'
+
+!new Cook('cook17')
+!cook17.name := 'Arun Das'
+!cook17.dateOfBirth := Date('1994-12-12')
+!cook17.phoneNumber := '+1-555-9111'
+!cook17.yearsOfExperience := 4
+
+!new Cook('cook18')
+!cook18.name := 'Sasha Moore'
+!cook18.dateOfBirth := Date('2000-10-10')
+!cook18.phoneNumber := '+1-555-9112'
+!cook18.yearsOfExperience := 0
+
+!insert (chef13, cook17) into ChefCook
+!insert (chef14, cook18) into ChefCook
+
+!new FoodItem('fi60')
+!fi60.number := 760
+!fi60.description := 'Chickpeas'
+!fi60.purchaseFlag := true
+!fi60.unit := #Pound
+
+!new FoodItem('fi61')
+!fi61.number := 761
+!fi61.description := 'Tahini'
+!fi61.purchaseFlag := true
+!fi61.unit := #Ounce
+
+!new FoodItem('fi62')
+!fi62.number := 762
+!fi62.description := 'Fresh Mint'
+!fi62.purchaseFlag := false
+!fi62.unit := #Gram
+
+!new MenuItem('mi19')
+!mi19.description := 'Chickpea Power Bowl'
+!mi19.prepTime := 8.0
+!mi19.classification := #Main
+
+!new MenuItem('mi20')
+!mi20.description := 'Mint Tea'
+!mi20.prepTime := 2.0
+!mi20.classification := #Beverage
+
+!insert (mi19, chef13) into MenuItemChef
+!insert (mi20, chef14) into MenuItemChef
+
+!insert (mi19, fi60) into MenuItemFoodItem
+!insert (mi19, fi61) into MenuItemFoodItem
+!insert (mi20, fi62) into MenuItemFoodItem
+
+!new RegularCustomer('rc7')
+!rc7.name := 'Paolo Greco'
+!rc7.prefferedLanguage := #Italian
+
+!new Banquet('resBan8')
+!resBan8.time := Time('05:30')
+!resBan8.date := Date('2026-09-01')
+!resBan8.numberPeople := 1
+!resBan8.name := 'Sponsor Guest'
+!resBan8.phoneNumber := '+1-555-9201'
+!resBan8.number := 16001
+!resBan8.groupName := 'Solo Sponsor'
+!resBan8.paymentMethod := #Cash
+!resBan8.busService := true
+
+!new Individual('resInd9')
+!resInd9.time := Time('12:00')
+!resInd9.date := Date('2026-09-01')
+!resInd9.numberPeople := 4
+!resInd9.name := 'Paolo Greco'
+!resInd9.phoneNumber := '+1-555-9202'
+!resInd9.number := 17001
+!resInd9.seating := #Patio
+!resInd9.smoking := #NonSmoking
+
+!insert (resInd9, rc7) into ReservationCustomer
+
+!insert (resBan8, w17) into ReservationWaiter
+!insert (resInd9, w18) into ReservationWaiter
+
+!new Table('t90')
+!t90.number := 90
+!t90.description := 'Single stool table'
+!t90.capacity := 1
+
+!new Table('t91')
+!t91.number := 91
+!t91.description := 'Patio two-top A'
+!t91.capacity := 2
+
+!new Table('t92')
+!t92.number := 92
+!t92.description := 'Patio two-top B'
+!t92.capacity := 2
+
+!insert (resBan8, t90) into ReservationTable
+!insert (resInd9, t91) into ReservationTable
+!insert (resInd9, t92) into ReservationTable

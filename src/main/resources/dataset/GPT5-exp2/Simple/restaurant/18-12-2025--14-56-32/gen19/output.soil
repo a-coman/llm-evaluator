@@ -1,0 +1,237 @@
+!new Restaurant('rest20')
+!rest20.name := 'Northwind Cantina'
+
+!new Owner('own49')
+!own49.name := 'Tomas Keller'
+!own49.percentageShares := 10
+
+!new Owner('own50')
+!own50.name := 'Mina Duarte'
+!own50.percentageShares := 20
+
+!new Owner('own51')
+!own51.name := 'Hugo Sanz'
+!own51.percentageShares := 30
+
+!new Owner('own52')
+!own52.name := 'Elif Yilmaz'
+!own52.percentageShares := 40
+
+!insert (rest20, own49) into RestaurantOwner
+!insert (rest20, own50) into RestaurantOwner
+!insert (rest20, own51) into RestaurantOwner
+!insert (rest20, own52) into RestaurantOwner
+
+!new HeadWaiter('hw20')
+!hw20.name := 'Sasha North'
+!hw20.dateOfBirth := Date('1982-12-24')
+!hw20.phoneNumber := '+1-555-2000'
+
+!new Waiter('w41')
+!w41.name := 'Rene Alvarez'
+!w41.dateOfBirth := Date('1999-02-02')
+!w41.phoneNumber := '+1-555-2001'
+!w41.spokenLanguage := #Spanish
+
+!new Waiter('w42')
+!w42.name := 'Claudia Meyer'
+!w42.dateOfBirth := Date('1994-04-04')
+!w42.phoneNumber := '+1-555-2002'
+!w42.spokenLanguage := #German
+
+!insert (hw20, w41) into HeadWaiterWaiter
+!insert (hw20, w42) into HeadWaiterWaiter
+
+!new Chef('chef28')
+!chef28.name := 'Noah Firth'
+!chef28.dateOfBirth := Date('1976-01-19')
+!chef28.phoneNumber := '+1-555-2010'
+
+!new Cook('cook39')
+!cook39.name := 'Ivy Tran'
+!cook39.dateOfBirth := Date('2003-03-23')
+!cook39.phoneNumber := '+1-555-2011'
+!cook39.yearsOfExperience := 0
+
+!new Cook('cook40')
+!cook40.name := 'Bram Novak'
+!cook40.dateOfBirth := Date('1991-07-07')
+!cook40.phoneNumber := '+1-555-2012'
+!cook40.yearsOfExperience := 11
+
+!new Cook('cook41')
+!cook41.name := 'Sara Elmas'
+!cook41.dateOfBirth := Date('1989-09-29')
+!cook41.phoneNumber := '+1-555-2013'
+!cook41.yearsOfExperience := 6
+
+!insert (chef28, cook39) into ChefCook
+!insert (chef28, cook40) into ChefCook
+!insert (chef28, cook41) into ChefCook
+
+!new Allergen('aGluten20')
+!aGluten20.type := #Gluten
+
+!new Allergen('aNuts20')
+!aNuts20.type := #Nuts
+
+!new Allergen('aSeafood20')
+!aSeafood20.type := #Seafood
+
+!new FoodItem('fi160')
+!fi160.number := 1810
+!fi160.description := 'Wheat Tortillas'
+!fi160.purchaseFlag := true
+!fi160.unit := #Dozen
+
+!new FoodItem('fi161')
+!fi161.number := 1811
+!fi161.description := 'Cashew Cream'
+!fi161.purchaseFlag := true
+!fi161.unit := #Ounce
+
+!new FoodItem('fi162')
+!fi162.number := 1812
+!fi162.description := 'Fish Stock'
+!fi162.purchaseFlag := true
+!fi162.unit := #Ounce
+
+!new FoodItem('fi163')
+!fi163.number := 1813
+!fi163.description := 'Lime Zest'
+!fi163.purchaseFlag := false
+!fi163.unit := #Gram
+
+!insert (fi160, aGluten20) into FoodItemAllergen
+!insert (fi161, aNuts20) into FoodItemAllergen
+!insert (fi162, aSeafood20) into FoodItemAllergen
+
+!new MenuItem('mi45')
+!mi45.description := 'Cashew-Lime Taco'
+!mi45.prepTime := 6.0
+!mi45.classification := #Main
+
+!new MenuItem('mi46')
+!mi46.description := 'Broth Taster'
+!mi46.prepTime := 1.0
+!mi46.classification := #Apetizer
+
+!new MenuItem('mi47')
+!mi47.description := 'Still Water Pitcher'
+!mi47.prepTime := 0.0
+!mi47.classification := #Beverage
+
+!insert (mi45, chef28) into MenuItemChef
+!insert (mi46, chef28) into MenuItemChef
+!insert (mi47, chef28) into MenuItemChef
+
+!insert (mi45, fi160) into MenuItemFoodItem
+!insert (mi45, fi161) into MenuItemFoodItem
+!insert (mi45, fi163) into MenuItemFoodItem
+!insert (mi46, fi162) into MenuItemFoodItem
+
+!new RegularCustomer('rc12')
+!rc12.name := 'June Havel'
+!rc12.prefferedLanguage := #English
+
+!new Individual('resInd23')
+!resInd23.time := Time('10:05')
+!resInd23.date := Date('2026-01-10')
+!resInd23.numberPeople := 1
+!resInd23.name := 'June Havel'
+!resInd23.phoneNumber := '+1-555-2020'
+!resInd23.number := 36001
+!resInd23.seating := #Inside
+!resInd23.smoking := #NonSmoking
+
+!new Individual('resInd24')
+!resInd24.time := Time('12:40')
+!resInd24.date := Date('2026-01-10')
+!resInd24.numberPeople := 7
+!resInd24.name := 'Workshop Group'
+!resInd24.phoneNumber := '+1-555-2021'
+!resInd24.number := 36002
+!resInd24.seating := #Patio
+!resInd24.smoking := #NonSmoking
+
+!new Banquet('resBan18')
+!resBan18.time := Time('19:15')
+!resBan18.date := Date('2026-01-10')
+!resBan18.numberPeople := 25
+!resBan18.name := 'Night Coordinator'
+!resBan18.phoneNumber := '+1-555-2022'
+!resBan18.number := 37001
+!resBan18.groupName := 'Northern Lights Society'
+!resBan18.paymentMethod := #CreditCard
+!resBan18.busService := true
+
+!insert (rest20, resInd23) into RestaurantReservation
+!insert (rest20, resInd24) into RestaurantReservation
+!insert (rest20, resBan18) into RestaurantReservation
+
+!insert (resInd23, rc12) into ReservationCustomer
+
+!insert (resInd23, w41) into ReservationWaiter
+!insert (resInd24, w41) into ReservationWaiter
+!insert (resInd24, w42) into ReservationWaiter
+!insert (resBan18, w42) into ReservationWaiter
+
+!new Table('t200')
+!t200.number := 200
+!t200.description := 'Single counter seat'
+!t200.capacity := 1
+
+!new Table('t201')
+!t201.number := 201
+!t201.description := 'Patio four-top'
+!t201.capacity := 4
+
+!new Table('t202')
+!t202.number := 202
+!t202.description := 'Patio three-top'
+!t202.capacity := 3
+
+!new Table('t203')
+!t203.number := 203
+!t203.description := 'Banquet table A'
+!t203.capacity := 10
+
+!new Table('t204')
+!t204.number := 204
+!t204.description := 'Banquet table B'
+!t204.capacity := 10
+
+!new Table('t205')
+!t205.number := 205
+!t205.description := 'Banquet table C'
+!t205.capacity := 5
+
+!insert (resInd23, t200) into ReservationTable
+!insert (resInd24, t201) into ReservationTable
+!insert (resInd24, t202) into ReservationTable
+!insert (resBan18, t203) into ReservationTable
+!insert (resBan18, t204) into ReservationTable
+!insert (resBan18, t205) into ReservationTable
+
+!new ItemOrder('io140')
+!io140.time := Time('10:08')
+
+!insert (resInd23, io140) into ReservationItemOrdered
+!insert (io140, mi47) into ItemOrderMenuItem
+
+!new ItemOrder('io141')
+!io141.time := Time('19:25')
+
+!new ItemOrder('io142')
+!io142.time := Time('19:27')
+
+!new ItemOrder('io143')
+!io143.time := Time('19:45')
+
+!insert (resBan18, io141) into ReservationItemOrdered
+!insert (resBan18, io142) into ReservationItemOrdered
+!insert (resBan18, io143) into ReservationItemOrdered
+
+!insert (io141, mi46) into ItemOrderMenuItem
+!insert (io142, mi45) into ItemOrderMenuItem
+!insert (io143, mi45) into ItemOrderMenuItem

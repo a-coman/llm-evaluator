@@ -1,0 +1,191 @@
+!new Restaurant('rest23')
+!rest23.name := 'Underground Roti and Jazz'
+
+!new Owner('own56')
+!own56.name := 'Noah Verner'
+!own56.percentageShares := 34
+
+!new Owner('own57')
+!own57.name := 'Lucia Hart'
+!own57.percentageShares := 33
+
+!new Owner('own58')
+!own58.name := 'Sanjay Iyer'
+!own58.percentageShares := 33
+
+!insert (rest23, own56) into RestaurantOwner
+!insert (rest23, own57) into RestaurantOwner
+!insert (rest23, own58) into RestaurantOwner
+
+!new HeadWaiter('hw23')
+!hw23.name := 'Maren Knox'
+!hw23.dateOfBirth := Date('1988-05-08')
+!hw23.phoneNumber := '+1-555-2300'
+
+!new Waiter('w48')
+!w48.name := 'Ivo Marin'
+!w48.dateOfBirth := Date('2000-02-20')
+!w48.phoneNumber := '+1-555-2301'
+!w48.spokenLanguage := #English
+
+!new Waiter('w49')
+!w49.name := 'Giada Serra'
+!w49.dateOfBirth := Date('1996-09-14')
+!w49.phoneNumber := '+1-555-2302'
+!w49.spokenLanguage := #Italian
+
+!insert (hw23, w48) into HeadWaiterWaiter
+!insert (hw23, w49) into HeadWaiterWaiter
+
+!new Chef('chef33')
+!chef33.name := 'Rafi Noor'
+!chef33.dateOfBirth := Date('1981-01-19')
+!chef33.phoneNumber := '+1-555-2310'
+
+!new Chef('chef34')
+!chef34.name := 'Elena Vogt'
+!chef34.dateOfBirth := Date('1979-11-11')
+!chef34.phoneNumber := '+1-555-2311'
+
+!new Cook('cook48')
+!cook48.name := 'Mika Duran'
+!cook48.dateOfBirth := Date('2004-03-03')
+!cook48.phoneNumber := '+1-555-2320'
+!cook48.yearsOfExperience := 0
+
+!new Cook('cook49')
+!cook49.name := 'Boris Kanev'
+!cook49.dateOfBirth := Date('1985-07-07')
+!cook49.phoneNumber := '+1-555-2321'
+!cook49.yearsOfExperience := 25
+
+!insert (chef33, cook48) into ChefCook
+!insert (chef34, cook49) into ChefCook
+
+!new Allergen('aGluten23')
+!aGluten23.type := #Gluten
+
+!new Allergen('aNuts23')
+!aNuts23.type := #Nuts
+
+!new Allergen('aLactose23')
+!aLactose23.type := #Lactose
+
+!new FoodItem('fi200')
+!fi200.number := 2200
+!fi200.description := 'Wheat Flour'
+!fi200.purchaseFlag := true
+!fi200.unit := #Pound
+
+!new FoodItem('fi201')
+!fi201.number := 2201
+!fi201.description := 'Roasted Peanuts'
+!fi201.purchaseFlag := true
+!fi201.unit := #Gram
+
+!new FoodItem('fi202')
+!fi202.number := 2202
+!fi202.description := 'Lamb'
+!fi202.purchaseFlag := true
+!fi202.unit := #Pound
+
+!new FoodItem('fi203')
+!fi203.number := 2203
+!fi203.description := 'Spice Blend'
+!fi203.purchaseFlag := false
+!fi203.unit := #Gram
+
+!new FoodItem('fi204')
+!fi204.number := 2204
+!fi204.description := 'Milk'
+!fi204.purchaseFlag := true
+!fi204.unit := #Ounce
+
+!insert (fi200, aGluten23) into FoodItemAllergen
+!insert (fi201, aNuts23) into FoodItemAllergen
+!insert (fi204, aLactose23) into FoodItemAllergen
+
+!new MenuItem('mi55')
+!mi55.description := 'Peanut Roti Bites'
+!mi55.prepTime := 7.0
+!mi55.classification := #Apetizer
+
+!new MenuItem('mi56')
+!mi56.description := 'Spiced Lamb Roti Wrap'
+!mi56.prepTime := 15.0
+!mi56.classification := #Main
+
+!new MenuItem('mi57')
+!mi57.description := 'House Spiced Water'
+!mi57.prepTime := 0.0
+!mi57.classification := #Beverage
+
+!insert (mi55, chef33) into MenuItemChef
+!insert (mi56, chef34) into MenuItemChef
+!insert (mi57, chef33) into MenuItemChef
+
+!insert (mi55, fi200) into MenuItemFoodItem
+!insert (mi55, fi201) into MenuItemFoodItem
+!insert (mi55, fi204) into MenuItemFoodItem
+!insert (mi56, fi200) into MenuItemFoodItem
+!insert (mi56, fi202) into MenuItemFoodItem
+!insert (mi56, fi203) into MenuItemFoodItem
+!insert (mi57, fi203) into MenuItemFoodItem
+
+!new Table('t230')
+!t230.number := 230
+!t230.description := 'Jazz corner two-top'
+!t230.capacity := 2
+
+!new Table('t231')
+!t231.number := 231
+!t231.description := 'Reserved staging table'
+!t231.capacity := 1
+
+!new Individual('resInd27')
+!resInd27.time := Time('21:10')
+!resInd27.date := Date('2026-05-15')
+!resInd27.numberPeople := 2
+!resInd27.name := 'Late Duo'
+!resInd27.phoneNumber := '+1-555-2330'
+!resInd27.number := 42001
+!resInd27.seating := #Inside
+!resInd27.smoking := #NonSmoking
+
+!new Banquet('resBan22')
+!resBan22.time := Time('23:00')
+!resBan22.date := Date('2026-05-15')
+!resBan22.numberPeople := 0
+!resBan22.name := 'Closed Hold'
+!resBan22.phoneNumber := '+1-555-2331'
+!resBan22.number := 43001
+!resBan22.groupName := 'After-hours Hold'
+!resBan22.paymentMethod := #Cash
+!resBan22.busService := false
+
+!insert (rest23, resInd27) into RestaurantReservation
+!insert (rest23, resBan22) into RestaurantReservation
+
+!insert (resInd27, w48) into ReservationWaiter
+!insert (resBan22, w49) into ReservationWaiter
+
+!insert (resInd27, t230) into ReservationTable
+!insert (resBan22, t231) into ReservationTable
+
+!new ItemOrder('io170')
+!io170.time := Time('21:12')
+
+!new ItemOrder('io171')
+!io171.time := Time('21:20')
+
+!insert (resInd27, io170) into ReservationItemOrdered
+!insert (resInd27, io171) into ReservationItemOrdered
+
+!insert (io170, mi55) into ItemOrderMenuItem
+!insert (io171, mi57) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr12')
+!dr12.diet := #Vegan
+
+!new ReportedAllergy('ra11')
+!ra11.allergen := #Gluten

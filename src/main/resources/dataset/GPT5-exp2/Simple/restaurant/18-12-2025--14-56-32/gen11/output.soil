@@ -1,0 +1,313 @@
+!new Restaurant('rest12')
+!rest12.name := 'Desert Caravan Kitchen'
+
+!new Owner('own28')
+!own28.name := 'Nora Hassan'
+!own28.percentageShares := 50
+
+!new Owner('own29')
+!own29.name := 'Elliot Shaw'
+!own29.percentageShares := 40
+
+!new Owner('own30')
+!own30.name := 'Priit Saar'
+!own30.percentageShares := 10
+
+!insert (rest12, own28) into RestaurantOwner
+!insert (rest12, own29) into RestaurantOwner
+!insert (rest12, own30) into RestaurantOwner
+
+!new HeadWaiter('hw11')
+!hw11.name := 'Simone Grant'
+!hw11.dateOfBirth := Date('1981-02-08')
+!hw11.phoneNumber := '+1-555-1200'
+
+!new Waiter('w22')
+!w22.name := 'Ava Hill'
+!w22.dateOfBirth := Date('1999-10-10')
+!w22.phoneNumber := '+1-555-1201'
+!w22.spokenLanguage := #English
+
+!new Waiter('w23')
+!w23.name := 'Rafael Cruz'
+!w23.dateOfBirth := Date('1992-04-14')
+!w23.phoneNumber := '+1-555-1202'
+!w23.spokenLanguage := #Spanish
+
+!new Waiter('w24')
+!w24.name := 'Lena Vogel'
+!w24.dateOfBirth := Date('1996-06-06')
+!w24.phoneNumber := '+1-555-1203'
+!w24.spokenLanguage := #German
+
+!new Waiter('w25')
+!w25.name := 'Gianni Rizzo'
+!w25.dateOfBirth := Date('1989-09-19')
+!w25.phoneNumber := '+1-555-1204'
+!w25.spokenLanguage := #Italian
+
+!insert (hw11, w22) into HeadWaiterWaiter
+!insert (hw11, w23) into HeadWaiterWaiter
+!insert (hw11, w24) into HeadWaiterWaiter
+!insert (hw11, w25) into HeadWaiterWaiter
+
+!new Chef('chef17')
+!chef17.name := 'Mira Alston'
+!chef17.dateOfBirth := Date('1976-03-03')
+!chef17.phoneNumber := '+1-555-1210'
+
+!new Chef('chef18')
+!chef18.name := 'Stefan Keller'
+!chef18.dateOfBirth := Date('1983-11-11')
+!chef18.phoneNumber := '+1-555-1211'
+
+!new Cook('cook21')
+!cook21.name := 'Jon Peretz'
+!cook21.dateOfBirth := Date('1991-01-21')
+!cook21.phoneNumber := '+1-555-1221'
+!cook21.yearsOfExperience := 6
+
+!new Cook('cook22')
+!cook22.name := 'Dana Wu'
+!cook22.dateOfBirth := Date('2004-07-07')
+!cook22.phoneNumber := '+1-555-1222'
+!cook22.yearsOfExperience := 0
+
+!new Cook('cook23')
+!cook23.name := 'Hakeem Saleh'
+!cook23.dateOfBirth := Date('1988-05-05')
+!cook23.phoneNumber := '+1-555-1223'
+!cook23.yearsOfExperience := 14
+
+!insert (chef17, cook21) into ChefCook
+!insert (chef17, cook22) into ChefCook
+!insert (chef18, cook23) into ChefCook
+
+!new Allergen('aSeafood12')
+!aSeafood12.type := #Seafood
+
+!new Allergen('aGluten12')
+!aGluten12.type := #Gluten
+
+!new Allergen('aNuts12')
+!aNuts12.type := #Nuts
+
+!new Allergen('aLactose12')
+!aLactose12.type := #Lactose
+
+!new FoodItem('fi90')
+!fi90.number := 1090
+!fi90.description := 'Pita Bread'
+!fi90.purchaseFlag := true
+!fi90.unit := #Dozen
+
+!new FoodItem('fi91')
+!fi91.number := 1091
+!fi91.description := 'Yogurt'
+!fi91.purchaseFlag := true
+!fi91.unit := #Ounce
+
+!new FoodItem('fi92')
+!fi92.number := 1092
+!fi92.description := 'Pine Nuts'
+!fi92.purchaseFlag := true
+!fi92.unit := #Gram
+
+!new FoodItem('fi93')
+!fi93.number := 1093
+!fi93.description := 'Lemon'
+!fi93.purchaseFlag := false
+!fi93.unit := #Dozen
+
+!new FoodItem('fi94')
+!fi94.number := 1094
+!fi94.description := 'Shrimp'
+!fi94.purchaseFlag := true
+!fi94.unit := #Pound
+
+!insert (fi90, aGluten12) into FoodItemAllergen
+!insert (fi91, aLactose12) into FoodItemAllergen
+!insert (fi92, aNuts12) into FoodItemAllergen
+!insert (fi94, aSeafood12) into FoodItemAllergen
+
+!new MenuItem('mi25')
+!mi25.description := 'Lemon Yogurt Chicken Plate'
+!mi25.prepTime := 17.0
+!mi25.classification := #Main
+
+!new MenuItem('mi26')
+!mi26.description := 'Pine Nut Yogurt Parfait'
+!mi26.prepTime := 6.5
+!mi26.classification := #Dessert
+
+!new MenuItem('mi27')
+!mi27.description := 'Lemon Soda'
+!mi27.prepTime := 0.0
+!mi27.classification := #Beverage
+
+!new MenuItem('mi28')
+!mi28.description := 'Shrimp Skewer'
+!mi28.prepTime := 10.0
+!mi28.classification := #Apetizer
+
+!insert (mi25, chef17) into MenuItemChef
+!insert (mi26, chef18) into MenuItemChef
+!insert (mi27, chef17) into MenuItemChef
+!insert (mi28, chef18) into MenuItemChef
+
+!insert (mi25, fi90) into MenuItemFoodItem
+!insert (mi25, fi91) into MenuItemFoodItem
+!insert (mi25, fi93) into MenuItemFoodItem
+!insert (mi26, fi91) into MenuItemFoodItem
+!insert (mi26, fi92) into MenuItemFoodItem
+!insert (mi27, fi93) into MenuItemFoodItem
+!insert (mi28, fi94) into MenuItemFoodItem
+!insert (mi28, fi93) into MenuItemFoodItem
+
+!new Table('t120')
+!t120.number := 120
+!t120.description := 'Stool 1'
+!t120.capacity := 1
+
+!new Table('t121')
+!t121.number := 121
+!t121.description := 'Stool 2'
+!t121.capacity := 1
+
+!new Table('t122')
+!t122.number := 122
+!t122.description := 'Stool 3'
+!t122.capacity := 1
+
+!new Table('t123')
+!t123.number := 123
+!t123.description := 'Stool 4'
+!t123.capacity := 1
+
+!new Table('t124')
+!t124.number := 124
+!t124.description := 'Stool 5'
+!t124.capacity := 1
+
+!new Table('t125')
+!t125.number := 125
+!t125.description := 'Stool 6'
+!t125.capacity := 1
+
+!new Table('t126')
+!t126.number := 126
+!t126.description := 'Stool 7'
+!t126.capacity := 1
+
+!new Table('t127')
+!t127.number := 127
+!t127.description := 'Long banquet table'
+!t127.capacity := 12
+
+!new Table('t128')
+!t128.number := 128
+!t128.description := 'Small two-top'
+!t128.capacity := 2
+
+!new RegularCustomer('rc8')
+!rc8.name := 'Bianca Conti'
+!rc8.prefferedLanguage := #Italian
+
+!new Individual('resInd12')
+!resInd12.time := Time('14:10')
+!resInd12.date := Date('2026-12-12')
+!resInd12.numberPeople := 7
+!resInd12.name := 'Afternoon Study Group'
+!resInd12.phoneNumber := '+1-555-1230'
+!resInd12.number := 22001
+!resInd12.seating := #Inside
+!resInd12.smoking := #NonSmoking
+
+!new Individual('resInd13')
+!resInd13.time := Time('20:20')
+!resInd13.date := Date('2026-12-12')
+!resInd13.numberPeople := 2
+!resInd13.name := 'Bianca Conti'
+!resInd13.phoneNumber := '+1-555-1231'
+!resInd13.number := 22002
+!resInd13.seating := #Patio
+!resInd13.smoking := #NonSmoking
+
+!new Banquet('resBan11')
+!resBan11.time := Time('18:00')
+!resBan11.date := Date('2026-12-13')
+!resBan11.numberPeople := 12
+!resBan11.name := 'Coordinator'
+!resBan11.phoneNumber := '+1-555-1232'
+!resBan11.number := 23001
+!resBan11.groupName := 'Desert Marathon Crew'
+!resBan11.paymentMethod := #CreditCard
+!resBan11.busService := true
+
+!insert (rest12, resInd12) into RestaurantReservation
+!insert (rest12, resInd13) into RestaurantReservation
+!insert (rest12, resBan11) into RestaurantReservation
+
+!insert (resInd13, rc8) into ReservationCustomer
+
+!insert (resInd12, w22) into ReservationWaiter
+!insert (resInd12, w23) into ReservationWaiter
+!insert (resInd13, w24) into ReservationWaiter
+!insert (resBan11, w25) into ReservationWaiter
+!insert (resBan11, w23) into ReservationWaiter
+
+!insert (resInd12, t120) into ReservationTable
+!insert (resInd12, t121) into ReservationTable
+!insert (resInd12, t122) into ReservationTable
+!insert (resInd12, t123) into ReservationTable
+!insert (resInd12, t124) into ReservationTable
+!insert (resInd12, t125) into ReservationTable
+!insert (resInd12, t126) into ReservationTable
+
+!insert (resInd13, t128) into ReservationTable
+
+!insert (resBan11, t127) into ReservationTable
+
+!new BusDriver('bd6')
+!bd6.name := 'Gus Palmer'
+!bd6.dateOfBirth := Date('1967-08-08')
+!bd6.phoneNumber := '+1-555-1240'
+!bd6.driverLicenseNr := 'BUS-8840-DC'
+
+!new BusDriver('bd7')
+!bd7.name := 'Helena Ortiz'
+!bd7.dateOfBirth := Date('1971-01-30')
+!bd7.phoneNumber := '+1-555-1241'
+!bd7.driverLicenseNr := 'BUS-8841-DC'
+
+!insert (resBan11, bd6) into BanquetBusDriver
+!insert (resBan11, bd7) into BanquetBusDriver
+
+!new ItemOrder('io70')
+!io70.time := Time('20:25')
+
+!insert (resInd13, io70) into ReservationItemOrdered
+!insert (io70, mi28) into ItemOrderMenuItem
+
+!new ItemOrder('io71')
+!io71.time := Time('18:05')
+
+!new ItemOrder('io72')
+!io72.time := Time('18:07')
+
+!new ItemOrder('io73')
+!io73.time := Time('18:30')
+
+!insert (resBan11, io71) into ReservationItemOrdered
+!insert (resBan11, io72) into ReservationItemOrdered
+!insert (resBan11, io73) into ReservationItemOrdered
+
+!insert (io71, mi25) into ItemOrderMenuItem
+!insert (io72, mi27) into ItemOrderMenuItem
+!insert (io73, mi26) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr6')
+!dr6.diet := #Vegetarian
+
+!new ReportedAllergy('ra5')
+!ra5.allergen := #Gluten

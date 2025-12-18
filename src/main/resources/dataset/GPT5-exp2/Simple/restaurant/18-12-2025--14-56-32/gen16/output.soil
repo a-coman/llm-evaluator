@@ -1,0 +1,263 @@
+!new Restaurant('rest17')
+!rest17.name := 'Capsule Ramen Station'
+
+!new Owner('own41')
+!own41.name := 'Lea Winters'
+!own41.percentageShares := 97
+
+!new Owner('own42')
+!own42.name := 'Omar Klein'
+!own42.percentageShares := 1
+
+!new Owner('own43')
+!own43.name := 'Priya Sato'
+!own43.percentageShares := 1
+
+!new Owner('own44')
+!own44.name := 'Vince Romano'
+!own44.percentageShares := 1
+
+!insert (rest17, own41) into RestaurantOwner
+!insert (rest17, own42) into RestaurantOwner
+!insert (rest17, own43) into RestaurantOwner
+!insert (rest17, own44) into RestaurantOwner
+
+!new HeadWaiter('hw16')
+!hw16.name := 'Harold Finch'
+!hw16.dateOfBirth := Date('1980-02-02')
+!hw16.phoneNumber := '+1-555-1700'
+
+!new HeadWaiter('hw17')
+!hw17.name := 'Ines Calder'
+!hw17.dateOfBirth := Date('1987-07-07')
+!hw17.phoneNumber := '+1-555-1701'
+
+!new Waiter('w34')
+!w34.name := 'Nico Vega'
+!w34.dateOfBirth := Date('1998-08-08')
+!w34.phoneNumber := '+1-555-1702'
+!w34.spokenLanguage := #Spanish
+
+!new Waiter('w35')
+!w35.name := 'Paula Stein'
+!w35.dateOfBirth := Date('1995-05-15')
+!w35.phoneNumber := '+1-555-1703'
+!w35.spokenLanguage := #German
+
+!insert (hw16, w34) into HeadWaiterWaiter
+!insert (hw17, w35) into HeadWaiterWaiter
+
+!new Chef('chef25')
+!chef25.name := 'Mika Tan'
+!chef25.dateOfBirth := Date('1984-04-04')
+!chef25.phoneNumber := '+1-555-1710'
+
+!new Chef('chef26')
+!chef26.name := 'Dario Conti'
+!chef26.dateOfBirth := Date('1979-09-29')
+!chef26.phoneNumber := '+1-555-1711'
+
+!new Cook('cook33')
+!cook33.name := 'Rhea Bloom'
+!cook33.dateOfBirth := Date('1992-12-12')
+!cook33.phoneNumber := '+1-555-1712'
+!cook33.yearsOfExperience := 10
+
+!new Cook('cook34')
+!cook34.name := 'Tomasz Nowak'
+!cook34.dateOfBirth := Date('1999-01-19')
+!cook34.phoneNumber := '+1-555-1713'
+!cook34.yearsOfExperience := 0
+
+!new Cook('cook35')
+!cook35.name := 'Sana Iqbal'
+!cook35.dateOfBirth := Date('1996-06-06')
+!cook35.phoneNumber := '+1-555-1714'
+!cook35.yearsOfExperience := 4
+
+!new Cook('cook36')
+!cook36.name := 'Eli Porter'
+!cook36.dateOfBirth := Date('1988-03-03')
+!cook36.phoneNumber := '+1-555-1715'
+!cook36.yearsOfExperience := 16
+
+!insert (chef25, cook33) into ChefCook
+!insert (chef25, cook34) into ChefCook
+!insert (chef25, cook35) into ChefCook
+!insert (chef26, cook36) into ChefCook
+
+!new Allergen('aSeafood17')
+!aSeafood17.type := #Seafood
+
+!new Allergen('aGluten17')
+!aGluten17.type := #Gluten
+
+!new Allergen('aNuts17')
+!aNuts17.type := #Nuts
+
+!new FoodItem('fi140')
+!fi140.number := 1610
+!fi140.description := 'Wheat Ramen Noodles'
+!fi140.purchaseFlag := true
+!fi140.unit := #Pound
+
+!new FoodItem('fi141')
+!fi141.number := 1611
+!fi141.description := 'Sesame Paste'
+!fi141.purchaseFlag := true
+!fi141.unit := #Ounce
+
+!new FoodItem('fi142')
+!fi142.number := 1612
+!fi142.description := 'Shrimp Broth Concentrate'
+!fi142.purchaseFlag := true
+!fi142.unit := #Ounce
+
+!new FoodItem('fi143')
+!fi143.number := 1613
+!fi143.description := 'Scallions'
+!fi143.purchaseFlag := false
+!fi143.unit := #Gram
+
+!insert (fi140, aGluten17) into FoodItemAllergen
+!insert (fi141, aNuts17) into FoodItemAllergen
+!insert (fi142, aSeafood17) into FoodItemAllergen
+
+!new MenuItem('mi40')
+!mi40.description := 'Nitro Cold Brew'
+!mi40.prepTime := 0.0
+!mi40.classification := #Beverage
+
+!new MenuItem('mi41')
+!mi41.description := 'Spicy Sesame Shrimp Ramen'
+!mi41.prepTime := 14.0
+!mi41.classification := #Main
+
+!new MenuItem('mi42')
+!mi42.description := 'Scallion Side'
+!mi42.prepTime := 0.2
+!mi42.classification := #Apetizer
+
+!insert (mi40, chef26) into MenuItemChef
+!insert (mi41, chef25) into MenuItemChef
+!insert (mi42, chef25) into MenuItemChef
+
+!insert (mi41, fi140) into MenuItemFoodItem
+!insert (mi41, fi141) into MenuItemFoodItem
+!insert (mi41, fi142) into MenuItemFoodItem
+!insert (mi41, fi143) into MenuItemFoodItem
+!insert (mi42, fi143) into MenuItemFoodItem
+
+!new Table('t170')
+!t170.number := 170
+!t170.description := 'Capsule booth A'
+!t170.capacity := 4
+
+!new Table('t171')
+!t171.number := 171
+!t171.description := 'Event table 1'
+!t171.capacity := 10
+
+!new Table('t172')
+!t172.number := 172
+!t172.description := 'Event table 2'
+!t172.capacity := 10
+
+!new Table('t173')
+!t173.number := 173
+!t173.description := 'Event table 3'
+!t173.capacity := 10
+
+!new Table('t174')
+!t174.number := 174
+!t174.description := 'Event table 4'
+!t174.capacity := 10
+
+!new Table('t175')
+!t175.number := 175
+!t175.description := 'Event table 5'
+!t175.capacity := 10
+
+!new RegularCustomer('rc11')
+!rc11.name := 'Mara Lind'
+!rc11.prefferedLanguage := #English
+
+!new Individual('resInd20')
+!resInd20.time := Time('18:20')
+!resInd20.date := Date('2026-03-03')
+!resInd20.numberPeople := 4
+!resInd20.name := 'Mara Lind'
+!resInd20.phoneNumber := '+1-555-1720'
+!resInd20.number := 30001
+!resInd20.seating := #Inside
+!resInd20.smoking := #NonSmoking
+
+!new Banquet('resBan15')
+!resBan15.time := Time('19:00')
+!resBan15.date := Date('2026-03-03')
+!resBan15.numberPeople := 50
+!resBan15.name := 'Organizer Desk'
+!resBan15.phoneNumber := '+1-555-1721'
+!resBan15.number := 31001
+!resBan15.groupName := 'Ramen Championship'
+!resBan15.paymentMethod := #CreditCard
+!resBan15.busService := true
+
+!insert (rest17, resInd20) into RestaurantReservation
+!insert (rest17, resBan15) into RestaurantReservation
+
+!insert (resInd20, rc11) into ReservationCustomer
+
+!insert (resInd20, w34) into ReservationWaiter
+!insert (resBan15, w34) into ReservationWaiter
+!insert (resBan15, w35) into ReservationWaiter
+
+!insert (resInd20, t170) into ReservationTable
+!insert (resBan15, t171) into ReservationTable
+!insert (resBan15, t172) into ReservationTable
+!insert (resBan15, t173) into ReservationTable
+!insert (resBan15, t174) into ReservationTable
+!insert (resBan15, t175) into ReservationTable
+
+!new BusDriver('bd9')
+!bd9.name := 'Gareth Miles'
+!bd9.dateOfBirth := Date('1965-05-05')
+!bd9.phoneNumber := '+1-555-1730'
+!bd9.driverLicenseNr := 'BUS-1709-CN'
+
+!new BusDriver('bd10')
+!bd10.name := 'Sonia Reed'
+!bd10.dateOfBirth := Date('1972-02-12')
+!bd10.phoneNumber := '+1-555-1731'
+!bd10.driverLicenseNr := 'BUS-1710-CN'
+
+!insert (resBan15, bd9) into BanquetBusDriver
+!insert (resBan15, bd10) into BanquetBusDriver
+
+!new ItemOrder('io120')
+!io120.time := Time('19:05')
+
+!new ItemOrder('io121')
+!io121.time := Time('19:06')
+
+!new ItemOrder('io122')
+!io122.time := Time('19:07')
+
+!new ItemOrder('io123')
+!io123.time := Time('19:10')
+
+!insert (resBan15, io120) into ReservationItemOrdered
+!insert (resBan15, io121) into ReservationItemOrdered
+!insert (resBan15, io122) into ReservationItemOrdered
+!insert (resBan15, io123) into ReservationItemOrdered
+
+!insert (io120, mi41) into ItemOrderMenuItem
+!insert (io121, mi40) into ItemOrderMenuItem
+!insert (io122, mi41) into ItemOrderMenuItem
+!insert (io123, mi42) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr9')
+!dr9.diet := #Vegan
+
+!new ReportedAllergy('ra8')
+!ra8.allergen := #Seafood

@@ -1,0 +1,267 @@
+!new Restaurant('rest28')
+!rest28.name := 'Airport Express Kitchen'
+
+!new Owner('own64')
+!own64.name := 'Lena Foster'
+!own64.percentageShares := 80
+
+!new Owner('own65')
+!own65.name := 'Mateo Klein'
+!own65.percentageShares := 20
+
+!insert (rest28, own64) into RestaurantOwner
+!insert (rest28, own65) into RestaurantOwner
+
+!new HeadWaiter('hw28')
+!hw28.name := 'Cora Sterling'
+!hw28.dateOfBirth := Date('1984-12-02')
+!hw28.phoneNumber := '+1-555-2800'
+
+!new Waiter('w58')
+!w58.name := 'Bruno Costa'
+!w58.dateOfBirth := Date('1996-06-18')
+!w58.phoneNumber := '+1-555-2801'
+!w58.spokenLanguage := #English
+
+!new Waiter('w59')
+!w59.name := 'Gianna Riva'
+!w59.dateOfBirth := Date('1998-10-10')
+!w59.phoneNumber := '+1-555-2802'
+!w59.spokenLanguage := #Italian
+
+!new Waiter('w60')
+!w60.name := 'Kai Neumann'
+!w60.dateOfBirth := Date('2000-03-03')
+!w60.phoneNumber := '+1-555-2803'
+!w60.spokenLanguage := #German
+
+!insert (hw28, w58) into HeadWaiterWaiter
+!insert (hw28, w59) into HeadWaiterWaiter
+!insert (hw28, w60) into HeadWaiterWaiter
+
+!new Chef('chef40')
+!chef40.name := 'Rita Sanz'
+!chef40.dateOfBirth := Date('1979-09-09')
+!chef40.phoneNumber := '+1-555-2810'
+
+!new Chef('chef41')
+!chef41.name := 'Oliver Brandt'
+!chef41.dateOfBirth := Date('1987-07-07')
+!chef41.phoneNumber := '+1-555-2811'
+
+!new Cook('cook57')
+!cook57.name := 'Nadia Holm'
+!cook57.dateOfBirth := Date('1993-02-12')
+!cook57.phoneNumber := '+1-555-2820'
+!cook57.yearsOfExperience := 0
+
+!new Cook('cook58')
+!cook58.name := 'Sam Carter'
+!cook58.dateOfBirth := Date('1990-11-21')
+!cook58.phoneNumber := '+1-555-2821'
+!cook58.yearsOfExperience := 6
+
+!new Cook('cook59')
+!cook59.name := 'Mira Klein'
+!cook59.dateOfBirth := Date('1988-04-04')
+!cook59.phoneNumber := '+1-555-2822'
+!cook59.yearsOfExperience := 15
+
+!insert (chef40, cook57) into ChefCook
+!insert (chef40, cook58) into ChefCook
+!insert (chef41, cook59) into ChefCook
+
+!new Allergen('aNuts28')
+!aNuts28.type := #Nuts
+
+!new Allergen('aGluten28')
+!aGluten28.type := #Gluten
+
+!new Allergen('aLactose28')
+!aLactose28.type := #Lactose
+
+!new FoodItem('fi240')
+!fi240.number := 6010
+!fi240.description := 'Chickpeas'
+!fi240.purchaseFlag := true
+!fi240.unit := #Pound
+
+!new FoodItem('fi241')
+!fi241.number := 6011
+!fi241.description := 'Sesame Paste'
+!fi241.purchaseFlag := true
+!fi241.unit := #Gram
+
+!new FoodItem('fi242')
+!fi242.number := 6012
+!fi242.description := 'Cocoa Powder'
+!fi242.purchaseFlag := true
+!fi242.unit := #Gram
+
+!new FoodItem('fi243')
+!fi243.number := 6013
+!fi243.description := 'Soy Milk Base'
+!fi243.purchaseFlag := false
+!fi243.unit := #Ounce
+
+!insert (fi241, aNuts28) into FoodItemAllergen
+!insert (fi243, aLactose28) into FoodItemAllergen
+!insert (fi243, aNuts28) into FoodItemAllergen
+
+!new MenuItem('mi66')
+!mi66.description := 'Express Espresso'
+!mi66.prepTime := 0.7
+!mi66.classification := #Beverage
+
+!new MenuItem('mi67')
+!mi67.description := 'Vegan Mezze Box'
+!mi67.prepTime := 8.5
+!mi67.classification := #Main
+
+!new MenuItem('mi68')
+!mi68.description := 'Gluten-Free Cocoa Brownie'
+!mi68.prepTime := 5.0
+!mi68.classification := #Dessert
+
+!insert (mi66, chef41) into MenuItemChef
+!insert (mi67, chef40) into MenuItemChef
+!insert (mi68, chef41) into MenuItemChef
+
+!insert (mi67, fi240) into MenuItemFoodItem
+!insert (mi67, fi241) into MenuItemFoodItem
+!insert (mi67, fi243) into MenuItemFoodItem
+!insert (mi68, fi242) into MenuItemFoodItem
+!insert (mi68, fi243) into MenuItemFoodItem
+
+!new RegularCustomer('rc18')
+!rc18.name := 'Sofía Vega'
+!rc18.prefferedLanguage := #Spanish
+
+!new Individual('resInd35')
+!resInd35.time := Time('17:20')
+!resInd35.date := Date('2026-08-08')
+!resInd35.numberPeople := 4
+!resInd35.name := 'Sofía Vega'
+!resInd35.phoneNumber := '+1-555-2830'
+!resInd35.number := 80001
+!resInd35.seating := #Patio
+!resInd35.smoking := #NonSmoking
+
+!new Individual('resInd36')
+!resInd36.time := Time('23:10')
+!resInd36.date := Date('2026-08-08')
+!resInd36.numberPeople := 1
+!resInd36.name := 'Red-eye Traveler'
+!resInd36.phoneNumber := '+1-555-2831'
+!resInd36.number := 80002
+!resInd36.seating := #Inside
+!resInd36.smoking := #Smoking
+
+!new Banquet('resBan25')
+!resBan25.time := Time('19:00')
+!resBan25.date := Date('2026-08-08')
+!resBan25.numberPeople := 25
+!resBan25.name := 'Operations Desk'
+!resBan25.phoneNumber := '+1-555-2832'
+!resBan25.number := 81001
+!resBan25.groupName := 'Runway Crew Dinner'
+!resBan25.paymentMethod := #Cash
+!resBan25.busService := true
+
+!insert (rest28, resInd35) into RestaurantReservation
+!insert (rest28, resBan25) into RestaurantReservation
+
+!insert (resInd35, rc18) into ReservationCustomer
+
+!insert (resInd35, w58) into ReservationWaiter
+!insert (resInd35, w59) into ReservationWaiter
+!insert (resInd36, w60) into ReservationWaiter
+!insert (resBan25, w58) into ReservationWaiter
+!insert (resBan25, w60) into ReservationWaiter
+
+!new BusDriver('bd19')
+!bd19.name := 'Evan Driver'
+!bd19.dateOfBirth := Date('1968-08-18')
+!bd19.phoneNumber := '+1-555-2840'
+!bd19.driverLicenseNr := 'BUS-9819-AE'
+
+!new BusDriver('bd20')
+!bd20.name := 'Rosa Driver'
+!bd20.dateOfBirth := Date('1974-04-04')
+!bd20.phoneNumber := '+1-555-2841'
+!bd20.driverLicenseNr := 'BUS-9820-AE'
+
+!insert (resBan25, bd19) into BanquetBusDriver
+!insert (resBan25, bd20) into BanquetBusDriver
+
+!new Table('t270')
+!t270.number := 270
+!t270.description := 'Patio two-top A'
+!t270.capacity := 2
+
+!new Table('t271')
+!t271.number := 271
+!t271.description := 'Patio two-top B'
+!t271.capacity := 2
+
+!new Table('t272')
+!t272.number := 272
+!t272.description := 'Inside solo stool'
+!t272.capacity := 1
+
+!new Table('t273')
+!t273.number := 273
+!t273.description := 'Event table A'
+!t273.capacity := 10
+
+!new Table('t274')
+!t274.number := 274
+!t274.description := 'Event table B'
+!t274.capacity := 10
+
+!new Table('t275')
+!t275.number := 275
+!t275.description := 'Event table C'
+!t275.capacity := 5
+
+!insert (resInd35, t270) into ReservationTable
+!insert (resInd35, t271) into ReservationTable
+!insert (resInd36, t272) into ReservationTable
+!insert (resBan25, t273) into ReservationTable
+!insert (resBan25, t274) into ReservationTable
+!insert (resBan25, t275) into ReservationTable
+
+!new ItemOrder('io210')
+!io210.time := Time('17:25')
+
+!new ItemOrder('io211')
+!io211.time := Time('17:30')
+
+!insert (resInd35, io210) into ReservationItemOrdered
+!insert (resInd35, io211) into ReservationItemOrdered
+
+!insert (io210, mi66) into ItemOrderMenuItem
+!insert (io211, mi67) into ItemOrderMenuItem
+
+!new ItemOrder('io212')
+!io212.time := Time('19:05')
+
+!new ItemOrder('io213')
+!io213.time := Time('19:07')
+
+!new ItemOrder('io214')
+!io214.time := Time('19:45')
+
+!insert (resBan25, io212) into ReservationItemOrdered
+!insert (resBan25, io213) into ReservationItemOrdered
+!insert (resBan25, io214) into ReservationItemOrdered
+
+!insert (io212, mi67) into ItemOrderMenuItem
+!insert (io213, mi66) into ItemOrderMenuItem
+!insert (io214, mi68) into ItemOrderMenuItem
+
+!new DietaryRequirement('dr15')
+!dr15.diet := #Vegan
+
+!new ReportedAllergy('ra14')
+!ra14.allergen := #Gluten

@@ -1,0 +1,147 @@
+!new Restaurant('rest11')
+!rest11.name := 'Archive Supper Club'
+
+!new Owner('own25')
+!own25.name := 'Selene Carter'
+!own25.percentageShares := 70
+
+!new Owner('own26')
+!own26.name := 'Amir Haddad'
+!own26.percentageShares := 20
+
+!new Owner('own27')
+!own27.name := 'Petra Voss'
+!own27.percentageShares := 10
+
+!insert (rest11, own25) into RestaurantOwner
+!insert (rest11, own26) into RestaurantOwner
+!insert (rest11, own27) into RestaurantOwner
+
+!new HeadWaiter('hw10')
+!hw10.name := 'Morgan Pike'
+!hw10.dateOfBirth := Date('1977-07-17')
+!hw10.phoneNumber := '+1-555-1100'
+
+!new Waiter('w20')
+!w20.name := 'Leonie Brandt'
+!w20.dateOfBirth := Date('1998-03-15')
+!w20.phoneNumber := '+1-555-1101'
+!w20.spokenLanguage := #German
+
+!new Waiter('w21')
+!w21.name := 'Caleb Stone'
+!w21.dateOfBirth := Date('1994-09-09')
+!w21.phoneNumber := '+1-555-1102'
+!w21.spokenLanguage := #English
+
+!insert (hw10, w20) into HeadWaiterWaiter
+!insert (hw10, w21) into HeadWaiterWaiter
+
+!new Chef('chef16')
+!chef16.name := 'Isabella Moretti'
+!chef16.dateOfBirth := Date('1988-08-08')
+!chef16.phoneNumber := '+1-555-1110'
+
+!new Cook('cook20')
+!cook20.name := 'Noor Aziz'
+!cook20.dateOfBirth := Date('2002-02-02')
+!cook20.phoneNumber := '+1-555-1111'
+!cook20.yearsOfExperience := 0
+
+!insert (chef16, cook20) into ChefCook
+
+!new Allergen('aNuts11')
+!aNuts11.type := #Nuts
+
+!new Allergen('aGluten11')
+!aGluten11.type := #Gluten
+
+!new FoodItem('fi80')
+!fi80.number := 980
+!fi80.description := 'Sourdough Crumbs'
+!fi80.purchaseFlag := true
+!fi80.unit := #Pound
+
+!new FoodItem('fi81')
+!fi81.number := 981
+!fi81.description := 'Roasted Hazelnuts'
+!fi81.purchaseFlag := true
+!fi81.unit := #Gram
+
+!new FoodItem('fi82')
+!fi82.number := 982
+!fi82.description := 'Tomato Paste'
+!fi82.purchaseFlag := false
+!fi82.unit := #Ounce
+
+!insert (fi80, aGluten11) into FoodItemAllergen
+!insert (fi81, aNuts11) into FoodItemAllergen
+
+!new MenuItem('mi23')
+!mi23.description := 'Still Water'
+!mi23.prepTime := 0.0
+!mi23.classification := #Beverage
+
+!new MenuItem('mi24')
+!mi24.description := 'Tomato Hazelnut Crust Pasta'
+!mi24.prepTime := 16.0
+!mi24.classification := #Main
+
+!insert (mi23, chef16) into MenuItemChef
+!insert (mi24, chef16) into MenuItemChef
+
+!insert (mi24, fi80) into MenuItemFoodItem
+!insert (mi24, fi81) into MenuItemFoodItem
+!insert (mi24, fi82) into MenuItemFoodItem
+
+!new Table('t110')
+!t110.number := 110
+!t110.description := 'Quiet alcove table'
+!t110.capacity := 3
+
+!new Table('t111')
+!t111.number := 111
+!t111.description := 'Adjacent side table'
+!t111.capacity := 2
+
+!new Table('t112')
+!t112.number := 112
+!t112.description := 'Private room long table'
+!t112.capacity := 8
+
+!new Individual('resInd11')
+!resInd11.time := Time('18:45')
+!resInd11.date := Date('2026-11-05')
+!resInd11.numberPeople := 5
+!resInd11.name := 'Research Dinner'
+!resInd11.phoneNumber := '+1-555-1120'
+!resInd11.number := 20011
+!resInd11.seating := #Inside
+!resInd11.smoking := #NonSmoking
+
+!new Banquet('resBan10')
+!resBan10.time := Time('13:15')
+!resBan10.date := Date('2026-11-06')
+!resBan10.numberPeople := 8
+!resBan10.name := 'Club Secretary'
+!resBan10.phoneNumber := '+1-555-1121'
+!resBan10.number := 21011
+!resBan10.groupName := 'Archivists Guild'
+!resBan10.paymentMethod := #Cash
+!resBan10.busService := true
+
+!insert (rest11, resInd11) into RestaurantReservation
+!insert (rest11, resBan10) into RestaurantReservation
+
+!insert (resInd11, w20) into ReservationWaiter
+!insert (resBan10, w21) into ReservationWaiter
+
+!insert (resInd11, t110) into ReservationTable
+!insert (resInd11, t111) into ReservationTable
+!insert (resBan10, t112) into ReservationTable
+
+!new ItemOrder('io60')
+!io60.time := Time('13:20')
+
+!insert (resBan10, io60) into ReservationItemOrdered
+!insert (io60, mi23) into ItemOrderMenuItem

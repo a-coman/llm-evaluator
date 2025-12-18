@@ -1,0 +1,164 @@
+!new Restaurant('rest6')
+!rest6.name := 'Sunset Tapas Bar'
+
+!new Owner('own12')
+!own12.name := 'Ibrahim Noor'
+!own12.percentageShares := 70
+
+!new Owner('own13')
+!own13.name := 'Elena Fischer'
+!own13.percentageShares := 30
+
+!insert (rest6, own12) into RestaurantOwner
+!insert (rest6, own13) into RestaurantOwner
+
+!new HeadWaiter('hw5')
+!hw5.name := 'Derek Shaw'
+!hw5.dateOfBirth := Date('1986-12-12')
+!hw5.phoneNumber := '+1-555-6000'
+
+!new Waiter('w10')
+!w10.name := 'Chiara Romano'
+!w10.dateOfBirth := Date('1997-01-23')
+!w10.phoneNumber := '+1-555-6011'
+!w10.spokenLanguage := #Italian
+
+!new Waiter('w11')
+!w11.name := 'Max Müller'
+!w11.dateOfBirth := Date('1994-06-30')
+!w11.phoneNumber := '+1-555-6012'
+!w11.spokenLanguage := #German
+
+!insert (hw5, w10) into HeadWaiterWaiter
+!insert (hw5, w11) into HeadWaiterWaiter
+
+!new Chef('chef8')
+!chef8.name := 'Grace Kim'
+!chef8.dateOfBirth := Date('1982-02-18')
+!chef8.phoneNumber := '+1-555-6100'
+
+!new Cook('cook10')
+!cook10.name := 'Pedro Sousa'
+!cook10.dateOfBirth := Date('1990-09-09')
+!cook10.phoneNumber := '+1-555-6111'
+!cook10.yearsOfExperience := 15
+
+!new Cook('cook11')
+!cook11.name := 'Nina Berg'
+!cook11.dateOfBirth := Date('2004-04-04')
+!cook11.phoneNumber := '+1-555-6112'
+!cook11.yearsOfExperience := 0
+
+!insert (chef8, cook10) into ChefCook
+!insert (chef8, cook11) into ChefCook
+
+!new Allergen('aSeafood6')
+!aSeafood6.type := #Seafood
+
+!new Allergen('aGluten6')
+!aGluten6.type := #Gluten
+
+!new Allergen('aLactose6')
+!aLactose6.type := #Lactose
+
+!new FoodItem('fi30')
+!fi30.number := 430
+!fi30.description := 'Bread'
+!fi30.purchaseFlag := true
+!fi30.unit := #Dozen
+
+!new FoodItem('fi31')
+!fi31.number := 431
+!fi31.description := 'Cheese'
+!fi31.purchaseFlag := true
+!fi31.unit := #Pound
+
+!new FoodItem('fi32')
+!fi32.number := 432
+!fi32.description := 'Octopus'
+!fi32.purchaseFlag := true
+!fi32.unit := #Ounce
+
+!new FoodItem('fi33')
+!fi33.number := 433
+!fi33.description := 'Olive Oil'
+!fi33.purchaseFlag := false
+!fi33.unit := #Ounce
+
+!insert (fi30, aGluten6) into FoodItemAllergen
+!insert (fi31, aLactose6) into FoodItemAllergen
+!insert (fi32, aSeafood6) into FoodItemAllergen
+!insert (fi30, aLactose6) into FoodItemAllergen
+
+!new MenuItem('mi11')
+!mi11.description := 'Grilled Octopus Pintxo'
+!mi11.prepTime := 9.0
+!mi11.classification := #Apetizer
+
+!new MenuItem('mi12')
+!mi12.description := 'Cheese Toast'
+!mi12.prepTime := 5.0
+!mi12.classification := #Main
+
+!insert (mi11, chef8) into MenuItemChef
+!insert (mi12, chef8) into MenuItemChef
+
+!insert (mi11, fi32) into MenuItemFoodItem
+!insert (mi11, fi33) into MenuItemFoodItem
+!insert (mi12, fi30) into MenuItemFoodItem
+!insert (mi12, fi31) into MenuItemFoodItem
+!insert (mi12, fi33) into MenuItemFoodItem
+
+!new Table('t60')
+!t60.number := 60
+!t60.description := 'High-top two-seat'
+!t60.capacity := 2
+
+!new Table('t61')
+!t61.number := 61
+!t61.description := 'Stool at bar'
+!t61.capacity := 1
+
+!new Table('t62')
+!t62.number := 62
+!t62.description := 'Private nook'
+!t62.capacity := 4
+
+!new Individual('resInd6')
+!resInd6.time := Time('22:15')
+!resInd6.date := Date('2026-06-18')
+!resInd6.numberPeople := 3
+!resInd6.name := 'Late Snack'
+!resInd6.phoneNumber := '+1-555-6201'
+!resInd6.number := 10001
+!resInd6.seating := #Patio
+!resInd6.smoking := #NonSmoking
+
+!new Banquet('resBan5')
+!resBan5.time := Time('15:00')
+!resBan5.date := Date('2026-06-19')
+!resBan5.numberPeople := 0
+!resBan5.name := 'Placeholder Booking'
+!resBan5.phoneNumber := '+1-555-6202'
+!resBan5.number := 11001
+!resBan5.groupName := 'TBD'
+!resBan5.paymentMethod := #Cash
+!resBan5.busService := false
+
+!insert (rest6, resInd6) into RestaurantReservation
+!insert (rest6, resBan5) into RestaurantReservation
+
+!insert (resInd6, w10) into ReservationWaiter
+!insert (resBan5, w10) into ReservationWaiter
+!insert (resBan5, w11) into ReservationWaiter
+
+!insert (resInd6, t60) into ReservationTable
+!insert (resInd6, t61) into ReservationTable
+
+!insert (resBan5, t62) into ReservationTable
+
+!new ItemOrder('io30')
+!io30.time := Time('22:20')
+
+!insert (resInd6, io30) into ReservationItemOrdered
+!insert (io30, mi11) into ItemOrderMenuItem

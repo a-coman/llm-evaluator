@@ -1,0 +1,183 @@
+!new Restaurant('rest16')
+!rest16.name := 'Minimalist Tea Room'
+
+!new Owner('own37')
+!own37.name := 'Hana Kuroda'
+!own37.percentageShares := 10
+
+!new Owner('own38')
+!own38.name := 'Peter Lang'
+!own38.percentageShares := 20
+
+!new Owner('own39')
+!own39.name := 'Salma Idris'
+!own39.percentageShares := 30
+
+!new Owner('own40')
+!own40.name := 'Noel Dupont'
+!own40.percentageShares := 40
+
+!insert (rest16, own37) into RestaurantOwner
+!insert (rest16, own38) into RestaurantOwner
+!insert (rest16, own39) into RestaurantOwner
+!insert (rest16, own40) into RestaurantOwner
+
+!new HeadWaiter('hw15')
+!hw15.name := 'Uma Sterling'
+!hw15.dateOfBirth := Date('1986-06-30')
+!hw15.phoneNumber := '+1-555-1600'
+
+!new Waiter('w33')
+!w33.name := 'Rosa Kim'
+!w33.dateOfBirth := Date('1999-09-09')
+!w33.phoneNumber := '+1-555-1601'
+!w33.spokenLanguage := #English
+
+!insert (hw15, w33) into HeadWaiterWaiter
+
+!new Chef('chef23')
+!chef23.name := 'Tari Mendez'
+!chef23.dateOfBirth := Date('1981-11-11')
+!chef23.phoneNumber := '+1-555-1610'
+
+!new Chef('chef24')
+!chef24.name := 'Gero Voss'
+!chef24.dateOfBirth := Date('1979-04-04')
+!chef24.phoneNumber := '+1-555-1611'
+
+!new Cook('cook31')
+!cook31.name := 'Liam Vance'
+!cook31.dateOfBirth := Date('1990-10-10')
+!cook31.phoneNumber := '+1-555-1620'
+!cook31.yearsOfExperience := 6
+
+!new Cook('cook32')
+!cook32.name := 'Inez Farah'
+!cook32.dateOfBirth := Date('2004-12-12')
+!cook32.phoneNumber := '+1-555-1621'
+!cook32.yearsOfExperience := 0
+
+!insert (chef23, cook31) into ChefCook
+!insert (chef24, cook32) into ChefCook
+
+!new Allergen('aGluten16')
+!aGluten16.type := #Gluten
+
+!new Allergen('aNuts16')
+!aNuts16.type := #Nuts
+
+!new FoodItem('fi130')
+!fi130.number := 1510
+!fi130.description := 'Matcha Powder'
+!fi130.purchaseFlag := true
+!fi130.unit := #Gram
+
+!new FoodItem('fi131')
+!fi131.number := 1511
+!fi131.description := 'Almond Milk'
+!fi131.purchaseFlag := true
+!fi131.unit := #Ounce
+
+!new FoodItem('fi132')
+!fi132.number := 1512
+!fi132.description := 'Wheat Cookie Sheets'
+!fi132.purchaseFlag := false
+!fi132.unit := #Sheet
+
+!insert (fi131, aNuts16) into FoodItemAllergen
+!insert (fi132, aGluten16) into FoodItemAllergen
+
+!new MenuItem('mi38')
+!mi38.description := 'Iced Matcha Latte'
+!mi38.prepTime := 2.5
+!mi38.classification := #Beverage
+
+!new MenuItem('mi39')
+!mi39.description := 'Cookie Trio'
+!mi39.prepTime := 0.5
+!mi39.classification := #Dessert
+
+!insert (mi38, chef23) into MenuItemChef
+!insert (mi39, chef24) into MenuItemChef
+
+!insert (mi38, fi130) into MenuItemFoodItem
+!insert (mi38, fi131) into MenuItemFoodItem
+!insert (mi39, fi132) into MenuItemFoodItem
+!insert (mi39, fi131) into MenuItemFoodItem
+
+!new Table('t160')
+!t160.number := 160
+!t160.description := 'Quiet corner seat 1'
+!t160.capacity := 1
+
+!new Table('t161')
+!t161.number := 161
+!t161.description := 'Quiet corner seat 2'
+!t161.capacity := 1
+
+!new Table('t162')
+!t162.number := 162
+!t162.description := 'Low table A'
+!t162.capacity := 4
+
+!new Table('t163')
+!t163.number := 163
+!t163.description := 'Low table B'
+!t163.capacity := 3
+
+!new Table('t164')
+!t164.number := 164
+!t164.description := 'Low table C'
+!t164.capacity := 2
+
+!new Individual('resInd19')
+!resInd19.time := Time('09:00')
+!resInd19.date := Date('2026-01-05')
+!resInd19.numberPeople := 2
+!resInd19.name := 'Morning Pair'
+!resInd19.phoneNumber := '+1-555-1630'
+!resInd19.number := 28001
+!resInd19.seating := #Inside
+!resInd19.smoking := #NonSmoking
+
+!new Banquet('resBan14')
+!resBan14.time := Time('09:30')
+!resBan14.date := Date('2026-01-05')
+!resBan14.numberPeople := 9
+!resBan14.name := 'Book Club Lead'
+!resBan14.phoneNumber := '+1-555-1631'
+!resBan14.number := 29001
+!resBan14.groupName := 'Morning Readers'
+!resBan14.paymentMethod := #Cash
+!resBan14.busService := false
+
+!insert (rest16, resInd19) into RestaurantReservation
+!insert (rest16, resBan14) into RestaurantReservation
+
+!insert (resInd19, w33) into ReservationWaiter
+!insert (resBan14, w33) into ReservationWaiter
+
+!insert (resInd19, t160) into ReservationTable
+!insert (resInd19, t161) into ReservationTable
+
+!insert (resBan14, t162) into ReservationTable
+!insert (resBan14, t163) into ReservationTable
+!insert (resBan14, t164) into ReservationTable
+
+!new RegularCustomer('rc10')
+!rc10.name := 'Serena Holt'
+!rc10.prefferedLanguage := #English
+
+!insert (resBan14, rc10) into ReservationCustomer
+
+!new ItemOrder('io110')
+!io110.time := Time('09:35')
+
+!new ItemOrder('io111')
+!io111.time := Time('09:40')
+
+!insert (resBan14, io110) into ReservationItemOrdered
+!insert (resBan14, io111) into ReservationItemOrdered
+
+!insert (io110, mi38) into ItemOrderMenuItem
+!insert (io111, mi39) into ItemOrderMenuItem

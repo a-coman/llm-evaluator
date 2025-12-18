@@ -1,0 +1,253 @@
+!new Restaurant('rest22')
+!rest22.name := 'Aurora Event Hall & Grill'
+
+!new Owner('own54')
+!own54.name := 'Gita Rahman'
+!own54.percentageShares := 60
+
+!new Owner('own55')
+!own55.name := 'Leon Fischer'
+!own55.percentageShares := 40
+
+!insert (rest22, own54) into RestaurantOwner
+!insert (rest22, own55) into RestaurantOwner
+
+!new HeadWaiter('hw22')
+!hw22.name := 'Celine Ward'
+!hw22.dateOfBirth := Date('1985-02-11')
+!hw22.phoneNumber := '+1-555-2200'
+
+!new Waiter('w45')
+!w45.name := 'Pablo Serra'
+!w45.dateOfBirth := Date('1996-10-01')
+!w45.phoneNumber := '+1-555-2201'
+!w45.spokenLanguage := #Spanish
+
+!new Waiter('w46')
+!w46.name := 'Mara Vogel'
+!w46.dateOfBirth := Date('2001-03-03')
+!w46.phoneNumber := '+1-555-2202'
+!w46.spokenLanguage := #German
+
+!new Waiter('w47')
+!w47.name := 'Ethan Cole'
+!w47.dateOfBirth := Date('1993-07-07')
+!w47.phoneNumber := '+1-555-2203'
+!w47.spokenLanguage := #English
+
+!insert (hw22, w45) into HeadWaiterWaiter
+!insert (hw22, w46) into HeadWaiterWaiter
+!insert (hw22, w47) into HeadWaiterWaiter
+
+!new Chef('chef31')
+!chef31.name := 'Rina Moreau'
+!chef31.dateOfBirth := Date('1980-05-15')
+!chef31.phoneNumber := '+1-555-2210'
+
+!new Chef('chef32')
+!chef32.name := 'Diego Rossi'
+!chef32.dateOfBirth := Date('1976-09-09')
+!chef32.phoneNumber := '+1-555-2211'
+
+!new Cook('cook45')
+!cook45.name := 'Jules Kim'
+!cook45.dateOfBirth := Date('1994-04-14')
+!cook45.phoneNumber := '+1-555-2220'
+!cook45.yearsOfExperience := 9
+
+!new Cook('cook46')
+!cook46.name := 'Nora Ivers'
+!cook46.dateOfBirth := Date('2004-12-01')
+!cook46.phoneNumber := '+1-555-2221'
+!cook46.yearsOfExperience := 0
+
+!new Cook('cook47')
+!cook47.name := 'Salim Batra'
+!cook47.dateOfBirth := Date('1989-01-19')
+!cook47.phoneNumber := '+1-555-2222'
+!cook47.yearsOfExperience := 15
+
+!insert (chef31, cook45) into ChefCook
+!insert (chef31, cook46) into ChefCook
+!insert (chef32, cook47) into ChefCook
+
+!new Allergen('aLactose22')
+!aLactose22.type := #Lactose
+
+!new Allergen('aGluten22')
+!aGluten22.type := #Gluten
+
+!new Allergen('aNuts22')
+!aNuts22.type := #Nuts
+
+!new FoodItem('fi180')
+!fi180.number := 2010
+!fi180.description := 'Brioche Bun'
+!fi180.purchaseFlag := true
+!fi180.unit := #Pound
+
+!new FoodItem('fi181')
+!fi181.number := 2011
+!fi181.description := 'Cashew Spread'
+!fi181.purchaseFlag := true
+!fi181.unit := #Ounce
+
+!new FoodItem('fi182')
+!fi182.number := 2012
+!fi182.description := 'Cream Cheese'
+!fi182.purchaseFlag := true
+!fi182.unit := #Ounce
+
+!new FoodItem('fi183')
+!fi183.number := 2013
+!fi183.description := 'Citrus Peel'
+!fi183.purchaseFlag := false
+!fi183.unit := #Gram
+
+!insert (fi180, aGluten22) into FoodItemAllergen
+!insert (fi181, aNuts22) into FoodItemAllergen
+!insert (fi182, aLactose22) into FoodItemAllergen
+!insert (fi181, aLactose22) into FoodItemAllergen
+
+!new MenuItem('mi51')
+!mi51.description := 'Cashew Brioche Bites'
+!mi51.prepTime := 3.5
+!mi51.classification := #Apetizer
+
+!new MenuItem('mi52')
+!mi52.description := 'Creamy Brioche Slider'
+!mi52.prepTime := 9.0
+!mi52.classification := #Main
+
+!new MenuItem('mi53')
+!mi53.description := 'Citrus Cheesecake Cup'
+!mi53.prepTime := 7.25
+!mi53.classification := #Dessert
+
+!new MenuItem('mi54')
+!mi54.description := 'House Still Water'
+!mi54.prepTime := 0.0
+!mi54.classification := #Beverage
+
+!insert (mi51, chef31) into MenuItemChef
+!insert (mi52, chef31) into MenuItemChef
+!insert (mi53, chef32) into MenuItemChef
+!insert (mi54, chef32) into MenuItemChef
+
+!insert (mi51, fi180) into MenuItemFoodItem
+!insert (mi51, fi181) into MenuItemFoodItem
+!insert (mi52, fi180) into MenuItemFoodItem
+!insert (mi52, fi182) into MenuItemFoodItem
+!insert (mi53, fi182) into MenuItemFoodItem
+!insert (mi53, fi183) into MenuItemFoodItem
+
+!new RegularCustomer('rc14')
+!rc14.name := 'Helena Strauss'
+!rc14.prefferedLanguage := #German
+
+!new Individual('resInd26')
+!resInd26.time := Time('17:55')
+!resInd26.date := Date('2026-06-01')
+!resInd26.numberPeople := 2
+!resInd26.name := 'Helena Strauss'
+!resInd26.phoneNumber := '+1-555-2230'
+!resInd26.number := 40001
+!resInd26.seating := #Inside
+!resInd26.smoking := #NonSmoking
+
+!new Banquet('resBan20')
+!resBan20.time := Time('18:30')
+!resBan20.date := Date('2026-06-01')
+!resBan20.numberPeople := 12
+!resBan20.name := 'Event Lead'
+!resBan20.phoneNumber := '+1-555-2231'
+!resBan20.number := 41001
+!resBan20.groupName := 'Aurora Makers Meetup'
+!resBan20.paymentMethod := #CreditCard
+!resBan20.busService := true
+
+!new Banquet('resBan21')
+!resBan21.time := Time('22:00')
+!resBan21.date := Date('2026-06-01')
+!resBan21.numberPeople := 0
+!resBan21.name := 'Hold Slot'
+!resBan21.phoneNumber := '+1-555-2232'
+!resBan21.number := 41002
+!resBan21.groupName := 'TBD'
+!resBan21.paymentMethod := #Cash
+!resBan21.busService := false
+
+!insert (rest22, resInd26) into RestaurantReservation
+!insert (rest22, resBan20) into RestaurantReservation
+!insert (rest22, resBan21) into RestaurantReservation
+
+!insert (resInd26, rc14) into ReservationCustomer
+
+!insert (resInd26, w46) into ReservationWaiter
+!insert (resBan20, w45) into ReservationWaiter
+!insert (resBan20, w46) into ReservationWaiter
+!insert (resBan20, w47) into ReservationWaiter
+!insert (resBan21, w47) into ReservationWaiter
+
+!new Table('t220')
+!t220.number := 220
+!t220.description := 'Inside two-top (exact)'
+!t220.capacity := 2
+
+!new Table('t221')
+!t221.number := 221
+!t221.description := 'Meetup table A'
+!t221.capacity := 4
+
+!new Table('t222')
+!t222.number := 222
+!t222.description := 'Meetup table B'
+!t222.capacity := 4
+
+!new Table('t223')
+!t223.number := 223
+!t223.description := 'Meetup table C'
+!t223.capacity := 4
+
+!new Table('t224')
+!t224.number := 224
+!t224.description := 'Late hold single'
+!t224.capacity := 1
+
+!insert (resInd26, t220) into ReservationTable
+!insert (resBan20, t221) into ReservationTable
+!insert (resBan20, t222) into ReservationTable
+!insert (resBan20, t223) into ReservationTable
+!insert (resBan21, t224) into ReservationTable
+
+!new BusDriver('bd15')
+!bd15.name := 'Orson Pike'
+!bd15.dateOfBirth := Date('1967-07-01')
+!bd15.phoneNumber := '+1-555-2240'
+!bd15.driverLicenseNr := 'BUS-2215-AU'
+
+!new BusDriver('bd16')
+!bd16.name := 'Nina Shore'
+!bd16.dateOfBirth := Date('1975-05-25')
+!bd16.phoneNumber := '+1-555-2241'
+!bd16.driverLicenseNr := 'BUS-2216-AU'
+
+!insert (resBan20, bd15) into BanquetBusDriver
+!insert (resBan20, bd16) into BanquetBusDriver
+
+!new ItemOrder('io160')
+!io160.time := Time('18:40')
+
+!new ItemOrder('io161')
+!io161.time := Time('18:41')
+
+!new ItemOrder('io162')
+!io162.time := Time('18:55')
+
+!insert (resBan20, io160) into ReservationItemOrdered
+!insert (resBan20, io161) into ReservationItemOrdered
+!insert (resBan20, io162) into ReservationItemOrdered
+
+!insert (io160, mi51) into ItemOrderMenuItem
+!insert (io161, mi52) into ItemOrderMenuItem
+!insert (io162, mi54) into ItemOrderMenuItem

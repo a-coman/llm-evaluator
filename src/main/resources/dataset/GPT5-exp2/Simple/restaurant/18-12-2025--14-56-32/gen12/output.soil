@@ -1,0 +1,146 @@
+!new Restaurant('rest13')
+!rest13.name := 'Orchard Tasting Room'
+
+!new Owner('own31')
+!own31.name := 'Elias Stone'
+!own31.percentageShares := 0
+
+!new Owner('own32')
+!own32.name := 'Marina Keller'
+!own32.percentageShares := 100
+
+!insert (rest13, own31) into RestaurantOwner
+!insert (rest13, own32) into RestaurantOwner
+
+!new HeadWaiter('hw12')
+!hw12.name := 'Rowan Pierce'
+!hw12.dateOfBirth := Date('1990-05-20')
+!hw12.phoneNumber := '+1-555-1300'
+
+!new Waiter('w26')
+!w26.name := 'Tessa Varga'
+!w26.dateOfBirth := Date('2001-12-12')
+!w26.phoneNumber := '+1-555-1301'
+!w26.spokenLanguage := #English
+
+!new Waiter('w27')
+!w27.name := 'Nils Schneider'
+!w27.dateOfBirth := Date('1995-08-08')
+!w27.phoneNumber := '+1-555-1302'
+!w27.spokenLanguage := #German
+
+!insert (hw12, w26) into HeadWaiterWaiter
+!insert (hw12, w27) into HeadWaiterWaiter
+
+!new Chef('chef19')
+!chef19.name := 'Helio Santos'
+!chef19.dateOfBirth := Date('1982-10-10')
+!chef19.phoneNumber := '+1-555-1310'
+
+!new Cook('cook24')
+!cook24.name := 'Maya Quinn'
+!cook24.dateOfBirth := Date('1999-03-03')
+!cook24.phoneNumber := '+1-555-1311'
+!cook24.yearsOfExperience := 0
+
+!new Cook('cook25')
+!cook25.name := 'George Ivers'
+!cook25.dateOfBirth := Date('1987-01-27')
+!cook25.phoneNumber := '+1-555-1312'
+!cook25.yearsOfExperience := 18
+
+!insert (chef19, cook24) into ChefCook
+!insert (chef19, cook25) into ChefCook
+
+!new Manager('mgr2')
+!mgr2.name := 'Sabrina Holt'
+!mgr2.dateOfBirth := Date('1973-04-04')
+!mgr2.phoneNumber := '+1-555-1320'
+
+!new Table('t130')
+!t130.number := 130
+!t130.description := ''
+!t130.capacity := 1
+
+!new Table('t131')
+!t131.number := 131
+!t131.description := 'Chef pass seating'
+!t131.capacity := 3
+
+!new MenuItem('mi29')
+!mi29.description := 'House Bread (complimentary)'
+!mi29.prepTime := 0.0
+!mi29.classification := #Apetizer
+
+!new MenuItem('mi30')
+!mi30.description := 'Zero-Prep Water'
+!mi30.prepTime := 0.0
+!mi30.classification := #Beverage
+
+!insert (mi29, chef19) into MenuItemChef
+!insert (mi30, chef19) into MenuItemChef
+
+!new Allergen('aLactose13')
+!aLactose13.type := #Lactose
+
+!new FoodItem('fi100')
+!fi100.number := 1200
+!fi100.description := 'Milk (unused stock item)'
+!fi100.purchaseFlag := true
+!fi100.unit := #Ounce
+
+!new FoodItem('fi101')
+!fi101.number := 1201
+!fi101.description := 'Salt (no declared allergens)'
+!fi101.purchaseFlag := false
+!fi101.unit := #Gram
+
+!insert (fi100, aLactose13) into FoodItemAllergen
+
+!new DietaryRequirement('dr7')
+!dr7.diet := #Kosher
+
+!new ReportedAllergy('ra6')
+!ra6.allergen := #Gluten
+
+!new Individual('resInd14')
+!resInd14.time := Time('17:00')
+!resInd14.date := Date('2026-12-01')
+!resInd14.numberPeople := 1
+!resInd14.name := 'Solo Archivist'
+!resInd14.phoneNumber := '+1-555-1331'
+!resInd14.number := 24001
+!resInd14.seating := #Inside
+!resInd14.smoking := #NonSmoking
+
+!new Individual('resInd15')
+!resInd15.time := Time('17:15')
+!resInd15.date := Date('2026-12-01')
+!resInd15.numberPeople := 3
+!resInd15.name := 'Kitchen Tour Trio'
+!resInd15.phoneNumber := '+1-555-1332'
+!resInd15.number := 24002
+!resInd15.seating := #Inside
+!resInd15.smoking := #NonSmoking
+
+!insert (rest13, resInd14) into RestaurantReservation
+!insert (rest13, resInd15) into RestaurantReservation
+
+!insert (resInd14, t130) into ReservationTable
+!insert (resInd15, t131) into ReservationTable
+
+!insert (resInd14, w26) into ReservationWaiter
+!insert (resInd15, w26) into ReservationWaiter
+!insert (resInd15, w27) into ReservationWaiter
+
+!new ItemOrder('io80')
+!io80.time := Time('17:02')
+
+!new ItemOrder('io81')
+!io81.time := Time('17:18')
+
+!insert (resInd14, io80) into ReservationItemOrdered
+!insert (resInd15, io81) into ReservationItemOrdered
+
+!insert (io80, mi30) into ItemOrderMenuItem
+!insert (io81, mi29) into ItemOrderMenuItem
