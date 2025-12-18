@@ -6,13 +6,14 @@ import java.util.List;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
+import dev.langchain4j.model.openai.OpenAiTokenCountEstimator;
 import dev.langchain4j.memory.ChatMemory;
-import dev.langchain4j.memory.chat.MessageWindowChatMemory;
+import dev.langchain4j.memory.chat.TokenWindowChatMemory;
 import dev.langchain4j.service.AiServices;
 import io.github.cdimascio.dotenv.Dotenv;
 
 public class Llms {
-    public static final int MEMORY_MAX_MESSAGES = 10;
+    public static final int MAX_TOKENS = 400000;
 
     public static ChatModel getModel(Model model) {
         Dotenv dotenv = Dotenv.load();
@@ -49,7 +50,7 @@ public class Llms {
 
     public static <T> T getAgent(Class<T> agent, Model model) {
         Listener.setCurrentAgent(agent.getSimpleName());
-        ChatMemory memory = MessageWindowChatMemory.withMaxMessages(MEMORY_MAX_MESSAGES);
+        ChatMemory memory = TokenWindowChatMemory.withMaxTokens(MAX_TOKENS, new OpenAiTokenCountEstimator("gpt-5"));
         return AiServices.builder(agent)
                 .chatModel(getModel(model))
                 .chatMemory(memory)
